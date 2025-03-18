@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = W pełni zautomatyzuj całą grę.
+@lb_descr_maze = Wyfarm 300000 golda.
+@lb_descr_dinosaur = Wyfarmuj 98010 bones.
+@lb_descr_cactus = Zasiej 100000 kaktusów.
+@lb_descr_sunflowers = Wyfarmuj 100000 energii.
+@lb_descr_pumpkins = Wyhoduj 100000 dyń.
+@lb_descr_hay = Wyhoduj 100000 siana.
+@lb_descr_wood = Wyfarmuj 100000 drewna.
+@lb_descr_carrots = Wyhoduj 100000 marchewek.
+@lb_descr_polyculture = Zbierz 100000 siana, drewna i marchewek.

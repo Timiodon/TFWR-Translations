@@ -1,0 +1,19 @@
+@plant_tooltip_template = {0}
+
+Podstawowy czas wzrostu między {1} a {2} sekundami.
+Może rosnąć na {3}.
+@object_tooltip_template_cost = ### Koszt sadzenia {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Podobno dinozaury je uwielbiają.
+@object_descr_grass = Rośnie automatycznie na łące. Zbieraj je, aby otrzymać `Items.Hay`.
+@object_descr_bush = Mały krzak, który wypuszcza `Items.Wood`.
+@object_descr_tree = Drzewa dają więcej drewna niż krzewy. Rosną dłużej, jeśli inne drzewa rosną obok nich.
+@object_descr_carrot = Marchewki!
+@object_descr_pumpkin = Dynie rosną razem, gdy są obok innych w pełni dojrzałych dyń. Około 1 na 5 dyń umiera, gdy dorasta.
+@object_descr_sunflower = Słoneczniki zbierają energię ze słońca. Zbierając je, otrzymasz `Items.Power`.
+Jeśli zbierzesz słonecznik z maksymalną liczbą płatków, dostajesz dodatkową energię.
+@object_descr_cactus = Kaktusy występują w 10 różnych rozmiarach. Podczas zbiorów, sąsiednie kaktusy, które są "sorted", również zostaną zebrane.
+@object_descr_hedge = Część labiryntu.
+@object_descr_treasure = Skarb, który zawiera złoto równe długości boku labiryntu, w którym jest ukryty. Można go zebrać jak roślinę.
+@object_descr_dinosaur = Kawałek ogona kapelusza dinozaura.
+@object_descr_grassland = Domyślne podłoże. Trawa będzie automatycznie na nim rosła.
+@object_descr_soil = Wywołanie `till()` zamienia ziemię w glebę. Ponowne wywołanie `till()` zmienia ją z powrotem w trawiaste tereny.

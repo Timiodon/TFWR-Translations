@@ -1,0 +1,2 @@
+@hat_descr_straw_hat = The default hat.
+@hat_descr_dinosaur_hat = Equip it to start the dinosaur game.

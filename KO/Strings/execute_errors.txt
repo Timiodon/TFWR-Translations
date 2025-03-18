@@ -1,0 +1,69 @@
+@error_code_after_block = 여기에 코드가 없어야 해. 코드를 없애거나 새 줄에 넣어봐.
+@error_wrong_number_args = {0}는 {1}개의 인수를 받습니다.
+@error_expected_no_args = {0}는 argument를 받지 않습니다.
+@error_wrong_args = {0}의 {1} 인수가 {2}(으)로 설정되었습니다. 이는 유효한 인수가 아닙니다.
+@error_syntax_error_in_import = 가져온 모듈에 문법 오류가 있어.
+@error_module_not_found = 이 이름의 모듈은 존재하지 않습니다. 이름은 파일 이름과 일치해야 합니다. 이 이름은 창 위쪽에 표시됩니다.
+@error_list_element_not_found = {0}는 리스트에 없는 요소입니다.
+@error_set_element_not_found = {0}는 set의 요소가 아닙니다.
+@error_index_out_of_bounds = 리스트 {1}의 인덱스 {0}가 범위를 벗어났습니다.
+@error_index_out_of_bounds2 = 인덱스가 리스트의 범위를 벗어났습니다.
+@error_arith_assign_not_used_on_number = {0}는 숫자에만 사용할 수 있어요.
+@error_bool_op_not_used_on_bool = 논리 연산자는 `True` 또는 `False`를 평가하는 boolean 표현식에만 사용할 수 있어.
+@error_bad_bin_operator = 연산자 {0}는 피연산자 {1}와 {2}에 사용할 수 없습니다.
+@error_bad_unary_operator = {0} 연산자는 {1}에 사용할 수 없습니다.
+@error_index = {0}은(는) {1}의 인덱스로 사용할 수 없습니다.
+@error_index_on_non_indexable = {0}에 인덱스를 사용할 수 없습니다.
+@error_zero_step = 단계 크기는 0이 될 수 없습니다.
+@error_index_on_tuple = 튜플 요소를 할당할 수 없습니다. 튜플은 변경할 수 없기 때문이에요.
+@error_bad_key = {0}는 키로 사용할 수 없습니다.
+@error_slice_dict = 딕셔너리를 슬라이스할 수 없습니다.
+@error_key = {0}는 dictionary에 없는 key입니다.
+@error_condition_not_bool = {0}(은/는) 유효한 조건이 아닙니다. 조건은 불리언 값이어야 합니다. 즉, 항상 `True` 또는 `False`인 표현식이어야 합니다.
+@error_for_requires_iterable = {0}는 for 루프에서 반복할 수 없습니다. for 루프는 반복할 수 있는 시퀀스를 받아야 합니다. 예시:
+
+`for i in range(5):`
+여기서 range(5)는 `0,1,2,3,4` 시퀀스를 반환합니다.
+@error_no_loop_to_break = `break`는 루프 안에서만 사용할 수 있습니다.
+@error_no_loop_to_continue = `continue`는 루프 안에서만 사용할 수 있습니다.
+@error_no_function_to_return_from = `return`은/는 함수 내부에서만 사용할 수 있습니다.
+@error_missing_unlock = 이것을 사용하기 전에 잠금을 해제해야 합니다.
+@error_missing_x_unlock = {0}는 사용하기 전에 잠금 해제가 필요합니다.
+@error_name_not_defined = {0}은(는) 정의되지 않았습니다. 변수를 사용하기 전에 값을 할당해야 합니다.
+@error_missing_import = {0}은(는) 정의되지 않았습니다. {1} 파일에 정의된 것으로 보입니다. 그것을 import하는 것을 잊으셨나요?  
+만약 이미 import했다면, 아마도 import cycle이 있을 수 있습니다 (import 문서 페이지를 참조하세요).
+@error_call_before_def = {0}이(가) 정의되지 않았습니다. 이 파일 어딘가에 정의되어 있는 것 같지만, 아직 실행되지 않았습니다. 함수는 `def` 문 뒤에서만 호출할 수 있습니다.
+@error_not_a_function = 함수가 아닌 것을 호출하려고 했어요. 보통 이 문제는 함수와 같은 이름을 가진 변수가 있을 때 발생합니다.
+@error_invalid_const = {0}는 존재하지 않습니다.
+@error_invalid_const2 = 이것은 존재하지 않습니다.
+@error_max_stack_size_reached = 호출 스택의 최대 크기에 도달했습니다. 이는 대부분 너무 많은 재귀 함수 호출 때문입니다.
+@error_max_comparison_depth = 비교 깊이의 한계에 도달했습니다. 비교 깊이의 한계에 도달했습니다. 예를 들어, 자기 자신을 포함하는 리스트를 비교할 때 이런 일이 발생할 수 있습니다.
+@error_assign_type_mismatch = 할당문의 왼쪽이 오른쪽과 일치하지 않았습니다.
+@error_too_many_values_to_unpack = 오른쪽에 있는 값이 충분하지 않아 unpack할 수 없습니다.
+@error_not_enough_values = 오른쪽에 있는 값이 너무 많아서 왼쪽에 모두 담을 수 없어요.
+@error_empty_print = `print()`는 적어도 하나의 argument가 필요해.
+@error_in_string = String에 {0}이(가) 있는지 확인할 수 없습니다.
+@error_collection_changed_size_during_iteration = for 루프에서 이 컬렉션의 크기를 변경할 수 없습니다. 이것은 컬렉션의 크기를 변경하면 for 루프가 사용하는 이터레이터 객체가 무효화되기 때문입니다.
+@error_wrong_use_of_max = {0}의 최대값을 계산할 수 없습니다.
+@error_wrong_use_of_min = {0}의 최소값을 계산할 수 없습니다.
+@error_function_as_condition = 함수 {0}가 `True`인지 확인하려고 합니다. 이건 함수의 반환 값이 아니라 함수 객체 자체예요. 호출 연산자 `()`로 함수를 호출하려고 했나요?
+
+Python에서, 함수 객체는 조건문에서 사용할 때 `True`처럼 동작하는 'truthy'입니다. 그래서 이런 오류 메시지를 원래는 받을 일이 없어요.
+
+이건 안전을 위한 오류 메시지이고, 옵션에서 꺼서 방해되지 않도록 할 수 있어요.
+@error_function_in_operator = {0} 함수에 {1}를 사용하려고 합니다. 이것은 함수의 반환 값이 아닌 함수 객체 자체입니다. 호출 연산자 `()`를 사용하여 함수를 호출하려는 것이었나요?
+
+이것은 보호 오류 메시지입니다. 방해가 된다면 옵션에서 끌 수 있습니다.
+@error_zero_step_size = 단계 크기는 0일 수 없습니다.
+@error_sequence_too_large = 복사하기에는 시퀀스가 너무 큽니다.
+@error_invalid_sim_unlocks = 시작 해제가 잘못되었습니다. `(Unlock.Carrots, 3)` 형식의 해제 시퀀스 또는 튜플이어야 합니다.
+@error_invalid_sim_items = 시작 아이템이 잘못되었습니다. `{Items.Hay : 100}`과 같이 아이템을 숫자로 매핑하는 dict가 필요합니다.
+@error_invalid_sim_globals = 시작 글로발이 유효하지 않았습니다. 변수 이름을 값으로 매핑하는 `{"x" : 42}` 같은 dict여야 합니다.
+@error_division_by_zero = 앗 이런! 당신은 `0`으로 나눴어요. 겨우 살아남았네요.
+@error_negative_use_item = 아이템 사용 수량은 최소 `1`이어야 합니다. 현재는 {0}입니다.
+@error_use_before_assign = 값이 할당되기 전에 변수 {0}을(를) 읽으려고 했습니다.
+전역 변수를 수정하려면 global 키워드를 사용하여 전역 범위에 기록해야 합니다.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = {0}에 속성을 할당할 수 없습니다.

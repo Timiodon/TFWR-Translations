@@ -1,0 +1,12 @@
+@popup_warning_delete_files = Möchtest du {0} dauerhaft löschen? Dies kann nicht rückgängig gemacht werden.
+@popup_warning_delete_save = Bist du sicher, dass du {0} löschen möchtest?
+@delete = Löschen
+@cancel = Abbrechen
+@popup_warning_exit_game = Möchtest du vor dem Beenden speichern?
+@popup_warning_load_game = Möchtest du speichern, bevor du lädst?
+@save = Speichern
+@don't save = Nicht speichern
+@popup_warning_corrupted_save = Es scheint ein Problem beim Laden von {0} gegeben zu haben. Schau dir den Abschnitt über Backups an, um mehr zu erfahren.
+@popup_warning_failed_read_save = Fehler beim Lesen der Speicherdateien von {0}. Stelle sicher, dass du alle anderen Programme, die auf die Dateien zugreifen, schließt und versuche es erneut.
+@popup_warning_failed_write_save = Fehler beim Schreiben in die Speicherdateien von {0}. Stelle sicher, dass du alle anderen Programme, die auf die Dateien zugreifen, schließt und versuche es erneut.
+@ok = ok

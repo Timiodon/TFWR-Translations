@@ -1,0 +1,17 @@
+@save = Guardar
+@saved = Guardado
+@play = Comenzar
+@load = Cargar
+@options = Opciones
+@join_discord = Discord
+@quit = Salir
+@open_folder = Abrir Folder
+@new_game = Nuevo Juego
+@back = Atrás
+@unlocks = Desbloqueos
+@farm = Granja
+@unlocked = Desbloqueado
+@upgrade = Mejorar
+@max_level = Nivel Máximo
+@unlock = Desbloquear
+@locked = Bloqueado

@@ -1,0 +1,6 @@
+@word_number = число
+@word_direction = направление
+@run_cancelled = Запуск не выполнен
+@average_text = {0} Завершено ({2:F1}%)
+{1}
+@unlocked_in = Открыто в: [{0}]({1})

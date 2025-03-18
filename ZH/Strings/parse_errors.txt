@@ -1,0 +1,28 @@
+@error_missing_default_parameter = 所有默认参数必须放在参数列表的末尾。
+@error_invalid_name = {0} 不是有效的名称。名称必须以字母开头，并且只能包含字母、数字和下划线。同时，它不能是保留关键字。
+@error_reserved_keyword = {0} 是一个保留关键字。你不能用它作为名称。
+@error_invalid_assign_expr = 无法为此表达式分配值。
+@error_no_statements = 代码块必须至少包含一个语句。 一个语句可以是像`harvest()`这样的函数调用或者变量赋值。 如果你希望在代码块中什么都不做，可以使用`pass`语句。
+@error_not_enough_indentation = 这里缩进不够。  
+在 : 后面需要有更多缩进，以分隔新的代码块。  
+使用 Tab 键来缩进代码。
+@error_too_much_indentation = 这里的缩进太多了。  
+在代码块内，所有语句的缩进必须相同。
+@error_not_a_statement = 这不是一个有效的语句。
+@error_not_a_statement2 = 这不是一个有效的语句。你是想写 {0} 吗？
+@error_invalid_expression = 这不是一个有效的表达式。
+@error_new_line_expected = 这里应该有一个新行。
+@error_unexpected_token = 这里需要一个{0}。
+@error_missing_colon = 每个代码块的开头必须有一个冒号 `:`。
+@error_unexpected_assign = 这里不能进行赋值操作。要检查相等性，请使用`==`。
+@error_invalid_for_syntax = 这不是一个有效的 `for` 循环。一个 `for` 循环应该像这样：
+`for n in range(3):`
+`for` 后面总是跟着循环变量，一个 `in`，然后是一个序列。在这个例子中，`n` 是变量名，但它可以替换为任何其他名称。
+@error_unknown_method = 该方法不存在。
+@error_bad_backslash = 反斜杠可以用于将表达式分成多行。但你需要在之后添加一个换行符。
+@error_mixed_indentation = 不应该混用Tab键和空格键。
+@error_expected_close_token = 预期应该有一个逗号或关闭括号。
+@error_wrong_dict_literal = 字典的键和值之间需要一个 : 来分隔。
+@error_assign_before_global = {0} 在全局声明之前被赋值。
+@error_wildcard_imports_not_allowed_in_function = 在函数内部不允许使用`from x import *`形式的导入。
+@error_invalid_import = 你不能导入名称不是有效标识符的文件。有效的标识符只能包含字母、数字和下划线。如果你的文件名包含其他字符，则必须重新命名。

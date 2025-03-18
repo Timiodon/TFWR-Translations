@@ -1,0 +1,17 @@
+@save = セーブ
+@saved = 保存済み
+@play = スタート
+@load = ロード
+@options = オプション
+@join_discord = ディスコード
+@quit = ゲーム終了
+@open_folder = フォルダを開く
+@new_game = 新しいゲーム
+@back = 戻る
+@unlocks = アンロック
+@farm = 牧場
+@unlocked = アンロック済み
+@upgrade = アップグレード
+@max_level = 最大レベル
+@unlock = アンロック
+@locked = ロック済み

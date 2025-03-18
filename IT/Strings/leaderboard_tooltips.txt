@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Automatizza completamente l'intero gioco.
+@lb_descr_maze = Coltiva 300000 oro.
+@lb_descr_dinosaur = Coltiva 98010 ossa.
+@lb_descr_cactus = Coltiva 100000 cactus.
+@lb_descr_sunflowers = Coltiva 100000 power.
+@lb_descr_pumpkins = Coltiva 100000 zucche.
+@lb_descr_hay = Coltiva 100000 fieno.
+@lb_descr_wood = Coltiva 100000 legno.
+@lb_descr_carrots = Coltiva 100000 carote.
+@lb_descr_polyculture = Coltiva 100000 fieno, legno e carote.

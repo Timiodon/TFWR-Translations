@@ -1,0 +1,17 @@
+@save = Sauvegarder
+@saved = Sauvé
+@play = Démarrer
+@load = Charger
+@options = Options
+@join_discord = Discord
+@quit = Quitter
+@open_folder = Ouvrir le Dossier
+@new_game = Nouvelle Partie
+@back = Retour
+@unlocks = Déblocages
+@farm = Ferme
+@unlocked = Déverrouillé
+@upgrade = Améliorer
+@max_level = Niveau Maximum
+@unlock = Débloquer
+@locked = Bloqué

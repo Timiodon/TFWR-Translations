@@ -1,0 +1,27 @@
+@error_missing_default_parameter = すべてのデフォルト引数は、引数リストの最後に配置する必要があります。
+@error_invalid_name = {0}は無効な名前です。名前はアルファベットで始まり、アルファベット、数字、アンダースコアのみを含むことができます。また、予約語であってはなりません。
+@error_reserved_keyword = {0} は予約語です。名前として使えません。
+@error_invalid_assign_expr = この式に値を割り当てることはできません。
+@error_no_statements = コードブロックは、少なくとも1つのステートメントを含む必要があります。 ステートメントは、`harvest()`のような関数の呼び出しや変数の代入が含まれます。 コードブロックで何もしたくない場合は、`pass`文を使用してください。
+@error_not_enough_indentation = ここにはインデントが足りません。  
+新しいコードブロックを分けるためには、: の後に、前より多くインデントが必要です。  
+インデントにはTabキーを使ってください。
+@error_too_much_indentation = ここはインデントが多すぎますね。コードブロック内のすべての文は同じインデントにする必要があります。
+@error_not_a_statement = これは有効なステートメントではありません。
+@error_not_a_statement2 = これは有効なステートメントではありません。{0} と書きたかったですか？
+@error_invalid_expression = これは有効な式ではありません。
+@error_new_line_expected = ここに新しい行が必要です。
+@error_unexpected_token = ここには{0}が必要です。
+@error_missing_colon = すべてのコードブロックの先頭にはコロン `:` を入れてね。
+@error_unexpected_assign = ここでは代入はできません。等しいかどうかを確認するには `==` を使ってください。
+@error_invalid_for_syntax = これは有効なforループではありません。forループはこう書きます：
+`for n in range(3):`
+`for`の後には常にループ変数、`in`、そしてシーケンスが続きます。この例では`n`が変数名ですが、他の名前に置き換えることもできます。
+@error_unknown_method = このメソッドは存在しません。
+@error_bad_backslash = バックスラッシュを使って、式を複数行に分けることができるよ。ただし、その後に改行を追加する必要があるんだ。
+@error_mixed_indentation = タブとスペースは混在させないでください。
+@error_expected_close_token = カンマまたは閉じカッコが期待されました。
+@error_wrong_dict_literal = dictのキーと値を区切るには:が必要です。
+@error_assign_before_global = {0} はグローバル宣言の前に割り当てられています。
+@error_wildcard_imports_not_allowed_in_function = 関数内で `from x import *` 形式のインポートは許可されていません。
+@error_invalid_import = ファイル名が有効な識別子でない場合、そのファイルをimportすることはできません。有効な識別子には、文字、数字、およびアンダースコアのみが含まれます。他の文字が含まれている場合は、ファイル名を変更する必要があります。

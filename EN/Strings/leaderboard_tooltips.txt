@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Fully automate the entire game.
+@lb_descr_maze = Farm 300000 gold.
+@lb_descr_dinosaur = Farm 98010 bones.
+@lb_descr_cactus = Farm 100000 cacti.
+@lb_descr_sunflowers = Farm 100000 power.
+@lb_descr_pumpkins = Farm 100000 pumpkins.
+@lb_descr_hay = Farm 100000 hay.
+@lb_descr_wood = Farm 100000 wood.
+@lb_descr_carrots = Farm 100000 carrots.
+@lb_descr_polyculture = Farm 100000 hay, wood and carrots.

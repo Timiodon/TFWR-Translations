@@ -1,0 +1,69 @@
+@error_code_after_block = Il ne devrait pas y avoir de code ici. Essaie de l'enlever ou de le mettre sur une nouvelle ligne.
+@error_wrong_number_args = {0} prend {1} arguments.
+@error_expected_no_args = {0} ne prend aucun argument.
+@error_wrong_args = L'argument {0}. de {1} était {2}. Ce n'est pas un argument valide.
+@error_syntax_error_in_import = Le module importé contient une erreur de syntaxe.
+@error_module_not_found = Un module avec ce nom n'existe pas. Le nom doit correspondre à un nom de fichier. C'est le nom affiché en haut de la fenêtre.
+@error_list_element_not_found = {0} n'est pas un élément de la liste.
+@error_set_element_not_found = {0} n'est pas un élément du set.
+@error_index_out_of_bounds = L'index {0} était en dehors des limites de la liste {1}.
+@error_index_out_of_bounds2 = L'index était en dehors des limites de la liste.
+@error_arith_assign_not_used_on_number = {0} peut uniquement être utilisé sur des nombres.
+@error_bool_op_not_used_on_bool = Un opérateur logique ne peut être utilisé que sur des expressions booléennes qui évaluent à `True` ou `False`.
+@error_bad_bin_operator = L'opérateur {0} ne peut pas être utilisé sur les opérandes {1} et {2}.
+@error_bad_unary_operator = L'opérateur {0} ne peut pas être utilisé sur {1}.
+@error_index = {0} ne peut pas être utilisé comme un index sur {1}.
+@error_index_on_non_indexable = Tu ne peux pas indexer dans {0}.
+@error_zero_step = La taille du pas ne peut pas être zéro.
+@error_index_on_tuple = Vous ne pouvez pas attribuer un élément de tuple car les tuples sont immuables.
+@error_bad_key = {0} ne peut pas être utilisé comme clé.
+@error_slice_dict = Impossible de découper les dictionaries.
+@error_key = {0} n'est pas une clé dans le dictionary.
+@error_condition_not_bool = {0} n'est pas une condition valide. La condition doit être une valeur booléenne. Cela signifie que ce doit être une expression qui est toujours soit `True`, soit `False`.
+@error_for_requires_iterable = {0} ne peut pas être itéré dans une boucle for. La boucle for doit recevoir une séquence sur laquelle itérer. Exemple :
+
+`for i in range(5):`
+Ici range(5) retourne la séquence `0,1,2,3,4`.
+@error_no_loop_to_break = `break` ne peut être utilisé qu'à l'intérieur d'une boucle.
+@error_no_loop_to_continue = `continue` ne peut être utilisé qu'à l'intérieur d'une boucle.
+@error_no_function_to_return_from = `return` ne peut être utilisé qu'à l'intérieur d'une fonction.
+@error_missing_unlock = Cela doit être débloqué avant de pouvoir être utilisé.
+@error_missing_x_unlock = {0} doit être débloqué avant de pouvoir être utilisé.
+@error_name_not_defined = {0} n'a jamais été défini. Tu dois attribuer une valeur à une variable avant de l'utiliser.
+@error_missing_import = {0} n'a jamais été défini. Cela semble être défini dans le fichier {1}. As-tu oublié de l'importer ?  
+Si tu l'as importé, il y a probablement un cycle d'importation (voir la page de doc d'importation).
+@error_call_before_def = {0} n'est pas défini. Il semble être défini quelque part dans ce fichier, mais la définition n'a pas encore été exécutée. Les fonctions ne peuvent être appelées qu'après l'instruction `def`.
+@error_not_a_function = Tu as essayé d'appeler quelque chose qui n'est pas une fonction. Une erreur courante qui peut causer cela est d'avoir une variable avec le même nom que la fonction.
+@error_invalid_const = {0} n'existe pas.
+@error_invalid_const2 = Cela n'existe pas.
+@error_max_stack_size_reached = La taille maximale de la call stack a été atteinte. Cela est probablement dû à trop d'appels récursifs de fonctions.
+@error_max_comparison_depth = La profondeur de comparaison maximale a été atteinte. La profondeur de comparaison maximale a été atteinte. Cela pourrait arriver, par exemple, si vous comparez des listes qui se contiennent elles-mêmes.
+@error_assign_type_mismatch = Le côté gauche de l'assignation ne correspond pas au côté droit.
+@error_too_many_values_to_unpack = Le côté droit ne contient pas assez de valeurs à déballer.
+@error_not_enough_values = Le côté droit contient trop de valeurs pour être décomposées sur le côté gauche.
+@error_empty_print = `print()` nécessite au moins un argument.
+@error_in_string = Impossible de vérifier si {0} est dans une chaîne.
+@error_collection_changed_size_during_iteration = La taille de cette collection ne peut pas être modifiée dans une boucle for qui la parcourt. Cela est dû au fait que changer la taille de la collection invaliderait l'objet itérateur que la boucle for utilise.
+@error_wrong_use_of_max = Impossible de calculer le max de {0}.
+@error_wrong_use_of_min = Impossible de calculer le min de {0}.
+@error_function_as_condition = Essai de vérifier si la fonction {0} est `True`. C'est l'objet de la fonction elle-même, pas la valeur de retour de la fonction. Vouliez-vous appeler la fonction avec l'opérateur d'appel `()` ?
+
+En Python, les objets de fonction sont "truthy", ce qui signifie que si vous les utilisez comme conditions, ils fonctionnent comme `True`, donc Python ne vous donnerait pas ce message d'erreur.
+
+C'est un message d'erreur de protection, vous pouvez le désactiver dans les options si cela vous gêne.
+@error_function_in_operator = Tentative d'utilisation de {1} sur la fonction {0}. Ceci est l'objet de la fonction elle-même, pas la valeur de retour de la fonction. Vouliez-vous appeler la fonction avec l'opérateur d'appel `()` ?
+
+Ceci est un message d'erreur de sauvegarde, vous pouvez le désactiver dans les options si cela vous gêne.
+@error_zero_step_size = La taille du pas ne peut pas être 0.
+@error_sequence_too_large = La séquence était trop grande pour être copiée.
+@error_invalid_sim_unlocks = Les déblocages de départ étaient invalides. Il doit s'agir d'une séquence de déblocages ou de tuples sous la forme `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Les objets de départ étaient invalides. Ils doivent être un dict mappant les objets à des nombres comme `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Les globales de départ étaient invalides. Il doit s'agir d'un dict associant des noms de variables à des valeurs comme `{"x" : 42}`.
+@error_division_by_zero = Oh non ! Tu as divisé par `0`. Tu l'as échappé belle.
+@error_negative_use_item = La quantité d'objets utilisée doit être au moins `1`. Elle était de {0}.
+@error_use_before_assign = Essayé de lire la variable {0} avant qu'une valeur ne lui soit assignée.  
+Si tu veux modifier une variable globale, tu dois utiliser le mot-clé global pour écrire dans le scope global.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = Vous ne pouvez pas attribuer un attribut à {0}.

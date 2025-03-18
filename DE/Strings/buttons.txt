@@ -1,0 +1,17 @@
+@save = Speichern
+@saved = Gespeichert
+@play = Start
+@load = Laden
+@options = Optionen
+@join_discord = Discord öffnen
+@quit = Beenden
+@open_folder = Ordner Öffnen
+@new_game = Neues Spiel
+@back = Zurück
+@unlocks = Freischaltungen
+@farm = Farm zurück
+@unlocked = Freigeschaltet
+@upgrade = Upgrade
+@max_level = Maximalstufe
+@unlock = Freischalten
+@locked = Gesperrt

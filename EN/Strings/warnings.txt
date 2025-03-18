@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Tried to buy {0} but didn't have the required resources.
+@warning_no_space_to_plant = Tried to plant {0} but there was already something there.
+@warning_cant_plant_on_ground = Cannot plant {0} on {1}.
+@warning_missing_seed = Didn't have the required items to plant {0}.
+@warning_no_item_to_use = Tried to use {0} but didn't have enough of it.
+@warning_failed_swap_wrap = Tried to do a swap over the farm boundaries. That is not allowed.
+@warning_failed_swap_unswappable = Tried to swap {0}, which cannot be swapped.
+@warning_weird_substance_not_divisible = You used a number of Weird Substance that isn't exactly the number needed to create the maze. Don't forget that the amount of Weird Substance required increases as you upgrade the maze.
+
+To spawn a full-size maze do:
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Simulations and leaderboard runs cannot be started from within other simulations and leaderboard runs.

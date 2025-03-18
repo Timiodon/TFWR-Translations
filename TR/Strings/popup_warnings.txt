@@ -1,0 +1,12 @@
+@popup_warning_delete_files = {0}'i kalıcı olarak silmek istiyor musun? Bu işlem geri alınamaz.
+@popup_warning_delete_save = {0}'ı silmek istediğinden emin misin?
+@delete = Sil
+@cancel = İptal
+@popup_warning_exit_game = Çıkmadan önce kaydetmek ister misiniz?
+@popup_warning_load_game = Yüklemeden önce kaydetmek istiyor musun?
+@save = Kaydet
+@don't save = Kaydetme
+@popup_warning_corrupted_save = {0} yüklenirken bir sorun oluşmuş gibi görünüyor. Daha fazla bilgi için yedekler bölümüne göz at.
+@popup_warning_failed_read_save = {0}'un kayıt dosyalarını okumak başarısız oldu. Dosyalara erişen diğer tüm programları kapattığınızdan emin olun ve tekrar deneyin.
+@popup_warning_failed_write_save = {0} dosya kayıtlarına yazılamadı. Dosyalara erişen diğer tüm programları kapatıp tekrar deneyin.
+@ok = tamam

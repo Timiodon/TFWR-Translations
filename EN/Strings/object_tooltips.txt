@@ -1,0 +1,19 @@
+@plant_tooltip_template = {0}
+
+Base growth time between {1} and {2} seconds.
+Can grow on {3}.
+@object_tooltip_template_cost = ### Plant Cost {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Dinosaurs love them apparently.
+@object_descr_grass = Grows automatically on grassland. Harvest it to obtain `Items.Hay`.
+@object_descr_bush = A small bush that drops `Items.Wood`.
+@object_descr_tree = Trees drop more wood than bushes. They take longer to grow if other trees grow next to them.
+@object_descr_carrot = Carrots!
+@object_descr_pumpkin = Pumpkins grow together when they are next to other fully grown pumpkins. About 1 in 5 pumpkins dies when it grows up.
+@object_descr_sunflower = Sunflowers collect the power from the sun. Harvesting them will give you `Items.Power`.
+If you harvest a sunflower with the maximum number of petals you get bonus power.
+@object_descr_cactus = Cacti come in 10 different sizes. When harvested adjacent cacti that are "sorted" will also be harvested.
+@object_descr_hedge = Part of the maze.
+@object_descr_treasure = A treasure that contains gold equal to the side length of the maze in which it is hidden. It can be harvested like a plant.
+@object_descr_dinosaur = A piece of the tail of the dinosaur hat.
+@object_descr_grassland = The default ground. Grass will automatically grow on it.
+@object_descr_soil = Calling `till()` turns the ground into soil. Calling `till()` again changes it back to grassland.

@@ -1,0 +1,17 @@
+@save = Salva il Gioco
+@saved = Salvato
+@play = Inizia
+@load = Carica
+@options = Opzioni
+@join_discord = Discord
+@quit = Esci dal Gioco
+@open_folder = Apri Cartella
+@new_game = Nuovo Gioco
+@back = Indietro
+@unlocks = Sblocchi
+@farm = Fattoria
+@unlocked = Sbloccato
+@upgrade = Aggiorna
+@max_level = Livello Massimo
+@unlock = Sblocca
+@locked = Bloccato

@@ -1,0 +1,69 @@
+@error_code_after_block = ここにはコードがないはずです。削除するか、新しい行に置いてみてください。
+@error_wrong_number_args = {0}は{1}個の引数を取ります。
+@error_expected_no_args = {0} は引数を取らないよ。
+@error_wrong_args = {0}の引数{1}には{2}が含まれています。これは有効な引数ではありません。
+@error_syntax_error_in_import = インポートしたモジュールに構文エラーがあります。
+@error_module_not_found = この名前のモジュールは存在しません。名前はファイル名と一致する必要があります。この名前はウィンドウの一番上に表示されます。
+@error_list_element_not_found = {0} はリストの中に存在しない要素だよ。
+@error_set_element_not_found = {0} は set の要素ではありません。
+@error_index_out_of_bounds = インデックス{0}がリスト{1}の範囲外です。
+@error_index_out_of_bounds2 = インデックスがリストの範囲外でした。
+@error_arith_assign_not_used_on_number = {0}は数字にしか使えないよ。
+@error_bool_op_not_used_on_bool = 論理演算子は、`True` または `False` と評価されるブール式にのみ使用できます。
+@error_bad_bin_operator = 演算子 {0} はオペランド {1} と {2} に使用できません。
+@error_bad_unary_operator = オペレーター {0} は {1} には使用できません。
+@error_index = {0} は {1} のインデックスとして使えません。
+@error_index_on_non_indexable = {0} にインデックスを付けることはできません。
+@error_zero_step = ステップサイズはゼロにできません。
+@error_index_on_tuple = タプル要素には代入できません。なぜなら、タプルは変更不可能だからです。
+@error_bad_key = {0}はキーとして使用できません。
+@error_slice_dict = 辞書はスライスできません。
+@error_key = {0}はdictionaryに含まれていないキーです。
+@error_condition_not_bool = {0}は有効な条件ではありません。条件はブール値でなければなりません。つまり、常に`True`または`False`のいずれかになる式である必要があります。
+@error_for_requires_iterable = {0} はforループで繰り返すことができません。forループには、繰り返し処理を行うためのシーケンスが必要です。例:
+
+`for i in range(5):`
+ここで、range(5) はシーケンス `0,1,2,3,4` を返します。
+@error_no_loop_to_break = `break`はループの中でしか使えません。
+@error_no_loop_to_continue = `continue`はループの中でのみ使用できます。
+@error_no_function_to_return_from = `return` は関数の中でしか使えません。
+@error_missing_unlock = これは使用する前にアンロックする必要があります。
+@error_missing_x_unlock = {0}を使う前に解除しなきゃね。
+@error_name_not_defined = {0}はまだ定義されていません。使う前に変数に値を代入する必要があります。
+@error_missing_import = {0}はまだ定義されていません。ファイル{1}で定義されているようです。それをインポートするのを忘れたのかな？  
+もしインポートしているなら、インポート循環になってるかも（インポートドキュメントのページを見てね）。
+@error_call_before_def = {0} は定義されていません。このファイルのどこかで定義されているようですが、その定義はまだ実行されていません。関数は `def` ステートメントの後にのみ呼び出すことができます。
+@error_not_a_function = 関数ではないものを呼び出そうとしました。この原因でよくある間違いは、関数と同じ名前の変数を持っていることです。
+@error_invalid_const = {0} は存在しません。
+@error_invalid_const2 = これは存在しません。
+@error_max_stack_size_reached = コールスタックの最大サイズに達しました。これは、多くの再帰関数呼び出しが原因と思われます。
+@error_max_comparison_depth = 比較の最大深度に達しました。比較の最大深度に達しました。これは、例えば自分自身を含むリストを比較している場合に発生することがあります。
+@error_assign_type_mismatch = 代入の左辺と右辺が一致していないよ。
+@error_too_many_values_to_unpack = 右側にはアンパックするのに十分な値が含まれていません。
+@error_not_enough_values = 右側には、左側に展開するには多すぎる値が含まれています。
+@error_empty_print = `print()`には少なくとも1つのargumentが必要です。
+@error_in_string = Stringに{0}があるかどうかを確認できません。
+@error_collection_changed_size_during_iteration = このコレクションのサイズは、それを反復するforループ内で変更することはできません。これは、コレクションのサイズを変更すると、forループが使用しているイテレータオブジェクトが無効になるからです。
+@error_wrong_use_of_max = {0} の最大値を計算できません。
+@error_wrong_use_of_min = {0}のminを計算できません。
+@error_function_as_condition = 関数 {0} が `True` なのか確認しようとしています。これは関数そのもののオブジェクトで、関数の戻り値ではありません。関数を呼び出し演算子 `()` で呼び出そうとしましたか？
+
+Pythonでは、関数オブジェクトはトゥルーとして扱われます。つまり、条件として使用すると `True` のように働くため、Pythonはこのエラーメッセージを表示しません。
+
+これは保護用のエラーメッセージです。邪魔になる場合は、オプションでオフにできます。
+@error_function_in_operator = 関数{0}で{1}を使おうとしています。これ自体は関数オブジェクトであり、関数の返り値ではありません。呼び出しオペレーター`()`を使って関数を呼び出そうとしましたか？
+
+これは安全策のためのエラーメッセージで、邪魔になる場合はオプションで無効にできます。
+@error_zero_step_size = ステップサイズは0にできません。
+@error_sequence_too_large = シーケンスが大きすぎてコピーできませんでした。
+@error_invalid_sim_unlocks = 最初のアンロックが無効です。アンロックのシーケンスか、`(Unlock.Carrots, 3)`という形式のタプルである必要があります。
+@error_invalid_sim_items = 最初のアイテムが無効でした。アイテムを数字にマッピングする辞書が必要です。例: `{Items.Hay : 100}`。
+@error_invalid_sim_globals = 開始時のグローバル変数が無効です。変数名を値にマッピングするdictが必要です。例えば`{"x" : 42}`のように入力してください。
+@error_division_by_zero = あらら！`0`で割り算しちゃったね。ギリギリで助かったよ。
+@error_negative_use_item = アイテムの使用数は少なくとも `1` でなければなりません。現在は {0} です。
+@error_use_before_assign = 変数 {0} に値が割り当てられる前に読み取ろうとしました。
+グローバル変数を変更したい場合は、global キーワードを使ってグローバルスコープに書き込む必要があります。
+
+`global x
+x += 1`
+@error_attribute_on_non_module = {0}に属性を割り当てることはできません。

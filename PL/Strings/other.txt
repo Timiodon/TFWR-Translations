@@ -1,0 +1,6 @@
+@word_number = liczba
+@word_direction = kierunek
+@run_cancelled = Uruchomienie nieudane
+@average_text = {0} Ukończono ({2:F1}%)
+{1}
+@unlocked_in = Odblokowane w: [{0}]({1})

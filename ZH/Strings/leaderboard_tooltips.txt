@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = 完全自动化整个游戏。
+@lb_descr_maze = 种植30万金币。
+@lb_descr_dinosaur = 种植98010根骨头。
+@lb_descr_cactus = 种植 100000 棵仙人掌。
+@lb_descr_sunflowers = 种植100000能量。
+@lb_descr_pumpkins = 种植100000个南瓜。
+@lb_descr_hay = 种植100000草料。
+@lb_descr_wood = 收集100000木材。
+@lb_descr_carrots = 种植100000根胡萝卜。
+@lb_descr_polyculture = 种植100000的干草、木材和胡萝卜。

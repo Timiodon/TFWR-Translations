@@ -1,0 +1,19 @@
+@plant_tooltip_template = {0}
+
+Basiswachstumszeit zwischen {1} und {2} Sekunden.
+Kann auf {3} wachsen.
+@object_tooltip_template_cost = ### Pflanzenkosten {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Dinosaurier lieben sie anscheinend.
+@object_descr_grass = Wächst automatisch auf Grasland. Ernte es, um `Items.Hay` zu erhalten.
+@object_descr_bush = Ein kleiner Busch, der `Items.Wood` abwirft.
+@object_descr_tree = Bäume geben mehr Holz als Büsche. Sie brauchen länger zum Wachsen, wenn andere Bäume neben ihnen wachsen.
+@object_descr_carrot = Karotten!
+@object_descr_pumpkin = Kürbisse wachsen zusammen, wenn sie neben anderen voll ausgewachsenen Kürbissen stehen. Etwa 1 von 5 Kürbissen stirbt, wenn er ausgewachsen ist.
+@object_descr_sunflower = Sonnenblumen sammeln die Energie der Sonne. Wenn du sie erntest, bekommst du `Items.Power`.
+Wenn du eine Sonnenblume mit der maximalen Anzahl an Blütenblättern erntest, erhältst du Bonusenergie.
+@object_descr_cactus = Kakteen gibt es in 10 verschiedenen Größen. Beim Ernten werden benachbarte Kakteen, die "sortiert" sind, ebenfalls geerntet.
+@object_descr_hedge = Teil des Labyrinths.
+@object_descr_treasure = Ein Schatz, der Gold in Höhe der Seitenlänge des Labyrinths enthält, in dem er versteckt ist. Er kann wie eine Pflanze geerntet werden.
+@object_descr_dinosaur = Ein Stück des Schwanzes des Dinosaurierhuts.
+@object_descr_grassland = Der standardmäßige Boden. Gras wächst hier automatisch.
+@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in Ackerboden. Ein erneuter Aufruf von `till()` verwandelt ihn wieder in Grasland.

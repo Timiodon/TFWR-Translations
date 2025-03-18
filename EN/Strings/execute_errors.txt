@@ -1,0 +1,69 @@
+@error_code_after_block = There shouldn't be any code here. Try removing it or putting it on a new line.
+@error_wrong_number_args = {0} takes {1} arguments.
+@error_expected_no_args = {0} doesn't take any arguments.
+@error_wrong_args = The {0}. argument of {1} was {2}. This is not a valid argument.
+@error_syntax_error_in_import = The imported module has a syntax error.
+@error_module_not_found = A module with this name does not exist. The name needs to match a file name. This is the name displayed at the top of the window.
+@error_list_element_not_found = {0} is not an element in the list.
+@error_set_element_not_found = {0} is not an element of the set.
+@error_index_out_of_bounds = The index {0} was outside the bounds of the list {1}.
+@error_index_out_of_bounds2 = The index was outside the bounds of the list.
+@error_arith_assign_not_used_on_number = {0} can only be used on numbers.
+@error_bool_op_not_used_on_bool = A logic operator can only be used on boolean expressions that evaluate to `True` or `False`.
+@error_bad_bin_operator = The operator {0} cannot be used on the operands {1} and {2}.
+@error_bad_unary_operator = The operator {0} cannot be used on {1}.
+@error_index = {0} cannot be used as an index on {1}.
+@error_index_on_non_indexable = You cannot index into {0}.
+@error_zero_step = The step size cannot be zero.
+@error_index_on_tuple = You can't assign a tuple element because tuples are immutable.
+@error_bad_key = {0} cannot be used as a key.
+@error_slice_dict = Can't slice dictionaries.
+@error_key = {0} is not a key in the dictionary.
+@error_condition_not_bool = {0} is not a valid condition. The condition must be a boolean value. This means it must be an expression that is always either `True` or `False`.
+@error_for_requires_iterable = {0} can't be iterated in a for loop. The for loop must be given a sequence to iterate over. Example:
+
+`for i in range(5):`
+Here range(5) returns the sequence `0,1,2,3,4`.
+@error_no_loop_to_break = `break` can only be used inside of a loop.
+@error_no_loop_to_continue = `continue` can only be used inside of a loop.
+@error_no_function_to_return_from = `return` can only be used inside a function.
+@error_missing_unlock = This must be unlocked before it can be used.
+@error_missing_x_unlock = {0} must be unlocked before this can be used.
+@error_name_not_defined = {0} has never been defined. You must assign a value to a variable before using it.
+@error_missing_import = {0} has never been defined. It does appear to be defined in the file {1}. Did you forget to import that? 
+If you have imported it, you probably have an import cycle (See the import doc page).
+@error_call_before_def = {0} is not defined. It appears to be defined somewhere in this file, but the definition hasn't been executed yet. Functions can only be called after the `def` statement.
+@error_not_a_function = You tried to call something that is not a function. A common mistake that can cause this is having a variable with the same name as the function.
+@error_invalid_const = {0} doesn't exist.
+@error_invalid_const2 = This doesn't exist.
+@error_max_stack_size_reached = The maximum call stack size has been reached. This is most likely due to too many recursive function calls.
+@error_max_comparison_depth = The maximum comparison depth has been reached. The maximum comparison depth has been reached. This could happen, for example, if you are comparing lists that contain themselves.
+@error_assign_type_mismatch = The left hand side of the assignment didn't match the right hand side.
+@error_too_many_values_to_unpack = The right hand side doesn't contain enough values to unpack.
+@error_not_enough_values = The right side contains too many values to be unpacked into the left side.
+@error_empty_print = `print()` requires at least one argument.
+@error_in_string = Cannot check if {0} is in a string.
+@error_collection_changed_size_during_iteration = The size of this collection cannot be changed within a for loop iterating over it. This is because changing the size of the collection would invalidate the iterator object that the for loop is using.
+@error_wrong_use_of_max = Can't compute the max of {0}.
+@error_wrong_use_of_min = Can't compute the min of {0}.
+@error_function_as_condition = Trying to check if the function {0} is `True`. This is the function object itself, not the function's return value. Did you mean to call the function with the call operator `()`? 
+
+In Python, functions objects are truthy, which means that if you use them as conditions, they work like `True`, so Python wouldn't give you this error message. 
+
+This is a safeguard error message, you can turn it off in the options if it gets in your way.
+@error_function_in_operator = Trying to use {1} on the function {0}. This is the function object itself, not the function's return value. Did you mean to call the function with the call operator `()`? 
+
+This is a safeguard error message, you can turn it off in the options if it gets in your way.
+@error_zero_step_size = The step size cannot be 0.
+@error_sequence_too_large = The sequence was too large to copy.
+@error_invalid_sim_unlocks = The starting unlocks were invalid. It needs to be a sequence of unlocks or tuples of the form `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = The starting items were invalid. It needs to be a dict mapping items to numbers like `{Items.Hay : 100}`.
+@error_invalid_sim_globals = The starting globals were invalid. It needs to be a dict mapping variable names to values like `{"x" : 42}`.
+@error_division_by_zero = Oh No! You divided by `0`. You just barely survived it.
+@error_negative_use_item = Use item quantity must be at least `1`. It was {0}.
+@error_use_before_assign = Tried to read the variable {0} before a value was assigned to it. 
+If you want to modify a global variable you have to use the global keyword to write to the global scope.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = You can't assign an attribute to {0}.

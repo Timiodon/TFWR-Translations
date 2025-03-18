@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = {0}を買おうとしましたが、必要なリソースがありませんでした。
+@warning_no_space_to_plant = {0}を植えようとしましたが、そこにはすでに何かがありました。
+@warning_cant_plant_on_ground = {1}に{0}を植えることができません。
+@warning_missing_seed = 必要なアイテムがなくて{0}を植えられなかったよ。
+@warning_no_item_to_use = {0}を使おうとしましたが、それが足りませんでした。
+@warning_failed_swap_wrap = 農場の境界を超えてスワップしようとしました。これは許可されていません。
+@warning_failed_swap_unswappable = {0}を交換しようとしましたが、交換できません。
+@warning_weird_substance_not_divisible = 迷路を作成するのに必要な量と正確に一致しない数のWeird Substanceを使用しました。迷路をアップグレードするたびに必要なWeird Substanceの量が増えることを忘れないでください。
+
+フルサイズの迷路を生成するには、以下を実行してください：
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = シミュレーションとleaderboardの実行は、他のシミュレーションやleaderboardの実行中からは開始できません。

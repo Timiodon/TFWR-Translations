@@ -1,0 +1,6 @@
+@word_number = 数
+@word_direction = 方向
+@run_cancelled = Run Failed
+@average_text = {0} 完了 ({2:F1}%)
+{1}
+@unlocked_in = アンロック場所: [{0}]({1})

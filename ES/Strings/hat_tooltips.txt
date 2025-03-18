@@ -1,0 +1,2 @@
+@hat_descr_straw_hat = El sombrero por defecto.
+@hat_descr_dinosaur_hat = Póntelo para comenzar el juego de dinosaurios.

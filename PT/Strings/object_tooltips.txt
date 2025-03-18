@@ -1,0 +1,19 @@
+@plant_tooltip_template = {0}
+
+Tempo base de crescimento entre {1} e {2} segundos.
+Pode crescer em {3}.
+@object_tooltip_template_cost = ### Custo para Plantar {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Aparentemente, os dinossauros adoram eles.
+@object_descr_grass = Cresce automaticamente em campos de grama. Colha-o para obter `Items.Hay`.
+@object_descr_bush = Um arbusto pequeno que solta `Items.Wood`.
+@object_descr_tree = Árvores dão mais madeira do que arbustos. Elas demoram mais para crescer se outras árvores crescerem ao lado delas.
+@object_descr_carrot = Cenouras!
+@object_descr_pumpkin = Abóboras crescem juntas quando estão ao lado de outras abóboras totalmente crescidas. Aproximadamente 1 em cada 5 abóboras morre quando cresce.
+@object_descr_sunflower = Girassóis coletam a energia do sol. Colhê-los vai te dar `Items.Power`.  
+Se você colher um girassol com o número máximo de pétalas, você ganha energia extra.
+@object_descr_cactus = Cactos vêm em 10 tamanhos diferentes. Quando colhidos, cactos adjacentes que estão "sorted" também serão colhidos.
+@object_descr_hedge = Parte do labirinto.
+@object_descr_treasure = Um tesouro que contém ouro igual ao comprimento lateral do labirinto em que está escondido. Ele pode ser colhido como uma planta.
+@object_descr_dinosaur = Um pedaço da cauda do chapéu de dinossauro.
+@object_descr_grassland = O terreno padrão. A grama crescerá automaticamente nele.
+@object_descr_soil = Chamar `till()` transforma o chão em solo. Chamar `till()` novamente muda de volta para pastagem.

@@ -1,0 +1,17 @@
+@save = Save
+@saved = Saved
+@play = Start
+@load = Load
+@options = Options
+@join_discord = Discord
+@quit = Quit
+@open_folder = Open Folder
+@new_game = New Game
+@back = Back
+@unlocks = Unlocks
+@farm = Farm
+@unlocked = Unlocked
+@upgrade = Upgrade
+@max_level = Max Level
+@unlock = Unlock
+@locked = Locked

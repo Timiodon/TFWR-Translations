@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = {0} satın almaya çalışıldı ama gerekli kaynaklar yoktu.
+@warning_no_space_to_plant = {0} ekmeye çalıştım ama zaten orada bir şey vardı.
+@warning_cant_plant_on_ground = {1} üzerinde {0} ekilemez.
+@warning_missing_seed = Gerekli öğeler olmadığı için {0} ekilemedi.
+@warning_no_item_to_use = {0} kullanılmaya çalışıldı ama yeterli miktarda yoktu.
+@warning_failed_swap_wrap = Çiftlik sınırlarının ötesinde bir değiş tokuş yapmaya çalışıldı. Bu izin verilmiyor.
+@warning_failed_swap_unswappable = {0} değiştirilmeye çalışıldı, ancak bu değiştirilemez.
+@warning_weird_substance_not_divisible = Eksik Miktarda Weird Substance kullandın, bu da labirenti oluşturmak için gereken miktara tam olarak uymuyor. Labirenti yükselttikçe ihtiyaç duyulan Weird Substance miktarının arttığını unutma.
+
+Tam boyutlu bir labirenti çıkartmak için şunları yap:
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Simülasyonlar ve leaderboard çalışmaları, başka simülasyonlar ve leaderboard çalışmaları içerisinden başlatılamaz.

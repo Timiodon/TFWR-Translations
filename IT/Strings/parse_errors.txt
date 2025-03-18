@@ -1,0 +1,30 @@
+@error_missing_default_parameter = Tutti gli argument predefiniti devono essere alla fine della lista degli argument.
+@error_invalid_name = {0} non è un nome valido. I nomi devono iniziare con una lettera e possono contenere solo lettere, numeri e underscore. Inoltre, non possono essere parole riservate.
+@error_reserved_keyword = {0} è una keyword riservata. Non puoi usarla come nome.
+@error_invalid_assign_expr = Non puoi assegnare un valore a questa espressione.
+@error_no_statements = Un blocco di codice deve contenere almeno un'istruzione.  
+Un'istruzione può essere una chiamata di funzione come `harvest()` o un'assegnazione di variabile.  
+Se vuoi non fare nulla nel blocco di codice, usa un'istruzione `pass`.
+@error_not_enough_indentation = Qui non c'è abbastanza indentazione.
+Ci deve essere più indentazione dopo un : rispetto a prima, per separare il nuovo blocco di codice.
+Usa il tasto Tab per indentare il codice.
+@error_too_much_indentation = C'è troppa indentazione qui.  
+L'indentazione deve essere la stessa per tutte le istruzioni all'interno di un blocco di codice.
+@error_not_a_statement = Questa non è un'istruzione valida.
+@error_not_a_statement2 = Questa non è un'istruzione valida. Volevi scrivere {0}?
+@error_invalid_expression = Questa non è un'espressione valida.
+@error_new_line_expected = Una nuova linea è attesa qui.
+@error_unexpected_token = Qui è previsto un {0}.
+@error_missing_colon = Ci deve essere un due punti `:` all'inizio di ogni blocco di codice.
+@error_unexpected_assign = Non puoi fare un'assegnazione qui. Per verificare l'uguaglianza usa `==` invece.
+@error_invalid_for_syntax = Questo non è un ciclo for valido. Un ciclo for appare così: 
+`for n in range(3):`
+Il `for` è sempre seguito dalla variabile del ciclo, un `in` e poi una sequenza. In questo esempio `n` è il nome della variabile, ma può essere sostituito con qualsiasi altro nome.
+@error_unknown_method = Questo metodo non esiste.
+@error_bad_backslash = Il backslash può essere usato per dividere espressioni su più righe. Ma devi aggiungere un a capo dopo.
+@error_mixed_indentation = Tabulazioni e spazi non dovrebbero essere mescolati.
+@error_expected_close_token = Atteso una virgola o una parentesi di chiusura.
+@error_wrong_dict_literal = Mancava un : per separare le chiavi e i valori di un dictionary.
+@error_assign_before_global = {0} è assegnato prima di una dichiarazione globale.
+@error_wildcard_imports_not_allowed_in_function = Le importazioni della forma `from x import *` non sono consentite all'interno delle funzioni.
+@error_invalid_import = Non puoi importare file con nomi che non sono identificatori validi. Gli identificatori validi possono contenere solo lettere, numeri e underscore. Se il nome del tuo file contiene altri caratteri, devi rinominarlo.

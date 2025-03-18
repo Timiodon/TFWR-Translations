@@ -1,0 +1,2 @@
+@hat_descr_straw_hat = Il cappello di default.
+@hat_descr_dinosaur_hat = Indossalo per iniziare il gioco dei dinosauri.

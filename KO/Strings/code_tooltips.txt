@@ -1,0 +1,539 @@
+@code_tooltip_harvest = `harvest()`
+드론 아래에 있는 entity를 수확합니다. 
+수확할 수 없는 entity를 수확하려 하면, 그것은 파괴됩니다.
+
+entity가 제거되면 `True`를 반환하고, 그렇지 않으면 `False`를 반환합니다.
+
+entity가 제거되면 `200` ticks, 그렇지 않으면 `1` tick이 소요됩니다.
+
+예시:
+`harvest()`
+@code_tooltip_can_harvest = `can_harvest()`
+식물이 완전히 자랐는지 확인하는 데 사용됩니다.
+
+드론 아래에 수확할 수 있는 entity가 있으면 `True`를 반환하고, 그렇지 않으면 `False`를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`if can_harvest():
+    harvest()`
+@code_tooltip_range = `range(start = 0, end, step = 1)`
+`start`에서 시작하여 `end`에 도달하기 전까지(따라서 `end`는 제외) 크기가 `step`인 걸음으로 숫자 시퀀스를 생성합니다.
+
+기본적으로 `start`는 `0`으로 설정되어 있으며, 인수가 하나만 주어지면 `end`에 할당됩니다. 이는 일반적으로 가능하지 않습니다.
+Python에서 `range`는 이 이상한 동작을 허용하는 클래스 생성자입니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`for i in range(10):
+    print(i)
+
+for i in range(2,6):
+    print(i)
+
+for i in range(10, 0, -1):
+    print(i)`
+@code_tooltip_plant = `plant(entity)` 
+지정된 `entity`의 비용을 소모하고 드론 아래에 심습니다.
+식물을 심을 비용이 부족하거나, 땅의 종류가 맞지 않거나, 이미 식물이 심어져 있으면 실패합니다.
+
+성공하면 `True`를 반환하고, 그렇지 않으면 `False`를 반환합니다.
+
+성공하면 실행하는 데 `200` tick이 걸리며, 그렇지 않으면 `1` tick이 걸립니다.
+
+예제:
+`plant(Entities.Bush)`
+@code_tooltip_move = `move(direction)`
+드론을 지정된 `direction` 방향으로 한 칸 이동시킵니다.
+드론이 농장의 가장자리를 넘어가면 농장의 반대편으로 이동합니다.
+
+`East `  =  오른쪽
+`West `  =  왼쪽
+`North`  =  위쪽
+`South`  =  아래쪽
+
+드론이 움직인 경우 `True`를 반환하고, 그렇지 않으면 `False`를 반환합니다.
+
+드론이 이동한 경우 `200` ticks가 소요되며, 그렇지 않으면 `1` tick이 소요됩니다.
+
+예시:
+`move(North)`
+@code_tooltip_swap = `swap(direction)`
+드론 아래에 있는 엔티티와 지정된 `direction`에 있는 엔티티를 바꿉니다.
+모든 엔티티에 작동하지는 않습니다.
+엔티티 중 하나 (또는 둘 다)가 `None`일 때도 작동합니다.
+
+성공하면 `True`, 그렇지 않으면 `False`를 반환합니다.
+
+성공 시 `200` ticks, 그렇지 않을 경우 `1` tick이 소요됩니다.
+
+예시:
+`swap(North)`
+@code_tooltip_till = `till()` 
+드론 아래의 땅을 `Grounds.Soil`로 갈아엎습니다. 이미 토양인 경우 땅을 `Grounds.Grassland`로 되돌립니다.
+
+반환값: `None`
+
+실행에 `200` ticks 소요됩니다.
+
+예시:
+`till()`
+@code_tooltip_get_pos_x = `get_pos_x()` 
+드론의 현재 x 위치를 가져옵니다.
+x 위치는 서쪽의 `0`에서 시작하여 동쪽으로 갈수록 증가합니다.
+
+드론의 현재 x 좌표를 나타내는 숫자를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_y = `get_pos_y()` 
+드론의 현재 y 위치를 가져옵니다.
+y 위치는 남쪽에서는 `0`에서 시작하여 북쪽으로 갈수록 증가합니다.
+
+드론의 현재 y 좌표를 나타내는 숫자를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_world_size = `get_world_size()` 
+현재 농장의 크기를 가져옵니다.
+
+격자의 남북 방향의 변의 길이를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예:
+`for i in range(get_world_size()):
+    move(North)`
+@code_tooltip_get_entity_type = `get_entity_type()` 
+드론 아래에 어떤 종류의 엔티티가 있는지 찾아보세요.
+
+타일이 비어 있으면 `None`을 반환하고, 그렇지 않으면 드론 아래의 엔티티 종류를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`if get_entity_type() == Entities.Grass:
+    harvest()`
+@code_tooltip_get_ground_type = `get_ground_type()` 
+드론 아래에 어떤 종류의 땅이 있는지 알아봅니다.
+
+드론 아래 땅의 종류를 반환합니다.
+
+실행하는 데 `1` tick이 필요합니다.
+
+예시:
+`if get_ground_type() != Grounds.Soil:
+    till()`
+@code_tooltip_get_time = `get_time()` 
+현재 게임 시간을 가져옵니다.
+
+게임 시작 이후의 시간을 초 단위로 반환합니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`start = get_time()
+
+do_something()
+
+time_passed = get_time() - start`
+@code_tooltip_get_tick_count = `get_tick_count()`
+수행된 tick의 수를 측정하는 데 사용됩니다.
+
+실행이 시작된 후 수행된 tick의 수를 반환합니다.
+
+실행하는 데 `0` tick이 필요합니다.
+
+예시:
+`do_something()
+
+print(get_tick_count())`
+@code_tooltip_use_item = `use_item(item, n=1)` 
+지정된 `item`을(를) `n`번 사용하려고 시도합니다. `Items.Water`, `Items.Fertilizer`를 포함한 일부 아이템과 함께만 사용할 수 있습니다.
+
+아이템이 사용되면 `True`를 반환하고, 그렇지 않으면 `False`를 반환합니다.
+
+성공 시 실행하는 데 `200` ticks가 소요되며, 그렇지 않으면 `1` tick이 소요됩니다.
+
+예시:
+`use_item(Items.Fertilizer)`
+@code_tooltip_get_water = `get_water()` 
+드론 아래의 현재 물 수위를 가져옵니다.
+
+드론 아래의 물 수위를 `0`과 `1` 사이의 숫자로 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`if get_water() < 0.5:
+    use_item(Items.Water)`
+@code_tooltip_do_a_flip = `do_a_flip()` 
+드론이 공중제비를 하게 됩니다! 이 동작은 속도 업그레이드에 영향을 받지 않습니다.
+
+`None`을 반환합니다.
+
+실행하는 데 1초가 걸립니다.
+
+예시:
+`while True:
+    do_a_flip()`
+@code_tooltip_print = `print(*args)` 
+모든 `args`를 드론 위의 공중에 연기로 출력합니다. 이 동작은 속도 업그레이드에 영향을 받지 않습니다.
+여러 값을 한 번에 출력할 수 있습니다.
+
+반환값은 `None`입니다.
+
+실행에 1초가 소요됩니다.
+
+예시:
+`print("ground:", get_ground_type())`
+@code_tooltip_len = `len(collection)`
+리스트, set, dict 또는 tuple의 요소 수를 가져옵니다.
+
+`collection`의 길이를 반환합니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예:
+`for i in range(len(list)):
+    list[i] += 1`
+@code_tooltip_list = `list(collection = None)`
+새로운 list를 만듭니다. 
+`dictionary`가 None이면, 빈 dictionary를 만듭니다.
+`dictionary`가 dictionary면, 그것의 복사본을 만듭니다.
+
+list를 반환합니다.
+
+`1 + len(collection)` ticks가 걸립니다.
+
+예시:
+`new_list = list((1,2,3))`
+@code_tooltip_dict = `dict(dictionary = None)`
+새 dictionary를 만듭니다.
+`dictionary`가 None이면 빈 dictionary를 만듭니다.
+`dictionary`가 dictionary면 그것의 복사본을 만듭니다.
+
+dictionary를 반환합니다.
+
+실행하는 데 `1 + len(dictionary)` ticks가 걸립니다.
+
+예시:
+`new_dict = dict()`
+@code_tooltip_set = `set(collection = None)`  
+새로운 set을 만듭니다.  
+`collection`이 None이면, 빈 set을 만듭니다.  
+`collection`이 값들의 모음이면, 그 값들로 구성된 새로운 set을 만듭니다.  
+
+set을 반환합니다.  
+
+실행하는 데 `1 + len(collection)` ticks가 걸립니다.  
+
+예제:  
+`new_set = set((1,2,3))`
+@code_tooltip_str = `str(object)`
+
+`object`의 문자열 표현을 반환합니다.
+
+실행하는 데 `1` ticks가 소요됩니다.
+
+예시:
+`string = str(1000)`
+@code_tooltip_set_execution_speed = `set_execution_speed(speed)`
+프로그램이 실행되는 속도를 제한하여 상황을 더 잘 볼 수 있게 합니다.
+
+`speed`가 `1`이면 드론이 속도 업그레이드 없이 가지는 속도입니다.
+`speed`가 `10`이면 코드가 `10`배 빠르게 실행되고, 이는 `9`번의 속도 업그레이드 후 드론의 속도에 해당합니다.
+`speed`가 `0.5`이면 속도 업그레이드 없이 코드를 원래 속도의 절반으로 실행합니다. 이 기능은 코드가 무엇을 하는지 이해하는데 유용할 수 있습니다.
+
+`speed`가 현재 실행될 수 있는 속도보다 빠르면 최대 속도로 실행됩니다.
+
+`speed`가 `0`이거나 음수이면 속도가 최대 속도로 복구됩니다. 실행이 멈출 때 효과도 중지됩니다.
+
+`None`을 반환합니다.
+
+`200` ticks 동안 실행됩니다.
+
+예시:
+`set_execution_speed(1)`
+@code_tooltip_set_world_size = `set_world_size(size)`
+농장의 크기를 제한하여 진행 상황을 더 잘 볼 수 있습니다.
+또한 농장을 초기화하고 드론의 위치를 리셋합니다.
+농장은 `size` x `size` 그리드로 설정됩니다.
+가장 작은 `size` 값은 `3`입니다.
+`3`보다 작은 `size`는 그리드를 전체 크기로 되돌립니다.
+실행이 중지되면 효과도 중지됩니다.
+
+returns `None`
+
+실행하는 데 `200` ticks 소요됩니다.
+
+example:
+`set_world_size(5)`
+@code_tooltip_num_items = `num_items(item)` 
+현재 `item`이(가) 얼마나 있는지 확인해보세요.
+
+현재 인벤토리에 있는 `item`의 수를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`if num_items(Items.Fertilizer) > 0:
+    use_item(Items.Fertilizer)`
+@code_tooltip_get_cost = `get_cost(thing)` 
+`thing`의 비용을 가져옵니다.
+
+`thing`이 엔티티인 경우에는 그것을 심는 비용을 가져옵니다.
+`thing`이 잠금 해제인 경우에는 그것을 해제하는 비용을 가져옵니다.
+
+항목을 키로, 숫자를 값으로 하는 dictionary를 반환합니다. 각 항목은 그것을 얻기 위해 필요한 양으로 매핑됩니다.
+이미 최대 레벨에 도달한 업그레이드 가능 잠금 해제에 사용되면 `None`을 반환합니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`cost = get_cost(Unlocks.Carrots)
+for item in cost:
+    if num_items(item) < cost[item]:
+        print("not enough items to unlock carrots")`
+@code_tooltip_clear = `clear()`  
+농장의 모든 것을 제거하고 드론을 `(0,0)` 위치로 이동시킨 후 모자를 밀짚모자로 변경합니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `200` ticks가 걸립니다.
+
+예시:
+`clear()`
+@code_tooltip_get_companion = `get_companion()` 
+드론 아래 식물의 선호하는 동반자를 얻습니다.
+
+`(companion_type, (companion_x_position, companion_y_position))` 형태의 튜플을 반환합니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`companion = get_companion()
+if companion != None:
+	print(companion)`
+@code_tooltip_unlock = `unlock(unlock)` 
+연구 트리에서 `unlock`에 해당하는 버튼을 클릭하는 것과 동일한 효과를 가집니다.
+
+해제가 성공하면 `True`, 그렇지 않으면 `False`를 반환합니다.
+
+성공하면 `200` ticks, 그렇지 않으면 `1` tick이 소요됩니다.
+
+예시:
+`unlock(Unlocks.Carrots)`
+@code_tooltip_num_unlocked = `num_unlocked(thing)`
+잠금 해제, entity, 땅 또는 아이템이 이미 잠금 해제되었는지 확인하는 데 사용됩니다.
+
+`thing`이 업그레이드 가능한 경우 `1`에 더해 `thing`이 업그레이드된 횟수를 반환합니다. 그렇지 않으면 `thing`이 잠금 해제되었을 때 `1`을 반환하고, 그렇지 않으면 `0`을 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)`
+@code_tooltip_reset = `reset()` 
+농장을 1x1 사각형으로 초기화하고, 모든 자원을 제거하며 대부분의 잠금 해제를 잠급니다.
+코드는 삭제되지 않습니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `200` ticks가 걸립니다.
+
+예시:
+`reset()`
+@code_tooltip_measure = `measure(direction = None)` 
+일부 엔티티의 값을 측정할 수 있습니다. 이 효과는 엔티티에 따라 달라집니다.
+
+`direction`이 `None`이 아닌 경우, 주어진 방향에 있는 이웃 엔티티를 측정합니다.
+
+해바라기의 꽃잎 수를 반환합니다.
+보물이나 사과의 다음 위치를 반환합니다.
+선인장의 크기를 반환합니다.
+호박의 미스터리한 숫자를 반환합니다.
+다른 모든 엔티티에 대해서는 `None`을 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`num_petals = measure()`
+@code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`
+지정된 `file_name`을 시작점으로 하여 `leaderboard`에 대한 시간이 제한된 시뮬레이션을 시작합니다.
+`speedup`은 시작 속도를 설정합니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `200` ticks가 소요됩니다.
+
+예시:
+`leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+지정된 `file_name`을(를) 시작점으로 하여 리더보드를 위한 시뮬레이션을 시작합니다.
+
+`sim_unlocks`: 시작 할 때 해제된 아이템들의 목록입니다.
+`sim_items`: 아이템을 수량으로 매핑하는 dictionary입니다. 시뮬레이션은 이 아이템들로 시작합니다.
+`sim_globals`: 변수 이름을 값으로 매핑하는 dictionary입니다. 시뮬레이션은 전역 scope에서 이 변수들로 시작합니다.
+`seed`: 시뮬레이션의 랜덤 시드입니다. 양의 정수여야 합니다.
+`speedup`: 초기 속도 향상입니다.
+
+시뮬레이션을 실행하는데 걸리는 시간을 반환합니다.
+
+실행하는데 `200` ticks가 소요됩니다.
+
+예시:
+`filename = "f1"
+sim_unlocks = Unlocks
+sim_items = {Items.Carrot : 10000, Items.Hay : 50}
+sim_globals = {"a" : 13}
+seed = 0
+speedup = 64
+
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_quick_print = `quick_print(*args)`
+값을 출력합니다. `print(*args)`와 비슷하지만, 값을 공중에 쓰지 않아서 출력 페이지에서만 찾을 수 있습니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `0` ticks가 걸립니다.
+
+예시:
+`quick_print("hi mom")`
+@code_tooltip_change_hat = `change_hat(hat)`
+드론의 모자를 `hat`으로 변경합니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `200` ticks가 소요됩니다.
+
+예제:
+`change_hat(Hats.Dinosaur_Hat)`
+@code_tooltip_max = `max(*args)`
+시퀀스의 요소들 또는 여러 인자로부터 최대값을 구합니다.
+숫자와 문자열에 사용할 수 있습니다.
+
+`max(a,b,c)`: `a`, `b`, `c` 중에서 최대값을 반환합니다.
+`max(sequence)`: 시퀀스 내 모든 값의 최대값을 반환합니다.
+
+#comparisons ticks를 실행하는 데 필요합니다.
+
+예시:
+`max([3,6,34,16])`
+@code_tooltip_min = `min(*args)`
+시퀀스의 요소들 또는 여러 인자로부터 최소값을 구합니다.
+숫자와 문자열에 사용할 수 있습니다.
+
+`min(a,b,c)`: `a`, `b`, `c` 중에서 최소값을 반환합니다.
+`min(sequence)`: 시퀀스 내 모든 값의 최소값을 반환합니다.
+
+실행하는 데 #comparisons ticks가 소요됩니다.
+
+예시:
+`min([3,6,34,16])`
+@code_tooltip_abs = `abs(number)`
+숫자의 절대값을 계산합니다.
+
+`number`가 양수이면 `number`를 반환하고, 아니면 `-number`를 반환합니다.
+
+수행하는 데 #comparisons 틱이 소요됩니다.
+
+예시:
+`abs(-69)`
+@code_tooltip_random = `random()`
+0(포함)과 1(비포함) 사이의 랜덤 숫자를 샘플링합니다.
+
+랜덤 숫자를 반환합니다.
+
+실행에 `1` ticks가 소요됩니다.
+
+예시:
+`def random_elem(list):
+	index = random() * len(list) // 1
+	return list[index]`
+@code_tooltip_append = `list.append(element)` 
+`element`를 `list`의 끝에 추가합니다.
+
+`None`을 반환합니다.
+
+실행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`list = []
+list.append(1)`
+@code_tooltip_add = `set.add(element)` 
+`element`를 `set`에 추가합니다.
+
+`None`을 반환합니다.
+
+실행에 `element size` ticks가 소요됩니다.
+
+예제:
+`set = {0}
+set.add(1)`
+@code_tooltip_remove = `collection.remove(element)` 
+`collection`에서 `element`의 첫 번째 발생을 제거합니다.
+
+`None`을 반환합니다.
+
+`element size` 틱 동안 set에서 실행되며, 리스트에서는 #comparisons + #shifts 틱이 소요됩니다.
+
+예시:
+`list = [True, False, None]
+list.remove(False)`
+@code_tooltip_pop = `collection.pop()` 
+리스트의 마지막 요소 또는 dictionary에서 지정된 요소를 제거합니다.
+`list.pop(i)`는 `list`에서 인덱스 `i`에 있는 요소를 제거합니다.
+
+제거된 요소를 반환합니다.
+
+dictionary에서는 `key size` ticks, 리스트에서는 `len(list) - i + 1` ticks가 소요됩니다.
+
+예시:
+`list = [True, False, None]
+list.pop(0)`
+@code_tooltip_insert = `list.insert(i, element)` 
+`element`를 `list`의 인덱스 `i`에 삽입합니다.
+
+반환값은 `None`입니다.
+
+`len(list) - i + 1` ticks가 소요됩니다.
+
+예시:
+`list = [1,2]
+list.insert(0, 0)`
+@code_tooltip_Items = 모든 인벤토리 항목을 포함합니다. `for` 루프를 사용하여 반복할 수 있습니다.
+@code_tooltip_Entities = 모든 식물 유형을 포함합니다. `for` 루프로 반복할 수 있습니다.
+@code_tooltip_Grounds = 모든 가능한 땅 종류를 포함합니다. `for` 루프로 반복 가능합니다.
+@code_tooltip_Unlocks = 연구 메뉴에서 모든 잠금 해제 및 업그레이드를 포함합니다. `for` 루프로 반복할 수 있습니다.
+@code_tooltip_Hats = 모든 모자 유형을 포함합니다. `for` 루프로 반복할 수 있습니다.
+@code_tooltip_Leaderboards = 모든 leaderboard 카테고리가 포함되어 있습니다. `for` 루프로 반복 가능합니다.
+@code_tooltip_for = 시퀀스의 모든 요소를 반복하는 루프입니다. 몇몇 프로그래밍 언어에서는 이를 "foreach" 루프라고 부릅니다.
+@code_tooltip_while = 조건이 거짓일 때까지 반복합니다.
+@code_tooltip_def = 함수를 정의합니다.
+@code_tooltip_True = 항상 true인 boolean 값.
+@code_tooltip_False = 항상 false인 boolean 값.
+@code_tooltip_if = 조건이 `True`일 때 코드를 실행합니다.
+@code_tooltip_else = 이전 `if` 조건이 `False`일 때 코드를 실행합니다.
+@code_tooltip_elif = 다음과 동일한 작업을 수행합니다:
+`else:
+    if condition:`
+@code_tooltip_None = 값이 없음을 나타내는 값.
+@code_tooltip_continue = 다음 루프 반복을 즉시 진행하세요. 루프가 중첩되어 있는 경우 항상 가장 안쪽의 루프에 영향을 미칩니다.
+@code_tooltip_break = 루프를 중단하고 루프 뒤의 문장을 계속 실행하세요. 중첩 루프가 있는 경우, 항상 가장 안쪽의 루프에 영향을 미칩니다.
+@code_tooltip_North = 화면에서 위쪽 방향. 화면을 돌리지 않는 한.
+@code_tooltip_East = 화면에서 오른쪽 방향. 화면을 돌리지 않는 한.
+@code_tooltip_South = 화면에서 아래 방향입니다. 화면을 돌리지 않는 한.
+@code_tooltip_West = 화면에서 왼쪽 방향입니다. 화면을 돌리지 않는 한.
+@code_tooltip_not = `not True`는 `False`이고 `not False`는 `True`야.
+@code_tooltip_and = 첫 번째 피연산자를 평가합니다. 만약 그 값이 `False`, `0` 또는 빈 컬렉션이라면, 그 값을 바로 반환합니다 (평가를 단락시킵니다). 그렇지 않으면, 두 번째 피연산자를 평가하고 반환합니다.
+@code_tooltip_or = 첫 번째 피연산자를 평가합니다. 만약 이 피연산자가 참(즉, `False`, `0` 및 빈 컬렉션 이외의 모든 값)이면, 그 값을 즉시 반환합니다(평가를 단축). 그렇지 않으면 두 번째 피연산자를 평가하고 반환합니다.
+@code_tooltip_return = 함수에서 값을 반환하는 데 사용됩니다.
+@code_tooltip_pass = 아무 작업도 하지 않습니다. 빈 코드 블록은 허용되지 않으므로 유용할 수 있습니다.

@@ -1,0 +1,28 @@
+@error_missing_default_parameter = Wszystkie domyślne argumenty muszą być na końcu listy argumentów.
+@error_invalid_name = {0} to nieprawidłowa nazwa. Nazwy muszą zaczynać się od litery i mogą zawierać tylko litery, cyfry i podkreślenia. Nie może być to również zarezerwowane słowo kluczowe.
+@error_reserved_keyword = {0} to zastrzeżone słowo kluczowe. Nie możesz go używać jako nazwy.
+@error_invalid_assign_expr = Nie można przypisać wartości do tego wyrażenia.
+@error_no_statements = Blok kodu musi zawierać przynajmniej jedno polecenie. Polecenie może być wywołaniem funkcji takim jak `harvest()` lub przypisaniem zmiennej. Jeśli chcesz nic nie robić w bloku kodu, użyj instrukcji `pass`.
+@error_not_enough_indentation = Nie ma tutaj wystarczającego wcięcia.  
+Musi być więcej wcięcia po : niż przed nim, aby oddzielić nowy blok kodu.  
+Użyj klawisza Tab, aby wciąć kod.
+@error_too_much_indentation = Jest tu za dużo wcięć.  
+Wcięcia muszą być takie same dla wszystkich instrukcji w bloku kodu.
+@error_not_a_statement = To nie jest prawidłowe stwierdzenie.
+@error_not_a_statement2 = To nie jest poprawne wyrażenie. Czy chciałeś napisać {0}?
+@error_invalid_expression = To nie jest poprawne wyrażenie.
+@error_new_line_expected = Nowa linia jest tutaj spodziewana.
+@error_unexpected_token = Tu spodziewany jest {0}.
+@error_missing_colon = Na początku każdego bloku kodu musi być dwukropek `:`.
+@error_unexpected_assign = Nie możesz przeprowadzić przypisania w tym miejscu. Aby sprawdzić równość, użyj `==`.
+@error_invalid_for_syntax = To nie jest poprawna pętla for. Pętla for wygląda tak:
+`for n in range(3):`
+Po `for` zawsze następuje zmienna pętli, `in` oraz sekwencja. W tym przykładzie `n` jest nazwą zmiennej, ale można ją zastąpić dowolną inną nazwą.
+@error_unknown_method = Ta metoda nie istnieje.
+@error_bad_backslash = Znak backslash może być użyty do podzielenia wyrażeń na wiele linii. Ale musisz dodać nową linię po nim.
+@error_mixed_indentation = Tabulatorów i spacji nie powinno się mieszać.
+@error_expected_close_token = Oczekiwano przecinka lub zamykającego nawiasu.
+@error_wrong_dict_literal = Oczekiwano dwukropka, aby oddzielić klucze i wartości w dictionary.
+@error_assign_before_global = {0} jest przypisany przed deklaracją globalną.
+@error_wildcard_imports_not_allowed_in_function = Importy w formie `from x import *` nie są dozwolone wewnątrz funkcji.
+@error_invalid_import = Nie można importować plików o nazwach, które nie są prawidłowymi identyfikatorami. Prawidłowe identyfikatory mogą zawierać tylko litery, cyfry i podkreślenia. Jeśli nazwa Twojego pliku zawiera inne znaki, musisz ją zmienić.

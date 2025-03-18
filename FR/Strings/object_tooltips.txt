@@ -1,0 +1,18 @@
+@plant_tooltip_template = {0}
+
+Temps de croissance de base entre {1} et {2} secondes.
+Peut pousser sur {3}.
+@object_tooltip_template_cost = ### Coût de la plantation {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Les dinosaures les adorent apparemment.
+@object_descr_grass = Pousse automatiquement sur les prairies. Récoltez-le pour obtenir `Items.Hay`.
+@object_descr_bush = Un petit buisson qui lâche `Items.Wood`.
+@object_descr_tree = Les arbres donnent plus de bois que les buissons. Ils mettent plus de temps à pousser si d'autres arbres poussent à côté d'eux.
+@object_descr_carrot = Carottes !
+@object_descr_pumpkin = Les citrouilles poussent ensemble lorsqu'elles sont à côté d'autres citrouilles complètement mûres. Environ 1 citrouille sur 5 meurt en grandissant.
+@object_descr_sunflower = Les tournesols captent l'énergie du soleil. Les récolter vous donnera `Items.Power`. Si vous récoltez un tournesol avec le nombre maximum de pétales, vous obtenez de l'énergie bonus.
+@object_descr_cactus = Les cactus existent en 10 tailles différentes. Lors de la récolte, les cactus adjacents qui sont "sorted" seront également récoltés.
+@object_descr_hedge = Partie du labyrinthe.
+@object_descr_treasure = Un trésor qui contient de l'or équivalent à la longueur du côté du labyrinthe dans lequel il est caché. Il peut être récolté comme une plante.
+@object_descr_dinosaur = Un morceau de la queue du chapeau dinosaure.
+@object_descr_grassland = Le terrain par défaut. L'herbe y poussera automatiquement.
+@object_descr_soil = Appeler `till()` transforme le sol en terre cultivable. Appeler `till()` de nouveau le change en prairie.

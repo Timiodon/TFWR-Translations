@@ -1,0 +1,538 @@
+@code_tooltip_harvest = `harvest()`
+ドローンの下にあるentityを収穫します。
+もし収穫できないentityを収穫しようとした場合、そのentityは破壊されます。
+
+entityが削除された場合は`True`を返し、それ以外の場合は`False`を返します。
+
+entityが削除された場合、実行に`200` ticksかかり、それ以外の場合は`1` tickかかります。
+
+例:
+`harvest()`
+@code_tooltip_can_harvest = `can_harvest()`
+植物が完全に成長しているかどうかを確認します。
+
+ドローンの下に収穫の準備ができているentityがあれば`True`を返し、そうでなければ`False`を返します。
+
+実行するのに`1`tickかかります。
+
+例:
+`if can_harvest():
+    harvest()`
+@code_tooltip_range = `range(start = 0, end, step = 1)`
+`start`から始まり、`end`に達する前に終了する（一歩手前で終了）数列を`step`の大きさで生成します。
+
+注意: デフォルトでは`start`は`0`に設定されていて、もし引数が一つだけ与えられると、それは`end`にバインドされます。これは普通ありえない動作です。
+Pythonでは、`range`はこの不思議な動作を可能にするクラスコンストラクタです。
+
+実行に`1` tickかかります。
+
+例:
+`for i in range(10):
+    print(i)
+
+for i in range(2,6):
+    print(i)
+
+for i in range(10, 0, -1):
+    print(i)`
+@code_tooltip_plant = `plant(entity)` 
+指定された`entity` のコストを払って、それをドローンの下に植えます。
+植えることができない場合は失敗します。理由は、コストが足りない、地面の種類が合わない、または既に植物がある場合です。
+
+成功した場合は `True` を返し、そうでなければ `False` を返します。
+
+成功した場合は実行に `200` ticks かかり、そうでなければ `1` tick かかります。
+
+例:
+`plant(Entities.Bush)`
+@code_tooltip_move = `move(direction)`
+指定された`direction`にドローンを1マス移動させます。 ドローンが農場の端を越えて移動すると、農場の反対側に戻ります。
+
+`East `  =  右
+`West `  =  左
+`North`  =  上
+`South`  =  下
+
+ドローンが移動した場合は`True`、それ以外の場合は`False`を返します。
+
+ドローンが移動した場合は`200` ticks、そうでない場合は`1` tickかかります。
+
+例：
+`move(North)`
+@code_tooltip_swap = `swap(direction)`  
+ドローンの下にあるentityを指定された`direction`のドローンの隣にあるentityと交換します。  
+すべてのentityには使えません。  
+また、どちらか一方（または両方）が`None`の場合でも動作します。  
+
+成功すると`True`を返し、そうでなければ`False`を返します。  
+
+成功すると200`tick`、そうでない場合は1`tick`かかります。  
+
+例:  
+`swap(North)`
+@code_tooltip_till = `till()` 
+ドローンの下の地面を`Grounds.Soil`に耕します。すでに土の場合は、地面を`Grounds.Grassland`に戻します。
+
+戻り値：`None`
+
+実行には`200` ticksかかります。
+
+例:
+`till()`
+@code_tooltip_get_pos_x = `get_pos_x()` 
+ドローンの現在のx位置を取得します。
+x位置は西では`0`から始まり、東に行くほど増加します。
+
+ドローンの現在のx座標を表す数値を返します。
+
+実行には`1` tickかかります。
+
+例：
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_y = `get_pos_y()`  
+ドローンの現在のy位置を取得します。  
+y位置は南で`0`から始まり、北に向かって増加します。  
+
+ドローンの現在のy座標を表す数字を返します。  
+
+実行には`1`ティックかかります。  
+
+例：  
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_world_size = `get_world_size()` 
+現在の農場のサイズを取得します。
+
+北から南の方向のグリッドの辺の長さを返します。
+
+実行には`1` tickかかります。
+
+例:
+`for i in range(get_world_size()):
+    move(North)`
+@code_tooltip_get_entity_type = `get_entity_type()` 
+ドローンの下にあるentityがどんなものかを調べる。
+
+タイルが空の場合は`None`を返し、そうでなければドローンの下にあるentityのタイプを返す。
+
+実行に`1` tickかかる。
+
+例:
+`if get_entity_type() == Entities.Grass:
+    harvest()`
+@code_tooltip_get_ground_type = `get_ground_type()` 
+ドローンの下にある地面の種類を調べます。
+
+ドローンの下にある地面のタイプを返します。
+
+実行に`1` tickかかります。
+
+例:
+`if get_ground_type() != Grounds.Soil:
+    till()`
+@code_tooltip_get_time = `get_time()` 
+現在のゲーム時間を取得します。
+
+ゲーム開始からの時間を秒数で返します。
+
+実行には`1` tickかかります。
+
+例:
+`start = get_time()
+
+do_something()
+
+time_passed = get_time() - start`
+@code_tooltip_get_tick_count = `get_tick_count()`
+実行されたtickの数を測定するために使用されます。
+
+実行開始からのtickの数を返します。
+
+実行に`0`tickかかります。
+
+例:
+`do_something()
+
+print(get_tick_count())`
+@code_tooltip_use_item = `use_item(item, n=1)` 
+指定された`item`を`n`回使おうとします。`Items.Water`や`Items.Fertilizer`を含む一部のアイテムでのみ使用できます。
+
+アイテムが使われた場合は`True`を返し、そうでない場合は`False`を返します。
+
+成功した場合は実行に`200` ticksかかり、そうでない場合は`1` tickです。
+
+例:
+`use_item(Items.Fertilizer)`
+@code_tooltip_get_water = `get_water()`  
+ドローンの下にある現在の水位を取得します。
+
+水位は `0` から `1` の間の数値として返されます。
+
+実行には `1` tick かかります。
+
+例:
+`if get_water() < 0.5:
+    use_item(Items.Water)`
+@code_tooltip_do_a_flip = `do_a_flip()`  
+ドローンがひっくり返るよ！このアクションは速度アップグレードの影響を受けません。
+
+戻り値 `None`
+
+実行に1秒かかります。
+
+例:
+`while True:
+    do_a_flip()`
+@code_tooltip_print = `print(*args)` 
+すべての`args`を煙を使ってドローンの上に表示します。このアクションはスピードアップグレードの影響を受けません。
+複数の値を同時に表示できます。
+
+戻り値 `None`
+
+実行に1sかかります。
+
+例:
+`print("ground:", get_ground_type())`
+@code_tooltip_len = `len(collection)`
+リスト、set、dict、またはタプルの要素数を取得します。
+
+`collection`の長さを返します。
+
+実行には`1` tickかかります。
+
+例：
+`for i in range(len(list)):
+    list[i] += 1`
+@code_tooltip_list = `list(collection = None)`
+新しいリストを作成します。
+もし`dictionary`がNoneの場合、空のdictionaryを作成します。
+もし`dictionary`がdictionaryの場合、それをコピーしたものを作成します。
+
+リストを返します。
+
+実行には`1 + len(collection)` tickかかります。
+
+例:
+`new_list = list((1,2,3))`
+@code_tooltip_dict = `dict(dictionary = None)`
+新しいdictionaryを作成します。
+もし`dictionary`がNoneの場合、空のdictionaryを作成します。
+もし`dictionary`がdictionaryの場合、そのコピーを作成します。
+
+dictionaryを返します。
+
+実行には`1 + len(dictionary)` ticksかかります。
+
+例:
+`new_dict = dict()`
+@code_tooltip_set = `set(collection = None)`  
+新しいsetを作成します。  
+もし`collection`がNoneの場合、空のsetを作ります。  
+もし`collection`が値のコレクションの場合、その値を持つ新しいsetを作ります。
+
+setを返します。
+
+実行には`1 + len(collection)` ticksを要します。
+
+例:  
+`new_set = set((1,2,3))`
+@code_tooltip_str = `str(object)`
+
+`object` の文字列表現を返します。
+
+実行には `1` tick かかります。
+
+例:
+`string = str(1000)`
+@code_tooltip_set_execution_speed = `set_execution_speed(speed)`
+プログラムの実行速度を制限して、何が起こっているかをよりよく確認できるようにします。
+
+`speed` が `1` の場合、ドローンが速度アップグレードなしの状態で持つ速度です。
+`speed` が `10` だと、コードは `10` 倍速で実行され、これは `9` 回の速度アップグレード後のドローンの速度に相当します。
+`speed` が `0.5` だと、コードは速度アップグレードなしの状態の半分の速度で実行されます。これにより、コードが何をしているかを確認するのに役立ちます。
+
+もし、`speed` が現在の最大速度より速い場合、単に最大速度で実行されます。
+
+`speed` が `0` または負の値の場合、速度は最大速度に戻ります。
+実行が停止すると、この効果も終了します。
+
+戻り値は `None`
+
+実行には `200` tick かかります。
+
+例:
+`set_execution_speed(1)`
+@code_tooltip_set_world_size = `set_world_size(size)`
+農場のサイズを制限して、何が起きているかを見やすくします。
+農場をクリアして、ドローンの位置をリセットします。
+農場を `size` x `size` のグリッドに設定します。
+最小の `size` は `3` です。
+`3` より小さい `size` は、グリッドを元のサイズに戻します。
+実行が止まると、この効果も停止します。
+
+戻り値は `None` です。
+
+実行には `200` ticks かかります。
+
+例:
+`set_world_size(5)`
+@code_tooltip_num_items = `num_items(item)` 
+現在持っている`item`の数を調べます。
+
+インベントリにある現在の`item`の数を返します。
+
+実行には`1` tickかかります。
+
+例:
+`if num_items(Items.Fertilizer) > 0:
+    use_item(Items.Fertilizer)`
+@code_tooltip_get_cost = `get_cost(thing)` 
+`thing` のコストを取得します。
+
+`thing` がエンティティの場合、それを植えるためのコストを取得します。
+`thing` がアンロックの場合、それをアンロックするためのコストを取得します。
+
+アイテムをキー、数値を値とするdictionaryを返します。各アイテムには、それにどれだけ必要かが対応付けられます。
+最大レベルに達しているアップグレード可能なアンロックで使用された場合は、`None` を返します。
+
+実行に`1` tick かかります。
+
+例:
+`cost = get_cost(Unlocks.Carrots)
+for item in cost:
+    if num_items(item) < cost[item]:
+        print("not enough items to unlock carrots")`
+@code_tooltip_clear = `clear()`  
+農場のすべてを取り除き、ドローンを位置 `(0,0)` に戻し、帽子を麦わら帽子に変えます。
+
+戻り値 `None`
+
+実行に `200` ticks かかります。
+
+例:
+`clear()`
+@code_tooltip_get_companion = `get_companion()` 
+ドローンの下にある植物の適した仲間を取得します。
+
+`(companion_type, (companion_x_position, companion_y_position))` の形式のタプルを返します。
+
+実行には `1` tick かかります。
+
+例:
+`companion = get_companion()
+if companion != None:
+	print(companion)`
+@code_tooltip_unlock = `unlock(unlock)` 
+研究ツリーで `unlock` に対応するボタンをクリックするのと同じ効果があります。
+
+アンロックが成功した場合は `True` を返し、そうでない場合は `False` を返します。
+
+成功した場合は `200` ticks かかって実行され、それ以外の場合は `1` tick です。
+
+例:
+`unlock(Unlocks.Carrots)`
+@code_tooltip_num_unlocked = `num_unlocked(thing)`
+この関数は、アンロック、エンティティ、地面またはアイテムがすでにアンロックされているかを確認するために使用されます。
+
+`thing` がアップグレード可能な場合、`1`に加え、`thing` がアップグレードされた回数を返します。それ以外の場合は、`thing` がアンロックされていれば `1` を、そうでなければ `0` を返します。
+
+実行に `1` tick を要します。
+
+例:
+`plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)`
+@code_tooltip_reset = `reset()` 
+農場を1x1の小さな区画にリセットし、すべての資源を取り除き、ほとんどのアンロックをロックします。
+ただし、あなたのコードは削除されません。
+
+戻り値: `None`
+
+実行には`200` ticksかかります。
+
+例:
+`reset()`
+@code_tooltip_measure = `measure(direction = None)` 
+いくつかのエンティティの値を測定できるよ。この効果はエンティティによって異なるんだ。
+
+もし`direction`が`None`じゃない場合、指定された方向の隣接するエンティティを測定するよ。
+
+ひまわりの花びらの数を返す。
+宝物またはリンゴの次の位置を返す。
+サボテンのサイズを返す。
+カボチャの不思議な数を返す。
+その他のエンティティには`None`を返す。
+
+実行には`1` tickかかる。
+
+例:
+`num_petals = measure()`
+@code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`  
+指定された`file_name`を開始点として、`leaderboard`のタイムシミュレーションを開始します。  
+`speedup`は開始時のスピードアップを設定します。
+
+`None`を返します。
+
+実行には`200` ticksかかります。
+
+例:
+`leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+指定された `file_name` を開始点として、Leaderboard用のシミュレーションを開始します。
+
+`sim_unlocks`: 開始時に解除されている要素のシーケンス。
+`sim_items`: アイテムを数量にマッピングしたdict。このアイテムからシミュレーションが始まります。
+`sim_globals`: 変数名を値にマッピングしたdict。シミュレーションはこれらの変数がグローバルスコープにある状態から始まります。
+`seed`: シミュレーションの乱数シード。正の整数である必要があります。
+`speedup`: 開始時のスピードアップ。
+
+シミュレーションを実行するのにかかった時間を返します。
+
+実行に`200` ticksかかります。
+
+例:
+`filename = "f1"
+sim_unlocks = Unlocks
+sim_items = {Items.Carrot : 10000, Items.Hay : 50}
+sim_globals = {"a" : 13}
+seed = 0
+speedup = 64
+
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_quick_print = `quick_print(*args)`
+値を表示しますが、`print(*args)`とは違い、空中に文字を描き込むことがないため、出力ページでしか見つけることができません。
+
+`None` を返します
+
+実行に`0` tickかかります。
+
+例:
+`quick_print("hi mom")`
+@code_tooltip_change_hat = `change_hat(hat)`
+ドローンの帽子を`hat`に変更します。
+
+`None`を返します
+
+実行には`200`ticksかかります。
+
+例:
+`change_hat(Hats.Dinosaur_Hat)`
+@code_tooltip_max = `max(*args)`
+要素の中から最大値を取得します。またはいくつかの引数を渡して最大値を取得します。
+数字や文字列に使用できます。
+
+`max(a,b,c)`: `a`、`b`、`c`の中で最大値を返します。
+`max(sequence)`: シーケンス内の全ての値の中で最大値を返します。
+
+#comparisons ticksで実行されます。
+
+例:
+`max([3,6,34,16])`
+@code_tooltip_min = `min(*args)`
+要素の中から最小値を取得する関数です。または複数の引数を渡すことができます。
+数値や文字列に使用できます。
+
+`min(a,b,c)`: `a`、`b`、`c`の中から最小値を返します。
+`min(sequence)`: シーケンス内の全ての値から最小値を返します。
+
+実行には #comparisons ticks がかかります。
+
+例:
+`min([3,6,34,16])`
+@code_tooltip_abs = `abs(number)`
+数の絶対値を計算します。
+
+もし`number`が正の数なら`number`を、そうでない場合は`-number`を返します。
+
+実行には#comparisons ticksがかかります。
+
+例:
+`abs(-69)`
+@code_tooltip_random = `random()`
+0（含む）から1（含まない）までのランダムな数をサンプルします。
+
+ランダムな数を返します。
+
+実行には`1` tickかかります。
+
+例:
+`def random_elem(list):
+	index = random() * len(list) // 1
+	return list[index]`
+@code_tooltip_append = `list.append(element)` 
+`element` を `list` の最後に追加します。
+
+`None` を返します。
+
+実行には `1` tick かかります。
+
+例：
+`list = []
+list.append(1)`
+@code_tooltip_add = `set.add(element)` 
+`element` を `set` に追加します。
+
+`None` を返します
+
+実行には `element size` ticks を要します。
+
+例:
+`set = {0}
+set.add(1)`
+@code_tooltip_remove = `collection.remove(element)` 
+`collection`から最初に見つかる`element`を削除します。
+
+`None`を返します
+
+setでは`element size` ticks、リストでは#comparisons + #shifts ticksを実行します。
+
+例:
+`list = [True, False, None]
+list.remove(False)`
+@code_tooltip_pop = `collection.pop()` 
+リストから最後の要素、または辞書から指定された要素を削除します。
+`list.pop(i)` は、`list` 内のインデックス `i` にある要素を削除します。
+
+削除された要素を返します。
+
+辞書では `key size` ticks、リストでは `len(list) - i + 1` ticks が実行にかかります。
+
+例:
+`list = [True, False, None]
+list.pop(0)`
+@code_tooltip_insert = `list.insert(i, element)` 
+インデックス `i` に `element` を `list` に挿入します。
+
+戻り値は `None` です。
+
+実行には `len(list) - i + 1` tick かかります。
+
+例:
+`list = [1,2]
+list.insert(0, 0)`
+@code_tooltip_Items = インベントリにあるすべてのアイテムを含みます。`for` ループで繰り返し処理できます。
+@code_tooltip_Entities = すべての植物タイプを含んでいます。`for`ループで繰り返し処理ができます。
+@code_tooltip_Grounds = すべての可能な地面の種類を含んでいます。`for`ループで繰り返し処理できます。
+@code_tooltip_Unlocks = 研究メニュー内のすべてのアンロックとアップグレードを含んでいます。`for` ループで繰り返すことができます。
+@code_tooltip_Hats = すべての帽子タイプを含みます。`for`ループで繰り返し処理ができます。
+@code_tooltip_Leaderboards = すべてのleaderboardカテゴリを含みます。`for`ループで繰り返し処理ができます。
+@code_tooltip_for = シーケンスのすべての要素を繰り返し処理するループ。一部のプログラミング言語ではこれを「foreach」ループと呼びます。
+@code_tooltip_while = 条件が偽になるまでループします。
+@code_tooltip_def = 関数を定義します。
+@code_tooltip_True = 常にtrueであるboolean値。
+@code_tooltip_False = 常にfalseであるブール値。
+@code_tooltip_if = 条件が`True`の場合、コードを実行します。
+@code_tooltip_else = 前の`if`条件が`False`の場合にコードを実行します。
+@code_tooltip_elif = `else:
+    if condition:` と同じことをします。
+@code_tooltip_None = 値がないことを表す値。
+@code_tooltip_continue = 内側のループがある場合、常に最も内側のループに影響を与えます。次のループの繰り返しをすぐに続行します。
+@code_tooltip_break = ループを抜け出し、ループの後の文を実行し続けます。ループがネストされている場合、これは常に最も内側のループに影響します。
+@code_tooltip_North = 画面の上方向。画面を回転させない限り。
+@code_tooltip_East = 画面の右側。画面を回さない限りは。
+@code_tooltip_South = 画面の下方向。画面を回さない限りは。
+@code_tooltip_West = 画面の左方向。画面を回さない限り。
+@code_tooltip_not = `not True` は `False` であり、`not False` は `True` です。
+@code_tooltip_and = 最初のオペランドを評価します。それが「False」、`0`、または空のコレクションであれば、その値を即座に返します（評価のショートサーキット）。そうでない場合は、2番目のオペランドを評価してその値を返します。
+@code_tooltip_or = 最初のオペランドを評価します。それが真（`False`、`0`、空のコレクション以外のもの）なら、その値を即座に返します（評価をショートカット）。そうでなければ、2番目のオペランドを評価し、その値を返します。
+@code_tooltip_return = 関数から値を返すのに使用します。
+@code_tooltip_pass = 何もしません。役立つことがあります。空のコードブロックが許可されていないためです。

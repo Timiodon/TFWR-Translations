@@ -1,0 +1,12 @@
+@popup_warning_delete_files = {0}を完全に削除しますか？ これは元に戻せません。
+@popup_warning_delete_save = {0}を本当に削除しますか？
+@delete = 削除
+@cancel = キャンセル
+@popup_warning_exit_game = 終了する前に保存しますか？
+@popup_warning_load_game = 読み込みの前にセーブしますか？
+@save = セーブ
+@don't save = セーブしない
+@popup_warning_corrupted_save = {0} の読み込みに問題があったようです。詳細については、バックアップに関するセクションをご覧ください。
+@popup_warning_failed_read_save = {0}のセーブファイルを読み込めませんでした。他のプログラムがファイルにアクセスしていないか確認して、もう一度試してください。
+@popup_warning_failed_write_save = {0} のセーブファイルへの書き込みに失敗しました。他のプログラムでファイルを開いていないか確認して、もう一度試してください。
+@ok = ok

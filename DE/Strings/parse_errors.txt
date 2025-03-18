@@ -1,0 +1,29 @@
+@error_missing_default_parameter = Alle default argumente müssen am Ende der Argumentliste stehen.
+@error_invalid_name = {0} ist kein gültiger Name. Namen müssen mit einem Buchstaben beginnen und dürfen nur Buchstaben, Ziffern und Unterstriche enthalten. Außerdem darf es kein reserviertes Schlüsselwort sein.
+@error_reserved_keyword = {0} ist ein reserviertes Schlüsselwort. Du kannst es nicht als Namen verwenden.
+@error_invalid_assign_expr = Kann diesem Ausdruck keinen Wert zuweisen.
+@error_no_statements = Ein Codeblock muss mindestens eine Anweisung enthalten.  
+Eine Anweisung kann ein Funktionsaufruf wie `harvest()` oder eine Variablenzuweisung sein.  
+Wenn du im Codeblock nichts tun möchtest, verwende eine `pass`-Anweisung.
+@error_not_enough_indentation = Hier fehlt genügend Einrückung.
+Nach einem : muss mehr eingerückt werden als davor, um den neuen Codeblock zu trennen.
+Verwende die Tab-Taste, um den Code einzurücken.
+@error_too_much_indentation = Hier ist zu viel Einrückung. Die Einrückung muss für alle Anweisungen innerhalb eines Codeblocks gleich sein.
+@error_not_a_statement = Das ist keine gültige Anweisung.
+@error_not_a_statement2 = Dies ist keine gültige Anweisung. Wolltest du {0} schreiben?
+@error_invalid_expression = Dies ist kein gültiger Ausdruck.
+@error_new_line_expected = Eine neue Zeile wird hier erwartet.
+@error_unexpected_token = An {0} wird hier erwartet.
+@error_missing_colon = Am Anfang jedes Codeblocks muss ein Doppelpunkt `:` stehen.
+@error_unexpected_assign = Hier kannst du keine Zuweisung machen. Um Gleichheit zu überprüfen, verwende `==` stattdessen.
+@error_invalid_for_syntax = Dies ist keine gültige for-Schleife. Eine for-Schleife sieht so aus: 
+`for n in range(3):`
+Auf das `for` folgt immer die Schleifenvariable, dann ein `in` und danach eine Sequenz. In diesem Beispiel ist das `n` der Variablenname, aber es kann durch jeden anderen Namen ersetzt werden.
+@error_unknown_method = Diese Methode existiert nicht.
+@error_bad_backslash = Der Backslash kann verwendet werden, um Ausdrücke auf mehrere Zeilen zu verteilen. Danach musst du jedoch einen Zeilenumbruch hinzufügen.
+@error_mixed_indentation = Tabs und Leerzeichen sollten nicht gemischt werden.
+@error_expected_close_token = Es wurde ein Komma oder eine schließende Klammer erwartet.
+@error_wrong_dict_literal = Es wurde ein : erwartet, um die Schlüssel und die Werte eines dictionary zu trennen.
+@error_assign_before_global = {0} wird vor einer globalen Deklaration zugewiesen.
+@error_wildcard_imports_not_allowed_in_function = Importieren in der Form `from x import *` ist in Funktionen nicht erlaubt.
+@error_invalid_import = Du kannst keine Dateien mit Namen importieren, die keine gültigen Bezeichner sind. Gültige Bezeichner dürfen nur Buchstaben, Zahlen und Unterstriche enthalten. Wenn dein Dateiname andere Zeichen enthält, musst du ihn umbenennen.

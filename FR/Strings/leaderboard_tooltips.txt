@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Automatise complètement le jeu.
+@lb_descr_maze = Ferme 300000 gold.
+@lb_descr_dinosaur = Ferme 98010 bones.
+@lb_descr_cactus = Cultive 100000 cactus.
+@lb_descr_sunflowers = Ferme 100000 power.
+@lb_descr_pumpkins = Ferme 100000 citrouilles.
+@lb_descr_hay = Ferme 100000 hay.
+@lb_descr_wood = Obtiens 100000 wood.
+@lb_descr_carrots = Ferme 100000 carottes.
+@lb_descr_polyculture = Récolte 100000 hay, wood et carrots.

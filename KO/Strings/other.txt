@@ -1,0 +1,6 @@
+@word_number = 숫자
+@word_direction = 방향
+@run_cancelled = 실행 실패
+@average_text = {0} 완료됨 ({2:F1}%)
+{1}
+@unlocked_in = 해제됨: [{0}]({1})

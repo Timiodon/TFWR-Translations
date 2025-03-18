@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Próbowałem kupić {0}, ale brakowało wymaganych zasobów.
+@warning_no_space_to_plant = Próbowałem zasadzić {0}, ale coś już tam było.
+@warning_cant_plant_on_ground = Nie można zasadzić {0} na {1}.
+@warning_missing_seed = Nie miałem potrzebnych przedmiotów do zasadzenia {0}.
+@warning_no_item_to_use = Próbowałem użyć {0}, ale nie miałem tego wystarczająco dużo.
+@warning_failed_swap_wrap = Próbowałem zrobić swap poza granicami farmy. To nie jest dozwolone.
+@warning_failed_swap_unswappable = Próbowałem zamienić {0}, którego nie można zamienić.
+@warning_weird_substance_not_divisible = Użyłeś ilości Weird Substance, która nie jest dokładnie taką, jaka jest potrzebna do stworzenia labiryntu. Pamiętaj, że ilość Weird Substance wymagana rośnie wraz z ulepszaniem labiryntu.
+
+Aby stworzyć pełnowymiarowy labirynt, zrób:
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Symulacje i rankingi nie mogą być uruchamiane w ramach innych symulacji i rankingów.

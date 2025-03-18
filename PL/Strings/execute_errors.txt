@@ -1,0 +1,67 @@
+@error_code_after_block = Nie powinno tu być żadnego kodu. Spróbuj go usunąć lub umieścić w nowej linii.
+@error_wrong_number_args = {0} przyjmuje {1} argumenty.
+@error_expected_no_args = {0} nie przyjmuje żadnych argumentów.
+@error_wrong_args = Argument {0} funkcji {1} miał wartość {2}. To nie jest prawidłowy argument.
+@error_syntax_error_in_import = Zaimportowany moduł ma błąd składni.
+@error_module_not_found = Nie istnieje moduł o takiej nazwie. Nazwa musi być zgodna z nazwą pliku. To jest nazwa wyświetlana na górze okna.
+@error_list_element_not_found = {0} nie jest elementem na liście.
+@error_set_element_not_found = {0} nie jest elementem zestawu.
+@error_index_out_of_bounds = Indeks {0} był poza granicami listy {1}.
+@error_index_out_of_bounds2 = Indeks znajdował się poza granicami listy.
+@error_arith_assign_not_used_on_number = {0} można używać tylko w odniesieniu do liczb.
+@error_bool_op_not_used_on_bool = Operator logiczny można używać tylko na wyrażeniach boolowskich, które zwracają `True` lub `False`.
+@error_bad_bin_operator = Operator {0} nie może być użyty na operandach {1} i {2}.
+@error_bad_unary_operator = Operator {0} nie może być użyty na {1}.
+@error_index = {0} nie może być użyty jako indeks na {1}.
+@error_index_on_non_indexable = Nie można indeksować w {0}.
+@error_zero_step = Rozmiar kroku nie może być zerowy.
+@error_index_on_tuple = Nie możesz przypisać elementu krotki, ponieważ krotki są niemutowalne.
+@error_bad_key = {0} nie może być używany jako klucz.
+@error_slice_dict = Nie można kroić dictionaries.
+@error_key = {0} nie jest kluczem w dictionary.
+@error_condition_not_bool = {0} nie jest poprawnym warunkiem. Warunek musi być wartością boolean. Oznacza to, że musi być wyrażeniem, które zawsze jest albo `True`, albo `False`.
+@error_for_requires_iterable = {0} nie można iterować w pętli for. Pętla for musi otrzymać sekwencję do iteracji. Przykład:
+
+`for i in range(5):`
+Tutaj range(5) zwraca sekwencję `0,1,2,3,4`.
+@error_no_loop_to_break = `break` można używać tylko wewnątrz pętli.
+@error_no_loop_to_continue = `continue` można używać tylko wewnątrz pętli.
+@error_no_function_to_return_from = `return` można używać tylko wewnątrz funkcji.
+@error_missing_unlock = To musi zostać odblokowane, zanim będzie można to użyć.
+@error_missing_x_unlock = {0} musi zostać odblokowany, zanim będzie można z tego skorzystać.
+@error_name_not_defined = {0} nigdy nie został zdefiniowany. Musisz przypisać wartość do zmiennej, zanim ją użyjesz.
+@error_missing_import = {0} nigdy nie został zdefiniowany. Wygląda na to, że jest zdefiniowany w pliku {1}. Czy zapomniałeś go zaimportować? Jeśli już go zaimportowałeś, prawdopodobnie masz cykl importowania (zobacz stronę dokumentacji importu).
+@error_call_before_def = {0} nie jest zdefiniowane. Wygląda na to, że jest zdefiniowane gdzieś w tym pliku, ale definicja nie została jeszcze wykonana. Funkcje mogą być wywoływane tylko po instrukcji `def`.
+@error_not_a_function = Próbowałeś wywołać coś, co nie jest funkcją. Częstym błędem, który może do tego doprowadzić, jest posiadanie zmiennej z taką samą nazwą jak funkcja.
+@error_invalid_const = {0} nie istnieje.
+@error_invalid_const2 = To nie istnieje.
+@error_max_stack_size_reached = Osiągnięto maksymalny rozmiar call stack. Jest to najprawdopodobniej spowodowane zbyt wieloma wywołaniami rekurencyjnymi funkcji.
+@error_max_comparison_depth = Osiągnięto maksymalną głębokość porównania. Osiągnięto maksymalną głębokość porównania. Może się to zdarzyć, na przykład, jeśli porównujesz listy, które zawierają same siebie.
+@error_assign_type_mismatch = Lewa strona przypisania nie pasowała do prawej strony.
+@error_too_many_values_to_unpack = Prawa strona nie zawiera wystarczającej liczby wartości do rozpakowania.
+@error_not_enough_values = Prawa strona zawiera zbyt wiele wartości, aby je rozpakować na lewą stronę.
+@error_empty_print = `print()` wymaga co najmniej jednego argumentu.
+@error_in_string = Nie można sprawdzić, czy {0} znajduje się w stringu.
+@error_collection_changed_size_during_iteration = Rozmiar tej kolekcji nie może być zmieniany w pętli for iterującej nad nią. Dzieje się tak, ponieważ zmiana rozmiaru kolekcji unieważniłaby obiekt iteratora, który jest używany przez pętlę for.
+@error_wrong_use_of_max = Nie można obliczyć max z {0}.
+@error_wrong_use_of_min = Nie można obliczyć minimum z {0}.
+@error_function_as_condition = Próbujesz sprawdzić, czy funkcja {0} jest `True`. To jest sam obiekt funkcji, a nie wartość zwracana przez funkcję. Czy chodziło ci o wywołanie funkcji za pomocą operatora wywołania `()`? 
+
+W Pythonie obiekty funkcji są "truthy", co oznacza, że gdy używasz ich jako warunków, działają jak `True`, więc Python nie wyświetliłby tego komunikatu o błędzie.
+
+To jest komunikat o błędzie zabezpieczającym, możesz go wyłączyć w opcjach, jeśli ci przeszkadza.
+@error_function_in_operator = Próbujesz użyć {1} na funkcji {0}. To jest obiekt funkcji sam w sobie, a nie wartość zwracana przez funkcję. Czy chodziło Ci o wywołanie funkcji za pomocą operatora `()`? 
+
+To jest komunikat błędu zabezpieczającego, możesz go wyłączyć w opcjach, jeśli przeszkadza Ci.
+@error_zero_step_size = Rozmiar kroku nie może być równy 0.
+@error_sequence_too_large = Sekwencja była zbyt duża, aby skopiować.
+@error_invalid_sim_unlocks = Początkowe odblokowania były nieprawidłowe. Musi to być sekwencja odblokowań lub krotek w formie `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Początkowe przedmioty były niepoprawne. Musi to być dict mapujący przedmioty do liczb, na przykład `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Początkowe zmienne globalne były nieprawidłowe. Musi to być dict mapujący nazwy zmiennych na wartości, takie jak `{"x" : 42}`.
+@error_division_by_zero = O nie! Podzieliłeś przez `0`. Ledwo udało ci się to przetrwać.
+@error_negative_use_item = Używana ilość przedmiotu musi być co najmniej `1`. Było {0}.
+@error_use_before_assign = Próbowano odczytać zmienną {0} zanim została jej przypisana jakaś wartość. Jeśli chcesz zmodyfikować zmienną globalną, musisz użyć słowa kluczowego global, aby zapisać w globalnym scope.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = Nie możesz przypisać atrybutu do {0}.

@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Tüm oyunu tamamen otomatikleştir.
+@lb_descr_maze = 300000 altın topla.
+@lb_descr_dinosaur = 98010 kemik topla.
+@lb_descr_cactus = 100000 kaktüs yetiştir.
+@lb_descr_sunflowers = 100000 power topla.
+@lb_descr_pumpkins = 100000 balkabağı yetiştir.
+@lb_descr_hay = 100000 saman ekin.
+@lb_descr_wood = 100000 odun topla.
+@lb_descr_carrots = 100000 havuç yetiştir.
+@lb_descr_polyculture = 100000 saman, odun ve havuç yetiştir.

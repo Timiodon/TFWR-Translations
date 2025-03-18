@@ -1,0 +1,30 @@
+@error_missing_default_parameter = All default arguments have to be at the end of the argument list.
+@error_invalid_name = {0} is not a valid name. Names must start with a letter and can only contain letters digits and underscores. It also cannot be a reserved keyword.
+@error_reserved_keyword = {0} is a reserved keyword. You can't use it as a name.
+@error_invalid_assign_expr = Can't assign a value to this expression.
+@error_no_statements = A code block must contain at least one statement. 
+A statement can be a function call like `harvest()` or a variable assignment. 
+If you wish to do nothing in the code block use a `pass` statement.
+@error_not_enough_indentation = There isn't enough indentation here. 
+There must be more indentation after a : than before it to separate the new code block. 
+Use the Tab key to indent the code.
+@error_too_much_indentation = There is too much indentation here. 
+The indentation must be the same for all statements within a code block.
+@error_not_a_statement = This is not a valid statement. 
+@error_not_a_statement2 = This is not a valid statement. Did you mean to write {0} ?
+@error_invalid_expression = This is not a valid expression.
+@error_new_line_expected = A new line is expected here.
+@error_unexpected_token = A {0} is expected here.
+@error_missing_colon = There must be a colon `:` at the beginning of every code block.
+@error_unexpected_assign = You can't do an assignment here. To check for equality use `==` instead.
+@error_invalid_for_syntax = This is not a valid for loop. A for loop looks like this: 
+`for n in range(3):`
+The `for` is always followed by the loop variable, an `in` and then a sequence. In this example the `n` is the variable name, but it can be replaced by any other name.
+@error_unknown_method = This method doesn't exist.
+@error_bad_backslash = The backslash can be used to split expressions on multiple lines. But you need to add a newline afterwards.
+@error_mixed_indentation = Tabs and spaces should not be mixed.
+@error_expected_close_token = Expected a comma or closing bracket.
+@error_wrong_dict_literal = Expected a : to separate the keys and the values of a dictionary.
+@error_assign_before_global = {0} is assigned before a global declaration.
+@error_wildcard_imports_not_allowed_in_function = Imports of the form `from x import *` are not allowed inside functions.
+@error_invalid_import = You cannot import files with names that are not valid identifiers. Valid identifiers can only contain letters, numbers, and underscores. If your file name contains other characters, you must rename it.

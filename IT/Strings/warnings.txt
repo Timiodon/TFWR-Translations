@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Tentato di acquistare {0} ma non erano presenti le risorse necessarie.
+@warning_no_space_to_plant = Tentato di piantare {0} ma c'era già qualcosa lì.
+@warning_cant_plant_on_ground = Non posso piantare {0} su {1}.
+@warning_missing_seed = Non avevi gli oggetti richiesti per piantare {0}.
+@warning_no_item_to_use = Tentato di usare {0} ma non ce n'era abbastanza.
+@warning_failed_swap_wrap = Hai provato a fare uno swap oltre i confini della farm. Questo non è permesso.
+@warning_failed_swap_unswappable = Provato a scambiare {0}, che non può essere scambiato.
+@warning_weird_substance_not_divisible = Hai usato una quantità di Weird Substance che non è esattamente quella necessaria per creare il labirinto. Non dimenticare che la quantità di Weird Substance richiesta aumenta man mano che migliori il labirinto.
+
+Per generare un labirinto a dimensione completa fai:
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Le simulazioni e le run del leaderboard non possono essere avviate all'interno di altre simulazioni e run del leaderboard.

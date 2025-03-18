@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Automatiza por completo todo el juego.
+@lb_descr_maze = Consigue 300000 gold.
+@lb_descr_dinosaur = Granja 98010 bones.
+@lb_descr_cactus = Cultiva 100000 cactus.
+@lb_descr_sunflowers = Cultiva 100000 de energía.
+@lb_descr_pumpkins = Cultiva 100000 calabazas.
+@lb_descr_hay = Cultiva 100000 de heno.
+@lb_descr_wood = Consigue 100000 de wood.
+@lb_descr_carrots = Cultiva 100000 zanahorias.
+@lb_descr_polyculture = Cultiva 100000 de heno, madera y zanahorias.

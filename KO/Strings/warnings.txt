@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = {0}을(를) 사려고 했지만 필요한 자원이 부족했어요.
+@warning_no_space_to_plant = {0}을(를) 심으려고 했지만 이미 무언가가 있었습니다.
+@warning_cant_plant_on_ground = {1}에 {0}을(를) 심을 수 없습니다.
+@warning_missing_seed = 필요한 아이템이 없어서 {0}을(를) 심지 못했습니다.
+@warning_no_item_to_use = {0}을(를) 사용하려고 했지만 충분하지 않았어요.
+@warning_failed_swap_wrap = 농장 경계를 넘어서 교체하려고 했습니다. 그건 허용되지 않습니다.
+@warning_failed_swap_unswappable = {0}을(를) 바꾸려고 했는데, 바꿀 수 없어요.
+@warning_weird_substance_not_divisible = 미로를 만드는 데 필요한 정확한 수의 이상한 물질을 사용하지 않았습니다. 미로를 업그레이드하면 필요한 이상한 물질의 양이 증가한다는 것을 잊지 마세요.
+
+전체 크기의 미로를 생성하려면 다음을 수행하세요:
+`plant(Entities.Bush)
+substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = 시뮬레이션과 leaderboard 실행은 다른 시뮬레이션이나 leaderboard 실행 내에서 시작할 수 없습니다.

@@ -1,0 +1,19 @@
+@plant_tooltip_template = {0}
+
+Tiempo base de crecimiento entre {1} y {2} segundos.
+Puede crecer en {3}.
+@object_tooltip_template_cost = ### Coste de Plantación {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Aparentemente, a los dinosaurios les encantan.
+@object_descr_grass = Crece automáticamente en praderas. Cuéllalo para obtener `Items.Hay`.
+@object_descr_bush = Un arbusto pequeño que deja `Items.Wood`.
+@object_descr_tree = Los árboles sueltan más madera que los arbustos. Tardan más en crecer si otros árboles crecen cerca de ellos.
+@object_descr_carrot = ¡Zanahorias!
+@object_descr_pumpkin = Las calabazas crecen juntas cuando están al lado de otras calabazas completamente desarrolladas. Aproximadamente 1 de cada 5 calabazas muere cuando crece.
+@object_descr_sunflower = Los girasoles recolectan la energía del sol. Cosecharlos te dará `Items.Power`.  
+Si cosechas un girasol con el máximo número de pétalos, obtienes energía extra.
+@object_descr_cactus = Los cactus vienen en 10 tamaños diferentes. Al cosechar, los cactus adyacentes que estén "sorted" también se cosecharán.
+@object_descr_hedge = Parte del laberinto.
+@object_descr_treasure = Un tesoro que contiene oro equivalente a la longitud de un lado del laberinto en el que está escondido. Se puede recolectar como una planta.
+@object_descr_dinosaur = Un trozo de la cola del sombrero de dinosaurio.
+@object_descr_grassland = El terreno por defecto. La hierba crecerá automáticamente en él.
+@object_descr_soil = Llamar a `till()` convierte el suelo en tierra cultivable. Llamar a `till()` de nuevo lo cambia de vuelta a pastizal.

@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = ゲーム全体を完全にオートメーション化しよう。
+@lb_descr_maze = 30万ゴールドを手に入れよう。
+@lb_descr_dinosaur = 98010本の骨を収穫しよう。
+@lb_descr_cactus = 100000本のサボテンを育てよう。
+@lb_descr_sunflowers = 100000のパワーを集めよう。
+@lb_descr_pumpkins = 100000個のかぼちゃを育てよう。
+@lb_descr_hay = 100000の干し草を育てましょう。
+@lb_descr_wood = 100000の木材を収穫しよう。
+@lb_descr_carrots = 100000本のにんじんを育てよう。
+@lb_descr_polyculture = 100000の干し草、木材、ニンジンを収穫しよう。

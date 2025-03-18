@@ -1,0 +1,2 @@
+@hat_descr_straw_hat = 默认帽子。
+@hat_descr_dinosaur_hat = 装备它来开始恐龙游戏。

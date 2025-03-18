@@ -1,0 +1,18 @@
+@plant_tooltip_template = {0}
+
+基础生长时间在 {1} 和 {2} 秒之间。
+可以生长在 {3}。
+@object_tooltip_template_cost = ### 种植成本 {{{{itemblock cost object {0}}}}}
+@object_descr_apple = 恐龙显然很喜欢它们。
+@object_descr_grass = 在草地上自动生长。收获它以获得 `Items.Hay`。
+@object_descr_bush = 一个小灌木丛，会掉落`Items.Wood`。
+@object_descr_tree = 树比灌木掉落更多的木材。如果其他树在旁边生长，它们会生长得更慢。
+@object_descr_carrot = 胡萝卜！
+@object_descr_pumpkin = 南瓜会在靠近其他完全成熟的南瓜时一起生长。大约五分之一的南瓜在成熟时会死掉。
+@object_descr_sunflower = 向日葵从太阳收集能量。收割它们会给你`Items.Power`。如果你收割了一朵有最大数量花瓣的向日葵，你会得到额外能量。
+@object_descr_cactus = 仙人掌有10种不同的尺寸。采收时，毗邻且“排序”过的仙人掌也会被采收。
+@object_descr_hedge = 迷宫的一部分。
+@object_descr_treasure = 一个宝藏，其中的黄金数量等于藏身迷宫的边长。它可以像植物一样被收获。
+@object_descr_dinosaur = 恐龙帽子尾部的一部分。
+@object_descr_grassland = 默认的地面。草会自动在其上生长。
+@object_descr_soil = 调用 `till()` 会把地面变成土壤。再次调用 `till()` 会将其变回草地。

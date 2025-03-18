@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = Automatize completamente o jogo inteiro.
+@lb_descr_maze = Colha 300000 gold.
+@lb_descr_dinosaur = Colha 98010 bones.
+@lb_descr_cactus = Cultive 100000 cactos.
+@lb_descr_sunflowers = Colha 100000 de energia.
+@lb_descr_pumpkins = Colha 100000 abóboras.
+@lb_descr_hay = Colha 100000 de feno.
+@lb_descr_wood = Colha 100000 de madeira.
+@lb_descr_carrots = Colha 100000 cenouras.
+@lb_descr_polyculture = Cultive 100000 hay, wood e cenouras.

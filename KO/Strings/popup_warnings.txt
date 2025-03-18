@@ -1,0 +1,12 @@
+@popup_warning_delete_files = {0}을(를) 영구적으로 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+@popup_warning_delete_save = 정말로 {0}을(를) 삭제하시겠습니까?
+@delete = 삭제
+@cancel = 취소
+@popup_warning_exit_game = 종료하기 전에 저장하시겠어요?
+@popup_warning_load_game = 로드하기 전에 저장하시겠어요?
+@save = 저장
+@don't save = 저장 안 함
+@popup_warning_corrupted_save = {0}을(를) 불러오는 데 문제가 발생한 것 같습니다. 더 많은 정보는 백업 섹션을 확인해 보세요.
+@popup_warning_failed_read_save = {0}의 저장 파일을 읽지 못했습니다. 파일에 접근하는 다른 프로그램을 모두 종료하고 다시 시도하세요.
+@popup_warning_failed_write_save = 파일 저장에 실패했습니다: {0}. 파일을 사용 중인 다른 프로그램을 모두 종료하고 다시 시도하세요.
+@ok = ok

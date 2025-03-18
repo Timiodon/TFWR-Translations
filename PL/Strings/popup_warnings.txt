@@ -1,0 +1,12 @@
+@popup_warning_delete_files = Czy na pewno chcesz usunąć {0} na stałe? Tego nie można cofnąć.
+@popup_warning_delete_save = Czy na pewno chcesz usunąć {0}?
+@delete = Usuń
+@cancel = Anuluj
+@popup_warning_exit_game = Czy chcesz zapisać przed wyjściem?
+@popup_warning_load_game = Czy chcesz zapisać przed wczytaniem?
+@save = Zapisz
+@don't save = Nie zapisuj
+@popup_warning_corrupted_save = Wydaje się, że wystąpił problem z ładowaniem {0}. Sprawdź sekcję o kopiach zapasowych, aby uzyskać więcej informacji.
+@popup_warning_failed_read_save = Nie udało się odczytać zapisanych plików {0}. Zamknij wszystkie inne programy korzystające z tych plików i spróbuj ponownie.
+@popup_warning_failed_write_save = Nie udało się zapisać plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy korzystające z tych plików i spróbuj ponownie.
+@ok = ok

@@ -1,0 +1,10 @@
+@lb_descr_fastest_reset = 게임 전체를 완전히 자동화하세요.
+@lb_descr_maze = 300000 골드를 모아봐.
+@lb_descr_dinosaur = 98010 뼈 수확하기.
+@lb_descr_cactus = 100000개의 선인장을 재배하세요.
+@lb_descr_sunflowers = 100000 파워를 모아봐.
+@lb_descr_pumpkins = 100000개의 호박을 농사 지어라.
+@lb_descr_hay = 100000 건초를 수확하세요.
+@lb_descr_wood = 100000 나무를 수확하세요.
+@lb_descr_carrots = 100000개의 당근을 농사 지어라.
+@lb_descr_polyculture = 100000개의 건초, 나무, 당근을 수확하세요.
