@@ -34,4 +34,4 @@ If anyone disagrees with these guidelines please let me know and we can still ch
 To contribute, simply create a pull request with your translation changes. 
 Make sure you include the name you want to be credited with in the PR. Otherwise you will be credited under your GitHub name.
 
-If you want to see your changes in the game you have to replace the `Languages` folder in the install directory with this repository.
+If you want to see what your changes look like in the game, you have to replace the `Languages` folder in the install directory with this repository.
