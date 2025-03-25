@@ -2,6 +2,9 @@ This is a repository containing all the text for the game "The Farmer Was Replac
 The default translations are machine translations. They are reasonably good, but there are sometimes errors, especially in the shorter strings.
 Any corrections are greatly appreciated.
 
+Note that the original game texts may still be updated. This will cause any community translations of that text to be overridden. 
+All files in `docs/Unlocks` are likely to change so there is no point in improving the current translations for those files.
+
 # Files
 Each language folder contains a `Strings` folder and a `docs` folder. The `Strings` folder contains various strings from the UI and tooltips. 
 The `docs` folder contains markdown files that will be displayed in the game's info window.
@@ -30,3 +33,5 @@ If anyone disagrees with these guidelines please let me know and we can still ch
 # How to contribute
 To contribute, simply create a pull request with your translation changes. 
 Make sure you include the name you want to be credited with in the PR. Otherwise you will be credited under your GitHub name.
+
+If you want to see your changes in the game you have to replace the `Languages` folder in the install directory with this repository.
