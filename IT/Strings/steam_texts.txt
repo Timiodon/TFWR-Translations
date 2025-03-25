@@ -1,0 +1,15 @@
+@steam_description = Programma un drone usando un linguaggio semplice simile a Python per automatizzare completamente i vari compiti agricoli che altrimenti sarebbero molto monotoni. Prova la soddisfazione di premere semplicemente "esegui" e guardare il tuo drone fare tutto il lavoro duro.  
+[img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
+
+Coltivando guadagni risorse che puoi spendere per sbloccare nuove tecnologie.  
+Ecco come appare lo stesso programma dopo alcuni potenziamenti di velocità:  
+[img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
+
+A differenza della maggior parte dei giochi di programmazione, il gioco non è diviso in livelli distinti che devi completare, ma presenta una progressione continua.
+
+La programmazione è fatta in un linguaggio semplice simile a Python. L'inizio del gioco è progettato per insegnarti tutti i concetti base della programmazione di cui avrai bisogno, introducendoli uno alla volta.
+
+Anche se introduce tutto ciò che è rilevante, non ti prenderà per mano quando si tratta di risolvere i vari compiti nel gioco. Dovrai capirli da solo, e questo può essere molto impegnativo se non hai mai programmato prima.
+
+Se sei un programmatore esperto, dovresti riuscire a superare rapidamente le fasi iniziali del gioco e passare ai compiti più complessi delle parti avanzate, che dovrebbero comunque offrire sfide interessanti.
+@steam_short_description = Programma e ottimizza un drone per automatizzare una fattoria e osserva mentre fa il lavoro per te. Raccogli risorse per sbloccare tecnologie migliori e diventa il contadino più efficiente del mondo. Migliora le tue abilità di problem solving e coding.

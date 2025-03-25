@@ -4,9 +4,9 @@
 @load = Carregar
 @options = Opções
 @join_discord = Discord
-@quit = Sair do Jogo
+@quit = Sair
 @open_folder = Abrir Pasta
-@new_game = Novo Game
+@new_game = Novo Jogo
 @back = Voltar
 @unlocks = Desbloqueios
 @farm = Fazenda

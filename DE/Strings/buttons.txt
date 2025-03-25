@@ -1,6 +1,6 @@
 @save = Speichern
 @saved = Gespeichert
-@play = Start
+@play = Spiel Start
 @load = Laden
 @options = Optionen
 @join_discord = Discord öffnen
@@ -9,9 +9,9 @@
 @new_game = Neues Spiel
 @back = Zurück
 @unlocks = Freischaltungen
-@farm = Farm zurück
+@farm = Bauernhof
 @unlocked = Freigeschaltet
-@upgrade = Upgrade
-@max_level = Maximalstufe
+@upgrade = Verbessern
+@max_level = Maximales Level
 @unlock = Freischalten
 @locked = Gesperrt

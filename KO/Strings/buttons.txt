@@ -2,13 +2,13 @@
 @saved = 저장됨
 @play = 시작
 @load = 로드
-@options = 옵션
+@options = 옵션들
 @join_discord = 디스코드
-@quit = 종료하기
+@quit = 종료
 @open_folder = 폴더 열기
 @new_game = 새 게임
 @back = 뒤로가기
-@unlocks = 잠금 해제 목록
+@unlocks = 언락
 @farm = 농장
 @unlocked = 잠금 해제됨
 @upgrade = 업그레이드

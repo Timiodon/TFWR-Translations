@@ -6,8 +6,8 @@ The growth speed of a plant scales linearly from 1x speed at water level 0 to 5x
 
 The ground dries up over time: On average, it loses 1% of its current water per second, but there is some random variance to this. Maintaining a high water level will consume much more water than maintaining a low water level.
 
-You can use water tanks to water your plants. One water tank is automatically added to your inventory every 10 seconds.
-Upgrading `Unlocks.Watering` will give you an additional water tank every 10 seconds.
+You can use water on your plants. One tank of water is automatically added to your inventory every 10 seconds.
+Upgrading `Unlocks.Watering` will give you an additional tank of water every 10 seconds.
 
 A tank holds `0.25` water.
 

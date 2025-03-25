@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = {0} 있습니다.
 @item_descr_carrot = 당근을 수확하여 얻었습니다.
 @item_descr_carrot_seed = 이 아이템은 게임에서 삭제되었습니다.
-@item_descr_empty_tank = 빈 탱크는 시간이 지나면 자동으로 물탱크로 변합니다.
 @item_descr_fertilizer = `use_item(Items.Fertilizer)`를 호출하여 식물의 남은 성장 시간을 즉시 2초 줄이세요.
 @item_descr_weird_substance = `use_item(Items.Weird_Substance)`를 덤불에 사용하여 미로를 만드세요. 감염된 식물에서 획득할 수 있습니다. 식물에 비료를 주면 감염됩니다.
 @item_descr_gold = 미궁의 보물 상자에서 발견됨.

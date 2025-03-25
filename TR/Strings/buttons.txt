@@ -8,10 +8,10 @@
 @open_folder = Klasörü Aç
 @new_game = Yeni Oyun
 @back = Geri Dön
-@unlocks = Kilidi Açılabilirler
+@unlocks = Açılabilirler
 @farm = Çiftlik
 @unlocked = Kilidi Açıldı
-@upgrade = Yükseltme
-@max_level = Maksimum Seviye
+@upgrade = Yükselt
+@max_level = Maks Seviye
 @unlock = Kilidini Aç
 @locked = Kilitli

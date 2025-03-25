@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = {0} sahip oldun
 @item_descr_carrot = Havuç toplayarak elde edilir.
 @item_descr_carrot_seed = Bu öğe oyundan kaldırıldı.
-@item_descr_empty_tank = Boş tanklar zamanla otomatik olarak su tanklarına dönüşür.
 @item_descr_fertilizer = `use_item(Items.Fertilizer)` komutunu çağırarak bitkilerin kalan büyüme süresinden 2 saniyeyi anında düşür.
 @item_descr_weird_substance = <a>`use_item(Items.Weird_Substance)`</a> fonksiyonunu bir çalıya çağırarak bir labirent oluştur. Enfekte bitkilerden elde edilir. Bitkilere gübre vermek onları enfekte eder.
 @item_descr_gold = Labirentlerdeki hazine sandıklarında bulunur.

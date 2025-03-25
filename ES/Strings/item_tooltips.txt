@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = Tienes {0}
 @item_descr_carrot = Obtenido al cosechar zanahorias.
 @item_descr_carrot_seed = Este artículo ha sido eliminado del juego.
-@item_descr_empty_tank = Los tanques vacíos se convierten automáticamente en tanques de agua con el tiempo.
 @item_descr_fertilizer = Llama a `use_item(Items.Fertilizer)` para quitar instantáneamente 2s del tiempo restante de crecimiento de las plantas.
 @item_descr_weird_substance = Llama a `use_item(Items.Weird_Substance)` en un arbusto para hacer crecer un laberinto. Se obtiene de plantas infectadas. Fertilizar plantas las infecta.
 @item_descr_gold = Se encuentran en cofres del tesoro en los laberintos.

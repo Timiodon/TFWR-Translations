@@ -6,9 +6,9 @@ A velocidade de crescimento de uma planta aumenta linearmente de 1x na água ní
 
 O solo seca com o tempo: Em média, perde 1% da água atual por segundo, mas há alguma variação aleatória nisso. Manter um nível de água alto consome muito mais água do que manter um nível baixo.
 
-Você pode usar tanques de água para regar suas plantas. Um tanque de água é automaticamente adicionado ao seu inventário a cada 10 segundos.  
-Atualizar `Unlocks.Watering` dará um tanque de água adicional a cada 10 segundos.
+Você pode usar água nas suas plantas. Um tanque de água é adicionado automaticamente ao seu inventário a cada 10 segundos.
+Atualizar `Unlocks.Watering` te dará um tanque adicional de água a cada 10 segundos.
 
-Um tanque contém `0.25` de água.
+Um tanque comporta `0.25` de água.
 
-Chame `use_item(Items.Water)` sobre qualquer solo para regá-lo.
+Use `use_item(Items.Water)` sobre qualquer solo para regá-lo.

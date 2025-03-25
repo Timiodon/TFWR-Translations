@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = Tu as {0}
 @item_descr_carrot = Obtenu en récoltant des carottes.
 @item_descr_carrot_seed = Cet élément a été retiré du jeu.
-@item_descr_empty_tank = Les réservoirs vides se transforment automatiquement en réservoirs d'eau avec le temps.
 @item_descr_fertilizer = Appelez `use_item(Items.Fertilizer)` pour retirer instantanément 2s du temps de croissance restant des plantes.
 @item_descr_weird_substance = Appelle `use_item(Items.Weird_Substance)` sur un buisson pour faire pousser un labyrinthe. Obtenu à partir de plantes infectées. Fertiliser les plantes les infecte.
 @item_descr_gold = Trouvé dans des coffres au trésor dans les labyrinthes.

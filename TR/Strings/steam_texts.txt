@@ -1,0 +1,14 @@
+@steam_description = Basit bir Python benzeri dil kullanarak bir drone'u programlayıp, aksi halde oldukça zahmetli olacak çeşitli çiftçilik görevlerini tamamen otomatikleştir. "Çalıştır" düğmesine basmanın ve drone'un tüm zor işleri yapışını izlemenin tatminini yaşa.  
+[img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
+
+Çiftçilik, yeni teknolojilerin kilidini açmak için harcayabileceğin kaynaklar kazandırır. İşte birkaç hız yükseltmesinden sonra aynı programın nasıl göründüğü:  
+[img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
+
+Çoğu programlama oyunundan farklı olarak, oyunda tamamlaman gereken ayrı seviyeler yoktur, bunun yerine sürekli bir ilerleme sunulur. 
+
+Programlama, Python'a benzer basit bir dilde yapılır. Oyunun başlangıcı, ihtiyaç duyacağın tüm temel programlama kavramlarını her seferinde tek tek tanıtarak öğrenmeni sağlar. 
+
+Her şeyi alakalı bir şekilde tanıtırken, oyundaki çeşitli görevlerin çözümünde ise sana rehberlik etmeyecek. Bunları kendin çözmen gerekecek ve eğer daha önce hiç program yapmadıysan, bu çok zorlayıcı olabilir. 
+
+Deneyimli bir programcıysan, oyunun başlangıç bölümünü çok hızlı bir şekilde geçip, daha ilginç zorluklar sunan sonraki oyun aşamalarındaki daha karmaşık görevlere geçebileceksin.
+@steam_short_description = Bir çiftliği otomatikleştirmek için bir dronu programlayın ve optimize edin, sonra işi sizin için yapmasını izleyin. Daha iyi teknolojilerin kilidini açmak için kaynaklar toplayın ve dünyanın en verimli çiftçisi olun. Problem çözme ve kodlama becerilerinizi geliştirin.

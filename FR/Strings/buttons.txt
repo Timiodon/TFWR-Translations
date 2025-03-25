@@ -1,5 +1,5 @@
 @save = Sauvegarder
-@saved = Sauvé
+@saved = Sauvegardé
 @play = Démarrer
 @load = Charger
 @options = Options
@@ -10,8 +10,8 @@
 @back = Retour
 @unlocks = Déblocages
 @farm = Ferme
-@unlocked = Déverrouillé
+@unlocked = Débloqué
 @upgrade = Améliorer
-@max_level = Niveau Maximum
+@max_level = Niveau Max
 @unlock = Débloquer
-@locked = Bloqué
+@locked = Verrouillé

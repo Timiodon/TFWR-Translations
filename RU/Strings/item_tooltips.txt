@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = У тебя есть {0}
 @item_descr_carrot = Получено при сборе моркови.
 @item_descr_carrot_seed = Этот элемент был удален из игры.
-@item_descr_empty_tank = Пустые баки со временем автоматически превращаются в водяные баки.
 @item_descr_fertilizer = Вызови `use_item(Items.Fertilizer)`, чтобы мгновенно сократить оставшееся время роста растений на 2 секунды.
 @item_descr_weird_substance = Вызови `use_item(Items.Weird_Substance)` на кусте, чтобы вырастить лабиринт. Получено от зараженных растений. Удобрение растений заражает их.
 @item_descr_gold = Находится в сундуках с сокровищами в лабиринтах.

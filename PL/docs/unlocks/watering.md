@@ -1,14 +1,14 @@
 # Podlewanie
-Rośliny rosną szybciej, gdy są podlewane. Ziemia ma poziom wody od `0` do `1`.  
-Funkcja `get_water()` zwraca poziom wody w ziemi, nad którą się znajduje.  
+Rośliny rosną szybciej, gdy są podlewane. Podłoże ma poziom wody od `0` do `1`.  
+Funkcja `get_water()` zwraca poziom wody w glebie, nad którą się znajduje.  
 
-Prędkość wzrostu rośliny rośnie liniowo od prędkości 1x przy poziomie wody 0 do prędkości 5x przy poziomie wody 1.  
+Prędkość wzrostu rośliny zwiększa się liniowo, od 1x przy poziomie wody 0 do 5x przy poziomie wody 1.  
 
-Ziemia wysycha z czasem: Średnio traci 1% obecnego poziomu wody na sekundę, ale występuje pewna losowa zmienność tego procesu. Utrzymanie wysokiego poziomu wody zużywa znacznie więcej wody niż utrzymanie niskiego poziomu wody.  
+Ziemia wysycha z czasem: Średnio traci 1% swojej obecnej ilości wody na sekundę, ale jest też trochę losowej zmienności. Utrzymywanie wysokiego poziomu wody zużywa znacznie więcej wody niż utrzymywanie niskiego poziomu.  
 
-Możesz używać zbiorników na wodę, aby podlewać swoje rośliny. Jeden zbiornik na wodę jest automatycznie dodawany do twojego ekwipunku co 10 sekund.  
-Zaktualizowanie `Unlocks.Watering` da ci dodatkowy zbiornik na wodę co 10 sekund.  
+Możesz używać wody na swoich roślinach. Jedna zbiornik wody jest automatycznie dodawana do twojego inwentarza co 10 sekund.  
+Ulepszenie `Unlocks.Watering` zapewni ci dodatkowy zbiornik wody co 10 sekund.  
 
 Zbiornik mieści `0.25` wody.  
 
-Użyj `use_item(Items.Water)` nad dowolnym kawałkiem ziemi, aby ją podlać.
+Wywołaj `use_item(Items.Water)` nad dowolnym podłożem, aby je podlać.

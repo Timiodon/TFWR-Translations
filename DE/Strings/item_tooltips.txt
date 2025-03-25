@@ -1,7 +1,6 @@
 @item_tooltip_template_amount = Du hast {0}
 @item_descr_carrot = Erhalten durch die Ernte von Karotten.
 @item_descr_carrot_seed = Dieses Item wurde aus dem Spiel entfernt.
-@item_descr_empty_tank = Leere Tanks verwandeln sich im Laufe der Zeit automatisch in Wassertanks.
 @item_descr_fertilizer = Rufe `use_item(Items.Fertilizer)` auf, um sofort 2s von der verbleibenden Wachstumszeit der Pflanzen zu entfernen.
 @item_descr_weird_substance = Rufe `use_item(Items.Weird_Substance)` auf einem Busch auf, um ein Labyrinth wachsen zu lassen. Erhalten von infizierten Pflanzen. Das Düngen von Pflanzen infiziert sie.
 @item_descr_gold = Gefunden in Schatztruhen in Labyrinthen.
