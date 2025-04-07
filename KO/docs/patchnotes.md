@@ -1,25 +1,13 @@
 # Patch Notes
 
--Code windows are now scrollable.
--Added code highlights to visualize the call stack.
--You can now search all windows with ctrl + F.
--If an error happens in a window that is completely off screen the camera will move to it.
--The code autocomplete is now more fuzzy and inserting autocomplete words with Enter works better.
--There is now a warning icon that pops up when a warning is emitted to make it more visible.
--To better support external editors that don't automatically pick up on the `__builtins__.py` file, importing from that file can now already be done before unlocking the import feature.
--The Undo and Redo history is now per window instead of global.
--Autocomplete suggestions work better with imports now.
--Green is back in the syntax color.
+This patch brings many optimizations on both the GPU and CPU side. 
+Particularly on the GPU side there have been some very significant optimizations that finally make the game less GPU intensive.
+Unfortunately the items in the inventory are no longer 3D because it turned out this was using a lot of GPU resources.
 
--Fixed a bug that mixed leaderboard runs with the main simulation.
--Fixed growtimes not being updated when watering grassland.
--Fixed the UI issue that was caused by trailing spaces in file names.
--Fixed unindent problems with the "tabs to spaces" option.
--Infecting bushes by using 1 weird substance after upgrading the maze now works.
--Fixed item numbers rounding wrong in some cases.
--Typing in values in slider options in the menu has been fixed.
--Fixed the broken "error_not_a_function" error.
--Fixed a bunch of error messages that showed up in the wrong place.
+Some things that were changed alongside the optimizations are:
+-The call stack limit is now 1000 function calls.
+-Items in the inventory are now in a fixed order.
+-Fixed various UI bugs.
 
 Breaking Changes from older Patches that you might have missed:
 -Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).
