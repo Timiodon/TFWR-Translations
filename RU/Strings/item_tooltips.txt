@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = У тебя есть {0}
 @item_descr_carrot = Получено при сборе моркови.
-@item_descr_carrot_seed = Этот элемент был удален из игры.
 @item_descr_fertilizer = Вызови `use_item(Items.Fertilizer)`, чтобы мгновенно сократить оставшееся время роста растений на 2 секунды.
 @item_descr_weird_substance = Вызови `use_item(Items.Weird_Substance)` на кусте, чтобы вырастить лабиринт. Получено от зараженных растений. Удобрение растений заражает их.
 @item_descr_gold = Находится в сундуках с сокровищами в лабиринтах.
@@ -8,11 +7,8 @@
 @item_descr_piggy = Этот элемент был удален из игры.
 @item_descr_power = Получено при сборе подсолнечников. Дрон автоматически использует это, чтобы двигаться вдвое быстрее.
 @item_descr_pumpkin = Получается при сборе тыкв.
-@item_descr_pumpkin_seed = Этот элемент был удален из игры.
-@item_descr_sunflower_seed = Этот элемент был удален из игры.
 @item_descr_water = Используется для полива земли, вызывая `use_item(Items.Water)`.
 @item_descr_wood = Получено из кустов и деревьев.
 @item_descr_cactus = Получено при сборе отсортированных кактусов.
 @item_descr_cactus_seed = Этот элемент был удален из игры.
-@item_descr_egg = Этот элемент был удален из игры.
 @item_descr_bone = Кости древнего существа.

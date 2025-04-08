@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = You have {0}
 @item_descr_carrot = Obtained by harvesting carrots.
-@item_descr_carrot_seed = This items has been removed from the game.
 @item_descr_fertilizer = Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.
 @item_descr_weird_substance = Call `use_item(Items.Weird_Substance)` on a bush to grow a maze. Obtained from infected plants. Fertilizing plants infects them.
 @item_descr_gold = Found in treasure chests in mazes.
@@ -8,11 +7,8 @@
 @item_descr_piggy = This items has been removed from the game.
 @item_descr_power = Obtained by harvesting sunflowers. The drone automatically uses this to move twice as fast.
 @item_descr_pumpkin = Obtained by harvesting pumpkins.
-@item_descr_pumpkin_seed = This items has been removed from the game.
-@item_descr_sunflower_seed = This items has been removed from the game.
 @item_descr_water = Used to water the ground by calling `use_item(Items.Water)`.
 @item_descr_wood = Obtained from bushes and trees.
 @item_descr_cactus = Obtained by harvesting sorted cacti.
 @item_descr_cactus_seed = This items has been removed from the game.
-@item_descr_egg = This items has been removed from the game.
 @item_descr_bone = The bones of an ancient creature.

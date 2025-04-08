@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = Tu as {0}
 @item_descr_carrot = Obtenu en récoltant des carottes.
-@item_descr_carrot_seed = Cet élément a été retiré du jeu.
 @item_descr_fertilizer = Appelez `use_item(Items.Fertilizer)` pour retirer instantanément 2s du temps de croissance restant des plantes.
 @item_descr_weird_substance = Appelle `use_item(Items.Weird_Substance)` sur un buisson pour faire pousser un labyrinthe. Obtenu à partir de plantes infectées. Fertiliser les plantes les infecte.
 @item_descr_gold = Trouvé dans des coffres au trésor dans les labyrinthes.
@@ -8,11 +7,8 @@
 @item_descr_piggy = Cet élément a été retiré du jeu.
 @item_descr_power = Obtenu en récoltant des tournesols. Le drone utilise automatiquement ceci pour se déplacer deux fois plus vite.
 @item_descr_pumpkin = Obtenu en récoltant des citrouilles.
-@item_descr_pumpkin_seed = Cet élément a été retiré du jeu.
-@item_descr_sunflower_seed = Cet élément a été retiré du jeu.
 @item_descr_water = Utilisé pour arroser le sol en appelant `use_item(Items.Water)`.
 @item_descr_wood = Obtenu à partir des buissons et des arbres.
 @item_descr_cactus = Obtenu en récoltant des cactus triés.
 @item_descr_cactus_seed = Cet élément a été retiré du jeu.
-@item_descr_egg = Cet élément a été retiré du jeu.
 @item_descr_bone = Les os d'une créature ancienne.

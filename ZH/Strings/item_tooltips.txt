@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = 你有 {0}
 @item_descr_carrot = 通过收获胡萝卜获得。
-@item_descr_carrot_seed = 这个道具已从游戏中移除。
 @item_descr_fertilizer = 调用 `use_item(Items.Fertilizer)` 即可立即减少植物剩余生长时间的 2 秒。
 @item_descr_weird_substance = 在灌木丛上调用`use_item(Items.Weird_Substance)`来种植迷宫。可从受感染的植物中获得。施肥植物会使其感染。
 @item_descr_gold = 在迷宫的宝箱中找到。
@@ -8,11 +7,8 @@
 @item_descr_piggy = 这个道具已从游戏中移除。
 @item_descr_power = 通过收割向日葵获得。无人机会自动使用它来加快两倍速度。
 @item_descr_pumpkin = 通过收获南瓜获得。
-@item_descr_pumpkin_seed = 这个道具已从游戏中移除。
-@item_descr_sunflower_seed = 这个道具已从游戏中移除。
 @item_descr_water = 通过调用`use_item(Items.Water)`来给地面浇水。
 @item_descr_wood = 从灌木丛和树木中获取。
 @item_descr_cactus = 通过收获排序的仙人掌获得。
 @item_descr_cactus_seed = 这个道具已从游戏中移除。
-@item_descr_egg = 这个道具已从游戏中移除。
 @item_descr_bone = 古代生物的骨骼。

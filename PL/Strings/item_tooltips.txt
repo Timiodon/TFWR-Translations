@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = Masz {0}
 @item_descr_carrot = Zdobyte przez zebranie marchwi.
-@item_descr_carrot_seed = Ten przedmiot został usunięty z gry.
 @item_descr_fertilizer = Wywołaj `use_item(Items.Fertilizer)`, aby natychmiast skrócić czas wzrostu roślin o 2s.
 @item_descr_weird_substance = Użyj `use_item(Items.Weird_Substance)` na krzaku, aby wyhodować labirynt. Zdobyte z zainfekowanych roślin. Nawożenie roślin je zakaża.
 @item_descr_gold = Znalezione w skrzyniach skarbów w labiryntach.
@@ -8,11 +7,8 @@
 @item_descr_piggy = Ten przedmiot został usunięty z gry.
 @item_descr_power = Uzyskiwane podczas zbioru słoneczników. Dron automatycznie używa tego, aby poruszać się dwa razy szybciej.
 @item_descr_pumpkin = Zdobyte przez zebranie dyń.
-@item_descr_pumpkin_seed = Ten przedmiot został usunięty z gry.
-@item_descr_sunflower_seed = Ten przedmiot został usunięty z gry.
 @item_descr_water = Służy do nawadniania ziemi przez wywołanie `use_item(Items.Water)`.
 @item_descr_wood = Pozyskane z krzewów i drzew.
 @item_descr_cactus = Uzyskane przez zbieranie posortowanych kaktusów.
 @item_descr_cactus_seed = Ten przedmiot został usunięty z gry.
-@item_descr_egg = Ten przedmiot został usunięty z gry.
 @item_descr_bone = Kości starożytnego stworzenia.

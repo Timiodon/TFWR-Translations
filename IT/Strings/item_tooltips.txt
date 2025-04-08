@@ -1,6 +1,5 @@
 @item_tooltip_template_amount = Hai {0}
 @item_descr_carrot = Ottenuto raccogliendo carote.
-@item_descr_carrot_seed = Questo oggetto è stato rimosso dal gioco.
 @item_descr_fertilizer = Chiama `use_item(Items.Fertilizer)` per rimuovere istantaneamente 2s dal tempo di crescita rimanente delle piante.
 @item_descr_weird_substance = Chiama `use_item(Items.Weird_Substance)` su un cespuglio per far crescere un labirinto. Ottenuta da piante infette. Fertilizzare le piante le infetta.
 @item_descr_gold = Trovato nei forzieri nei labirinti.
@@ -8,11 +7,8 @@
 @item_descr_piggy = Questo oggetto è stato rimosso dal gioco.
 @item_descr_power = Ottenuto raccogliendo girasoli. Il drone lo usa automaticamente per muoversi il doppio più veloce.
 @item_descr_pumpkin = Ottenuto raccogliendo zucche.
-@item_descr_pumpkin_seed = Questo oggetto è stato rimosso dal gioco.
-@item_descr_sunflower_seed = Questo oggetto è stato rimosso dal gioco.
 @item_descr_water = Usato per innaffiare il terreno chiamando `use_item(Items.Water)`.
 @item_descr_wood = Ottenuto da cespugli e alberi.
 @item_descr_cactus = Ottenuto raccogliendo cactus ordinati.
 @item_descr_cactus_seed = Questo oggetto è stato rimosso dal gioco.
-@item_descr_egg = Questo oggetto è stato rimosso dal gioco.
 @item_descr_bone = Le ossa di una creatura antica.
