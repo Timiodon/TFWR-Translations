@@ -1,6 +1,6 @@
 @error_code_after_block = Non dovrebbero esserci codici qui. Prova a rimuoverli o metterli su una nuova linea.
 @error_wrong_number_args = {0} prende {1} argomenti.
-@error_expected_no_args = {0} non accetta nessun argument.
+@error_expected_no_args = {0} non accetta nessun argomento.
 @error_wrong_args = L'argomento {0} di {1} era {2}. Questo non è un argomento valido.
 @error_syntax_error_in_import = Il modulo importato ha un errore di sintassi.
 @error_module_not_found = Un modulo con questo nome non esiste. Il nome deve corrispondere a quello di un file. Questo è il nome visualizzato in cima alla finestra.
@@ -15,10 +15,10 @@
 @error_index = {0} non può essere usato come un indice su {1}.
 @error_index_on_non_indexable = Non puoi indicizzare in {0}.
 @error_zero_step = La dimensione del passo non può essere zero.
-@error_index_on_tuple = Non puoi assegnare un elemento di un tuple perché le tuple sono immutabili.
+@error_index_on_tuple = Non puoi assegnare un elemento di una tupla perché le tuple sono immutabili.
 @error_bad_key = {0} non può essere usato come chiave.
-@error_slice_dict = Non puoi estrarre porzioni dai dictionary.
-@error_key = {0} non è una chiave nel dictionary.
+@error_slice_dict = Non puoi estrarre porzioni dai dizionari.
+@error_key = {0} non è una chiave nel dizionario.
 @error_condition_not_bool = {0} non è una condizione valida. La condizione deve essere un valore booleano. Significa che deve essere un'espressione che sia sempre o `True` o `False`.
 @error_for_requires_iterable = {0} non può essere iterato in un ciclo for. Il ciclo for deve ricevere una sequenza da iterare. Esempio:
 
@@ -37,7 +37,7 @@ Se l'hai importato, probabilmente hai un ciclo di importazione (Vedi la pagina d
 @error_invalid_const = {0} non esiste.
 @error_invalid_const2 = Questo non esiste.
 @error_max_stack_size_reached = È stata raggiunta la dimensione massima della call stack. Probabilmente ciò è dovuto a troppe chiamate ricorsive di funzione.
-@error_max_comparison_depth = È stata raggiunta la profondità massima di confronto. È stata raggiunta la profondità massima di confronto. Questo può accadere, ad esempio, se stai confrontando liste che contengono se stesse.
+@error_max_comparison_depth = È stata raggiunta la profondità massima di confronto. Questo può accadere, ad esempio, se stai confrontando liste che contengono se stesse.
 @error_assign_type_mismatch = Il lato sinistro dell'assegnazione non corrispondeva al lato destro.
 @error_too_many_values_to_unpack = Il lato destro non contiene abbastanza valori da decomprimere.
 @error_not_enough_values = Il lato destro contiene troppi valori per essere spacchettati nel lato sinistro.
@@ -48,9 +48,9 @@ Se l'hai importato, probabilmente hai un ciclo di importazione (Vedi la pagina d
 @error_wrong_use_of_min = Non riesco a calcolare il min di {0}.
 @error_function_as_condition = Sto cercando di verificare se la funzione {0} è `True`. Questo è l'oggetto della funzione stessa, non il valore restituito dalla funzione. Intendevi chiamare la funzione con l'operatore di chiamata `()`?
 
-In Python, gli oggetti funzione sono considerati "truthy", il che significa che se li usi come condizioni, funzionano come `True`, quindi Python non ti darebbe questo messaggio di errore.
+In Python, le funzioni sono considerate oggetti "truthy", cioè valutate come True quando usate in una condizione. Per questo motivo, Python non genera un messaggio di errore in questi casi.
 
-Questo è un messaggio di errore di protezione, puoi disattivarlo nelle opzioni se ti ostacola.
+Questo è un messaggio di errore di protezione, puoi disattivarlo nelle opzioni se ti dà fastidio.
 @error_function_in_operator = Tentando di usare {1} sulla funzione {0}. Questo è l'oggetto funzione stesso, non il valore restituito dalla funzione. Volevi chiamare la funzione con l'operatore di chiamata `()`?
 
 Questo è un messaggio d'errore di protezione, puoi disattivarlo nelle opzioni se ti dà fastidio.
@@ -58,11 +58,11 @@ Questo è un messaggio d'errore di protezione, puoi disattivarlo nelle opzioni s
 @error_sequence_too_large = La sequenza era troppo grande da copiare.
 @error_invalid_sim_unlocks = Gli sblocchi iniziali erano non validi. Devono essere una sequenza di sblocchi o tuple della forma `(Unlock.Carrots, 3)`.
 @error_invalid_sim_items = Gli oggetti iniziali erano non validi. Devono essere un dict che associa gli oggetti ai numeri, come `{Items.Hay : 100}`.
-@error_invalid_sim_globals = I globali iniziali erano invalidi. Devono essere un dict che mappa i nomi delle variabili a valori come `{"x" : 42}`.
+@error_invalid_sim_globals = I globali iniziali erano invalidi. Devono essere un dizionario che mappa i nomi delle variabili a valori come `{"x" : 42}`.
 @error_division_by_zero = Oh no! Hai diviso per `0`. Te la sei cavata per un pelo.
 @error_negative_use_item = La quantità dell'item da utilizzare deve essere almeno `1`. Era {0}.
 @error_use_before_assign = Tentato di leggere la variabile {0} prima che le fosse assegnato un valore.  
-Se vuoi modificare una variabile globale devi usare la keyword global per scrivere nello scope globale.  
+Se vuoi modificare una variabile globale devi usare la keyword "global" per scrivere nello scope globale.  
 
 `global x  
 x += 1`

@@ -5,9 +5,9 @@
 @warning_no_item_to_use = Tentato di usare {0} ma non ce n'era abbastanza.
 @warning_failed_swap_wrap = Hai provato a fare uno swap oltre i confini della farm. Questo non è permesso.
 @warning_failed_swap_unswappable = Provato a scambiare {0}, che non può essere scambiato.
-@warning_weird_substance_not_divisible = Hai usato una quantità di Weird Substance che non è esattamente quella necessaria per creare il labirinto. Non dimenticare che la quantità di Weird Substance richiesta aumenta man mano che migliori il labirinto.
+@warning_weird_substance_not_divisible = Hai usato una quantità di sostanza strana che non è esattamente quella necessaria per creare il labirinto. Non dimenticare che la quantità di sostanza strana richiesta aumenta man mano che migliori il labirinto.
 
-Per generare un labirinto a dimensione completa fai:
+Per generare un labirinto a grandezza massima, esegui:
 `plant(Entities.Bush)
 substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, substance)`

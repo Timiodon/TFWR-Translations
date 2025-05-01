@@ -8,12 +8,12 @@ Può crescere su {3}.
 @object_descr_bush = Un piccolo cespuglio che lascia cadere `Items.Wood`.
 @object_descr_tree = Gli alberi forniscono più legno dei cespugli. Ci mettono più tempo a crescere se altri alberi crescono accanto a loro.
 @object_descr_carrot = Carote!
-@object_descr_pumpkin = Le zucche crescono insieme quando sono vicine ad altre zucche completamente mature. Circa 1 zucca su 5 muore quando cresce.
-@object_descr_sunflower = I girasoli raccolgono il power dal sole. Mietendoli otterrai `Items.Power`.  
-Se miete un girasole con il numero massimo di petali, ottieni power extra.
+@object_descr_pumpkin = Le zucche crescono quando sono vicine ad altre zucche completamente mature. Circa 1 zucca su 5 muore quando cresce.
+@object_descr_sunflower = I girasoli raccolgono energia dal sole. Raccogliendoli otterrai `Items.Power`.  
+Se raccogli un girasole con il numero massimo di petali, ottieni power extra.
 @object_descr_cactus = I cactus esistono in 10 dimensioni diverse. Quando vengono raccolti, i cactus adiacenti che sono "sorted" verranno anch'essi raccolti.
 @object_descr_hedge = Parte del labirinto.
-@object_descr_treasure = Un tesoro che contiene oro pari alla lunghezza del lato del labirinto in cui è nascosto. Può essere raccolto come una pianta.
+@object_descr_treasure = Un tesoro che contiene oro pari alla lunghezza del lato del labirinto in cui è nascosto. Può essere raccolto come se fosse una pianta.
 @object_descr_dinosaur = Un pezzo della coda del cappello da dinosauro.
 @object_descr_grassland = Il terreno di default. L'erba crescerà automaticamente su di esso.
 @object_descr_soil = Chiamare `till()` trasforma il terreno in suolo. Chiamare `till()` di nuovo lo riporta a prateria.
