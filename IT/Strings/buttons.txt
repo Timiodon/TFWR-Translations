@@ -1,6 +1,6 @@
 @save = Salva
 @saved = Salvato
-@play = Inizia
+@play = Gioca
 @load = Carica
 @options = Opzioni
 @join_discord = Discord
@@ -12,6 +12,6 @@
 @farm = Fattoria
 @unlocked = Sbloccato
 @upgrade = Aggiorna
-@max_level = Livello Max
+@max_level = Livello Massimo
 @unlock = Sblocca
 @locked = Bloccato

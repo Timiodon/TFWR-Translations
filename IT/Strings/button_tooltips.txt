@@ -1,7 +1,7 @@
-@button_tooltip_load = Carica o crea un altro save.
+@button_tooltip_load = Carica un altro salvataggio.
 @button_tooltip_save = Salva il gioco.
-@button_tooltip_options = Apre il menu delle opzioni.
-@button_tooltip_discord = Unisciti al discord per chiacchierare con altri giocatori e con il developer, segnalare bug o ricevere aiuto.
+@button_tooltip_options = Apre il menù delle opzioni.
+@button_tooltip_discord = Unisciti al discord per chiacchierare con altri giocatori e con lo sviluppatore, segnalare bug o ricevere aiuto.
 @button_tooltip_execute = Avvia o ferma l'esecuzione del codice in questa finestra.
 @button_tooltip_step_by_step = Esegue un passo del codice.
 @button_tooltip_new_function = Crea un nuovo file di codice.
@@ -10,7 +10,7 @@
 @button_tooltip_delete = Elimina definitivamente questo file.
 @button_tooltip_close_docs = Chiudi questa finestra.
 @button_tooltip_table_of_contents = Indice
-@button_tooltip_new_game = Crea un nuovo save.
+@button_tooltip_new_game = Crea un nuovo salvataggio.
 @button_tooltip_open_folder = Apri la cartella dei salvataggi nell'explorer dei file.
 @button_tooltip_toggle_search_docs = Attiva o disattiva l'inclusione delle finestre di docs nella ricerca.
 @button_tooltip_toggle_search_code = Attiva o disattiva l'inclusione delle finestre di codice nella ricerca.
@@ -25,12 +25,12 @@
 @option_tooltip_sfx_limit = Limita il numero di suoni che possono essere riprodotti al secondo.
 @option_tooltip_autosave = Salva automaticamente il gioco ogni 30s quando è abilitato. Non può essere abilitato mentre il file watcher è attivo.
 @option_tooltip_file_watcher = Applica automaticamente le modifiche apportate ai file di codice nella cartella dei salvataggi, consentendo l'uso di un editor di codice esterno. Non può essere abilitato mentre i salvataggi automatici sono attivi.
-@option_tooltip_frames = Limita l'fps del gioco. Vsync sincronizza l'fps con la frequenza di aggiornamento del tuo monitor.
+@option_tooltip_frames = Limita gli fps del gioco. Vsync sincronizza gli fps con la frequenza di aggiornamento del tuo monitor.
 @option_tooltip_viewport_sliding = Disabilita lo scorrimento del viewport quando trascini e rilasci.
 @option_tooltip_UI_size = Cambia la dimensione degli elementi UI.
 @option_tooltip_tabs_to_spaces = Trasforma tutti i tab in 4 spazi.
-@option_tooltip_error_forgot_call = Quando abilitato, il gioco genererà un safeguard error se provi a valutare la verità di un function object, perché questo di solito significa che hai dimenticato il `()`.
-@option_tooltip_error_shadow = Quando abilitato, il gioco genererà un safeguard error se c'è una variabile locale che ha lo stesso nome di una variabile globale.
+@option_tooltip_error_forgot_call = Se abilitata, il gioco genererà un errore di safeguard quando si prova a valutare la verità di un oggetto funzione, perché questo di solito indica che hai dimenticato di invocarlo con ().
+@option_tooltip_error_shadow = Quando abilitato, il gioco genererà un errore di safeguard se c'è una variabile locale che ha lo stesso nome di una variabile globale.
 @option_tooltip_print_warnings = Attiva gli avvisi e l'icona di avviso che a volte appare.
 @option_tooltip_language = Cambia la lingua del gioco.
 @keybind_tooltip_indent_selection = Aggiungi l'indentazione a tutte le righe selezionate. Deve essere un tasto che inserisce un carattere affinché funzioni. Quindi, qualsiasi combinazione con ctrl o alt non funzionerà.
