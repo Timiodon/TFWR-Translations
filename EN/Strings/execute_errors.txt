@@ -52,8 +52,6 @@ In Python, functions objects are truthy, which means that if you use them as con
 
 This is a safeguard error message, you can turn it off in the options if it gets in your way.
 @error_function_in_operator = Trying to use {1} on the function {0}. This is the function object itself, not the function's return value. Did you mean to call the function with the call operator `()`? 
-
-This is a safeguard error message, you can turn it off in the options if it gets in your way.
 @error_zero_step_size = The step size cannot be 0.
 @error_sequence_too_large = The sequence was too large to copy.
 @error_invalid_sim_unlocks = The starting unlocks were invalid. It needs to be a sequence of unlocks or tuples of the form `(Unlock.Carrots, 3)`.
