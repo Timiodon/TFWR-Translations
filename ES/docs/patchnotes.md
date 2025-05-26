@@ -7,6 +7,7 @@ Unfortunately the items in the inventory are no longer 3D because it turned out 
 Some things that were changed alongside the optimizations are:
 -The call stack limit is now 1000 function calls.
 -Items in the inventory are now in a fixed order.
+-When the camera moves to the position of an error or a search term it now moves to it's exact location instead of the center of the window. Also, the camera no longer moves to errors that are already on screen.
 -Fixed various UI bugs.
 
 Breaking Changes from older Patches that you might have missed:
