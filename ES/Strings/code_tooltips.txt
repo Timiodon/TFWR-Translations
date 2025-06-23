@@ -291,10 +291,10 @@ Obtiene el costo de un `thing`
 Si `thing` es una entidad, obtiene el costo de plantarla.
 Si `thing` es un desbloqueo, obtiene el costo de desbloquearlo.
 
-Devuelve un dictionary con los objetos como claves y números como valores. Cada objeto está asociado con cuánto de él se necesita.
-Devuelve `None` cuando se usa en un desbloqueo mejorable que ya está en el nivel máximo.
+devuelve un dictionary con los objetos como claves y números como valores. Cada objeto está asociado con cuánto de él se necesita.
+devuelve `{}` cuando se usa en un desbloqueo mejorable que ya está en el nivel máximo.
 
-Toma `1` tick para ejecutarse.
+toma `1` tick para ejecutarse.
 
 ejemplo:
 `cost = get_cost(Unlocks.Carrots)

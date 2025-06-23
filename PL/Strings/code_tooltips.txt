@@ -282,10 +282,10 @@ Zwraca koszt `thing`
 Jeżeli `thing` jest entity, zwraca koszt zasadzenia.
 Jeżeli `thing` jest unlock, zwraca koszt odblokowania.
 
-Zwraca dictionary, w którym elementy są kluczami, a liczby wartościami. Każdy element jest przypisany do tego, ile go potrzeba.
-Zwraca `None` przy użyciu na upgradeable unlock, który jest już na maksymalnym poziomie.
+Zwraca dictionary, w którym elementy są kluczami, a liczby wartościami. Każdy element jest przypisany do ilości, jaka jest potrzebna.
+Zwraca `{}`, gdy użyty jest na upgradeable unlock, który jest już na maksymalnym poziomie.
 
-Zajmuje to `1` tick, aby wykonać.
+Wykonanie zajmuje `1` tick.
 
 przykład:
 `cost = get_cost(Unlocks.Carrots)

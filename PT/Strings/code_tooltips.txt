@@ -292,8 +292,8 @@ Obtém o custo de um `thing`
 Se `thing` for uma entidade, obtém o custo de plantá-la.
 Se `thing` for um desbloqueio, obtém o custo de desbloqueá-lo.
 
-retorna um dictionary com itens como chaves e números como valores. Cada item está mapeado para o quanto dele é necessário.
-retorna `None` quando usado num desbloqueio atualizável que já está no nível máximo.
+retorna um dictionary com itens como chaves e números como valores. Cada item está associado à quantidade necessária.
+retorna `{}` quando usado em um desbloqueio que já está no nível máximo.
 
 leva `1` tick para executar.
 

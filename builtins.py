@@ -747,7 +747,7 @@ def get_cost(thing: Entity | Item | Unlock) -> dict[Item, float] | None:
     If `thing` is an unlock: get the cost of unlocking it.
 
     - returns a dictionary with items as keys and numbers as values. Each item is mapped to how much of it is needed.
-    - returns `None` when used on an upgradeable unlock that is already at the max level.
+    - returns `{}` when used on an upgradeable unlock that is already at the max level.
 
     takes `1` tick to execute.
 
