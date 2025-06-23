@@ -1,11 +1,9 @@
-# Krediler
+# Katkıda Bulunanlar
 
-# The Farmer Was Replaced
+## The Farmer Was Replaced
 
-Timon Herzog tarafından geliştirildi
-
+Geliştiren: Timon Herzog
 
 Çeviri Katkıda Bulunanlar:
 
-
-Oynadığınız için teşekkürler!
+Davide Altamura
