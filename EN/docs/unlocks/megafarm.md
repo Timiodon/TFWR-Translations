@@ -25,7 +25,7 @@ In a file named `farming routine`:
     # Only the first drone will run this
     while num_drones() < max_drones():
         spawn_drone("farming routine")
-        move(East)`
+        move(East)
 
 while True:
     if can_harvest():
@@ -34,10 +34,11 @@ while True:
 
 This will cause your first drone to move horizontally and spawn more drones. The spawned drones will then move vertically and harvest everything in their path.
 
-<spoiler=show hint>The easiest way to use multiple drones is to divide your farm among them. The upgrades are designed so that each drone can always have a 6x6 field.
+<spoiler=show hint>
+The easiest way to use multiple drones is to divide your farm among them. The upgrades are designed so that each drone can always have a 6x6 field.
 </spoiler>
 
-### Everything below here is quite advanced and not required for basic farming
+Everything below here is quite advanced and not required for basic farming
 
 ## Race Conditions
 Multiple drones can interact with the same farm tile at the same time. If two drones interact with the same tile during the exact same tick, the action of the drone with the lower drone ID will happen first.
