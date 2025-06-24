@@ -32,6 +32,7 @@ Burada range(5), `0,1,2,3,4` dizisini döndürür.
 @error_name_not_defined = {0} henüz tanımlanmadı. Bir değişkeni kullanmadan önce mutlaka ona bir değer atamalısın.
 @error_missing_import = {0} hiç tanımlanmamış. Görünüşe göre {1} dosyasında tanımlı. Onu ithal etmeyi unuttun mu?
 Eğer ithal etmişsen, muhtemelen bir ithalat döngüsü var (İthalat belgeleri sayfasına bak).
+@error_missing_import_before_unlock = {0} hiç tanımlanmamış. Ancak {1} dosyasında tanımlı görünüyor. Diğer dosyalardan bir şeyleri import edebilmek için importları açman gerekiyor.
 @error_call_before_def = {0} tanımlı değil. Bu dosyada bir yerde tanımlanmış gibi görünüyor ama tanım henüz çalıştırılmadı. Fonksiyonlar sadece `def` ifadesinden sonra çağrılabilir.
 @error_not_a_function = Bir fonksiyon olmayan bir şeyi çağırmaya çalıştın. Bu hataya yol açabilecek yaygın bir yanlışlık, fonksiyonla aynı isme sahip bir değişkenin olmasıdır.
 @error_invalid_const = {0} mevcut değil.

@@ -32,6 +32,7 @@ Here range(5) returns the sequence `0,1,2,3,4`.
 @error_name_not_defined = {0} has never been defined. You must assign a value to a variable before using it.
 @error_missing_import = {0} has never been defined. It does appear to be defined in the file {1}. Did you forget to import that? 
 If you have imported it, you probably have an import cycle (See the import doc page).
+@error_missing_import_before_unlock = {0} has never been defined. It does appear to be defined in the file {1}. You have to unlock imports to be able to import things from other files.
 @error_call_before_def = {0} is not defined. It appears to be defined somewhere in this file, but the definition hasn't been executed yet. Functions can only be called after the `def` statement.
 @error_not_a_function = You tried to call something that is not a function. A common mistake that can cause this is having a variable with the same name as the function.
 @error_invalid_const = {0} doesn't exist.

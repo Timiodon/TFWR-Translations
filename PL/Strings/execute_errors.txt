@@ -31,6 +31,7 @@ Tutaj range(5) zwraca sekwencję `0,1,2,3,4`.
 @error_missing_x_unlock = {0} musi zostać odblokowany, zanim będzie można z tego skorzystać.
 @error_name_not_defined = {0} nigdy nie został zdefiniowany. Musisz przypisać wartość do zmiennej, zanim ją użyjesz.
 @error_missing_import = {0} nigdy nie został zdefiniowany. Wygląda na to, że jest zdefiniowany w pliku {1}. Czy zapomniałeś go zaimportować? Jeśli już go zaimportowałeś, prawdopodobnie masz cykl importowania (zobacz stronę dokumentacji importu).
+@error_missing_import_before_unlock = {0} nigdy nie został zdefiniowany. Wygląda na to, że jest zdefiniowany w pliku {1}. Musisz odblokować importy, aby móc importować rzeczy z innych plików.
 @error_call_before_def = {0} nie jest zdefiniowane. Wygląda na to, że jest zdefiniowane gdzieś w tym pliku, ale definicja nie została jeszcze wykonana. Funkcje mogą być wywoływane tylko po instrukcji `def`.
 @error_not_a_function = Próbowałeś wywołać coś, co nie jest funkcją. Częstym błędem, który może do tego doprowadzić, jest posiadanie zmiennej z taką samą nazwą jak funkcja.
 @error_invalid_const = {0} nie istnieje.

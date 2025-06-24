@@ -32,6 +32,7 @@ Aquí range(5) devuelve la secuencia `0,1,2,3,4`.
 @error_name_not_defined = {0} nunca ha sido definido. Debes asignar un valor a una variable antes de usarla.
 @error_missing_import = {0} nunca ha sido definido. Parece estar definido en el archivo {1}. ¿Olvidaste importarlo?  
 Si lo has importado, probablemente tengas un ciclo de importación (Consulta la página de documentación de importación).
+@error_missing_import_before_unlock = {0} nunca ha sido definido. Parece estar definido en el archivo {1}. Tienes que desbloquear las importaciones para poder importar cosas de otros archivos.
 @error_call_before_def = {0} no está definido. Parece estar definido en algún lugar de este archivo, pero la definición aún no se ha ejecutado. Las funciones solo se pueden llamar después de la declaración `def`.
 @error_not_a_function = Intentaste llamar a algo que no es una función. Un error común que puede causar esto es tener una variable con el mismo nombre que la función.
 @error_invalid_const = {0} no existe.
