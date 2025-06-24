@@ -32,6 +32,7 @@
 @error_name_not_defined = {0}은(는) 정의되지 않았습니다. 변수를 사용하기 전에 값을 할당해야 합니다.
 @error_missing_import = {0}은(는) 정의되지 않았습니다. {1} 파일에 정의된 것으로 보입니다. 그것을 import하는 것을 잊으셨나요?  
 만약 이미 import했다면, 아마도 import cycle이 있을 수 있습니다 (import 문서 페이지를 참조하세요).
+@error_missing_import_before_unlock = {0}은(는) 정의된 적이 없습니다. {1} 파일에 정의되어 있는 것처럼 보이네요. 다른 파일에서 가져오려면 import 잠금을 해제해야 합니다.
 @error_call_before_def = {0}이(가) 정의되지 않았습니다. 이 파일 어딘가에 정의되어 있는 것 같지만, 아직 실행되지 않았습니다. 함수는 `def` 문 뒤에서만 호출할 수 있습니다.
 @error_not_a_function = 함수가 아닌 것을 호출하려고 했어요. 보통 이 문제는 함수와 같은 이름을 가진 변수가 있을 때 발생합니다.
 @error_invalid_const = {0}는 존재하지 않습니다.

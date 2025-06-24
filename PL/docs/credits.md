@@ -1,9 +1,9 @@
 # Podziękowania
 
-# The Farmer Was Replaced
+## The Farmer Was Replaced
 
-Stworzone przez Timona Herzoga
+Stworzone przez Timon Herzog
 
 Osoby, które przyczyniły się do tłumaczenia:
 
-Dziękujemy za grę!
+Davide Altamura

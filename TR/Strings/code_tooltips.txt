@@ -291,12 +291,12 @@ Bir `thing` maliyetini alır.
 Eğer `thing` bir entity ise, onu ekmenin maliyetini alır.
 Eğer `thing` bir unlock ise, onu açmanın maliyetini alır.
 
-Anahtar olarak itemları ve değer olarak sayıları içeren bir dictionary döner. Her item, ne kadarına ihtiyaç duyulduğuna göre eşlenir.
-Maksimum seviyede olan bir update edilebilir unlock üzerinde kullanıldığında `None` döner.
+Anahtar olarak itemları ve değer olarak sayıları içeren bir dictionary döndürür. Her item, ne kadar gerektiği ile eşleştirilir.
+Zaten maksimum seviyede olan bir upgradeable unlock üzerinde kullanıldığında `{}` döner.
 
-Çalıştırması `1` tick sürer.
+Çalıştırmak `1` tick alır.
 
-Örnek:
+örnek:
 `cost = get_cost(Unlocks.Carrots)
 for item in cost:
     if num_items(item) < cost[item]:

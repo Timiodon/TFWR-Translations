@@ -1,9 +1,9 @@
 # Credits
 
-# The Farmer Was Replaced
+## The Farmer Was Replaced
 
 Entwickelt von Timon Herzog
 
 Übersetzungsbeiträge:
 
-Danke fürs Spielen!
+Davide Altamura

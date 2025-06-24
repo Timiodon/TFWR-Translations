@@ -288,14 +288,14 @@ exemple:
 Récupère le coût d'un `thing`
 
 Si `thing` est une entité, obtient le coût pour le planter.  
-Si `thing` est un déblocage, obtient le coût pour le débloquer.
+Si `thing` est un unlock, obtient le coût pour le débloquer.
 
-Renvoie un dictionnaire avec les items comme clés et les nombres comme valeurs. Chaque item est associé au nombre nécessaire.  
-Renvoie `None` si utilisé sur un déblocage améliorable qui est déjà au niveau max.
+renvoie un dictionary avec les objets comme clés et les nombres comme valeurs. Chaque objet est associé à la quantité nécessaire.  
+renvoie `{}` lorsqu'on l'utilise sur un unlock amélioré déjà au niveau max.
 
-Prend `1` tick pour s'exécuter.
+prend `1` tick pour s'exécuter.
 
-exemple:
+exemple :  
 `cost = get_cost(Unlocks.Carrots)
 for item in cost:
     if num_items(item) < cost[item]:

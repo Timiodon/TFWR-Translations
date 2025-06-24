@@ -288,13 +288,12 @@ Beispiel:
 @code_tooltip_get_cost = `get_cost(thing)` 
 Gibt die Kosten eines `thing` zurück.
 
-Wenn `thing` eine entity ist, gibt die Kosten für das Pflanzen zurück.
-Wenn `thing` ein unlock ist, gibt die Kosten für das Freischalten zurück.
+Wenn `thing` eine entity ist, erhältst du die Kosten für das Pflanzen.
+Wenn `thing` ein unlock ist, erhältst du die Kosten für das Freischalten.
 
-Gibt ein dictionary mit items als Schlüsseln und Zahlen als Werten zurück. Jedes item wird mit der benötigten Menge gemappt.
-Gibt `None` zurück, wenn es für ein upgradefähiges unlock verwendet wird, das bereits auf dem maximalen Level ist.
+Gibt ein dictionary mit items als Schlüssel und Zahlen als Werte zurück. Jedes item zeigt, wie viel davon benötigt wird. Gibt `{}` zurück, wenn es auf einem updatefähigen unlock angewendet wird, das bereits auf dem max Level ist.
 
-Dauert `1` tick, um ausgeführt zu werden.
+Braucht `1` tick zur Ausführung.
 
 Beispiel:
 `cost = get_cost(Unlocks.Carrots)

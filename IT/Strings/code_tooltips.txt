@@ -289,15 +289,15 @@ esempio:
 @code_tooltip_get_cost = `get_cost(thing)`  
 Ottiene il costo di un `thing`
 
-Se `thing` è un entity, ottieni il costo per piantarlo.  
-Se `thing` è un unlock, ottieni il costo per sbloccarlo.
+Se `thing` è un'entità, ottiene il costo di piantarla.  
+Se `thing` è uno sblocco, ottiene il costo per sbloccarlo.
 
-Restituisce un dictionary con gli oggetti come chiavi e numeri come valori. Ogni oggetto è mappato a quanto ne serve.  
-Restituisce `None` quando usato su un unlock potenziabile già al livello massimo.
+restituisce un dictionary con gli oggetti come chiavi e i numeri come valori. Ogni oggetto è mappato su quanto di esso è necessario.  
+Restituisce `{}` quando usato su uno sblocco che è già al livello massimo.
 
-Prende `1` tick per eseguire.
+richiede `1` tick per eseguire.
 
-Esempio:  
+esempio:
 `cost = get_cost(Unlocks.Carrots)
 for item in cost:
     if num_items(item) < cost[item]:

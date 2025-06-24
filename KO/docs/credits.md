@@ -1,11 +1,9 @@
-# 공로자
+# 크레딧
 
-# The Farmer Was Replaced
+## The Farmer Was Replaced
 
-개발: Timon Herzog
-
+개발자: Timon Herzog
 
 번역 기여자:
 
-
-플레이해 주셔서 감사합니다!
+Davide Altamura

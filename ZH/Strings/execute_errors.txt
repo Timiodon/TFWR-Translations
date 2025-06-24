@@ -31,6 +31,7 @@
 @error_missing_x_unlock = {0} 必须先解锁才能使用这个。
 @error_name_not_defined = {0} 从未被定义。你必须在使用变量之前为其赋值。
 @error_missing_import = {0} 从未被定义。它似乎在文件 {1} 中被定义了。是不是忘记导入它了？如果已经导入，可能是有一个导入循环（参见导入文档页面）。
+@error_missing_import_before_unlock = {0}从未被定义。看起来它是在文件{1}中定义的。你需要解锁导入功能，才能从其他文件中导入内容。
 @error_call_before_def = {0} 未被定义。它似乎在这个文件中的某个地方定义了，但定义还没有被执行。函数只能在 `def` 语句之后被调用。
 @error_not_a_function = 你试图调用一个不是函数的东西。一个常见的错误是变量与函数同名。
 @error_invalid_const = {0} 不存在。

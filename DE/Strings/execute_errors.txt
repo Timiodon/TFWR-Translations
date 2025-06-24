@@ -32,6 +32,7 @@ Hier gibt range(5) die Sequenz `0,1,2,3,4` zurück.
 @error_name_not_defined = {0} wurde nie definiert. Du musst einer Variable einen Wert zuweisen, bevor du sie verwenden kannst.
 @error_missing_import = {0} wurde noch nie definiert. Es scheint jedoch in der Datei {1} definiert zu sein. Hast du vergessen, das zu importieren? 
 Falls du es importiert hast, hast du wahrscheinlich einen Import-Zyklus (Sieh dir die Import-Dokumentationsseite an).
+@error_missing_import_before_unlock = {0} wurde nie definiert. Es scheint im File {1} definiert zu sein. Du musst Imports freischalten, um Dinge aus anderen Files importieren zu können.
 @error_call_before_def = {0} ist nicht definiert. Es scheint, als wäre es irgendwo in dieser Datei definiert, aber die Definition wurde noch nicht ausgeführt. Funktionen können nur nach der `def`-Anweisung aufgerufen werden.
 @error_not_a_function = Du hast versucht, etwas aufzurufen, das keine Funktion ist. Ein häufiger Fehler, der dies verursachen kann, ist, dass eine Variable denselben Namen wie die Funktion hat.
 @error_invalid_const = {0} existiert nicht.
