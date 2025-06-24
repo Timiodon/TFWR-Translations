@@ -68,3 +68,7 @@ Pythonでは、関数オブジェクトはトゥルーとして扱われます�
 `global x
 x += 1`
 @error_attribute_on_non_module = {0}に属性を割り当てることはできません。
+@error_file_not_found = ファイル {0} は存在しません。
+@error_max_drones_reached = ドローンの制限を超えました。
+@error_dino_hat_already_used = 恐竜の帽子はひとつしかなく、もう使われています。別のドローンには使えません。
+@error_invalid_drone_id = ID {0} のドローンは存在しません。

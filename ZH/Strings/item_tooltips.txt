@@ -1,7 +1,7 @@
 @item_tooltip_template_amount = 你有 {0}
 @item_descr_carrot = 通过收获胡萝卜获得。
 @item_descr_fertilizer = 调用 `use_item(Items.Fertilizer)` 即可立即减少植物剩余生长时间的 2 秒。
-@item_descr_weird_substance = 在灌木丛上调用`use_item(Items.Weird_Substance)`来种植迷宫。可从受感染的植物中获得。施肥植物会使其感染。
+@item_descr_weird_substance = 在灌木丛上调用 `use_item(Items.Weird_Substance)` 可以长出迷宫，或者在其他植物上调用以切换它们的感染状态。该物品可从感染的植物中获得。施肥植物会感染它们。
 @item_descr_gold = 在迷宫的宝箱中找到。
 @item_descr_hay = 通过割草获得。
 @item_descr_piggy = 这个道具已从游戏中移除。

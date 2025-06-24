@@ -33,6 +33,7 @@
 @unlock_descr_simulation = 在可重现的条件下更快地测试。
 @unlock_descr_timing = 是时候了！
 @unlock_descr_import = 从其他文件导入内容。
+@unlock_descr_megafarm = 更大的农场，配备许多无人机。
 @multi_unlock_descr_expand = 扩展农场。这也会清除农场。
 @multi_unlock_descr_carrots = 增加胡萝卜的产量和成本。
 @multi_unlock_descr_trees = 增加灌木和树木的产量。
@@ -44,3 +45,4 @@
 @multi_unlock_descr_polyculture = 增加多元种植的产量倍数。
 @multi_unlock_descr_watering = 获取更多水。
 @multi_unlock_descr_fertilizer = 获取更多化肥。
+@multi_unlock_descr_megafarm = 进一步增加农场规模和无人机数量。

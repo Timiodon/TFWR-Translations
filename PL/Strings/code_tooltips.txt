@@ -368,12 +368,12 @@ wykonuje się w czasie `200` ticków.
 przykład:  
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Uruchamia symulację dla leaderboarda używając określonego `file_name` jako punktu startowego.
+Rozpoczyna symulację dla leaderboarda używając określonego `filename` jako punktu startowego.
 
 `sim_unlocks`: Sekwencja zawierająca początkowe odblokowania.
-`sim_items`: Dict mapujący przedmioty na ilości. Symulacja zaczyna się z tymi przedmiotami.
+`sim_items`: Dict mapujący przedmioty na ilości. Symulacja zaczyna się od tych przedmiotów.
 `sim_globals`: Dict mapujący nazwy zmiennych na wartości. Symulacja zaczyna się z tymi zmiennymi w global scope.
-`seed`: Losowy seed symulacji. Musi być dodatnią liczbą całkowitą.
+`seed`: Losowe ziarno symulacji. Musi być dodatnią liczbą całkowitą.
 `speedup`: Początkowe przyspieszenie.
 
 zwraca czas potrzebny na uruchomienie symulacji.
@@ -389,6 +389,116 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+Tworzy nowego drona w tej samej pozycji, co dron, który uruchomił komendę `spawn_drone("filename")`. Nowy dron zacznie wykonywać program z pliku o nazwie `filename`.
+
+zwraca ID nowego drona.
+
+potrzebuje `200` ticków na wykonanie.
+
+przykład:
+W pliku o nazwie `farming routine`:
+`if get_drone_id() == 0:
+    # Tylko pierwszy dron uruchomi ten kod
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+Wysyła dowolną `value` do drona z ID drona równym `receiver_id`.
+
+zwraca `None`
+
+wykonuje się przez tyle tików, ile wynosi rozmiar wysłanej `value`.
+
+przykład:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+    while True:
+        word = receive(0)
+        if word != None:
+            break
+        
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+Odbiera pierwszą nieodebraną wiadomość, która została wysłana do tego drona przez drona o `sender_id`.
+Jeśli `sender_id` wynosi `-1`, odbiera pierwszą nieodebraną wiadomość wysłaną do tego drona przez dowolnego drona.
+
+zwraca wysłane dane
+
+zajmuje `1` tick na wykonanie.
+
+przykład:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+zwraca ID drona, który wykonuje kod.
+
+zajmuje `1` tick na wykonanie.
+
+przykład:
+W pliku o nazwie `farming routine`:
+`if get_drone_id() == 0:
+    # Tylko pierwszy dron będzie to uruchamiał
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+zwraca maksymalną liczbę dronów, które możesz mieć na farmie.
+
+wykonanie zajmuje `1` tick.
+
+przykład:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+zwraca liczbę dronów aktualnie znajdujących się na farmie.
+
+potrzebuje `1` ticka do wykonania.
+
+przykład:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 Wypisuje wartość tak samo jak `print(*args)`, ale nie zatrzymuje się, aby ją zapisać w powietrzu, więc można ją znaleźć tylko na stronie wyników.
 

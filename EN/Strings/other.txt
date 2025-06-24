@@ -3,4 +3,4 @@
 @run_cancelled = Run Failed
 @average_text = {0} Completed ({2:F1}%)
 {1}
-@unlocked_in = Unlocked in: [{0}]({1})
+@unlocked_in = For more related information see: [{0}]({1})

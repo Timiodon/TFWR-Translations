@@ -1,7 +1,7 @@
 @item_tooltip_template_amount = Hai {0}
 @item_descr_carrot = Ottenuto raccogliendo carote.
 @item_descr_fertilizer = Chiama `use_item(Items.Fertilizer)` per rimuovere istantaneamente 2s dal tempo di crescita rimanente delle piante.
-@item_descr_weird_substance = Chiama `use_item(Items.Weird_Substance)` su un cespuglio per far crescere un labirinto. Ottenuta da piante infette. Fertilizzare le piante le infetta.
+@item_descr_weird_substance = Chiama `use_item(Items.Weird_Substance)` su un cespuglio per far crescere un labirinto, oppure su altre piante per cambiare il loro stato di infezione. Ottenuto da piante infette. Fertilizzare le piante le infetta.
 @item_descr_gold = Trovato nei forzieri nei labirinti.
 @item_descr_hay = Ottenuto tagliando l'erba.
 @item_descr_piggy = Questo oggetto è stato rimosso dal gioco.

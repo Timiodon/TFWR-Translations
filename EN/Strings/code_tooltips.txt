@@ -378,7 +378,7 @@ takes `200` ticks to execute.
 example:
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
+Starts a simulation for the leaderboard using the specified `filename` as a starting point.
 
 `sim_unlocks`: A sequence containing the starting unlocks.
 `sim_items`: A dict mapping items to amounts. The simulation starts with these items.
@@ -399,6 +399,122 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+Spawns a new drone at the same position as the drone that ran the `spawn_drone("filename")` command. The new drone will start executing the program in the file named `filename`.
+
+returns the drone ID of the new drone.
+
+takes `200` ticks to execute.
+
+example:
+In a file named `farming routine`:
+`if get_drone_id() == 0:
+    # Only the first drone will run this
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+
+@code_tooltip_send = `send(value, receiver_id)`
+
+Sends any kind of `value` to the drone with the drone ID that is equal to `receiver_id`.
+
+returns `None`
+
+takes ticks equal to the size of the sent `value` to execute.
+
+example:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+Receives the first unreceived message that was sent to this drone by the drone with the `sender_id`.
+If `sender_id` is `-1`, receives the first unreceived message sent to this drone by any drone.
+
+returns the sent data
+
+takes `1` tick to execute.
+
+example:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+returns the ID of the drone that is running the code.
+
+takes `1` tick to execute.
+
+example:
+In a file named `farming routine`:
+`if get_drone_id() == 0:
+    # Only the first drone will run this
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+
+@code_tooltip_max_drones = `max_drones()`
+
+returns the maximum number of drones that you can have in the farm.
+
+takes `1` tick to execute.
+
+example:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+
+@code_tooltip_num_drones = `num_drones()`
+
+returns the number of drones currently in the farm.
+
+takes `1` tick to execute.
+
+example:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+
 @code_tooltip_quick_print = `quick_print(*args)`
 Prints a value just like `print(*args)` but it doesn't stop to write it into the air so it can only be found on the output page.
 

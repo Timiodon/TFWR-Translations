@@ -1,7 +1,7 @@
 @item_tooltip_template_amount = {0} sahip oldun
 @item_descr_carrot = Havuç toplayarak elde edilir.
 @item_descr_fertilizer = `use_item(Items.Fertilizer)` komutunu çağırarak bitkilerin kalan büyüme süresinden 2 saniyeyi anında düşür.
-@item_descr_weird_substance = <a>`use_item(Items.Weird_Substance)`</a> fonksiyonunu bir çalıya çağırarak bir labirent oluştur. Enfekte bitkilerden elde edilir. Bitkilere gübre vermek onları enfekte eder.
+@item_descr_weird_substance = `use_item(Items.Weird_Substance)` fonksiyonunu bir çalıda çağırtarak bir labirent büyüt, veya diğer bitkilerde kullanarak enfeksiyon durumlarını değiştir. Enfekte olmuş bitkilerden elde edilir. Bitkileri gübrelemek, onları enfekte eder.
 @item_descr_gold = Labirentlerdeki hazine sandıklarında bulunur.
 @item_descr_hay = Çimen biçerek elde edilir.
 @item_descr_piggy = Bu öğe oyundan kaldırıldı.

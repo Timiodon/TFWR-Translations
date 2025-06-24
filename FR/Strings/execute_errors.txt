@@ -68,3 +68,7 @@ Si tu veux modifier une variable globale, tu dois utiliser le mot-clé global po
 `global x
 x += 1`
 @error_attribute_on_non_module = Vous ne pouvez pas attribuer un attribut à {0}.
+@error_file_not_found = Le fichier {0} n'existe pas.
+@error_max_drones_reached = La limite du drone a été dépassée.
+@error_dino_hat_already_used = Il n'y a qu'un seul chapeau de dinosaure et il est déjà utilisé. Tu ne peux pas l'utiliser sur un deuxième drone.
+@error_invalid_drone_id = Il n'y a pas de drone avec l'identifiant {0}.

@@ -1,11 +1,11 @@
 # Mazes
 `Items.Weird_Substance`, which is obtained by [fertilizing](docs/unlocks/fertilizer.md) plants, has a strange effect on bushes. If the drone is over a bush and you call `use_item(Items.Weird_Substance, amount)` the bush will grow into a maze of hedges.
 The size of the maze depends on the amount of `Items.Weird_Substance` used (the second argument of the `use_item()` call).
-Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n` maze. For each maze upgrade level you need to use an extra `n` `Items.Weird_Substance` to get the same effect. 
+Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n` maze. Each maze upgrade level doubles the treasure, but it also doubles the amount of `Items.Weird_Substance` needed. 
 So to make a full field maze:
 
 `plant(Entities.Bush)
-n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+n_substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, n_substance)`
 
 

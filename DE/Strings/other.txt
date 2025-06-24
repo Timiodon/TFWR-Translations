@@ -3,4 +3,4 @@
 @run_cancelled = Ausführung Fehlgeschlagen
 @average_text = {0} Abgeschlossen ({2:F1}%)
 {1}
-@unlocked_in = Freigeschaltet in: [{0}]({1})
+@unlocked_in = Weitere Informationen findest du unter: [{0}]({1})

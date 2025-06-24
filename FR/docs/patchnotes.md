@@ -1,14 +1,20 @@
 # Patch Notes
 
-This patch brings many optimizations on both the GPU and CPU side. 
-Particularly on the GPU side there have been some very significant optimizations that finally make the game less GPU intensive.
-Unfortunately the items in the inventory are no longer 3D because it turned out this was using a lot of GPU resources.
+Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
+Also a large part of the tech tree has been experimentally reworked to be more exponential.
 
-Some things that were changed alongside the optimizations are:
--The call stack limit is now 1000 function calls.
--Items in the inventory are now in a fixed order.
--When the camera moves to the position of an error or a search term it now moves to it's exact location instead of the center of the window. Also, the camera no longer moves to errors that are already on screen.
--Fixed various UI bugs.
+Gameplay:
+-Pumpkins now scale up to 6x6 instead of 5x5.
+-The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
+
+UI:
+-Double clicking identifiers with underscores in them now selects the whole identifier.
+
+Other:
+-`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
+
+Fixes:
+-Actions like tilling can no longer affect the water drying behavior.
 
 Breaking Changes from older Patches that you might have missed:
 -Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).

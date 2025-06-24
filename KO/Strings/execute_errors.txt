@@ -68,3 +68,7 @@ Python에서, 함수 객체는 조건문에서 사용할 때 `True`처럼 동작
 `global x
 x += 1`
 @error_attribute_on_non_module = {0}에 속성을 할당할 수 없습니다.
+@error_file_not_found = 파일 {0}이(가) 존재하지 않습니다.
+@error_max_drones_reached = 드론 제한을 초과했습니다.
+@error_dino_hat_already_used = 恐竜 모자는 하나만 있고 이미 사용 중이에요. 두 번째 드론에 사용할 수 없어요.
+@error_invalid_drone_id = ID {0}를 가진 드론이 없습니다.

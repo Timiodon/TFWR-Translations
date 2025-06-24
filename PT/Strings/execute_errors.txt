@@ -68,3 +68,7 @@ Se você quiser modificar uma variável global, precisa usar a palavra-chave `gl
 `global x
 x += 1`
 @error_attribute_on_non_module = Você não pode atribuir um atributo a {0}.
+@error_file_not_found = O arquivo {0} não existe.
+@error_max_drones_reached = O limite do drone foi excedido.
+@error_dino_hat_already_used = Só tem um chapéu de dinossauro e ele já está em uso. Você não pode usá-lo em um segundo drone.
+@error_invalid_drone_id = Não há drone com ID {0}.

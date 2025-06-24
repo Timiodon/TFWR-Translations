@@ -3,4 +3,4 @@
 @run_cancelled = Échec de l'exécution
 @average_text = {0} Terminé ({2:F1}%)
 {1}
-@unlocked_in = Déverrouillé dans : [{0}]({1})
+@unlocked_in = Pour plus d'informations à ce sujet, consultez : [{0}]({1})

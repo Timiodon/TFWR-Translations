@@ -67,3 +67,7 @@
 `global x
 x += 1`
 @error_attribute_on_non_module = 你不能给{0}分配属性。
+@error_file_not_found = 文件{0}不存在。
+@error_max_drones_reached = 无人机的数量超出了限制。
+@error_dino_hat_already_used = 恐龙帽子只有一个，并且已经在使用中。你不能在第二个无人机上使用它。
+@error_invalid_drone_id = 没有ID为{0}的无人机。

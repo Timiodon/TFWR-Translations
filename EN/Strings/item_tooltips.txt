@@ -1,7 +1,7 @@
 @item_tooltip_template_amount = You have {0}
 @item_descr_carrot = Obtained by harvesting carrots.
 @item_descr_fertilizer = Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.
-@item_descr_weird_substance = Call `use_item(Items.Weird_Substance)` on a bush to grow a maze. Obtained from infected plants. Fertilizing plants infects them.
+@item_descr_weird_substance = Call `use_item(Items.Weird_Substance)` on a bush to grow a maze, or on other plants to toggle their infection status. Obtained from infected plants. Fertilizing plants infects them.
 @item_descr_gold = Found in treasure chests in mazes.
 @item_descr_hay = Obtained by cutting grass.
 @item_descr_piggy = This items has been removed from the game.

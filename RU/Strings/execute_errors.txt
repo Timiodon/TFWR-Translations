@@ -68,3 +68,7 @@
 `global x
 x += 1`
 @error_attribute_on_non_module = Невозможно присвоить атрибут на {0}.
+@error_file_not_found = Файл {0} не существует.
+@error_max_drones_reached = Лимит дронов был превышен.
+@error_dino_hat_already_used = Есть только одна шляпа динозавра, и она уже используется. Вы не можете использовать её на втором дроне.
+@error_invalid_drone_id = Дрон с ID {0} не найден.

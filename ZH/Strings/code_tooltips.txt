@@ -376,20 +376,20 @@ use_item(Items.Weird_Substance, n_substance)`
 
 例子：  
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
-@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-使用指定的 `file_name` 作为起点开始一个用于排行榜的模拟。
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`  
+使用指定的 `filename` 作为起点启动一个用于排行榜的模拟。
 
-`sim_unlocks`：一个包含初始解锁内容的序列。
-`sim_items`：一个将物品映射到数量的字典。模拟以这些物品开始。
-`sim_globals`：一个将变量名称映射到值的字典。模拟开始时，这些变量存在于全局范围内。
-`seed`：模拟的随机种子。必须是正整数。
-`speedup`：初始加速。
+`sim_unlocks`: 包含初始解锁内容的序列。  
+`sim_items`: 一个dict，映射物品到数量。模拟开始时有这些物品。  
+`sim_globals`: 一个dict，映射变量名称到值。模拟从在全局scope中拥有这些变量开始。  
+`seed`: 模拟的随机种子。必须是正整数。  
+`speedup`: 初始加速。
 
 返回运行模拟所需的时间。
 
-执行需要 `200` ticks。
+执行需要`200` ticks。
 
-示例：
+例子：  
 `filename = "f1"
 sim_unlocks = Unlocks
 sim_items = {Items.Carrot : 10000, Items.Hay : 50}
@@ -398,6 +398,116 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+在运行 `spawn_drone("filename")` 命令的无人机相同位置生成一个新无人机。新无人机将开始执行名为 `filename` 的文件中的程序。
+
+返回新无人机的无人机ID。
+
+执行需要 `200` ticks。
+
+示例：
+在一个名为 `farming routine` 的文件中：
+`if get_drone_id() == 0:
+    # 只有第一个无人机会运行这段代码
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+将任意类型的`value`发送给ID等于`receiver_id`的无人机。
+
+返回`None`
+
+执行所需的ticks等于发送的`value`的大小。
+
+例子：
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+接收由编号为 `sender_id` 的无人机发送给该无人机的首条未接收消息。
+如果 `sender_id` 为 `-1`，则接收其他任何无人机发送给该无人机的首条未接收消息。
+
+返回发送的数据
+
+执行耗时 `1` tick。
+
+例子：
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+返回正在运行该代码的无人机的ID。
+
+执行需要`1`个tick。
+
+例子：
+在名为`farming routine`的文件中：
+`if get_drone_id() == 0:
+    # 只有第一台无人机会运行这段代码
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+返回你在农场中可以拥有的最大无人机数量。
+
+执行需要`1` tick。
+
+示例：
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+返回当前农场中的无人机数量。
+
+执行需要 `1` tick。
+
+例子：
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`  
 像 `print(*args)` 一样打印一个值，但它不会停下来将其写入空中，因此只能在输出页面找到。
 

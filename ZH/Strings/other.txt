@@ -3,4 +3,4 @@
 @run_cancelled = 运行失败
 @average_text = {0} 完成 ({2:F1}%)
 {1}
-@unlocked_in = 解锁于：[{0}]({1})
+@unlocked_in = 有关更多相关信息，请参见：[{0}]({1})

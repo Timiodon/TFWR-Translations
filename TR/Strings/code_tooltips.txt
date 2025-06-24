@@ -377,17 +377,17 @@ Belirtilen `file_name`'ı başlangıç noktası olarak kullanarak `leaderboard` 
 örnek:
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Verilen `file_name` ile liderlik tablosu için bir simülasyon başlatır.
+Belirtilen `filename` ile liderlik tablosu için bir simülasyon başlatır.
 
-`sim_unlocks`: Başlangıçta açılanların bulunduğu bir dizi.
+`sim_unlocks`: Başlangıç kilitlerinin bulunduğu bir sıra.
 `sim_items`: Öğeleri miktarlarla eşleyen bir dict. Simülasyon bu öğelerle başlar.
-`sim_globals`: Değişken isimlerini değerlere eşleyen bir dict. Simülasyon, global scope'ta bu değişkenlerle başlar.
+`sim_globals`: Değişken isimlerini değerlere eşleyen bir dict. Simülasyon bu değişkenlerle global scope'ta başlar.
 `seed`: Simülasyonun rastgele tohum değeri. Pozitif bir tam sayı olmalıdır.
 `speedup`: Başlangıç hızlandırması.
 
-Simülasyonun çalışması için geçen süreyi döndürür.
+Simülasyonu çalıştırmanın ne kadar sürdüğünü döndürür.
 
-`200` tick sürer.
+`200` tick sürede çalışır.
 
 Örnek:
 `filename = "f1"
@@ -398,6 +398,116 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+`spawn_drone("filename")` komutunu çalıştıran dronla aynı konumda yeni bir drone oluşturur. Yeni drone, `filename` adlı dosyada bulunan programı çalıştırmaya başlayacak.
+
+yeni dronenun drone ID'sini döner.
+
+`200` ticklik süre alır.
+
+örnek:
+`farming routine` adlı bir dosyada:
+`if get_drone_id() == 0:
+    # Sadece ilk drone bunu çalıştıracak
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+Herhangi bir `value`'yi, `receiver_id` ile eşit olan drone ID'sine sahip drone'a gönderir.
+
+`None` döner
+
+Gönderilen `value`'nun boyutuna eşit tıklarda yürütülür.
+
+örnek:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+Bu drone'a, `sender_id` ile gönderilen ilk alınmamış mesajı alır. 
+Eğer `sender_id` `-1` ise, herhangi bir drone tarafından bu drone'a gönderilen ilk alınmamış mesajı alır.
+
+gönderilen veriyi döndürür
+
+Çalışması `1` tick sürer.
+
+örnek:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+bu kodu çalıştıran dronun ID'sini döndürür.
+
+Çalıştırmak `1` tick alır.
+
+örnek:
+`farming routine` adlı bir dosyada:
+`if get_drone_id() == 0:
+    # Yalnızca ilk drone bunu çalıştıracak
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+çiftlikte sahip olabileceğiniz maksimum drone sayısını döndürür.
+
+çalışmak için `1` tick sürer.
+
+örnek:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+şu anda çiftlikte bulunan drone sayısını döndürür.
+
+Çalıştırılması `1` tick sürer.
+
+örnek:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 Değeri `print(*args)` gibi yazdırır ancak havada yazmaya çalışmadığı için sadece çıktı sayfasında bulunabilir.
 

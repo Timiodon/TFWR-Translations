@@ -68,3 +68,7 @@ Eğer bir global değişkeni değiştirmek istiyorsan, global scope'a yazmak iç
 `global x
 x += 1`
 @error_attribute_on_non_module = {0}'a bir özellik atayamazsın.
+@error_file_not_found = Dosya {0} mevcut değil.
+@error_max_drones_reached = Drone limiti aşıldı.
+@error_dino_hat_already_used = Sadece bir dinozor şapkası var ve şu anda kullanılıyor. İkinci bir drone üzerinde kullanamazsın.
+@error_invalid_drone_id = ID {0} ile bir drone yok.

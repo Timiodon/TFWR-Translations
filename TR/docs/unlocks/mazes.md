@@ -1,62 +1,62 @@
 # Labirentler
-`Items.Weird_Substance`, bitkilerin [gübrelenmesi](docs/unlocks/fertilizer.md) sırasında elde edilir ve çalılar üzerinde garip bir etkisi vardır. Eğer drone bir çalının üzerinde ise ve `use_item(Items.Weird_Substance, amount)` çağrısı yaparsanız, çalı bir çit labirentine dönüşür.
-Labirentin boyutu kullanılan `Items.Weird_Substance` miktarına bağlıdır (`use_item()` çağrısının ikinci argümanı).
-Labirent yükseltmeleri olmadan, `n` adet `Items.Weird_Substance` kullanmak `n`x`n` boyutunda bir labirent oluşturur. Her bir labirent yükseltme seviyesi için aynı etkiyi almak adına ekstra bir adet `n` `Items.Weird_Substance` kullanmanız gerekir.
-Dolayısıyla tam bir alan labirenti yapmak için:
+`Items.Weird_Substance`, bitkileri [gübreleyerek](docs/unlocks/fertilizer.md) elde edilebilen bir maddedir ve çalılarda garip bir etkiye sahiptir. Eğer drone bir çalının üzerinde ise ve `use_item(Items.Weird_Substance, amount)` fonksiyonunu çağırırsanız, çalı bir çit labirentine dönüşür.
+Labirentin boyutu, kullanılan `Items.Weird_Substance` miktarına (yani, `use_item()` çağrısının ikinci argümanı) bağlıdır.
+Labirent yükseltmeleri olmadan, `n` `Items.Weird_Substance` kullanmak bir `n`x`n` labirent oluşturur. Her labirent yükseltme seviyesi, hazine miktarını iki katına çıkarır ancak aynı zamanda gereken `Items.Weird_Substance` miktarını da iki katına çıkarır.
+Bu şekilde tam bir alan labirenti yapmak için:
 
 `plant(Entities.Bush)
-n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+n_substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, n_substance)`
 
-Her ne sebepten olursa olsun, drone çitlerin üzerinden uçamıyor, sanki çok yüksek görünmeseler de.
+Nedense drone çitin üzerinden uçamıyor, oysa çitler pek yüksek görünmüyor.
 
-Çitin içinde bir yerde bir hazine gizli. Hazineye `harvest()` kullanarak labirentin alanına eşit bir miktarda altın alırsınız. (Örneğin, 5x5'lik bir labirent 25 altın verecektir.)
+Çitin içinde bir yerde hazine gizlidir. Hazine üzerinde `harvest()` fonksiyonunu kullanarak labirentin alanına eşit miktarda altın alırsınız. (Örneğin, 5x5'lik bir labirent 25 altın verir.)
 
 Başka bir yerde `harvest()` kullanırsanız, labirent basitçe kaybolur.
 
-Eğer drone hazine üzerinde bulunuyorsa `get_entity_type()` `Entities.Treasure` ile eşit olur, labirentte başka yerlerde ise `Entities.Hedge` olur.
+Eğer drone hazine üzerindeyse `get_entity_type()` `Entities.Treasure` ve labirentin diğer her yerinde `Entities.Hedge` ile eşittir.
 
-Labirentler, yeniden kullanılmadıkları sürece döngü içermezler (aşağıda, bir labirenti nasıl tekrar kullanacağınızı görün). Bu yüzden drone'un aynı konuma tekrar geri dönmeden gitmesi mümkün değil.
+Labirentler, yeniden kullanılmadıkça döngüler içermez (labirenti nasıl yeniden kullanabileceğinizi görmek için aşağıya bakın). Yani drone’un aynı konuma geri gitmeden ulaşması mümkün değildir.
 
-Bir duvarın olup olmadığını kontrol etmek için, onun içinden geçmeye çalışabilirsiniz.
-`move()` başarılı olursa `True` döner, yoksa `False` döner.
+Bir duvar olup olmadığını denemek için hareket edebilirsiniz.
+`move()` başarılı olursa `True`, yoksa `False` döndürür.
 
-Hazineye nasıl ulaşacağınızı bilmiyorsanız, İpucu 1'e göz atın. Bu tür bir soruna nasıl yaklaşmanız gerektiğini gösterir.
+Eğer hazineye nasıl ulaşacağınız hakkında hiçbir fikriniz yoksa, birinci ipucuna göz atın. Bu tür bir sorunu nasıl ele alabileceğinizi gösterir.
 
-Ekstra bir zorluk için, aynı miktarda `Items.Weird_Substance` kullanarak labirenti tekrar kullanabilirsiniz.
-Bu, hazinedeki altın miktarını bir tam labirent kadar arttırır ve hazinenin labirent içinde rastgele bir konuma taşınmasına neden olur.
+Ekstra bir meydan okuma arıyorsanız aynı miktarda `Items.Weird_Substance` ile tekrar hazineyi kullanarak labirenti yeniden kullanabilirsiniz.
+Bu işlem, hazine içindeki altın miktarını bir tam labirent kadar artırır ve onu labirentin rastgele bir konumuna taşır.
 
-Bir hazineye `measure()` kullanmak, taşınacağı pozisyonu bir demet olarak döndürür.
+Hazine üzerinde `measure()` kullanmak, onun hareket edeceği konumu bir demet olarak döndürür.
 `next_x, next_y = measure()`
 
-Her hazine taşındığında, labirentten rastgele bir duvar kaldırılabilir. Dolayısıyla yeniden kullanılan labirentler döngüler içerebilir.
+Her seferinde hazine taşındığında, labirentten rastgele bir duvar kaldırılabilir. Yani, yeniden kullanılan labirentler döngüler içerebilir.
 
-Labirentteki döngüler dikkat edilmesi gereken bir nokta çünkü aynı yere tekrar geri dönebilirsiniz.
-Bir labirenti tekrar kullanmak, sadece hasat etmek ve yeni bir labirent oluşturmak kadar fazla altın vermez.
-Bu %100'lük bir ekstra zorluk ve geçebilirsiniz.
-Ekstra bilgi ve kısayollar labirenti daha hızlı çözmenize yardımcı oluyorsa, o zaman değerlidir.
+Labirentteki döngülerin bulunması işinizi zorlaştırır çünkü aynı konuma geri dönebilir ve bu, geriye gitmeden tekrar aynı konumda olabileceğiniz anlamına gelir.
+Bir labirenti yeniden kullanmak, sadece hasat yapıp yeni bir labirent oluşturmaktan daha fazla altın kazandırmaz.
+Bu tamamen ekstra bir meydan okumadır ve atlayabilirsiniz.
+Yalnızca ekstra bilgiler ve kestirmeler, labirenti daha hızlı çözmenize yardımcı olursa buna değer.
 
-Aynı labirent maksimum 300 kez çözülebilir. Bu, 299 taşınmaya karşılık gelir. Bundan sonra, hazineye tuhaf madde kullanmak altını arttırmaz ve `measure()` `None` döner.
+Aynı labirenti en fazla 300 kez çözebilirsiniz. Bu, 299 kez taşınmasına karşılık gelir. Bundan sonra, hazine üzerinde garip madde kullanmak daha fazla altın sağlamaz ve `measure()` `None` döndürecektir.
 
-<spoiler=ipucu 1'i göster>Problemi çözmek için genel bir yaklaşım buraya getir:
+<spoiler=ipuçunu göster 1>Sorunu çözmek için genel bir yaklaşım:
 
-Bir labirent oluşturun ve kendinizin drone olduğunu hayal edin.
+Bir labirent oluşturun ve kendinizi drone gibi hayal edin.
 
-Labirentin içindeyken hazineyi nasıl bulmak isteyebileceğinizi düşünün.
+Labirentin içinde olsaydınız hazineyi nasıl bulmak isterdiniz diye düşünün.
 
-Başka birinin düşünmeden takip edebileceği şekilde adım adım stratejinizi yazın.
+Adım adım stratejinizi yazın ki başkası düşünmeden uygulayabilsin.
 
-Şimdi, adımlarınızı koda dönüştürmeyi deneyin.
+Şimdi adımlarınızı koda çevirmeyi deneyin.
 </spoiler>
-<spoiler=ipucu 2'yi göster>Döngüler olmadığı sürece: Tüm duvarlar aslında sadece büyük bir bağlı duvardır. Duvarı takip ederseniz, sizi tüm labirent boyunca yönlendirecektir.
-Bu yaklaşım çok az kod gerektirir ve daha önce bulunduğunuz yeri takip etmeniz gerekmez. Yaklaşık 10 satır kod yeterli olacaktır.</spoiler>
-<spoiler=ipucu 3'ü göster>Drone'u doğu veya batı gibi mutlak yönlerle hareket ettirmek yerine, "sağa dön" veya "sola dön" gibi göreceli yönlerle hareket ettirmek çok yararlı olabilir. Bunu yapmak için drone'un şu anda hangi yöne hareket ettiğini takip etmelisiniz. Drone asla gerçekten dönmez, ama yine de koda "sanaldan" bir dönüş ekleyebilirsiniz.
-Aşağıdaki indeks hilesi bunun için faydalıdır:
+<spoiler=ipuçunu göster 2>Döngü olmadığı sürece: Tüm duvarlar aslında büyük bir bağlı duvardan ibarettir. Eğer duvarı takip ederseniz, bu sizi tüm labirentin içinden geçirir.
+Bu yaklaşım çok az kod gerektirir ve nerede olduğunuzu takip etmenize gerek yoktur. Yaklaşık 10 satır kod yeterlidir.</spoiler>
+<spoiler=ipuçunu göster 3>Drone'u doğu veya batı gibi mutlak yönlerde hareket ettirmek yerine "sağa dön" veya "sola dön" gibi göreceli yönlerde hareket ettirmek çok daha yararlıdır. Bunu yapmak için drone'un hangi yöne doğru hareket ettiğini takip etmelisiniz. Drone aslında hiç dönmez, ancak yine de kodda "sanal" bir dönüş oluşturabilirsiniz.
+Şu index hilesi bu konuda yardımcıdır:
 
 `directions = [North, East, South, West]
 index = 0`
 
-"x`% 4`" kullanarak "çemberin etrafında" dönmelerine izin verin, böylece `West`'den sonra `North`'a geri döner.
+`% 4` kullanarak "çember etrafında" dönmesini sağlayabilirsiniz, böylece `West`'ten sonra tekrar `North`'e döner.
 `# sağa dön
 index = (index + 1) % 4`
 
@@ -64,5 +64,5 @@ index = (index + 1) % 4`
 index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
-<spoiler=ipucu 4'ü göster>Eğer çözemezseniz, her zaman işleri kolaylaştırabilir ve daha az verimli yapabilirsiniz.
-Bir `1`x`1` labirenti çözmek önemsizdir.</spoiler>
+<spoiler=ipuçunu göster 4>Eğer çözemezseniz her zaman işleri kolaylaştırabilir ve daha az verimli bir şekilde yapabilirsiniz.
+Bir `1`x`1` labirenti çözmek oldukça basittir.</spoiler>

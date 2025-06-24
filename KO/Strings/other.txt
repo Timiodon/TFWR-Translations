@@ -3,4 +3,4 @@
 @run_cancelled = 실행 실패
 @average_text = {0} 완료됨 ({2:F1}%)
 {1}
-@unlocked_in = 해제됨: [{0}]({1})
+@unlocked_in = 더 많은 관련 정보를 보려면: [{0}]({1})

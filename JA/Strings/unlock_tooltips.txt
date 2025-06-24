@@ -33,6 +33,7 @@
 @unlock_descr_simulation = テストはもっと速く、再現可能な条件下で行おう。
 @unlock_descr_timing = そろそろだね！
 @unlock_descr_import = 他のファイルからものをインポートしよう。
+@unlock_descr_megafarm = もっと大きな農場とたくさんのドローン。
 @multi_unlock_descr_expand = 農場を拡張します。これにより、農場もクリアされます。
 @multi_unlock_descr_carrots = にんじんの収穫量とコストを増やします。
 @multi_unlock_descr_trees = 茂みと木の収穫量を増やします。
@@ -44,3 +45,4 @@
 @multi_unlock_descr_polyculture = ポリカルチャーの収量倍率を増加させる。
 @multi_unlock_descr_watering = もっと水を受け取ろう。
 @multi_unlock_descr_fertilizer = もっと肥料を手に入れよう。
+@multi_unlock_descr_megafarm = 農場のサイズとドローンの数をさらに増やそう。

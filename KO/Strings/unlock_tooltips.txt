@@ -33,6 +33,7 @@
 @unlock_descr_simulation = 테스트를 더 빠르고 재현 가능한 조건에서 진행해 보세요.
 @unlock_descr_timing = 드디어 시간이 되었군요!
 @unlock_descr_import = 다른 파일에서 항목을 불러오기.
+@unlock_descr_megafarm = 훨씬 더 큰 농장과 많은 드론.
 @multi_unlock_descr_expand = 농장을 확장합니다. 농장도 초기화됩니다.
 @multi_unlock_descr_carrots = 당근의 수확량과 비용을 증가시킵니다.
 @multi_unlock_descr_trees = 관목과 나무의 수확량을 증가시킵니다.
@@ -44,3 +45,4 @@
 @multi_unlock_descr_polyculture = 다작 농업의 수확 배수를 증가시킵니다.
 @multi_unlock_descr_watering = 물을 더 받으세요.
 @multi_unlock_descr_fertilizer = 더 많은 비료를 받으세요.
+@multi_unlock_descr_megafarm = 농장의 크기와 드론의 수를 더 늘리세요.

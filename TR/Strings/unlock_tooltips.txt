@@ -33,6 +33,7 @@
 @unlock_descr_simulation = Daha hızlı ve tekrarlanabilir koşullar altında test et.
 @unlock_descr_timing = Tam zamanı!
 @unlock_descr_import = Diğer dosyalardan şeyler import et.
+@unlock_descr_megafarm = Daha büyük bir çiftlik, birçok drone ile.
 @multi_unlock_descr_expand = Çiftliği genişletir. Bu aynı zamanda çiftliği temizler.
 @multi_unlock_descr_carrots = Havuçların verimini ve maliyetini artırır.
 @multi_unlock_descr_trees = Çalıların ve ağaçların verimini artırır.
@@ -44,3 +45,4 @@
 @multi_unlock_descr_polyculture = Polikültürün verim çarpanını arttırır.
 @multi_unlock_descr_watering = Daha fazla su al.
 @multi_unlock_descr_fertilizer = Daha fazla gübre al.
+@multi_unlock_descr_megafarm = Çiftlik boyutunu ve drone sayısını daha da artır.

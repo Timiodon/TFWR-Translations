@@ -3,4 +3,4 @@
 @run_cancelled = Ejecución Fallida
 @average_text = {0} Completado ({2:F1}%)
 {1}
-@unlocked_in = Desbloqueado en: [{0}]({1})
+@unlocked_in = Para más información relacionada, consulta: [{0}]({1})

@@ -66,3 +66,7 @@ To jest komunikat błędu zabezpieczającego, możesz go wyłączyć w opcjach, 
 `global x
 x += 1`
 @error_attribute_on_non_module = Nie możesz przypisać atrybutu do {0}.
+@error_file_not_found = Plik {0} nie istnieje.
+@error_max_drones_reached = Limit drona został przekroczony.
+@error_dino_hat_already_used = Jest tylko jedna czapka dinozaura i jest już w użyciu. Nie możesz jej użyć na drugim dronie.
+@error_invalid_drone_id = Nie ma drona o identyfikatorze {0}.

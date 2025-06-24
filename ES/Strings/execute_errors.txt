@@ -68,3 +68,7 @@ Si quieres modificar una variable global, debes usar la palabra clave `global` p
 `global x  
 x += 1`
 @error_attribute_on_non_module = No puedes asignar un atributo a {0}.
+@error_file_not_found = El archivo {0} no existe.
+@error_max_drones_reached = Se superó el límite del drone.
+@error_dino_hat_already_used = Solo hay un sombrero de dinosaurio y ya está en uso. No puedes usarlo en un segundo drone.
+@error_invalid_drone_id = No hay ningún drone con ID {0}.

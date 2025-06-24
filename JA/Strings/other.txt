@@ -3,4 +3,4 @@
 @run_cancelled = Run Failed
 @average_text = {0} 完了 ({2:F1}%)
 {1}
-@unlocked_in = アンロック場所: [{0}]({1})
+@unlocked_in = 詳しくは、[{0}]({1})をご覧ください。

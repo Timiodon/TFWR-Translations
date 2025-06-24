@@ -376,17 +376,17 @@ benötigt `200` Ticks zur Ausführung.
 Beispiel:  
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Startet eine Simulation für das Leaderboard mit der angegebenen `file_name` als Ausgangspunkt.
+Startet eine Simulation für das Leaderboard unter Verwendung des angegebenen `filename` als Ausgangspunkt.
 
-`sim_unlocks`: Eine Sequenz, die die Start-Freischaltungen enthält.
+`sim_unlocks`: Eine Sequenz, die die anfänglichen Freischaltungen enthält.
 `sim_items`: Ein dict, das Items auf Mengen abbildet. Die Simulation startet mit diesen Items.
 `sim_globals`: Ein dict, das Variablennamen auf Werte abbildet. Die Simulation startet mit diesen Variablen im globalen Scope.
-`seed`: Der Zufallssamen der Simulation. Muss eine positive Ganzzahl sein.
-`speedup`: Die Start-Beschleunigung.
+`seed`: Der Zufallsgenerator-Seed der Simulation. Muss eine positive ganze Zahl sein.
+`speedup`: Die anfängliche Beschleunigung.
 
-gibt die Zeit zurück, die für die Simulation benötigt wurde.
+Gibt die Zeit zurück, die benötigt wurde, um die Simulation auszuführen.
 
-benötigt `200` ticks zur Ausführung.
+Benötigt `200` Ticks zur Ausführung.
 
 Beispiel:
 `filename = "f1"
@@ -397,6 +397,115 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+Erzeugt eine neue Drohne an der gleichen Position wie die Drohne, die den Befehl `spawn_drone("filename")` ausgeführt hat. Die neue Drohne beginnt mit der Ausführung des Programms in der Datei namens `filename`.
+
+gibt die Drohnen-ID der neuen Drohne zurück.
+
+benötigt `200` Ticks zur Ausführung.
+
+Beispiel:
+In einer Datei namens `farming routine`:
+`if get_drone_id() == 0:
+    # Nur die erste Drohne wird dies ausführen
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+Sendet einen beliebigen `value` an die Drohne mit der Drohnen-ID, die gleich `receiver_id` ist.
+
+gibt `None` zurück
+
+benötigt Ticks in Höhe der Größe des gesendeten `value` zur Ausführung.
+
+Beispiel:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+Empfängt die erste noch nicht empfangene Nachricht, die von der Drohne mit `sender_id` an diese Drohne gesendet wurde. Ist `sender_id` `-1`, wird die erste noch nicht empfangene Nachricht von irgendeiner Drohne empfangen.
+
+gibt die gesendeten Daten zurück
+
+benötigt `1` Tick zur Ausführung.
+
+Beispiel:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+gibt die ID der Drohne zurück, die den Code ausführt.
+
+dauert `1` Tick zur Ausführung.
+
+Beispiel:
+In einer Datei namens `farming routine`:
+`if get_drone_id() == 0:
+    # Nur die erste Drohne wird dies ausführen
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+gibt die maximale Anzahl an Drohnen zurück, die du auf deinem Bauernhof haben kannst.
+
+benötigt `1` Tick zur Ausführung.
+
+Beispiel:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+gibt die Anzahl der derzeit auf dem Bauernhof befindlichen Drohnen zurück.
+
+benötigt `1` Tick zur Ausführung.
+
+Beispiel:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 Gibt einen Wert aus, genau wie `print(*args)`, aber es hält nicht an, um ihn in die Luft zu schreiben, daher kann er nur auf der Ausgabeseite gefunden werden.
 

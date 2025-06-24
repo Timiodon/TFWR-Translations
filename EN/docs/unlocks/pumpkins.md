@@ -9,8 +9,9 @@ A 1x1 pumpkin yields `1*1*1 = 1` pumpkins.
 A 2x2 pumpkin yields `2*2*2 = 8` pumpkins instead of `4`.
 A 3x3 pumpkin yields `3*3*3 = 27` pumpkins instead of `9`.
 A 4x4 pumpkin yields `4*4*4 = 64` pumpkins instead of `16`.
-A `n`x`n` pumpkin yields `n*n*5` pumpkins for `n >= 5`.
+A 5x5 pumpkin yields `5*5*5 = 125` pumpkins instead of `25`.
+A `n`x`n` pumpkin yields `n*n*6` pumpkins for `n >= 6`.
 
-It's a good idea to get at least 5x5 size pumpkins to get the full multiplier. 
+It's a good idea to get at least 6x6 size pumpkins to get the full multiplier. 
 
 This means that even if you plant a pumpkin on every tile in a square, one of the pumpkins may die and prevent the mega pumpkin from growing.

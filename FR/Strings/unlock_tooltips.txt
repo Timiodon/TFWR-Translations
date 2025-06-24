@@ -33,6 +33,7 @@
 @unlock_descr_simulation = Testez plus rapidement et dans des conditions reproductibles.
 @unlock_descr_timing = Il était temps !
 @unlock_descr_import = Importer des éléments depuis d'autres fichiers.
+@unlock_descr_megafarm = Ferme beaucoup plus grande avec de nombreux drones.
 @multi_unlock_descr_expand = Étend la ferme. Cela efface aussi la ferme.
 @multi_unlock_descr_carrots = Augmente le rendement et le coût des carottes.
 @multi_unlock_descr_trees = Augmente le rendement des buissons et des arbres.
@@ -44,3 +45,4 @@
 @multi_unlock_descr_polyculture = Augmente le multiplicateur de rendement de la polyculture.
 @multi_unlock_descr_watering = Recevoir plus d'eau.
 @multi_unlock_descr_fertilizer = Recevoir plus de fertilisant.
+@multi_unlock_descr_megafarm = Augmente la taille de la ferme et le nombre de drones encore plus.

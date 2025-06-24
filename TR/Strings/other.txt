@@ -3,4 +3,4 @@
 @run_cancelled = Çalıştırma Başarısız Oldu
 @average_text = {0} Tamamlandı ({2:F1}%)
 {1}
-@unlocked_in = Açıldı: [{0}]({1})
+@unlocked_in = Daha fazla bilgi için bkz: [{0}]({1})

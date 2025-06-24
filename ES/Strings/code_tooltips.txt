@@ -377,17 +377,17 @@ toma `200` ticks para ejecutarse.
 ejemplo:  
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Inicia una simulación para el leaderboard usando el `file_name` especificado como punto de partida.
+Inicia una simulación para el leaderboard usando el `filename` especificado como punto de partida.
 
-`sim_unlocks`: Una secuencia que contiene los desbloqueos de inicio.
-`sim_items`: Un dict que asigna items a cantidades. La simulación comienza con estos items.
+`sim_unlocks`: Una secuencia que contiene los desbloqueos iniciales.
+`sim_items`: Un dict que asigna objetos a cantidades. La simulación comienza con estos objetos.
 `sim_globals`: Un dict que asigna nombres de variables a valores. La simulación comienza con estas variables en el scope global.
-`seed`: La semilla aleatoria de la simulación. Debe ser un número entero positivo.
+`seed`: La semilla aleatoria de la simulación. Debe ser un entero positivo.
 `speedup`: La aceleración inicial.
 
 devuelve el tiempo que tomó ejecutar la simulación.
 
-toma `200` ticks para ejecutarse.
+toma `200` ticks en ejecutarse.
 
 ejemplo:
 `filename = "f1"
@@ -398,6 +398,115 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+Genera un nuevo drone en la misma posición que el drone que ejecutó el comando `spawn_drone("filename")`. El nuevo drone comenzará a ejecutar el programa en el archivo llamado `filename`.
+
+devuelve el ID del nuevo drone.
+
+toma `200` ticks para ejecutarse.
+
+ejemplo:
+En un archivo llamado `farming routine`:
+`if get_drone_id() == 0:
+    # Solo el primer drone ejecutará esto
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+Envía cualquier tipo de `value` al dron con la ID de dron que es igual a `receiver_id`.
+
+devuelve `None`
+
+toma ticks iguales al tamaño del `value` enviado para ejecutarse.
+
+ejemplo:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+Recibe el primer mensaje no recibido que fue enviado a este dron por el dron con el `sender_id`. Si `sender_id` es `-1`, recibe el primer mensaje no recibido enviado a este dron por cualquier dron.
+
+devuelve los datos enviados
+
+toma `1` tick para ejecutarse.
+
+ejemplo:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+devuelve el ID del drone que está ejecutando el código.
+
+toma `1` tick para ejecutarse.
+
+ejemplo:
+En un archivo llamado `farming routine`:
+`if get_drone_id() == 0:
+    # Solo el primer drone ejecutará esto
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+devuelve el número máximo de drones que puedes tener en la granja.
+
+toma `1` tick para ejecutarse.
+
+ejemplo:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+devuelve el número de drones que hay actualmente en la granja.
+
+toma `1` tick para ejecutarse.
+
+ejemplo:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 Imprime un valor igual que `print(*args)` pero no se detiene a escribirlo en el aire, por lo que solo se puede encontrar en la página de salida.
 

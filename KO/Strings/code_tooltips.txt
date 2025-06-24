@@ -377,17 +377,17 @@ use_item(Items.Weird_Substance, n_substance)`
 예시:
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-지정된 `file_name`을(를) 시작점으로 하여 리더보드를 위한 시뮬레이션을 시작합니다.
+지정된 `filename`을(를) 시작점으로 하여 리더보드를 위한 시뮬레이션을 시작합니다.
 
-`sim_unlocks`: 시작 할 때 해제된 아이템들의 목록입니다.
-`sim_items`: 아이템을 수량으로 매핑하는 dictionary입니다. 시뮬레이션은 이 아이템들로 시작합니다.
-`sim_globals`: 변수 이름을 값으로 매핑하는 dictionary입니다. 시뮬레이션은 전역 scope에서 이 변수들로 시작합니다.
-`seed`: 시뮬레이션의 랜덤 시드입니다. 양의 정수여야 합니다.
-`speedup`: 초기 속도 향상입니다.
+`sim_unlocks`: 시작 잠금 해제들을 포함하는 시퀀스.
+`sim_items`: 아이템을 수량과 매핑한 dict. 이 아이템들로 시뮬레이션이 시작됩니다.
+`sim_globals`: 변수 이름을 값과 매핑한 dict. 이 변수들은 전역 스코프에 있는 상태로 시뮬레이션이 시작됩니다.
+`seed`: 시뮬레이션의 랜덤 시드. 양의 정수여야 합니다.
+`speedup`: 초기 속도 향상.
 
-시뮬레이션을 실행하는데 걸리는 시간을 반환합니다.
+시뮬레이션 실행에 걸린 시간을 반환합니다.
 
-실행하는데 `200` ticks가 소요됩니다.
+`200` ticks를 실행하는 데 소요됩니다.
 
 예시:
 `filename = "f1"
@@ -398,6 +398,116 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(filename)`
+`spawn_drone("filename")` 명령을 실행한 드론과 같은 위치에 새로운 드론을 소환합니다. 새로운 드론은 `filename` 이름의 파일에 있는 프로그램을 실행하기 시작합니다.
+
+새로운 드론의 ID를 반환합니다.
+
+`200` ticks가 소요됩니다.
+
+예시:
+`farming routine`이라는 이름의 파일에서:
+`if get_drone_id() == 0:
+    # 첫 번째 드론만 이 코드를 실행함
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)`
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_send = `send(value, receiver_id)`
+
+모든 종류의 `value`를 `receiver_id`와 동일한 드론 ID를 가진 드론에게 보냅니다.
+
+`None`을 반환합니다.
+
+보낸 `value`의 크기와 동일한 tick 만큼 시간이 소요됩니다.
+
+예시:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_receive = `receive(sender_id = -1)`
+
+이 드론에게 `sender_id`를 가진 드론이 보낸 첫 번째 수신되지 않은 메시지를 받습니다.
+`sender_id`가 `-1`이라면, 어떤 드론이든 이 드론에게 보낸 첫 번째 수신되지 않은 메시지를 받습니다.
+
+보낸 데이터를 반환합니다
+
+수행하는 데 `1` tick이 소요됩니다.
+
+예시:
+`words_to_print = ["These", "are", "some", "words."]
+
+if get_drone_id() == 0:
+    for word in words_to_print[:-1]:
+        receiver_id = spawn_drone("example")
+        send(word, receiver_id)
+        for _ in range(4):
+            move(East)
+
+    print(words_to_print[-1])
+else:
+	while True:
+		word = receive(0)
+		if word != None:
+			break
+	    
+print(word)`
+@code_tooltip_get_drone_id = `get_drone_id()`
+
+코드를 실행 중인 드론의 ID를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`farming routine`이라는 파일에서:
+`if get_drone_id() == 0:
+    # 첫 번째 드론만 이 코드를 실행합니다.
+    while num_drones() < max_drones():
+        spawn_drone("farming routine")
+        move(East)
+
+while True:
+    if can_harvest():
+        harvest()
+    move(North)`
+@code_tooltip_max_drones = `max_drones()`
+
+농장에서 가질 수 있는 드론의 최대 수를 반환합니다.
+
+실행하는 데 `1` tick이 걸립니다.
+
+예시:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
+@code_tooltip_num_drones = `num_drones()`
+
+현재 농장에 있는 드론의 수를 반환합니다.
+
+실행에 `1` tick이 소요됩니다.
+
+예제:
+`while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 값을 출력합니다. `print(*args)`와 비슷하지만, 값을 공중에 쓰지 않아서 출력 페이지에서만 찾을 수 있습니다.
 
