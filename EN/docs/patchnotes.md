@@ -7,6 +7,9 @@ Gameplay:
 -Pumpkins now scale up to 6x6 instead of 5x5.
 -The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
 
+Visuals:
+-Cacti are now brown when they aren't sorted to make it more visible.
+
 UI:
 -Double clicking identifiers with underscores in them now selects the whole identifier.
 

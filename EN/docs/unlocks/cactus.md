@@ -10,6 +10,8 @@ A cactus is considered to be in sorted order if all neighboring cacti to the `No
 The harvest will only spread if all adjacent cacti are fully grown and in sorted order.
 This means that if a square of grown cacti is sorted by size and you harvest one cactus, it will harvest the entire square.
 
+A fully grown cactus will appear brown if it is not sorted. Once sorted, it will turn green again.
+
 You will receive cactus equal to the number of harvested cacti squared. So if you harvest `n` cacti simultaneously you will receive `n**2` `Items.Cactus`.
 
 The size of a cactus can be measured with `measure()`.
