@@ -654,6 +654,24 @@ def do_a_flip() -> None:
 
 
 # -------------------------------------------------------------------------------
+def pet_the_piggy() -> None:
+    """
+    Pets the piggy! This action is not affected by speed upgrades.
+
+    returns `None`
+
+    takes 1s to execute.
+
+    example usage:
+    ```
+    while True:
+        pet_the_piggy()
+    ```
+    """
+    ...
+
+
+# -------------------------------------------------------------------------------
 def print(*something: Any) -> None:
     """
     Prints `something` into the air above the drone using smoke. This action is not affected by speed upgrades.
