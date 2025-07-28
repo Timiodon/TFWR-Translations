@@ -1,14 +1,14 @@
-# Tuplas
-As tuplas são uma ótima maneira de combinar vários valores em um único valor.
-Para criar uma tupla, basta separar os valores com vírgulas:
+# Tuples
+Os tuples são uma ótima maneira de combinar múltiplos valores num único valor.
+Para criar um tuple, basta separar os valores com vírgulas:
 
 `tuple = 1, 2`
 
-Você também pode desempacotá-las em várias variáveis novamente. No código abaixo, a tupla `(1,2)` é desempacotada em duas variáveis `a` e `b`.
+Podes também desempacotá-los novamente em várias variáveis. No código abaixo, o tuple `(1,2)` é desempacotado em duas variáveis `a` e `b`.
 
 `a, b = 1, 2`
 
-As tuplas podem ser indexadas como listas, mas são imutáveis e não podem ser alteradas após a criação.
+Os tuples podem ser indexados como listas, mas são imutáveis e não podem ser alterados após a criação.
 
 `tuple = 1, 2`
 
@@ -18,14 +18,14 @@ imprime `2`
 `tuple[0] = 3`
 lança um erro
 <unlock=dicts>
-Ao contrário das listas, as tuplas podem ser usadas como chaves em dicionários.
+Ao contrário das listas, os tuples podem ser usados como chaves em dictionaries.
 
 `d = {(1,2):(4,5)}
 
 print(d[(1,2)])`
 `imprime` (4,5)</unlock>
 
-Elas também podem ser úteis para retornar vários valores em uma função.
+Também podem ser úteis para retornar múltiplos valores numa função.
 
 `def f():
     return 1, 2

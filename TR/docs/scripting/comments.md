@@ -1,12 +1,12 @@
 # Yorumlar
-Yorumlar, çalıştırma sırasında göz ardı edilen kod parçalarıdır.
-Yorumlar `#` kullanılarak eklenebilir. `#` işaretinden sonra aynı satırda yer alan her şey bir yorumdur ve göz ardı edilir.
+Yorumlar, yürütme sırasında göz ardı edilen kod bölümleridir.
+Yorumlar `#` kullanılarak eklenebilir. `#`'dan sonra aynı satırdaki her şey bir yorumdur ve göz ardı edilecektir.
 
-`#this is a comment`
+`#bu bir yorumdur`
 
-Bu, koda notlar eklemek ve kodun bazı kısımlarını silmeden geçici olarak devre dışı bırakmak için yararlı olabilir.
+Bu, koda notlar eklemek ve ayrıca kodun bölümlerini silmeden geçici olarak devre dışı bırakmak için yararlı olabilir.
 
-Bir fonksiyon tanımından önceki satırda yer alan herhangi bir yorum, fare ile fonksiyon isminin üzerine gelindiğinde görünen açılır bilginin bir parçası olacaktır.
-`#This function does nothing.
+Bir fonksiyon tanımından önceki satırdaki herhangi bir yorum, fareyi fonksiyon adının üzerine getirdiğinde görünen açılır pencere bilgisinin bir parçası olacaktır.
+`#Bu fonksiyon hiçbir şey yapmaz.
 def f():
     pass`

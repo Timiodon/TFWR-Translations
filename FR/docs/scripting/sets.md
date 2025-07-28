@@ -1,20 +1,20 @@
-# Sets
-Les sets sont comme les [dictionaries](docs/scripting/dicts.md), mais sans valeurs. Ce sont simplement un ensemble non ordonné de clés.
+# Ensembles (Sets)
+Les ensembles (sets) sont comme des [dictionnaires](docs/scripting/dicts.md), mais sans valeurs. Ce sont juste un ensemble de clés non ordonné.
 
-Ils sont créés comme des dictionaries, mais sans valeurs.
+Ils sont créés comme des dictionnaires, mais sans valeurs.
 `set = {North, East, West}`
 
-Utilisez `set()` pour créer un set vide. Notez que `{}` crée un dictionary vide.
+Utilisez `set()` pour créer un ensemble vide. Notez que `{}` crée un dictionnaire vide.
 
-Utilisez `set.add(elem)` pour ajouter un nouvel élément au set.
+Utilisez `set.add(elem)` pour ajouter un nouvel élément à l'ensemble.
 
-Utilisez `set.remove(elem)` pour supprimer un élément d'un set.
+Utilisez `set.remove(elem)` pour supprimer un élément d'un ensemble.
 
-Utilisez `if elem in set:` pour vérifier si un élément est dans le set.
+Utilisez `if elem in set:` pour vérifier si l'ensemble contient un élément.
 
-Utilisez `for elem in set:` pour itérer tous les éléments du set.
-Pour les sets plus grands, l'opérateur `in` est beaucoup plus rapide que sur une liste.
+Utilisez `for elem in set:` pour itérer tous les éléments de l'ensemble.
+Pour les ensembles plus grands, l'opérateur `in` est beaucoup plus rapide que sur une liste.
 
-Tout comme les dictionaries, les sets sont non ordonnés, donc l'ordre dans lequel les éléments sont itérés n'est pas garanti.
+Tout comme les dictionnaires, les ensembles ne sont pas ordonnés, il n'y a donc aucune garantie sur l'ordre dans lequel les éléments sont itérés.
 
-De plus, les éléments dans un set sont uniques, donc ajouter un élément qui est déjà dans le set ne le changera pas.
+De plus, les éléments dans les ensembles sont uniques, donc ajouter un élément qui est déjà dans l'ensemble ne changera pas l'ensemble.

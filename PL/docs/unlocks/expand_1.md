@@ -1,12 +1,12 @@
-# Expand 1
-<unlock=for>Also see [Expand_2](docs/unlocks/expand_2.md)
+# Rozszerzenie 1
+<unlock=for>Zobacz także [Rozszerzenie_2](docs/unlocks/expand_2.md)
 
-</unlock>Twoja farma się powiększyła! To miejsce nie jest zbyt użyteczne, jeśli nie możesz poruszać drona, więc jest nowa funkcja `move()`, która rusza dronem. `move()` wymaga, abyś określił kierunek, w którym chcesz przesunąć drona. Są cztery nowe stałe do tego: `North, East, South, West`.
+</unlock>Twoja farma urosła! Ta przestrzeń jest mało użyteczna, jeśli nie możesz poruszać dronem, więc jest nowa funkcja `move()`, która porusza dronem. `move()` wymaga, abyś określił kierunek, w którym chcesz poruszyć drona. Są do tego cztery nowe stałe: `North, East, South, West`
 
-Na przykład, `move(North)` przesunie drona o jedną kratkę na północ.
+Na przykład, `move(North)` przesunie drona o jedno pole na północ.
 
-Jeśli przejdziesz poza krawędź farmy, dron zostanie przeniesiony na drugą stronę farmy.
-Poniższy przykład kodu będzie przesuwał drona na północ i zacznie od nowa, gdy dotrze do krawędzi farmy:
+Jeśli wyjdziesz poza krawędź farmy, dron zostanie przeniesiony na drugą stronę farmy.
+Poniższy przykładowy kod będzie kontynuował poruszanie drona na północ i zawijał go z powrotem na początek, gdy dotrze do krawędzi farmy:
 
 `while True:
 	move(North)`

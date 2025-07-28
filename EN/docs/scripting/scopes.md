@@ -28,7 +28,7 @@ It only existed in the local scope of `f`.
 ## The global keyword
 By default all variables in functions bind to the local scope, even if a variable of the same name exists in the global scope.
 
-`x == 0
+`x = 0
 
 def f():
     x = 1
@@ -39,7 +39,7 @@ This code prints `0` because the local `x` inside `f` is not the same variable a
 
 If you want to write to a global variable you, you must do so explicitly using the `global` keyword.
 
-`x == 0
+`x = 0
 
 def f():
     global x

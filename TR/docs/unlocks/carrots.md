@@ -1,6 +1,6 @@
 # Havuçlar
-`plant(Entities.Carrot)` ile havuç ekmeden önce, toprağı sürmeniz gerekir. Bu, zemini `Grounds.Soil` olarak değiştirir. Toprağı sürmek için sadece `till()` fonksiyonunu çağırın. Tekrar `till()` çağırmak, zemini tekrar `Grounds.Grassland` olarak değiştirir.
+`plant(Entities.Carrot)` ile havuç ekmeden önce, toprağı sürmelisin. Bu, zemini `Grounds.Soil`'e dönüştürür. Toprağı sürmek için, sadece `till()` çağır. Tekrar `till()` çağırmak onu tekrar `Grounds.Grassland`'e dönüştürür.
 
-Havuç ekmek odun ve saman gerektirir. Bu eşyalar `plant(Entities.Carrot)` çağrıldığında otomatik olarak kaldırılır.
+Havuç ekmek odun ve saman maliyetine sahiptir. Bu eşyalar, `plant(Entities.Carrot)` çağrıldığında otomatik olarak kaldırılacaktır.
 
-Herhangi bir bitkinin maliyetini, [kendi sayfasında](objects/carrot) görebilirsiniz.
+Herhangi bir bitkinin maliyetini [kendi sayfasında](objects/carrot) görebilirsin.

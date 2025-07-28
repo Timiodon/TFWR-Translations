@@ -1,11 +1,12 @@
 # Expandir 1
-<unlock=for>Veja também [Expand_2](docs/unlocks/expand_2.md)
+<unlock=for>Vê também [Expandir_2](docs/unlocks/expand_2.md)
 
-</unlock>Sua fazenda cresceu! Este espaço não serve para muito se você não puder mover o drone, então há uma nova função `move()` que move o drone. `move()` requer que você especifique a direção para a qual deseja mover o drone. Existem quatro novas constantes para isso: `North, East, South, West`
+</unlock>A tua quinta cresceu! Este espaço não tem muita utilidade se não conseguires mover o drone, por isso há uma nova função `move()` que move o drone. `move()` requer que especifiques a direção na qual queres que o drone se mova. Existem quatro novas constantes para isto: `North, East, South, West`
 
 Por exemplo, `move(North)` moverá o drone um quadrado para o norte.
 
-Se você se mover além da borda da fazenda, o drone será movido para o outro lado da fazenda. O seguinte exemplo de código manterá o drone se movendo para o norte e voltará para o começo quando atingir a borda da fazenda:
+Se te moveres para além da borda da quinta, o drone será movido para o outro lado da quinta.
+O exemplo de código seguinte continuará a mover o drone para norte e dará a volta para o início quando atingir a borda da quinta:
 
 `while True:
 	move(North)`

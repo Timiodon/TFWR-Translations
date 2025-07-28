@@ -1,39 +1,41 @@
-# Cactus
-Jak inne rośliny, [kaktusy](objects/cactus) mogą być uprawiane na glebie i zbierane jak zwykle.
+# Kaktus
+Podobnie jak inne rośliny, [kaktusy](objects/cactus) można uprawiać na glebie i zbierać jak zwykle.
 
-Jednakże, występują w różnych rozmiarach i mają dziwne poczucie porządku.
+Jednak występują w różnych rozmiarach i mają dziwne poczucie porządku.
 
-Jeśli zbierzesz całkowicie wyrośnięty kaktus i wszystkie sąsiednie kaktusy są w posortowanym porządku, zostaną zebrane również wszystkie sąsiednie kaktusy, rekurencyjnie.
+Jeśli zbierzesz w pełni wyrośniętego kaktusa, a wszystkie sąsiednie kaktusy są posortowane, zostaną one również zebrane rekurencyjnie.
 
-Kaktus jest uważany za posortowany, jeśli wszystkie sąsiednie kaktusy na `North` i `East` są całkowicie wyrośnięte i większe lub równe, a wszystkie sąsiednie kaktusy na `South` i `West` są całkowicie wyrośnięte i mniejsze lub równe.
+Kaktus jest uważany za posortowany, jeśli wszystkie sąsiednie kaktusy na `North` i `East` są w pełni wyrośnięte i mają większy lub równy rozmiar, a wszystkie sąsiednie kaktusy na `South` i `West` są w pełni wyrośnięte i mają mniejszy lub równy rozmiar.
 
-Zbiory będą się rozprzestrzeniać tylko wtedy, gdy wszystkie sąsiednie kaktusy są całkowicie wyrośnięte i w posortowanym porządku.
-Oznacza to, że jeśli kwadrat wyrośniętych kaktusów jest posortowany wg rozmiaru i zbierzesz jeden kaktus, zostanie zebrany cały kwadrat.
+Zbiór rozprzestrzeni się tylko wtedy, gdy wszystkie sąsiednie kaktusy będą w pełni wyrośnięte i posortowane.
+Oznacza to, że jeśli kwadrat wyrośniętych kaktusów jest posortowany według rozmiaru i zbierzesz jednego kaktusa, zbierze on cały kwadrat.
 
-Otrzymasz ich liczbę równą liczbie zebranych kaktusów podniesioną do kwadratu. Więc jeśli zbierzesz jednocześnie `n` kaktusów, otrzymasz `n**2` `Items.Cactus`.
+W pełni wyrośnięty kaktus będzie brązowy, jeśli nie jest posortowany. Po posortowaniu ponownie stanie się zielony.
+
+Otrzymasz kaktusy w liczbie równej kwadratowi liczby zebranych kaktusów. Więc jeśli zbierzesz `n` kaktusów jednocześnie, otrzymasz `n**2` `Items.Cactus`.
 
 Rozmiar kaktusa można zmierzyć za pomocą `measure()`.
-Zawsze jest to jedna z tych liczb: `0,1,2,3,4,5,6,7,8,9`.
+Jest to zawsze jedna z tych liczb: `0,1,2,3,4,5,6,7,8,9`.
 
-Możesz też podać kierunek w `measure(direction)`, aby zmierzyć sąsiednie pole w tym kierunku drona.
+Możesz również przekazać kierunek do `measure(direction)`, aby zmierzyć sąsiednie pole w tym kierunku od drona.
 
-Możesz zamienić kaktusa z sąsiadem w dowolnym kierunku, używając komendy `swap()`.
-`swap(direction)` zamienia obiekt pod dronem z obiektem na jednym polu w kierunku `direction` drona.
+Możesz zamienić kaktusa z jego sąsiadem w dowolnym kierunku za pomocą polecenia `swap()`.
+`swap(direction)` zamienia obiekt pod dronem z obiektem o jedno pole w `direction` od drona.
 
 ## Przykłady
-W każdej z tych siatek wszystkie kaktusy są w posortowanym porządku, a zbiory obejmą całe pole:
+W każdej z tych siatek wszystkie kaktusy są posortowane, a zbiór rozprzestrzeni się na całe pole:
 `3 4 5    3 3 3    1 2 3    1 5 9
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-W tej siatce tylko dolny lewy kaktus jest w posortowanym porządku, co nie wystarcza, aby się rozprzestrzenił:
+W tej siatce tylko lewy dolny kaktus jest posortowany, co nie wystarcza do rozprzestrzenienia się:
 `1 5 3
 4 9 7
 3 3 2`
 
 <spoiler=pokaż wskazówkę 1>
-Jeśli każda kolumna i każdy wiersz pola są posortowane, cały obszar jest posortowany.
+Jeśli wiersze są już posortowane, sortowanie kolumn nie zepsuje porządku w wierszach.
 </spoiler>
 <spoiler=pokaż wskazówkę 2>
-Jeśli nie jesteś zaznajomiony z algorytmami sortowania, warto poszukać ich w internecie i zastanowić się, które można dostosować do tego problemu.
+Jeśli nie znasz algorytmów sortowania, możesz poszukać ich w Internecie i zastanowić się, które można by zaadaptować do tego problemu. Pamiętaj, że nie wszystkie działają, ponieważ możesz zamieniać tylko sąsiednie kaktusy.
 </spoiler>

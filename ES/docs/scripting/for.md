@@ -1,18 +1,18 @@
 # Bucle For
-El bucle `for` funciona igual que en Python. (En algunos lenguajes se llama bucle foreach, no debe confundirse con el bucle estilo C, que es algo diferente).
+El bucle `for` funciona como en Python. (Llamado bucle foreach en algunos lenguajes, no confundir con el bucle for de estilo C, que es algo diferente).
 
 `for i in sequence:
-	#do something with i`
+	#hacer algo con i`
 
-Similar al bucle `while`, el bucle `for` también llama repetidamente a un bloque de código. En lugar de basarse en una condición, ejecuta el cuerpo del bucle una vez para cada elemento en una secuencia.
+Similar al bucle `while`, el bucle `for` también llama repetidamente a un bloque de código. En lugar de iterar basándose en una condición, ejecuta el cuerpo del bucle una vez por cada elemento en una secuencia.
 
 ## Sintaxis
 Un bucle for se ve así:
 
-`for variable_name in sequence:
-	#code block`
+`for nombre_variable in secuencia:
+	#bloque de código`
 
-`variable_name` puede ser cualquier nombre que elijas. Es una variable que almacena el elemento actual de la secuencia. `sequence` necesita ser un valor que se pueda iterar como un rango o números. El bloque de código se ejecuta para cada elemento con la variable del bucle asignada a ese elemento.
+`nombre_variable` puede ser cualquier nombre que elijas. Es una variable que almacena el elemento actual en la secuencia. `secuencia` debe ser algún valor que se pueda iterar, como un rango de números. El bloque de código se ejecuta para cada elemento con la variable del bucle asignada a ese elemento.
 
 ## Secuencias
 [Rangos](functions/range)      <unlock=lists>[Listas](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuplas](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>

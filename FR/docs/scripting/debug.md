@@ -1,33 +1,33 @@
 # Débogage
-Parfois, ton code ne fonctionne tout simplement pas et tu dois comprendre pourquoi. Il y a quelques outils pour t'aider à faire ça.
+Parfois, votre code ne fonctionne tout simplement pas et vous devez découvrir pourquoi. Il existe quelques outils pour vous aider à le faire.
 
-Le premier est d'exécuter le programme étape par étape.
-Tu peux entrer en mode pas-à-pas avec le bouton à côté du bouton Exécuter ou en plaçant un breakpoint.
+Le premier est d'exécuter le programme pas à pas.
+Vous pouvez passer en mode pas à pas avec le bouton à côté du bouton Exécuter ou en définissant un breakpoint.
 
-Les breakpoints peuvent être ajoutés en cliquant sur le panneau de breakpoint à gauche du code.
+Les breakpoints peuvent être ajoutés en cliquant sur le panneau des breakpoints à gauche du code.
 ![](Breakpoints227)
-Quand l'exécution atteint la ligne où se trouve le breakpoint, elle basculera automatiquement en mode pas-à-pas.
+Lorsque l'exécution atteint la ligne où se trouve le breakpoint, elle passera automatiquement en mode pas à pas.
 
-Lorsque tu passes ta souris sur une variable, sa valeur actuelle s'affiche.
+Lorsque vous déplacez votre souris sur une variable, sa valeur actuelle est affichée.
 
-La fonction `print()` peut aussi être très utile. Elle écrira toute valeur qui lui est passée directement dans l'air.
+La fonction `print()` peut également être très utile. Elle écrira toute valeur qui lui est passée directement dans les airs.
 
 Exemples :
 
-Imprime "0.24".
+Afficher "0.24".
 `print(0.24)`
 
-Imprime "True" ou "False".
+Afficher "True" ou "False".
 `print(can_harvest())`
 
-Imprime la position actuelle.
+Afficher la position actuelle.
 `print(get_pos_x(), get_pos_y())`
 
-La fonction print affiche la valeur directement dans l'air et sur la page [Output](docs/output.md).
+La fonction print affiche la valeur directement dans les airs et sur la page [Sortie](docs/output.md).
 
-Écrire dans l'air peut parfois être un peu lent si tu veux imprimer beaucoup de valeurs.
-Dans ce cas, tu peux utiliser la fonction `quick_print()` qui affiche uniquement dans la fenêtre de sortie.
+Écrire dans les airs peut parfois être un peu lent si vous voulez afficher beaucoup de valeurs.
+Dans ce cas, vous pouvez utiliser la fonction `quick_print()` qui n'affiche que dans la fenêtre de sortie.
 
-La fenêtre de sortie enregistre également les avertissements et erreurs, donc si quelque chose ne fonctionne pas comme prévu, ça peut être utile de vérifier ça.
+La fenêtre de sortie enregistre également les avertissements et les erreurs, donc si quelque chose ne fonctionne pas comme prévu, il peut être utile de la vérifier.
 
-Quand l'exécution s'arrête, la sortie est également écrite dans le fichier output.txt dans le dossier du jeu. [output.txt](persistent_data_path/output.txt).
+Lorsque l'exécution s'arrête, la sortie est également écrite dans le fichier output.txt dans le dossier du jeu. [output.txt](persistent_data_path/output.txt).

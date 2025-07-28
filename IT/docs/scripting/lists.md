@@ -9,7 +9,7 @@ Una lista può anche essere vuota:
 
 `empty_list = []`
 
-Puoi accedere a un elemento di una lista tramite il suo indice. L'indice è `0` per il primo elemento, `1` per il secondo elemento, `2` per il terzo...
+Puoi accedere a un elemento di una lista tramite il suo indice. L'indice è `0` per il primo elemento, `1` per il secondo, `2` per il terzo...
 
 pianta carote
 `list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
@@ -23,7 +23,7 @@ for number in list:
 	sum += number`
 `sum` è ora `18`
 
-I seguenti metodi per le liste ti permettono di aggiungere o rimuovere elementi:
+I seguenti metodi di lista ti permettono di aggiungere e rimuovere elementi:
 
 `list.append(elem)` aggiunge un elemento alla fine della lista:
 
@@ -31,20 +31,20 @@ I seguenti metodi per le liste ti permettono di aggiungere o rimuovere elementi:
 list.append(7)`
 `list` è ora `[2, 6, 12, 7]`
 
-`list.remove(elem)` rimuove la prima occorrenza di un elemento dalla lista:
+`list.remove(elem)` rimuove la prima occorrenza di un elemento da una lista:
 
 `list = [1, 2, 4, 2]
 list.remove(2)`
 `list` è ora `[1, 4, 2]`
 
-`list.insert(index, elem)` inserisce un elemento all'indice specificato:
+`list.insert(index, elem)` inserisce un elemento all'indice dato:
 
 `list = [Entities.Tree, Items.Hay]
 list.insert(1, Items.Wood)`
 `list` è ora `[Entities.Tree, Items.Wood, Items.Hay]`
 
 `list.pop(index)` rimuove l'elemento all'indice specificato.
-Se non si specifica l'indice, viene rimosso l'ultimo elemento.
+Se non viene specificato alcun indice, viene rimosso l'ultimo elemento.
 
 `list = [3, 5, 8, 25]
 list.pop()`
@@ -57,8 +57,8 @@ La funzione `len()` restituisce la lunghezza della lista.
 x = len(list)`
 `x` è ora `3`
 
-Le liste hanno una semantica di riferimento. Questo significa che assegnare una lista a una variabile assegna lo stesso oggetto lista a quella variabile, invece di creare una copia della lista.
-Se due variabili fanno riferimento alla stessa lista, le modifiche alla lista saranno visibili ad entrambe.
+Le liste hanno semantica per riferimento. Ciò significa che assegnare una lista a una variabile assegna lo stesso oggetto lista a quella variabile, invece di fare una copia della lista.
+Se due variabili fanno riferimento alla stessa lista, le modifiche alla lista saranno viste da entrambe.
 
 `a = [1,2]
 b = a

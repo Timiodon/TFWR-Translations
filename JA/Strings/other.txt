@@ -1,6 +1,6 @@
-@word_number = 数
+@word_number = 数値
 @word_direction = 方向
-@run_cancelled = Run Failed
+@run_cancelled = 実行失敗
 @average_text = {0} 完了 ({2:F1}%)
 {1}
-@unlocked_in = 詳しくは、[{0}]({1})をご覧ください。
+@unlocked_in = 関連情報については、こちらを参照してください： [{0}]({1})

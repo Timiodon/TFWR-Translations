@@ -1,37 +1,41 @@
 # Dictionaries
-Dictionaries sind eine Datenstruktur, mit der du Schlüssel auf Werte abbilden kannst, ähnlich wie ein echtes Wörterbuch Wörter auf ihre Definitionen abbildet. Du kannst sie sehr schnell nachschlagen.
+Dictionaries sind eine Datenstruktur, die es dir ermöglicht, Keys auf Values abzubilden, so wie ein echtes Wörterbuch Wörter auf ihre Definitionen abbildet, und du kannst sie sehr schnell nachschlagen.
 
 Ein Dictionary kann so erstellt werden:
-`rotation = {North:East, East:South, South:West, West:North}`
+`right_of = {North:East, East:South, South:West, West:North}`
 
-Der Ausdruck vor dem Doppelpunkt ist der Schlüssel und der Ausdruck nach dem Doppelpunkt ist der Wert, auf den der Schlüssel abgebildet wird. Obiges Dictionary bildet jede Richtung auf die Richtung zu ihrer rechten Seite ab.
+Der Ausdruck vor dem Doppelpunkt ist der Key und der Ausdruck nach dem Doppelpunkt ist der Value, auf den der Key abbildet.
+Das obige Dictionary bildet jede Richtung auf die Richtung rechts davon ab.
 
-Hier ist noch eins, das die Position der Drone auf die Entity abbildet, die sie überfliegt.
-`x, y = get_pos_x(), get_pos_y() entity_dict = {(x,y):get_entity_type()}`
+Hier ist ein weiteres, das die Position der Drohne auf die darüber befindliche Entity abbildet.
+`x, y = get_pos_x(), get_pos_y()
+entity_dict = {(x,y):get_entity_type()}`
 
-Der Zugriff auf den Wert, der einem Schlüssel zugeordnet ist, ähnelt dem Zugriff auf ein Element in einer Liste:
+Der Zugriff auf den einem Key zugeordneten Value ist ähnlich wie der Zugriff auf ein Element in einer Liste:
 `value = dict[key]`
 
 Beispiel:
-`orientation = rotation[South]`
+`orientation = right_of[South]`
 Dies setzt `orientation` auf `West`.
 
-Du kannst ein neues Schlüssel-Wert-Paar zu einem Dictionary hinzufügen, so:
+Du kannst ein neues Key-Value-Paar zu einem Dictionary so hinzufügen:
 `dict[key] = value`
 
 Beispiel:
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
-Dies aktualisiert die gespeicherte Entity für die aktuelle Position.
+Dies aktualisiert die für die aktuelle Position gespeicherte Entity.
 
-Schlüssel sind eindeutig, das Hinzufügen eines Schlüssels, der bereits im Dictionary existiert, wird den vorherigen Wert überschreiben.
+Keys sind einzigartig, daher überschreibt das Hinzufügen eines bereits im Dictionary vorhandenen Keys den vorherigen Wert.
 
-Verwende `dict.pop(key)`, um ein Schlüssel-Wert-Paar aus `dict` zu entfernen.
+Verwende `dict.pop(key)`, um ein Key-Value-Paar aus `dict` zu entfernen.
 
-`key in dict` ergibt `True`, wenn `key` ein Schlüssel im `dict` ist, und `False` andernfalls. Du kannst also `if key in dict:` verwenden, um zu überprüfen, ob `dict` den Schlüssel enthält.
+`key in dict` wird zu `True` ausgewertet, wenn `key` ein Key in `dict` ist, und andernfalls `False`.
+Du kannst also `if key in dict:` verwenden, um zu prüfen, ob `dict` den Key enthält.
 
-Ein Dictionary in eine for-Schleife zu setzen, erlaubt es dir, durch alle Schlüssel zu iterieren:
-`for key in dict: value = dict[key]`
+Wenn du ein Dictionary in eine for-Schleife einfügst, kannst du durch alle Keys iterieren:
+`for key in dict:
+	value = dict[key]`
 
-Es gibt keine Garantien über die Ordnung, in der die Schlüssel iteriert werden.
+Es gibt keine Garantien bezüglich der Reihenfolge, in der die Keys durchlaufen werden.
 
 Siehe auch [Sets](docs/scripting/sets.md)

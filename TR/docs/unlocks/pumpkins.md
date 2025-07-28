@@ -1,17 +1,19 @@
 # Balkabakları
-[Balkabakları](objects/pumpkin) işlenmiş toprakta havuç gibi büyür. Onları ekmek havuç maliyetine bağlıdır.
+[Balkabakları](objects/pumpkin) sürülmüş toprakta havuç gibi büyür. Onları ekmek havuç maliyetine sahiptir.
 
-Bir karedeki tüm kabaklar tamamen büyüdüğünde, birleşerek devasa bir balkabağı oluştururlar. Maalesef, tamamen büyüdüklerinde balkabaklarının %20 ölüm riski vardır, bu yüzden birleşmelerini istiyorsanız ölü olanları yeniden ekmeniz gerekecek.
+Bir karedeki tüm balkabakları tamamen büyüdüğünde, dev bir balkabağı oluşturmak için birleşirler. Maalesef, balkabaklarının tamamen büyüdükten sonra %20 ölme şansı vardır, bu yüzden birleşmelerini istiyorsan ölenleri yeniden ekmen gerekir. 
 
-Bir devasa balkabağının verimi, kabakların boyutuna bağlıdır.
+Bir balkabağı öldüğünde, arkasında hasat edildiğinde hiçbir şey düşürmeyecek ölü bir balkabağı bırakır. Yerine yeni bir bitki ekmek, ölü balkabağını otomatik olarak kaldırır, bu yüzden onu hasat etmeye gerek yoktur. `can_harvest()` ölü balkabaklarında her zaman `False` döndürür.
 
-Bir 1x1 kabak `1*1*1 = 1` kabak verir.
-Bir 2x2 kabak `4` yerine `2*2*2 = 8` kabak verir.
-Bir 3x3 kabak `9` yerine `3*3*3 = 27` kabak verir.
-Bir 4x4 kabak `16` yerine `4*4*4 = 64` kabak verir.
-Bir 5x5 kabak `25` yerine `5*5*5 = 125` kabak verir.
-Bir `n`x`n` kabak, `n >= 6` için `n*n*6` kabak verir.
+Dev bir balkabağının verimi, balkabağının boyutuna bağlıdır.
 
-Tam çarpanı elde etmek için en az 6x6 büyüklüğünde kabak yapmak iyi bir fikirdir.
+1x1 bir balkabağı `1*1*1 = 1` balkabağı verir.
+2x2 bir balkabağı `4` yerine `2*2*2 = 8` balkabağı verir.
+3x3 bir balkabağı `9` yerine `3*3*3 = 27` balkabağı verir.
+4x4 bir balkabağı `16` yerine `4*4*4 = 64` balkabağı verir.
+5x5 bir balkabağı `25` yerine `5*5*5 = 125` balkabağı verir.
+Bir `n`x`n` balkabağı `n >= 6` için `n*n*6` balkabağı verir.
 
-Bu, bir karedeki her karoya bir kabak ekmiş olsanız bile, kabaklardan biri ölebilir ve mega kabak oluşumunu engelleyebilir demektir.
+Tam çarpanı elde etmek için en az 6x6 boyutunda balkabakları elde etmek iyi bir fikirdir. 
+
+Bu, bir karedeki her karoya bir balkabağı eksen bile, balkabaklarından birinin ölebileceği ve mega balkabağının büyümesini engelleyebileceği anlamına gelir.

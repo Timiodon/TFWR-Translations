@@ -1,19 +1,19 @@
-# Costos
-Cualquier costo puede representarse como un dictionary que asigna elementos a números.
+# Costes
+Cualquier coste puede ser representado como un dictionary que mapea items a números.
 
-La función `get_cost()` devuelve dicho dictionary. Devuelve el costo de una planta o un desbloqueo.
+La función `get_cost()` devuelve dicho dictionary. Devuelve el coste de una planta o un desbloqueo.
 
 `get_cost(Entities.Pumpkin)`
 devuelve `{Items.Carrot:1}`
 
-Para desbloqueos, se puede pasar un segundo argumento opcional para el nivel de desbloqueo que deseas obtener el costo. Por default, es el nivel de desbloqueo actual.
+Para los desbloqueos, se puede pasar un segundo argumento opcional para el nivel de desbloqueo del que quieres obtener el coste. Por default, es el nivel de desbloqueo actual.
 
 `get_cost(Unlocks.Loops, 0)`
 devuelve `{Items.Hay:5}`
 
-Para desbloqueos que ya están en el nivel máximo, `get_cost()` devolverá `None`.
+Para los desbloqueos que ya están en el nivel máximo, `get_cost()` devolverá `None`.
 
-Se puede usar de esta manera:
-`cost = get_cost(something)
+Se puede usar así:
+`cost = get_cost(algo)
 for item in cost:
-	amount_of_this_item_needed = cost[item]`
+	cantidad_de_este_item_necesaria = cost[item]`

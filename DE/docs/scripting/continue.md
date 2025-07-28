@@ -1,13 +1,13 @@
 # Continue
-continue ermöglicht es, die aktuelle Iteration einer Schleife zu beenden und zur nächsten Iteration der innersten Schleife zu springen.
+`continue` ermöglicht es, die aktuelle Iteration einer Schleife zu beenden und zur nächsten Iteration der innersten Schleife zu springen.
 
 `for i in range(10):
 	continue
     print("this is never printed")`
 
-Diese Schleife durchläuft alle `10` Iterationen, aber der `print`-Befehl nach dem `continue` wird immer übersprungen.
+Dies führt alle `10` Iterationen der Schleife aus, aber die `print`-Anweisung nach dem `continue` wird immer übersprungen.
 
-Es funktioniert auch mit `while`-Schleifen.
+Es funktioniert auch bei `while`-Schleifen.
 
 `while True:
 	if not can_harvest():
@@ -15,14 +15,14 @@ Es funktioniert auch mit `while`-Schleifen.
     
     harvest()`
 
-Dieser Code ruft `harvest()` nur auf, wenn `can_harvest()` `True` ist.  
-Es hat den gleichen Effekt wie
+Dieser Code ruft `harvest()` nur auf, wenn `can_harvest()` `True` ist. 
+Er hat den gleichen Effekt wie
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-In geschachtelten Schleifen beeinflusst `continue` immer die innerste Schleife.
+In verschachtelten Schleifen wirkt sich `continue` immer auf die innerste Schleife aus.
 
 `for i in range(10):
 	for j in range(10):

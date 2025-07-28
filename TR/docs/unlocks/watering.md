@@ -1,14 +1,14 @@
 # Sulama
-Bitkiler sulandığında daha hızlı büyür. Toprağın su seviyesi `0` ile `1` arasında değişir.
-`get_water()` fonksiyonu, bulunduğu yerin su seviyesini döner.
+Bitkiler sulandığında daha hızlı büyür. Zeminin `0` ile `1` arasında değişen bir su seviyesi vardır.
+`get_water()` fonksiyonu, üzerinde bulunduğu zeminin su seviyesini döndürür.
 
-Bir bitkinin büyüme hızı, su seviyesi `0` iken 1 kat hızdan, `1` iken 5 kat hıza kadar lineer olarak artar.
+Bir bitkinin büyüme hızı, su seviyesi 0'da 1 kat hızdan su seviyesi 1'de 5 kat hıza doğrusal olarak artar.
 
-Zamanla toprak kurur: Ortalama olarak, her saniyede mevcut suyunun %1'ini kaybeder, fakat bunda biraz rastgelelik de vardır. Yüksek bir su seviyesini korumak, düşük bir su seviyesini korumaktan çok daha fazla su tüketir.
+Zemin zamanla kurur: Ortalama olarak, saniyede mevcut suyunun %1'ini kaybeder, ancak bunda biraz rastgele değişkenlik vardır. Yüksek bir su seviyesini korumak, düşük bir su seviyesini korumaktan çok daha fazla su tüketecektir.
 
-Bitkilerinize su kullanabilirsiniz. Her 10 saniyede bir tank su otomatik olarak envanterinize eklenir.
-`Unlocks.Watering` yükseltmesini yapmak, her 10 saniyede bir ek tank su kazanmanızı sağlar.
+Bitkilerinde su kullanabilirsin. Her 10 saniyede bir, envanterine otomatik olarak bir su tankı eklenir.
+`Unlocks.Watering`'i yükseltmek sana her 10 saniyede bir ek bir su tankı verir.
 
-Bir tank `0.25` su tutar.
+Bir tank `0.25` su alır.
 
-Herhangi bir yere su vermek için `use_item(Items.Water)` çağrısı yapabilirsiniz.
+Zemini sulamak için herhangi bir zeminin üzerinde `use_item(Items.Water)` çağır.

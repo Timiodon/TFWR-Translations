@@ -1,40 +1,41 @@
-# Dictionary'ler
-Dictionary'ler, gerçek bir sözlüğün kelimeleri tanımlarına eşlemesi gibi, anahtarları değerlere eşlemenizi sağlayan bir veri yapısıdır ve bunları çok hızlı bir şekilde arayabilirsiniz.
+# Dictionaries
+Dictionary'ler, gerçek bir sözlüğün kelimeleri tanımlarıyla eşlemesi gibi anahtarları değerlerle eşlemenize olanak tanıyan ve onları çok hızlı bir şekilde arayabilmenizi sağlayan bir veri yapısıdır.
 
-Bir dictionary şöyle oluşturulabilir:
-`rotation = {North:East, East:South, South:West, West:North}`
+Bir dictionary şu şekilde oluşturulabilir:
+`right_of = {North:East, East:South, South:West, West:North}`
 
-İki nokta üst üste öncesindeki ifade anahtardır ve iki nokta üst üste sonrasındaki ifade, anahtarın eşlendiği değerdir. Yukarıdaki dictionary, her yönü sağındaki yöne eşler.
+İki nokta üst üste işaretinden önceki ifade anahtar, sonraki ifade ise anahtarın eşlendiği değerdir.
+Yukarıdaki dictionary, her yönü sağındaki yöne eşler.
 
-Drone'un pozisyonunu olduğu entity'ye eşleyen başka bir örnek:
+İşte drone'un pozisyonunu üzerindeki varlıkla eşleyen bir başkası:
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-Bir anahtara eşlenen değere erişmek, bir listedeki bir elemana erişmeye benzer:
+Bir anahtara eşlenen değere erişim, bir listedeki bir elemana erişime benzer:
 `value = dict[key]`
 
 Örnek:
-`orientation = rotation[South]`
-Bu, `orientation` değerini `West` yapar.
+`orientation = right_of[South]`
+Bu, `orientation`'ı `West`'e ayarlar.
 
-Yeni bir anahtar-değer çifti eklemek için:
+Bir dictionary'e yeni bir anahtar-değer çifti şu şekilde ekleyebilirsin:
 `dict[key] = value`
 
 Örnek:
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
-Bu, mevcut pozisyon için kaydedilen entity'yi günceller.
+Bu, mevcut pozisyon için depolanan varlığı günceller.
 
-Anahtarlar özeldir, bu yüzden dictionary içinde zaten var olan bir anahtarı eklemek, önceki değeri üzerine yazar.
+Anahtarlar benzersizdir, bu nedenle dictionary'de zaten var olan bir anahtarı eklemek önceki değeri üzerine yazar.
 
-Bir anahtar-değer çiftini dictionary'den çıkarmak için `dict.pop(key)` kullanabilirsiniz.
+`dict`'ten bir anahtar-değer çiftini kaldırmak için `dict.pop(key)` kullan.
 
-`key in dict`, `key` dictionary'de bir anahtar ise `True`, aksi takdirde `False` olur.
-Bu yüzden `if key in dict:` kullanarak dictionary'nin anahtarı içerip içermediğini kontrol edebilirsiniz.
+`key in dict`, `key` `dict`'te bir anahtarsa `True`, aksi takdirde `False` olarak değerlendirilir.
+Böylece `dict`'in anahtarı içerip içermediğini kontrol etmek için `if key in dict:` kullanabilirsin.
 
-Bir for döngüsünde dictionary kullanmak, tüm anahtarlar üzerinde gezinmenizi sağlar:
+Bir dictionary'i for döngüsüne koymak, tüm anahtarlar arasında yineleme yapmanı sağlar:
 `for key in dict:
 	value = dict[key]`
 
-Anahtarların hangi sırada döneceği konusunda bir garanti yoktur.
+Anahtarların hangi sırayla yineleneceği konusunda hiçbir garanti yoktur.
 
-Ayrıca bkz. [Sets](docs/scripting/sets.md)
+Ayrıca bakınız [Sets](docs/scripting/sets.md)

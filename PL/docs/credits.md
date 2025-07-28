@@ -1,9 +1,10 @@
-# Podziękowania
+# Twórcy
 
 ## The Farmer Was Replaced
 
-Stworzone przez Timon Herzog
+Stworzone przez Timona Herzoga
 
-Osoby, które przyczyniły się do tłumaczenia:
+
+Udział w tłumaczeniu:
 
 Davide Altamura

@@ -1,47 +1,45 @@
-# İsim Kapsamları
+# İsim Kapsamları (Scope)
+Scope'lar, hangi değişkenlere nereden erişilebileceğini belirler. Bir scope temel olarak isimlerden değerlere bir eşlemedir.
+Temel olarak Python'daki gibi çalışırlar.
 
-Kapsamlar, hangi değişkenlerin nereden erişilebileceğini belirler. Bir kapsam, esasen isimlerden değerlere bir eşlemedir.
-Python'da olduğu gibi çalışırlar.
-
-Bir global kapsam vardır ve her fonksiyonun lokal bir kapsamı vardır.
-Bir değişken tanımladığınızda, mevcut kapsama eklenir.
-Bir fonksiyon tanımının dışındaki her şey global kapsamın parçası olarak kabul edilir.
+Bir global scope vardır ve her fonksiyonun bir local scope'u vardır.
+Bir değişken tanımladığında, mevcut scope'a eklenir.
+Bir fonksiyon tanımının dışındaki her şey global scope'un bir parçası olarak kabul edilir.
 
 `x = 1`
-`x` ismine global kapsamda `1` değeri atanır.
+Global scope'taki `x` ismine `1` değerini atar.
 
-Bu `def` ifadesi, bir fonksiyonu global kapsamda `f` ismine atar.
+Bu `def` ifadesi, global scope'taki `f` ismine bir fonksiyon atar.
 `def f():
-    ``f` fonksiyonunun lokal kapsamında `y` ismine `1` değeri atayın.`
+    `'f'nin local scope'undaki 'y' ismine '1' değerini ata.`
     y = 1
 
-    ``f` fonksiyonunun lokal kapsamına `g` ismine bir fonksiyon atayın.`
+    `'f'nin local scope'undaki 'g' ismine bir fonksiyon ata.`
     def g():
         pass`
 
 `f()`
-Global kapsamdan `f` içinde saklanan fonksiyonu alır ve çağırır.
+Global scope'tan `f` içinde saklanan fonksiyonu alır ve onu çağırır.
 
 `print(y)`
-Global kapsamda bu print ifadesi bir hata fırlatır çünkü `y` global kapsamda asla tanımlanmadı, bu yüzden burada okunamaz.
-Sadece `f`'nin lokal kapsamı içinde vardı.
+Global scope'taki bu print ifadesi bir error verir çünkü `y` global scope'ta hiç bildirilmedi, bu yüzden onu burada okuyamayız.
+Sadece `f`'in local scope'unda mevcuttu.
 
 ## global anahtar kelimesi
+Varsayılan olarak, fonksiyonlardaki tüm değişkenler, global scope'ta aynı isimde bir değişken olsa bile, local scope'a bağlanır.
 
-Varsayılan olarak, fonksiyonlardaki tüm değişkenler, aynı isimde bir değişken global kapsamda bile varsa, lokal kapsama bağlanır.
-
-`x == 0
+`x = 0
 
 def f():
     x = 1
 f()
 print(x)`
 
-Bu kod `0` yazdırır çünkü `f` içindeki lokal `x`, global `x` ile aynı değişken değildir, bu yüzden global `x` değişmeden kalır. Bu önemlidir çünkü aksi takdirde, bir fonksiyon çağrısı sadece bir rastlantı sonucu o fonksiyonun lokal değişkeniyle aynı isme sahip global bir değişkeni yanlışlıkla değiştirebilir.
+Bu kod `0` yazdırır çünkü `f` içindeki local `x`, global `x` ile aynı değişken değildir, bu yüzden global `x` değişmeden kalır. Bu önemlidir çünkü aksi takdirde bir fonksiyon çağrısı, yanlışlıkla o fonksiyonun bir local değişkeniyle aynı isme sahip bir global değişkenin üzerine yazabilir.
 
-Eğer bir global değişkene yazmak istiyorsanız, bunu açıkça `global` anahtar kelimesini kullanarak yapmalısınız.
+Eğer bir global değişkene yazmak istiyorsan, bunu açıkça `global` anahtar kelimesini kullanarak yapmalısın.
 
-`x == 0
+`x = 0
 
 def f():
     global x
@@ -49,15 +47,14 @@ def f():
 f()
 print(x)`
 
-Bu örnekte, `global x` yukarıda tanımlanan global `x` değişkenine `x` bağlar. Bu da artık `1` yazdırır.
-Not: global değişkenleri değiştirmek genellikle her kısmın programın diğer kısımlarını etkilediği spagetti koduna giden ilk adımdır, bu yüzden aşırı kullanmayın.
+Bu örnekte, `global x`, `x`'i üzerinde tanımlanan global `x` değişkenine bağlar. Bu şimdi `1` yazdıracaktır.
+Global değişkenleri değiştirmenin genellikle spagetti koda doğru ilk adım olduğunu unutma; bu kodda programın her parçası diğer her parçasını etkiler, bu yüzden aşırı kullanma.
 
-## Döngüler ve dallar
-
-Döngüler ve dallar kendi kapsamlarını oluşturmaz, bu yüzden içinde tanımlanan her şey dışarıda da kullanılabilir.
+## Döngüler ve dallanmalar
+Döngüler ve dallanmalar kendi scope'larını oluşturmaz, bu yüzden içlerinde tanımlanan her şey dışarıda da kullanılabilir.
 
 `for i in range(3):
     pass
 print(i)`
 
-Bu, `2` yazdırır çünkü `for` döngüsünün son yinelemesi `i`'ye `2` atamıştır.
+Bu, `2` yazdıracaktır çünkü `for` döngüsünün son yinelemesi `i`'ye `2` atamıştır.

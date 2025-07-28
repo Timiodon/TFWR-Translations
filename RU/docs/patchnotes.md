@@ -6,14 +6,24 @@ Also a large part of the tech tree has been experimentally reworked to be more e
 Gameplay:
 -Pumpkins now scale up to 6x6 instead of 5x5.
 -The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
+-The cactus grow time is now always exactly 1 second.
 
-UI:
+Visuals:
+-The visuals of the tech tree have been completely reworked.
+-Pumpkins now leave behind a dead pumpkin to indicate that they have died.
+-Cacti are now brown when they aren't sorted to make it more visible.
+
+Code Editor:
 -Double clicking identifiers with underscores in them now selects the whole identifier.
+-If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
+-Zooming is now much smoother.
 
 Other:
+-You can now chain comparison operators like in Python.
 -`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
 
 Fixes:
+-Some of the most common cases of code highlights being visible through other windows have been fixed.
 -Actions like tilling can no longer affect the water drying behavior.
 
 Breaking Changes from older Patches that you might have missed:

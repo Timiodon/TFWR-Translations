@@ -1,5 +1,5 @@
 # If
-Kodunuzu koşullu olarak çalıştırmak için if, elif ve else kullanabilirsiniz.
+Kodu koşullu olarak çalıştırmak için if, elif ve else kullanabilirsin.
 
 `if condition1:
 	do_a_flip()
@@ -9,24 +9,23 @@ else:
 	do_a_flip()
 	harvest()`
 
-## Söz Dizimi
-`if`ler, kodunuzu sadece bazı koşullar `True` olduğunda çalıştırmanıza olanak tanır. Bir `while` döngüsü gibidirler ama döngü yapmazlar.
-`if`, tıpkı bir `while` döngüsü gibi bir koşul alır ve koşul `True` olarak değerlendirilirse if kod bloğunu çalıştırır:
+## Syntax
+`if`'ler, yalnızca bir koşul `True` ise kod çalıştırmana olanak tanır. Döngü yapmayan bir `while` döngüsü gibidirler.
+`if`, `while` döngüsü gibi bir koşul alır ve koşul `True` olarak değerlendirilirse if kod bloğunu çalıştırır:
 
-`# Koşul True ise do_a_flip yap
+`#koşul True ise takla at
 if condition:
 	do_a_flip()`
 
-Koşul `False` olarak değerlendirilirse çalışacak kodu tanımlayan bir `else` de if'in sonuna ekleyebilirsiniz.
+Ayrıca, if'ten sonra koşul `False` olarak değerlendirilirse çalıştırılacak kodu tanımlayan bir `else` ekleyebilirsin.
 
-Koşul `True` ise do_a_flip yap, aksi takdirde harvest.
-
+Eğer `condition` True ise takla at, aksi halde hasat et.
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif` else if'in kısaltmasıdır.
+`elif`, else if'in kısaltmasıdır.
 
 `if condition1:
 	#a
@@ -36,7 +35,7 @@ else:
 	else:
 		#c`
 
-şu şekilde kısaltılabilir:
+şöyle kısaltılabilir:
 
 `if condition1:
 	#a

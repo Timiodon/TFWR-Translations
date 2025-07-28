@@ -2,7 +2,7 @@
 @lb_descr_maze = Coltiva 300000 oro.
 @lb_descr_dinosaur = Coltiva 98010 ossa.
 @lb_descr_cactus = Coltiva 100000 cactus.
-@lb_descr_sunflowers = Coltiva 100000 power.
+@lb_descr_sunflowers = Coltiva 100000 energia.
 @lb_descr_pumpkins = Coltiva 100000 zucche.
 @lb_descr_hay = Coltiva 100000 fieno.
 @lb_descr_wood = Coltiva 100000 legno.

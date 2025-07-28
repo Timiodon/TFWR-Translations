@@ -1,6 +1,6 @@
-# Carrots
-キャロットを植える前に、`plant(Entities.Carrot)`を使うためには、まず土を耕さないといけません。これで地面が`Grounds.Soil`になります。土を耕すには、ただ`till()`を呼び出すだけです。再度`till()`を呼び出すと、地面は`Grounds.Grassland`に戻ります。
+# ニンジン
+`plant(Entities.Carrot)`でニンジンを植える前に、土を耕す必要があります。これにより、地面が`Grounds.Soil`に変わります。土を耕すには、単に`till()`を呼び出します。再度`till()`を呼び出すと、`Grounds.Grassland`に戻ります。
 
-キャロットを植えるには、木材と干草が必要です。これらのアイテムは、`plant(Entities.Carrot)`を呼び出すと自動的に消費されます。
+ニンジンを植えるには木と干し草がかかります。これらのアイテムは`plant(Entities.Carrot)`を呼び出すと自動的に消費されます。
 
-各植物のコストは、その[専用ページ](objects/carrot)で確認できます。
+どの作物のコストも、その[専用ページ](objects/carrot)で見ることができます。

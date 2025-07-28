@@ -1,12 +1,13 @@
 # Polikültür
-Belki fark ettin, bazen bitkiler bir arada dikildiğinde daha fazla verim sağlıyor. Çimenler, çalılar, ağaçlar ve havuçlar doğru bitki arkadaşı olduğu zaman daha fazla verim sağlar. Her bitkinin tercih ettiği bitki arkadaşı farklıdır ve tahmin edilemez. Neyse ki, drone'un altındaki bitkinin tercih ettiği bitki arkadaşı `get_companion()` fonksiyonu ile ölçülebilir. Bu fonksiyon, ilk elemanı bitkinin yanındaki bitki türünü ve ikinci elemanı ise bu bitkinin bulunmasını istediği konumu içeren bir tuple döner.
+Bazen bitkilerin birlikte ekildiğinde daha fazla verim verdiğini zaten fark etmiş olabilirsin.
+Çimen, çalılar, ağaçlar ve havuçlar, doğru bitki yoldaşına sahip olduklarında daha fazla verim verir. Yoldaş tercihi her bir bitki için farklıdır ve tahmin edilemez. Neyse ki, drone'un altındaki bitkinin yoldaş tercihi `get_companion()` kullanılarak ölçülebilir. İlk elemanı yoldaş olarak istediği bitki türü ve ikinci elemanı yoldaşını istediği pozisyon olan bir tuple döndürür.
 
-`plant, (x, y) = get_companion()`
+`plant_type, (x, y) = get_companion()`
 
-Örneğin, bir çalı diktiysen ve ardından `get_companion()` fonksiyonunu çağırırsan, bu fonksiyon `(Entities.Carrot, (3, 5))` gibi bir değer dönebilir. Bu, çalının `(3,5)` konumunda havuç olmasını istediğini belirtir. Yani, `(3,5)` konumuna havuç dikersen ve ardından çalıyı hasat edersen, daha fazla odun alırsın. Havuçun büyüme aşaması önemli değildir.
+Örneğin bir çalı ekersen ve sonra `get_companion()` çağırırsan, `(Entities.Carrot, (3, 5))` gibi bir şey döndürür. Bu, bu çalının `(3,5)` pozisyonunda havuç olmasını istediği anlamına gelir. Yani `(3,5)` pozisyonuna havuç ekersen ve sonra çalıyı hasat edersen, daha fazla odun verir. Havucun büyüme aşaması önemli değildir.
 
-Bir bitkinin tercih ettiği bitki arkadaşı `Entities.Grass`, `Entities.Bush`, `Entities.Tree` veya `Entities.Carrot` olabilir. Her bitki bunu rastgele seçer, ancak her zaman kendisinden farklı bir bitki seçer. Konum da bitkinin kendisi dışında 3 hareket mesafesi içerisindeki herhangi bir konum olabilir.
+Bir bitkinin yoldaş tercihi `Entities.Grass`, `Entities.Bush`, `Entities.Tree` veya `Entities.Carrot` olabilir. Her bitki bunu rastgele seçer, ancak her zaman kendisinden farklı bir bitki seçecektir. Pozisyon ayrıca, bitkinin kendi pozisyonu hariç, bitkinin 3 hamle mesafesindeki herhangi bir pozisyon olabilir.
 
-Eğer drone'un altında tercih ettiği bir bitki arkadaşı olmayan bir bitki varsa, `get_companion()` fonksiyonu `None` dönecektir.
+Drone'un altında bir yoldaş tercihi olan bir bitki yoksa `get_companion()` `None` döndürür.
 
-Verim çarpanı `5` artı çoklu tarım iyileştirmelerinin sayısıdır.
+Polikültür açılmadan önce, verim çarpanı `5`'tir. Her yükselttiğinde ikiye katlanır.

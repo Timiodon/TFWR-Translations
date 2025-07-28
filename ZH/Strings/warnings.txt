@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = 尝试购买{0}但没有足够的资源。
-@warning_no_space_to_plant = 试图种植{0}，但那里已经有东西了。
-@warning_cant_plant_on_ground = 无法在{1}上种植{0}。
-@warning_missing_seed = 无法种植{0}，因为缺少必要的物品。
-@warning_no_item_to_use = 尝试使用{0}但数量不足。
-@warning_failed_swap_wrap = 尝试在农场边界进行交换操作。这是不允许的。
-@warning_failed_swap_unswappable = 尝试交换{0}，但无法交换。
-@warning_weird_substance_not_divisible = 你使用了不正确数量的 Weird Substance 来创建迷宫。别忘了，随着迷宫的升级所需的 Weird Substance 会增加。
+@warning_not_enough_items_to_trade = 尝试购买 {0} 但没有所需资源。
+@warning_no_space_to_plant = 试图种植 {0} 但那里已经有东西了。
+@warning_cant_plant_on_ground = 无法在 {1} 上种植 {0}。
+@warning_missing_seed = 没有足够的物品来种植 {0}。
+@warning_no_item_to_use = 试图使用 {0} 但数量不足。
+@warning_failed_swap_wrap = 试图在农场边界外进行交换。那是不允许的。
+@warning_failed_swap_unswappable = 试图交换 {0}，但它不能被交换。
+@warning_weird_substance_not_divisible = 你使用的奇异物质数量与创建迷宫所需的数量不完全匹配。别忘了，随着你升级迷宫，所需的奇异物质数量会增加。
 
-要生成一个完整的大迷宫，请执行：
+要生成一个完整大小的迷宫，请执行：
 `plant(Entities.Bush)
 substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = 模拟和排行榜运行无法从其他模拟和排行榜运行中启动。
+@warning_recursive_simulation = 模拟和 leaderboard 运行不能在其他模拟和 leaderboard 运行中启动。

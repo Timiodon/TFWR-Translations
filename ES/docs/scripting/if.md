@@ -7,25 +7,26 @@ elif condition2:
 	harvest()
 else:
 	do_a_flip()
+
 	harvest()`
 
 ## Sintaxis
-Los `if` te permiten ejecutar código solo si alguna condición es `True`. Son como un bucle `while` que no repite.
-El `if` toma una condición igual que el bucle `while` y ejecuta el bloque de código if si la condición evalúa como `True`:
+Los `if` te permiten ejecutar código solo si alguna condición es `True`. Son como un bucle `while` que no se repite.
+El `if` toma una condición igual que el bucle `while` y ejecuta el bloque de código del if si la condición se evalúa como `True`:
 
-`#haz un giro si la condición es True
+`#haz una voltereta si la condición es True
 if condition:
 	do_a_flip()`
 
-También puedes añadir un `else` después del if que define el código a ejecutar si la condición evalúa como `False`.
+También puedes añadir un `else` después del if que define el código a ejecutar si la condición se evalúa como `False`.
 
-Haz un giro si `condition` es True, de lo contrario cosecha.
+Haz una voltereta si `condition` es True, si no, cosecha.
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif` es una forma corta de decir else if.
+`elif` es una abreviatura de else if.
 
 `if condition1:
 	#a
@@ -35,7 +36,7 @@ else:
 	else:
 		#c`
 
-se puede reducir a:
+se puede acortar a:
 
 `if condition1:
 	#a

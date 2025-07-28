@@ -1,13 +1,13 @@
 # Continue
-continueは、ループの現在の反復を停止し、最も内側のループの次の反復にジャンプすることを可能にします。
+continueを使うと、ループの現在のイテレーションを停止し、最も内側のループの次のイテレーションにジャンプできます。
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("これは決して表示されません")`
 
-これはループの全ての`10`回の反復を実行しますが、`continue`の後の`print`文は常にスキップされます。
+これはループの`10`回すべてのイテレーションを実行しますが、`continue`の後の`print`ステートメントは常にスキップされます。
 
-これは`while`ループでも機能します。
+`while`ループでも機能します。
 
 `while True:
 	if not can_harvest():
@@ -15,7 +15,8 @@ continueは、ループの現在の反復を停止し、最も内側のループ
     
     harvest()`
 
-このコードは`can_harvest()`が`True`のときだけ`harvest()`を呼び出します。 これは次のコードと同じ効果があります。
+このコードは`can_harvest()`が`True`のときにのみ`harvest()`を呼び出します。
+これは以下と同じ効果があります。
 
 `while True:
 	if can_harvest():
@@ -25,7 +26,7 @@ continueは、ループの現在の反復を停止し、最も内側のループ
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("これは100回表示されます")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("これは決して表示されません")
+	print("これは10回表示されます")`

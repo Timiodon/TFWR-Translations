@@ -1,75 +1,75 @@
 # Operatörler
 aritmetik operatörler: `+, -, *, /, //, %, **`
 karşılaştırma operatörleri: `==, !=, <=, >=, <, >`
-mantıksal operatörler: `not, and, or`
+boolean operatörleri: `not, and, or`
 
-Not: Oyundaki tüm sayılar floating point (kayan nokta) sayılardır. Dolayısıyla tüm aritmetik operatörler floating point operatörleridir.
-`//` bölme işleminden sonra sadece sonucu aşağıya yuvarlamak olarak tanımlanmıştır.
+Not: Oyundaki tüm sayılar floating point sayılardır. Bu nedenle tüm aritmetik operatörler floating point operatörleridir.
+`//`, bölmeden sonra sayıyı aşağı yuvarlamak (floor) için tanımlanmıştır.
 
-Atama operatörlerini kullanabilmek için "Değişkenler" kilidini açmanız gerekiyor.
+Atama operatörleri için "Değişkenler" kilidini açman gerekir.
 
 ## Giriş
-Operatörler, değerleri karşılaştırmanıza, değiştirmenize ve birleştirmenize olanak tanır.
-Aritmetik operatörler `+, -, *, /, //, %, **`, sayılar üzerinde yaygın matematiksel işlemleri gerçekleştirmek için kullanılır.
+Operatörler değerleri karşılaştırmana, değiştirimene ve birleştirimene olanak tanır. 
+Aritmetik operatörler `+, -, *, /, //, %, **` sayılar üzerinde yaygın matematiksel işlemleri gerçekleştirmek için kullanılır. 
 Karşılaştırma operatörleri `==, !=, <=, >=, <, >` değerleri karşılaştırmak için kullanılır. Sonuç her zaman ya `True` ya da `False` olur.
-Mantıksal operatörler (boolean operatörler olarak da adlandırılır) `not, and, or`, doğru değerlerini birleştirmek için kullanılır.
+Mantık operatörleri (boolean operatörleri olarak da adlandırılır) `not, and, or` doğruluk değerlerini birleştirmek için kullanılır.
 
 ## Aritmetik Operatörler
 `+` ve `-` toplama ve çıkarma için kullanılır.
 
-`2 + 3` değeri `5` olur
-`3 - 2` değeri `1` olur
+`2 + 3` ifadesi `5` olarak değerlendirilir
+`3 - 2` ifadesi `1` olarak değerlendirilir
 
 `*`, `/` ve `//` çarpma ve bölme için kullanılır.
 
-`2 * 3` değeri `6` olur
-`5 / 2` değeri `2.5` olur
+`2 * 3` ifadesi `6` olarak değerlendirilir
+`5 / 2` ifadesi `2.5` olarak değerlendirilir
 
-`//` `/` ile aynı işi yapar ama sonuç aşağıya yuvarlanmış (en yakın tam sayıya aşağı doğru) olur.
+`//` ile `/` aynı şeyi yapar, ancak sonuç aşağı yuvarlanır (bir sonraki tam sayıya yuvarlanır).
 
-`5 // 2` değeri `2` olur
+`5 // 2` ifadesi `2` olarak değerlendirilir
 
-`%` modulo operatörü, yani kalan operatörüdür. İki sayıyı böler ve ardından kalanı döndürür. Sağdaki sayıyı soldaki sayıdan defalarca çıkarıp geriye kalan, sağdaki sayıdan küçük olana kadar devam eder.
+`%`, modülo operatörüdür, kalan operatörü olarak da bilinir. Temelde iki sayıyı böler ve sonra kalanı döndürür. Sağdaki sayıyı soldaki sayıdan, kalan sağdaki sayıdan küçük olana kadar tekrar tekrar çıkarmak olarak da düşünebilirsin.
 
-`4 % 2` değeri `0` olur
-`5 % 2` değeri `1` olur
-`6 % 2` değeri `0` olur
-`2 % 6` değeri `2` olur
-`1.5 % 1` değeri `0.5` olur
+`4 % 2` ifadesi `0` olarak değerlendirilir
+`5 % 2` ifadesi `1` olarak değerlendirilir
+`6 % 2` ifadesi `0` olarak değerlendirilir
+`2 % 6` ifadesi `2` olarak değerlendirilir
+`1.5 % 1` ifadesi `0.5` olarak değerlendirilir
 
-`**` üslü sayı operatörüdür.
+`**`, üs alma operatörüdür.
 
-`2**2` değeri `4` olur
-`(-5)**3` değeri `-125` olur
+`2**2` ifadesi `4` olarak değerlendirilir
+`(-5)**3` ifadesi `-125` olarak değerlendirilir
 
 ## Karşılaştırma Operatörleri
-`==` ve `!=`, iki değerin "eşit" (`==`) veya "eşit değil" (`!=`) olup olmadığını kontrol etmek için kullanılır. Bu, her tür değerde kullanılabilir.
+`==` ve `!=` iki değerin "eşit"(`==`) veya "eşit değil"(`!=`) olup olmadığını kontrol etmek için kullanılır. Her tür değer üzerinde kullanılabilirler.
 
-`2 == 2` değeri `True` olur
-`Entities.Bush != Entities.Bush` değeri `False` olur
-`3 != 3 + 1` değeri `True` olur
+`2 == 2` ifadesi `True` olarak değerlendirilir
+`Entities.Bush != Entities.Bush` ifadesi `False` olarak değerlendirilir
+`3 != 3 + 1` ifadesi `True` olarak değerlendirilir
 
-`<=, >=, <, >` operatörleri sadece sayılar üzerinde kullanılabilir. Soldaki sayının, sağdaki sayıdan "küçük veya eşit" (`<=`), "büyük veya eşit" (`>=`), "küçük" (`<`) veya "büyük" (`>`) olup olmadığını kontrol eder.
+`<=, >=, <, >` sadece sayılar üzerinde kullanılabilir. Sol sayının sağ sayıdan "küçük veya eşit"(`<=`), "büyük veya eşit"(`>=`), "küçük" (`<`) veya "büyük" (`>`) olup olmadığını kontrol ederler.
 
-`1 <= 1` değeri `True` olur
-`2 >= 3` değeri `False` olur
-`-2 < -1` değeri `True` olur
-`6 > 6` değeri `False` olur
+`1 <= 1` ifadesi `True` olarak değerlendirilir
+`2 >= 3` ifadesi `False` olarak değerlendirilir
+`-2 < -1` ifadesi `True` olarak değerlendirilir
+`6 > 6` ifadesi `False` olarak değerlendirilir
 
-## Mantıksal Operatörler
+## Mantık Operatörleri
 `not` sadece değeri tersine çevirir:
 
-`not False` değeri `True` olur
-`not True` değeri `False` olur
+`not False` ifadesi `True` olarak değerlendirilir
+`not True` ifadesi `False` olarak değerlendirilir
 
-`and` her iki değer de `True` olduğunda `True` döner.
+`and` sadece her iki değer de `True` ise `True` olarak değerlendirilir
 
-`True and True` değeri `True` olur
-`True and False` değeri `False` olur
-`False and False` değeri `False` olur
+`True and True` ifadesi `True` olarak değerlendirilir
+`True and False` ifadesi `False` olarak değerlendirilir
+`False and False` ifadesi `False` olarak değerlendirilir
 
-`or` en az bir değer `True` olduğunda `True` döner.
+`or` en az bir değer `True` ise `True` olarak değerlendirilir
 
-`True or True` değeri `True` olur
-`True or False` değeri `True` olur
-`False or False` değeri `False` olur
+`True or True` ifadesi `True` olarak değerlendirilir
+`True or False` ifadesi `True` olarak değerlendirilir
+`False or False` ifadesi `False` olarak değerlendirilir

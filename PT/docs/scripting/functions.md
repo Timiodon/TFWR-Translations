@@ -1,48 +1,47 @@
 # Funções
-Use a palavra-chave `def` para definir uma nova função:
+Usa a palavra-chave `def` para definir uma nova função:
 `def f(arg1, arg2 = False):
 	#código da função`
 
-Você pode usar o operador de chamada `()` para chamar a função:
+Podes usar o operador de chamada `()` para chamar a função:
 `f(42)`
 
-Veja também [Scopes](docs/scripting/scopes.md) para aprender sobre variáveis locais e globais em funções.
-
+Vê também [Scopes](docs/scripting/scopes.md) para aprender sobre variáveis locais e globais em funções.
 
 ## Introdução
-Você já viu funções embutidas como `harvest()`.
-Você também pode definir suas próprias funções, o que permite estruturar seu código de forma modular. Basicamente, permite que você dê um nome a um bloco de código para que possa chamá-lo de onde quiser.
+Já viste funções incorporadas como `harvest()`.
+Também podes definir as tuas próprias funções, o que permite estruturar o teu código de forma modular. Basicamente, permite-te dar um nome a um bloco de código para que o possas chamar de onde quiseres.
 
 ## Definições de Função
-Por exemplo, você poderia definir uma função que move o drone várias vezes.
+Por exemplo, podes definir uma função que move o drone várias vezes.
 
 `def move_n_dir(n, dir):
 	for i in range(n):
 		move(dir)`
 
-A palavra-chave `def` sinaliza que esta é uma definição de função.
-`move_n_dir` é o nome ao qual a função é vinculada. Este pode ser qualquer nome de variável válido e será usado para chamar a função.
-`n` e `dir` são parâmetros. Eles são variáveis que contêm os valores passados para a função (Esses valores também são chamados de argumentos). Você pode adicionar quantos parâmetros quiser a uma definição de função.
-Após o `:` vem o bloco de código que será executado quando a função for chamada.
+A palavra-chave `def` sinaliza que isto é uma definição de função.
+`move_n_dir` é o nome ao qual a função fica associada. Pode ser qualquer nome de variável válido e será usado para chamar a função.
+`n` e `dir` são parâmetros. São variáveis que contêm os valores que são passados para a função (Estes valores também são chamados de argumentos). Podes adicionar quantos parâmetros quiseres a uma definição de função.
+Depois dos `:` vem o bloco de código que será executado quando a função for chamada.
 
-Com a definição acima, o seguinte código move o drone `10` azulejos para o `North` e `2` azulejos para o `West`.
+Com a definição acima, o código seguinte move o drone `10` quadrados para `North` e `2` quadrados para `West`.
 
 `move_n_dir(10, North)
 move_n_dir(2, West)`
 
-Quando você vê `def function():`, deve pensar nisso como uma atribuição de variável assim:
+Quando vês `def function():`, deves pensar nisso como uma atribuição de variável como esta:
 `function = create_new_function_object()`
-Como em todas as atribuições, você não pode usar a variável antes de ela ser atribuída!
-A instrução `def` deve ser executada antes de qualquer chamada de função.
-Este código gerará um erro:
+Como em todas as atribuições, não podes usar a variável antes de ela ser atribuída!
+A declaração `def` tem que ser executada antes de qualquer chamada de função.
+Este código lançará um erro:
 
 `func()
 def func():
 	pass`
 
 ## Valores de Retorno
-Use a palavra-chave `return` para fazer uma função retornar um valor.
-Por exemplo, a seguinte função define a operação ou exclusivo. O ou exclusivo retorna `True` se um valor for `True` e o outro for `False`:
+Usa a palavra-chave `return` para fazer uma função retornar um valor.
+Por exemplo, a função seguinte define a operação "ou exclusivo". O "ou exclusivo" retorna `True` se um valor for `True` e o outro for `False`:
 
 `def xor(a, b):
 	return a != b
@@ -53,7 +52,7 @@ if xor(True, False):
 [Tuples](docs/scripting/tuples.md) permitem retornar múltiplos valores.
 
 ## Argumentos Padrão
-Você também pode atribuir valores padrão que serão usados se nenhum argumento for passado.
+Também podes atribuir valores padrão que serão usados se nenhum argumento for passado.
 
 `def f(a = False):
 	if a:
@@ -63,11 +62,11 @@ f()
 
 f(True)`
 
-Um argumento que possui um valor padrão não pode ser seguido por um argumento que não possui um valor padrão.
+Um argumento que tem um valor padrão não pode ser seguido por um argumento que não tem um valor padrão.
 
 ## Uso Avançado de Funções
-Funções são valores como qualquer outro valor, e a instrução `def` age como uma instrução de atribuição, atribuindo a função ao nome que você lhe der.
-Isso permite fazer coisas como esta:
+As funções são valores como qualquer outro valor, e a declaração `def` age como uma declaração de atribuição, atribuindo a função ao nome que lhe deres.
+Isto permite fazer coisas como esta:
 
 `def f():
 	def d():
@@ -76,10 +75,10 @@ Isso permite fazer coisas como esta:
 
 f()()`
 
-Aqui `f()` chama a função `f` que define e retorna uma nova função `d`. O segundo `()` então executa a função retornada e realiza o flip.
-(Fazer coisas desse tipo geralmente não é uma boa ideia porque é difícil ver o que está acontecendo)
+Aqui `f()` chama a função `f` que define e retorna uma nova função `d`. O segundo `()` executa então a função retornada e faz o pino.
+(Fazer este tipo de coisas geralmente não é uma boa ideia porque é difícil ver o que está a acontecer)
 
-Funções que aceitam outras funções como argumentos permitem que você seja realmente criativo:
+Funções que recebem outras funções como argumentos permitem-te ser muito criativo:
 
 `def f(g, arg):
 	for _ in range(10):

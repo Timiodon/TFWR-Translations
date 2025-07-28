@@ -1,14 +1,14 @@
-# External Editor
-L'editor di testo in-game è solitamente sufficiente per giocare a questo gioco, ma ovviamente non può competere con editor di testo più sofisticati come Visual Studio Code.
+# Editor Esterno
+L'editor di testo nel gioco è solitamente sufficiente per giocare, ma ovviamente non può competere con editor di testo più sofisticati come Visual Studio Code.
 
-Il gioco salva tutti i file di codice come file .py, quindi puoi modificarli con editor Python. 
-Nota che questo è solo per comodità. La lingua in-game non è effettivamente Python, ma è abbastanza simile da permettere a Python IntelliSense di funzionare decentemente.
-Puoi trovare i file nella [cartella di salvataggio](persistent_data_path/Saves).
+Il gioco salva tutti i file di codice come file .py, quindi puoi modificarli con editor Python.
+Nota che questo è solo per comodità. Il linguaggio del gioco non è in realtà Python, ma è abbastanza simile da far funzionare decentemente l'IntelliSense di Python.
+Puoi trovare i file nella [cartella dei salvataggi](persistent_data_path/Saves).
 
-Ogni salvataggio contiene anche un file `__builtins__.py`, che contiene definizioni Python integrate che corrispondono ai built-in del gioco per abilitare IntelliSense. 
-VS Code è in grado di rilevare `__builtins__.py` automaticamente, ma alcuni editor potrebbero funzionare solo se fai `from __builtins__ import *`.
+Ogni salvataggio contiene anche un file `__builtins__.py`, che contiene definizioni integrate di Python che corrispondono ai builtin del gioco per abilitare l'IntelliSense.
+VS Code è in grado di rilevare `__builtins__.py` automaticamente, ma alcuni editor potrebbero funzionare solo se esegui `from __builtins__ import *`.
 
-Per vedere le modifiche esterne in-game senza dover ricaricare il salvataggio, devi abilitare l'opzione "File Watcher". Se crei o elimini file esternamente, dovrai comunque ricaricare il salvataggio per vederli.
+Per vedere le modifiche esterne nel gioco senza dover ricaricare il salvataggio, devi abilitare l'opzione "File Watcher". Se crei o elimini file esternamente, dovrai comunque ricaricare il salvataggio per vederli.
 
 ## Usare VS Code
 Visual Studio Code è l'editor di codice raccomandato da usare con The Farmer Was Replaced.
@@ -19,6 +19,6 @@ Dopo averlo scaricato, installa l'estensione Python in VS Code.
 
 Una volta fatto ciò, apri la [cartella](persistent_data_path/Saves) che contiene i tuoi file `.py` in VS Code. Assicurati di aprire l'intera cartella, non solo i singoli file, altrimenti il file `__builtins__.py` non funzionerà.
 
-Nel gioco, assicurati di avere attivato l'opzione "File Watcher". Ora, ogni volta che salvi in VS Code, le modifiche appariranno automaticamente nel gioco.
+Nel gioco, assicurati di avere l'opzione "File Watcher" attivata. Ora, ogni volta che salvi in VS Code, le modifiche appariranno automaticamente nel gioco.
 
-Ecco fatto! Ora puoi scrivere il tuo codice in un editor di codice professionale!
+Ecco fatto! Ora puoi scrivere il tuo codice in un editor professionale!

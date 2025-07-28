@@ -1,20 +1,20 @@
 # Sets
-Sets sind wie [dictionaries](docs/scripting/dicts.md), aber ohne Werte. Sie sind einfach eine ungeordnete Menge von Schlüsseln.
+Sets sind wie [Dictionaries](docs/scripting/dicts.md), aber ohne Values. Sie sind nur eine ungeordnete Menge von Keys.
 
-Sie werden wie dictionaries erstellt, aber ohne Werte. 
+Sie werden wie Dictionaries erstellt, aber ohne Values.
 `set = {North, East, West}`
 
-Verwende `set()`, um ein leeres set zu erstellen. Beachte, dass `{}` ein leeres dictionary erstellt.
+Benutze `set()`, um ein leeres Set zu erstellen. Beachte, dass `{}` ein leeres Dictionary erstellt.
 
-Nutze `set.add(elem)`, um ein neues Element zum set hinzuzufügen.
+Benutze `set.add(elem)`, um ein neues Element zum Set hinzuzufügen.
 
-Verwende `set.remove(elem)`, um ein Element aus einem set zu entfernen.
+Benutze `set.remove(elem)`, um ein Element aus einem Set zu entfernen.
 
-Nutze `if elem in set:` um zu prüfen, ob das set ein Element enthält.
+Benutze `if elem in set:`, um zu prüfen, ob das Set ein Element enthält.
 
-Verwende `for elem in set:`, um alle Elemente im set durchzugehen.
-Für größere sets ist der `in`-Operator viel schneller als bei einer Liste.
+Benutze `for elem in set:`, um alle Elemente im Set zu durchlaufen.
+Bei größeren Sets ist der `in`-Operator viel schneller als bei einer Liste.
 
-Genau wie dictionaries sind sets ungeordnet, es gibt also keine Garantie über die Reihenfolge, in der die Elemente durchlaufen werden.
+Genau wie Dictionaries sind Sets ungeordnet, daher gibt es keine Garantie für die Reihenfolge, in der die Elemente durchlaufen werden.
 
-Außerdem sind Elemente in sets einzigartig, das Hinzufügen eines bereits vorhandenen Elements ändert das set nicht.
+Außerdem sind die Elemente in Sets einzigartig. Das Hinzufügen eines Elements, das bereits im Set ist, ändert das Set nicht.

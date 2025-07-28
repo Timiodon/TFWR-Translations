@@ -1,37 +1,41 @@
 # Cacto
-Como outras plantas, [cactos](objects/cactus) podem ser cultivados na terra e colhidos normalmente.
+Como outras plantas, os [catos](objects/cactus) podem ser cultivados em solo e colhidos como de costume.
 
-No entanto, eles vêm em vários tamanhos e têm um estranho senso de ordem.
+No entanto, eles vêm em vários tamanhos e têm um estranho sentido de ordem.
 
-Se você colher um cacto totalmente crescido e todos os cactos vizinhos estiverem em ordem, ele também irá colher todos os cactos vizinhos de forma recursiva.
+Se colheres um cato totalmente crescido e todos os catos vizinhos estiverem em ordem, ele também colherá todos os catos vizinhos recursivamente.
 
-Um cacto é considerado em ordem se todos os cactos vizinhos ao `North` e `East` estiverem totalmente crescidos e forem maiores ou iguais em tamanho e todos os cactos vizinhos ao `South` e `West` estiverem totalmente crescidos e forem menores ou iguais em tamanho.
+Um cato é considerado em ordem se todos os catos vizinhos a `North` e `East` estiverem totalmente crescidos e forem de tamanho igual ou maior, e todos os catos vizinhos a `South` e `West` estiverem totalmente crescidos e forem de tamanho igual ou menor.
 
-A colheita só se espalha se todos os cactos adjacentes estiverem totalmente crescidos e em ordem. Isso significa que se um quadrado de cactos crescidos estiver ordenado por tamanho e você colher um cacto, ele irá colher o quadrado inteiro.
+A colheita só se espalhará se todos os catos adjacentes estiverem totalmente crescidos e em ordem.
+Isto significa que se um quadrado de catos crescidos estiver ordenado por tamanho e tu colheres um cato, ele colherá o quadrado inteiro.
 
-Você receberá cactos igual ao número de cactos colhidos ao quadrado. Então, se você colher `n` cactos simultaneamente, você receberá `n**2` `Items.Cactus`.
+Um cato totalmente crescido aparecerá castanho se não estiver ordenado. Uma vez ordenado, voltará a ficar verde.
 
-O tamanho de um cacto pode ser medido com `measure()`.
-Ele sempre será um destes números: `0,1,2,3,4,5,6,7,8,9`.
+Receberás catos em quantidade igual ao número de catos colhidos ao quadrado. Portanto, se colheres `n` catos simultaneamente, receberás `n**2` `Items.Cactus`.
 
-Você também pode passar uma direção para `measure(direction)` para medir o azulejo vizinho naquela direção do drone.
+O tamanho de um cato pode ser medido com `measure()`.
+É sempre um destes números: `0,1,2,3,4,5,6,7,8,9`.
 
-Você pode trocar um cacto com seu vizinho em qualquer direção usando o comando `swap()`. `swap(direction)` troca o objeto sob o drone com o objeto uma casa na `direction` do drone.
+Podes também passar uma direção para `measure(direction)` para medir o quadrado vizinho nessa direção do drone.
+
+Podes trocar um cato com o seu vizinho em qualquer direção usando o comando `swap()`.
+`swap(direction)` troca o objeto debaixo do drone com o objeto um quadrado na `direction` do drone.
 
 ## Exemplos
-Em cada uma dessas grades, todos os cactos estão em ordem e a colheita se espalhará por todo o campo:
+Em cada uma destas grelhas, todos os catos estão em ordem e a colheita espalhar-se-á por todo o campo:
 `3 4 5    3 3 3    1 2 3    1 5 9
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-Nesta grade, apenas o cacto no canto inferior esquerdo está em ordem, o que não é suficiente para se espalhar:
+Nesta grelha, apenas o cato inferior esquerdo está em ordem, o que não é suficiente para que se espalhe:
 `1 5 3
 4 9 7
 3 3 2`
 
 <spoiler=mostrar dica 1>
-Se cada coluna e cada linha do campo estiverem ordenadas, então o campo inteiro está ordenado.
+Se as linhas já estiverem ordenadas, ordenar as colunas não desordenará as linhas.
 </spoiler>
 <spoiler=mostrar dica 2>
-Se você não estiver familiarizado com algoritmos de ordenação, pode querer pesquisá-los online e pensar em quais poderiam ser adaptados para este problema.
+Se não estás familiarizado com algoritmos de ordenação, talvez queiras pesquisá-los online e pensar em quais poderiam ser adaptados a este problema. Tem em mente que nem todos funcionam porque só podes trocar catos vizinhos.
 </spoiler>

@@ -1,27 +1,27 @@
 # Цикл For
-Цикл `for` работает как в Python. (В некоторых языках называется foreach-цикл, не путать с for-циклом в стиле C, который отличается).
+Цикл `for` работает как в Python. (В некоторых языках называется циклом foreach, не путать с циклом for в стиле C, который является другой конструкцией).
 
 `for i in sequence:
-	#do something with i`
+	#сделать что-то с i`
 
-Подобно циклу `while`, цикл `for` также многократно вызывает блок кода. Вместо цикла, основанного на условии, он выполняет тело цикла один раз для каждого элемента в последовательности.
+Подобно циклу `while`, цикл `for` также многократно вызывает блок кода. Вместо того чтобы циклически выполняться на основе условия, он выполняет тело цикла один раз для каждого элемента в последовательности.
 
 ## Синтаксис
 Цикл for выглядит так:
 
 `for variable_name in sequence:
-	#code block`
+	#блок кода`
 
-`variable_name` может быть любым названием, которое вы выберете. Это переменная, которая хранит текущий элемент в последовательности. `sequence` должна быть значением, по которому можно пройти, например, диапазон или числа. Код выполняется для каждого элемента, при этом переменной цикла присваивается этот элемент.
+`variable_name` может быть любым именем, которое вы выберете. Это переменная, которая хранит текущий элемент в последовательности. `sequence` должно быть некоторым значением, которое можно перебирать, например, диапазоном чисел. Блок кода выполняется для каждого элемента, при этом переменная цикла присваивается этому элементу.
 
 ## Последовательности
-[Ranges](functions/range)      <unlock=lists>[Списки](docs/scripting/lists.md)      </unlock><unlock=functions>[Кортежи](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+[Диапазоны (Ranges)](functions/range)      <unlock=lists>[Списки (Lists)](docs/scripting/lists.md)      </unlock><unlock=functions>[Кортежи (Tuples)](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Пример
 `for i in range(5):
     harvest()`
 
-Этот цикл выполняет тело фиксированное количество раз. По сути, это то же самое, что и написание
+Этот цикл выполняет тело фиксированное количество раз. По сути, это то же самое, что написать
 
 `i = 0
 harvest()
@@ -36,4 +36,4 @@ harvest()`
 
 Таким образом, он вызывает `harvest()` 5 раз.
 
-Смотрите также [Break](docs/scripting/break.md) и [Continue](docs/scripting/continue.md)
+См. также [Break](docs/scripting/break.md) и [Continue](docs/scripting/continue.md)

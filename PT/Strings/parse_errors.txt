@@ -1,30 +1,30 @@
-@error_missing_default_parameter = Todos os argumentos default precisam estar no final da lista de argumentos.
-@error_invalid_name = {0} não é um nome válido. Os nomes devem começar com uma letra e podem conter apenas letras, números e underlines. Também não pode ser uma palavra reservada.
-@error_reserved_keyword = {0} é uma palavra reservada. Você não pode usá-la como nome.
+@error_missing_default_parameter = Todos os argumentos default têm de estar no final da lista de argumentos.
+@error_invalid_name = {0} não é um nome válido. Os nomes devem começar com uma letra e só podem conter letras, dígitos e underscores. Também não pode ser uma palavra-chave reservada.
+@error_reserved_keyword = {0} é uma palavra-chave reservada. Não a podes usar como nome.
 @error_invalid_assign_expr = Não é possível atribuir um valor a esta expressão.
-@error_no_statements = Um bloco de código deve conter pelo menos uma instrução.  
-Uma instrução pode ser uma chamada de função como `harvest()` ou uma atribuição de variável.  
-Se você deseja não fazer nada no bloco de código, use uma instrução `pass`.
-@error_not_enough_indentation = Não há indentação suficiente aqui.  
-Deve haver mais indentação após um : do que antes, para separar o novo bloco de código.  
-Use a tecla Tab para indentar o código.
-@error_too_much_indentation = Aqui há muita indentação.  
+@error_no_statements = Um bloco de código deve conter pelo menos uma instrução.
+Uma instrução pode ser uma chamada de função como `harvest()` ou uma atribuição de variável.
+Se desejas não fazer nada no bloco de código, usa uma instrução `pass`.
+@error_not_enough_indentation = Não há indentação suficiente aqui.
+Deve haver mais indentação depois de um : do que antes para separar o novo bloco de código.
+Usa a tecla Tab para indentar o código.
+@error_too_much_indentation = Há demasiada indentação aqui.
 A indentação deve ser a mesma para todas as instruções dentro de um bloco de código.
-@error_not_a_statement = Esta não é uma declaração válida.
-@error_not_a_statement2 = Esta não é uma declaração válida. Você quis dizer {0}?
-@error_invalid_expression = Esta não é uma expressão válida.
-@error_new_line_expected = Uma nova linha é esperada aqui.
-@error_unexpected_token = Espera-se um {0} aqui.
-@error_missing_colon = Deve haver dois-pontos `:` no início de cada bloco de código.
-@error_unexpected_assign = Aqui você não pode fazer uma atribuição. Para verificar a igualdade, use `==`.
-@error_invalid_for_syntax = Isto não é um loop `for` válido. Um loop `for` parece assim: 
+@error_not_a_statement = Isto não é uma instrução válida.
+@error_not_a_statement2 = Isto não é uma instrução válida. Querias escrever {0}?
+@error_invalid_expression = Isto não é uma expressão válida.
+@error_new_line_expected = É esperada uma nova linha aqui.
+@error_unexpected_token = É esperado um {0} aqui.
+@error_missing_colon = Tem de haver dois pontos `:` no início de cada bloco de código.
+@error_unexpected_assign = Não podes fazer uma atribuição aqui. Para verificar a igualdade, usa `==` em vez disso.
+@error_invalid_for_syntax = Isto não é um loop for válido. Um loop for tem este aspeto:
 `for n in range(3):`
 O `for` é sempre seguido pela variável do loop, um `in` e depois uma sequência. Neste exemplo, o `n` é o nome da variável, mas pode ser substituído por qualquer outro nome.
 @error_unknown_method = Este método não existe.
-@error_bad_backslash = A barra invertida pode ser usada para dividir expressões em várias linhas. Mas você precisa adicionar uma nova linha depois.
-@error_mixed_indentation = As teclas de tabulação e espaços não devem ser misturados.
-@error_expected_close_token = Esperava uma vírgula ou fechar parênteses.
-@error_wrong_dict_literal = Esperava um : para separar as chaves e os valores de um dictionary.
+@error_bad_backslash = A barra invertida pode ser usada para dividir expressões em várias linhas. Mas precisas de adicionar uma nova linha a seguir.
+@error_mixed_indentation = Tabs e espaços não devem ser misturados.
+@error_expected_close_token = Esperava-se uma vírgula ou um parêntese de fecho.
+@error_wrong_dict_literal = Esperava-se um : para separar as chaves e os valores de um dictionary.
 @error_assign_before_global = {0} é atribuído antes de uma declaração global.
 @error_wildcard_imports_not_allowed_in_function = Importações da forma `from x import *` não são permitidas dentro de funções.
-@error_invalid_import = Você não pode importar arquivos com nomes que não são identificadores válidos. Identificadores válidos podem conter apenas letras, números e underscores. Se o nome do seu arquivo contiver outros caracteres, você deve renomeá-lo.
+@error_invalid_import = Não podes importar ficheiros com nomes que não sejam identificadores válidos. Identificadores válidos só podem conter letras, números e underscores. Se o nome do teu ficheiro contiver outros caracteres, deves renomeá-lo.

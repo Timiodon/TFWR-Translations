@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = {0} satın almaya çalışıldı ama gerekli kaynaklar yoktu.
-@warning_no_space_to_plant = {0} ekmeye çalıştım ama zaten orada bir şey vardı.
-@warning_cant_plant_on_ground = {1} üzerinde {0} ekilemez.
-@warning_missing_seed = Gerekli öğeler olmadığı için {0} ekilemedi.
-@warning_no_item_to_use = {0} kullanılmaya çalışıldı ama yeterli miktarda yoktu.
-@warning_failed_swap_wrap = Çiftlik sınırlarının ötesinde bir değiş tokuş yapmaya çalışıldı. Bu izin verilmiyor.
-@warning_failed_swap_unswappable = {0} değiştirilmeye çalışıldı, ancak bu değiştirilemez.
-@warning_weird_substance_not_divisible = Eksik Miktarda Weird Substance kullandın, bu da labirenti oluşturmak için gereken miktara tam olarak uymuyor. Labirenti yükselttikçe ihtiyaç duyulan Weird Substance miktarının arttığını unutma.
+@warning_not_enough_items_to_trade = {0} satın alınmaya çalışıldı ancak gerekli kaynaklar yoktu.
+@warning_no_space_to_plant = {0} ekilmeye çalışıldı ama orada zaten bir şey vardı.
+@warning_cant_plant_on_ground = {0}, {1} üzerine ekilemez.
+@warning_missing_seed = {0} ekmek için gerekli eşyalar yoktu.
+@warning_no_item_to_use = {0} kullanılmaya çalışıldı ama yeterince yoktu.
+@warning_failed_swap_wrap = Çiftlik sınırları üzerinden bir takas yapılmaya çalışıldı. Buna izin verilmez.
+@warning_failed_swap_unswappable = Takas edilemeyen {0} takas edilmeye çalışıldı.
+@warning_weird_substance_not_divisible = Labirenti oluşturmak için gereken sayıdan farklı bir sayıda Garip Madde kullandın. Labirent yükselttikçe gereken Garip Madde miktarının arttığını unutma.
 
-Tam boyutlu bir labirenti çıkartmak için şunları yap:
+Tam boyutlu bir labirent oluşturmak için:
 `plant(Entities.Bush)
 substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Simülasyonlar ve leaderboard çalışmaları, başka simülasyonlar ve leaderboard çalışmaları içerisinden başlatılamaz.
+@warning_recursive_simulation = Simülasyonlar ve leaderboard çalıştırmaları, diğer simülasyonlar ve leaderboard çalıştırmaları içinden başlatılamaz.

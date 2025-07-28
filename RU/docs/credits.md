@@ -1,4 +1,4 @@
-# Благодарности
+# Авторы
 
 ## The Farmer Was Replaced
 

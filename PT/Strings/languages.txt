@@ -1,5 +1,5 @@
 @language = Idioma
-@EN = Português
+@EN = Inglês
 @FR = Francês
 @DE = Alemão
 @ES = Espanhol
@@ -11,4 +11,4 @@
 @TR = Turco
 @AR = Árabe
 @RU = Russo
-@PL = Polonês
+@PL = Polaco

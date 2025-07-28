@@ -1,27 +1,27 @@
 # Pętla For
-Pętla `for` działa tak samo jak w Pythonie. (W niektórych językach nazywana jest pętlą foreach, nie mylić z pętlą typu C, która działa inaczej).
+Pętla `for` działa jak w Pythonie. (Nazywana pętlą foreach w niektórych językach, nie mylić z pętlą for w stylu C, która jest czymś innym).
 
 `for i in sequence:
-	#do something with i`
+	#zrób coś z i`
 
-Podobnie jak pętla `while`, pętla `for` również wielokrotnie wykonuje blok kodu. Zamiast pętli opartej na warunku, wykonuje ciało pętli raz dla każdego elementu w sekwencji.
+Podobnie jak pętla `while`, pętla `for` również wielokrotnie wywołuje blok kodu. Zamiast pętli opartej na warunku, wykonuje ona ciało pętli raz dla każdego elementu w sekwencji.
 
 ## Składnia
 Pętla for wygląda tak:
 
-`for variable_name in sequence:
-	#code block`
+`for nazwa_zmiennej in sekwencja:
+	#blok kodu`
 
-`variable_name` może być dowolną nazwą, którą wybierzesz. To zmienna, która przechowuje bieżący element z sekwencji. `sequence` musi być wartością, którą można iterować, jak zakresem lub liczbami. Blok kodu jest wykonywany dla każdego elementu, przy czym zmienna pętli jest przypisana do tego elementu.
+`nazwa_zmiennej` może być dowolną wybraną przez ciebie nazwą. Jest to zmienna, która przechowuje bieżący element w sekwencji. `sekwencja` musi być jakąś wartością, po której można iterować, jak zakres lub liczby. Blok kodu jest wykonywany dla każdego elementu, z przypisaną do niego zmienną pętli.
 
 ## Sekwencje
-[Zakresy](functions/range)      <unlock=lists>[Listy](docs/scripting/lists.md)      </unlock><unlock=functions>[Krotki](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Słowniki](docs/scripting/dicts.md)      </unlock><unlock=sets>[Zbiory](docs/scripting/sets.md)</unlock>
+[Zakresy (Ranges)](functions/range)      <unlock=lists>[Listy (Lists)](docs/scripting/lists.md)      </unlock><unlock=functions>[Krotki (Tuples)](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Słowniki (Dictionaries)](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sety (Sets)](docs/scripting/sets.md)</unlock>
 
 ## Przykład
 `for i in range(5):
     harvest()`
 
-Ta pętla wykonuje ciało określoną liczbę razy. To zasadniczo to samo, co napisanie
+Ta pętla wykonuje swoje ciało ustaloną liczbę razy. Jest to w zasadzie to samo, co napisanie
 
 `i = 0
 harvest()
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-Czyli wywołuje `harvest()` 5 razy.
+Więc wywołuje `harvest()` 5 razy.
 
 Zobacz także [Break](docs/scripting/break.md) i [Continue](docs/scripting/continue.md)

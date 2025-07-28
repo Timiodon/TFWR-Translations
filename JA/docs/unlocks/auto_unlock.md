@@ -1,19 +1,19 @@
 # 自動アンロック
-ゲームを完全に自動化するためには、`unlock()` 関数を使って機能を自動でアンロックすることができます。
-例えば、`unlock(Unlocks.Speed)` や `unlock(Unlocks.Expand)` を使って、スピードと拡張機能をアンロックできます。
+ゲームを完全に自動化するには、`unlock()`関数を使用して機能を自動的にアンロックできます。
+たとえば、`unlock(Unlocks.Speed)`や`unlock(Unlocks.Expand)`を使用して、スピードや拡張機能をアンロックできます。
 
-アンロックにかかるコストを知りたいときは、植物やアイテムと同じように `get_cost()` 関数を使います。
+アンロックのコストを決定するには、作物やアイテムの場合と同じように`get_cost()`関数を使用します。
 例:
 `get_cost(Unlocks.Loops)`
-は `{Items.Hay:5}` を返します。
+`{Items.Hay:5}`を返します
 
-特定のアンロックをいくつ持っているか知りたいときは、`num_unlocked(unlock)` 関数を使います。
+特定のアンロックをいくつ持っているかを知りたい場合は、`num_unlocked(unlock)`関数を使用します。
 
-例えば、`num_unlocked(Unlocks.Speed)` はスピードのアップグレード数を返します。
+例えば、`num_unlocked(Unlocks.Speed)`は持っているスピードアップグレードの数を返します。
 
-`num_unlocked(Unlocks.Senses)` は、センサーがアンロックされている場合は `1` を返し、されていない場合は `0` を返します。
+`num_unlocked(Unlocks.Senses)`は、感覚がアンロックされていれば`1`を、されていなければ`0`を返します。
 
-アイテム、エンティティ、または地面でも `num_unlocked()` を使うことができ、アンロックされている場合は `1` を、そうでない場合は `0` を返します。
+`num_unlocked()`はItems、Entities、Groundsにも使用できます。これは、アンロックされていれば`1`を、そうでなければ`0`を返します。
 
-注意してください。`num_unlocked(Unlocks.Carrots)` はアンロック/アップグレードされた回数を返します。
-`num_unlocked(Items.Carrot)` は `0` か `1` だけを返します。（他の植物も同じです）
+`num_unlocked(Unlocks.Carrots)`はアンロック/アップグレードされた回数を返すことに注意してください。
+`num_unlocked(Items.Carrot)`は`0`か`1`しか返しません。（他の作物も同様です）

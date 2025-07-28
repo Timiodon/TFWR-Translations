@@ -1,24 +1,24 @@
-# Lider Tablosu
-Buraya kadar geldiysen, birçok zorluğun üstesinden geldin demektir. Ama onları verimli bir şekilde çözdün mü? 
-En verimli tarım yöntemleri için diğer oyuncularla çeşitli lider tablolarında yarışabilirsin.
+# Leaderboard
+Eğer bu kadar ileri geldiysen, birçok zorluğun üstesinden geldin. Ama onları verimli bir şekilde çözdün mü? 
+En verimli çiftçilik yöntemleri için çeşitli leaderboard'larda diğer oyuncularla rekabet edebilirsin.
 
-Lider tablosu koşusuna `leaderboard_run(leaderboard, filename, speedup)` işlevini çağırarak başlayabilirsin.
-Bu, başlangıç koşullarının sabit olduğu bir [simülasyon](docs/unlocks/simulation.md) başlatır. Her lider tablosu kategorisinin farklı başlangıç ve başarı koşulları vardır.
+`leaderboard_run(leaderboard, filename, speedup)` çağırarak bir leaderboard koşusu başlatabilirsin.
+Bu, başlangıç koşullarının sabit olması dışında `simulate()`'e benzer bir [simülasyon](docs/unlocks/simulation.md) başlatır. Her leaderboard kategorisinin farklı başlangıç ve başarı koşulları vardır.
 
-Lider tablosu koşusu, simülasyon sona erdiğinde başarı koşulu `True` ise başarıyla tamamlanmış olur. Hedefe ulaşıldığında simülasyon otomatik olarak sona ermez. Programın sonlandığından emin olmalısın.
-Koşu başarılı olursa, süren lider tablosuna eklenir.
+Simülasyon sona erdiğinde başarı koşulu `True` ise leaderboard koşusu başarılı olur. Hedefe ulaşıldığında simülasyon otomatik olarak sona ermez. Programın sonlandığından emin olmalısın.
+Eğer koşu başarılı olursa, süren leaderboard'a eklenecektir.
 
-Varyansı azaltmak için, tüm koşuların en az 2 saat sürmesi gerekiyor (Hızı artırabilirsin, bu yüzden o kadar uzun sürmez). Bir koşu daha erken tamamlanırsa, toplamda 2 saat sürene kadar tekrarlanır. Tüm koşuların ortalaması puanın olarak yüklenir.
+Varyansı azaltmak için, tüm koşuların en az 2 saat sürmesi gerekir (Hızlandırabilirsin, bu yüzden o kadar uzun sürmez). Bir koşu daha erken tamamlanırsa, toplam 2 saatlik bir süreye ulaşılana kadar tekrarlanır. Ardından tüm koşuların ortalaması puanın olarak yüklenir.
 
-İşte seni saman lider tablosuna sokacak bir örnek kurulum.
+İşte seni saman leaderboard'una sokacak bir örnek kurulum.
 ![](LeaderboardSetup400)
 
-## En Hızlı Reset
-En hızlı reset, en prestijli kategoridir. Tek bir çiftlik arsağından tamamen otomatik hale gelerek lider tablolarını tekrar açmak için uğraş.
+## En Hızlı Sıfırlama
+En hızlı sıfırlama en prestijli kategoridir. Tek bir çiftlik parselinden başlayarak leaderboard'ları tekrar açmaya kadar oyunu tamamen otomatikleştir.
 
-Her şeyi açmana gerek yok, `Unlocks.Leaderboard` kilidini mümkün olan en hızlı şekilde açmayı dene.
+Her şeyin kilidini açmak zorunda değilsin, sadece `Unlocks.Leaderboard`'u olabildiğince hızlı açmaya çalış.
 
-Bir şeyin açılıp açılmadığını kontrol etmek için `num_unlocked(unlock) > 0` kullanabileceğini ve doğru öğeleri otomatik olarak çiftleyebilmen için onların maliyetini görmek amacıyla açılanlar üzerinde `get_cost()` kullanabileceğini unutma.
+Bir şeyin kilidinin açık olup olmadığını kontrol etmek için `num_unlocked(unlock) > 0` kullanabileceğini ve ne kadara mal olduklarını görmek için kilit açmalarda `get_cost()` kullanabileceğini unutma, böylece doğru eşyaları otomatik olarak toplayabilirsin.
 
 Fonksiyon Çağrısı:
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
@@ -27,7 +27,7 @@ Eşdeğer Simülasyon:
 `unlocks = {}
 items = {}
 globals = {}
-#negatif bir tohum değeri rastgele bir tohum demektir
+#negatif bir tohum değeri rastgele bir tohum anlamına gelir
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
@@ -35,7 +35,7 @@ Başarı Koşulu:
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
 ## Labirent
-Her şeyin kilidi açılmış olarak başlayın ve mümkün olduğunca hızlı bir şekilde `300000` altın toplayın. Bu miktarda altını, bir labirenti `300` kez çözerek kazanabilirsiniz.
+Her şeyin kilidi açık olarak başla ve olabildiğince hızlı `300000` altın topla. Bu, bir labirenti `300` kez çözerek kazanacağın altın miktarıdır.
 
 Fonksiyon Çağrısı:
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
@@ -51,7 +51,7 @@ Başarı Koşulu:
 `num_items(Items.Gold) >= 300000`
 
 ## Dinozor
-Her şeyin kilidi açılmış olarak başlayın ve mümkün olduğunca hızlı `98010` kemik toplayın. Bu, dinozor kuyruğu ile 10x10 bir alanı doldurduğunuzda elde edeceğiniz kemik sayısıdır.
+Her şeyin kilidi açık olarak başla ve olabildiğince hızlı `98010` kemik topla. Bu, 10x10'luk bir alanı dinozor kuyruğu ile doldurursan alacağın kemik sayısıdır.
 
 Fonksiyon Çağrısı:
 `leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
@@ -66,8 +66,8 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 Başarı Koşulu:
 `num_items(Items.Bone) >= 98010`
 
-## Diğer Kaynak Lider Tabloları
-Her bitki, o bitkiden mümkün olduğunca hızlı çiftlemek için kendi lider tablosuna sahiptir. Tüm kilitler açılmış olarak başlarsınız, bitkiyi yetiştirmek için gerekli kaynaklar ve bol miktarda enerji mevcuttur. Amaç, bitkinin ürettiği kaynaktan `100000` çiftlemektir.
+## Diğer Kaynak Leaderboard'ları
+Her bitkinin, o bitkiyi olabildiğince hızlı bir şekilde toplamak için kendi leaderboard'u vardır. Tüm kilit açmalarla, bitkiyi yetiştirmek için ihtiyacın olan kaynaklarla ve bolca güçle başlarsın. Amaç, bitkinin ürettiği kaynaktan `100000` tane toplamaktır.
 
 Fonksiyon Çağrıları:
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
@@ -81,4 +81,4 @@ Fonksiyon Çağrıları:
 Başarı Koşulu:
 `num_items(resource) >= 100000`
 
-`Leaderboards.Polyculture` üç poli-kültür kaynağından her birinden `100000` çiftlemeyi gerektirir.
+`Leaderboards.Polyculture`, üç polikültür kaynağından da `100000` tane toplamayı gerektirir.

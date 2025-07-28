@@ -1,48 +1,118 @@
-@unlock_tooltip_template_cost = ### Costo di Sblocco {{{{itemblock cost unlock {0}}}}}
-@unlock_descr_trees = Sblocca la coltivazione degli alberi.
+@unlock_tooltip_template_cost = ### Costo Sblocco {{{{itemblock cost unlock {0}}}}}
+@unlock_descr_trees = Sblocca gli alberi.
+
+`plant(Entities.Trees)`
 @unlock_descr_speed = Aumenta la velocità del drone.
-@unlock_descr_plant = Sblocca la possibilità di piantare.
-@unlock_descr_loops = Sblocca i cicli "while" semplici.
-@unlock_descr_senses = Permette al drone di rilevare ciò che ha sotto e la propria posizione.
-@unlock_descr_expand = Espande l’area coltivabile e abilita il movimento.
-@unlock_descr_auto = Automatizza le azioni. Permette di scrivere codice che gioca al posto tuo.
-@unlock_descr_operators = Sblocca operatori aritmetici, logici e di confronto.
+@unlock_descr_plant = Sblocca la semina.
+
+`plant(Entities.Bush)`
+@unlock_descr_loops = Sblocca un semplice ciclo while.
+
+`while True:
+    harvest()`
+@unlock_descr_senses = Il drone può vedere cosa c'è sotto di lui e dove si trova.
+
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
+@unlock_descr_expand = Espande il terreno agricolo e sblocca il movimento.
+@unlock_descr_operators = Operatori aritmetici, di confronto e logici.
+
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
 @unlock_descr_pumpkin = Zucche!
-@unlock_descr_variables = Permette di usare variabili per memorizzare valori.
-@unlock_descr_functions = Consente di definire funzioni personalizzate.
-@unlock_descr_watering = Permette di annaffiare le piante per farle crescere più in fretta.
-@unlock_descr_carrots = Zappa il terreno e pianta carote.
-@unlock_descr_lists = Usa liste per memorizzare più valori.
-@unlock_descr_costs = Mostra il costo degli oggetti.
-@unlock_descr_fertilizer = Coltiva istantaneamente usando il fertilizzante.
-@unlock_descr_mazes = Un labirinto con un tesoro al centro.
+
+`plant(Entities.Pumpkin)`
+@unlock_descr_variables = Assegna valori alle variabili.
+
+`next_plant = Entities.Bush
+plant(next_plant)`
+@unlock_descr_functions = Definisci le tue funzioni.
+
+`def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()`
+@unlock_descr_watering = Innaffia le piante per farle crescere più velocemente.
+
+`use_item(Items.Water)`
+@unlock_descr_carrots = Ara il terreno e pianta le carote.
+
+`till()
+plant(Entities.Carrot)`
+@unlock_descr_lists = Usa le liste per memorizzare molti valori.
+
+`plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)`
+@unlock_descr_costs = Permette l'accesso al costo delle cose.
+
+`cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]`
+@unlock_descr_fertilizer = Fai crescere le piante istantaneamente.
+
+`use_item(Items.Fertilizer)`
+@unlock_descr_mazes = Un labirinto con un tesoro nel mezzo.
+
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
 @unlock_descr_debug = Strumenti per aiutare nel debugging dei programmi.
-@unlock_descr_debug2 = Funzioni per rallentare temporaneamente l'esecuzione e ridurre la dimensione della griglia.
-@unlock_descr_benchmark = Funzioni per aiutare a misurare le prestazioni del codice.
+
+`print("hi")`
+@unlock_descr_debug2 = Funzioni per rallentare temporaneamente l'esecuzione e rendere la fattoria più piccola.
+
+`set_world_size(3)
+set_execution_speed(1)`
 @unlock_descr_grass = Aumenta la resa dell'erba.
-@unlock_descr_multi_trade = Scambia più oggetti contemporaneamente.
-@unlock_descr_auto_unlock = Sblocca automaticamente nuove funzionalità.
-@unlock_descr_polyculture = Usa la consociazione per aumentare il raccolto.
-@unlock_descr_sunflowers = Girasoli e produzione di energia.
-@unlock_descr_reset = Riparti da capo per ottenere profitti maggiori.
+
+`harvest()`
+@unlock_descr_auto_unlock = Sblocca le cose automaticamente.
+
+`unlock(Unlocks.Megafarm)`
+@unlock_descr_polyculture = Usa la consociazione di piante per aumentare la resa.
+
+`plant_type, (x, y) = get_companion()`
+@unlock_descr_sunflowers = Girasoli ed Energia.
+
+`plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = Unisciti al leaderboard per il tempo di reset più veloce.
-@unlock_descr_dicts = Sblocca l’uso di dizionari e set.
+
+`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+@unlock_descr_dicts = Ottieni accesso a dizionari e set.
+
+`right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Sblocca le funzioni `min()`, `max()`, `abs()` e `random()`.
+
+`random_index = random() * len(list) // 1`
 @unlock_descr_cactus = Cactus!
+
+`plant(Entities.Cactus)`
 @unlock_descr_dinosaurs = Maestose creature antiche.
 @unlock_descr_simulation = Testa più velocemente e in condizioni riproducibili.
-@unlock_descr_timing = Finalmente!
-@unlock_descr_import = Permette di importare elementi da altri file.
+
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@unlock_descr_timing = È ora!
+
+`passed_time = get_time()`
+@unlock_descr_import = Importa elementi da altri file.
+
+`import other_file
+other_file.function()`
 @unlock_descr_megafarm = Fattoria molto più grande con molti droni.
-@multi_unlock_descr_expand = Espande e ripulisce l’area della fattoria.
+
+`spawn_drone(file_to_run)`
+@multi_unlock_descr_expand = Espande la fattoria. Questo pulisce anche la fattoria.
 @multi_unlock_descr_carrots = Aumenta la resa e il costo delle carote.
-@multi_unlock_descr_trees = Aumenta la resa dei cespugli e degli alberi.
+@multi_unlock_descr_trees = Aumenta la resa di cespugli e alberi.
 @multi_unlock_descr_pumpkins = Aumenta la resa e il costo delle zucche.
-@multi_unlock_descr_mazes = Aumenta l'oro nei forzieri e la quantità di sostanza strana necessaria per generare un labirinto.
-@multi_unlock_descr_sunflowers = Aumenta la potenza ottenuta dai girasoli.
-@multi_unlock_descr_cactus = Aumenta la resa e il costo del cactus.
+@multi_unlock_descr_mazes = Aumenta l'oro nei forzieri e la quantità di sostanza strana necessaria per creare un labirinto.
+@multi_unlock_descr_sunflowers = Aumenta l'energia ottenuta dai girasoli.
+@multi_unlock_descr_cactus = Aumenta la resa e il costo dei cactus.
 @multi_unlock_descr_dinosaur = Aumenta la resa e il costo dei dinosauri.
 @multi_unlock_descr_polyculture = Aumenta il moltiplicatore di resa della policoltura.
 @multi_unlock_descr_watering = Ricevi più acqua.
 @multi_unlock_descr_fertilizer = Ricevi più fertilizzante.
-@multi_unlock_descr_megafarm = Aumenta ulteriormente la dimensione della fattoria e il numero di droni.
+@multi_unlock_descr_megafarm = Aumenta ulteriormente le dimensioni della fattoria e il numero di droni.

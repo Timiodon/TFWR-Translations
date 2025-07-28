@@ -1,48 +1,118 @@
 @unlock_tooltip_template_cost = ### アンロックコスト {{{{itemblock cost unlock {0}}}}}
 @unlock_descr_trees = 木をアンロックします。
-@unlock_descr_speed = ドローンの速度が上がります。
-@unlock_descr_plant = 植えることができるようになるよ。
-@unlock_descr_loops = シンプルなwhileループをアンロックします。
-@unlock_descr_senses = ドローンは自分の下にあるものと、いる場所を確認することができるよ。
-@unlock_descr_expand = 農地を広げて、移動を解放しよう。
-@unlock_descr_auto = 自動でアンロックしよう。これでゲーム全体をプレイするコードが作れるよ。
-@unlock_descr_operators = 算術、比較、論理オペレーター。
-@unlock_descr_pumpkin = かぼちゃ！
-@unlock_descr_variables = 変数に値を割り当てよう。
-@unlock_descr_functions = 自分の関数を定義しよう。
-@unlock_descr_watering = 植物に水をやって、早く成長させよう。
-@unlock_descr_carrots = 土を耕してニンジンを植えよう。
-@unlock_descr_lists = リストを使ってたくさんの値を保存しよう。
-@unlock_descr_costs = もののコストにアクセスできるようにします。
-@unlock_descr_fertilizer = 植物を瞬時に育てよう。
+
+`plant(Entities.Trees)`
+@unlock_descr_speed = ドローンの速度を上げます。
+@unlock_descr_plant = 植え付けをアンロックします。
+
+`plant(Entities.Bush)`
+@unlock_descr_loops = 単純なwhileループをアンロックします。
+
+`while True:
+    harvest()`
+@unlock_descr_senses = ドローンは自分の下にあるものと自分の位置を確認できるようになります。
+
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
+@unlock_descr_expand = 農地を拡大し、移動をアンロックします。
+@unlock_descr_operators = 算術、比較、論理演算子。
+
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
+@unlock_descr_pumpkin = カボチャ！
+
+`plant(Entities.Pumpkin)`
+@unlock_descr_variables = 変数に値を代入します。
+
+`next_plant = Entities.Bush
+plant(next_plant)`
+@unlock_descr_functions = 独自の関数を定義します。
+
+`def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()`
+@unlock_descr_watering = 植物に水をやって成長を早めます。
+
+`use_item(Items.Water)`
+@unlock_descr_carrots = 土を耕してニンジンを植えます。
+
+`till()
+plant(Entities.Carrot)`
+@unlock_descr_lists = リストを使ってたくさんの値を保存します。
+
+`plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)`
+@unlock_descr_costs = 物のコストにアクセスできるようになります。
+
+`cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]`
+@unlock_descr_fertilizer = 植物を即座に成長させます。
+
+`use_item(Items.Fertilizer)`
 @unlock_descr_mazes = 中央に宝物がある迷路。
-@unlock_descr_debug = プログラムのデバッグをお手伝いするツール。
-@unlock_descr_debug2 = 実行速度を一時的に遅くして、グリッドを小さくする関数。
-@unlock_descr_benchmark = パフォーマンスを測定するための関数。
-@unlock_descr_grass = 草の収穫量が増えます。
-@unlock_descr_multi_trade = 一度に複数のアイテムを交換しよう。
-@unlock_descr_auto_unlock = 自動でアンロックしよう。
-@unlock_descr_polyculture = 連作障害を避けて収穫を増やそう。
-@unlock_descr_sunflowers = ひまわりとパワー。
-@unlock_descr_reset = もう一度やり直してもっとお金を稼ごう。
-@unlock_descr_leaderboard = 最速リセットタイムでリーダーボードに参加しよう。
-@unlock_descr_dicts = 辞書とセットにアクセスしよう。
-@unlock_descr_utilities = `min()`、`max()`、`abs()`、`random()` 関数がアンロックされます。
+
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
+@unlock_descr_debug = プログラムのデバッグに役立つツール。
+
+`print("hi")`
+@unlock_descr_debug2 = 実行を一時的に遅くし、農場を小さくする関数。
+
+`set_world_size(3)
+set_execution_speed(1)`
+@unlock_descr_grass = 草の収穫量を増やします。
+
+`harvest()`
+@unlock_descr_auto_unlock = 物事を自動的にアンロックします。
+
+`unlock(Unlocks.Megafarm)`
+@unlock_descr_polyculture = コンパニオンプランティングを使って収穫量を増やします。
+
+`plant_type, (x, y) = get_companion()`
+@unlock_descr_sunflowers = ヒマワリとパワー。
+
+`plant(Entities.Sunflowers)`
+@unlock_descr_leaderboard = 最速リセットタイムのleaderboardに参加します。
+
+`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+@unlock_descr_dicts = dictionariesとsetsへのアクセスを取得します。
+
+`right_of = {North:East, East:South, South:West, West:North}`
+@unlock_descr_utilities = `min()`、`max()`、`abs()`、`random()`関数をアンロックします。
+
+`random_index = random() * len(list) // 1`
 @unlock_descr_cactus = サボテン！
-@unlock_descr_dinosaurs = 荘厳な古代の生き物。
-@unlock_descr_simulation = テストはもっと速く、再現可能な条件下で行おう。
-@unlock_descr_timing = そろそろだね！
-@unlock_descr_import = 他のファイルからものをインポートしよう。
-@unlock_descr_megafarm = もっと大きな農場とたくさんのドローン。
-@multi_unlock_descr_expand = 農場を拡張します。これにより、農場もクリアされます。
-@multi_unlock_descr_carrots = にんじんの収穫量とコストを増やします。
+
+`plant(Entities.Cactus)`
+@unlock_descr_dinosaurs = 壮大な古代の生き物。
+@unlock_descr_simulation = より速く、再現可能な条件下でテストします。
+
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@unlock_descr_timing = 時は来た！
+
+`passed_time = get_time()`
+@unlock_descr_import = 他のファイルから物事をインポートします。
+
+`import other_file
+other_file.function()`
+@unlock_descr_megafarm = 多数のドローンを持つはるかに大きな農場。
+
+`spawn_drone(file_to_run)`
+@multi_unlock_descr_expand = 農場を拡大します。これにより農場もクリアされます。
+@multi_unlock_descr_carrots = ニンジンの収穫量とコストを増やします。
 @multi_unlock_descr_trees = 茂みと木の収穫量を増やします。
-@multi_unlock_descr_pumpkins = かぼちゃの収穫量とコストを増やします。
-@multi_unlock_descr_mazes = 宝箱のゴールドを増やし、迷路を作り出すのに必要な不思議な物質の量を増やします。
-@multi_unlock_descr_sunflowers = ひまわりから得られるパワーを増加させます。
+@multi_unlock_descr_pumpkins = カボチャの収穫量とコストを増やします。
+@multi_unlock_descr_mazes = 宝箱のゴールドと、迷路をスポーンするために必要な奇妙な物質の量を増やします。
+@multi_unlock_descr_sunflowers = ヒマワリから得られるパワーを増やします。
 @multi_unlock_descr_cactus = サボテンの収穫量とコストを増やします。
-@multi_unlock_descr_dinosaur = 恐竜の収穫量とコストを増加させます。
-@multi_unlock_descr_polyculture = ポリカルチャーの収量倍率を増加させる。
-@multi_unlock_descr_watering = もっと水を受け取ろう。
-@multi_unlock_descr_fertilizer = もっと肥料を手に入れよう。
-@multi_unlock_descr_megafarm = 農場のサイズとドローンの数をさらに増やそう。
+@multi_unlock_descr_dinosaur = 恐竜の収穫量とコストを増やします。
+@multi_unlock_descr_polyculture = 混作の収穫量乗数を増やします。
+@multi_unlock_descr_watering = より多くの水を受け取ります。
+@multi_unlock_descr_fertilizer = より多くの肥料を受け取ります。
+@multi_unlock_descr_megafarm = 農場サイズとドローン数をさらに増やします。

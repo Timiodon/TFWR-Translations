@@ -1,73 +1,74 @@
-@error_code_after_block = 这里不应该有代码。试着移除它或者把它放在新的一行。
+@error_code_after_block = 这里不应该有任何代码。尝试移除它或把它放在新的一行。
 @error_wrong_number_args = {0} 需要 {1} 个参数。
-@error_expected_no_args = {0} 不需要传递任何参数。
-@error_wrong_args = {0} 的参数 {1} 是 {2}。这不是一个有效的参数。
-@error_syntax_error_in_import = 导入模块有语法错误。
-@error_module_not_found = 此名称的模块不存在。名称需要与文件名匹配。这是在窗口顶部显示的名称。
-@error_list_element_not_found = {0} 不在列表中。
-@error_set_element_not_found = {0} 不是该 set 的元素。
-@error_index_out_of_bounds = 索引{0}超出了列表{1}的范围。
-@error_index_out_of_bounds2 = 索引超出了列表的范围。
+@error_expected_no_args = {0} 不需要任何参数。
+@error_wrong_args = {1} 的第 {0} 个参数是 {2}。这不是一个有效的参数。
+@error_syntax_error_in_import = 导入的模块有语法错误。
+@error_module_not_found = 不存在这个名称的模块。名称需要与文件名匹配。这个名称是窗口顶部显示的名称。
+@error_list_element_not_found = {0} 不是 list 中的一个元素。
+@error_set_element_not_found = {0} 不是 set 的一个元素。
+@error_index_out_of_bounds = 索引 {0} 超出了 list {1} 的范围。
+@error_index_out_of_bounds2 = 索引超出了 list 的范围。
 @error_arith_assign_not_used_on_number = {0} 只能用于数字。
-@error_bool_op_not_used_on_bool = 逻辑运算符只能用于计算结果为`True`或`False`的布尔表达式。
-@error_bad_bin_operator = 操作符 {0} 不能用于操作数 {1} 和 {2}。
-@error_bad_unary_operator = 操作符{0}不能用于{1}。
+@error_bool_op_not_used_on_bool = 逻辑运算符只能用于评估结果为 `True` 或 `False` 的布尔表达式。
+@error_bad_bin_operator = 运算符 {0} 不能用于操作数 {1} 和 {2}。
+@error_bad_unary_operator = 运算符 {0} 不能用于 {1}。
 @error_index = {0} 不能用作 {1} 的索引。
-@error_index_on_non_indexable = 你无法索引到{0}。
+@error_index_on_non_indexable = 你不能对 {0} 进行索引。
 @error_zero_step = 步长不能为零。
-@error_index_on_tuple = 你不能分配一个元组元素，因为元组是不可变的。
-@error_bad_key = {0} 不能作为一个 key 使用。
-@error_slice_dict = 无法对dictionary进行切片。
-@error_key = {0} 不是字典中的一个键。
-@error_condition_not_bool = {0} 不是一个有效的条件。条件必须是一个布尔值。这意味着它必须是一个始终为 `True` 或 `False` 的表达式。
-@error_for_requires_iterable = {0} 不能在 for 循环中进行迭代。for 循环需要提供一个序列来进行迭代。例如：
+@error_index_on_tuple = 你不能给 tuple 的元素赋值，因为 tuple 是不可变的。
+@error_bad_key = {0} 不能用作 key。
+@error_slice_dict = 不能对 dictionary 进行切片。
+@error_key = {0} 不是 dictionary 中的 key。
+@error_condition_not_bool = {0} 不是一个有效的条件。条件必须是一个布尔值。这意味着它必须是一个总是为 `True` 或 `False` 的表达式。
+@error_for_requires_iterable = {0} 不能在 for 循环中迭代。for 循环必须被给予一个序列来迭代。例如：
 
-`for i in range(5):`  
+`for i in range(5):`
 这里 range(5) 返回序列 `0,1,2,3,4`。
-@error_no_loop_to_break = `break`只能在循环内部使用。
-@error_no_loop_to_continue = `continue` 只能在循环内使用。
+@error_no_loop_to_break = `break` 只能在循环内部使用。
+@error_no_loop_to_continue = `continue` 只能在循环内部使用。
 @error_no_function_to_return_from = `return` 只能在函数内部使用。
-@error_missing_unlock = 在使用之前必须解锁。
-@error_missing_x_unlock = {0} 必须先解锁才能使用这个。
-@error_name_not_defined = {0} 从未被定义。你必须在使用变量之前为其赋值。
-@error_missing_import = {0} 从未被定义。它似乎在文件 {1} 中被定义了。是不是忘记导入它了？如果已经导入，可能是有一个导入循环（参见导入文档页面）。
-@error_missing_import_before_unlock = {0}从未被定义。看起来它是在文件{1}中定义的。你需要解锁导入功能，才能从其他文件中导入内容。
-@error_call_before_def = {0} 未被定义。它似乎在这个文件中的某个地方定义了，但定义还没有被执行。函数只能在 `def` 语句之后被调用。
-@error_not_a_function = 你试图调用一个不是函数的东西。一个常见的错误是变量与函数同名。
+@error_missing_unlock = 这个必须先解锁才能使用。
+@error_missing_x_unlock = 必须先解锁 {0} 才能使用这个。
+@error_name_not_defined = {0} 从未被定义过。在使用变量之前必须先给它赋值。
+@error_missing_import = {0} 从未被定义过。它似乎在文件 {1} 中有定义。你是不是忘了导入它？
+如果你已经导入了，你可能有一个导入循环（请参阅导入文档页面）。
+@error_missing_import_before_unlock = {0} 从未被定义过。它似乎在文件 {1} 中有定义。你必须解锁导入功能才能从其他文件导入东西。
+@error_call_before_def = {0} 未定义。它似乎在这个文件的某个地方有定义，但是定义还没有被执行。函数只能在 `def` 语句之后被调用。
+@error_not_a_function = 你试图调用一个不是函数的东西。一个可能导致这个问题的常见错误是有一个与函数同名的变量。
 @error_invalid_const = {0} 不存在。
-@error_invalid_const2 = 这不存在。
-@error_max_stack_size_reached = 调用堆栈的最大大小已达到。这很可能是由于递归函数调用过多造成的。
-@error_max_comparison_depth = 已达到最大比较深度。比如，如果你正在比较包含自身的列表，就可能会发生这种情况。
-@error_assign_type_mismatch = 赋值语句的左侧与右侧不匹配。
-@error_too_many_values_to_unpack = 右侧没有足够的值进行解包。
-@error_not_enough_values = 右边的值太多，无法解包到左边。
-@error_empty_print = `print()` 至少需要一个argument。
+@error_invalid_const2 = 这个不存在。
+@error_max_stack_size_reached = 已达到最大 call stack 大小。这很可能是由于过多的递归函数调用造成的。
+@error_max_comparison_depth = 已达到最大比较深度。例如，如果你正在比较包含自身的 list，就可能发生这种情况。
+@error_assign_type_mismatch = 赋值的左边与右边不匹配。
+@error_too_many_values_to_unpack = 右边没有足够的值来解包。
+@error_not_enough_values = 右边包含的值太多，无法解包到左边。
+@error_empty_print = `print()` 至少需要一个参数。
 @error_in_string = 无法检查 {0} 是否在字符串中。
-@error_collection_changed_size_during_iteration = 在用 `for` 循环遍历集合时，不能改变集合的大小。这是因为改变集合的大小会使 `for` 循环使用的迭代器对象失效。
-@error_wrong_use_of_max = 无法计算{0}的最大值。
-@error_wrong_use_of_min = 无法计算{0}的最小值。
-@error_function_as_condition = 正在检查函数{0}是否为`True`。这里指的是函数对象本身，而不是函数的返回值。你是不是想用调用操作符`()`来调用这个函数？
+@error_collection_changed_size_during_iteration = 不能在遍历一个集合的 for 循环中改变它的大小。这是因为改变集合的大小会使 for 循环正在使用的迭代器对象失效。
+@error_wrong_use_of_max = 无法计算 {0} 的最大值。
+@error_wrong_use_of_min = 无法计算 {0} 的最小值。
+@error_function_as_condition = 试图检查函数 {0} 是否为 `True`。这是函数对象本身，而不是函数的返回值。你是想用调用运算符 `()` 来调用函数吗？
 
-在Python中，函数对象是truthy的，这意味着如果你把它们用作条件，它们会像`True`一样工作，因此Python不会给你这个错误消息。
+在 Python 中，函数对象是真值，这意味着如果你把它们用作条件，它们的作用就像 `True`，所以 Python 不会给你这个错误信息。
 
-这是一个安全提示错误信息，如果它影响到你，你可以在选项中关闭它。
-@error_function_in_operator = 正在尝试在函数{0}上使用{1}。这是函数对象本身，而不是函数的返回值。你是不是想用调用运算符`()`来调用这个函数？
+这是一个安全保护错误信息，如果它妨碍到你，你可以在选项中关闭它。
+@error_function_in_operator = 试图在函数 {0} 上使用 {1}。这是函数对象本身，而不是函数的返回值。你是想用调用运算符 `()` 来调用函数吗？
 
-这是一条保护性错误信息，如果它挡住你了，你可以在选项中将其关闭。
+这是一个安全保护错误信息，如果它妨碍到你，你可以在选项中关闭它。
 @error_zero_step_size = 步长不能为 0。
 @error_sequence_too_large = 序列太大，无法复制。
-@error_invalid_sim_unlocks = 起始解锁无效。它需要是解锁序列或形式为`(Unlock.Carrots, 3)`的元组。
-@error_invalid_sim_items = 起始物品无效。它需要是一个将物品映射到数字的字典，比如 `{Items.Hay : 100}`。
-@error_invalid_sim_globals = 起始全局变量无效。需要是一个将变量名映射到值的 dict，例如 `{"x" : 42}`。
-@error_division_by_zero = 哦不！你除以`0`了。你勉强从中活了下来。
-@error_negative_use_item = 使用物品数量必须至少为`1`。当前为{0}。
-@error_use_before_assign = 在给变量{0}赋值之前尝试读取它的值。  
-如果你想修改一个全局变量，你必须使用 global 关键字写入到全局 scope。
+@error_invalid_sim_unlocks = 起始解锁项无效。它需要是一个解锁项的序列，或者是 `(Unlock.Carrots, 3)` 形式的 tuple。
+@error_invalid_sim_items = 起始物品无效。它需要是一个将物品映射到数字的 dict，比如 `{Items.Hay : 100}`。
+@error_invalid_sim_globals = 起始全局变量无效。它需要是一个将变量名映射到值的 dict，比如 `{"x" : 42}`。
+@error_division_by_zero = 哦不！你除以了 `0`。你差点就没命了。
+@error_negative_use_item = 使用物品的数量必须至少为 `1`。它却是 {0}。
+@error_use_before_assign = 在给变量 {0} 赋值之前就尝试读取它。
+如果你想修改一个全局变量，你必须使用 global 关键字来写入全局 scope。
 
 `global x
 x += 1`
-@error_attribute_on_non_module = 你不能给{0}分配属性。
-@error_file_not_found = 文件{0}不存在。
-@error_max_drones_reached = 无人机的数量超出了限制。
-@error_dino_hat_already_used = 恐龙帽子只有一个，并且已经在使用中。你不能在第二个无人机上使用它。
-@error_invalid_drone_id = 没有ID为{0}的无人机。
+@error_attribute_on_non_module = 你不能给 {0} 赋一个属性。
+@error_file_not_found = 文件 {0} 不存在。
+@error_max_drones_reached = 超过了无人机数量限制。
+@error_dino_hat_already_used = 只有一个恐龙帽子，而且它已经被使用了。你不能在第二架无人机上使用它。
+@error_invalid_drone_id = 没有 ID 为 {0} 的无人机。

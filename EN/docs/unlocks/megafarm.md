@@ -10,7 +10,7 @@ Each drone runs its own separate program instance. Drones can spawn new drones u
 
 This spawns a new drone at the same position as the drone that ran the `spawn_drone("filename")` command. The new drone will start executing the program in the file named `filename`, so replace `"filename"` with the name of the file that you want to run.
 
-You can think of this as if you told your drone to go to the file named `filename` and click the execute button for the next drone.
+You can think of this as if you told your drone to go to the file named `filename` and press the execute button for the next drone.
 
 Drones do not collide with each other. 
 

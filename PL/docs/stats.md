@@ -1,5 +1,5 @@
 # Statystyki
 
-W ciągu ostatnich 60 sekund uprawiałeś: {{itemblock stats_sum}}
+Przez ostatnie 60 sekund zebrałeś: {{itemblock stats_sum}}
 
-Twój najlepszy wynik na zasób to: {{itemblock stats_best}}
+Twój osobisty rekord dla każdego zasobu to: {{itemblock stats_best}}

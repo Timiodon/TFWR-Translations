@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = Der default Hut.
-@hat_descr_dinosaur_hat = Setz es auf, um das Dinosaurier-Spiel zu starten.
+@hat_descr_straw_hat = Der Standardhut.
+@hat_descr_dinosaur_hat = Rüste ihn aus, um das Dinosaurier-Spiel zu starten.

@@ -1,13 +1,13 @@
 # Continue
-continue, bir döngünün mevcut iterasyonunu durdurup en içteki döngünün bir sonraki iterasyonuna geçmeyi sağlar.
+continue, bir döngünün mevcut yinelemesini durdurmaya ve en içteki döngünün bir sonraki yinelemesine atlamaya olanak tanır.
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("bu asla yazdırılmaz")`
 
-Bu, döngünün tüm `10` iterasyonunu çalıştırır, ancak `continue` sonrasındaki `print` ifadesi her zaman atlanır.
+Bu, döngünün tüm `10` yinelemesini çalıştırır, ancak `continue`'dan sonraki `print` ifadesi her zaman atlanır.
 
-Ayrıca `while` döngülerinde de çalışır.
+`while` döngülerinde de çalışır.
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ Ayrıca `while` döngülerinde de çalışır.
     
     harvest()`
 
-Bu kod, yalnızca `can_harvest()` `True` olduğunda `harvest()` fonksiyonunu çağırır.
-Bu, şu kodla aynı etkiye sahiptir:
+Bu kod yalnızca `can_harvest()` `True` olduğunda `harvest()`'ı çağırır. 
+Şu kodla aynı etkiye sahiptir:
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-İç içe döngülerde, `continue` daima en içteki döngüyü etkiler.
+İç içe döngülerde `continue` her zaman en içteki döngüyü etkiler.
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("bu 100 kez yazdırılır")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("bu asla yazdırılmaz")
+	print("bu 10 kez yazdırılır")`

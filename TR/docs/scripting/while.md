@@ -1,56 +1,56 @@
 # While Döngüsü
-Artık `while` döngüsünü ve `True` ve `False` değerlerini açtınız. `while` döngüsü, koşul `True` olduğu sürece döngü gövdesini çalıştırmaya devam eder.
+`while` döngüsünü ve `True` ile `False` değerlerini açtın. `while` döngüsü, koşul `True` olduğu sürece döngü gövdesini yürütmeye devam eder.
 
-`while condition:
+`while koşul:
 	#döngü gövdesi`
 
-Sonsuz döngüler oluşturma konusunda endişelenme. Yürütme sırasında gecikmeler, programın donmasını önleyecektir.
+Sonsuz döngüler oluşturma konusunda endişelenme. Yürütmedeki gecikmeler programın donmasını önleyecektir.
 
 ## Yeni Başlayanlar İçin
-Belki de zaten birkaç `harvest()` çağrısını arka arkaya yazmayı denemişsindir:
+Belki de zaten birkaç `harvest()` çağrısını arka arkaya koymayı denedin:
 
 `harvest()
 harvest()
 harvest()`
 
-Bu, bir program çalıştırmasında birden fazla kez hasat yapmanı sağlar.
-Ancak, üçten fazla hasat etmek ve aynı kodu tekrar tekrar yazmak kötü bir pratiktir.
-Çözüm bir döngü kullanmaktır.
-Bir döngü, aynı kodu birçok kez çalıştırmanı sağlar.
+Bu, bir program çalıştırmasında birkaç kez hasat yapmanı sağlar. 
+Ancak, üç defadan fazla hasat yapmak güzel olurdu ve aynı kodu birden çok kez yazmak kötü bir uygulamadır. 
+Çözüm bir döngüdür. 
+Bir döngü, aynı kodu birden çok kez çalıştırmana olanak tanır.
 
-While döngüsü, yalnızca iki durumda olabilen mantıksal bir değer olan bir koşul alır: `True` veya `False`.
-Bu tür bir değere Boolen değeri denir.
+While döngüsü, yalnızca iki durumda olabilen mantıksal bir değer olan bir koşul alır: `True` veya `False`. 
+Böyle bir değere Boolean değeri denir.
 
-Döngü, koşul `False` olana kadar döngü içindeki kodu çalıştırır.
-While döngüsü şu şekilde görünür:
+Döngü daha sonra, koşul False olana kadar döngü içindeki kodu yürütür.
+While döngüsü şöyle görünür:
 
-`while condition:
+`while koşul:
 	#döngü gövdesi
 	#döngü gövdesi
 	#...`
 	
-Burada "condition" ifadesini bir boolen değerle, `#döngü gövdesi` kısmını ise döngüde yapmak istediğiniz işlemlerle değiştirmelisiniz.
+Burada "koşul" yerine bir boolean değeri ve `#döngü gövdesi` yerine döngüde yapmak istediğin her şeyi koyman gerekir.
 
-İki tane sabit boolen değeri vardır. Sabitler, program süresince değişmeyen değerlerdir.
+İki sabit boolean değeri mevcuttur. Sabitler, program sırasında asla değişmeyen değerlerdir.
 
-Her zaman `True` olan sabit bir boolen değer oluşturmak için sadece `True` yazabilirsiniz. Her zaman `False` olacak sabit bir boolen değer oluşturmak için de `False` yazın.
-Bu yüzden şunları yazabilirsiniz
+Her zaman `True` olan bir sabit boolean değeri oluşturmak için, sadece `True` yazabilirsin. Her zaman `False` olacak bir sabit boolean değeri için `False` yaz.
+Dolayısıyla ya şöyle yazabilirsin
 
 
 `while False:
 	do_a_flip()`
 
-veya
+ya da
 
 `while True:
 	do_a_flip()`
 
-İlk örnek hiçbir zaman takla atmayacak, ikinci ise sonsuza kadar takla atacak (sonsuz döngü).
+İlki asla takla atmaz ve ikincisi sonsuza kadar takla atar (sonsuz bir döngü). 
 
-Normalde bir sonsuz döngü oluşturmak kötü bir fikirdir çünkü programı dondurur ama bu oyunda döngünün her yinelemesi arasında bir gecikme vardır, böylece dronenin takla atmasını sürdürmesini sağlarken, sen yürütme düğmesine tekrar basarak manuel olarak durdurabilirsin.
+Normalde sonsuz bir döngü oluşturmak kötü bir fikirdir çünkü programı dondurur, ancak bu oyunda döngünün her yinelemesi arasında gecikmeler vardır, bu yüzden drone'un, sen yürüt düğmesine tekrar basarak manuel olarak durdurana kadar takla atmaya devam etmesine neden olur.
 
-Dikkat et, iki nokta üst üste (:)'dan sonra gelen satır girintili. Bu tür bir girinti, kod bloklarını ayırmak için kullanılır.
-Girinti eklemek için Tab tuşuna bas ve girintiyi kaldırmak için Shift + Tab (veya Backspace) tuşlarına bas.
+İki nokta üst üste işaretinden sonraki satırın nasıl girintili olduğuna dikkat et. Bunun gibi girintileme, kod bloklarını ayırmak için kullanılır.
+Girinti eklemek için Tab'a, kaldırmak için Shift + Tab'a (veya Backspace'e) bas.
 
-Döngü, iki nokta üst üste (:) işaretinden sonra girintili olan tüm emirleri tekrar eder.
-Girintili bloktan sonraki emirler, döngü tamamlandıktan sonra yürütülür.
+Döngü, iki nokta üst üste işaretinden sonraki tüm girintili ifadeleri tekrarlayacaktır.
+Girintili bloktan sonraki ifadeler, döngü bittikten sonra yürütülecektir.

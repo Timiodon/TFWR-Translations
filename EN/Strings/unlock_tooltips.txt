@@ -1,39 +1,109 @@
 @unlock_tooltip_template_cost = ### Unlock Cost {{{{itemblock cost unlock {0}}}}}
 @unlock_descr_trees = Unlocks trees.
+
+`plant(Entities.Trees)`
 @unlock_descr_speed = Increases the speed of the drone.
 @unlock_descr_plant = Unlocks planting.
+
+`plant(Entities.Bush)`
 @unlock_descr_loops = Unlocks a simple while loop.
+
+`while True:
+    harvest()`
 @unlock_descr_senses = The drone can see what's under it and where it is.
+
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
 @unlock_descr_expand = Expands the farm land and unlocks movement.
-@unlock_descr_auto = Automatically unlock things. This allows creating a code that plays through the whole game.
 @unlock_descr_operators = Arithmetic, comparison and logic operators.
+
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
 @unlock_descr_pumpkin = Pumpkins!
+
+`plant(Entities.Pumpkin)`
 @unlock_descr_variables = Assign values to variables.
+
+`next_plant = Entities.Bush
+plant(next_plant)`
 @unlock_descr_functions = Define your own functions.
+
+`def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()`
 @unlock_descr_watering = Water the plants to make them grow faster.
+
+`use_item(Items.Water)`
 @unlock_descr_carrots = Till the soil and plant carrots.
+
+`till()
+plant(Entities.Carrot)`
 @unlock_descr_lists = Use lists to store lots of values.
+
+`plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)`
 @unlock_descr_costs = Allows access to the cost of things.
+
+`cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]`
 @unlock_descr_fertilizer = Grow plants instantly.
+
+`use_item(Items.Fertilizer)`
 @unlock_descr_mazes = A maze with a treasure in the middle.
+
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
 @unlock_descr_debug = Tools to help with debugging programs.
-@unlock_descr_debug2 = Functions to temporarily slow down the execution and make the grid smaller.
-@unlock_descr_benchmark = Functions to help measure performance.
+
+`print("hi")`
+@unlock_descr_debug2 = Functions to temporarily slow down the execution and make the farm smaller.
+
+`set_world_size(3)
+set_execution_speed(1)`
 @unlock_descr_grass = Increases the yield of grass.
-@unlock_descr_multi_trade = Trade multiple items at once.
+
+`harvest()`
 @unlock_descr_auto_unlock = Automatically unlock things.
+
+`unlock(Unlocks.Megafarm)`
 @unlock_descr_polyculture = Use companion planting to increase the yield.
+
+`plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Sunflowers and Power.
-@unlock_descr_reset = Start over for greater profit.
+
+`plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = Join the leaderboard for the fastest reset time.
+
+`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = Get access to dictionaries and sets.
+
+`right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Unlocks the `min()`, `max()`, `abs()` and `random()` functions.
+
+`random_index = random() * len(list) // 1`
 @unlock_descr_cactus = Cactus!
+
+`plant(Entities.Cactus)`
 @unlock_descr_dinosaurs = Majestic ancient creatures.
 @unlock_descr_simulation = Test faster and under reproducible conditions.
+
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @unlock_descr_timing = It's about time!
+
+`passed_time = get_time()`
 @unlock_descr_import = Import things from other files.
+
+`import other_file
+other_file.function()`
 @unlock_descr_megafarm = Much larger farm with many drones.
+
+`spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = Expands the farm. This also clears the farm.
 @multi_unlock_descr_carrots = Increases the yield and cost of carrots.
 @multi_unlock_descr_trees = Increases the yield of bushes and trees.

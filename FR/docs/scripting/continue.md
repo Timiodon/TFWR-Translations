@@ -1,13 +1,13 @@
 # Continue
-continue permet d'arrêter l'itération actuelle d'une boucle et de passer à l'itération suivante de la boucle la plus interne.
+`continue` permet d'arrêter l'itération actuelle d'une boucle et de sauter à la prochaine itération de la boucle la plus interne.
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("ceci n'est jamais affiché")`
 
-Cela exécute toutes les `10` itérations de la boucle, mais l'instruction `print` après le `continue` est toujours ignorée.
+Cela exécute les 10 itérations de la boucle, mais l'instruction `print` après le `continue` est toujours sautée.
 
-Cela fonctionne aussi sur les boucles `while`.
+Cela fonctionne aussi avec les boucles `while`.
 
 `while True:
 	if not can_harvest():
@@ -15,8 +15,8 @@ Cela fonctionne aussi sur les boucles `while`.
     
     harvest()`
 
-Ce code appelle seulement `harvest()` quand `can_harvest()` est `True`. 
-Cela a le même effet que
+Ce code n'appelle `harvest()` que lorsque `can_harvest()` est `True`.
+Il a le même effet que
 
 `while True:
 	if can_harvest():
@@ -26,7 +26,7 @@ Dans les boucles imbriquées, `continue` affecte toujours la boucle la plus inte
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("ceci est affiché 100 fois")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("ceci n'est jamais affiché")
+	print("ceci est affiché 10 fois")`

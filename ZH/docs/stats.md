@@ -1,5 +1,5 @@
-# 统计
+# 统计数据
 
-在过去的60秒内，你收获了：{{itemblock stats_sum}}
+在过去 60 秒内，你种出了：{{itemblock stats_sum}}
 
-你每种资源的个人最佳是：{{itemblock stats_best}}
+你每种资源的个人最佳记录是：{{itemblock stats_best}}

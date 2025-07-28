@@ -1,16 +1,16 @@
-# Hata Ayıklama
-Bazen kodunuz çalışmaz ve nedenini bulmanız gerekir. Size yardımcı olacak birkaç araç var.
+# Debug
+Bazen kodun çalışmaz ve nedenini bulman gerekir. Bunu yapmana yardımcı olacak birkaç araç var.
 
-İlki, programı adım adım yürütmektir.  
-Adım adım moda, Çalıştır butonunun yanındaki butonla veya bir breakpoint belirleyerek geçebilirsiniz.
+İlki, programı adım adım yürütmektir. 
+Yürüt düğmesinin yanındaki düğmeyle veya bir breakpoint ayarlayarak adım adım moduna geçebilirsin.
 
-Breakpoint'ler kodun solundaki breakpoint paneline tıklanarak eklenebilir.
+Breakpoint'ler, kodun solundaki breakpoint paneline tıklanarak eklenebilir.
 ![](Breakpoints227)
-Yürütme, breakpoint'in bulunduğu satıra ulaştığında, otomatik olarak adım adım moda geçecektir.
+Yürütme, breakpoint'in olduğu satıra ulaştığında, otomatik olarak adım adım moduna geçer.
 
-Fareyi bir değişkenin üzerine getirdiğinizde, mevcut değeri görüntülenir.
+Fareni bir değişkenin üzerine getirdiğinde, mevcut değeri görüntülenir.
 
-`print()` fonksiyonu da çok faydalı olabilir. Kendisine iletilen herhangi bir değeri doğrudan havaya yazacaktır.
+`print()` fonksiyonu da çok yararlı olabilir. Kendisine geçirilen herhangi bir değeri doğrudan havaya yazdıracaktır.
 
 Örnekler:
 
@@ -25,9 +25,9 @@ Mevcut konumu yazdır.
 
 Print fonksiyonu, değeri doğrudan havaya ve [Çıktı](docs/output.md) sayfasına yazdırır.
 
-Eğer çok sayıda değer yazdırmak istiyorsanız, havaya yazma biraz yavaş olabilir.  
-Bu durumda sadece çıktı penceresine yazdıran `quick_print()` fonksiyonunu kullanabilirsiniz.
+Çok sayıda değer yazdırmak istiyorsan havaya yazmak bazen biraz yavaş olabilir.
+Bu durumda, yalnızca çıktı penceresine yazdıran `quick_print()` fonksiyonunu kullanabilirsin.
 
-Çıktı penceresi ayrıca uyarıları ve hataları da kaydeder, bu yüzden bir şey beklenildiği gibi çalışmıyorsa, bunu kontrol etmek faydalı olabilir.
+Çıktı penceresi ayrıca uyarıları ve error'ları da kaydeder, bu yüzden bir şey beklendiği gibi çalışmazsa orayı kontrol etmek faydalı olabilir.
 
-Yürütme durduğunda, çıktı aynı zamanda oyun klasöründeki output.txt dosyasına da yazılır. [output.txt](persistent_data_path/output.txt).
+Yürütme durduğunda, çıktı ayrıca oyun klasöründeki output.txt dosyasına da yazılır. [output.txt](persistent_data_path/output.txt).

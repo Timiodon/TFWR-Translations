@@ -1,61 +1,60 @@
-# İmport
-Tüm kodunu tek bir dosyada toplamak hızlı bir şekilde yönetilemez hale gelir.
-`import` ifadeleri, başka bir dosyadaki fonksiyonları ve global değişkenleri içeri aktarmanı sağlar.
+# Import
+Tüm kodunu tek bir dosyaya koymak hızla yönetilemez hale gelir. 
+`import` ifadeleri, başka bir dosyadan fonksiyonları ve global değişkenleri içe aktarmana olanak tanır.
 
 `import filename`
 
-Bu, en basit import ifadesi şeklidir. Bu ifade, `filename` adlı dosyada tanımlanmış her şeye erişmeni sağlar. Oyundaki her pencere bir dosyadır ve dosya adı, pencerenin üst kısmında görüntülenen isimdir.
+Bu, en basit import ifadesi şeklidir. Sana `filename` adlı dosyada tanımlanan her şeye erişim sağlar. Oyundaki her pencere bir dosyadır ve dosya adı pencerenin üstünde görüntülenen isimdir.
 
-İşte iki dosyayla bir örnek:
+İşte iki dosyalık bir örnek:
 helper adlı dosya:
 `x = 0
 
 def say_hello():
-    print("hello from helper")`
+    print("helper'dan selam")`
 
 Başka bir dosya:
 `import helper
 helper.say_hello()
 helper.x += 1`
 
-Burada `import helper`, `helper` adlı dosyayı çalıştırır ve tüm global değişkenlerine erişim sağlar.
-Bu şekilde, import edilen modülün içindeki değişkenlere ve fonksiyonlara `.` operatörü ile erişebilirsin.
-Bu örnekte, `helper.say_hello()` ifadesi helper'daki `say_hello()` fonksiyonunu çağırır ve son satırda global `x` değişkenini artırır.
+Burada `import helper`, `helper` adlı dosyayı çalıştırır ve tüm global'larına erişim sağlar.
+Daha sonra, içe aktarılan modül içindeki değişkenlere ve fonksiyonlara `.` operatörünü kullanarak erişebilirsin.
+Yani bu örnekte, `helper.say_hello()`, helper içindeki `say_hello()` fonksiyonunu çağırır ve son satır global değişken x'i artırır.
 
-Ayrıca, import ifadesinin çalıştırıldığı mevcut scope'a, import edilen modülden global değişkenleri taşımak için `from` söz dizimini kullanabilirsin.
+`from` sözdizimini kullanarak içe aktarılan modüldeki global'ları, import ifadesinin yürütüldüğü mevcut scope'a da taşıyabilirsin.
 
 `from helper import *`
-helper'den tüm global değişkenleri import eder.
+helper'dan tüm global'ları içe aktarır.
 
 veya
 
 `from helper import say_hello`
-helper'den sadece belirtilen global değişkenleri import eder.
+helper'dan yalnızca belirtilen global'ları içe aktarır.
 
-Bu da helper dosyasını import eder, ancak `helper` adlı bir değişken yerine, `helper` içindeki global değişkenleri local scope'a doğrudan atar.
+Bu da helper dosyasını içe aktarır, ancak ona `helper` adlı bir değişken aracılığıyla erişmek yerine, `helper`'dan global'ları paketinden çıkarır ve onları doğrudan yerel scope'a atar.
 
 `from helper import say_hello
 say_hello()`
 
-Bu tür import genellikle önerilmez çünkü iki dosya birbirini import ediyorsa iyi çalışmaz ve isim çakışmaları nedeniyle import eden dosyadaki değişkenleri yanlışlıkla geçersiz kılabilirsin.
+Bu import biçimi genellikle önerilmez çünkü iki dosya birbirini içe aktardığında iyi çalışmaz ve isim çakışmaları nedeniyle içe aktaran dosyada yanlışlıkla değişkenlerin üzerine yazabilirsin.
 
-# Gerçekten nasıl çalışıyor
+# Gerçekte nasıl çalışır
 
-## TLDR
-İmport işlemleri epey sezgisel olmayabilir, ancak çoğu problem `import file` söz dizimine bağlı kalarak ve global tanımlar haricindeki her şeyi 
+## ÖZET
+Import'lar oldukça sezgi dışı olabilir, ancak çoğu sorun `from file import` yerine `import file` sözdizimine bağlı kalarak ve global bir tanım olmayan her şeyi şunun içine alarak önlenebilir:
 `if __name__ == "__main__":`
-bloğuna sararak önlenebilir.
 
 ## Import Yan Etkileri
-Bir dosya ilk defa import edildiğinde, tüm dosyayı çalıştırır ve sonrasında tanımlanan tüm değişkenlere erişim sağlar.
-Aynı dosya tekrar import edilirse, sadece ilk seferdeki önbelleğe alınmış modülü geri döndürür.
+Bir dosyayı ilk kez içe aktardığında, tüm dosyayı yürütür ve ardından yürütme sırasında tanımlanmış olan tüm değişkenlere erişim sağlar.
+Aynı dosyayı tekrar içe aktarırsan, sadece ilk seferden önbelleğe alınmış modülü tekrar döndürür.
 
-Bu, import ifadelerinin yan etkilerine yol açabileceği anlamına gelir. Eğer bir dosya `harvest()` fonksiyonunu çağırıyorsa, import sırasında gerçekten hasat yapacaktır. Ancak aynı dosya tekrar import edildiğinde tekrar hasat yapmayacaktır çünkü dosya yalnızca bir kez çalıştırılır.
+Bu, import ifadelerinin yan etkileri olabileceği anlamına gelir. Eğer `harvest()` çağıran bir dosyayı içe aktarırsan, import sırasında gerçekten hasat yapacaktır. Ancak tekrar içe aktardığında, dosya yalnızca bir kez çalıştığı için tekrar hasat yapmayacaktır.
 
-Böyle yan etkilerden kaçınmanın bir yolu `__name__` değişkenini kullanmaktır. Bu, bir dosya doğrudan çalıştırıldığında otomatik olarak `"__main__"` olarak ayarlanır ve `import` yoluyla çalıştırıldığında dosyanın adına ayarlanır.
-Dosya import edildiğinde çalışmasını istemediğin kodu `if __name__ == "__main__":` bloğunun içine koymak iyi bir uygulama olarak kabul edilir.
+Bu tür yan etkilerden kaçınmanın bir yolu `__name__` değişkenini kullanmaktır. Bu, bir dosya doğrudan çalıştırıldığında otomatik olarak `"__main__"` olarak ayarlanan ve bir dosya `import` aracılığıyla çalıştırıldığında dosyanın adına ayarlanan bir değişkendir.
+Dosya içe aktarıldığında çalışmasını istemediğin herhangi bir kodu `if __name__ == "__main__":` bloğunun içine koymak iyi bir uygulama olarak kabul edilir.
 
-Python'da yaygın bir dosya yapısı, bir dosya çalıştırıldığında çalışması gereken kodu bir `main()` fonksiyonuna koymaktır. Bu şekilde, local değişkenler (x)`main()` içinde tanımlanan) ile import edilebilen global değişkenler (x)`main()` dışında tanımlanan) arasında net bir ayrım olur.
+Python'da yaygın bir dosya yapısı, dosya çalıştırıldığında yürütülmesi gereken kodu bir `main()` fonksiyonuna koymaktır. Bu şekilde, yerel değişkenler (`main()` içinde tanımlanan) ile içe aktarılabilen global değişkenler (`main()` dışında tanımlanan) arasında net bir ayrım yapmış olursun.
 
 `a_global_variable = "global"
 
@@ -67,44 +66,44 @@ if __name__ == "__main__":
     main()`
 
 ## Import Döngüleri
-Eğer `a` dosyası `b` dosyasını ve `b` dosyası `a` dosyasını import ediyorsa ne olur?
+`a` dosyası `b` dosyasını ve `b` dosyası `a` dosyasını içe aktarırsa ne olur?
 
-`a` dosyası:
+dosya `a`:
 `import b
 x = 0`
 
-`b` dosyası:
+dosya `b`:
 `import a
 def f():
     print(a.x)`
 
-Bu gayet iyi çalışacaktır. Diyelim ki iki dosya da henüz yüklenmemiş ve birisi `import a` ifadesini çalıştırdı.
+Bu sorunsuz çalışacaktır. Diyelim ki iki dosyadan hiçbiri henüz yüklenmedi ve başka biri `import a` komutunu çalıştırıyor.
 
--`a`, `import b` satırına kadar çalışır.
--`b`, `import a` satırına kadar çalışır.
--Modül `a` zaten var, ancak henüz `x` içermiyor çünkü sadece `import b` satırına kadar ulaştı.
--`b`, yarıya kadar yüklenmiş olan `a` modülüne bir referansı `a` adlı bir değişkende depolar.
--`b`, `def` ifadesini çalıştırır ve fonksiyon `f()`'yi depolar.
--`a`, çalışmaya devam eder ve `x`'i başlatır.
+-`a` dosyası, `import b` satırına kadar çalışır.
+-`b` dosyası, `import a` satırına kadar çalışır.
+-`a` modülü zaten mevcut, ancak `import b` satırına henüz ulaştığı için `x`'i içermiyor.
+-`b`, yarı yüklenmiş `a` modülüne bir referansı `a` adlı bir değişkende saklar.
+-`b`, `def` ifadesini çalıştırır ve `f()` fonksiyonunu saklar.
+-`a` çalışmaya devam eder ve `x`'i başlatır.
 
-Birisi `b.f()` çağırdığında, doğru bir şekilde `0` yazdıracaktır çünkü `b`'nin referans aldığı `a` modülü artık tamamen yüklüdür.
+Birisi `b.f()`'yi çağırdığında, `b`'nin referans aldığı `a` modülü artık tam olarak yüklendiği için doğru bir şekilde `0` yazdırır.
 
-Şimdi aynı kodu `from` söz dizimiyle yapmayı düşün.
+Şimdi aynı kodu `from` sözdizimini kullanarak düşünelim.
 
-`a` dosyası:
+dosya `a`:
 `from b import *
 x = 0`
 
-`b` dosyası:
+dosya `b`:
 `from a import *
 def f():
     print(x)`
 
--`a`, `from b import *` satırına kadar çalışır.
--`b`, `from a import *` satırına kadar çalışır.
--Modül `a` zaten var, ancak henüz tamamen çalıştırılmadı.
--`b`, `a` dosyasındaki her şeyi kendi global scope'una açar. Bu noktada, `a`, `x = 0` satırına ulaşmadığı için hiçbir şey içermediğinden hiçbir şey import edilmez.
--`b`, `def` ifadesini çalıştırır ve fonksiyon `f()`'yi depolar.
--`a`, çalışmaya devam eder ve `x`'i başlatır.
+-`a` dosyası, `from b import *` satırına kadar çalışır.
+-`b` dosyası, `from a import *` satırına kadar çalışır.
+-`a` modülü zaten mevcut, ancak henüz tam olarak yürütülmedi.
+-`b`, `a`'da o anda bulunan her şeyi kendi global scope'una açar. Bu noktada, `a` henüz `x = 0` satırına ulaşmadığı için hiçbir şey içermez, bu yüzden hiçbir şey içe aktarılmaz.
+-`b`, `def` ifadesini çalıştırır ve `f()` fonksiyonunu saklar.
+-`a` çalışmaya devam eder ve `x`'i başlatır.
 
-Şimdi biri `b.f()` çağırırsa, mevcut scope'da `x` olmadığını belirten bir hata alır. Bunun nedeni, bu sefer `b`'nin hala yükleniyor olan `a`'ya bir referansa sahip olmaması ve importtan sonra eklenen tanımları görmemesidir.
+Eğer biri şimdi `b.f()`'yi çağırırsa, mevcut scope'ta `x`'in mevcut olmadığına dair bir error alırlar. Bunun nedeni, bu sefer `b`'nin hala yüklenmekte olan `a`'ya bir referansı olmaması ve içe aktarmadan sonra eklenen tanımları görmemesidir.

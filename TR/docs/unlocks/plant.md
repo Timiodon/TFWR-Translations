@@ -1,13 +1,11 @@
-# Ekim
-
-Çim güzel çünkü kendi kendine büyüyor. Diğer tüm bitkilerin `plant()` fonksiyonu ile ekilmesi gerekiyor. Şu an ekebileceğin tek bitki çalı.
-
-Eklemek istediğin bitkinin türünü fonksiyona şu şekilde geçebilirsin:
+# Bitki
+Çimen güzeldir çünkü otomatik olarak büyür. Diğer tüm bitkiler `plant()` fonksiyonu ile ekilmelidir. Şu anda ekebileceğin tek bitki bir çalıdır.
+Ekmek istediğin bitki türünü fonksiyona şu şekilde geçirebilirsin:
 
 `plant(Entities.Bush)`
 
-Bu, dronun altında bir çalı ekecektir.
+Bu, drone'un altına bir çalı ekecektir.
 
-Çiftliği tamamen çime ve dronun konumunu sıfırlamak için `clear()` çağrısını yap.
+Çiftliği tamamen çimene sıfırlamak ve drone pozisyonunu sıfırlamak için `clear()` çağır.
 
-Görünüşe göre çiftlikte aynı anda birden fazla bitki türü yetiştirirsen, bazen daha yüksek verim elde edebilirsin. Daha fazla bilgi edinmek için polikültür araştırması yapman gerekecek.
+Görünüşe göre çiftlikte aynı anda birden fazla bitki türü yetiştirirsen, bazen daha yüksek bir verim alabilirsin. Daha fazlasını öğrenmek için polikültürü araştırman gerekecek.

@@ -1,14 +1,15 @@
-@steam_description = Programa um drone usando uma linguagem simples parecida com Python para automatizar completamente várias tarefas agrícolas que, de outro modo, seriam muito repetitivas. Sinta a satisfação de simplesmente pressionar "executar" e ver seu drone fazer todo o trabalho duro. 
+@steam_description = Programa um drone usando uma linguagem simples semelhante a Python para automatizar totalmente várias tarefas agrícolas que, de outra forma, seriam muito repetitivas. Sente a satisfação de simplesmente pressionar "executar" e ver o teu drone fazer todo o trabalho pesado.
 [img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
 
-Cultivar te dá recursos que podem ser usados para desbloquear novas tecnologias. Veja como o mesmo programa fica após algumas melhorias de velocidade:
+Cultivar dá-te recursos que podem ser gastos para desbloquear nova tecnologia.
+Eis como o mesmo programa se parece após algumas melhorias de velocidade:
 [img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
 
-Diferente da maioria dos jogos de programação, o jogo não é dividido em níveis distintos que você precisa completar, mas apresenta uma progressão contínua.
+Ao contrário da maioria dos jogos de programação, o jogo não está dividido em níveis distintos que tens de completar, mas apresenta uma progressão contínua.
 
-A programação é feita em uma linguagem simples, parecida com Python. O começo do jogo foi projetado para te ensinar todos os conceitos básicos de programação que você precisará, introduzindo-os um de cada vez.
+A programação é feita numa linguagem simples semelhante a Python. O início do jogo foi concebido para te ensinar todos os conceitos básicos de programação de que precisarás, introduzindo-os um de cada vez.
 
-Embora ele introduza tudo o que é relevante, não vai pegar na sua mão na hora de resolver as várias tarefas do jogo. Você terá que descobrir por si mesmo, e isso pode ser muito desafiador se você nunca programou antes.
+Embora introduza tudo o que é relevante, não te vai dar a mão quando se trata de resolver as várias tarefas no jogo. Terás de descobrir isso por ti mesmo, e isso pode ser muito desafiador se nunca programaste antes.
 
-Se você for um programador experiente, deve ser capaz de passar pelas fases iniciais do jogo rapidamente e avançar para as tarefas mais complexas do jogo posterior, que ainda devem oferecer desafios interessantes.
-@steam_short_description = Programe e otimize um drone para automatizar uma fazenda e veja-o trabalhar por você. Colete recursos para desbloquear melhor tecnologia e se tornar o fazendeiro mais eficiente do mundo. Melhore suas habilidades de resolução de problemas e de programação.
+Se és um programador experiente, deverás conseguir passar pelo início do jogo muito rapidamente e avançar para as tarefas mais complexas do jogo mais tardio, que ainda devem fornecer desafios interessantes.
+@steam_short_description = Programa e otimiza um drone para automatizar uma quinta e vê-o a fazer o trabalho por ti. Recolhe recursos para desbloquear melhor tecnologia e torna-te o agricultor mais eficiente do mundo. Melhora as tuas capacidades de resolução de problemas e de programação.

@@ -1,16 +1,17 @@
 # Operatoren
-Arithmetische Operatoren: `+, -, *, /, //, %, **`
+arithmetische Operatoren: `+, -, *, /, //, %, **`
 Vergleichsoperatoren: `==, !=, <=, >=, <, >`
-Logische Operatoren: `not, and, or`
+boolesche Operatoren: `not, and, or`
 
-Hinweis: Alle Zahlen im Spiel sind Fließkommazahlen. Daher sind alle arithmetischen Operatoren Fließkommaoperatoren. `//` ist definiert, um die Zahl nach der Division einfach abzurunden.
+Hinweis: Alle Zahlen im Spiel sind Fließkommazahlen. Also sind alle arithmetischen Operatoren Fließkomma-Operatoren.
+`//` ist so definiert, dass die Zahl nach der Division einfach abgerundet wird.
 
-Für Zuweisungsoperatoren musst du die "Variablen"-Freischaltung freischalten.
+Für Zuweisungsoperatoren musst du die Freischaltung "Variablen" freischalten.
 
 ## Einführung
-Operatoren ermöglichen es dir, Werte zu vergleichen, zu bearbeiten und zu kombinieren. 
-Die arithmetischen Operatoren `+, -, *, /, //, %, **` werden verwendet, um gängige mathematische Operationen an Zahlen auszuführen. 
-Die Vergleichsoperatoren `==, !=, <=, >=, <, >` dienen zum Vergleichen von Werten. Das Ergebnis ist immer entweder `True` oder `False`.
+Operatoren ermöglichen es dir, Werte zu vergleichen, zu modifizieren und zu kombinieren.
+Die arithmetischen Operatoren `+, -, *, /, //, %, **` werden verwendet, um gängige mathematische Operationen mit Zahlen durchzuführen.
+Die Vergleichsoperatoren `==, !=, <=, >=, <, >` werden verwendet, um Werte zu vergleichen. Das Ergebnis ist immer entweder `True` oder `False`.
 Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werden verwendet, um Wahrheitswerte zu kombinieren.
 
 ## Arithmetische Operatoren
@@ -24,11 +25,11 @@ Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werd
 `2 * 3` ergibt `6`
 `5 / 2` ergibt `2.5`
 
-`//` macht dasselbe wie `/`, aber das Ergebnis wird abgerundet (auf die nächstkleinere ganze Zahl).
+`//` macht dasselbe wie `/`, aber das Ergebnis wird abgerundet (auf die nächste ganze Zahl gerundet).
 
 `5 // 2` ergibt `2`
 
-`%` ist der Modulo-Operator, auch Restwertoperator genannt. Er teilt im Wesentlichen die beiden Zahlen und gibt dann den Rest zurück. Man kann sich das auch als wiederholtes Subtrahieren der rechten Zahl von der linken Zahl vorstellen, bis der Rest kleiner als die rechte Zahl ist.
+`%` ist der Modulo-Operator, auch als Rest-Operator bekannt. Er teilt im Wesentlichen die beiden Zahlen und gibt dann den Rest zurück. Du kannst es dir auch so vorstellen, dass du die rechte Zahl wiederholt von der linken Zahl abziehst, bis der Rest kleiner als die rechte Zahl ist.
 
 `4 % 2` ergibt `0`
 `5 % 2` ergibt `1`
@@ -36,19 +37,19 @@ Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werd
 `2 % 6` ergibt `2`
 `1.5 % 1` ergibt `0.5`
 
-`**` ist der Potenzierungsoperator.
+`**` ist der Potenz-Operator.
 
 `2**2` ergibt `4`
 `(-5)**3` ergibt `-125`
 
 ## Vergleichsoperatoren
-`==` und `!=` werden verwendet, um zu überprüfen, ob zwei Werte "gleich"(`==`) oder "ungleich"(`!=`) sind. Sie können auf alle Arten von Werten angewendet werden.
+`==` und `!=` werden verwendet, um zu prüfen, ob zwei Werte "gleich"(`==`) oder "nicht gleich"(`!=`) sind. Sie können auf alle Arten von Werten angewendet werden.
 
 `2 == 2` ergibt `True`
 `Entities.Bush != Entities.Bush` ergibt `False`
 `3 != 3 + 1` ergibt `True`
 
-`<=, >=, <, >` können nur auf Zahlen verwendet werden. Sie prüfen, ob die linke Zahl "kleiner oder gleich"(`<=`), "größer oder gleich"(`>=`), "kleiner" (`<`) oder "größer" (`>`) als die rechte Zahl ist.
+`<=, >=, <, >` können nur auf Zahlen angewendet werden. Sie prüfen, ob die linke Zahl "kleiner oder gleich"(`<=`), "größer oder gleich"(`>=`), "kleiner" (`<`) oder "größer" (`>`) als die rechte Zahl ist.
 
 `1 <= 1` ergibt `True`
 `2 >= 3` ergibt `False`
@@ -56,12 +57,12 @@ Die logischen Operatoren (auch boolesche Operatoren genannt) `not, and, or` werd
 `6 > 6` ergibt `False`
 
 ## Logische Operatoren
-`not` kehrt einfach den Wert um:
+`not` kehrt den Wert einfach um:
 
 `not False` ergibt `True`
 `not True` ergibt `False`
 
-`and` ergibt `True` nur wenn beide Werte `True` sind
+`and` ergibt nur dann `True`, wenn beide Werte `True` sind
 
 `True and True` ergibt `True`
 `True and False` ergibt `False`

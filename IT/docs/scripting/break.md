@@ -1,27 +1,27 @@
 # Break
-`break` consente di fermare un loop in anticipo. Quando l'istruzione `break` viene raggiunta, uscirà immediatamente dal loop più interno e inizierà a eseguire il codice dopo il loop.
+`break` permette di interrompere un ciclo in anticipo. Quando viene raggiunta l'istruzione `break`, uscirà immediatamente dal ciclo più interno e inizierà a eseguire il codice dopo il ciclo.
 
 `for i in range(10):
 	break
 print(i)`
-Questo stampa `0` perché `i` è `0` nella prima iterazione del loop e poi l'istruzione break termina il loop.
+Questo stampa `0` perché `i` è `0` nella prima iterazione del ciclo e poi l'istruzione break termina il ciclo.
 
-Funziona anche nei loop `while`.
+Funziona anche con i cicli `while`.
 
 `while True:
 	if can_harvest():
 		break`
 
-Questo codice esegue il loop `while` finché `can_harvest()` non è `True`.
+Questo codice esegue il ciclo `while` finché `can_harvest()` non è `True`.
 Ha lo stesso effetto di
 
 `while not can_harvest():
 	pass`
 
-Nei loop annidati, `break` esce sempre dal loop più interno.
+Nei cicli annidati `break` esce sempre dal ciclo più interno.
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("questo non viene mai stampato")
+	print("questo viene stampato 10 volte")`

@@ -4,6 +4,7 @@
 
 Sviluppato da Timon Herzog
 
-Contributi alla Traduzione:
+
+Contributori alla Traduzione:
 
 Davide Altamura

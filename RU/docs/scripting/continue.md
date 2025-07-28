@@ -3,11 +3,11 @@ continue позволяет остановить текущую итерацию
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("это никогда не будет напечатано")`
 
-Этот код выполняет все `10` итераций цикла, но оператор `print` после `continue` всегда пропускается.
+Это выполняет все `10` итераций цикла, но инструкция `print` после `continue` всегда пропускается.
 
-Он также работает с циклами `while`.
+Это также работает с циклами `while`.
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ continue позволяет остановить текущую итерацию
     
     harvest()`
 
-Этот код вызывает `harvest()` только когда `can_harvest()` равно `True`. 
-Это имеет такой же эффект, как и
+Этот код вызывает `harvest()` только тогда, когда `can_harvest()` `True`. 
+Он имеет тот же эффект, что и
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-Вложенные циклы `continue` всегда влияют на самый внутренний цикл.
+Во вложенных циклах `continue` всегда влияет на самый внутренний цикл.
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("это будет напечатано 100 раз")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("это никогда не будет напечатано")
+	print("это будет напечатано 10 раз")`

@@ -3,73 +3,73 @@ operatori aritmetici: `+, -, *, /, //, %, **`
 operatori di confronto: `==, !=, <=, >=, <, >`
 operatori booleani: `not, and, or`
 
-Nota: Tutti i numeri nel gioco sono numeri floating point. Quindi tutti gli operatori aritmetici sono operatori floating point.
+Nota: Tutti i numeri nel gioco sono numeri a virgola mobile. Quindi tutti gli operatori aritmetici sono operatori a virgola mobile.
 `//` è definito per arrotondare per difetto il numero dopo la divisione.
 
-Per gli operatori di assegnazione devi sbloccare lo sblocco "Variabili".
+Per gli operatori di assegnazione è necessario sbloccare lo sblocco "Variabili".
 
 ## Introduzione
-Gli operatori ti permettono di confrontare, modificare e combinare i valori.
-Gli operatori aritmetici `+, -, *, /, //, %, **` vengono usati per eseguire operazioni matematiche comuni sui numeri.
-Gli operatori di confronto `==, !=, <=, >=, <, >` vengono usati per confrontare i valori. Il risultato è sempre either `True` o `False`.
-Gli operatori logici (anche chiamati operatori booleani) `not, and, or` vengono utilizzati per combinare valori di verità.
+Gli operatori ti permettono di confrontare, modificare e combinare valori.
+Gli operatori aritmetici `+, -, *, /, //, %, **` sono usati per eseguire operazioni matematiche comuni sui numeri.
+Gli operatori di confronto `==, !=, <=, >=, <, >` sono usati per confrontare valori. Il risultato è sempre `True` o `False`.
+Gli operatori logici (chiamati anche operatori booleani) `not, and, or` sono usati per combinare valori di verità.
 
 ## Operatori Aritmetici
-`+` e `-` vengono usati per l'addizione e la sottrazione.
+`+` e `-` sono usati per l'addizione e la sottrazione.
 
-`2 + 3` ritorna `5`
-`3 - 2` ritorna `1`
+`2 + 3` valuta a `5`
+`3 - 2` valuta a `1`
 
-`*`, `/` e `//` vengono usati per la moltiplicazione e la divisione.
+`*`, `/` e `//` sono usati per la moltiplicazione e la divisione.
 
-`2 * 3` ritorna `6`
-`5 / 2` ritorna `2.5`
+`2 * 3` valuta a `6`
+`5 / 2` valuta a `2.5`
 
-`//` fa la stessa operazione di `/` ma il risultato è arrotondato per difetto al numero intero più vicino.
+`//` fa la stessa cosa di `/` ma il risultato è arrotondato per difetto (all'intero successivo più basso).
 
-`5 // 2` ritorna `2`
+`5 // 2` valuta a `2`
 
-`%` è l'operatore modulo, anche conosciuto come operatore del resto. Divide essenzialmente i due numeri e poi ritorna il resto. Puoi pensarci anche come sottrarre ripetutamente il numero a destra dal numero a sinistra fino a quando il resto è inferiore al numero a destra.
+`%` è l'operatore modulo, noto anche come operatore del resto. Essenzialmente divide i due numeri e poi restituisce il resto. Puoi anche pensarlo come sottrarre ripetutamente il numero a destra dal numero a sinistra finché il resto non è inferiore al numero a destra.
 
-`4 % 2` ritorna `0`
-`5 % 2` ritorna `1`
-`6 % 2` ritorna `0`
-`2 % 6` ritorna `2`
-`1.5 % 1` ritorna `0.5`
+`4 % 2` valuta a `0`
+`5 % 2` valuta a `1`
+`6 % 2` valuta a `0`
+`2 % 6` valuta a `2`
+`1.5 % 1` valuta a `0.5`
 
 `**` è l'operatore di potenza.
 
-`2**2` ritorna `4`
-`(-5)**3` ritorna `-125`
+`2**2` valuta a `4`
+`(-5)**3` valuta a `-125`
 
 ## Operatori di Confronto
-`==` e `!=` vengono usati per verificare se due valori sono "uguali"(`==`) o "non uguali"(`!=`). Possono essere utilizzati su tutti i tipi di valori.
+`==` e `!=` sono usati per verificare se due valori sono "uguali" (`==`) o "non uguali" (`!=`). Possono essere usati su tutti i tipi di valori.
 
-`2 == 2` ritorna `True`
-`Entities.Bush != Entities.Bush` ritorna `False`
-`3 != 3 + 1` ritorna `True`
+`2 == 2` valuta a `True`
+`Entities.Bush != Entities.Bush` valuta a `False`
+`3 != 3 + 1` valuta a `True`
 
-`<=, >=, <, >` possono essere utilizzati solo sui numeri. Verificano se il numero a sinistra è "minore o uguale"(`<=`), "maggiore o uguale"(`>=`), "minore" (`<`) o "maggiore" (`>`) del numero a destra.
+`<=, >=, <, >` possono essere usati solo sui numeri. Verificano se il numero a sinistra è "minore o uguale" (`<=`), "maggiore o uguale" (`>=`), "minore" (`<`) o "maggiore" (`>`) del numero a destra.
 
-`1 <= 1` ritorna `True`
-`2 >= 3` ritorna `False`
-`-2 < -1` ritorna `True`
-`6 > 6` ritorna `False`
+`1 <= 1` valuta a `True`
+`2 >= 3` valuta a `False`
+`-2 < -1` valuta a `True`
+`6 > 6` valuta a `False`
 
 ## Operatori Logici
 `not` inverte semplicemente il valore:
 
-`not False` ritorna `True`
-`not True` ritorna `False`
+`not False` valuta a `True`
+`not True` valuta a `False`
 
-`and` ritorna `True` solo se entrambi i valori sono `True`
+`and` valuta a `True` solo se entrambi i valori sono `True`
 
-`True and True` ritorna `True`
-`True and False` ritorna `False`
-`False and False` ritorna `False`
+`True and True` valuta a `True`
+`True and False` valuta a `False`
+`False and False` valuta a `False`
 
-`or` ritorna `True` se almeno uno dei valori è `True`
+`or` valuta a `True` se almeno uno dei valori è `True`
 
-`True or True` ritorna `True`
-`True or False` ritorna `True`
-`False or False` ritorna `False`
+`True or True` valuta a `True`
+`True or False` valuta a `True`
+`False or False` valuta a `False`

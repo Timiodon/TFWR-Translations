@@ -6,10 +6,10 @@
 @join_discord = Discord
 @quit = Salir
 @open_folder = Abrir Carpeta
-@new_game = Nuevo Juego
-@back = Volver
+@new_game = Nueva Partida
+@back = Atrás
 @unlocks = Desbloqueos
-@farm = Granero
+@farm = Granja
 @unlocked = Desbloqueado
 @upgrade = Mejorar
 @max_level = Nivel Máximo

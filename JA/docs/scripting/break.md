@@ -1,26 +1,27 @@
 # Break
-`break`は、ループを早めに終了するために使います。`break`文に到達すると、すぐに最も内側のループを抜け、その後のコードを実行します。
+`break`を使うと、ループを途中で停止できます。`break`ステートメントに到達すると、最も内側のループをすぐに抜け出し、ループの後のコードの実行を開始します。
 
 `for i in range(10):
 	break
 print(i)`
-これは`0`を出力します。なぜなら、`i`がループの最初の反復で`0`になり、break文がループを終了させるからです。
+これは`0`を表示します。なぜなら、ループの最初のイテレーションで`i`は`0`であり、その後breakステートメントがループを終了させるからです。
 
-`while`ループでも同様に機能します。
+`while`ループでも機能します。
 
 `while True:
 	if can_harvest():
 		break`
 
-このコードは、`can_harvest()`が`True`になるまで`while`ループを実行します。これは次のコードと同じ効果があります。
+このコードは`can_harvest()`が`True`になるまで`while`ループを実行します。
+これは以下と同じ効果があります。
 
 `while not can_harvest():
 	pass`
 
-ネストされたループでは、`break`は常に最も内側のループを終了します。
+ネストされたループでは、`break`は常に最も内側のループを終了させます。
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("これは決して表示されません")
+	print("これは10回表示されます")`

@@ -1,31 +1,31 @@
 # Değişkenler
-Değişkenler, bir değeri tutabilen isimlendirilmiş kaplar olarak düşünülebilir. 
-Bir değişken tanımlamak ve içine bir değer depolamak için `=` operatörü kullanılır.
+Değişkenler, bir değer tutabilen isimlendirilmiş kaplar olarak düşünülebilir.
+`=` operatörü, bir değişken bildirmek ve içinde bir değer saklamak için kullanılır.
 
-`variable_name = value`
+`degisken_adi = deger`
 
-Operatörün sol tarafı değişkenin adı olur. Ona istediğin herhangi bir ismi verebilirsin. 
-Sağ taraf ise, elde edilen değerin değişkende saklanacağı bir ifadedir.
+Operatörün sol tarafı değişken adıdır. İstediğin herhangi bir adı verebilirsin.
+Sağ taraf, sonuç değeri değişkende saklanacak olan bir ifadedir.
 
-Adı `a` olan bir değişken tanımla ve içine `5` değerini depola:
+`a` adında bir değişken bildir ve içine `5` değerini sakla:
 `a = 5`
-Adı `b` olan bir değişken tanımla ve içine `can_harvest()` fonksiyonunun dönüş değerini depola:
+`b` adında bir değişken bildir ve içine `can_harvest()` fonksiyonunun dönüş değerini sakla:
 `b = can_harvest()`
 
-`=` operatörünü `==` operatörü ile karıştırma. 
-`==` operatörü iki değerin eşit olup olmadığını kontrol eder ve sonuç olarak `True` ya da `False` döner. 
-`=` operatörü ise sağdaki değeri, soldaki isme atar.
+`=` operatörünü `==` operatörüyle karıştırma. 
+`==` operatörü iki değerin eşit olup olmadığını kontrol eder ve `True` veya `False` döndürür.
+`=` operatörü sağdaki değeri soldaki isme atar.
 
-Bir değişkene değer atandıktan sonra, o değişkeni kodda içeriğini yani değerini elde etmek için kullanabilirsin.
+Bir değişken atandıktan sonra, içerdiği değeri almak için kodda kullanabilirsin
 
 `a = 5
 for i in range(a):
 	do_a_flip()`
 
-Yukarıdaki döngü 5 kez çalıştırılır çünkü `a` değeri `5` olarak ayarlanmıştır. 
-`for` döngüsündeki `i` de otomatik olarak döngüdeki her bir adımda sıradaki değeri alan bir değişkendir. (İlla ki `i` olmak zorunda değil, ona geçerli herhangi bir değişken adı verebilirsin.)
+Yukarıdaki döngü, `a` `5`'e ayarlandığı için 5 kez yürütülür.
+`for` döngüsündeki `i` de, döngünün her yinelemesinde dizinin mevcut değerini otomatik olarak atanan bir değişkendir. (`i` olarak adlandırılması gerekmez, ona herhangi bir geçerli değişken adı verebilirsin.)
 
-Değişkenlerle aynı şeyi bir while döngüsüyle de yapabilirsin:
+Değişkenler ayrıca bir while döngüsüyle aynı şeyi yapmanı sağlar:
 
 `a = 5
 i = 0
@@ -33,9 +33,9 @@ while i < a:
 	do_a_flip()
 	i = i + 1`
 
-Bu da yukarıdaki for döngüsüyle aynı işi yapar. Sadece bu sefer i'yi elle artırmamız gerekiyor.
-i'yi artırmak için kendi değerine `1` eklediğimize dikkat et. Bir değişkenin değerini, önceki değerine dayalı olarak değiştirmek oldukça yaygındır. 
-Bu işlem şu operatörlerle kısaltılabilir: `+=, -=, *=, /=, %=`
+Bu, yukarıdaki for döngüsüyle aynı şeyi yapar. Sadece i'yi manuel olarak artırmamız gerekiyor.
+i'yi artırmak için, onu kendi değerine artı `1` olarak ayarladığımızı unutma. Bir değişkenin değerini önceki değerine göre değiştirmek çok yaygın bir şeydir. 
+Bu operatörler kullanılarak kısaltılabilir: `+=, -=, *=, /=, %=`
 
-`i = i + 1` ifadesi `i += 1` ile aynıdır
-`a = a / 3` ifadesi `a /= 3` ile aynıdır.
+`i = i + 1` ile `i += 1` aynıdır
+`a = a / 3` ile `a /= 3` aynıdır

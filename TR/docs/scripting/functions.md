@@ -3,13 +3,14 @@ Yeni bir fonksiyon tanımlamak için `def` anahtar kelimesini kullan:
 `def f(arg1, arg2 = False):
 	#fonksiyon kodu`
 
-Fonksiyonu çağırmak için çağrı operatörünü `()` kullanabilirsin:
+Fonksiyonu çağırmak için `()` çağrı operatörünü kullanabilirsin:
 `f(42)`
 
-Fonksiyonlardaki yerel ve küresel değişkenler hakkında bilgi edinmek için [Scopes](docs/scripting/scopes.md) kısmına da göz at.
+Fonksiyonlardaki yerel ve global değişkenler hakkında bilgi edinmek için ayrıca [Kapsamlar](docs/scripting/scopes.md)'a bak.
 
 ## Giriş
-`harvest()` gibi yerleşik fonksiyonları zaten gördün. Kendi fonksiyonlarını da tanımlayabilirsin, bu da kodunu modüler bir şekilde yapılandırmana olanak tanır. Temelde, kod bloğuna bir isim verir ve istediğin yerden çağırmanı sağlar.
+`harvest()` gibi yerleşik fonksiyonları zaten gördün.
+Kodunu modüler bir şekilde yapılandırmanı sağlayan kendi fonksiyonlarını da tanımlayabilirsin. Temel olarak, bir kod bloğuna bir isim vermeni sağlar, böylece onu istediğin yerden çağırabilirsin.
 
 ## Fonksiyon Tanımları
 Örneğin, drone'u birkaç kez hareket ettiren bir fonksiyon tanımlayabilirsin.
@@ -18,28 +19,29 @@ Fonksiyonlardaki yerel ve küresel değişkenler hakkında bilgi edinmek için [
 	for i in range(n):
 		move(dir)`
 
-`def` anahtar kelimesi bunun bir fonksiyon tanımı olduğunu belirtir.
-`move_n_dir` fonksiyonun bağlı olduğu isimdir. Bu, herhangi bir geçerli değişken ismi olabilir ve fonksiyonu çağırmak için kullanılır.
-`n` ve `dir` parametrelerdir. Bu değişkenler, fonksiyona aktarılan değerleri tutar (Bu değerlere argüman da denir). Bir fonksiyon tanımına istediğin kadar parametre ekleyebilirsin.
-`:`'dan sonra, fonksiyon çağrıldığında çalışacak olan kod bloğu gelir.
+`def` anahtar kelimesi bunun bir fonksiyon tanımı olduğunu belirtir. 
+`move_n_dir`, fonksiyonun bağlandığı isimdir. Bu, herhangi bir geçerli değişken adı olabilir ve fonksiyonu çağırmak için kullanılacaktır.
+`n` ve `dir` parametrelerdir. Bunlar, fonksiyona geçirilen değerleri tutan değişkenlerdir (Bu değerlere argüman da denir). Bir fonksiyon tanımına istediğin kadar parametre ekleyebilirsin.
+`:` işaretinden sonra, fonksiyon çağrıldığında çalışacak olan kod bloğu gelir.
 
-Yukarıdaki tanımla, bu kod drone'u `10` kare `North` ve `2` kare `West` hareket ettirir.
+Yukarıdaki tanımla, aşağıdaki kod drone'u `10` kare `North` ve `2` kare `West` hareket ettirir.
 
 `move_n_dir(10, North)
 move_n_dir(2, West)`
 
-`def function():` gördüğünde bunu şöyle bir değişken ataması gibi düşünmelisin:
+`def function():` gördüğünde, bunu gerçekten şöyle bir değişken ataması olarak düşünmelisin:
 `function = create_new_function_object()`
-Tüm atamalarda olduğu gibi, atanmadıkça değişkeni kullanamazsın!
-`def` ifadesi, herhangi bir fonksiyon çağrısından önce çalıştırılmalıdır.
-Bu kod bir hata verecektir:
+Tüm atamalarda olduğu gibi, değişkeni atanmadan önce kullanamazsın!
+`def` ifadesi, herhangi bir fonksiyon çağrısından önce çalışmalıdır.
+Bu kod bir error verir:
 
 `func()
 def func():
 	pass`
 
-## Geri Dönüş Değerleri
-Bir fonksiyonun bir değer döndürmesini sağlamak için `return` anahtar kelimesini kullan. Örneğin, aşağıdaki fonksiyon özel veya işlemini tanımlar. Özel veya, bir değer `True` ve diğeri `False` olduğunda `True` döndürür:
+## Dönüş Değerleri
+Bir fonksiyonun bir değer döndürmesini sağlamak için `return` anahtar kelimesini kullan. 
+Örneğin, aşağıdaki fonksiyon özel veya işlemini tanımlar. Özel veya, bir değer `True` ve diğeri `False` ise `True` döndürür:
 
 `def xor(a, b):
 	return a != b
@@ -47,10 +49,10 @@ Bir fonksiyonun bir değer döndürmesini sağlamak için `return` anahtar kelim
 if xor(True, False):
 	do_a_flip()`
 
-[Tuples](docs/scripting/tuples.md) birden fazla değer döndürmeyi sağlar.
+[Tuple'lar](docs/scripting/tuples.md) birden fazla değer döndürmeye izin verir.
 
 ## Varsayılan Argümanlar
-Geçerli bir argüman verilmezse kullanılacak varsayılan değerler de atayabilirsin.
+Argüman geçilmediğinde kullanılacak varsayılan değerler de atayabilirsin.
 
 `def f(a = False):
 	if a:
@@ -60,11 +62,11 @@ f()
 
 f(True)`
 
-Varsayılan değere sahip bir argümanın ardından varsayılan değeri olmayan bir argüman gelemez.
+Varsayılan değeri olan bir argümanı, varsayılan değeri olmayan bir argüman takip edemez.
 
-## Gelişmiş Fonksiyon Kullanımı
-Fonksiyonlar, tıpkı diğer değerler gibi değerlendirilebilir ve `def` ifadesi, fonksiyonu verdiğin isime atayan bir atama ifadesi gibi davranır.
-Bu durum, aşağıdaki gibi şeyler yapmayı mümkün kılar:
+## İleri Düzey Fonksiyon Kullanımı
+Fonksiyonlar, diğer herhangi bir değer gibi değerlerdir ve `def` ifadesi, fonksiyonu verdiğin herhangi bir isme atayan bir atama ifadesi gibi davranır.
+Bu, bunun gibi şeyler yapmaya izin verir:
 
 `def f():
 	def d():
@@ -73,10 +75,10 @@ Bu durum, aşağıdaki gibi şeyler yapmayı mümkün kılar:
 
 f()()`
 
-Burada `f()`, yeni bir `d` fonksiyonu tanımlayıp döndüren `f` fonksiyonunu çağırır. İkinci `()` daha sonra döndürülen fonksiyonu çalıştırır ve flip gerçekleştirir.
-(Bu tür şeyleri yapmak genellikle iyi bir fikir değildir çünkü ne olduğunu görmek zor olabilir)
+Burada `f()`, `f` fonksiyonunu çağırır, bu da yeni bir `d` fonksiyonu tanımlar ve döndürür. İkinci `()` daha sonra döndürülen fonksiyonu yürütür ve takla atar.
+(Bu tür şeyler yapmak genellikle iyi bir fikir değildir çünkü ne olup bittiğini görmek zordur)
 
-Diğer fonksiyonları argüman olarak alan fonksiyonlar, gerçekten yaratıcı olmanı sağlar:
+Argüman olarak başka fonksiyonlar alan fonksiyonlar, gerçekten yaratıcı olmanı sağlar:
 
 `def f(g, arg):
 	for _ in range(10):
@@ -85,4 +87,4 @@ Diğer fonksiyonları argüman olarak alan fonksiyonlar, gerçekten yaratıcı o
 f(move, North)
 f(use_item, Items.Fertilizer)`
 
-Bu kod drone'u `North` yönünde 10 kez hareket ettirir ve ardından 10 kez gübre kullanır.
+Bu kod, drone'u 10 kez `North` yönüne hareket ettirir ve ardından 10 kez gübre kullanır.

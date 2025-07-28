@@ -1,27 +1,27 @@
 # Break
-`break` pozwala na wcześniejsze zakończenie pętli. Gdy zostanie osiągnięty wiersz z `break`, natychmiast wychodzi z najgłębszej pętli i rozpoczyna wykonanie kodu po pętli.
+`break` pozwala na wcześniejsze zakończenie pętli. Gdy instrukcja `break` zostanie osiągnięta, natychmiast wyjdzie z najbardziej wewnętrznej pętli i zacznie wykonywać kod po pętli.
 
 `for i in range(10):
 	break
 print(i)`
 To drukuje `0`, ponieważ `i` wynosi `0` w pierwszej iteracji pętli, a następnie instrukcja break kończy pętlę.
 
-Działa również w pętlach `while`.
+Działa to również na pętlach `while`.
 
 `while True:
 	if can_harvest():
 		break`
 
-Ten kod uruchamia pętlę `while` aż `can_harvest()` wynosi `True`.
-Daje to taki sam efekt jak
+Ten kod wykonuje pętlę `while`, dopóki `can_harvest()` nie będzie `True`.
+Ma to taki sam efekt jak
 
 `while not can_harvest():
 	pass`
 
-W zagnieżdżonych pętlach `break` zawsze wychodzi z najgłębszej pętli.
+W pętlach zagnieżdżonych `break` zawsze wychodzi z najbardziej wewnętrznej pętli.
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("to nigdy nie zostanie wydrukowane")
+	print("to zostanie wydrukowane 10 razy")`

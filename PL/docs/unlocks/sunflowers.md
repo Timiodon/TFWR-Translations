@@ -1,20 +1,20 @@
 # Słoneczniki
-[Sunflowers](objects/sunflower) zbierają energię słońca. Możesz zebrać tę energię.
+[Słoneczniki](objects/sunflower) zbierają moc słońca. Możesz zbierać tę moc.
 
-Sadzenie ich działa dokładnie tak jak sadzenie marchewek czy dyń.
+Sadzenie ich działa dokładnie tak samo jak sadzenie marchewek czy dyń.
 
-Zbiornik dojrzałego słonecznika daje energię. 
-Jeśli na farmie jest co najmniej 10 słoneczników, a ty zbierzesz ten z największą liczbą płatków, dostaniesz `5` razy więcej energii!
+Zebranie dojrzałego słonecznika daje moc.
+Jeśli na farmie jest co najmniej 10 słoneczników, a ty zbierzesz ten z największą liczbą płatków, otrzymasz `5` razy więcej mocy!
 
 `measure()` zwraca liczbę płatków słonecznika pod dronem.
-Słoneczniki mają co najmniej `7`, a maksymalnie `15` płatków.
-Można je zmierzyć zanim są całkowicie dojrzałe.
+Słoneczniki mają co najmniej `7` i co najwyżej `15` płatków.
+Można je zmierzyć, zanim w pełni urosną.
 
-Kilka słoneczników może mieć tę samą liczbę płatków, więc może być więcej niż jeden słonecznik z największą liczbą płatków. W takim przypadku nie ma znaczenia, który z nich zbierzesz.
+Kilka słoneczników może mieć taką samą liczbę płatków, więc może być też kilka słoneczników z największą liczbą płatków. W takim przypadku nie ma znaczenia, który z nich zbierzesz.
 
-Tak długo, jak masz energię, dron będzie działał dwa razy szybciej.
-Zużywa 1 energię co 30 akcji (jak ruchy, zbiory, sadzenie...)
-Wykonanie innych instrukcji kodu również może zużywać energię, ale znacznie mniej niż działania drona.
+Dopóki masz moc, dron będzie jej używał, aby poruszać się dwa razy szybciej.
+Zużywa 1 jednostkę mocy co 30 akcji (takich jak ruchy, zbiory, sadzenie...)
+Wykonywanie innych instrukcji kodu również może zużywać moc, ale znacznie mniej niż akcje drona.
 
-Ogólnie rzecz biorąc, wszystko co jest przyspieszone przez ulepszenia prędkości, jest również przyspieszone przez energię.
-Wszystko przyspieszone przez energię zużywa ją proporcjonalnie do czasu potrzebnego na wykonanie, z pominięciem ulepszeń prędkości.
+Ogólnie rzecz biorąc, wszystko, co jest przyspieszane przez ulepszenia prędkości, jest również przyspieszane przez moc.
+Wszystko, co jest przyspieszane przez moc, zużywa również moc proporcjonalnie do czasu potrzebnego na wykonanie, ignorując ulepszenia prędkości.

@@ -1,74 +1,74 @@
-@error_code_after_block = No debería haber ningún código aquí. Intenta eliminarlo o ponerlo en una nueva línea.
+@error_code_after_block = No debería haber código aquí. Intenta eliminarlo o ponerlo en una nueva línea.
 @error_wrong_number_args = {0} toma {1} argumentos.
-@error_expected_no_args = {0} no acepta argumentos.
-@error_wrong_args = El argumento {0} de {1} era {2}. Este no es un argumento válido.
+@error_expected_no_args = {0} no toma ningún argumento.
+@error_wrong_args = El argumento {0}. de {1} fue {2}. Este no es un argumento válido.
 @error_syntax_error_in_import = El módulo importado tiene un error de sintaxis.
-@error_module_not_found = Un módulo con este nombre no existe. El nombre debe coincidir con un nombre de archivo. Este es el nombre que se muestra en la parte superior de la ventana.
-@error_list_element_not_found = {0} no es un elemento de la lista.
+@error_module_not_found = No existe un módulo con este nombre. El nombre debe coincidir con un nombre de archivo. Este es el nombre que se muestra en la parte superior de la ventana.
+@error_list_element_not_found = {0} no es un elemento en la lista.
 @error_set_element_not_found = {0} no es un elemento del set.
 @error_index_out_of_bounds = El índice {0} estaba fuera de los límites de la lista {1}.
 @error_index_out_of_bounds2 = El índice estaba fuera de los límites de la lista.
-@error_arith_assign_not_used_on_number = {0} solo se puede usar con números.
-@error_bool_op_not_used_on_bool = Un operador lógico solo se puede usar en expresiones booleanas que se evalúan a `True` o `False`.
-@error_bad_bin_operator = El operador {0} no puede usarse con los operandos {1} y {2}.
-@error_bad_unary_operator = El operador {0} no puede usarse en {1}.
-@error_index = {0} no se puede usar como índice en {1}.
+@error_arith_assign_not_used_on_number = {0} solo se puede usar en números.
+@error_bool_op_not_used_on_bool = Un operador lógico solo se puede usar en expresiones booleanas que evalúan a `True` o `False`.
+@error_bad_bin_operator = El operador {0} no se puede usar en los operandos {1} y {2}.
+@error_bad_unary_operator = El operador {0} no se puede usar en {1}.
+@error_index = {0} no se puede usar como un índice en {1}.
 @error_index_on_non_indexable = No puedes indexar en {0}.
 @error_zero_step = El tamaño del paso no puede ser cero.
 @error_index_on_tuple = No puedes asignar un elemento de una tupla porque las tuplas son inmutables.
-@error_bad_key = {0} no puede usarse como clave.
-@error_slice_dict = No se pueden cortar dictionaries.
+@error_bad_key = {0} no puede ser usado como clave.
+@error_slice_dict = No se pueden hacer "slices" en los dictionaries.
 @error_key = {0} no es una clave en el dictionary.
 @error_condition_not_bool = {0} no es una condición válida. La condición debe ser un valor booleano. Esto significa que debe ser una expresión que siempre sea `True` o `False`.
-@error_for_requires_iterable = {0} no se puede iterar en un bucle for. El bucle for debe recibir una secuencia para iterar. Ejemplo:
+@error_for_requires_iterable = {0} no se puede iterar en un bucle for. Al bucle for se le debe dar una secuencia para iterar. Ejemplo:
 
 `for i in range(5):`
 Aquí range(5) devuelve la secuencia `0,1,2,3,4`.
 @error_no_loop_to_break = `break` solo se puede usar dentro de un bucle.
 @error_no_loop_to_continue = `continue` solo se puede usar dentro de un bucle.
 @error_no_function_to_return_from = `return` solo se puede usar dentro de una función.
-@error_missing_unlock = Esto debe desbloquearse antes de que pueda ser usado.
-@error_missing_x_unlock = {0} debe desbloquearse antes de que esto pueda usarse.
+@error_missing_unlock = Esto debe desbloquearse antes de poder usarlo.
+@error_missing_x_unlock = {0} debe desbloquearse antes de que se pueda usar.
 @error_name_not_defined = {0} nunca ha sido definido. Debes asignar un valor a una variable antes de usarla.
-@error_missing_import = {0} nunca ha sido definido. Parece estar definido en el archivo {1}. ¿Olvidaste importarlo?  
-Si lo has importado, probablemente tengas un ciclo de importación (Consulta la página de documentación de importación).
+@error_missing_import = {0} nunca ha sido definido. Parece estar definido en el archivo {1}. ¿Olvidaste importarlo? 
+Si lo has importado, probablemente tengas un ciclo de importación (Consulta la página de documentación sobre importación).
 @error_missing_import_before_unlock = {0} nunca ha sido definido. Parece estar definido en el archivo {1}. Tienes que desbloquear las importaciones para poder importar cosas de otros archivos.
 @error_call_before_def = {0} no está definido. Parece estar definido en algún lugar de este archivo, pero la definición aún no se ha ejecutado. Las funciones solo se pueden llamar después de la declaración `def`.
 @error_not_a_function = Intentaste llamar a algo que no es una función. Un error común que puede causar esto es tener una variable con el mismo nombre que la función.
 @error_invalid_const = {0} no existe.
 @error_invalid_const2 = Esto no existe.
-@error_max_stack_size_reached = Se ha alcanzado el tamaño máximo de la call stack. Esto probablemente se deba a demasiadas llamadas recursivas a funciones.
-@error_max_comparison_depth = Se ha alcanzado la profundidad máxima de comparación. Se ha alcanzado la profundidad máxima de comparación. Esto podría suceder, por ejemplo, si estás comparando listas que se contienen a sí mismas.
-@error_assign_type_mismatch = El lado izquierdo de la asignación no coincidió con el lado derecho.
-@error_too_many_values_to_unpack = El lado derecho no contiene suficientes valores para desempaquetar.
-@error_not_enough_values = El lado derecho contiene demasiados valores para desempaquetar en el lado izquierdo.
+@error_max_stack_size_reached = Se ha alcanzado el tamaño máximo del call stack. Esto probablemente se deba a demasiadas llamadas a funciones recursivas.
+@error_max_comparison_depth = Se ha alcanzado la profundidad máxima de comparación. Esto podría ocurrir, por ejemplo, si estás comparando listas que se contienen a sí mismas.
+@error_assign_type_mismatch = El lado izquierdo de la asignación no coincide con el lado derecho.
+@error_too_many_values_to_unpack = El lado derecho no contiene suficientes valores para desempacar.
+@error_not_enough_values = El lado derecho contiene demasiados valores para ser desempacados en el lado izquierdo.
 @error_empty_print = `print()` requiere al menos un argumento.
-@error_in_string = No se puede verificar si {0} está en una string.
-@error_collection_changed_size_during_iteration = El tamaño de esta colección no se puede cambiar dentro de un bucle for que esté iterando sobre ella. Esto se debe a que cambiar el tamaño de la colección invalidaría el objeto iterador que el bucle for está utilizando.
-@error_wrong_use_of_max = No puedo calcular el max de {0}.
-@error_wrong_use_of_min = No puedo calcular el min de {0}.
-@error_function_as_condition = Intentando verificar si la función {0} es `True`. Este es el objeto de la función en sí, no el valor de retorno de la función. ¿Querías llamar a la función con el operador de llamada `()`? 
+@error_in_string = No se puede comprobar si {0} está en un string.
+@error_collection_changed_size_during_iteration = El tamaño de esta colección no se puede cambiar dentro de un bucle for que itera sobre ella. Esto se debe a que cambiar el tamaño de la colección invalidaría el objeto iterador que el bucle for está utilizando.
+@error_wrong_use_of_max = No se puede calcular el máximo de {0}.
+@error_wrong_use_of_min = No se puede calcular el mínimo de {0}.
+@error_function_as_condition = Intentando comprobar si la función {0} es `True`. Este es el objeto de la función en sí, no el valor de retorno de la función. ¿Querías llamar a la función con el operador de llamada `()`? 
 
-En Python, los objetos de funciones son truthy, lo que significa que si los usas como condiciones, funcionan como `True`, así que Python no te daría este mensaje de error. 
+En Python, los objetos de función son "truthy", lo que significa que si los usas como condiciones, funcionan como `True`, por lo que Python no te daría este mensaje de error. 
 
-Este es un mensaje de error de protección, puedes desactivarlo en las opciones si te molesta.
-@error_function_in_operator = Intentando usar {1} en la función {0}. Este es el objeto de la función en sí, no el valor de retorno de la función. ¿Quisiste llamar a la función con el operador de llamada `()`?
+Este es un mensaje de error de salvaguarda, puedes desactivarlo en las opciones si te molesta.
+@error_function_in_operator = Intentando usar {1} en la función {0}. Este es el objeto de la función en sí, no el valor de retorno de la función. ¿Querías llamar a la función con el operador de llamada `()`? 
 
-Este es un mensaje de error de protección, puedes desactivarlo en las opciones si te molesta.
+Este es un mensaje de error de salvaguarda, puedes desactivarlo en las opciones si te molesta.
 @error_zero_step_size = El tamaño del paso no puede ser 0.
 @error_sequence_too_large = La secuencia era demasiado grande para copiar.
-@error_invalid_sim_unlocks = Los desbloqueos iniciales eran inválidos. Deben ser una secuencia de desbloqueos o tuplas de la forma `(Unlock.Carrots, 3)`.
-@error_invalid_sim_items = Los objetos iniciales no eran válidos. Debe ser un dict que asocie objetos con números como `{Items.Hay : 100}`.
-@error_invalid_sim_globals = Los globales iniciales eran inválidos. Debe ser un dict que asocie nombres de variables a valores como `{"x" : 42}`.
-@error_division_by_zero = ¡Oh no! Dividiste por `0`. Apenas lograste sobrevivir.
-@error_negative_use_item = La cantidad de uso del item debe ser al menos `1`. Era {0}.
-@error_use_before_assign = Intentaste leer la variable {0} antes de que se le asignara un valor.  
-Si quieres modificar una variable global, debes usar la palabra clave `global` para escribir en el `global scope`.
+@error_invalid_sim_unlocks = Los unlocks iniciales no eran válidos. Debe ser una secuencia de unlocks o tuplas de la forma `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Los items iniciales no eran válidos. Debe ser un dict que mapee items a números como `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Los globales iniciales no eran válidos. Debe ser un dict que mapee nombres de variables a valores como `{"x" : 42}`.
+@error_division_by_zero = ¡Oh no! Has dividido por `0`. Apenas has sobrevivido.
+@error_negative_use_item = La cantidad de item a usar debe ser al menos `1`. Era {0}.
+@error_use_before_assign = Se intentó leer la variable {0} antes de que se le asignara un valor. 
+Si quieres modificar una variable global tienes que usar la palabra clave global para escribir en el scope global.
 
-`global x  
+`global x
 x += 1`
 @error_attribute_on_non_module = No puedes asignar un atributo a {0}.
 @error_file_not_found = El archivo {0} no existe.
-@error_max_drones_reached = Se superó el límite del drone.
-@error_dino_hat_already_used = Solo hay un sombrero de dinosaurio y ya está en uso. No puedes usarlo en un segundo drone.
-@error_invalid_drone_id = No hay ningún drone con ID {0}.
+@error_max_drones_reached = Se excedió el límite de drones.
+@error_dino_hat_already_used = Solo hay un sombrero de dinosaurio y ya está en uso. No puedes usarlo en un segundo dron.
+@error_invalid_drone_id = No hay ningún dron con el ID {0}.

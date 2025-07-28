@@ -1,7 +1,7 @@
-# Zaczynamy
-To okno zawiera informacje o wszystkim, co jest w grze.
+# Pierwsze kroki
+To okno zawiera informacje o wszystkim w grze.
 
-Możesz przenosić okna, przeciągając i upuszczając szarą część okna.
-Możesz się przemieszczać, przeciągając wszędzie poza oknami.
+Możesz przesuwać okna, przeciągając i upuszczając szarą część okna.
+Możesz poruszać się, przeciągając w dowolnym miejscu poza oknami.
 
-Aby rozpocząć programowanie, przejdź do strony [First Program](docs/first_program.md), klikając na nią.
+Aby zacząć programować, przejdź do strony [Pierwszy program](docs/first_program.md), klikając ją.

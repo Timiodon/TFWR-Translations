@@ -1,14 +1,14 @@
 @warning_not_enough_items_to_trade = Intenté comprar {0} pero no tenía los recursos necesarios.
-@warning_no_space_to_plant = Intenté plantar {0}, pero ya había algo ahí.
+@warning_no_space_to_plant = Intenté plantar {0} pero ya había algo allí.
 @warning_cant_plant_on_ground = No se puede plantar {0} en {1}.
-@warning_missing_seed = No tenía los ítems necesarios para plantar {0}.
+@warning_missing_seed = No tenía los items necesarios para plantar {0}.
 @warning_no_item_to_use = Intenté usar {0} pero no tenía suficiente.
-@warning_failed_swap_wrap = Intenté hacer un intercambio más allá de los límites de la granja. Eso no está permitido.
-@warning_failed_swap_unswappable = Intenté intercambiar {0}, lo cual no se puede intercambiar.
-@warning_weird_substance_not_divisible = Usaste una cantidad de Weird Substance que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad requerida de Weird Substance aumenta a medida que mejoras el laberinto.
+@warning_failed_swap_wrap = Se intentó hacer un intercambio fuera de los límites de la granja. Eso no está permitido.
+@warning_failed_swap_unswappable = Se intentó intercambiar {0}, lo cual no se puede intercambiar.
+@warning_weird_substance_not_divisible = Usaste una cantidad de Sustancia Extraña que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad de Sustancia Extraña requerida aumenta a medida que mejoras el laberinto.
 
-Para generar un laberinto de tamaño completo haz esto:
+Para generar un laberinto de tamaño completo, haz:
 `plant(Entities.Bush)
 substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Las simulaciones y las ejecuciones en el leaderboard no pueden iniciarse desde dentro de otras simulaciones y ejecuciones en el leaderboard.
+@warning_recursive_simulation = Las simulaciones y las carreras de leaderboard no se pueden iniciar desde dentro de otras simulaciones y carreras de leaderboard.

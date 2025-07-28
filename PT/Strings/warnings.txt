@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = Tentou comprar {0}, mas não tinha os recursos necessários.
-@warning_no_space_to_plant = Tentei plantar {0}, mas já tinha algo lá.
+@warning_not_enough_items_to_trade = Tentativa de comprar {0}, mas não tinhas os recursos necessários.
+@warning_no_space_to_plant = Tentativa de plantar {0}, mas já havia algo lá.
 @warning_cant_plant_on_ground = Não é possível plantar {0} em {1}.
-@warning_missing_seed = Não tinha os itens necessários para plantar {0}.
-@warning_no_item_to_use = Tentou usar {0}, mas não tinha o suficiente.
-@warning_failed_swap_wrap = Tentou fazer um swap além dos limites da fazenda. Isso não é permitido.
-@warning_failed_swap_unswappable = Tentei trocar {0}, que não pode ser trocado.
-@warning_weird_substance_not_divisible = Você usou uma quantidade de Weird Substance que não é exatamente a quantidade necessária para criar o labirinto. Não se esqueça de que o valor de Weird Substance necessário aumenta conforme você melhora o labirinto.
+@warning_missing_seed = Não tinhas os itens necessários para plantar {0}.
+@warning_no_item_to_use = Tentativa de usar {0}, mas não tinhas o suficiente.
+@warning_failed_swap_wrap = Tentativa de fazer uma troca para além das fronteiras da quinta. Isso não é permitido.
+@warning_failed_swap_unswappable = Tentativa de trocar {0}, que não pode ser trocado.
+@warning_weird_substance_not_divisible = Usaste um número de Substância Estranha que não é exatamente o número necessário para criar o labirinto. Não te esqueças que a quantidade de Substância Estranha necessária aumenta à medida que melhoras o labirinto.
 
-Para gerar um labirinto de tamanho completo, faça:
+Para gerar um labirinto de tamanho completo, faz:
 `plant(Entities.Bush)
 substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Simulações e execuções de leaderboard não podem ser iniciadas a partir de dentro de outras simulações e execuções de leaderboard.
+@warning_recursive_simulation = Simulações e corridas da leaderboard não podem ser iniciadas de dentro de outras simulações e corridas da leaderboard.

@@ -1,3 +1,3 @@
-Para ver el resultado completo, consulta [output.txt](persistent_data_path/output.txt).  
-Salida truncada:  
+Para la salida completa, consulta [output.txt](persistent_data_path/output.txt).
+Salida Truncada:
 {{output}}

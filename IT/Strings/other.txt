@@ -1,6 +1,6 @@
 @word_number = numero
 @word_direction = direzione
-@run_cancelled = Esecuzione Fallita
-@average_text = {0} Completato ({2:F1}%)
+@run_cancelled = Run Fallita
+@average_text = {0} Completata ({2:F1}%)
 {1}
-@unlocked_in = Per ulteriori informazioni correlate, consulta: [{0}]({1})
+@unlocked_in = Per maggiori informazioni correlate, vedi: [{0}]({1})

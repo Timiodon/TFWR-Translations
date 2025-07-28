@@ -2,7 +2,7 @@
 Dictionaries are a datastructure that allows you to map keys to values in the same way that a real dictionary maps words to their definitions and you can look them up very quickly.
 
 A dictionary can be created like this:
-`rotation = {North:East, East:South, South:West, West:North}`
+`right_of = {North:East, East:South, South:West, West:North}`
 
 The expression before the colon is the key and the expression after the colon is the value to which the key maps.
 The above dictionary maps each direction to the direction to it's right.
@@ -15,7 +15,7 @@ Accessing the value mapped to a key is similar to accessing an element in a list
 `value = dict[key]`
 
 Example:
-`orientation = rotation[South]`
+`orientation = right_of[South]`
 This sets `orientation` to `West`.
 
 You can add a new key-value pair to a dictionary like this:

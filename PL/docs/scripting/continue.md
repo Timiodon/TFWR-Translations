@@ -1,13 +1,13 @@
 # Continue
-continue pozwala na przerwanie aktualnej iteracji pętli i przejście do kolejnej iteracji najgłębszej pętli.
+`continue` pozwala na zatrzymanie bieżącej iteracji pętli i przejście do następnej iteracji najbardziej wewnętrznej pętli.
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("to nigdy nie zostanie wydrukowane")`
 
-To wykonuje wszystkie `10` iteracji pętli, ale polecenie `print` po `continue` jest zawsze pomijane.
+To wykonuje wszystkie `10` iteracji pętli, ale instrukcja `print` po `continue` jest zawsze pomijana.
 
-Działa to również z pętlami `while`.
+Działa to również na pętlach `while`.
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ Działa to również z pętlami `while`.
     
     harvest()`
 
-Ten kod wywołuje `harvest()` tylko wtedy, gdy `can_harvest()` jest `True`. 
-Ma to taki sam efekt jak:
+Ten kod wywołuje `harvest()` tylko wtedy, gdy `can_harvest()` jest `True`.
+Ma to taki sam efekt jak
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-W zagnieżdżonych pętlach `continue` zawsze wpływa na najgłębszą pętlę.
+W pętlach zagnieżdżonych `continue` zawsze dotyczy najbardziej wewnętrznej pętli.
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("to zostanie wydrukowane 100 razy")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("to nigdy nie zostanie wydrukowane")
+	print("to zostanie wydrukowane 10 razy")`

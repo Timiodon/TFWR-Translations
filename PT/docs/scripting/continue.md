@@ -1,32 +1,32 @@
 # Continue
-continue permite parar a iteração atual de um loop e pular para a próxima iteração do loop mais interno.
+`continue` permite parar a iteração atual de um loop e saltar para a próxima iteração do loop mais interno.
 
 `for i in range(10):
-    continue
-    print("this is never printed")`
+	continue
+    print("isto nunca é impresso")`
 
-Isso executa todas as `10` iterações do loop, mas o comando `print` após o `continue` é sempre pulado.
+Isto executa todas as `10` iterações do loop, mas a instrução `print` após o `continue` é sempre ignorada.
 
 Também funciona em loops `while`.
 
 `while True:
-    if not can_harvest():
-        continue
+	if not can_harvest():
+		continue
     
     harvest()`
 
-Esse código só chama `harvest()` quando `can_harvest()` é `True`.
+Este código só chama `harvest()` quando `can_harvest()` é `True`.
 Tem o mesmo efeito que
 
 `while True:
-    if can_harvest():
-        harvest()`
+	if can_harvest():
+		harvest()`
 
-Em loops aninhados, `continue` sempre afeta o loop mais interno.
+Em loops aninhados, `continue` afeta sempre o loop mais interno.
 
 `for i in range(10):
-    for j in range(10):
-        print("this is printed 100 times")
-        continue
-        print("this is never printed")
-    print("this is printed 10 times")`
+	for j in range(10):
+	    print("isto é impresso 100 vezes")
+		continue
+		print("isto nunca é impresso")
+	print("isto é impresso 10 vezes")`

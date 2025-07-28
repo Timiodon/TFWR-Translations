@@ -1,48 +1,118 @@
-@unlock_tooltip_template_cost = ### Koszt Odblokowania {{{{itemblock cost unlock {0}}}}}
+@unlock_tooltip_template_cost = ### Koszt odblokowania {{{{itemblock cost unlock {0}}}}}
 @unlock_descr_trees = Odblokowuje drzewa.
+
+`plant(Entities.Trees)`
 @unlock_descr_speed = Zwiększa prędkość drona.
 @unlock_descr_plant = Odblokowuje sadzenie.
+
+`plant(Entities.Bush)`
 @unlock_descr_loops = Odblokowuje prostą pętlę while.
-@unlock_descr_senses = Dron może zobaczyć, co jest pod nim i gdzie się znajduje.
-@unlock_descr_expand = Rozszerza teren farmy i odblokowuje ruch.
-@unlock_descr_auto = Automatyczne odblokowywanie rzeczy. To pozwala stworzyć kod, który przechodzi przez całą grę.
-@unlock_descr_operators = Arytmetyczne, porównawcze i logiczne operatory.
+
+`while True:
+    harvest()`
+@unlock_descr_senses = Dron widzi, co jest pod nim i gdzie się znajduje.
+
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
+@unlock_descr_expand = Powiększa teren farmy i odblokowuje ruch.
+@unlock_descr_operators = Operatory arytmetyczne, porównania i logiczne.
+
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
 @unlock_descr_pumpkin = Dynie!
-@unlock_descr_variables = Przypisz wartości do zmiennych.
-@unlock_descr_functions = Zdefiniuj własne funkcje.
-@unlock_descr_watering = Podlej rośliny, żeby szybciej rosły.
-@unlock_descr_carrots = Zryj ziemię i zasadź marchewki.
-@unlock_descr_lists = Używaj list, aby przechowywać wiele wartości.
-@unlock_descr_costs = Pozwala uzyskać dostęp do kosztów rzeczy.
-@unlock_descr_fertilizer = Natychmiastowe rośnięcie roślin.
-@unlock_descr_mazes = Labirynt z skarbem w środku.
-@unlock_descr_debug = Narzędzia do pomocy w debugowaniu programów.
-@unlock_descr_debug2 = Funkcje do tymczasowego spowolnienia wykonania i zmniejszenia siatki.
-@unlock_descr_benchmark = Funkcje do pomiaru wydajności.
-@unlock_descr_grass = Zwiększa plony trawy.
-@unlock_descr_multi_trade = Wymień wiele przedmiotów jednocześnie.
+
+`plant(Entities.Pumpkin)`
+@unlock_descr_variables = Przypisuj wartości do zmiennych.
+
+`next_plant = Entities.Bush
+plant(next_plant)`
+@unlock_descr_functions = Definiuj własne funkcje.
+
+`def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()`
+@unlock_descr_watering = Podlewaj rośliny, aby rosły szybciej.
+
+`use_item(Items.Water)`
+@unlock_descr_carrots = Uprawiaj glebę i sadź marchewki.
+
+`till()
+plant(Entities.Carrot)`
+@unlock_descr_lists = Używaj list do przechowywania wielu wartości.
+
+`plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)`
+@unlock_descr_costs = Umożliwia dostęp do kosztu rzeczy.
+
+`cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]`
+@unlock_descr_fertilizer = Błyskawicznie hoduj rośliny.
+
+`use_item(Items.Fertilizer)`
+@unlock_descr_mazes = Labirynt ze skarbem w środku.
+
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
+@unlock_descr_debug = Narzędzia pomocne w debugowaniu programów.
+
+`print("hi")`
+@unlock_descr_debug2 = Funkcje do tymczasowego spowolnienia wykonania i zmniejszenia farmy.
+
+`set_world_size(3)
+set_execution_speed(1)`
+@unlock_descr_grass = Zwiększa plon trawy.
+
+`harvest()`
 @unlock_descr_auto_unlock = Automatycznie odblokowuj rzeczy.
-@unlock_descr_polyculture = Użyj towarzyszącego sadzenia, aby zwiększyć plony.
-@unlock_descr_sunflowers = Słoneczniki i Power.
-@unlock_descr_reset = Zacznij od nowa dla większego zysku.
-@unlock_descr_leaderboard = Dołącz do leaderboard dla najszybszego czasu resetu.
-@unlock_descr_dicts = Zyskaj dostęp do dictionaries i sets.
+
+`unlock(Unlocks.Megafarm)`
+@unlock_descr_polyculture = Użyj uprawy współrzędnej, aby zwiększyć plon.
+
+`plant_type, (x, y) = get_companion()`
+@unlock_descr_sunflowers = Słoneczniki i Moc.
+
+`plant(Entities.Sunflowers)`
+@unlock_descr_leaderboard = Dołącz do leaderboardu o najszybszy czas resetu.
+
+`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+@unlock_descr_dicts = Uzyskaj dostęp do słowników i setów.
+
+`right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Odblokowuje funkcje `min()`, `max()`, `abs()` i `random()`.
+
+`random_index = random() * len(list) // 1`
 @unlock_descr_cactus = Kaktus!
-@unlock_descr_dinosaurs = Majestatyczne starożytne stworzenia.
-@unlock_descr_simulation = Testuj szybciej i w warunkach, które można powtórzyć.
-@unlock_descr_timing = Już najwyższy czas!
+
+`plant(Entities.Cactus)`
+@unlock_descr_dinosaurs = Wspaniałe starożytne stworzenia.
+@unlock_descr_simulation = Testuj szybciej i w powtarzalnych warunkach.
+
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@unlock_descr_timing = Najwyższy czas!
+
+`passed_time = get_time()`
 @unlock_descr_import = Importuj rzeczy z innych plików.
-@unlock_descr_megafarm = Znacznie większa farma z wieloma dronami.
-@multi_unlock_descr_expand = Rozszerza farmę. To też czyści farmę.
+
+`import other_file
+other_file.function()`
+@unlock_descr_megafarm = Dużo większa farma z wieloma dronami.
+
+`spawn_drone(file_to_run)`
+@multi_unlock_descr_expand = Powiększa farmę. To również czyści farmę.
 @multi_unlock_descr_carrots = Zwiększa plon i koszt marchewek.
-@multi_unlock_descr_trees = Zwiększa plony krzewów i drzew.
-@multi_unlock_descr_pumpkins = Zwiększa plon i koszt dyni.
-@multi_unlock_descr_mazes = Zwiększa ilość złota w skrzyniach skarbów i ilość dziwnej substancji potrzebnej do pojawienia się labiryntu.
-@multi_unlock_descr_sunflowers = Zwiększa moc uzyskiwaną z słoneczników.
-@multi_unlock_descr_cactus = Zwiększa plon i koszt kaktusa.
+@multi_unlock_descr_trees = Zwiększa plon krzaków i drzew.
+@multi_unlock_descr_pumpkins = Zwiększa plon i koszt dyń.
+@multi_unlock_descr_mazes = Zwiększa ilość złota w skrzyniach ze skarbami i ilość dziwnej substancji potrzebnej do stworzenia labiryntu.
+@multi_unlock_descr_sunflowers = Zwiększa moc uzyskiwaną ze słoneczników.
+@multi_unlock_descr_cactus = Zwiększa plon i koszt kaktusów.
 @multi_unlock_descr_dinosaur = Zwiększa plon i koszt dinozaurów.
-@multi_unlock_descr_polyculture = Zwiększa mnożnik plonów dla wieloupraw.
-@multi_unlock_descr_watering = Otrzymaj więcej wody.
-@multi_unlock_descr_fertilizer = Otrzymaj więcej nawozu.
-@multi_unlock_descr_megafarm = Zwiększ rozmiar farmy i liczbę dronów.
+@multi_unlock_descr_polyculture = Zwiększa mnożnik plonu z uprawy wielokulturowej.
+@multi_unlock_descr_watering = Otrzymuj więcej wody.
+@multi_unlock_descr_fertilizer = Otrzymuj więcej nawozu.
+@multi_unlock_descr_megafarm = Zwiększ dalej rozmiar farmy i liczbę dronów.

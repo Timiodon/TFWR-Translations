@@ -1,19 +1,20 @@
 @plant_tooltip_template = {0}
 
-Tempo di crescita base tra {1} e {2} secondi.  
+Tempo di crescita base tra {1} e {2} secondi.
 Può crescere su {3}.
-@object_tooltip_template_cost = ### Costo Piantagione {{{{itemblock cost object {0}}}}}
-@object_descr_apple = A quanto pare i dinosauri li adorano.
-@object_descr_grass = Cresce automaticamente su terreni erbosi. Raccoglilo per ottenere `Items.Hay`.
-@object_descr_bush = Un piccolo cespuglio che lascia cadere `Items.Wood`.
-@object_descr_tree = Gli alberi forniscono più legno dei cespugli. Ci mettono più tempo a crescere se altri alberi crescono accanto a loro.
+@object_tooltip_template_cost = ### Costo Pianta {{{{itemblock cost object {0}}}}}
+@object_descr_apple = A quanto pare, i dinosauri le adorano.
+@object_descr_grass = Cresce automaticamente sul prato. Raccoglila per ottenere `Items.Hay`.
+@object_descr_bush = Un piccolo cespuglio che rilascia `Items.Wood`.
+@object_descr_tree = Gli alberi rilasciano più legno dei cespugli. Impiegano più tempo a crescere se altri alberi crescono accanto a loro.
 @object_descr_carrot = Carote!
-@object_descr_pumpkin = Le zucche crescono quando sono vicine ad altre zucche completamente mature. Circa 1 zucca su 5 muore quando cresce.
-@object_descr_sunflower = I girasoli raccolgono energia dal sole. Raccogliendoli otterrai `Items.Power`.  
-Se raccogli un girasole con il numero massimo di petali, ottieni power extra.
-@object_descr_cactus = I cactus esistono in 10 dimensioni diverse. Quando vengono raccolti, i cactus adiacenti che sono "sorted" verranno anch'essi raccolti.
+@object_descr_pumpkin = Le zucche crescono insieme quando sono accanto ad altre zucche completamente cresciute. Circa 1 zucca su 5 muore quando cresce.
+@object_descr_dead_pumpkin = Una zucca su cinque muore quando cresce, lasciando dietro di sé una zucca morta. Le zucche morte sono inutili e scompaiono quando viene piantato qualcosa di nuovo.
+@object_descr_sunflower = I girasoli raccolgono l'energia del sole. Raccogliendoli otterrai `Items.Power`.
+Se raccogli un girasole con il numero massimo di petali, ottieni un bonus di energia.
+@object_descr_cactus = I cactus esistono in 10 dimensioni diverse. Quando vengono raccolti, anche i cactus adiacenti che sono "ordinati" verranno raccolti.
 @object_descr_hedge = Parte del labirinto.
-@object_descr_treasure = Un tesoro che contiene oro pari alla lunghezza del lato del labirinto in cui è nascosto. Può essere raccolto come se fosse una pianta.
+@object_descr_treasure = Un tesoro che contiene oro pari alla lunghezza del lato del labirinto in cui è nascosto. Può essere raccolto come una pianta.
 @object_descr_dinosaur = Un pezzo della coda del cappello da dinosauro.
 @object_descr_grassland = Il terreno di default. L'erba crescerà automaticamente su di esso.
-@object_descr_soil = Chiamare `till()` trasforma il terreno in suolo. Chiamare `till()` di nuovo lo riporta a prateria.
+@object_descr_soil = Chiamando `till()` il terreno si trasforma in terra. Chiamando di nuovo `till()` lo si ritrasforma in prato.

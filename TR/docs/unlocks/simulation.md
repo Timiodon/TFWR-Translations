@@ -1,56 +1,58 @@
 # Simülasyon
 
-Simülasyonlar, gerçek çiftliğin durumunu değiştirmeden kodu hızlıca test etmenizi sağlar. Simülasyonun başlangıç durumu serbestçe seçilebilir ve simülasyon bittiğinde, gerçek çiftlik simülasyon başlamadan önceki tam durumunda olacaktır.
+Simülasyonlar, gerçek çiftliğin durumunu değiştirmeden kodu hızlıca test etmeni sağlar.
+Simülasyonun başlangıç durumu serbestçe seçilebilir ve simülasyon sona erdiğinde, gerçek çiftlik simülasyon başlamadan öncekiyle birebir aynı durumda olacaktır.
 
-Simülasyonu başlatmak için `simulate()` fonksiyonu kullanılır.
+`simulate()` fonksiyonu bir simülasyon başlatmak için kullanılır.
 
-Çalıştırmanın başlaması gereken dosya
+yürütmenin başlayacağı dosya
 `filename = "f1"`
 
-Her şey kilitsiz ve tamamen geliştirilmiş olarak başla
+her şeyin kilidi açık ve tamamen yükseltilmiş olarak başla
 `sim_unlocks = Unlocks`
 
 10000 havuç ve 50 saman ile başla
 `sim_items = {Items.Carrot : 10000, Items.Hay : 50}`
 
-Değeri 13 olan global "a" değişkeni ile başla
+değeri 13 olan bir global "a" değişkeni ile başla
 `sim_globals = {"a" : 13}`
 
-Sabit bir rastgele tohum kullan
+sabit bir random seed kullan
 `seed = 0`
 
-Simülasyonu 64 kat hızlandır
+simülasyonu 64 kat hızlandır
 `speedup = 64`
 
-Simülasyonu çalıştır
+simülasyonu çalıştır
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 
-`simulate()` fonksiyonu, belirtilen başlangıç dosyasını simüle etmenin ne kadar sürdüğünü saniye cinsinden geri döner.
+`simulate()` fonksiyonu, verilen başlangıç dosyasını simüle etmenin ne kadar sürdüğünü saniye cinsinden döndürür.
 
 ### Dosya Adı
-Simülasyon fonksiyonunun ilk argümanı dosya adıdır. Bu, kod penceresinin üst kısmında gösterilen addır. Simülasyon belirlediğiniz dosyayı, tıpkı Execute butonuna tıklamışsınız gibi çalıştırır.
+Simulate fonksiyonunun ilk argümanı dosya adıdır. Bu, kod penceresinin üstünde görüntülenen isimdir. Simülasyon, belirtilen dosyayı sanki üzerindeki Çalıştır düğmesine tıklamışsın gibi çalıştıracaktır.
 
-### Başlangıç Kilitleri
-Döngüler, if yapıları, listeler, dictler gibi tüm programlama özellikleri her zaman kilitsiz kalacaktır.
+### Başlangıç Kilit Açmaları
+Döngüler, if ifadeleri, list'ler, dict'ler gibi tüm programlama özellikleri her zaman kilitli açık kalacaktır.
 
-İkinci argüman, simülasyonun programlama özelliklerine ek olarak hangi kilitlerle/güncellemelerle başlaması gerektiğini belirtmenizi sağlar. Bu, kilitlerin bir dizisi olmalıdır. Simülasyon, dizide bulunan tüm kilitlerin maksimum seviyeye yükseltildiği bir şekilde başlayacaktır.
+İkinci argüman, programlama özelliklerine ek olarak simülasyonun hangi kilit açmalar/yükseltmeler ile başlaması gerektiğini belirtmeni sağlar. Bu, bir kilit açma dizisi olmalıdır. Simülasyon, dizideki tüm kilit açmalar maksimum seviyelerine yükseltilmiş olarak başlayacaktır.
 
-Eğer maksimumdan farklı bir seviyeyi belirtmek isterseniz, kilitleri seviye haritasına dönüştüren bir dictionary iletebilirsiniz. Bu durumda, negatif değerler maksimum kilit seviyesine karşılık gelir.
+Maksimumdan farklı bir yükseltme seviyesi belirtmek istiyorsan, kilit açmaları kilit açma seviyelerine eşleyen bir dictionary geçebilirsin. Bu durumda, negatif değerler maksimum kilit açma seviyesine karşılık gelir.
 
 ### Başlangıç Eşyaları
-Üçüncü argüman, eşyaları sayılara dönüştüren bir dictionary iletmenizi sağlar. Bu, simülasyonun hangi eşyalarla başlaması gerektiğini belirtir.
+Üçüncü argüman, eşyaları sayılara eşleyen bir dictionary geçmeni sağlar. Simülasyonun hangi eşyalarla başlayacağını belirtir.
 
-### Başlangıç Globalleri
-Simülasyon tamamen yeni bir program yürütmesi başlattığı için, simülasyonu başlatan programdan değişkenlere erişemezsiniz. Ancak, dördüncü argümanı kullanarak simülasyona değerler iletmek mümkündür. Bu, değişken adlarının string şeklinde değerlere eşlendiği bir dict'tir. Bu değişkenler ardından simülasyon içindeki yürütmenin global scope'una eklenir.
+### Başlangıç Global Değişkenleri
+Simülasyon tamamen yeni bir program yürütmesi başlattığı için, simülasyonu başlatan programdaki değişkenlere erişemezsin.
+Ancak, dördüncü argümanı kullanarak simülasyona değerler geçirmek mümkündür. Bu, string biçimindeki değişken adlarını değerlere eşleyen bir dict'tir. Bu değişkenler daha sonra simülasyon içindeki yürütmenin global scope'una eklenir.
 
-Bu değerlerin tamamının kopyalandığını unutmayın, bu yüzden simülasyon içinde onları değiştirmeniz orijinal değerleri etkilemez. Çalıştırma süresi dışında simülasyondan değer döndürmek mümkün değildir.
+Bunun tüm değerleri kopyaladığını unutma, bu yüzden onları simülasyon içinde değiştirmek, simülasyon dışındaki orijinal değerleri etkilemez. Simülasyondan, çalışma süresi dışındaki değerleri döndürmek mümkün değildir.
 
-### Rastgele Tohum 
-Beşinci argüman, simülasyonda kullanılacak rastgele tohumun belirtilmesini sağlar. Bu, pozitif bir tamsayı olmalıdır. Negatif değerler rastgele bir tohum kullanılmasına neden olur.
+### Random Seed
+Beşinci argüman, simülasyonda kullanılan random seed'i belirtmeni sağlar. Bu pozitif bir tam sayı olmalıdır. Negatif değerler rastgele bir seed kullanılmasına neden olur.
 
-Rastgele tohum, bitkilerin büyüme sürelerinden labirent düzenlerine ve suyun bozulma zamanlarına kadar her şeyi etkiler. Aynı rastgele tohum ve aynı başlangıç koşullarıyla aynı simülasyonu birçok kez başlattığınızda, sonucun her zaman aynı olması gerekir.
+Random seed, bitki büyüme sürelerinden labirent düzenlerine ve suyun azalma sürelerine kadar her şeyi etkiler. Aynı simülasyonu, aynı random seed ve aynı başlangıç koşullarıyla birden çok kez başlatırsan, sonuç her zaman aynı olmalıdır.
 
 ### Hızlandırma
-Altıncı argüman, simülasyonun başlangıç hızlandırmasıdır. Bu, şeyleri hızlıca test etmenizi sağlar. Oyun ayarlanan hıza yetişemezse otomatik olarak yavaşlayacaktır.
+Altıncı argüman, simülasyonun başlangıçtaki hızlandırmasıdır. Bu, şeyleri hızlıca test etmeni sağlar. Eğer oyun ayarlanan hıza yetişemezse, otomatik olarak yavaşlayacaktır.
 
-Hızlandırma, simülasyon sonucunu hiçbir şekilde etkilemez. Yalnızca bekleme süresini azaltmak için bulunur.
+Hızlandırma, simülasyonun sonucunu hiçbir şekilde etkilemez. Sadece bekleme süresini azaltmak için vardır.

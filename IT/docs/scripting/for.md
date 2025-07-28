@@ -1,27 +1,27 @@
-# For Loop
-Il ciclo `for` funziona come in Python. (Chiamato un ciclo foreach in alcuni linguaggi, da non confondere con il ciclo for in stile C, che è una cosa diversa).
+# Ciclo For
+Il ciclo `for` funziona come in Python. (Chiamato ciclo foreach in alcuni linguaggi, da non confondere con il ciclo for in stile C, che è una cosa diversa).
 
 `for i in sequence:
-	#do something with i`
+	#fai qualcosa con i`
 
-Simile al ciclo `while`, anche il ciclo `for` chiama ripetutamente un blocco di codice. Invece di ciclarlo basandosi su una condizione, esegue il corpo del ciclo una volta per ogni elemento in una sequenza.
+Simile al ciclo `while`, anche il ciclo `for` chiama ripetutamente un blocco di codice. Invece di ciclare in base a una condizione, esegue il corpo del ciclo una volta per ogni elemento in una sequenza.
 
 ## Sintassi
-Un ciclo for appare così:
+Un ciclo for si presenta così:
 
-`for variable_name in sequence:
-	#code block`
+`for nome_variabile in sequenza:
+	#blocco di codice`
 
-`variable_name` può essere qualsiasi nome tu scelga. È una variabile che memorizza l'elemento corrente nella sequenza. `sequence` deve essere un valore che possa essere iterato come un range o numeri. Il blocco di codice viene eseguito per ogni elemento con la variabile del ciclo assegnata a quell'elemento.
+`nome_variabile` può essere qualsiasi nome tu scelga. È una variabile che memorizza l'elemento corrente nella sequenza. `sequenza` deve essere un valore che può essere iterato come un range o dei numeri. Il blocco di codice viene eseguito per ogni elemento con la variabile del ciclo assegnata a quell'elemento.
 
 ## Sequenze
-[Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+[Range](functions/range)      <unlock=lists>[Liste](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuple](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dizionari](docs/scripting/dicts.md)      </unlock><unlock=sets>[Set](docs/scripting/sets.md)</unlock>
 
 ## Esempio
 `for i in range(5):
     harvest()`
 
-Questo ciclo esegue il corpo un numero fisso di volte. È essenzialmente lo stesso che scrivere
+Questo ciclo esegue il corpo un numero fisso di volte. È essenzialmente la stessa cosa di scrivere
 
 `i = 0
 harvest()

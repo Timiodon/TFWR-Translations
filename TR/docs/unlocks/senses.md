@@ -1,18 +1,18 @@
-# Algılar
-Drone artık görebiliyor!
+# Duyular
+Drone artık görebiliyor! 
 
-`get_pos_x()` ve `get_pos_y()` fonksiyonları, dronenin mevcut x ve y pozisyonunu döner. Başlangıç pozisyonunda her ikisi de `0`'dır. X pozisyonu, her kare için `East` yönüne doğru `1` artar ve y pozisyonu her kare için `North` yönüne doğru `1` artar.
+`get_pos_x()` ve `get_pos_y()` fonksiyonları, drone'un mevcut x ve y pozisyonunu döndürür. Başlangıç pozisyonunda her ikisi de `0`'dır. x pozisyonu `East` yönüne doğru her karoda `1` artar ve y pozisyonu `North` yönüne doğru her karoda `1` artar.
 
-`num_items(item)`, bir eşyadan kaç tane olduğunu döner.
-Örneğin, `num_items(Items.Hay)` ne kadar samanınız olduğunu döner.
+`num_items(item)` bir eşyadan ne kadar olduğunu döndürür.
+Örneğin `num_items(Items.Hay)` ne kadar samanın olduğunu döndürür.
 
-`get_entity_type()` ve `get_ground_type()`, dronenin altında bulunan varlık veya zeminin türünü döner.
+`get_entity_type()` ve `get_ground_type()`, drone'un altındaki varlık veya zemin türünü döndürür.
 
-Bir çalının üzerindeysen talimatlar:
+Eğer bir çalının üzerindeyse takla at:
 `if get_entity_type() == Entities.Bush:
 	do_a_flip()`
 
-`None` anahtar kelimesi de artık kullanılabilir! `None`, bir değerin olmadığını temsil eden bir değerdir.
-Örneğin, `return` ifadesi olmayan bir fonksiyon aslında `None` döner.
+`None` anahtar kelimesi de artık açıldı! `None`, bir değer olmadığını temsil eden bir değerdir.
+Örneğin, `return` ifadesi olmayan bir fonksiyon aslında `None` döndürür.
 
-`get_entity_type()`, dronenin altında bir varlık yoksa `None` döner.
+Drone'un altında bir varlık yoksa `get_entity_type()` `None` döndürür.

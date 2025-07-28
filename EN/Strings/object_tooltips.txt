@@ -9,6 +9,7 @@ Can grow on {3}.
 @object_descr_tree = Trees drop more wood than bushes. They take longer to grow if other trees grow next to them.
 @object_descr_carrot = Carrots!
 @object_descr_pumpkin = Pumpkins grow together when they are next to other fully grown pumpkins. About 1 in 5 pumpkins dies when it grows up.
+@object_descr_dead_pumpkin = One in five pumpkins dies when it grows up, leaving behind a dead pumpkin. Dead pumpkins are useless and disappear when something new is planted.
 @object_descr_sunflower = Sunflowers collect the power from the sun. Harvesting them will give you `Items.Power`.
 If you harvest a sunflower with the maximum number of petals you get bonus power.
 @object_descr_cactus = Cacti come in 10 different sizes. When harvested adjacent cacti that are "sorted" will also be harvested.

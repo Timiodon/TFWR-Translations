@@ -1,27 +1,27 @@
 # For Döngüsü
-`for` döngüsü Python'daki gibi çalışır. (Bazı dillerde foreach döngüsü olarak adlandırılır, C tarzı for döngüsü ile karıştırılmamalıdır.)
+`for` döngüsü Python'daki gibi çalışır. (Bazı dillerde foreach döngüsü olarak adlandırılır, C tarzı for döngüsü ile karıştırılmamalıdır, o farklı bir şeydir).
 
 `for i in sequence:
-	#do something with i`
+	#i ile bir şeyler yap`
 
-`while` döngüsüne benzer şekilde, `for` döngüsü de bir kod bloğunu tekrar tekrar çağırır. Ancak bir koşula dayalı tekrar yerine, bir dizideki her bir eleman için döngü gövdesini bir kez çalıştırır.
+`while` döngüsüne benzer şekilde, `for` döngüsü de tekrar tekrar bir kod bloğunu çağırır. Bir koşula göre döngü yapmak yerine, bir dizideki her eleman için döngü gövdesini bir kez yürütür.
 
-## Sözdizimi
-Bir for döngüsü şöyle görünür:
+## Syntax
+Bir for döngüsü şuna benzer:
 
 `for variable_name in sequence:
-	#code block`
+	#kod bloğu`
 
-`variable_name` istediğiniz herhangi bir isim olabilir. Bu, dizideki mevcut elemanı saklayan bir değişkendir. `sequence` ise bir aralık veya sayılar gibi üzerine yinelenebilecek bir değer olmalıdır. Kod bloğu, döngü değişkeni her bir elemana atanarak çalıştırılır.
+`variable_name` seçtiğin herhangi bir ad olabilir. Bu, dizideki mevcut elemanı depolayan bir değişkendir. `sequence`, bir sayı aralığı gibi yinelenebilen bir değer olmalıdır. Kod bloğu, döngü değişkeni o elemana atanmış olarak her eleman için yürütülür.
 
 ## Diziler
-[Alanlar](functions/range)      <unlock=lists>[Listeler](docs/scripting/lists.md)      </unlock><unlock=functions>[Demetler](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Sözlükler](docs/scripting/dicts.md)      </unlock><unlock=sets>[Kümeler](docs/scripting/sets.md)</unlock>
+[Aralıklar](functions/range)      <unlock=lists>[Listeler](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuple'lar](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Örnek
 `for i in range(5):
     harvest()`
 
-Bu döngü, gövdesini sabit sayıda çalıştırır. Esasen şu şekilde yazmaya eşdeğerdir:
+Bu döngü, gövdeyi sabit sayıda yürütür. Esasen şununla aynıdır:
 
 `i = 0
 harvest()
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-Yani `harvest()` fonksiyonunu 5 kez çağırır.
+Bu yüzden `harvest()`'ı 5 kez çağırır.
 
 Ayrıca bakınız [Break](docs/scripting/break.md) ve [Continue](docs/scripting/continue.md)

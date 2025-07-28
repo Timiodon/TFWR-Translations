@@ -1,18 +1,18 @@
 # Forループ
-`for`ループはPythonと同じように動作します。（いくつかの言語ではforeachループと呼ばれ、Cスタイルのforループとは異なるものです）。
+`for`ループはPythonのように機能します。（一部の言語ではforeachループと呼ばれ、Cスタイルのforループとは異なります）。
 
 `for i in sequence:
-	#do something with i`
+	# iを使って何かをする`
 
-`while`ループと同様に、`for`ループもコードブロックを繰り返し実行します。条件に基づいてループするのではなく、シーケンス内の各要素に対して一度ずつループ本体を実行します。
+`while`ループと同様に、`for`ループもコードのブロックを繰り返し呼び出します。条件に基づいてループする代わりに、シーケンス内の各要素に対してループ本体を一度実行します。
 
 ## 構文
 forループは次のようになります：
 
 `for variable_name in sequence:
-	#code block`
+	#コードブロック`
 
-`variable_name`は任意の名前にできます。これはシーケンス内の現在の要素を格納する変数です。`sequence`はrangeや数値のように反復可能な値である必要があります。コードブロックは、ループ変数がその要素に割り当てられているすべての要素に対して実行されます。
+`variable_name`は自由に選べる名前です。これはシーケンス内の現在の要素を格納する変数です。`sequence`は、数値の範囲のように反復可能な値である必要があります。コードブロックは、ループ変数がその要素に割り当てられた状態で、すべての要素に対して実行されます。
 
 ## シーケンス
 [Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
@@ -21,7 +21,7 @@ forループは次のようになります：
 `for i in range(5):
     harvest()`
 
-このループは、固定回数ループ本体を実行します。これは本質的に以下のコードを書くのと同じです：
+このループは本体を固定回数実行します。これは本質的に次のように書くのと同じです。
 
 `i = 0
 harvest()
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-つまり、`harvest()`を5回呼び出します。
+したがって、`harvest()`を5回呼び出します。
 
-[Break](docs/scripting/break.md)と[Continue](docs/scripting/continue.md)も参照してください。
+[Break](docs/scripting/break.md)と[Continue](docs/scripting/continue.md)も参照してください

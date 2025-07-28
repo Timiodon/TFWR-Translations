@@ -1,5 +1,5 @@
 @language = Dil
-@EN = Türkçe
+@EN = İngilizce
 @FR = Fransızca
 @DE = Almanca
 @ES = İspanyolca
@@ -8,7 +8,7 @@
 @JA = Japonca
 @ZH = Çince
 @KO = Korece
-@TR = Bu bir dildir.
+@TR = Türkçe
 @AR = Arapça
 @RU = Rusça
 @PL = Lehçe

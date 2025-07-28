@@ -1,73 +1,73 @@
 # Leaderboard
-Jeśli dotarłeś tak daleko, pokonałeś wiele wyzwań. Ale czy rozwiązałeś je efektywnie?
-Możesz rywalizować z innymi graczami na różnych leaderboardach, aby wypracować najwydajniejsze metody uprawy.
+Jeśli dotarłeś tak daleko, pokonałeś wiele wyzwań. Ale czy rozwiązałeś je wydajnie?
+Możesz rywalizować z innymi graczami na różnych leaderboardach o najbardziej wydajne metody uprawy.
 
 Możesz rozpocząć próbę na leaderboardzie, wywołując `leaderboard_run(leaderboard, filename, speedup)`.
-To rozpoczyna [symulację](docs/unlocks/simulation.md) podobną do `simulate()`, z tym że warunki początkowe są ustalone. Każda kategoria leaderboardu ma różne warunki startowe i sukcesu.
+Rozpoczyna to [symulację](docs/unlocks/simulation.md) podobną do `simulate()`, z tą różnicą, że warunki początkowe są ustalone. Każda kategoria leaderboarda ma inne warunki startowe i warunki sukcesu.
 
-Próba na leaderboardzie zakończy się sukcesem, jeśli warunek sukcesu będzie `True`, gdy symulacja się skończy. Symulacja nie zakończy się automatycznie, gdy cel zostanie osiągnięty. Musisz upewnić się, że program się zakończy.
-Jeśli próba zakończy się sukcesem, Twój czas zostanie dodany do leaderboardu.
+Próba na leaderboardzie kończy się sukcesem, jeśli warunek sukcesu jest `True`, gdy symulacja się kończy. Symulacja nie zakończy się automatycznie po osiągnięciu celu. Musisz upewnić się, że program się zakończy.
+Jeśli próba zakończy się sukcesem, Twój czas zostanie dodany do leaderboarda.
 
-Aby zmniejszyć zmienność, wszystkie próby muszą trwać co najmniej 2 godziny (możesz je przyspieszyć, więc nie potrwa to tak długo). Jeśli próba zostanie zakończona wcześniej, zostanie powtórzona aż do osiągnięcia łącznego czasu 2 godzin. Średnia z wszystkich prób zostanie wtedy przesłana jako Twój wynik.
+Aby zmniejszyć wariancję, wszystkie próby muszą trwać co najmniej 2 godziny (możesz to przyspieszyć, więc nie potrwa to tak długo). Jeśli próba zostanie ukończona wcześniej, będzie powtarzana, aż osiągnie łączny czas 2 godzin. Średnia ze wszystkich prób jest następnie przesyłana jako Twój wynik.
 
-Oto przykład ustawienia, które wprowadzi Cię na tablicę wyników dla siana.
+Oto przykładowa konfiguracja, która pozwoli Ci znaleźć się na leaderboardzie siana.
 ![](LeaderboardSetup400)
 
-## Najszybszy Reset
-Najszybszy reset to najbardziej prestiżowa kategoria. Całkowicie zautomatyzuj grę, zaczynając od jednej działki roli do ponownego odblokowania leaderboardów.
+## Fastest Reset
+Najszybszy reset to najbardziej prestiżowa kategoria. Całkowicie zautomatyzuj grę od pojedynczej działki rolnej do ponownego odblokowania leaderboardów.
 
-Nie musisz odblokowywać wszystkiego, po prostu spróbuj jak najszybciej odblokować `Unlocks.Leaderboard`.
+Nie musisz odblokowywać wszystkiego, po prostu postaraj się jak najszybciej odblokować `Unlocks.Leaderboard`.
 
-Pamiętaj, że możesz użyć `num_unlocked(unlock) > 0`, by sprawdzić, czy coś jest odblokowane, i możesz użyć `get_cost()` na odblokowaniach, aby zobaczyć, ile kosztują, dzięki czemu możesz automatycznie zdobyć odpowiednie przedmioty.
+Pamiętaj, że możesz użyć `num_unlocked(unlock) > 0`, aby sprawdzić, czy coś jest odblokowane, a także `get_cost()` na odblokowaniach, aby zobaczyć, ile kosztują, dzięki czemu możesz automatycznie uprawiać odpowiednie przedmioty.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
 
-Równoważna Symulacja:
+Równoważna symulacja:
 `unlocks = {}
 items = {}
 globals = {}
-#wartość ujemna seed oznacza losowy seed
+#ujemna wartość seed oznacza losowy seed
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek Sukcesu:
+Warunek sukcesu:
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
 ## Labirynt
-Zacznij, mając wszystko odblokowane, i zdobądź `300000` złota tak szybko, jak potrafisz. Jest to dokładnie taka ilość złota, jaką zdobędziesz, rozwiązując jeden labirynt `300` razy.
+Zacznij z wszystkim odblokowanym i zdobądź `300000` złota tak szybko, jak potrafisz. To dokładnie tyle złota, ile zarobisz, rozwiązując jeden labirynt `300` razy.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
 
-Równoważna Symulacja:
+Równoważna symulacja:
 `unlocks = Unlocks
 items = {Items.Weird_Substance : 1000000, Items.Power: 1000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek Sukcesu:
+Warunek sukcesu:
 `num_items(Items.Gold) >= 300000`
 
 ## Dinozaur
-Zacznij, mając wszystko odblokowane, i zdobądź `98010` kości tak szybko, jak potrafisz. Jest to dokładnie liczba kości, którą otrzymasz, wypełniając obszar 10x10 ogonem dinozaura.
+Zacznij z wszystkim odblokowanym i zdobądź `98010` kości tak szybko, jak potrafisz. To dokładnie tyle kości, ile zdobędziesz, wypełniając obszar 10x10 ogonem dinozaura.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
 
-Równoważna Symulacja:
+Równoważna symulacja:
 `unlocks = Unlocks
 items = {Items.Pumpkin : 1000000, Items.Power: 1000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek Sukcesu:
+Warunek sukcesu:
 `num_items(Items.Bone) >= 98010`
 
-## Inne leaderboardy zasobów
-Każda roślina ma swój leaderboard do jak najszybszego uprawiania tej konkretnej rośliny. Zaczynasz ze wszystkimi odblokowaniami, zasobami potrzebnymi do wzrostu rośliny i dużą ilością energii. Celem jest zdobycie `100000` zasobów wyprodukowanych przez roślinę.
+## Inne Leaderboardy zasobów
+Każda roślina ma swój własny leaderboard do jak najszybszego zbierania tej konkretnej rośliny. Zaczynasz z wszystkimi odblokowaniami, zasobami potrzebnymi do uprawy rośliny i dużą ilością mocy. Celem jest zebranie `100000` zasobu produkowanego przez roślinę.
 
 Wywołania funkcji:
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
@@ -78,7 +78,7 @@ Wywołania funkcji:
 `leaderboard_run(Leaderboards.Hay, filename, speedup)`
 `leaderboard_run(Leaderboards.Polyculture, filename, speedup)`
 
-Warunek Sukcesu:
+Warunek sukcesu:
 `num_items(resource) >= 100000`
 
-`Leaderboards.Polyculture` wymaga zdobycia `100000` trzech różnych zasobów.
+`Leaderboards.Polyculture` wymaga zebrania `100000` wszystkich trzech zasobów polikultury.

@@ -1,17 +1,19 @@
 # Abóboras
-[Abóboras](objects/pumpkin) crescem como cenouras em solo arado. Plantá-las custa cenouras.
+As [abóboras](objects/pumpkin) crescem como as cenouras em solo lavrado. Plantá-las custa cenouras.
 
-Quando todas as abóboras em um quadrado estão completamente crescidas, elas se juntam para formar uma abóbora gigante. Infelizmente, abóboras têm uma chance de 20% de morrer quando estão completamente crescidas, então você precisará replantar as que morreram se quiser que elas se juntem.
+Quando todas as abóboras num quadrado estão totalmente crescidas, elas crescem juntas para formar uma abóbora gigante. Infelizmente, as abóboras têm uma probabilidade de 20% de morrer quando estão totalmente crescidas, por isso terás de replantar as mortas se quiseres que elas se fundam.
 
-A produção de uma abóbora gigante depende do tamanho da abóbora.
+Quando uma abóbora morre, deixa para trás uma abóbora morta que não dá nada quando colhida. Plantar uma nova planta no seu lugar remove automaticamente a abóbora morta, por isso não há necessidade de a colher. `can_harvest()` retorna sempre `False` em abóboras mortas.
 
-Uma abóbora 1x1 gera `1*1*1 = 1` abóboras.
-Uma abóbora 2x2 gera `2*2*2 = 8` abóboras ao invés de `4`.
-Uma abóbora 3x3 gera `3*3*3 = 27` abóboras ao invés de `9`.
-Uma abóbora 4x4 gera `4*4*4 = 64` abóboras ao invés de `16`.
-Uma abóbora 5x5 gera `5*5*5 = 125` abóboras ao invés de `25`.
-Uma abóbora `n`x`n` gera `n*n*6` abóboras para `n >= 6`.
+O rendimento de uma abóbora gigante depende do tamanho da abóbora.
 
-É uma boa ideia conseguir abóboras de pelo menos tamanho 6x6 para obter o multiplicador completo.
+Uma abóbora 1x1 rende `1*1*1 = 1` abóboras.
+Uma abóbora 2x2 rende `2*2*2 = 8` abóboras em vez de `4`.
+Uma abóbora 3x3 rende `3*3*3 = 27` abóboras em vez de `9`.
+Uma abóbora 4x4 rende `4*4*4 = 64` abóboras em vez de `16`.
+Uma abóbora 5x5 rende `5*5*5 = 125` abóboras em vez de `25`.
+Uma abóbora `n`x`n` rende `n*n*6` abóboras para `n >= 6`.
 
-Isso significa que mesmo que você plante uma abóbora em cada tile de um quadrado, uma das abóboras pode morrer e impedir que a mega abóbora cresça.
+É uma boa ideia obter pelo menos abóboras de tamanho 6x6 para obter o multiplicador completo.
+
+Isto significa que mesmo que plantes uma abóbora em cada quadrado, uma das abóboras pode morrer e impedir que a mega abóbora cresça.

@@ -1,7 +1,7 @@
 # Başlarken
 Bu pencere, oyundaki her şey hakkında bilgi içerir.
 
-Pencereleri, pencerenin gri kısmını sürükleyip bırakarak hareket ettirebilirsiniz.
-Pencerelerin dışındaki herhangi bir yeri sürükleyerek gezinme yapabilirsiniz.
+Pencerenin gri kısmını sürükleyip bırakarak pencereleri hareket ettirebilirsin.
+Pencerelerin dışındaki herhangi bir yere sürükleyerek etrafta gezinebilirsin.
 
-Programlamaya başlamak için, üzerine tıklayarak [İlk Program](docs/first_program.md) sayfasına gidin.
+Programlamaya başlamak için, üzerine tıklayarak [İlk Program](docs/first_program.md) sayfasına git.

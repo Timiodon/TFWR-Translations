@@ -1,14 +1,15 @@
-@steam_description = Programmiere eine Drohne mit einer einfachen Python-ähnlichen Sprache, um verschiedene landwirtschaftliche Aufgaben, die sonst sehr mühsam wären, voll zu automatisieren. Erlebe die Zufriedenheit, einfach auf "ausführen" zu drücken und zu sehen, wie deine Drohne die ganze harte Arbeit erledigt.  
+@steam_description = Programmiere eine Drohne mit einer einfachen, python-ähnlichen Sprache, um verschiedene landwirtschaftliche Aufgaben, die sonst sehr mühsam wären, vollständig zu automatisieren. Spüre die Befriedigung, einfach auf "Ausführen" zu drücken und deiner Drohne bei der harten Arbeit zuzusehen. 
 [img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
 
-Durch die Landwirtschaft verdienst du Ressourcen, die du einsetzen kannst, um neue Technologien freizuschalten. So sieht dasselbe Programm nach ein paar Geschwindigkeits-Upgrades aus:  
+Landwirtschaft bringt dir Ressourcen ein, die du ausgeben kannst, um neue Technologien freizuschalten. 
+So sieht dasselbe Programm nach ein paar Geschwindigkeits-Upgrades aus:
 [img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
 
-Im Gegensatz zu den meisten Programmierungsspielen ist das Spiel nicht in verschiedene Level unterteilt, die du abschließen musst, sondern bietet eine kontinuierliche Progression.
+Im Gegensatz zu den meisten Programmierspielen ist das Spiel nicht in einzelne Level unterteilt, die du abschließen musst, sondern bietet einen kontinuierlichen Fortschritt. 
 
-Das Programmieren erfolgt in einer einfachen Sprache, die Python ähnelt. Der Anfang des Spiels ist so gestaltet, dass er dir alle grundlegenden Programmierkonzepte beibringt, die du benötigst, indem sie nacheinander eingeführt werden.
+Die Programmierung erfolgt in einer einfachen, Python-ähnlichen Sprache. Der Anfang des Spiels ist darauf ausgelegt, dir alle grundlegenden Programmierkonzepte beizubringen, die du benötigst, indem sie nacheinander eingeführt werden. 
 
-Während alles Relevante eingeführt wird, wirst du beim Lösen der verschiedenen Aufgaben im Spiel nicht an die Hand genommen. Du musst selbst herausfinden, wie du diese meisterst, was sehr herausfordernd sein kann, wenn du noch nie programmiert hast.
+Obwohl alles Relevante eingeführt wird, wird es dich nicht an die Hand nehmen, wenn es darum geht, die verschiedenen Aufgaben im Spiel zu lösen. Diese musst du selbst herausfinden, und das kann sehr herausfordernd sein, wenn du noch nie zuvor programmiert hast. 
 
-Wenn du ein erfahrener Programmierer bist, solltest du den frühen Spielabschnitt sehr schnell durchlaufen können und dich den komplexeren Aufgaben des späteren Spiels widmen können, die dennoch interessante Herausforderungen bieten.
-@steam_short_description = Programmiere und optimiere eine Drohne, um eine Farm zu automatisieren, und sieh zu, wie sie die Arbeit für dich erledigt. Sammle Ressourcen, um bessere Technologien freizuschalten und der effizienteste Farmer der Welt zu werden. Verbessere deine Problemlösungs- und Programmierfähigkeiten.
+Wenn du ein erfahrener Programmierer bist, solltest du in der Lage sein, das frühe Spiel sehr schnell zu durchlaufen und zu den komplexeren Aufgaben des späteren Spiels überzugehen, die immer noch interessante Herausforderungen bieten sollten.
+@steam_short_description = Programmiere und optimiere eine Drohne, um eine Farm zu automatisieren und sieh ihr bei der Arbeit zu. Sammle Ressourcen, um bessere Technologien freizuschalten und der effizienteste Farmer der Welt zu werden. Verbessere deine Problemlösungs- und Programmierfähigkeiten.

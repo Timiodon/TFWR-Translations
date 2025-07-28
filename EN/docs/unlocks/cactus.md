@@ -34,8 +34,8 @@ In this grid, only the lower left cactus is in sorted order, which is not enough
 3 3 2`
 
 <spoiler=show hint 1>
-If every column and every row of the field is sorted, then the entire field is sorted.
+If the rows are already sorted, sorting the columns will not unsort the rows.
 </spoiler>
 <spoiler=show hint 2>
-If you're not familiar with sorting algorithms, you might want to look them up online and think about which ones could be adapted to this problem.
+If you're not familiar with sorting algorithms, you might want to look them up online and think about which ones could be adapted to this problem. Keep in mind that not all of them work because you can only swap neighboring cacti.
 </spoiler>

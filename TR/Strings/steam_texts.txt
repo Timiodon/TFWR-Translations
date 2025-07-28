@@ -1,14 +1,15 @@
-@steam_description = Basit bir Python benzeri dil kullanarak bir drone'u programlayıp, aksi halde oldukça zahmetli olacak çeşitli çiftçilik görevlerini tamamen otomatikleştir. "Çalıştır" düğmesine basmanın ve drone'un tüm zor işleri yapışını izlemenin tatminini yaşa.  
+@steam_description = Aksi takdirde çok sıkıcı olacak çeşitli tarım görevlerini tamamen otomatikleştirmek için basit bir python benzeri bir dil kullanarak bir drone programla. Sadece "çalıştır"a basmanın ve drone'unun tüm zor işi yapmasını izlemenin tatminini hisset. 
 [img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
 
-Çiftçilik, yeni teknolojilerin kilidini açmak için harcayabileceğin kaynaklar kazandırır. İşte birkaç hız yükseltmesinden sonra aynı programın nasıl göründüğü:  
+Tarım yapmak sana yeni teknolojinin kilidini açmak için harcayabileceğin kaynaklar kazandırır. 
+İşte birkaç hız yükseltmesinden sonra aynı programın nasıl göründüğü:
 [img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
 
-Çoğu programlama oyunundan farklı olarak, oyunda tamamlaman gereken ayrı seviyeler yoktur, bunun yerine sürekli bir ilerleme sunulur. 
+Çoğu programlama oyununun aksine, oyun tamamlaman gereken ayrı seviyelere bölünmemiştir, bunun yerine sürekli bir ilerleme sunar. 
 
-Programlama, Python'a benzer basit bir dilde yapılır. Oyunun başlangıcı, ihtiyaç duyacağın tüm temel programlama kavramlarını her seferinde tek tek tanıtarak öğrenmeni sağlar. 
+Programlama, Python'a benzer basit bir dilde yapılır. Oyunun başlangıcı, ihtiyacın olacak tüm temel programlama kavramlarını tek tek tanıtarak sana öğretmek için tasarlanmıştır. 
 
-Her şeyi alakalı bir şekilde tanıtırken, oyundaki çeşitli görevlerin çözümünde ise sana rehberlik etmeyecek. Bunları kendin çözmen gerekecek ve eğer daha önce hiç program yapmadıysan, bu çok zorlayıcı olabilir. 
+İlgili her şeyi tanıtırken, oyundaki çeşitli görevleri çözme konusunda elinden tutmayacak. Bunları kendi başına çözmen gerekecek ve daha önce hiç programlama yapmadıysan bu çok zorlayıcı olabilir. 
 
-Deneyimli bir programcıysan, oyunun başlangıç bölümünü çok hızlı bir şekilde geçip, daha ilginç zorluklar sunan sonraki oyun aşamalarındaki daha karmaşık görevlere geçebileceksin.
-@steam_short_description = Bir çiftliği otomatikleştirmek için bir dronu programlayın ve optimize edin, sonra işi sizin için yapmasını izleyin. Daha iyi teknolojilerin kilidini açmak için kaynaklar toplayın ve dünyanın en verimli çiftçisi olun. Problem çözme ve kodlama becerilerinizi geliştirin.
+Eğer deneyimli bir programcıysan, oyunun başını çok hızlı bir şekilde geçip, oyunun ilerleyen kısımlarındaki daha karmaşık görevlere geçebilmelisin, ki bu görevler hala ilginç zorluklar sunacaktır.
+@steam_short_description = Bir çiftliği otomatikleştirmek için bir drone programla ve optimize et ve senin için işi yapmasını izle. Daha iyi teknolojinin kilidini açmak için kaynakları topla ve dünyanın en verimli çiftçisi ol. Problem çözme ve kodlama becerilerini geliştir.

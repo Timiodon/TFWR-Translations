@@ -5,7 +5,7 @@
 @options = Options
 @join_discord = Discord
 @quit = Quitter
-@open_folder = Ouvrir le Dossier
+@open_folder = Ouvrir le dossier
 @new_game = Nouvelle Partie
 @back = Retour
 @unlocks = Déblocages

@@ -1,45 +1,45 @@
-# Zakresy Nazw
-Zakresy określają, które zmienne mogą być dostępne z danego miejsca. Zakres to w zasadzie mapa od nazw do wartości.
-Działają praktycznie tak samo jak w Pythonie.
+# Zakresy nazw (Scopes)
+Zakresy (scopes) określają, do których zmiennych można uzyskać dostęp z danego miejsca. Scope to w zasadzie mapowanie nazw na wartości.
+Działają one zasadniczo tak samo jak w Pythonie.
 
-Istnieje zakres globalny, a każda funkcja ma swój lokalny zakres.
-Kiedy definiujesz zmienną, jest ona dodawana do aktualnego zakresu.
-Wszystko, co znajduje się poza definicją funkcji, jest uznawane za część zakresu globalnego.
+Istnieje globalny scope, a każda funkcja ma swój lokalny scope.
+Kiedy definiujesz zmienną, jest ona dodawana do bieżącego scope.
+Wszystko poza definicją funkcji jest uważane za część globalnego scope.
 
 `x = 1`
-Przypisuje wartość `1` do nazwy `x` w zakresie globalnym.
+Przypisuje wartość `1` do nazwy `x` w globalnym scope.
 
-To stwierdzenie `def` przypisuje funkcję do nazwy `f` w zakresie globalnym.
+Ta instrukcja `def` przypisuje funkcję do nazwy `f` w globalnym scope.
 `def f():
-    `Przypisz wartość `1` do nazwy `y` w lokalnym zakresie `f`.`
+    `Przypisuje wartość `1` do nazwy `y` w lokalnym scope funkcji `f`.`
     y = 1
 
-    `Przypisz funkcję do nazwy `g` w lokalnym zakresie `f`.`
+    `Przypisuje funkcję do nazwy `g` w lokalnym scope funkcji `f`.`
     def g():
         pass`
 
 `f()`
-Pobiera funkcję zapisaną w `f` z zakresu globalnego i wywołuje ją.
+Pobiera funkcję przechowywaną w `f` z globalnego scope i ją wywołuje.
 
 `print(y)`
-To polecenie drukowania w zakresie globalnym wyrzuca błąd, ponieważ `y` nigdy nie zostało zadeklarowane w zakresie globalnym, więc nie możemy go tutaj odczytać.
-Istniało ono tylko w lokalnym zakresie `f`.
+Ta instrukcja print w globalnym scope zgłasza error, ponieważ `y` nigdy nie zostało zadeklarowane w globalnym scope, więc nie możemy go tutaj odczytać.
+Istniało ono tylko w lokalnym scope funkcji `f`.
 
 ## Słowo kluczowe global
-Domyślnie wszystkie zmienne w funkcjach są powiązane z lokalnym zakresem, nawet jeśli zmienna o tej samej nazwie istnieje w zakresie globalnym.
+Domyślnie wszystkie zmienne w funkcjach są przypisywane do lokalnego scope, nawet jeśli zmienna o tej samej nazwie istnieje w globalnym scope.
 
-`x == 0
+`x = 0
 
 def f():
     x = 1
 f()
 print(x)`
 
-Ten kod drukuje `0`, ponieważ lokalne `x` wewnątrz `f` nie jest tą samą zmienną co globalne `x`, więc globalne `x` pozostaje niezmienione. To jest ważne, ponieważ w przeciwnym razie wywołanie funkcji mogłoby przypadkowo nadpisać globalną zmienną, która przypadkowo ma tę samą nazwę, co lokalna zmienna tej funkcji.
+Ten kod drukuje `0`, ponieważ lokalne `x` wewnątrz `f` nie jest tą samą zmienną co globalne `x`, więc globalne `x` pozostaje niezmienione. Jest to ważne, ponieważ w przeciwnym razie wywołanie funkcji mogłoby przypadkowo nadpisać zmienną globalną, która akurat ma taką samą nazwę jak zmienna lokalna tej funkcji.
 
 Jeśli chcesz pisać do zmiennej globalnej, musisz to zrobić jawnie, używając słowa kluczowego `global`.
 
-`x == 0
+`x = 0
 
 def f():
     global x
@@ -47,11 +47,11 @@ def f():
 f()
 print(x)`
 
-W tym przykładzie, `global x` wiąże `x` z globalną zmienną `x` zdefiniowaną powyżej. Teraz zostanie wydrukowane `1`.
-Zwróć uwagę, że zmiana zmiennych globalnych to zazwyczaj pierwszy krok do "spaghetti code", gdzie każda część programu wpływa na każdą inną, więc nie nadużywaj tego.
+W tym przykładzie `global x` wiąże `x` z globalną zmienną `x` zdefiniowaną powyżej. Teraz kod wydrukuje `1`.
+Zauważ, że zmiana zmiennych globalnych jest zazwyczaj pierwszym krokiem w kierunku kodu spaghetti, gdzie każda część programu wpływa na każdą inną część programu, więc nie nadużywaj go.
 
-## Pętle i rozgałęzienia
-Pętle i rozgałęzienia nie tworzą własnych zakresów, więc wszystko zadeklarowane wewnątrz nich można nadal używać na zewnątrz.
+## Pętle i instrukcje warunkowe
+Pętle i instrukcje warunkowe nie tworzą własnych scopes, więc wszystko, co w nich zadeklarowano, może być nadal używane na zewnątrz.
 
 `for i in range(3):
     pass

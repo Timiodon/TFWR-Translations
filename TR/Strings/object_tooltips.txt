@@ -1,19 +1,20 @@
 @plant_tooltip_template = {0}
 
-Büyüme süresi {1} ile {2} saniye arasında.
-{3} üzerinde yetişebilir.
-@object_tooltip_template_cost = ### Dikim Maliyeti {{{{itemblock cost object {0}}}}}
-@object_descr_apple = Görünüşe göre dinozorlar onları çok seviyor.
-@object_descr_grass = Çayırda otomatik olarak büyür. Hasat ederek `Items.Hay` elde edebilirsin.
-@object_descr_bush = Küçük bir çalı, `Items.Wood` düşürüyor.
-@object_descr_tree = Ağaçlar, çalılardan daha fazla odun verir. Yanlarında başka ağaçlar büyürse daha uzun sürede büyürler.
+Temel büyüme süresi {1} ile {2} saniye arasında.
+{3} üzerinde büyüyebilir.
+@object_tooltip_template_cost = ### Bitki Maliyeti {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Görünüşe göre dinozorlar onları seviyor.
+@object_descr_grass = Çayırlıkta otomatik olarak büyür. `Items.Hay` elde etmek için hasat et.
+@object_descr_bush = `Items.Wood` düşüren küçük bir çalı.
+@object_descr_tree = Ağaçlar çalılardan daha fazla odun düşürür. Yanlarında başka ağaçlar büyürse daha uzun sürede büyürler.
 @object_descr_carrot = Havuçlar!
-@object_descr_pumpkin = Balkabakları, yanlarında tamamen büyümüş başka balkabakları olduğunda birlikte büyürler. Yaklaşık her 5 balkabağından 1 tanesi büyüdüğünde ölür.
-@object_descr_sunflower = Ayçiçekleri güneşten enerji toplar. Onları toplamak sana `Items.Power` kazandırır. 
-Eğer bir ayçiçeğini maksimum taç yaprağı sayısıyla toplarsan ekstra enerji alırsın.
-@object_descr_cactus = Kaktüsler 10 farklı boyutta gelir. Hasat edildiğinde, "sıralanmış" olan bitişik kaktüsler de hasat edilecektir.
+@object_descr_pumpkin = Balkabakları, diğer tamamen büyümüş balkabaklarının yanında olduklarında birlikte büyürler. Büyüdüğünde yaklaşık 5 balkabağından 1'i ölür.
+@object_descr_dead_pumpkin = Büyüdüğünde beş balkabağından biri ölür ve geride ölü bir balkabağı bırakır. Ölü balkabakları işe yaramaz ve yeni bir şey ekildiğinde kaybolur.
+@object_descr_sunflower = Ayçiçekleri güneşten güç toplar. Onları hasat etmek sana `Items.Power` verir.
+Maksimum yaprak sayısına sahip bir ayçiçeğini hasat edersen bonus güç kazanırsın.
+@object_descr_cactus = Kaktüsler 10 farklı boyutta gelir. Hasat edildiğinde "sıralı" olan bitişik kaktüsler de hasat edilir.
 @object_descr_hedge = Labirentin bir parçası.
-@object_descr_treasure = Labirentin kenar uzunluğuna eşit miktarda altın içeren bir hazine. Bir bitki gibi hasat edilebilir.
-@object_descr_dinosaur = Dinozor şapkasının kuyruğundan bir parça.
-@object_descr_grassland = Varsayılan zemin. Üzerinde otomatik olarak çim büyür.
-@object_descr_soil = `till()` çağrıldığında zemin toprağa dönüşür. `till()` tekrar çağrıldığında ise tekrar çimenliğe geri döner.
+@object_descr_treasure = Gizlendiği labirentin kenar uzunluğuna eşit altın içeren bir hazine. Bir bitki gibi hasat edilebilir.
+@object_descr_dinosaur = Dinozor şapkasının kuyruğunun bir parçası.
+@object_descr_grassland = Default zemin. Üzerinde otomatik olarak çimen büyüyecektir.
+@object_descr_soil = `till()` çağırmak zemini toprağa dönüştürür. Tekrar `till()` çağırmak onu tekrar çayırlığa dönüştürür.

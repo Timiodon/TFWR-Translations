@@ -1,66 +1,67 @@
-# Importieren
-Wenn du deinen gesamten Code in eine einzige Datei packst, wird es schnell unübersichtlich. 
-`import`-Anweisungen ermöglichen es dir, Funktionen und globale Variablen aus einer anderen Datei zu importieren.
+# Import
+Deinen ganzen Code in eine einzige Datei zu packen, wird schnell unübersichtlich.
+`import`-Anweisungen erlauben es dir, Funktionen und globale Variablen aus einer anderen Datei zu importieren.
 
 `import dateiname`
 
-Dies ist die einfachste Form einer Import-Anweisung. Sie gibt dir Zugriff auf alles, was in der Datei mit dem Namen `dateiname` definiert ist. Jedes Fenster im Spiel ist eine Datei, und der Dateiname ist der Name, der oben im Fenster angezeigt wird.
+Dies ist die einfachste Form einer Import-Anweisung. Sie gibt dir Zugriff auf alles, was in der Datei namens `dateiname` definiert ist. Jedes Fenster im Spiel ist eine Datei, und der Dateiname ist der Name, der oben im Fenster angezeigt wird.
 
 Hier ist ein Beispiel mit zwei Dateien:
-Datei mit dem Namen helper:
+Datei namens `helper`:
 `x = 0
 
 def say_hello():
-    print("hello from helper")`
+    print("hallo von helper")`
 
 Eine andere Datei:
 `import helper
 helper.say_hello()
 helper.x += 1`
 
-Hier führt `import helper` die Datei mit dem Namen `helper` aus und gibt dir Zugriff auf alle ihre globalen Variablen.
-Du kannst dann auf Variablen und Funktionen innerhalb des importierten Moduls mit dem `.`-Operator zugreifen.
-In diesem Beispiel ruft `helper.say_hello()` die Funktion `say_hello()` innerhalb von helper auf, und die letzte Zeile erhöht die globale Variable x.
+Hier führt `import helper` die Datei namens `helper` aus und gibt dir Zugriff auf alle ihre Globals.
+Du kannst dann mit dem `.`-Operator auf Variablen und Funktionen innerhalb des importierten Moduls zugreifen.
+In diesem Beispiel ruft `helper.say_hello()` `say_hello()` innerhalb von `helper` auf und die letzte Zeile erhöht die globale Variable `x`.
 
-Du kannst auch die globalen Variablen aus dem importierten Modul in den aktuellen Gültigkeitsbereich verschieben, in dem die Import-Anweisung ausgeführt wird, indem du die `from`-Syntax verwendest.
+Du kannst auch die Globals aus dem importierten Modul in den aktuellen Scope verschieben, in dem die Import-Anweisung ausgeführt wird, indem du die `from`-Syntax verwendest.
 
 `from helper import *`
-Importiert alle globalen Variablen aus helper.
+Importiert alle Globals von `helper`.
 
 oder
 
 `from helper import say_hello`
-Importiert nur die angegebenen globalen Variablen aus helper.
+Importiert nur die angegebenen Globals von `helper`.
 
-Dies importiert auch die helper-Datei, aber anstatt sie über eine Variable namens `helper` zu erreichen, werden globale Variablen aus `helper` entpackt und direkt im lokalen Gültigkeitsbereich zugewiesen.
+Dies importiert auch die `helper`-Datei, aber anstatt über eine Variable namens `helper` darauf zuzugreifen, entpackt es Globals aus `helper` und weist sie direkt im lokalen Scope zu.
 
 `from helper import say_hello
 say_hello()`
 
-Diese Form des Imports wird normalerweise nicht empfohlen, da sie nicht gut funktioniert, wenn zwei Dateien sich gegenseitig importieren, und du möglicherweise versehentlich Variablen in der importierenden Datei überschreibst, aufgrund von Namenskollisionen.
+Diese Form des Imports wird normalerweise nicht empfohlen, weil sie nicht gut funktioniert, wenn sich zwei Dateien gegenseitig importieren, und du versehentlich Variablen in der importierenden Datei aufgrund von Namenskollisionen überschreiben könntest.
 
 # Wie es wirklich funktioniert
 
-## Kurzfassung
-Importe können ziemlich unintuitiv sein, aber die meisten Probleme können vermieden werden, indem du bei der `import datei`-Syntax bleibst, anstatt `from datei import`, und alles, was keine globale Definition ist, in
-`if __name__ == "__main__":` einpackst.
+## TLDR
+Imports können ziemlich unintuitiv sein, aber die meisten Probleme können vermieden werden, indem man bei der `import datei`-Syntax anstelle von `from datei import` bleibt und alles, was keine globale Definition ist, in
+`if __name__ == "__main__":`
+einschließt.
 
-## Import-Nebenwirkungen
-Beim ersten Import einer Datei wird die gesamte Datei ausgeführt und gibt dir dann Zugriff auf alle Variablen, die während der Ausführung definiert wurden.
-Wenn du dieselbe Datei noch einmal importierst, wird einfach das im Cache gespeicherte Modul vom ersten Mal zurückgegeben.
+## Import-Nebeneffekte
+Wenn du eine Datei zum ersten Mal importierst, wird die gesamte Datei ausgeführt und du erhältst Zugriff auf alle Variablen, die während der Ausführung definiert wurden.
+Wenn du dieselbe Datei erneut importierst, wird nur das zwischengespeicherte Modul vom ersten Mal zurückgegeben.
 
-Das bedeutet, dass Import-Anweisungen Nebenwirkungen haben können. Wenn du eine Datei importierst, die `harvest()` aufruft, wird tatsächlich während des Imports geerntet. Aber wenn du sie erneut importierst, wird nicht erneut geerntet, weil die Datei nur einmal ausgeführt wird.
+Das bedeutet, dass Import-Anweisungen Nebeneffekte haben können. Wenn du eine Datei importierst, die `harvest()` aufruft, wird sie während des Imports tatsächlich ernten. Aber wenn du sie erneut importierst, wird sie nicht erneut ernten, weil die Datei nur einmal ausgeführt wird.
 
-Es gibt eine Möglichkeit, solche Nebenwirkungen mit der `__name__`-Variable zu vermeiden. Diese Variable wird automatisch auf `"__main__"` gesetzt, wenn eine Datei direkt ausgeführt wird, und auf den Namen der Datei, wenn eine Datei über `import` ausgeführt wird.
-Es gilt als gute Praxis, jeden Code, den du nicht ausführen möchtest, wenn die Datei importiert wird, in einen `if __name__ == "__main__":`-Block zu setzen.
+Es gibt eine Möglichkeit, solche Nebeneffekte mit der `__name__`-Variable zu vermeiden. Dies ist eine Variable, die automatisch auf `"__main__"` gesetzt wird, wenn eine Datei direkt ausgeführt wird, und auf den Namen der Datei, wenn eine Datei über `import` ausgeführt wird.
+Es gilt als gute Praxis, jeden Code, der nicht beim Importieren der Datei ausgeführt werden soll, in einen `if __name__ == "__main__":`-Block zu packen.
 
-Eine gängige Dateistruktur in Python ist, den Code, der ausgeführt werden soll, wenn die Datei ausgeführt wird, in eine `main()`-Funktion zu packen. So hast du eine klare Unterscheidung zwischen lokalen Variablen (innerhalb von `main()` definiert) und globalen Variablen, die importiert werden können (außerhalb von `main()` definiert).
+Eine übliche Dateistruktur in Python ist es, den Code, der ausgeführt werden soll, wenn die Datei gestartet wird, in eine `main()`-Funktion zu packen. Auf diese Weise hast du eine klare Unterscheidung zwischen lokalen Variablen (innerhalb von `main()` definiert) und globalen Variablen, die importiert werden können (außerhalb von `main()` definiert).
 
 `a_global_variable = "global"
 
 def main():
     a_local_variable = "local"
-    # Aktionen ausführen
+    # do things
 
 if __name__ == "__main__":
     main()`
@@ -77,18 +78,18 @@ Datei `b`:
 def f():
     print(a.x)`
 
-Das wird problemlos funktionieren. Angenommen, keine der beiden Dateien sind bereits geladen, und jemand anderes führt `import a` aus.
+Das wird gut funktionieren. Nehmen wir an, keine der beiden Dateien ist bereits geladen, und jemand anderes führt `import a` aus.
 
--`a` läuft bis zur `import b`-Zeile.
--`b` läuft bis zur `import a`-Zeile.
--Das Modul `a` existiert bereits, enthält aber noch nicht `x`, da es nur die `import b`-Zeile erreicht hat.
--`b` speichert eine Referenz auf das halbgeladene Modul `a` in einer Variable namens `a`.
+-`a` läuft bis zur Zeile `import b`.
+-`b` läuft bis zur Zeile `import a`.
+-Das Modul `a` existiert bereits, enthält aber `x` nicht, weil es nur die Zeile `import b` erreicht hat.
+-`b` speichert eine Referenz auf das halb geladene Modul `a` in einer Variable namens `a`.
 -`b` führt die `def`-Anweisung aus und speichert die Funktion `f()`.
 -`a` läuft weiter und initialisiert `x`.
 
-Wenn jemand `b.f()` aufruft, wird korrekt `0` ausgegeben, weil das Modul `a`, auf das `b` verweist, jetzt vollständig geladen ist.
+Wenn jemand `b.f()` aufruft, wird es korrekt `0` ausgeben, weil das Modul `a`, auf das `b` eine Referenz hat, jetzt vollständig geladen ist.
 
-Betrachten wir nun dasselbe Codebeispiel mit der `from`-Syntax.
+Betrachten wir nun denselben Code mit der `from`-Syntax.
 
 Datei `a`:
 `from b import *
@@ -99,11 +100,11 @@ Datei `b`:
 def f():
     print(x)`
 
--`a` läuft bis zur `from b import *`-Zeile.
--`b` läuft bis zur `from a import *`-Zeile.
+-`a` läuft bis zur Zeile `from b import *`.
+-`b` läuft bis zur Zeile `from a import *`.
 -Das Modul `a` existiert bereits, wurde aber noch nicht vollständig ausgeführt.
--`b` entpackt alles, was derzeit in `a` ist, in seinen eigenen globalen Gültigkeitsbereich. Zu diesem Zeitpunkt enthält `a` nichts, da es noch nicht zur `x = 0`-Zeile gelangt ist, daher wird nichts importiert.
+-`b` entpackt alles, was sich gerade in `a` befindet, in seinen eigenen globalen Scope. Zu diesem Zeitpunkt enthält `a` nichts, da es die Zeile `x = 0` noch nicht erreicht hat, also wird nichts importiert.
 -`b` führt die `def`-Anweisung aus und speichert die Funktion `f()`.
 -`a` läuft weiter und initialisiert `x`.
 
-Wenn jetzt jemand `b.f()` aufruft, wird es einen Fehler geben, dass `x` im aktuellen Gültigkeitsbereich nicht existiert. Das liegt daran, dass `b` diesmal keine Referenz auf das noch ladende `a` hat und keine Definitionen sieht, die nach dem Import hinzugefügt wurden.
+Wenn jemand jetzt `b.f()` aufruft, erhält er einen Error, dass `x` im aktuellen Scope nicht existiert. Das liegt daran, dass `b` diesmal keine Referenz auf das noch ladende `a` hat und keine Definitionen sieht, die nach dem Import hinzugefügt wurden.

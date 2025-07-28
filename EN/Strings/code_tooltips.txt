@@ -183,6 +183,16 @@ takes 1s to execute.
 example:
 `while True:
     do_a_flip()`
+@code_tooltip_pet_the_piggy = `pet_the_piggy()` 
+Pets the piggy! This action is not affected by speed upgrades.
+
+returns `None`
+
+takes 1s to execute.
+
+example:
+`while True:
+    pet_the_piggy()`
 @code_tooltip_print = `print(*args)` 
 Prints all `args` into the air above the drone using smoke. This action is not affected by speed upgrades.
 Multiple values can be printed at once.

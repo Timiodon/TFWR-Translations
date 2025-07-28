@@ -1,5 +1,5 @@
-@save = Salvar
-@saved = Salvo
+@save = Guardar
+@saved = Guardado
 @play = Iniciar
 @load = Carregar
 @options = Opções
@@ -9,9 +9,9 @@
 @new_game = Novo Jogo
 @back = Voltar
 @unlocks = Desbloqueios
-@farm = Fazenda
+@farm = Quinta
 @unlocked = Desbloqueado
 @upgrade = Melhorar
-@max_level = Nível Máximo
+@max_level = Nível Máx
 @unlock = Desbloquear
 @locked = Bloqueado

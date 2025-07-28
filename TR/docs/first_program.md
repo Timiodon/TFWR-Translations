@@ -1,31 +1,37 @@
 # İlk Program
-## Metin editörü
-Tüm programlama, kod pencerelerinde yapılır. Her kod penceresi, kod içeren bir metin dosyasına karşılık gelir. Pencerenin üst kısmındaki ismine tıklayarak dosyayı yeniden adlandırabilirsiniz.
+## Metin düzenleyici
+Tüm programlama kod pencerelerinde yapılır. Her kod penceresi, kod içeren bir metin dosyasına karşılık gelir. 
+Pencerenin üstündeki adına tıklayarak dosyayı yeniden adlandırabilirsin.
 
-Kod, çalışmadığı sürece herhangi bir metin editörü gibi düzenlenebilir. Programı, kod penceresindeki yeşil oynat düğmesine basarak doğrudan çalıştırabilirsiniz.
+Kod, çalışmadığı sürece herhangi bir metin düzenleyicide olduğu gibi düzenlenebilir.
+Programı doğrudan kod penceresindeki yeşil oynat düğmesine basarak çalıştırabilirsin.
 ![](PlayButton50)
 
-Ekranın sağ üst köşesindeki "+" düğmesi ile daha fazla kod dosyası oluşturabilirsiniz. Bir pencereyi başka bir pencereye sürükleyerek sabitleyebilirsiniz.
+Ekranın sağ üst köşesindeki "+" düğmesini kullanarak daha fazla kod dosyası oluşturabilirsin.
+Bir pencereyi başka bir pencereye sürükleyerek kenetleyebilirsin.
 
-Yazmaya başladığınızda basit bir kod tamamlama penceresinin açıldığını fark edeceksiniz. Kod tamamlamayı eklemek için Tab tuşuna basın. Tamamlama seçenekleri arasında gezinmek için ok tuşlarını kullanın.
+Yazmaya başladığında basit bir kod tamamlama penceresinin açıldığını fark edeceksin.
+Kod tamamlamayı eklemek için Tab tuşuna bas.
+Tamamlama seçenekleri arasında gezinmek için ok tuşlarını kullan.
 
-Eğer bu ilk programlama deneyiminizse endişelenmeyin. Dil adım adım açıldığı için yapabileceğiniz tüm şeylerle bunalmayacaksınız. Sözdizimi de dünyanın en yaygın kullanılan programlama dillerinden biri olan Python'a benzer, bu yüzden öğrenmek zaman kaybı değildir.
+Eğer bu ilk programlama deneyiminse endişelenme. Dil adım adım açılıyor, bu yüzden yapabileceğin her şeyle bunalmayacaksın. 
+Syntax aynı zamanda dünyanın en yaygın kullanılan programlama dillerinden biri olan Python'unkine benzer, bu yüzden onu öğrenmek tamamen boşa gitmez.
 
-Zaten Python biliyorsanız, bu da sorun değil; erken aşamaları hızlıca geçip daha ilginç şeylere geçebileceksiniz.
+Eğer zaten Python biliyorsan, bu da sorun değil, sadece oyunun başını hızlıca geçerek daha ilginç şeylere ulaşabileceksin.
 
-Kod, satır satır yürütülen bir dizi ifadeden oluşur.
+Kod, satır satır yürütülen bir ifadeler dizisidir.
 
-Şu anda, mevcut olan tek ifadeler
+Şu anda mevcut olan tek ifadeler
 
 `harvest()`
 
-ve
+ve 
 
 `do_a_flip()`
 
-Bunlar fonksiyon çağrılarıdır. Bir fonksiyonu yürütülebilen bir komut olarak düşünebilirsiniz. Onu `()` parantezlerini kullanarak yürütürsünüz.
+Bunlar fonksiyon çağrılarıdır. Bir fonksiyonu, yürütülebilecek bir komut olarak düşünebilirsin. Onu `()` parantezlerini kullanarak yürütürsün.
 
-Kod penceresine bu ifadeleri yazmayı deneyin ve çalıştır düğmesine basın.
+Bu ifadeleri kod penceresine yazmayı ve yürüt düğmesine basmayı dene.
 
-## Açmalar
-Çimen toplamak size saman verecek. Saman, açma menüsünde döngüleri açmak için kullanılabilir. Açma menüsünü sağ üst köşedeki buton ile açın.
+## Kilit Açmalar
+Çimen toplamak sana saman verecektir. Saman, kilit açma menüsünde döngülerin kilidini açmak için kullanılabilir. Sağ üst köşedeki düğme ile kilit açma menüsünü aç.

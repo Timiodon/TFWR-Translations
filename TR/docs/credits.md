@@ -1,9 +1,10 @@
-# Katkıda Bulunanlar
+# Emeği Geçenler
 
 ## The Farmer Was Replaced
 
-Geliştiren: Timon Herzog
+_Geliştiren_ Timon Herzog
 
-Çeviri Katkıda Bulunanlar:
+
+Çeviriye Katkıda Bulunanlar:
 
 Davide Altamura

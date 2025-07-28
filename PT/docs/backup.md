@@ -1,9 +1,9 @@
-# Carregando Backups
-Infelizmente, às vezes um arquivo de salvamento fica corrompido ou você perde alguns arquivos de código. Se isso acontecer com você, pode tentar carregar um backup. Se acontecer regularmente, tente desativar o Steam Cloud.
+# Carregar Backups
+Infelizmente, por vezes um ficheiro de save fica corrompido ou perdes alguns ficheiros de código. Se isto te acontecer, podes tentar carregar um backup. Se acontecer regularmente, tenta desativar a Steam Cloud.
 
-Um backup é feito toda vez que o jogo é salvo, e um pequeno número de backups é mantido caso você precise restaurar algo.
-Esses backups podem ser encontrados no [diretório de backup](persistent_data_path/Backup). Eles são cópias dos salvamentos no [diretório de salvamento](persistent_data_path/Saves).
-A maneira mais fácil de carregar um backup é copiar a pasta do backup específico que você deseja carregar para o diretório de salvamento.
+É feito um backup sempre que o jogo é guardado, e um pequeno número de backups é mantido caso precises de restaurar algo.
+Estes backups podem ser encontrados no [diretório de backup](persistent_data_path/Backup). São cópias dos saves no [diretório de saves](persistent_data_path/Saves).
+A maneira mais fácil de carregar um backup é copiar a pasta do backup específico que queres carregar para o diretório de saves.
 
-Um salvamento é uma pasta com um arquivo `save.json` e vários arquivos `.py`.
-Se você perdeu apenas alguns arquivos de código, ou os arquivos de código ainda estão lá, mas o arquivo `save.json` está corrompido, você também pode substituir apenas as partes corrompidas com os arquivos correspondentes do backup.
+Um save é uma pasta com um ficheiro `save.json` e um monte de ficheiros `.py`.
+Se perdeste apenas alguns ficheiros de código, ou os ficheiros de código ainda estão lá, mas o ficheiro `save.json` está corrompido, também podes substituir apenas as partes corrompidas pelos ficheiros correspondentes do backup.

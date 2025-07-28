@@ -1,7 +1,7 @@
-# Iniziamo
-Questa finestra contiene informazioni su tutto ciò che riguarda il gioco.
+# Per Iniziare
+Questa finestra contiene informazioni su tutto ciò che c'è nel gioco.
 
-Puoi spostare le finestre trascinando e rilasciando la parte grigia della finestra.
-Puoi muoverti trascinando in qualsiasi punto al di fuori delle finestre.
+Puoi spostare le finestre trascinando la parte grigia della finestra.
+Puoi muoverti trascinando in qualsiasi punto fuori dalle finestre.
 
-Per iniziare con la programmazione, vai alla pagina [First Program](docs/first_program.md) cliccandoci sopra.
+Per iniziare a programmare, vai alla pagina [Primo Programma](docs/first_program.md) cliccandoci sopra.

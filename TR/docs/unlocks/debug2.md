@@ -1,7 +1,7 @@
-# Hata Ayıklama 2
-Drone'un çok hızlı hale gelip, ızgara da çok büyük olduğunda neler olup bittiğini görmek zorlaşabilir.
+# Debug 2
+Drone'un çok hızlandığında ve ızgara çok büyüdüğünde, artık ne olup bittiğini görmek zor olabilir.
 
-Bu yüzden `set_execution_speed()` ve `set_world_size()` fonksiyonları var.
-Bunlar, yürütme hızını ve çiftlik boyutunu azaltmanıza olanak tanır. 
+Bu nedenle `set_execution_speed()` ve `set_world_size()` fonksiyonları vardır.
+Bunlar, yürütme hızını ve çiftlik boyutunu azaltmana olanak tanır.
 
-Yürütme sonunda çiftlik boyutu ve yürütme hızı varsayılan değerlerine sıfırlanacaktır.
+Çiftlik boyutu ve yürütme hızı, yürütme sonunda default değerlere sıfırlanacaktır.

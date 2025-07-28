@@ -1,12 +1,12 @@
 # Break
-`break` permet d'arrêter une boucle plus tôt. Lorsqu'on atteint l'instruction `break`, elle quitte immédiatement la boucle la plus intérieure et commence à exécuter le code après la boucle.
+`break` permet d'arrêter une boucle prématurément. Lorsque l'instruction `break` est atteinte, elle quitte immédiatement la boucle la plus interne et commence à exécuter le code après la boucle.
 
 `for i in range(10):
 	break
 print(i)`
-Cela affiche `0` car `i` est `0` lors de la première itération de la boucle et ensuite l'instruction break met fin à la boucle.
+Cela affiche `0` car `i` est `0` dans la première itération de la boucle, puis l'instruction break met fin à la boucle.
 
-Ça fonctionne aussi avec les boucles `while`.
+Cela fonctionne aussi avec les boucles `while`.
 
 `while True:
 	if can_harvest():
@@ -18,10 +18,10 @@ Il a le même effet que
 `while not can_harvest():
 	pass`
 
-Dans les boucles imbriquées, `break` quitte toujours la boucle la plus intérieure.
+Dans les boucles imbriquées, `break` quitte toujours la boucle la plus interne.
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("ceci n'est jamais affiché")
+	print("ceci est affiché 10 fois")`

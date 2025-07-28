@@ -1,74 +1,74 @@
-@error_code_after_block = Burada herhangi bir kod olmamalı. Onu kaldırmayı veya yeni bir satıra koymayı deneyin.
-@error_wrong_number_args = {0} {1} argument alır.
-@error_expected_no_args = {0} herhangi bir argument almaz.
-@error_wrong_args = {0}. argümanı {1} olan {2}. Bu geçerli bir argüman değil.
+@error_code_after_block = Burada hiç kod olmamalı. Kaldırmayı veya yeni bir satıra koymayı dene.
+@error_wrong_number_args = {0}, {1} argüman alır.
+@error_expected_no_args = {0} hiç argüman almaz.
+@error_wrong_args = {1} fonksiyonunun {0}. argümanı {2} idi. Bu geçerli bir argüman değil.
 @error_syntax_error_in_import = İçe aktarılan modülde bir syntax error var.
-@error_module_not_found = Böyle bir isimde bir module yok. İsim bir dosya adıyla eşleşmeli. Bu, pencerenin üst kısmında gösterilen isimdir.
-@error_list_element_not_found = {0} listedeki bir eleman değil.
-@error_set_element_not_found = {0} kümenin bir elemanı değil.
-@error_index_out_of_bounds = Dizin {0}, liste {1} sınırlarının dışındaydı.
-@error_index_out_of_bounds2 = Dizinin sınırları dışında bir indeks vardı.
-@error_arith_assign_not_used_on_number = {0} yalnızca sayılar üzerinde kullanılabilir.
-@error_bool_op_not_used_on_bool = Mantık operatörü yalnızca `True` veya `False` olarak değerlendirilen boolean ifadelerde kullanılabilir.
-@error_bad_bin_operator = Operatör {0}, operandlar {1} ve {2} üzerinde kullanılamaz.
-@error_bad_unary_operator = Operatör {0}, {1} üzerinde kullanılamaz.
-@error_index = {0}, {1} üzerinde indeks olarak kullanılamaz.
-@error_index_on_non_indexable = {0} içinde indeksleme yapamazsın.
+@error_module_not_found = Bu isimde bir modül mevcut değil. İsim bir dosya adıyla eşleşmelidir. Bu, pencerenin üstünde görüntülenen isimdir.
+@error_list_element_not_found = {0}, list'in bir elemanı değil.
+@error_set_element_not_found = {0}, set'in bir elemanı değil.
+@error_index_out_of_bounds = {0} indeksi, {1} listesinin sınırları dışındaydı.
+@error_index_out_of_bounds2 = İndeks, listenin sınırları dışındaydı.
+@error_arith_assign_not_used_on_number = {0} sadece sayılar üzerinde kullanılabilir.
+@error_bool_op_not_used_on_bool = Bir mantık operatörü yalnızca `True` veya `False` olarak değerlendirilen boolean ifadelerde kullanılabilir.
+@error_bad_bin_operator = {0} operatörü, {1} ve {2} işlenenleri üzerinde kullanılamaz.
+@error_bad_unary_operator = {0} operatörü, {1} üzerinde kullanılamaz.
+@error_index = {0}, {1} üzerinde bir indeks olarak kullanılamaz.
+@error_index_on_non_indexable = {0} içine indeksleme yapamazsın.
 @error_zero_step = Adım boyutu sıfır olamaz.
-@error_index_on_tuple = Bir tuple öğesi atayamazsın çünkü tuple'lar değiştirilemez.
-@error_bad_key = {0} anahtar olarak kullanılamaz.
-@error_slice_dict = Sözlüklerde slice yapılamaz.
-@error_key = {0} sözlüğünde bir anahtar değil.
-@error_condition_not_bool = {0} geçerli bir koşul değil. Koşul, boolean bir değer olmalı. Yani, her zaman ya `True` ya da `False` olan bir ifade olmalıdır.
-@error_for_requires_iterable = {0} bir for döngüsünde yineleme yapılamaz. For döngüsüne üzerinde döngü yapılacak bir dizi verilmelidir. Örnek:
+@error_index_on_tuple = Tuple'lar değişmez olduğu için bir tuple elemanına atama yapamazsın.
+@error_bad_key = {0} bir anahtar olarak kullanılamaz.
+@error_slice_dict = Dictionary'ler dilimlenemez.
+@error_key = {0}, dictionary'de bir anahtar değil.
+@error_condition_not_bool = {0} geçerli bir koşul değil. Koşul bir boolean değeri olmalıdır. Bu, her zaman ya `True` ya da `False` olan bir ifade olması gerektiği anlamına gelir.
+@error_for_requires_iterable = {0}, bir for döngüsünde yinelenelemez. For döngüsüne yinelenmesi için bir dizi verilmelidir. Örnek:
 
 `for i in range(5):`
-Burada range(5), `0,1,2,3,4` dizisini döndürür.
+Burada range(5) `0,1,2,3,4` dizisini döndürür.
 @error_no_loop_to_break = `break` sadece bir döngü içinde kullanılabilir.
 @error_no_loop_to_continue = `continue` sadece bir döngü içinde kullanılabilir.
-@error_no_function_to_return_from = `return` sadece bir fonksiyonun içinde kullanılabilir.
-@error_missing_unlock = Bu, kullanılmadan önce açılmalıdır.
-@error_missing_x_unlock = {0} kullanılmadan önce kilidi açılmalıdır.
-@error_name_not_defined = {0} henüz tanımlanmadı. Bir değişkeni kullanmadan önce mutlaka ona bir değer atamalısın.
-@error_missing_import = {0} hiç tanımlanmamış. Görünüşe göre {1} dosyasında tanımlı. Onu ithal etmeyi unuttun mu?
-Eğer ithal etmişsen, muhtemelen bir ithalat döngüsü var (İthalat belgeleri sayfasına bak).
-@error_missing_import_before_unlock = {0} hiç tanımlanmamış. Ancak {1} dosyasında tanımlı görünüyor. Diğer dosyalardan bir şeyleri import edebilmek için importları açman gerekiyor.
-@error_call_before_def = {0} tanımlı değil. Bu dosyada bir yerde tanımlanmış gibi görünüyor ama tanım henüz çalıştırılmadı. Fonksiyonlar sadece `def` ifadesinden sonra çağrılabilir.
-@error_not_a_function = Bir fonksiyon olmayan bir şeyi çağırmaya çalıştın. Bu hataya yol açabilecek yaygın bir yanlışlık, fonksiyonla aynı isme sahip bir değişkenin olmasıdır.
+@error_no_function_to_return_from = `return` sadece bir fonksiyon içinde kullanılabilir.
+@error_missing_unlock = Bunu kullanabilmek için kilidinin açılması gerekir.
+@error_missing_x_unlock = Bunu kullanabilmek için {0}'ın kilidinin açılması gerekir.
+@error_name_not_defined = {0} hiç tanımlanmamış. Bir değişkeni kullanmadan önce ona bir değer atamalısın.
+@error_missing_import = {0} hiç tanımlanmamış. {1} dosyasında tanımlanmış gibi görünüyor. İçe aktarmayı mı unuttun? 
+Eğer içe aktardıysan, muhtemelen bir içe aktarma döngün var (import doküman sayfasına bak).
+@error_missing_import_before_unlock = {0} hiç tanımlanmamış. {1} dosyasında tanımlanmış gibi görünüyor. Diğer dosyalardan bir şeyler içe aktarabilmek için içe aktarmaların kilidini açman gerekiyor.
+@error_call_before_def = {0} tanımlı değil. Bu dosyanın bir yerinde tanımlanmış gibi görünüyor, ancak tanım henüz yürütülmedi. Fonksiyonlar sadece `def` ifadesinden sonra çağrılabilir.
+@error_not_a_function = Fonksiyon olmayan bir şeyi çağırmaya çalıştın. Buna neden olabilecek yaygın bir hata, fonksiyonla aynı ada sahip bir değişkenin olmasıdır.
 @error_invalid_const = {0} mevcut değil.
-@error_invalid_const2 = Bu yok.
-@error_max_stack_size_reached = Maksimum call stack boyutuna ulaşıldı. Bu muhtemelen çok fazla özyinelemeli fonksiyon çağrısından kaynaklanıyor.
-@error_max_comparison_depth = Maksimum karşılaştırma derinliğine ulaşıldı. Maksimum karşılaştırma derinliğine ulaşıldı. Bu, örneğin, kendini içeren listeleri karşılaştırıyorsanız olabilir.
-@error_assign_type_mismatch = Atama işleminin sol tarafı, sağ tarafıyla eşleşmedi.
-@error_too_many_values_to_unpack = Sağ tarafta açmak için yeterli değer yok.
-@error_not_enough_values = Sağ tarafta, sol tarafa sığacak çok fazla değer var.
-@error_empty_print = `print()` en az bir argument gerektirir.
-@error_in_string = String içinde {0}'ın olup olmadığını kontrol edemem.
-@error_collection_changed_size_during_iteration = Bu koleksiyonun boyutu, üzerinde dönen bir for döngüsü içinde değiştirilemez. Bunun nedeni, koleksiyonun boyutunu değiştirmenin, for döngüsünün kullandığı iteratör nesnesini geçersiz kılacak olmasıdır.
-@error_wrong_use_of_max = Maksimumunu hesaplayamıyorum {0}.
-@error_wrong_use_of_min = Min değerini hesaplayamıyorum {0}.
-@error_function_as_condition = Fonksiyon {0}'un `True` olup olmadığını kontrol etmeye çalışıyorum. Bu, fonksiyonun kendisi, fonksiyonun dönüş değeri değil. Fonksiyonu çağırma operatörü `()` ile çağırmayı mı düşündünüz? 
+@error_invalid_const2 = Bu mevcut değil.
+@error_max_stack_size_reached = Maksimum call stack boyutuna ulaşıldı. Bu büyük olasılıkla çok fazla özyinelemeli fonksiyon çağrısından kaynaklanıyor.
+@error_max_comparison_depth = Maksimum karşılaştırma derinliğine ulaşıldı. Bu, örneğin, kendilerini içeren listeleri karşılaştırıyorsan olabilir.
+@error_assign_type_mismatch = Atamanın sol tarafı sağ tarafıyla eşleşmedi.
+@error_too_many_values_to_unpack = Sağ tarafta, paketi açmak için yeterli değer yok.
+@error_not_enough_values = Sağ taraf, sol tarafa paketlenecek çok fazla değer içeriyor.
+@error_empty_print = `print()` en az bir argüman gerektirir.
+@error_in_string = {0}'ın bir string içinde olup olmadığı kontrol edilemez.
+@error_collection_changed_size_during_iteration = Bu koleksiyonun boyutu, üzerinde yinelenen bir for döngüsü içinde değiştirilemez. Bunun nedeni, koleksiyonun boyutunu değiştirmenin for döngüsünün kullandığı yineleyici nesnesini geçersiz kılmasıdır.
+@error_wrong_use_of_max = {0} için maksimum hesaplanamıyor.
+@error_wrong_use_of_min = {0} için minimum hesaplanamıyor.
+@error_function_as_condition = {0} fonksiyonunun `True` olup olmadığını kontrol etmeye çalışıyorsun. Bu, fonksiyonun dönüş değeri değil, fonksiyon nesnesinin kendisidir. Fonksiyonu `()` çağırma operatörü ile çağırmak mı istedin? 
 
-Python'da fonksiyon nesneleri "truthy"dir, yani koşul olarak kullanırsanız, `True` gibi çalışırlar ve bu yüzden Python size bu hata mesajını vermez. 
+Python'da, fonksiyon nesneleri doğrudur, yani onları koşul olarak kullanırsan `True` gibi çalışırlar, bu yüzden Python sana bu error mesajını vermezdi. 
 
-Bu bir koruma hata mesajıdır, eğer size engel oluyorsa, seçeneklerden kapatabilirsiniz.
-@error_function_in_operator = Fonksiyon {0} üzerinde {1} kullanmaya çalışıyorsunuz. Bu, fonksiyonun dönen değeri değil, fonksiyon nesnesinin kendisidir. Fonksiyonu çağrı operatörü `()` ile çağırmak mı istediniz?
+Bu bir güvenlik error mesajıdır, eğer engel olursa seçeneklerden kapatabilirsin.
+@error_function_in_operator = {1} operatörünü {0} fonksiyonu üzerinde kullanmaya çalışıyorsun. Bu, fonksiyonun dönüş değeri değil, fonksiyon nesnesinin kendisidir. Fonksiyonu `()` çağırma operatörü ile çağırmak mı istedin? 
 
-Bu, bir korunma hata mesajıdır, eğer engel oluyorsa ayarlardan kapatabilirsiniz.
+Bu bir güvenlik error mesajıdır, eğer engel olursa seçeneklerden kapatabilirsin.
 @error_zero_step_size = Adım boyutu 0 olamaz.
-@error_sequence_too_large = Dizi kopyalamak için çok büyüktü.
-@error_invalid_sim_unlocks = Başlangıçta açılanlar geçersizdi. Açılanların sırası veya `(Unlock.Carrots, 3)` şeklinde bir demet olması gerekiyor.
-@error_invalid_sim_items = Başlangıç eşyaları geçersizdi. Eşyaları sayılarla eşleştiren bir dictionary olmalı, mesela `{Items.Hay : 100}` gibi.
-@error_invalid_sim_globals = Başlangıç global değerleri geçersizdi. Değişken adlarını değerlerle eşleştiren bir "dict" olması gerekiyor, örneğin `{"x" : 42}` gibi.
-@error_division_by_zero = Ah Hayır! `0`'a böldün. Bunun sadece ucuz kurtuldun.
-@error_negative_use_item = Kullanılacak eşya miktarı en az `1` olmalı. Mevcut: {0}.
-@error_use_before_assign = Değişkene {0} bir değer atanmadan önce okumaya çalıştın. 
-Eğer bir global değişkeni değiştirmek istiyorsan, global scope'a yazmak için global anahtar kelimesini kullanman gerekiyor.
+@error_sequence_too_large = Dizi kopyalanamayacak kadar büyüktü.
+@error_invalid_sim_unlocks = Başlangıç kilit açmaları geçersizdi. Kilit açmaların bir dizisi veya `(Unlock.Carrots, 3)` şeklinde tuple'lardan oluşması gerekir.
+@error_invalid_sim_items = Başlangıç eşyaları geçersizdi. `{Items.Hay : 100}` gibi eşyaları sayılara eşleyen bir dict olması gerekir.
+@error_invalid_sim_globals = Başlangıç global değişkenleri geçersizdi. `{"x" : 42}` gibi değişken adlarını değerlere eşleyen bir dict olması gerekir.
+@error_division_by_zero = Eyvah! `0`'a böldün. Kıl payı kurtuldun.
+@error_negative_use_item = Kullanılan eşya miktarı en az `1` olmalıdır. {0} idi.
+@error_use_before_assign = {0} değişkeni, ona bir değer atanmadan önce okunmaya çalışıldı. 
+Eğer bir global değişkeni değiştirmek istiyorsan, global scope'a yazmak için global anahtar kelimesini kullanmalısın.
 
 `global x
 x += 1`
 @error_attribute_on_non_module = {0}'a bir özellik atayamazsın.
-@error_file_not_found = Dosya {0} mevcut değil.
+@error_file_not_found = {0} dosyası mevcut değil.
 @error_max_drones_reached = Drone limiti aşıldı.
-@error_dino_hat_already_used = Sadece bir dinozor şapkası var ve şu anda kullanılıyor. İkinci bir drone üzerinde kullanamazsın.
-@error_invalid_drone_id = ID {0} ile bir drone yok.
+@error_dino_hat_already_used = Sadece bir dinozor şapkası var ve o zaten kullanımda. İkinci bir drone'da kullanamazsın.
+@error_invalid_drone_id = {0} ID'li bir drone yok.

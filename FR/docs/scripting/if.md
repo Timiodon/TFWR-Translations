@@ -1,5 +1,5 @@
 # If
-Tu peux utiliser if, elif et else pour exécuter du code de manière conditionnelle.
+Vous pouvez utiliser if, elif et else pour exécuter du code de manière conditionnelle.
 
 `if condition1:
 	do_a_flip()
@@ -10,22 +10,22 @@ else:
 	harvest()`
 
 ## Syntaxe
-Les `if` te permettent d'exécuter du code uniquement si une condition est `True`. C'est comme une boucle `while` qui ne boucle pas.
-Le `if` prend une condition, tout comme la boucle `while`, et exécute le bloc de code if si la condition est évaluée à `True` :
+Les `if` vous permettent d'exécuter du code seulement si une condition est `True`. Ils sont comme une boucle `while` qui ne boucle pas.
+Le `if` prend une condition tout comme la boucle `while` et exécute le bloc de code du if si la condition s'évalue à `True` :
 
-`#faire un flip si la condition est True
+`#fait un flip si la condition est True
 if condition:
 	do_a_flip()`
 
-Tu peux aussi ajouter un `else` après le if qui définit le code à exécuter si la condition est évaluée à `False`.
+Vous pouvez également ajouter un `else` après le if qui définit le code à exécuter si la condition s'évalue à `False`.
 
-Faire un flip si `condition` est True, sinon récolter.
+Fait un flip si la `condition` est True, sinon récolte.
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif` est l'abréviation de else if.
+`elif` est un raccourci pour else if.
 
 `if condition1:
 	#a

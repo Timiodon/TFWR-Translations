@@ -1,19 +1,20 @@
 @plant_tooltip_template = {0}
 
-基本成長時間は {1} と {2} 秒の間です。
-{3} で育てることができます。
+基本成長時間は{1}秒から{2}秒の間です。
+{3}で成長できます。
 @object_tooltip_template_cost = ### 作物のコスト {{{{itemblock cost object {0}}}}}
-@object_descr_apple = 恐竜たちはどうやらそれが大好きみたいだね。
-@object_descr_grass = 草原で自動的に成長します。収穫すると`Items.Hay`を手に入れることができます。
-@object_descr_bush = 小さな茂みで、`Items.Wood`をドロップします。
-@object_descr_tree = 木は茂みより多くの木材を落とします。他の木が隣に育つと、成長に時間がかかります。
-@object_descr_carrot = にんじん！
-@object_descr_pumpkin = カボチャは、他の完全に育ったカボチャの隣にあると一緒に育ちます。育つと5分の1のカボチャが枯れます。
-@object_descr_sunflower = ひまわりは太陽からエネルギーを集めるよ。収穫すると`Items.Power`が手に入るよ。
-花びらが最大のひまわりを収穫すると、ボーナスエネルギーがもらえるよ。
-@object_descr_cactus = サボテンは10種類のサイズがあります。収穫すると、隣接した"sorted"なサボテンも一緒に収穫されます。
+@object_descr_apple = どうやら恐竜はこれが大好きらしい。
+@object_descr_grass = 草原で自動的に成長します。収穫すると`Items.Hay`を入手できます。
+@object_descr_bush = `Items.Wood`をドロップする小さな茂み。
+@object_descr_tree = 木は茂みよりも多くの木材をドロップします。隣に他の木があると成長に時間がかかります。
+@object_descr_carrot = ニンジン！
+@object_descr_pumpkin = カボチャは、隣に完全に成長した他のカボチャがあると、一緒に成長します。成長時に約5分の1のカボチャが枯れます。
+@object_descr_dead_pumpkin = 5分の1のカボチャは成長時に枯れてしまい、枯れたカボチャを残します。枯れたカボチャは役に立たず、新しいものが植えられると消えます。
+@object_descr_sunflower = ヒマワリは太陽のパワーを集めます。収穫すると`Items.Power`が手に入ります。
+最大数の花びらを持つヒマワリを収穫すると、ボーナスパワーがもらえます。
+@object_descr_cactus = サボテンには10種類のサイズがあります。収穫すると、隣接する「ソート済み」のサボテンも収穫されます。
 @object_descr_hedge = 迷路の一部。
-@object_descr_treasure = 迷路の辺の長さと同じ量の金が入った宝物。それは植物のように収穫することができる。
-@object_descr_dinosaur = 恐竜の帽子のしっぽの一部。
-@object_descr_grassland = デフォルトの地面。草が自動的に生えます。
-@object_descr_soil = `till()`を呼び出すと、地面が土壌になります。もう一度`till()`を呼び出すと、再び草原に変わります。
+@object_descr_treasure = それが隠されている迷路の一辺の長さに等しいゴールドを含む宝物。植物のように収穫できます。
+@object_descr_dinosaur = 恐竜の帽子の尻尾の一部。
+@object_descr_grassland = defaultの地面。草が自動的に生えてきます。
+@object_descr_soil = `till()`を呼び出すと地面が土になります。もう一度`till()`を呼び出すと草原に戻ります。

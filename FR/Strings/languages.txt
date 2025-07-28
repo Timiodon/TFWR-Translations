@@ -1,5 +1,5 @@
-@language = Langage
-@EN = Français
+@language = Langue
+@EN = Anglais
 @FR = Français
 @DE = Allemand
 @ES = Espagnol

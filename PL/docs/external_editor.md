@@ -1,24 +1,24 @@
-# Zewnętrzny Edytor
-Wbudowany edytor tekstu zazwyczaj wystarcza do gry, ale oczywiście nie może się równać z bardziej zaawansowanymi edytorami tekstu, jak Visual Studio Code.
+# Edytor zewnętrzny
+Wbudowany edytor tekstu jest zazwyczaj wystarczający do gry, ale oczywiście nie może konkurować z bardziej zaawansowanymi edytorami tekstu, takimi jak Visual Studio Code.
 
-Gra zapisuje wszystkie pliki kodu jako pliki .py, więc możesz je edytować za pomocą edytorów Pythona.
-Zwróć uwagę, że jest to tylko dla wygody. Język w grze nie jest tak naprawdę Pythonem, ale jest na tyle podobny, że Python IntelliSense działa na nim przyzwoicie.
-Możesz znaleźć pliki w [folderze z zapisami](persistent_data_path/Saves).
+Gra zapisuje wszystkie pliki z kodem jako pliki .py, więc możesz je edytować za pomocą edytorów Pythona.
+Zauważ, że jest to tylko dla wygody. Język w grze nie jest w rzeczywistości Pythonem, ale jest na tyle bliski, że IntelliSense Pythona działa na nim całkiem dobrze.
+Pliki można znaleźć w [folderze zapisu](persistent_data_path/Saves).
 
-Każdy zapis zawiera także plik `__builtins__.py`, który zawiera wbudowane definicje Pythona odpowiadające wbudowanym w grze, aby umożliwić IntelliSense.
-VS Code potrafi automatycznie wykryć `__builtins__.py`, ale niektóre edytory mogą działać tylko, jeśli zrobisz `from __builtins__ import *`.
+Każdy zapis zawiera również plik `__builtins__.py`, który zawiera wbudowane definicje Pythona pasujące do wbudowanych funkcji w grze, aby umożliwić działanie IntelliSense.
+VS Code jest w stanie automatycznie wykryć `__builtins__.py`, ale niektóre edytory mogą działać tylko po wykonaniu `from __builtins__ import *`.
 
-Aby zobaczyć zewnętrzne zmiany w grze bez konieczności ponownego ładowania zapisu, musisz włączyć opcję "File Watcher". Jeśli utworzysz lub usuniesz pliki zewnętrznie, nadal będziesz musiał załadować zapis ponownie, aby je zobaczyć.
+Aby zobaczyć zewnętrzne zmiany w grze bez konieczności ponownego wczytywania zapisu, musisz włączyć opcję „File Watcher”. Jeśli tworzysz lub usuwasz pliki zewnętrznie, nadal będziesz musiał ponownie wczytać zapis, aby je zobaczyć.
 
-## Korzystanie z VS Code
-Visual Studio Code to zalecany edytor kodu do używania z The Farmer Was Replaced.
+## Używanie VS Code
+Visual Studio Code jest zalecanym edytorem kodu do użytku z The Farmer Was Replaced.
 
 Możesz go zainstalować [tutaj](https://code.visualstudio.com/download).
 
-Po pobraniu zainstaluj rozszerzenie Python w VS Code.
+Po pobraniu zainstaluj rozszerzenie Pythona w VS Code.
 
-Gdy już je masz, otwórz [folder](persistent_data_path/Saves), który zawiera twoje pliki `.py` w VS Code. Upewnij się, że otwierasz cały folder, a nie tylko pojedyncze pliki, inaczej plik `__builtins__.py` nie będzie działał.
+Gdy to zrobisz, otwórz [folder](persistent_data_path/Saves), w którym znajdują się twoje pliki `.py`, w VS Code. Upewnij się, że otwierasz cały folder, a nie tylko pojedyncze pliki, w przeciwnym razie plik `__builtins__.py` nie będzie działał.
 
-W grze upewnij się, że masz włączoną opcję "File Watcher". Teraz za każdym razem, gdy zapiszesz w VS Code, zmiany automatycznie pojawią się w grze.
+W grze upewnij się, że masz włączoną opcję „File Watcher”. Teraz za każdym razem, gdy zapiszesz w VS Code, zmiany automatycznie pojawią się w grze.
 
-I to wszystko! Teraz możesz pisać swój kod w profesjonalnym edytorze kodu!
+To wszystko! Teraz możesz pisać swój kod w profesjonalnym edytorze kodu!

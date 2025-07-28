@@ -1,40 +1,40 @@
 # Expandir 2
-Sua fazenda se expandiu novamente! Agora os tiles não estão mais em uma linha reta, então você precisa encontrar uma maneira de atravessar uma grade quadrada.
+A tua quinta expandiu-se novamente! Agora os quadrados já não estão numa fila bonita, por isso precisas de encontrar uma maneira de atravessar uma grelha quadrada.
 
-Com o `while` loop isso não é possível até você desbloquear sensores e operadores.
-É hora de apresentar o `for` loop.
+Com o loop `while` isto não é possível até que desbloqueies sentidos e operadores.
+Está na hora de apresentar o loop `for`.
 
-Você pode ler tudo sobre o `for` loop na página [For Loop](docs/scripting/for.md), mas por agora você só precisará dele para repetir o código um número fixo de vezes.
+Podes ler tudo sobre o loop `for` na página [Loop For](docs/scripting/for.md), mas por agora só vais precisar dele para repetir código um número fixo de vezes.
 
-`#faça n flips
+`#faz n pinos
 for i in range(5):
 	do_a_flip()`
 
-`range(n)` cria um intervalo de números de `0` a `n-1`, o qual possui `n` elementos. O `for` loop executa seu corpo uma vez para cada elemento na sequência. Neste exemplo, `do_a_flip()` será chamado `5` vezes.
+`range(n)` cria um intervalo de números de `0` a `n-1`, que tem `n` elementos. O loop `for` executa o seu corpo uma vez para cada elemento na sequência. Neste exemplo, `do_a_flip()` será chamado `5` vezes.
 
-A função `get_world_size()` também está disponível agora. Ela retorna o comprimento do lado da sua fazenda. Desta forma, você pode escrever código que não vai quebrar com a próxima atualização de expansão.
+A função `get_world_size()` também está disponível agora. Ela retorna o comprimento do lado da tua quinta. Desta forma, podes escrever código que não vai quebrar com a próxima melhoria de expansão.
 
 `for i in range(get_world_size()):
 	harvest()
 	move(North)`
 
-Este exemplo colhe uma coluna da fazenda para qualquer tamanho de fazenda.
+Este exemplo colhe uma coluna da quinta para qualquer tamanho de quinta.
 
-Se você estiver travado tentando descobrir como mover o drone pela fazenda, veja a dica abaixo.
-<spoiler=mostrar dica> Existem, claro, várias maneiras de se mover pela fazenda.
-O que estamos procurando é uma maneira de percorrê-la de forma sistemática que não quebre quando a fazenda crescer novamente.
-Uma maneira sistemática de chegar a todos os lugares na fazenda seria repetir os seguintes passos para sempre:
+Se estiveres com dificuldades em descobrir como mover o drone pela quinta, vê a dica abaixo.
+<spoiler=mostrar dica>Existem, claro, várias maneiras de se mover pela quinta.
+O que procuramos é uma maneira sistemática de a atravessar que não se quebre quando a quinta crescer novamente.
+Uma maneira sistemática de chegar a todos os lugares da quinta seria repetir os 2 passos seguintes para sempre:
 
-1. Mover `North` até voltar.
-2. Mover `East`
+1.Mover para `North` até dar a volta.
+2.Mover para `East`
 
-`for i in range(get_world_size()):` pode ser útil para transformar essa ideia em código.
+`for i in range(get_world_size()):` pode ser útil para transformar esta ideia em código.
 </spoiler>
-<spoiler=mostrar solução possível> O percurso básico pode ser assim:
+<spoiler=mostrar possível solução> A travessia básica pode ser assim:
 
 `for i in range(get_world_size()):
 	for j in range(get_world_size()):
-		#faça um flip em cada tile
+		#faz um pino em cada quadrado
 		do_a_flip()
 		move(North)
 	move(East)`

@@ -4,6 +4,7 @@
 
 Entwickelt von Timon Herzog
 
-Übersetzungsbeiträge:
+
+Übersetzungs-Mitwirkende:
 
 Davide Altamura

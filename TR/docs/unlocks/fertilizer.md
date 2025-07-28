@@ -1,15 +1,15 @@
 # Gübre
-Bir noktada, bitkilerin büyümesini beklemek artık yeterince verimli değildir. 
-Suya benzer şekilde, her 10 saniyede bir otomatik olarak 1 gübre alırsınız, ayrıca her yükseltme için ekstra bir tane daha.
+Bir noktada, bitkilerin büyümesini beklemek artık yeterince verimli değil. 
+Su gibi, her 10 saniyede bir otomatik olarak 1 gübre ve her yükseltme için ekstra bir tane alacaksın.
 
-Gübre, bitkilerin anında büyümesini sağlar. `use_item(Items.Fertilizer)`, dronun altındaki bitkinin kalan büyüme süresini 2 saniye azaltır.
+Gübre, bitkilerin anında büyümesini sağlayabilir. `use_item(Items.Fertilizer)`, drone'un altındaki bitkinin kalan büyüme süresini 2 saniye azaltır.
 
-Bunun bazı yan etkileri vardır.
-Gübreyle büyütülen bitkiler enfekte olacaktır.
+Bunun bazı yan etkileri var.
+Gübre ile büyütülen bitkiler enfekte olacaktır.
 
-Bir bitki enfekte olduysa, hasat edildiğinde veriminin yarısı `Items.Weird_Substance`'e dönüşür.
-Tuhaf Madde de bitkilerde kullanılabilir ve bu, bitkinin ve tüm komşu bitkilerin enfekte olma durumunu değiştirir.
+Bir bitki enfekte olduğunda, hasat edildiğinde veriminin yarısı `Items.Weird_Substance`'e dönüşür.
+Tuhaf Madde ayrıca bitkiler üzerinde de kullanılabilir, bu da bitkinin ve tüm bitişik bitkilerin enfekte durumunu değiştirme etkisine sahiptir.
 
-Yani, `use_item(Items.Weird_Substance)` komutunu enfekte bir bitki üzerine kullanırsanız, onu tedavi edersiniz, ama sağlıklı bir bitki üzerine kullanırsanız enfekte edersiniz.
+Yani `use_item(Items.Weird_Substance)`'ı enfekte bir bitki üzerinde kullanırsan onu iyileştirir, ancak sağlıklı bir bitki üzerinde kullanırsan onu enfekte eder.
 
-Eğer sağlıklı komşulara sahip enfekte bir bitki üzerine kullanırsanız, bitkiyi tedavi eder ama komşuları enfekte eder ve tam tersi.
+Sağlıklı komşuları olan enfekte bir bitki üzerinde kullanırsan, bitkiyi iyileştirir ama komşuları enfekte eder ve tam tersi.

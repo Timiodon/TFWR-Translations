@@ -1,20 +1,20 @@
 # Ayçiçekleri
-[Ayçiçekleri](objects/sunflower) güneşin enerjisini toplar. Bu enerjiyi hasat edebilirsin.
+[Ayçiçekleri](objects/sunflower) güneşin gücünü toplar. Bu gücü hasat edebilirsin.
 
-Onları dikmek, havuç veya kabak dikmekle tamamen aynıdır.
+Onları ekmek, tıpkı havuç veya balkabağı ekmek gibi işler.
 
-Olgunlaşmış bir ayçiçeğini hasat etmek enerji kazandırır.
-Eğer çiftlikte en az 10 ayçiçeği varsa ve en çok yaprağı olanı hasat edersen `5` kat daha fazla enerji alırsın!
+Büyümüş bir ayçiçeğini hasat etmek güç verir.
+Eğer çiftlikte en az 10 ayçiçeği varsa ve en çok yaprağı olanı hasat edersen, `5` kat daha fazla güç kazanırsın!
 
-`measure()` dronun altındaki ayçiçeğinin yaprak sayısını döndürür.
-Ayçiçekleri en az `7` ve en fazla `15` yaprağa sahiptir.
-Tamamen büyümeden önce bile ölçülebilirler.
+`measure()`, drone'un altındaki ayçiçeğinin yaprak sayısını döndürür.
+Ayçiçeklerinin en az `7`, en fazla `15` yaprağı vardır.
+Tamamen büyümeden önce de ölçülebilirler.
 
-Birden fazla ayçiçeğinin aynı sayıda yaprağı olabilir, bu yüzden en çok yaprağa sahip birkaç ayçiçeği de bulunabilir. Bu durumda hangisini hasat ettiğin önemli değildir.
+Birden fazla ayçiçeği aynı sayıda yaprağa sahip olabilir, bu yüzden en çok yaprağı olan birkaç ayçiçeği de olabilir. Bu durumda, hangisini hasat ettiğinin bir önemi yoktur.
 
-Enerjin olduğu sürece drone iki kat hızlı çalışacaktır.
-Her 30 hareket (hareket etme, hasat, ekim gibi) için 1 enerji tüketir.
-Diğer kod ifadelerinin çalıştırılması da enerji kullanabilir ama drone eylemlerine göre çok daha az.
+Gücün olduğu sürece drone, iki kat daha hızlı çalışmak için onu kullanır.
+Her 30 eylemde (hareket, hasat, ekme gibi...) 1 güç tüketir.
+Diğer kod ifadelerini çalıştırmak da güç kullanabilir, ancak drone eylemlerinden çok daha az.
 
-Genel olarak, hız güncellemeleriyle hızlandırılan her şey enerjiyle de hızlanır.
-Enerji ile hızlandırılan her şey, gerçekleştirmenin aldığı süreye orantılı olarak enerji kullanır, hız güncellemeleri yok sayılır.
+Genel olarak, hız yükseltmeleriyle hızlandırılan her şey, güçle de hızlandırılır.
+Güçle hızlandırılan her şey, hız yükseltmelerini göz ardı ederek, çalışması için gereken süreyle orantılı olarak güç kullanır.

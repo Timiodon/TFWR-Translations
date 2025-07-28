@@ -1,12 +1,12 @@
-# Expand 1
-<unlock=for>Ayrıca [Expand_2](docs/unlocks/expand_2.md)'e de bak
+# Genişleme 1
+<unlock=for>Ayrıca [Genişleme_2](docs/unlocks/expand_2.md)'ye de bak
 
-</unlock>Çiftliğin büyüdü! Eğer dronu hareket ettiremezsen bu alan pek işe yaramaz, bu yüzden dronu hareket ettiren yeni bir fonksiyon olan `move()` var. `move()` fonksiyonu, dronu hangi yöne hareket ettirmek istediğinizi belirtmenizi gerektirir. Bunun için dört yeni sabit var: `North, East, South, West`
+</unlock>Çiftliğin büyüdü! Drone'u hareket ettiremezsen bu alanın pek bir faydası olmaz, bu yüzden drone'u hareket ettiren yeni bir `move()` fonksiyonu var. `move()` drone'u hareket ettirmek istediğin yönü belirtmeni gerektirir. Bunun için dört yeni sabit var: `North, East, South, West`
 
-Örneğin, `move(North)` dronu bir kare kuzeye hareket ettirir.
+Örneğin, `move(North)` drone'u bir kare kuzeye hareket ettirecektir.
 
-Eğer çiftliğin kenarından dışarı çıkarsanız, dron çiftliğin diğer tarafına taşınır.
-Aşağıdaki örnek kod, dronu sürekli olarak kuzeye hareket ettirir ve çiftliğin kenarına ulaştığında başlangıca döner:
+Çiftliğin kenarından dışarı çıkarsan drone çiftliğin diğer tarafına taşınır.
+Aşağıdaki örnek kod, drone'u sürekli kuzeye hareket ettirecek ve çiftliğin kenarına ulaştığında başlangıca geri dönecektir:
 
 `while True:
 	move(North)`

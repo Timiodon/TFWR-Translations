@@ -1,41 +1,41 @@
 # Dictionaries
-Dictionariesは、実際の辞書が言葉をその定義に紐づけるのと同じように、キーを値に紐づけることができるデータ構造です。これを使うと、情報を非常に素早く探せます。
+Dictionaryは、実際の辞書が単語をその定義に対応させるのと同じように、キーを値に対応させ、非常に迅速に検索できるデータ構造です。
 
-辞書は以下のように作成できます：
-`rotation = {North:East, East:South, South:West, West:North}`
+Dictionaryは次のように作成できます：
+`right_of = {North:East, East:South, South:West, West:North}`
 
-コロンの前の表現がキーで、コロンの後の表現がキーが紐づけられる値です。
-上の辞書は、それぞれの方角をその右側の方角に紐づけています。
+コロンの前の式がキーで、コロンの後の式がキーがマッピングされる値です。
+上記のdictionaryは、各方向をその右側の方向にマッピングします。
 
-ドローンの位置をその上にあるentityに紐づける別の例です：
+もう一つの例として、ドローンの位置をその上にあるentityに対応させるものがあります。
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-キーに紐づけられた値にアクセスするのは、リスト要素にアクセスするのと同様です：
+キーに対応する値にアクセスするのは、リストの要素にアクセスするのと似ています：
 `value = dict[key]`
 
 例：
-`orientation = rotation[South]`
-これにより、`orientation`は`West`になります。
+`orientation = right_of[South]`
+これにより`orientation`が`West`に設定されます。
 
-新しいキー値ペアを辞書に追加するには、以下のようにします：
+新しいキーと値のペアをdictionaryに追加するには、次のようにします：
 `dict[key] = value`
 
 例：
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
 これにより、現在の位置に保存されているentityが更新されます。
 
-キーは一意ですので、辞書内にすでに存在するキーを追加すると、前の値が上書きされます。
+キーは一意であるため、既にdictionaryに存在するキーを追加すると、前の値が上書きされます。
 
-`dict.pop(key)`を使って`dict`からキー値ペアを削除できます。
+`dict`からキーと値のペアを削除するには`dict.pop(key)`を使用します。
 
-`key in dict`は`key`が`dict`内のキーであれば`True`、そうでなければ`False`を返します。
-ですので、`if key in dict:`を使って、`dict`がキーを含んでいるか確認できます。
+`key in dict`は、`key`が`dict`のキーであれば`True`に、そうでなければ`False`に評価されます。
+そのため、`if key in dict:`を使って`dict`にキーが含まれているかを確認できます。
 
-辞書をforループに入れると、すべてのキーを順に処理することができます：
+forループでdictionaryを使用すると、すべてのキーを反復処理できます：
 `for key in dict:
 	value = dict[key]`
 
-キーが処理される順序に関しては、保証はありません。
+キーが反復される順序についての保証はありません。
 
-また[Sets](docs/scripting/sets.md)も参照してください。
+[Sets](docs/scripting/sets.md)も参照してください

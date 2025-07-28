@@ -1,13 +1,13 @@
 # Ağaçlar
-[Ağaçlar](objects/tree) çalılardan daha iyi bir şekilde odun elde etmenizi sağlar. Her biri 5 odun verir. Çalılar gibi, çim veya toprağa dikilebilir.
+[Ağaçlar](objects/tree), çalılardan odun elde etmenin daha iyi bir yoludur. Her biri 5 odun verir. Çalılar gibi, çimen veya toprağa ekilebilirler.
 
-Ağaçlar biraz alana ihtiyaç duyar ve yan yana dikildiklerinde büyümeleri yavaşlar. Kuzey, doğu, batı veya güney taraflarında doğrudan bir karoda ağaç olduğunda büyüme süresi iki katına çıkar. Yani her karoya ağaç dikerseniz, büyümeleri `2*2*2*2 = 16` kat daha uzun sürer.
+Ağaçlar biraz alana sahip olmayı sever ve onları yan yana ekmek büyümelerini yavaşlatır. Büyüme süresi, hemen kuzeyinde, doğusunda, batısında veya güneyinde bir karoda bulunan her ağaç için iki katına çıkar. Yani her karoya ağaç ekersen, büyümeleri `2*2*2*2 = 16` kat daha uzun sürer.
 
-<spoiler=show> Burada `%` operatörü kullanışlı olabilir. `%` operatörünün bölme işleminden kalan sayıyı döndürdüğünü unutmayın. `2`'ye bölünen çift sayılar `0` kalanına sahiptir ve `2`'ye bölünen tek sayılar `1` kalanına sahiptir.
-Bu şekilde bir sayının çift olup olmadığını kontrol edebilirsiniz:
+<spoiler=göster> `%` operatörü burada faydalı olabilir. `%` operatörünün bölmenin kalanını döndürdüğünü unutma. `2`'ye bölünen çift sayıların kalanı `0`, `2`'ye bölünen tek sayıların kalanı `1`'dir.
+Yani bir sayının çift olup olmadığını şu şekilde kontrol edebilirsin:
 
 `def is_even(n):
 	return n % 2 == 0`
 
-Eğer n çift ise `True` döndürür, değilse `False` döndürür.
+Bu, n çift ise `True`, değilse `False` döndürür.
 </spoiler>

@@ -1,20 +1,20 @@
-# Setler
-Setler [sözlükler](docs/scripting/dicts.md) gibidir, ama değerleri yoktur. Sadece sırasız bir anahtarlar kümesi.
+# Set'ler
+Set'ler [dictionary'lere](docs/scripting/dicts.md) benzer, ama değerleri yoktur. Sadece sırasız bir anahtar kümesidirler. 
 
-Setler, sözlükler gibi oluşturulur ama değerleri olmaz.
-`set = {North, East, West}` 
+Dictionary'ler gibi oluşturulurlar, ama değerleri yoktur.
+`set = {North, East, West}`
 
-Boş bir set oluşturmak için `set()` kullanın. Unutmayın, `{}` boş bir sözlük oluşturur.
+Boş bir set oluşturmak için `set()` kullan. `{}`'nin boş bir dictionary oluşturduğunu unutma.
 
-Sete yeni bir eleman eklemek için `set.add(elem)` kullanın.
+Set'e yeni bir eleman eklemek için `set.add(elem)` kullan.
 
-Setten bir eleman çıkarmak için `set.remove(elem)` kullanın.
+Bir set'ten bir eleman kaldırmak için `set.remove(elem)` kullan.
 
-Setin bir eleman içerip içermediğini kontrol etmek için `if elem in set:` kullanın.
+Set'in bir eleman içerip içermediğini kontrol etmek için `if elem in set:` kullan.
 
-Set içerisindeki tüm elemanları tekrarlamak için `for elem in set:` kullanın.
-Daha büyük setler için `in` operatörü, listeye göre çok daha hızlı çalışır.
+Set'teki tüm elemanları yinelemek için `for elem in set:` kullan.
+Daha büyük set'ler için `in` operatörü, bir list üzerinde olacağından çok daha hızlı performans gösterir.
 
-Sözlükler gibi, setler de sırasızdır, bu yüzden elemanların hangi sırada tekrarlanacağının garantisi yoktur.
+Tıpkı dictionary'ler gibi, set'ler de sırasızdır, bu nedenle elemanların hangi sırayla yineleneceği konusunda hiçbir garanti yoktur.
 
-Ayrıca, setlerdeki elemanlar benzersizdir, bu yüzden sete zaten bulunan bir eleman eklemek seti değiştirmez.
+Ayrıca, set'lerdeki elemanlar benzersizdir, bu yüzden sette zaten bulunan bir elemanı eklemek seti değiştirmez.

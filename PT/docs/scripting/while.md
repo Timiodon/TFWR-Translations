@@ -1,40 +1,41 @@
-# While Loop
-Você desbloqueou o loop `while` e os valores `True` e `False`. O loop `while` continua executando o corpo do loop enquanto a condição for `True`.
+# Loop While
+Desbloqueaste o loop `while` e os valores `True` e `False`. O loop `while` continua a executar o corpo do loop enquanto a condição for `True`.
 
-`while condição:
+`while condition:
 	#corpo do loop`
 
-Não se preocupe em criar loops infinitos. Os atrasos na execução impedirão que o programa congele.
+Não te preocupes em criar loops infinitos. Os atrasos na execução impedirão o programa de congelar.
 
 ## Para Iniciantes
-Talvez você já tenha tentado colocar várias chamadas de `harvest()` em sequência:
+Talvez já tenhas tentado colocar várias chamadas de `harvest()` seguidas:
 
 `harvest()
 harvest()
 harvest()`
 
-Isso permite que você colha várias vezes em uma execução do programa. 
-No entanto, seria bom colher mais do que três vezes, e escrever o mesmo código várias vezes é uma prática ruim. 
-A solução é um loop. 
-Um loop permite executar o mesmo código várias vezes.
+Isto permite-te colher várias vezes numa única execução do programa.
+No entanto, seria bom colher mais de três vezes, e escrever o mesmo código várias vezes é uma má prática.
+A solução é um loop.
+Um loop permite-te executar o mesmo código várias vezes.
 
-O loop while aceita uma condição, que é um valor lógico que só pode estar em um de dois estados: `True` ou `False`. 
-Um valor assim é chamado de valor booleano.
+O loop while recebe uma condição, que é um valor lógico que só pode estar num de dois estados: `True` ou `False`.
+Tal valor é chamado de valor Booleano.
 
-O loop então executa o código dentro do loop até que a condição seja `False`.
-O loop while se parece com isto:
+O loop então executa o código dentro do loop até que a condição seja False.
+O loop while tem esta aparência:
 
-`while condição:
+`while condition:
 	#corpo do loop
 	#corpo do loop
 	#...`
-
-Onde você deve substituir "condição" por um valor booleano e `#corpo do loop` pelo que você quiser fazer no loop.
+	
+Onde tens de substituir "condition" por um valor booleano e `#corpo do loop` com o que quer que queiras fazer no loop.
 
 Existem dois valores booleanos constantes disponíveis. Constantes são valores que nunca mudam durante o programa.
 
-Para criar um valor booleano constante que é sempre `True`, você pode simplesmente escrever `True`. Escreva `False` como um valor booleano constante que será sempre `False`.
-Então você poderia escrever
+Para criar um valor booleano constante que é sempre `True`, podes simplesmente escrever `True`. Escreve `False` como um valor booleano constante que será sempre `False`.
+Então poderias escrever ou
+
 
 `while False:
 	do_a_flip()`
@@ -44,12 +45,12 @@ ou
 `while True:
 	do_a_flip()`
 
-O primeiro nunca fará uma cambalhota e o segundo fará cambalhotas para sempre (um loop infinito).
+O primeiro nunca fará um pino e o segundo fará pinos para sempre (um loop infinito).
 
-Normalmente, criar um loop infinito é uma má ideia porque ele congela o programa, mas neste jogo há atrasos entre cada iteração do loop, então isso fará com que o drone continue fazendo uma cambalhota até que você o pare manualmente pressionando o botão de execução novamente.
+Normalmente, criar um loop infinito é uma má ideia porque congela o programa, mas neste jogo há atrasos entre cada iteração do loop, então fará com que o drone continue a fazer um pino até que o pares manualmente, premindo novamente o botão de execução.
 
-Perceba como a linha após os dois pontos está indentada. A indentação assim é usada para separar blocos de código.
-Basta pressionar Tab para adicionar indentação e Shift + Tab (ou Backspace) para removê-la.
+Repara como a linha a seguir aos dois pontos está indentada. A indentação como esta é usada para separar blocos de código.
+Basta pressionar Tab para adicionar indentação e Shift + Tab (ou Backspace) para a remover.
 
 O loop repetirá todas as instruções indentadas após os dois pontos.
-As instruções após o bloco indentado serão executadas após o loop terminar.
+As instruções após o bloco indentado serão executadas depois de o loop terminar.

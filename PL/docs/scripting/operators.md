@@ -3,73 +3,73 @@ operatory arytmetyczne: `+, -, *, /, //, %, **`
 operatory porównania: `==, !=, <=, >=, <, >`
 operatory logiczne: `not, and, or`
 
-Notatka: Wszystkie liczby w grze to liczby zmiennoprzecinkowe. Więc wszystkie operatory arytmetyczne są operatorami zmiennoprzecinkowymi.
-`//` jest zdefiniowany jako zaokrąglenie liczby w dół po podzieleniu.
+Uwaga: Wszystkie liczby w grze to liczby zmiennoprzecinkowe (floating point). Więc wszystkie operatory arytmetyczne są operatorami zmiennoprzecinkowymi.
+`//` jest zdefiniowane tak, że po prostu zaokrągla liczbę w dół po dzieleniu.
 
-Aby używać operatorów przypisania, musisz odblokować sekcję "Zmienne".
+Aby używać operatorów przypisania, musisz odblokować ulepszenie „Zmienne”.
 
 ## Wprowadzenie
 Operatory pozwalają porównywać, modyfikować i łączyć wartości.
-Operatory arytmetyczne `+, -, *, /, //, %, **` są używane do wykonywania podstawowych operacji matematycznych na liczbach.
-Operatory porównania `==, !=, <=, >=, <, >` są używane do porównywania wartości. Wynik jest zawsze albo `True` albo `False`.
-Operatory logiczne (zwane również operatorami boolowskimi) `not, and, or` są używane do łączenia wartości logicznych.
+Operatory arytmetyczne `+, -, *, /, //, %, **` służą do wykonywania popularnych operacji matematycznych na liczbach.
+Operatory porównania `==, !=, <=, >=, <, >` służą do porównywania wartości. Wynikiem jest zawsze `True` lub `False`.
+Operatory logiczne (nazywane również operatorami boolean) `not, and, or` służą do łączenia wartości logicznych.
 
-## Operatory Arytmetyczne
-`+` i `-` są używane do dodawania i odejmowania.
+## Operatory arytmetyczne
+`+` i `-` służą do dodawania i odejmowania.
 
-`2 + 3` daje `5`
-`3 - 2` daje `1`
+`2 + 3` daje w wyniku `5`
+`3 - 2` daje w wyniku `1`
 
-`*`, `/` i `//` są używane do mnożenia i dzielenia.
+`*`, `/` i `//` służą do mnożenia i dzielenia.
 
-`2 * 3` daje `6`
-`5 / 2` daje `2.5`
+`2 * 3` daje w wyniku `6`
+`5 / 2` daje w wyniku `2.5`
 
-`//` robi to samo co `/`, ale wynik jest zaokrąglony w dół do najbliższej liczby całkowitej.
+`//` robi to samo co `/`, ale wynik jest zaokrąglany w dół (do następnej liczby całkowitej).
 
-`5 // 2` daje `2`
+`5 // 2` daje w wyniku `2`
 
-`%` jest operatorem modulo, znanym również jako operator reszty. Tak naprawdę dzieli dwie liczby, a potem zwraca resztę. Możesz też myśleć o tym jako o powtarzalnym odejmowaniu prawej liczby od lewej, aż pozostanie mniej niż prawa liczba.
+`%` to operator modulo, znany również jako operator reszty z dzielenia. Zasadniczo dzieli dwie liczby, a następnie zwraca resztę. Można też o nim myśleć jako o wielokrotnym odejmowaniu prawej liczby od lewej, aż reszta będzie mniejsza od prawej liczby.
 
-`4 % 2` daje `0`
-`5 % 2` daje `1`
-`6 % 2` daje `0`
-`2 % 6` daje `2`
-`1.5 % 1` daje `0.5`
+`4 % 2` daje w wyniku `0`
+`5 % 2` daje w wyniku `1`
+`6 % 2` daje w wyniku `0`
+`2 % 6` daje w wyniku `2`
+`1.5 % 1` daje w wyniku `0.5`
 
-`**` jest operatorem potęgowania.
+`**` to operator potęgowania.
 
-`2**2` daje `4`
-`(-5)**3` daje `-125`
+`2**2` daje w wyniku `4`
+`(-5)**3` daje w wyniku `-125`
 
-## Operatory Porównania
-`==` i `!=` są używane do sprawdzania, czy dwie wartości są "równe"(`==`) lub "nie są równe"(`!=`). Mogą być używane na wszystkich typach wartości.
+## Operatory porównania
+`==` i `!=` służą do sprawdzania, czy dwie wartości są „równe” (`==`) lub „nierówne” (`!=`). Mogą być używane na wszystkich typach wartości.
 
-`2 == 2` daje `True`
-`Entities.Bush != Entities.Bush` daje `False`
-`3 != 3 + 1` daje `True`
+`2 == 2` daje w wyniku `True`
+`Entities.Bush != Entities.Bush` daje w wyniku `False`
+`3 != 3 + 1` daje w wyniku `True`
 
-`<=, >=, <, >` mogą być używane tylko na liczbach. Sprawdzają, czy lewa liczba jest "mniejsza lub równa"(`<=`), "większa lub równa"(`>=`), "mniejsza" (`<`) lub "większa" (`>`) od prawej liczby.
+`<=, >=, <, >` mogą być używane tylko na liczbach. Sprawdzają, czy lewa liczba jest „mniejsza lub równa” (`<=`), „większa lub równa” (`>=`), „mniejsza” (`<`) lub „większa” (`>`) niż prawa liczba.
 
-`1 <= 1` daje `True`
-`2 >= 3` daje `False`
-`-2 < -1` daje `True`
-`6 > 6` daje `False`
+`1 <= 1` daje w wyniku `True`
+`2 >= 3` daje w wyniku `False`
+`-2 < -1` daje w wyniku `True`
+`6 > 6` daje w wyniku `False`
 
-## Operatory Logiczne
+## Operatory logiczne
 `not` po prostu odwraca wartość:
 
-`not False` daje `True`
-`not True` daje `False`
+`not False` daje w wyniku `True`
+`not True` daje w wyniku `False`
 
-`and` daje `True` tylko wtedy, gdy obie wartości są `True`
+`and` daje w wyniku `True` tylko wtedy, gdy obie wartości są `True`
 
-`True and True` daje `True`
-`True and False` daje `False`
-`False and False` daje `False`
+`True and True` daje w wyniku `True`
+`True and False` daje w wyniku `False`
+`False and False` daje w wyniku `False`
 
-`or` daje `True`, jeśli przynajmniej jedna z wartości jest `True`
+`or` daje w wyniku `True`, jeśli co najmniej jedna z wartości jest `True`
 
-`True or True` daje `True`
-`True or False` daje `True`
-`False or False` daje `False`
+`True or True` daje w wyniku `True`
+`True or False` daje w wyniku `True`
+`False or False` daje w wyniku `False`

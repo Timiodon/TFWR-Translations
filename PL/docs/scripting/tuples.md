@@ -1,30 +1,31 @@
-# Krotki
-Krotki to świetny sposób na połączenie wielu wartości w jedną. Aby stworzyć krotkę, wystarczy oddzielić wartości przecinkami:
+# Krotki (Tuples)
+Krotki (tuples) to świetny sposób na połączenie wielu wartości w jedną.
+Aby utworzyć krotkę, po prostu oddziel wartości przecinkami:
 
-`tuple = 1, 2`
+`krotka = 1, 2`
 
-Możesz je także rozpakować z powrotem do kilku zmiennych. W poniższym kodzie krotka `(1,2)` jest rozpakowywana do dwóch zmiennych `a` i `b`.
+Możesz je również ponownie rozpakować na kilka zmiennych. W poniższym kodzie krotka `(1,2)` jest rozpakowywana na dwie zmienne `a` i `b`.
 
 `a, b = 1, 2`
 
-Krotki można indeksować jak listy, ale są niemutowalne i nie można ich zmieniać po stworzeniu.
+Krotki można indeksować jak listy, ale są one niezmienne (immutable) i nie można ich zmieniać po utworzeniu.
 
-`tuple = 1, 2`
+`krotka = 1, 2`
 
-`print(tuple[1])`
+`print(krotka[1])`
 drukuje `2`
 
-`tuple[0] = 3`
-rzuca error
+`krotka[0] = 3`
+zgłasza error
 <unlock=dicts>
-W przeciwieństwie do list, krotki mogą być używane jako klucze w dictionaries.
+W przeciwieństwie do list, krotki mogą być używane jako klucze w słownikach.
 
 `d = {(1,2):(4,5)}
 
 print(d[(1,2)])`
 `drukuje` (4,5)</unlock>
 
-Mogą być także przydatne przy zwracaniu wielu wartości z funkcji.
+Mogą być również przydatne do zwracania wielu wartości w funkcji.
 
 `def f():
     return 1, 2

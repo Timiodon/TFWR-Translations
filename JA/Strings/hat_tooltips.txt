@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = デフォルトの帽子。
-@hat_descr_dinosaur_hat = 装備して恐竜ゲームを始めよう。
+@hat_descr_straw_hat = defaultの帽子です。
+@hat_descr_dinosaur_hat = これを装備すると恐竜ゲームが始まります。

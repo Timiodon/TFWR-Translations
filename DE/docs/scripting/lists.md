@@ -9,13 +9,13 @@ Eine Liste kann auch leer sein:
 
 `empty_list = []`
 
-Du kannst ein Element einer Liste über seinen Index zugreifen. Der Index ist `0` für das erste Element, `1` für das zweite Element, `2` für das dritte...
+Du kannst auf ein Element einer Liste über seinen Index zugreifen. Der Index ist `0` für das erste Element, `1` für das zweite Element, `2` für das dritte...
 
-pflanze Karotten
+pflanzt Karotten
 `list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(list[1])`
 
-Du kannst über eine Liste mit einer for-Schleife iterieren. Das folgende Beispiel summiert alle Elemente in der Liste.
+Du kannst mit einer for-Schleife über eine Liste iterieren. Das folgende Beispiel summiert alle Elemente in der Liste.
 
 `list = [4, 7, 2, 5]
 sum = 0
@@ -31,20 +31,20 @@ Die folgenden Listenmethoden ermöglichen es dir, Elemente hinzuzufügen und zu 
 list.append(7)`
 `list` ist jetzt `[2, 6, 12, 7]`
 
-`list.remove(elem)` entfernt das erste Auftreten eines Elements aus einer Liste:
+`list.remove(elem)` entfernt das erste Vorkommen eines Elements aus einer Liste:
 
 `list = [1, 2, 4, 2]
 list.remove(2)`
 `list` ist jetzt `[1, 4, 2]`
 
-`list.insert(index, elem)` fügt ein Element an der angegebenen Stelle ein:
+`list.insert(index, elem)` fügt ein Element am angegebenen Index ein:
 
 `list = [Entities.Tree, Items.Hay]
 list.insert(1, Items.Wood)`
 `list` ist jetzt `[Entities.Tree, Items.Wood, Items.Hay]`
 
 `list.pop(index)` entfernt das Element am angegebenen Index.
-Wenn kein Index angegeben ist, wird das letzte Element entfernt.
+Wenn kein Index angegeben wird, wird das letzte Element entfernt.
 
 `list = [3, 5, 8, 25]
 list.pop()`
@@ -52,13 +52,13 @@ list.pop()`
 `list.pop(1)`
 `list` ist jetzt `[3, 8]`
 
-Die Funktion `len()` gibt die Länge der Liste zurück.
+Die `len()`-Funktion gibt die Länge der Liste zurück.
 `list = [3, 2, 1]
 x = len(list)`
 `x` ist jetzt `3`
 
-Listen haben Referenzsemantik. Das bedeutet, dass das Zuweisen einer Liste zu einer Variable dasselbe Listenobjekt dieser Variable zuweist, anstatt eine Kopie der Liste zu erstellen.
-Wenn zwei Variablen auf dieselbe Liste verweisen, sind Änderungen an der Liste für beide sichtbar.
+Listen haben Referenzsemantik. Das bedeutet, dass die Zuweisung einer Liste zu einer Variable dasselbe Listenobjekt dieser Variable zuweist, anstatt eine Kopie der Liste zu erstellen.
+Wenn zwei Variablen auf dieselbe Liste verweisen, werden Änderungen an der Liste von beiden gesehen.
 
 `a = [1,2]
 b = a

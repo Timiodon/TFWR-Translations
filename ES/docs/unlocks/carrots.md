@@ -1,6 +1,6 @@
 # Zanahorias
-Antes de que puedas plantar zanahorias con `plant(Entities.Carrot)`, tienes que arar la tierra. Esto cambiará el suelo a `Grounds.Soil`. Para arar la tierra, simplemente llama a `till()`. Si llamas a `till()` nuevamente, volverá a cambiar a `Grounds.Grassland`.
+Antes de poder plantar zanahorias con `plant(Entities.Carrot)`, tienes que arar la tierra. Esto cambiará el suelo a `Grounds.Soil`. Para arar la tierra, simplemente llama a `till()`. Llamar a `till()` de nuevo lo cambiará de nuevo a `Grounds.Grassland`.
 
-Plantar zanahorias cuesta madera y heno. Estos elementos se eliminarán automáticamente al llamar a `plant(Entities.Carrot)`.
+Plantar zanahorias cuesta madera y heno. Estos items se eliminarán automáticamente al llamar a `plant(Entities.Carrot)`.
 
-Puedes ver el costo de cualquier planta en su [página propia](objects/carrot).
+Puedes ver el coste de cualquier planta en su [propia página](objects/carrot).
