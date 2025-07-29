@@ -19,9 +19,7 @@ The syntax is also similar to that of Python, which is one of the most widely us
 
 If you already know Python, it's not a problem either, you'll just be able to skip the early game quickly to get to the more interesting stuff.
 
-Code is a sequence of statements that are executed line by line.
-
-Currently, the only statements available are
+Currently, there are two drone commands available.
 
 `harvest()`
 
@@ -32,6 +30,12 @@ and
 These are function calls. You can think of a function as a command that can be executed. You execute it using the `()` parentheses.
 
 Try typing these statements in the code window and pressing the execute button.
+
+You can think of your code as a sequence of statements. You can run multiple statements in a row like this:
+
+`harvest()
+do_a_flip()
+harvest()`
 
 ## Unlocks
 Collecting grass will give you hay. Hay can be used to unlock loops in the unlock menu. Open the unlock menu with the button in the top right corner.

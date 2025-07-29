@@ -1,37 +1,41 @@
-# Premier programme
+# Premier Programme
 ## Éditeur de texte
-Toute la programmation se fait dans des fenêtres de code. Chaque fenêtre de code correspond à un fichier texte contenant du code.
-Vous pouvez renommer le fichier en cliquant sur son nom en haut de la fenêtre.
+Toute la programmation se fait dans des fenêtres de code. Chaque fenêtre de code correspond à un fichier texte contenant du code. 
+Tu peux renommer le fichier en cliquant sur son nom en haut de la fenêtre.
 
-Le code peut être édité comme dans n'importe quel éditeur de texte tant qu'il n'est pas en cours d'exécution.
-Vous pouvez exécuter le programme directement en appuyant sur le bouton de lecture vert dans la fenêtre de code.
+Le code peut être modifié comme dans n'importe quel éditeur de texte tant qu'il n'est pas en cours d'exécution.
+Tu peux exécuter le programme directement en appuyant sur le bouton de lecture vert dans la fenêtre de code.
 ![](PlayButton50)
 
-Vous pouvez créer plus de fichiers de code en utilisant le bouton "+" dans le coin supérieur droit de l'écran.
-Vous pouvez ancrer une fenêtre à une autre en la faisant glisser dessus.
+Tu peux créer plus de fichiers de code en utilisant le bouton "+" dans le coin supérieur droit de l'écran.
+Tu peux ancrer une fenêtre à une autre en la faisant glisser dessus.
 
-Vous remarquerez qu'une fois que vous commencez à taper, une simple fenêtre de complétion de code apparaîtra.
-Appuyez sur Tab pour insérer la complétion de code.
-Utilisez les touches fléchées pour naviguer dans les options de complétion.
+Tu remarqueras qu'une fois que tu commences à taper, une simple fenêtre de complétion de code apparaîtra.
+Appuie sur Tab pour insérer la complétion de code.
+Utilise les touches fléchées pour naviguer entre les options de complétion.
 
-Ne vous inquiétez pas si c'est votre première fois en programmation. Le langage est débloqué étape par étape, donc vous ne serez pas submergé par toutes les choses que vous pouvez faire.
-La syntaxe est également similaire à celle de Python, qui est l'un des langages de programmation les plus utilisés au monde, donc l'apprendre n'est pas complètement inutile.
+Ne t'inquiète pas si c'est la première fois que tu programmes. Le langage se débloque étape par étape, tu ne seras donc pas submergé par tout ce que tu peux faire. 
+La syntaxe est également similaire à celle de Python, qui est l'un des langages de programmation les plus utilisés au monde, donc l'apprendre n'est pas complètement une perte de temps.
 
-Si vous connaissez déjà Python, ce n'est pas un problème non plus, vous pourrez simplement sauter rapidement le début du jeu pour arriver aux choses plus intéressantes.
+Si tu connais déjà Python, ce n'est pas un problème non plus, tu pourras simplement passer rapidement le début du jeu pour arriver aux choses plus intéressantes.
 
-Le code est une séquence d'instructions qui sont exécutées ligne par ligne.
-
-Actuellement, les seules instructions disponibles sont
+Actuellement, il y a deux commandes de drone disponibles.
 
 `harvest()`
 
-et
+et 
 
 `do_a_flip()`
 
-Ce sont des appels de fonction. Vous pouvez considérer une fonction comme une commande qui peut être exécutée. Vous l'exécutez en utilisant les parenthèses `()`.
+Ce sont des appels de fonction. Tu peux considérer une fonction comme une commande qui peut être exécutée. Pour l'exécuter, tu utilises les parenthèses ().
 
-Essayez de taper ces instructions dans la fenêtre de code et d'appuyer sur le bouton d'exécution.
+Essaie de taper ces instructions dans la fenêtre de code et d'appuyer sur le bouton d'exécution.
+
+Tu peux voir ton code comme une séquence d'instructions. Tu peux exécuter plusieurs instructions à la suite comme ceci :
+
+`harvest()
+do_a_flip()
+harvest()`
 
 ## Déblocages
-Récolter de l'herbe vous donnera du foin. Le foin peut être utilisé pour débloquer des boucles dans le menu de déblocage. Ouvrez le menu de déblocage avec le bouton dans le coin supérieur droit.
+Récolter de l'herbe te donnera du foin. Le foin peut être utilisé pour débloquer les boucles dans le menu de déblocage. Ouvre le menu de déblocage avec le bouton dans le coin supérieur droit.
