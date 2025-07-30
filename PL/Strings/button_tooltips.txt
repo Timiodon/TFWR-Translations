@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = Gdy ta opcja jest włączona, gra zgłosi błąd zabezpieczający, jeśli istnieje zmienna lokalna o tej samej nazwie co zmienna globalna.
 @option_tooltip_print_warnings = Aktywuje ostrzeżenia i ikonę ostrzeżenia, która czasami się pojawia.
 @option_tooltip_language = Zmień język gry.
+@option_tooltip_code_highlights = Wyłącz migające podświetlenia podczas działania kodu.
+@option_tooltip_resolution = Zmień rozdzielczość ekranu.
 @keybind_tooltip_indent_selection = Dodaj wcięcie do wszystkich zaznaczonych linii. Musi to być klawisz wstawiający znak, aby to zadziałało. Tak więc kombinacje z klawiszami ctrl lub alt nie będą działać.
 @keybind_tooltip_unindent_selection = Usuń wcięcie ze wszystkich zaznaczonych linii. Musi to być klawisz wstawiający znak, aby to zadziałało. Tak więc kombinacje z klawiszami ctrl lub alt nie będą działać.
 @keybind_tooltip_menu = Otwórz lub zamknij menu główne.

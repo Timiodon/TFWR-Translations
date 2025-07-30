@@ -21,6 +21,8 @@ Code Editor:
 Other:
 -You can now chain comparison operators like in Python.
 -`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
+-Added a resolution setting.
+-Added a setting to turn off the flashing highlights when the code is running.
 
 Fixes:
 -Some of the most common cases of code highlights being visible through other windows have been fixed.

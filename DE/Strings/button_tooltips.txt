@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = Wenn aktiviert, wirft das Spiel einen Safeguard-Error, wenn eine lokale Variable den gleichen Namen wie eine globale Variable hat.
 @option_tooltip_print_warnings = Aktiviert Warnungen und das Warnsymbol, das manchmal erscheint.
 @option_tooltip_language = Ändere die Sprache des Spiels.
+@option_tooltip_code_highlights = Schaltet die blinkenden Highlights während der Code-Ausführung aus.
+@option_tooltip_resolution = Ändert die Bildschirmauflösung.
 @keybind_tooltip_indent_selection = Fügt allen ausgewählten Zeilen eine Einrückung hinzu. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Also werden keine Kombinationen mit Strg oder Alt funktionieren.
 @keybind_tooltip_unindent_selection = Entfernt die Einrückung von allen ausgewählten Zeilen. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Also werden keine Kombinationen mit Strg oder Alt funktionieren.
 @keybind_tooltip_menu = Öffnet oder schließt das Hauptmenü.

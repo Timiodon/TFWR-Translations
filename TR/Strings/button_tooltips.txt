@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = Etkinleştirildiğinde, global bir değişkenle aynı ada sahip yerel bir değişken varsa oyun bir güvenlik error'u verir.
 @option_tooltip_print_warnings = Uyarıları ve bazen görünen uyarı simgesini etkinleştirir.
 @option_tooltip_language = Oyunun dilini değiştir.
+@option_tooltip_code_highlights = Kod çalışırken yanıp sönen vurguları kapat.
+@option_tooltip_resolution = Ekran çözünürlüğünü değiştir.
 @keybind_tooltip_indent_selection = Tüm seçili satırlara girinti ekle. Çalışması için bunun bir karakter ekleyen bir tuş olması gerekir. Bu nedenle ctrl veya alt ile olan kombinasyonlar çalışmaz.
 @keybind_tooltip_unindent_selection = Tüm seçili satırlardan girintiyi kaldır. Çalışması için bunun bir karakter ekleyen bir tuş olması gerekir. Bu nedenle ctrl veya alt ile olan kombinasyonlar çalışmaz.
 @keybind_tooltip_menu = Ana menüyü aç veya kapat.

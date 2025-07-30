@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = 启用后，如果存在与全局变量同名的局部变量，游戏会抛出一个安全保护 error。
 @option_tooltip_print_warnings = 激活警告以及有时会出现的警告图标。
 @option_tooltip_language = 更改游戏语言。
+@option_tooltip_code_highlights = 关闭代码运行时闪烁的高亮。
+@option_tooltip_resolution = 更改屏幕分辨率。
 @keybind_tooltip_indent_selection = 为所有选定行添加缩进。这需要是一个能插入字符的键才能生效，所以任何与 ctrl 或 alt 的组合键都无效。
 @keybind_tooltip_unindent_selection = 移除所有选定行的缩进。这需要是一个能插入字符的键才能生效，所以任何与 ctrl 或 alt 的组合键都无效。
 @keybind_tooltip_menu = 打开或关闭主菜单。

@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = Quando abilitato, il gioco genererà un errore di safeguard se c'è una variabile locale che ha lo stesso nome di una variabile globale.
 @option_tooltip_print_warnings = Attiva gli avvisi e l'icona di avviso che a volte appare.
 @option_tooltip_language = Cambia la lingua del gioco.
+@option_tooltip_code_highlights = Disattiva le evidenziazioni lampeggianti quando il codice è in esecuzione.
+@option_tooltip_resolution = Cambia la risoluzione dello schermo.
 @keybind_tooltip_indent_selection = Aggiungi l'indentazione a tutte le righe selezionate. Deve essere un tasto che inserisce un carattere affinché funzioni. Quindi, qualsiasi combinazione con ctrl o alt non funzionerà.
 @keybind_tooltip_unindent_selection = Rimuovi l'indentazione da tutte le righe selezionate. Questo deve essere un tasto che inserisce un carattere perché funzioni. Quindi, qualsiasi combinazione con ctrl o alt non funzionerà.
 @keybind_tooltip_menu = Apri o chiudi il menu principale.

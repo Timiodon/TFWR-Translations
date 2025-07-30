@@ -33,6 +33,8 @@
 @option_tooltip_error_shadow = 有効にすると、グローバル変数と同じ名前のローカル変数がある場合に、セーフガードerrorがスローされます。
 @option_tooltip_print_warnings = 警告と、時々表示される警告アイコンを有効にします。
 @option_tooltip_language = ゲームの言語を変更します。
+@option_tooltip_code_highlights = コード実行中のハイライトの点滅をオフにします。
+@option_tooltip_resolution = 画面解像度を変更します。
 @keybind_tooltip_indent_selection = 選択したすべての行にインデントを追加します。これが機能するためには、文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
 @keybind_tooltip_unindent_selection = 選択したすべての行からインデントを削除します。これが機能するためには、文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
 @keybind_tooltip_menu = メインメニューを開閉します。
