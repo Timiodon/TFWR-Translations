@@ -43,3 +43,5 @@
 @tabs to spaces = Tabs to Spaces
 @error forgot call = Error on Missing ()
 @print warnings = Print Warnings
+@code highlights = Code highlights
+@resolution = Resolution

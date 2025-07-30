@@ -43,3 +43,5 @@
 @tabs to spaces = 탭을 공백으로
 @error forgot call = () 누락 시 Error
 @print warnings = 경고 출력
+@code highlights = 코드 하이라이트
+@resolution = 해상도

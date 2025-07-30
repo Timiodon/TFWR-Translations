@@ -43,3 +43,5 @@
 @tabs to spaces = タブをスペースに
 @error forgot call = ()抜けエラー
 @print warnings = 警告を表示
+@code highlights = コードハイライト
+@resolution = 解像度

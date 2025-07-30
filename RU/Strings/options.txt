@@ -43,3 +43,5 @@
 @tabs to spaces = Табы в пробелы
 @error forgot call = Ошибка при отсутств. ()
 @print warnings = Печатать предупреждения
+@code highlights = Подсветка кода
+@resolution = Разрешение

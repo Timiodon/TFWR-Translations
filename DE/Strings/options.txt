@@ -43,3 +43,5 @@
 @tabs to spaces = Tabs zu Leerzeichen
 @error forgot call = Fehler bei fehlenden ()
 @print warnings = Warnungen ausgeben
+@code highlights = Code-Highlights
+@resolution = Auflösung

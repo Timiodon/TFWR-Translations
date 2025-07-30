@@ -43,3 +43,5 @@
 @tabs to spaces = Tab转空格
 @error forgot call = 缺少()时报错
 @print warnings = 打印警告
+@code highlights = 代码高亮
+@resolution = 分辨率

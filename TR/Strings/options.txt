@@ -43,3 +43,5 @@
 @tabs to spaces = Sekmeleri Boşluklara
 @error forgot call = Eksik ()'de Error
 @print warnings = Uyarıları Yazdır
+@code highlights = Kod vurguları
+@resolution = Çözünürlük

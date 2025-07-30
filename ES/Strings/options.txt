@@ -43,3 +43,5 @@
 @tabs to spaces = Pestañas a Espacios
 @error forgot call = Error por falta de ()
 @print warnings = Imprimir Advertencias
+@code highlights = Resaltado de código
+@resolution = Resolución

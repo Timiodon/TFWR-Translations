@@ -43,3 +43,5 @@
 @tabs to spaces = Tabulatory na spacje
 @error forgot call = Error przy braku ()
 @print warnings = Drukuj ostrzeżenia
+@code highlights = Podświetlanie kodu
+@resolution = Rozdzielczość

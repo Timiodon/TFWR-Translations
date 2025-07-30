@@ -43,3 +43,5 @@
 @tabs to spaces = Tabulations en espaces
 @error forgot call = Erreur si () manquant
 @print warnings = Afficher avertissements
+@code highlights = Surlignage du code
+@resolution = Résolution

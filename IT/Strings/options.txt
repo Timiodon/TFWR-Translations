@@ -1,5 +1,5 @@
 @audio = Audio
-@visuals = Elementi visivi
+@visuals = Grafica
 @graphics = Grafica
 @general = Generale
 @controls = Controlli
@@ -43,3 +43,5 @@
 @tabs to spaces = Da Tab a Spazi
 @error forgot call = Errore mancante ()
 @print warnings = Avvisi di stampa
+@code highlights = Evidenziazione codice
+@resolution = Risoluzione
