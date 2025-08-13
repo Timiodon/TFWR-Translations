@@ -35,6 +35,7 @@
 @option_tooltip_language = Zmień język gry.
 @option_tooltip_code_highlights = Wyłącz migające podświetlenia podczas działania kodu.
 @option_tooltip_resolution = Zmień rozdzielczość ekranu.
+@option_tooltip_increment_number_effect = Wyłącz efekty w ekwipunku, które pojawiają się podczas zmiany liczb.
 @keybind_tooltip_indent_selection = Dodaj wcięcie do wszystkich zaznaczonych linii. Musi to być klawisz wstawiający znak, aby to zadziałało. Tak więc kombinacje z klawiszami ctrl lub alt nie będą działać.
 @keybind_tooltip_unindent_selection = Usuń wcięcie ze wszystkich zaznaczonych linii. Musi to być klawisz wstawiający znak, aby to zadziałało. Tak więc kombinacje z klawiszami ctrl lub alt nie będą działać.
 @keybind_tooltip_menu = Otwórz lub zamknij menu główne.

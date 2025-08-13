@@ -45,3 +45,4 @@
 @print warnings = Avvisi di stampa
 @code highlights = Evidenziazione codice
 @resolution = Risoluzione
+@increment number effect = Effetto Incremento Numeri

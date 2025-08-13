@@ -2,7 +2,7 @@
 @unlock_descr_trees = Ağaçların kilidini açar.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = Drone'un hızını artırır.
+@unlock_descr_speed = Hem drone'un hem de kod yürütme hızını artırır.
 @unlock_descr_plant = Ekim yapmanın kilidini açar.
 
 `plant(Entities.Bush)`

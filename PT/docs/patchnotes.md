@@ -7,11 +7,14 @@ Gameplay:
 -Pumpkins now scale up to 6x6 instead of 5x5.
 -The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
 -The cactus grow time is now always exactly 1 second.
+-Pumpkins now leave behind a dead pumpkin to indicate that they have died.
+-Added `pet_the_piggy()`.
 
 Visuals:
 -The visuals of the tech tree have been completely reworked.
--Pumpkins now leave behind a dead pumpkin to indicate that they have died.
--Cacti are now brown when they aren't sorted to make it more visible.
+-The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
+-Cacti are now brown when they aren't correctly sorted to make it more visible.
+-Plants are now visible immediately after planting, even if they haven't grown yet.
 
 Code Editor:
 -Double clicking identifiers with underscores in them now selects the whole identifier.

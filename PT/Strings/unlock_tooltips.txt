@@ -2,7 +2,7 @@
 @unlock_descr_trees = Desbloqueia árvores.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = Aumenta a velocidade do drone.
+@unlock_descr_speed = Aumenta a velocidade do drone e da execução do código.
 @unlock_descr_plant = Desbloqueia a plantação.
 
 `plant(Entities.Bush)`

@@ -45,3 +45,4 @@
 @print warnings = 警告を表示
 @code highlights = コードハイライト
 @resolution = 解像度
+@increment number effect = 数値増加エフェクト

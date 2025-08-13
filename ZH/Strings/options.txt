@@ -45,3 +45,4 @@
 @print warnings = 打印警告
 @code highlights = 代码高亮
 @resolution = 分辨率
+@increment number effect = 数字增长效果

@@ -2,7 +2,7 @@
 @unlock_descr_trees = 나무를 해금합니다.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = 드론의 속도를 증가시킵니다.
+@unlock_descr_speed = 드론과 코드 실행 속도를 모두 증가시킵니다.
 @unlock_descr_plant = 심기를 해금합니다.
 
 `plant(Entities.Bush)`

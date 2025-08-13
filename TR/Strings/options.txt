@@ -45,3 +45,4 @@
 @print warnings = Uyarıları Yazdır
 @code highlights = Kod vurguları
 @resolution = Çözünürlük
+@increment number effect = Sayı Artırma Efekti

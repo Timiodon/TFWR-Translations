@@ -2,7 +2,7 @@
 @unlock_descr_trees = 解锁树木。
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = 提高无人机的速度。
+@unlock_descr_speed = 提高无人机和代码执行的速度。
 @unlock_descr_plant = 解锁种植。
 
 `plant(Entities.Bush)`

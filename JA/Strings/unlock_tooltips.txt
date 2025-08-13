@@ -2,7 +2,7 @@
 @unlock_descr_trees = 木をアンロックします。
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = ドローンの速度を上げます。
+@unlock_descr_speed = ドローンとコード実行の両方の速度を上げます。
 @unlock_descr_plant = 植え付けをアンロックします。
 
 `plant(Entities.Bush)`

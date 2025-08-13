@@ -35,6 +35,7 @@
 @option_tooltip_language = Change the language of the game.
 @option_tooltip_code_highlights = Turn off the flashing highlights when the code is running.
 @option_tooltip_resolution = Change the screen resolution.
+@option_tooltip_increment_number_effect = Disable the effects in the inventory that play when the numbers change.
 @keybind_tooltip_indent_selection = Add indentation to all selected lines. This needs to be a key that inserts a character for it to work. So any combinations with ctrl or alt won't work.
 @keybind_tooltip_unindent_selection = Remove indentation from all selected lines. This needs to be a key that inserts a character for it to work. So any combinations with ctrl or alt won't work.
 @keybind_tooltip_menu = Open or close the main menu.

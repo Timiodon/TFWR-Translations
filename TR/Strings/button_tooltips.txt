@@ -35,6 +35,7 @@
 @option_tooltip_language = Oyunun dilini değiştir.
 @option_tooltip_code_highlights = Kod çalışırken yanıp sönen vurguları kapat.
 @option_tooltip_resolution = Ekran çözünürlüğünü değiştir.
+@option_tooltip_increment_number_effect = Envanterde sayılar değiştiğinde oynatılan efektleri devre dışı bırak.
 @keybind_tooltip_indent_selection = Tüm seçili satırlara girinti ekle. Çalışması için bunun bir karakter ekleyen bir tuş olması gerekir. Bu nedenle ctrl veya alt ile olan kombinasyonlar çalışmaz.
 @keybind_tooltip_unindent_selection = Tüm seçili satırlardan girintiyi kaldır. Çalışması için bunun bir karakter ekleyen bir tuş olması gerekir. Bu nedenle ctrl veya alt ile olan kombinasyonlar çalışmaz.
 @keybind_tooltip_menu = Ana menüyü aç veya kapat.

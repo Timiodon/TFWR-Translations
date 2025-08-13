@@ -45,3 +45,4 @@
 @print warnings = Print Warnings
 @code highlights = Code highlights
 @resolution = Resolution
+@increment number effect = Increment Number Effect

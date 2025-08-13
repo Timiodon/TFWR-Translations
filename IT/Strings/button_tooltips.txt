@@ -35,6 +35,7 @@
 @option_tooltip_language = Cambia la lingua del gioco.
 @option_tooltip_code_highlights = Disattiva le evidenziazioni lampeggianti quando il codice è in esecuzione.
 @option_tooltip_resolution = Cambia la risoluzione dello schermo.
+@option_tooltip_increment_number_effect = Disabilita gli effetti nell'inventario che si attivano quando i numeri cambiano.
 @keybind_tooltip_indent_selection = Aggiungi l'indentazione a tutte le righe selezionate. Deve essere un tasto che inserisce un carattere affinché funzioni. Quindi, qualsiasi combinazione con ctrl o alt non funzionerà.
 @keybind_tooltip_unindent_selection = Rimuovi l'indentazione da tutte le righe selezionate. Questo deve essere un tasto che inserisce un carattere perché funzioni. Quindi, qualsiasi combinazione con ctrl o alt non funzionerà.
 @keybind_tooltip_menu = Apri o chiudi il menu principale.

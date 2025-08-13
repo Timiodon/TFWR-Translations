@@ -35,6 +35,7 @@
 @option_tooltip_language = Ändere die Sprache des Spiels.
 @option_tooltip_code_highlights = Schaltet die blinkenden Highlights während der Code-Ausführung aus.
 @option_tooltip_resolution = Ändert die Bildschirmauflösung.
+@option_tooltip_increment_number_effect = Deaktiviere die Effekte im Inventar, die abgespielt werden, wenn sich die Zahlen ändern.
 @keybind_tooltip_indent_selection = Fügt allen ausgewählten Zeilen eine Einrückung hinzu. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Also werden keine Kombinationen mit Strg oder Alt funktionieren.
 @keybind_tooltip_unindent_selection = Entfernt die Einrückung von allen ausgewählten Zeilen. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Also werden keine Kombinationen mit Strg oder Alt funktionieren.
 @keybind_tooltip_menu = Öffnet oder schließt das Hauptmenü.

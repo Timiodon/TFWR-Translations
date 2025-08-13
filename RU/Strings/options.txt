@@ -45,3 +45,4 @@
 @print warnings = Печатать предупреждения
 @code highlights = Подсветка кода
 @resolution = Разрешение
+@increment number effect = Эффект увеличения чисел
