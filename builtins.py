@@ -986,118 +986,48 @@ def change_hat(hat: Hat) -> None:
 
 
 # -------------------------------------------------------------------------------
-def spawn_drone(filename: str) -> int:
+def spawn_drone(filename: str) -> Any:
     """
-    Spawns a new drone at the same position as the drone that ran the `spawn_drone("filename")` command. The new drone will start executing the program in the file named `filename`.
+    Spawns a new drone in the same position as the drone that ran the `spawn_drone(function)` command. The new drone then begins executing the specified function. After it is done, it will disappear automatically.
 
-    returns the drone ID of the new drone.
+    returns the handle of the new drone or `None` if all drones are already spawned.
 
-    takes `200` ticks to execute.
+    takes `200` ticks to execute if a drone was spawned, `1` otherwise.
 
     example:
-    In a file named `farming routine`:
     ```
-    if get_drone_id() == 0:
-        # Only the first drone will run this
-        while num_drones() < max_drones():
-            spawn_drone("farming routine")
-            move(East)`
+    def harvest_column():
+        for _ in range(get_world_size()):
+            harvest()
+            move(North)
 
     while True:
-        if can_harvest():
-            harvest()
-        move(North)
-    ```
-    """
-    ...
-
-
-# -------------------------------------------------------------------------------
-def send(value: Any, receiver_id: int) -> None:
-    """
-    Sends any kind of `value` to the drone with the drone ID that is equal to `receiver_id`.
-
-    returns `None`
-
-    takes ticks equal to the size of the sent `value` to execute.
-
-    example:
-    ```
-    words_to_print = ["These", "are", "some", "words."]
-
-    if get_drone_id() == 0:
-        for word in words_to_print[:-1]:
-            receiver_id = spawn_drone("example")
-            send(word, receiver_id)
-            for _ in range(4):
-                move(East)
-
-        print(words_to_print[-1])
-    else:
-        while True:
-            word = receive(0)
-            if word != None:
-                break
-            
-    print(word)
-    ```
-    """
-    ...
-
-
-# -------------------------------------------------------------------------------
-def receive(sender_id: int = -1) -> Any | None:
-    """
-    Receives the first unreceived message that was sent to this drone by the drone with the `sender_id`.
-    If `sender_id` is `-1`, receives the first unreceived message sent to this drone by any drone.
-
-    returns the sent data
-
-    takes `1` tick to execute.
-
-    example:
-    ```
-    words_to_print = ["These", "are", "some", "words."]
-
-    if get_drone_id() == 0:
-        for word in words_to_print[:-1]:
-            receiver_id = spawn_drone("example")
-            send(word, receiver_id)
-            for _ in range(4):
-                move(East)
-
-        print(words_to_print[-1])
-    else:
-        while True:
-            word = receive(0)
-            if word != None:
-                break
-            
-    print(word)
-    ```
-    """
-    ...
-
-# -------------------------------------------------------------------------------
-def get_drone_id() -> int:
-    """
-    returns the ID of the drone that is running the code.
-
-    takes `1` tick to execute.
-
-    example:
-    In a file named `farming routine`:
-    ```
-    if get_drone_id() == 0:
-        # Only the first drone will run this
-        while num_drones() < max_drones():
-            spawn_drone("farming routine")
+        if spawn_drone(harvest_column):
             move(East)
+    ```
+    """
+    ...
 
-    while True:
-        if can_harvest():
-            harvest()
-        move(North)
+
+# -------------------------------------------------------------------------------
+def wait_for(drone: Any) -> Any:
+    """
+    Waits until the given drone terminates.
+
+    returns the return value of the function that the drone was running.
+
+    takes `1` tick to execute if the awaited drone is already done.
+
+    example:
+    ```
+    def get_entity_type_in_direction(dir):
+        move(dir)
+        return get_entity_type()
+
+    def zero_arg_wrapper():
+        return get_entity_type_in_direction(North)
+    handle = spawn_drone(zero_arg_wrapper)
+    print(wait_for(handle))
     ```
     """
     ...
