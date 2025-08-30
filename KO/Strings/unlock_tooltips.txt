@@ -67,8 +67,6 @@ for item in cost:
 `set_world_size(3)
 set_execution_speed(1)`
 @unlock_descr_grass = 풀의 수확량을 증가시킵니다.
-
-`harvest()`
 @unlock_descr_auto_unlock = 사물을 자동으로 해금합니다.
 
 `unlock(Unlocks.Megafarm)`
@@ -78,7 +76,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = 해바라기와 파워.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = 가장 빠른 초기화 시간 leaderboard에 참여하세요.
+@unlock_descr_leaderboard = 가장 빠른 시간을 겨루는 leaderboard에 참여하세요.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = dictionary와 set에 접근할 수 있게 됩니다.

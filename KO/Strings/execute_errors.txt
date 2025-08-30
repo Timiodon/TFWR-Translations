@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = 드론 한도를 초과했습니다.
 @error_dino_hat_already_used = 공룡 모자는 하나뿐이며 이미 사용 중입니다. 두 번째 드론에는 사용할 수 없습니다.
 @error_invalid_drone_id = ID가 {0}인 드론이 없습니다.
+@error_invalid_handle = {0}은(는) 더 이상 존재하지 않습니다.

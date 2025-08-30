@@ -1,95 +1,102 @@
-# Mega-Farm
-Diese unglaublich mächtige Freischaltung vergrößert die Farm erheblich und gibt dir Zugang zu mehreren Drohnen.
+# Megafarm
+Diese unglaublich mächtige Freischaltung gibt dir Zugriff auf mehrere Drohnen. 
 
-Um die Sache zu vereinfachen, erhältst du für jede neue Drohne immer genau 36 neue Felder. Das Verhältnis von Drohnen zu Feldern bleibt konstant.
+Wie zuvor startest du immer noch mit nur einer Drohne. Zusätzliche Drohnen müssen zuerst gespawnt werden und verschwinden, nachdem das Programm terminiert.
+Jede Drohne führt ihr eigenes separates Programm aus. Neue Drohnen können mit der `spawn_drone(function)`-Funktion gespawnt werden.
 
-## Mehrere Drohnen
-Wie zuvor startest du immer noch mit nur einer Drohne. Zusätzliche Drohnen müssen zuerst gespawnt werden und verschwinden nach Beendigung des Programms.
-Jede Drohne führt ihre eigene separate Programminstanz aus. Drohnen können neue Drohnen spawnen mit
-`new_drone_id = spawn_drone("dateiname")`
+`def drone_function():
+    move(North)
+    do_a_flip()
 
-Dies spawnt eine neue Drohne an derselben Position wie die Drohne, die den Befehl `spawn_drone("dateiname")` ausgeführt hat. Die neue Drohne beginnt mit der Ausführung des Programms in der Datei namens `dateiname`, ersetze also `"dateiname"` durch den Namen der Datei, die du ausführen möchtest.
+spawn_drone(drone_function)`
 
-Du kannst dir das so vorstellen, als ob du deiner Drohne gesagt hättest, sie solle zur Datei `dateiname` gehen und den Ausführen-Button für die nächste Drohne drücken.
+Dies spawnt eine neue Drohne an derselben Position wie die Drohne, die den `spawn_drone(function)`-Befehl ausgeführt hat. Die neue Drohne beginnt dann mit der Ausführung der angegebenen Funktion. Nachdem sie fertig ist, verschwindet sie automatisch.
 
-Drohnen kollidieren nicht miteinander.
+Drohnen kollidieren nicht miteinander. 
 
-Benutze `max_drones()`, um die maximale Anzahl von Drohnen zu erhalten, die gespawnt werden können.
+Benutze `max_drones()`, um die maximale Anzahl an Drohnen zu erhalten, die gespawnt werden können.
 Benutze `num_drones()`, um die Anzahl der Drohnen zu erhalten, die bereits auf der Farm sind.
-Benutze `get_drone_id()`, um herauszufinden, welche Drohne den Code ausführt.
 
-Beispiel:
 
-In einer Datei namens `farming routine`:
-`if get_drone_id() == 0:
-    # Nur die erste Drohne führt dies aus
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
-        move(East)
+## Beispiel:
+`def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
 
 while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+    if spawn_drone(harvest_column):
+        move(East)`
 
-Dies wird dazu führen, dass deine erste Drohne sich horizontal bewegt und mehr Drohnen spawnt. Die gespawnten Drohnen bewegen sich dann vertikal und ernten alles auf ihrem Weg.
+Dies veranlasst deine erste Drohne, sich horizontal zu bewegen und weitere Drohnen zu spawnen. Die gespawnten Drohnen bewegen sich dann vertikal und ernten alles auf ihrem Weg.
 
-<spoiler=Hinweis anzeigen>
-Der einfachste Weg, mehrere Drohnen zu verwenden, besteht darin, deine Farm unter ihnen aufzuteilen. Die Upgrades sind so konzipiert, dass jede Drohne immer ein 6x6 Feld haben kann.
+Wenn alle verfügbaren Drohnen bereits gespawnt wurden, macht `spawn_drone()` nichts und gibt `None` zurück.
+
+<spoiler=zeige Hinweis>Schau dir diese super nützliche parallele `for_all`-Funktion an, die eine beliebige Funktion nimmt und sie auf jedem Farmfeld ausführt. Sie nutzt dafür alle verfügbaren Drohnen.
+
+`def for_all(f):
+	def row():
+		for _ in range(get_world_size()-1):
+			f()
+			move(East)
+		f()
+	for _ in range(get_world_size()):
+		if not spawn_drone(row):
+			row()
+		move(North)
+
+forall(harvest)`
+
+Ein besonders nützliches Muster ist es, eine Drohne zu spawnen, wenn eine verfügbar ist, und es andernfalls selbst zu tun.
+
+`if not spawn_drone(task):
+	task()`
 </spoiler>
 
-Alles, was hierunter folgt, ist ziemlich fortgeschritten und nicht für das grundlegende Farmen erforderlich.
+## Warten auf eine andere Drohne
+Benutze die `wait_for(drone)`-Funktion, um auf eine andere Drohne zu warten, bis sie fertig ist. Du erhältst den `drone`-Handle, wenn du die Drohne spawnst.
+`wait_for(drone)` gibt den Rückgabewert der Funktion zurück, die die andere Drohne ausgeführt hat.
+
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
+
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+drone = spawn_drone(zero_arg_wrapper)
+print(wait_for(drone))`
+
+Beachte, dass das Spawnen von Drohnen Zeit braucht, daher ist es keine gute Idee, für jede Kleinigkeit eine neue Drohne zu spawnen.
+
+## Kein geteilter Speicher
+Jede Drohne hat ihren eigenen Speicher und kann nicht direkt die Globals einer anderen Drohne lesen oder schreiben.
+
+`x = 0
+
+def increment():
+    global x
+    x += 1
+
+wait_for(spawn_drone(increment))
+print(x)`
+
+Dies wird `0` ausgeben, weil die neue Drohne ihre eigene Kopie des globalen `x` erhöht hat, was das `x` der ersten Drohne nicht beeinflusst.
 
 ## Race Conditions
-Mehrere Drohnen können gleichzeitig mit demselben Farmfeld interagieren. Wenn zwei Drohnen während desselben Ticks mit demselben Feld interagieren, geschieht die Aktion der Drohne mit der niedrigeren Drohnen-ID zuerst.
+Mehrere Drohnen können gleichzeitig mit demselben Farmfeld interagieren. Wenn zwei Drohnen während desselben Ticks mit demselben Feld interagieren, finden beide Interaktionen statt, aber die Ergebnisse können sich je nach der Reihenfolge der Interaktionen unterscheiden.
 
-Stell dir zum Beispiel vor, dass die Drohnen `0` und `1` beide über demselben Baum stehen, der fast ausgewachsen ist.
-Drohne `0` ruft auf
+Stell dir zum Beispiel vor, dass die Drohnen `0` und `1` beide über demselben Baum sind, der fast ausgewachsen ist.
+Drohne `0` ruft
 `use_item(Items.Fertilizer)`
-Drohne `1` ruft auf
+Drohne `1` ruft
 `harvest()`
 
-Wenn diese Aktionen gleichzeitig stattfinden, wird der Baum zuerst gedüngt und dann geerntet. In diesem Fall erhältst du Holz davon. Wenn Drohne `1` jedoch etwas schneller ist, wird der Baum geerntet, bevor er gedüngt wird, und du erhältst kein Holz.
-Dies wird als "Race Condition" bezeichnet. Es ist ein häufiges Problem in der parallelen Programmierung, bei dem das Ergebnis von der Reihenfolge abhängt, in der Operationen ausgeführt werden.
+Wenn diese Aktionen gleichzeitig stattfinden, wird der Baum zuerst gedüngt und dann geerntet. In diesem Fall erhältst du Holz davon. Wenn jedoch Drohne `1` etwas schneller ist, wird der Baum geerntet, bevor er gedüngt wird, und du erhältst kein Holz.
+Dies wird als „Race Condition“ bezeichnet. Es ist ein häufiges Problem in der parallelen Programmierung, bei dem das Ergebnis von der Reihenfolge abhängt, in der die Operationen ausgeführt werden.
 
 Hier ist eine weitere problematische Situation, die auftreten kann, wenn mehrere Drohnen denselben Code gleichzeitig an derselben Position ausführen.
 `if get_water() < 0.5:
     use_item(Items.Water)`
 
 Wenn mehrere Drohnen dies gleichzeitig ausführen, führen sie alle die erste Zeile aus, was sie in den `if`-Block bringt. Dann werden sie alle Wasser verwenden und viel davon verschwenden.
-Bis eine Drohne die zweite Zeile erreicht, ist `get_water()` möglicherweise nicht mehr kleiner als `0.5`, weil eine andere Drohne das Feld in der Zwischenzeit bewässert hat.
-
-## Drohnen-Kommunikation
-Wenn du an fortgeschritteneren Strategien interessiert bist, möchtest du vielleicht, dass deine Drohnen miteinander kommunizieren, indem sie Nachrichten-Passing-Funktionen verwenden.
-
-Sende einen beliebigen Wert an eine andere Drohne:
-`send(data, receiver_drone_id)`
-
-Empfange den nächsten von einer beliebigen Drohne gesendeten Wert:
-`data = receive()`
-
-Empfange den nächsten von einer bestimmten Drohne gesendeten Wert:
-`data = receive(sender_drone_id)`
-
-Die Ausführungszeit von `send()` hängt von der Größe der gesendeten Daten ab. Zum Beispiel erfordert das Senden eines großen Dictionarys das Kopieren, was eine Weile dauern kann.
-
-`receive()` wartet nicht auf das Eintreffen einer Nachricht. Wenn noch keine Nachricht gesendet wurde, gibt es `None` zurück.
-
-Du kannst eine Funktion erstellen, die auf eine Nachricht wartet, so:
-`def blocking_receive(sender_drone_id = -1):
-    while True:
-        data = receive(sender_drone_id)
-        if data != None:
-            return data`
-
-Eine nützliche Anwendung des Nachrichtenversands ist es, eine Funktion zu haben, die eine Drohne spawnt und ihr eine auszuführende Funktion sendet.
-In einer Datei namens `drone_spawning`:
-`def run_on_new_drone(f):
-    id = spawn_drone("drone_spawning")
-    send(f, id)
-
-if __name__ == "__main__":
-    f = blocking_receive()
-    f()`
-
-Das Senden von Funktionen auf diese Weise kann sehr langsam sein, da der gesamte erfasste Zustand der Funktion, einschließlich aller globalen Variablen, kopiert werden muss.
+Bis eine Drohne die zweite Zeile erreicht, ist `get_water()` möglicherweise nicht mehr kleiner als `0.5`, weil eine andere Drohne in der Zwischenzeit das Feld bewässert hat.

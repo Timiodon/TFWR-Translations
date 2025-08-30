@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = Das Drohnenlimit wurde überschritten.
 @error_dino_hat_already_used = Es gibt nur einen Dinosaurierhut und er ist bereits in Gebrauch. Du kannst ihn nicht auf einer zweiten Drohne verwenden.
 @error_invalid_drone_id = Es gibt keine Drohne mit der ID {0}.
+@error_invalid_handle = {0} existiert nicht mehr.

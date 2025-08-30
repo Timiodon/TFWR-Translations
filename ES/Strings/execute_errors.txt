@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = Se excedió el límite de drones.
 @error_dino_hat_already_used = Solo hay un sombrero de dinosaurio y ya está en uso. No puedes usarlo en un segundo dron.
 @error_invalid_drone_id = No hay ningún dron con el ID {0}.
+@error_invalid_handle = {0} ya no existe.

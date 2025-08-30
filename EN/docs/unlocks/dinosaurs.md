@@ -30,14 +30,16 @@ length 4 => 16 bones
 length 16 => 256 bones
 length 100 => 10000 bones
 
-The Dinosaur Hat is very heavy, so if you equip it, it will make `move()` take 800 ticks instead of 200. However, each time you pick up an apple, the number of ticks used by `move()` is reduced by 3% (rounded down), because a longer tail can help you move.
+The Dinosaur Hat is very heavy, so if you equip it, it will make `move()` take 400 ticks instead of 200. However, each time you pick up an apple, the number of ticks used by `move()` is reduced by 3% (rounded down), because a longer tail can help you move.
 
 The following loop prints the number of ticks used by `move()` after any number of apples:
 
-`ticks = 800
+`ticks = 400
 for i in range(100):
     print("ticks after ", i, " apples: ", ticks)
     ticks -= ticks * 0.03 // 1`
 
-<spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time, because you will cover every free spot before you get back to where your tail is. It's not very efficient, but it works.
-Odd sized fields can be more difficult. If you have `Unlocks.Debug2` unlocked, you can change the size of the field to something more convenient.</spoiler>
+You only have one dinosaur hat, so only one drone can wear it.
+
+<spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time. It's not very efficient, but it works.
+Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_farm_size()` to change the size of the farm to something more convenient.</spoiler>

@@ -5,10 +5,10 @@
 @warning_no_item_to_use = {0}を使おうとしましたが、十分にありませんでした。
 @warning_failed_swap_wrap = 農場の境界を越えてスワップしようとしました。それは許可されていません。
 @warning_failed_swap_unswappable = スワップできない{0}をスワップしようとしました。
-@warning_weird_substance_not_divisible = 迷路を作るのに必要な数と完全に一致しない数の奇妙な物質を使用しました。迷路のアップグレードに伴い、必要な奇妙な物質の量が増えることを忘れないでください。
+@warning_weird_substance_not_divisible = 迷路の作成に必要な量と正確に一致しない数の奇妙な物質を使用しました。迷路をアップグレードすると、必要な奇妙な物質の量も増えることを忘れないでください。
 
-フルサイズの迷路をスポーンするには：
+フルサイズの迷路をスポーンするには、次のようにします:
 `plant(Entities.Bush)
-substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 @warning_recursive_simulation = シミュレーションとleaderboardの実行は、他のシミュレーションやleaderboardの実行内から開始することはできません。

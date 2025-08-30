@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = O limite de drones foi excedido.
 @error_dino_hat_already_used = Só existe um chapéu de dinossauro e já está a ser usado. Não o podes usar num segundo drone.
 @error_invalid_drone_id = Não existe nenhum drone com o ID {0}.
+@error_invalid_handle = {0} não existe mais.

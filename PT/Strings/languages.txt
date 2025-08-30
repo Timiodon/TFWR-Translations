@@ -6,7 +6,7 @@
 @PT = Português
 @IT = Italiano
 @JA = Japonês
-@ZH = Chinês
+@ZH = Chinês Simplificado
 @KO = Coreano
 @TR = Turco
 @AR = Árabe

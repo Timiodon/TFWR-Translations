@@ -1,7 +1,7 @@
 # Patch Notes
 
 Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
-Also a large part of the tech tree has been experimentally reworked to be more exponential.
+Also a large part of the tech tree has been reworked to be a bit more exponential.
 
 Gameplay:
 -Pumpkins now scale up to 6x6 instead of 5x5.
@@ -9,6 +9,7 @@ Gameplay:
 -The cactus grow time is now always exactly 1 second.
 -Pumpkins now leave behind a dead pumpkin to indicate that they have died.
 -Added `pet_the_piggy()`.
+-`num_unlocked()` now already get's unlocked with Senses.
 
 Visuals:
 -The visuals of the tech tree have been completely reworked.
@@ -26,10 +27,13 @@ Other:
 -`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
 -Added a resolution setting.
 -Added a setting to turn off the flashing highlights when the code is running.
+-The code execution has been optimized further, allowing the game to run smoother while code is running.
 
 Fixes:
 -Some of the most common cases of code highlights being visible through other windows have been fixed.
 -Actions like tilling can no longer affect the water drying behavior.
+-Fixed keybinding problems on non US keyboards.
+-Fixed the piggy bank moving really far away from the farm sometimes.
 
 Breaking Changes from older Patches that you might have missed:
 -Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).

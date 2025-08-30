@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = 超过了无人机数量限制。
 @error_dino_hat_already_used = 只有一个恐龙帽子，而且它已经被使用了。你不能在第二架无人机上使用它。
 @error_invalid_drone_id = 没有 ID 为 {0} 的无人机。
+@error_invalid_handle = {0} 已不存在。

@@ -410,98 +410,38 @@ speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @code_tooltip_spawn_drone = `spawn_drone(filename)`
-Создаёт нового дрона на той же позиции, что и дрон, выполнивший команду `spawn_drone("filename")`. Новый дрон начнёт выполнять программу из файла с именем `filename`.
+Запускает новый дрон на той же позиции, что и дрон, выполнивший команду `spawn_drone(function)`. Новый дрон затем начинает выполнять указанную функцию. После завершения он автоматически исчезнет.
 
-возвращает ID нового дрона.
+возвращает идентификатор нового дрона или `None`, если все дроны уже запущены.
 
-занимает `200` ticks.
+занимает `200` ticks, если дрон был запущен, иначе `1`.
 
 пример:
-В файле с именем `farming routine`:
-`if get_drone_id() == 0:
-    # Только первый дрон выполнит это
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
+`def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
+
+while True:
+    if spawn_drone(harvest_column):
         move(East)`
 
-while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+@code_tooltip_wait_for = `wait_for(drone)`
+Ожидает завершения работы указанного `drone`.
 
-@code_tooltip_send = `send(value, receiver_id)`
+возвращает значение, которое вернула функция, выполнявшаяся `drone`.
 
-Отправляет `value` любого типа дрону с ID, равным `receiver_id`.
-
-возвращает `None`
-
-занимает ticks, равное размеру отправленного `value`.
+занимает `1` tick, если ожидаемый `drone` уже завершил работу.
 
 пример:
-`words_to_print = ["These", "are", "some", "words."]
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
 
-if get_drone_id() == 0:
-    for word in words_to_print[:-1]:
-        receiver_id = spawn_drone("example")
-        send(word, receiver_id)
-        for _ in range(4):
-            move(East)
-
-    print(words_to_print[-1])
-else:
-	while True:
-		word = receive(0)
-		if word != None:
-			break
-	    
-print(word)`
-
-@code_tooltip_receive = `receive(sender_id = -1)`
-
-Получает первое неполученное сообщение, отправленное этому дрону дроном с `sender_id`.
-Если `sender_id` равен `-1`, получает первое неполученное сообщение, отправленное этому дрону любым дроном.
-
-возвращает отправленные данные
-
-занимает `1` tick.
-
-пример:
-`words_to_print = ["These", "are", "some", "words."]
-
-if get_drone_id() == 0:
-    for word in words_to_print[:-1]:
-        receiver_id = spawn_drone("example")
-        send(word, receiver_id)
-        for _ in range(4):
-            move(East)
-
-    print(words_to_print[-1])
-else:
-	while True:
-		word = receive(0)
-		if word != None:
-			break
-	    
-print(word)`
-
-@code_tooltip_get_drone_id = `get_drone_id()`
-
-возвращает ID дрона, который выполняет код.
-
-занимает `1` tick.
-
-пример:
-В файле с именем `farming routine`:
-`if get_drone_id() == 0:
-    # Только первый дрон выполнит это
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
-        move(East)
-
-while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+handle = spawn_drone(zero_arg_wrapper)
+print(wait_for(handle))`
 
 @code_tooltip_max_drones = `max_drones()`
 
@@ -567,11 +507,11 @@ while True:
 пример:
 `min([3,6,34,16])`
 @code_tooltip_abs = `abs(number)`
-Вычисляет абсолютное значение числа.
+Вычисляет абсолютное значение (модуль) числа.
 
-возвращает `number`, если `number` положительное, иначе `-number`.
+возвращает `number`, если `number` положительное, и `-number` в противном случае.
 
-занимает #сравнений ticks.
+занимает 1 tick.
 
 пример:
 `abs(-69)`

@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = Превышен лимит дронов.
 @error_dino_hat_already_used = Есть только одна шляпа динозавра, и она уже используется. Вы не можете использовать её на втором дроне.
 @error_invalid_drone_id = Нет дрона с ID {0}.
+@error_invalid_handle = {0} больше не существует.

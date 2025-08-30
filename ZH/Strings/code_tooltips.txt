@@ -410,95 +410,37 @@ speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @code_tooltip_spawn_drone = `spawn_drone(filename)`
-在运行 `spawn_drone("filename")` 命令的无人机相同位置生成一个新的无人机。新无人机将开始执行名为 `filename` 的文件中的程序。
+在运行 `spawn_drone(function)` 命令的无人机所在位置生成一架新无人机。新的无人机随后开始执行指定的函数。完成后，它将自动消失。
 
-返回新无人机的 ID。
+返回新无人机的 handle，如果所有无人机都已生成，则返回 `None`。
 
-执行需要 `200` ticks。
+如果生成了一架无人机，执行需要 `200` ticks，否则需要 `1` tick。
 
 示例:
-在一个名为 `farming routine` 的文件中：
-`if get_drone_id() == 0:
-    # 只有第一架无人机会运行此代码
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
-        move(East)
+`def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
 
 while True:
-    if can_harvest():
-        harvest()
-    move(North)`
-@code_tooltip_send = `send(value, receiver_id)`
+    if spawn_drone(harvest_column):
+        move(East)`
+@code_tooltip_wait_for = `wait_for(drone)`
+等待直到给定的 `drone` 终止。
 
-将任何类型的 `value` 发送给无人机 ID 等于 `receiver_id` 的无人机。
+返回该 `drone` 正在运行的函数的返回值。
 
-返回 `None`
-
-执行所需的 ticks 数等于发送 `value` 的大小。
+如果等待的 `drone` 已经完成，执行需要 `1` tick。
 
 示例:
-`words_to_print = ["These", "are", "some", "words."]
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
 
-if get_drone_id() == 0:
-    for word in words_to_print[:-1]:
-        receiver_id = spawn_drone("example")
-        send(word, receiver_id)
-        for _ in range(4):
-            move(East)
-
-    print(words_to_print[-1])
-else:
-	while True:
-		word = receive(0)
-		if word != None:
-			break
-	    
-print(word)`
-@code_tooltip_receive = `receive(sender_id = -1)`
-
-接收由 `sender_id` 无人机发送给此无人机的第一个未接收消息。
-如果 `sender_id` 是 `-1`，则接收任何无人机发送给此无人机的第一个未接收消息。
-
-返回发送的数据
-
-执行需要 `1` tick。
-
-示例:
-`words_to_print = ["These", "are", "some", "words."]
-
-if get_drone_id() == 0:
-    for word in words_to_print[:-1]:
-        receiver_id = spawn_drone("example")
-        send(word, receiver_id)
-        for _ in range(4):
-            move(East)
-
-    print(words_to_print[-1])
-else:
-	while True:
-		word = receive(0)
-		if word != None:
-			break
-	    
-print(word)`
-@code_tooltip_get_drone_id = `get_drone_id()`
-
-返回正在运行此代码的无人机的 ID。
-
-执行需要 `1` tick。
-
-示例:
-在一个名为 `farming routine` 的文件中：
-`if get_drone_id() == 0:
-    # 只有第一架无人机会运行此代码
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
-        move(East)
-
-while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+handle = spawn_drone(zero_arg_wrapper)
+print(wait_for(handle))`
 @code_tooltip_max_drones = `max_drones()`
 
 返回你可以在农场中拥有的最大无人机数量。
@@ -560,11 +502,11 @@ while True:
 示例:
 `min([3,6,34,16])`
 @code_tooltip_abs = `abs(number)`
-计算一个数的绝对值。
+计算一个数字的绝对值。
 
-如果 `number` 是正数，则返回 `number`，否则返回 `-number`。
+如果 `number` 是正数，返回 `number`，否则返回 `-number`。
 
-执行需要 #比较次数 ticks。
+执行需要 1 tick。
 
 示例:
 `abs(-69)`

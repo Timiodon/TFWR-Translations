@@ -1,95 +1,102 @@
-# Mega Quinta
-Este unlock incrivelmente poderoso aumenta significativamente o tamanho da quinta e dá-te acesso a múltiplos drones.
+# Mega Fazenda
+Este unlock incrivelmente poderoso te dá acesso a múltiplos drones.
 
-Para facilitar as coisas, recebes sempre exatamente 36 novos quadrados para cada novo drone. A proporção de drones para quadrados permanece constante.
+Como antes, você ainda começa com apenas um drone. Drones adicionais devem primeiro ser criados e desaparecerão após o término do programa.
+Cada drone executa seu próprio programa separado. Novos drones podem ser criados usando a função `spawn_drone(function)`.
 
-## Múltiplos Drones
-Como antes, ainda começas com apenas um drone. Drones adicionais devem primeiro ser criados e desaparecerão após o programa terminar.
-Cada drone executa a sua própria instância de programa separada. Os drones podem criar novos drones usando
-`new_drone_id = spawn_drone("filename")`
+`def drone_function():
+    move(North)
+    do_a_flip()
 
-Isto cria um novo drone na mesma posição do drone que executou o comando `spawn_drone("filename")`. O novo drone começará a executar o programa no ficheiro chamado `filename`, então substitui `"filename"` pelo nome do ficheiro que queres executar.
+spawn_drone(drone_function)`
 
-Podes pensar nisto como se tivesses dito ao teu drone para ir ao ficheiro chamado `filename` e premir o botão de execução para o próximo drone.
+Isso cria um novo drone na mesma posição do drone que executou o comando `spawn_drone(function)`. O novo drone então começa a executar a função especificada. Depois de terminar, ele desaparecerá automaticamente.
 
-Os drones não colidem uns com os outros.
+Drones não colidem uns com os outros.
 
-Usa `max_drones()` para obter o número máximo de drones que podem ser criados.
-Usa `num_drones()` para obter o número de drones que já estão na quinta.
-Usa `get_drone_id()` para descobrir qual drone está a executar o código.
+Use `max_drones()` para obter o número máximo de drones que podem ser criados.
+Use `num_drones()` para obter o número de drones que já estão na fazenda.
 
-Exemplo:
 
-Num ficheiro chamado `rotina de cultivo`:
-`if get_drone_id() == 0:
-    # Apenas o primeiro drone executará isto
-    while num_drones() < max_drones():
-        spawn_drone("rotina de cultivo")
-        move(East)
+## Exemplo:
+`def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
 
 while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+    if spawn_drone(harvest_column):
+        move(East)`
 
-Isto fará com que o teu primeiro drone se mova horizontalmente e crie mais drones. Os drones criados mover-se-ão então verticalmente e colherão tudo no seu caminho.
+Isso fará com que seu primeiro drone se mova horizontalmente e crie mais drones. Os drones criados então se moverão verticalmente e colherão tudo em seu caminho.
 
-<spoiler=mostrar dica>
-A maneira mais fácil de usar múltiplos drones é dividir a tua quinta entre eles. As melhorias são projetadas para que cada drone possa ter sempre um campo de 6x6.
+Se todos os drones disponíveis já tiverem sido criados, `spawn_drone()` não fará nada e retornará `None`.
+
+<spoiler=mostrar dica> Dê uma olhada nesta função paralela super útil `for_all`, que recebe qualquer função e a executa em cada casa da fazenda. Ela faz uso de todos os drones disponíveis para isso.
+
+`def for_all(f):
+	def row():
+		for _ in range(get_world_size()-1):
+			f()
+			move(East)
+			f()
+	for _ in range(get_world_size()):
+		if not spawn_drone(row):
+			row()
+		move(North)
+
+forall(harvest)`
+
+Um padrão particularmente útil é criar um drone se houver um disponível e, caso contrário, fazer você mesmo.
+
+`if not spawn_drone(task):
+	task()`
 </spoiler>
 
-Tudo o que se segue é bastante avançado e não é necessário para o cultivo básico
+## Aguardando Outro Drone
+Use a função `wait_for(drone)` para esperar por outro drone terminar. Você recebe o `drone` handle quando cria o drone.
+`wait_for(drone)` retorna o valor de retorno da função que o outro drone estava executando.
 
-## Race Conditions
-Múltiplos drones podem interagir com o mesmo quadrado da quinta ao mesmo tempo. Se dois drones interagirem com o mesmo quadrado durante o mesmo tick, a ação do drone com o ID de drone mais baixo acontecerá primeiro.
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
 
-Por exemplo, imagina que os drones `0` e `1` estão ambos sobre a mesma árvore que está quase totalmente crescida.
-O Drone `0` chama
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+drone = spawn_drone(zero_arg_wrapper)
+print(wait_for(drone))`
+
+Note que criar drones leva tempo, então não é uma boa ideia criar um novo drone para cada coisinha.
+
+## Sem Memória Compartilhada
+Cada drone tem sua própria memória e não pode ler ou escrever diretamente nos globais de outro drone.
+
+`x = 0
+
+def increment():
+    global x
+    x += 1
+
+wait_for(spawn_drone(increment))
+print(x)`
+
+Isso imprimirá `0` porque o novo drone incrementou sua própria cópia do global `x`, o que não afeta o `x` do primeiro drone.
+
+## Condições de Corrida
+Vários drones podem interagir com a mesma casa da fazenda ao mesmo tempo. Se dois drones interagirem com a mesma casa durante o mesmo tick, ambas as interações ocorrerão, mas os resultados podem diferir com base na ordem das interações.
+
+Por exemplo, imagine que os drones `0` e `1` estão ambos sobre a mesma árvore que está quase totalmente crescida.
+O drone `0` chama
 `use_item(Items.Fertilizer)`
-O Drone `1` chama
+O drone `1` chama
 `harvest()`
 
-Se estas ações ocorrerem ao mesmo tempo, a árvore será primeiro fertilizada e depois colhida. Nesse caso, receberás madeira dela. No entanto, se o Drone `1` for ligeiramente mais rápido, a árvore será colhida antes de ser fertilizada, e não receberás a madeira.
-Isto chama-se uma "race condition". É um problema comum na programação paralela, onde o resultado depende da ordem em que as operações são realizadas.
+Se essas ações ocorrerem ao mesmo tempo, a árvore será primeiro fertilizada e depois colhida. Nesse caso, você receberá madeira dela. No entanto, se o Drone `1` for um pouco mais rápido, a árvore será colhida antes de ser fertilizada, e você não receberá a madeira.
+Isso é chamado de "condição de corrida". É um problema comum em programação paralela, onde o resultado depende da ordem em que as operações são executadas.
 
-Aqui está outra situação problemática que pode acontecer quando múltiplos drones executam o mesmo código simultaneamente na mesma posição.
+Aqui está outra situação problemática que pode acontecer quando vários drones executam o mesmo código simultaneamente na mesma posição.
 `if get_water() < 0.5:
     use_item(Items.Water)`
 
-Se múltiplos drones executarem isto simultaneamente, todos eles executarão a primeira linha, o que os coloca no bloco `if`. Depois, todos eles usarão água, desperdiçando muita dela.
-Quando um drone chega à segunda linha, `get_water()` pode já não ser inferior a `0.5` porque outro drone regou o quadrado entretanto.
-
-## Comunicação entre Drones
-Se estiveres interessado em estratégias mais avançadas, talvez queiras que os teus drones comuniquem entre si usando funções de passagem de mensagens.
-
-Envia qualquer valor para outro drone:
-`send(data, receiver_drone_id)`
-
-Recebe o próximo valor enviado por qualquer drone:
-`data = receive()`
-
-Recebe o próximo valor enviado por um drone específico:
-`data = receive(sender_drone_id)`
-
-O tempo de execução de `send()` depende do tamanho dos dados enviados. Por exemplo, enviar um dictionary grande requer cópia, o que pode demorar um pouco.
-
-`receive()` não espera que uma mensagem chegue. Se nenhuma mensagem tiver sido enviada ainda, retornará `None`.
-
-Podes construir uma função que espera por uma mensagem assim:
-`def blocking_receive(sender_drone_id = -1):
-    while True:
-        data = receive(sender_drone_id)
-        if data != None:
-            return data`
-
-Uma aplicação útil da passagem de mensagens é ter uma função que cria um drone e lhe envia uma função para executar.
-Num ficheiro chamado `drone_spawning`:
-`def run_on_new_drone(f):
-    id = spawn_drone("drone_spawning")
-    send(f, id)
-
-if __name__ == "__main__":
-    f = blocking_receive()
-    f()`
-
-Enviar funções assim pode ser muito lento porque todo o estado capturado da função, incluindo todas as variáveis globais, tem de ser copiado.
+Se vários drones executarem isso simultaneamente, todos eles executarão a primeira linha, o que os coloca dentro do bloco `if`. Então, todos eles usarão água, desperdiçando muita.
+No momento em que um drone chega à segunda linha, `get_water()` pode não ser mais menor que `0.5` porque outro drone regou a casa nesse meio tempo.

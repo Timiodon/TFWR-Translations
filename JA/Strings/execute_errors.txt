@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = ドローンの上限を超えました。
 @error_dino_hat_already_used = 恐竜の帽子は1つしかなく、すでに使用されています。2体目のドローンで使用することはできません。
 @error_invalid_drone_id = ID {0} のドローンは存在しません。
+@error_invalid_handle = {0}はもう存在しません。

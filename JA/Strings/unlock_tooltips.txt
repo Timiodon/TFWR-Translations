@@ -67,8 +67,6 @@ for item in cost:
 `set_world_size(3)
 set_execution_speed(1)`
 @unlock_descr_grass = 草の収穫量を増やします。
-
-`harvest()`
 @unlock_descr_auto_unlock = 物事を自動的にアンロックします。
 
 `unlock(Unlocks.Megafarm)`
@@ -78,7 +76,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = ヒマワリとパワー。
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = 最速リセットタイムのleaderboardに参加します。
+@unlock_descr_leaderboard = 最速タイムのleaderboardに参加しましょう。
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = dictionariesとsetsへのアクセスを取得します。

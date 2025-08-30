@@ -1,95 +1,102 @@
 # 超级农场
-这个极其强大的解锁项会显著增加农场大小，并让你能使用多架无人机。
+这个极其强大的解锁让你能够使用多架无人机。 
 
-为了让事情更简单，你每增加一架新无人机，总会得到正好36个新地块。无人机与地块的比例保持不变。
-
-## 多架无人机
 和以前一样，你仍然只从一架无人机开始。额外的无人机必须先被生成，并且在程序终止后会消失。
-每架无人机都运行自己独立的程序实例。无人机可以使用以下命令生成新的无人机：
-`new_drone_id = spawn_drone("filename")`
+每架无人机运行自己独立的程序。可以使用 `spawn_drone(function)` 函数来生成新的无人机。
 
-这会在运行 `spawn_drone("filename")` 命令的无人机相同位置生成一架新无人机。新无人机将开始执行名为 `filename` 的文件中的程序，所以请用你想要运行的文件名替换 `"filename"`。
+`def drone_function():
+    move(North)
+    do_a_flip()
 
-你可以把这想象成你告诉你的无人机去名为 `filename` 的文件，然后为下一架无人机按下执行按钮。
+spawn_drone(drone_function)`
 
-无人机之间不会相互碰撞。
+这会在运行 `spawn_drone(function)` 命令的无人机所在位置生成一架新无人机。新的无人机随后开始执行指定的函数。完成后，它将自动消失。
 
-使用 `max_drones()` 来获取可以生成的最大无人机数量。
-使用 `num_drones()` 来获取农场上已有的无人机数量。
-使用 `get_drone_id()` 来找出是哪架无人机在运行代码。
+无人机之间不会互相碰撞。 
 
-示例：
+使用 `max_drones()` 获取可以生成的最大无人机数量。
+使用 `num_drones()` 获取农场上已有的无人机数量。
 
-在一个名为 `farming routine` 的文件中：
-`if get_drone_id() == 0:
-    # 只有第一架无人机会运行此代码
-    while num_drones() < max_drones():
-        spawn_drone("farming routine")
-        move(East)
+
+## 示例:
+`def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
 
 while True:
-    if can_harvest():
-        harvest()
-    move(North)`
+    if spawn_drone(harvest_column):
+        move(East)`
 
-这将导致你的第一架无人机水平移动并生成更多无人机。生成的无人机随后将垂直移动并收获其路径上的一切。
+这将使你的第一架无人机水平移动并生成更多无人机。生成的无人机随后将垂直移动并收获其路径上的一切。
 
-<spoiler=显示提示>
-使用多架无人机最简单的方法是在它们之间划分你的农场。升级项的设计使得每架无人机总能拥有一个 6x6 的田地。
+如果所有可用的无人机都已生成，`spawn_drone()` 将什么也不做并返回 `None`。
+
+<spoiler=显示提示> 看看这个超级有用的并行 `for_all` 函数，它接受任何函数并在每个农场地块上运行它。它会利用所有可用的无人机来做到这一点。
+
+`def for_all(f):
+	def row():
+		for _ in range(get_world_size()-1):
+			f()
+			move(East)
+		f()
+	for _ in range(get_world_size()):
+		if not spawn_drone(row):
+			row()
+		move(North)
+
+forall(harvest)`
+
+一个特别有用的模式是，如果有一架无人机可用就生成它，否则就自己做。
+
+`if not spawn_drone(task):
+	task()`
 </spoiler>
 
-以下内容相当高级，对于基础的耕作不是必需的
+## 等待另一架无人机
+使用 `wait_for(drone)` 函数来等待另一架无人机完成。你在生成无人机时会收到 `drone` handle。
+`wait_for(drone)` 返回另一架无人机正在运行的函数的返回值。
 
-## 竞争条件
-多架无人机可以同时与同一个农场地块互动。如果两架无人机在完全相同的 tick 与同一个地块互动，无人机 ID 较低的无人机的动作将首先发生。
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
 
-例如，想象无人机 `0` 和 `1` 都在同一棵几乎完全长成的树上。
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+drone = spawn_drone(zero_arg_wrapper)
+print(wait_for(drone))`
+
+请注意，生成无人机需要时间，所以为每件小事都生成一架新无人机不是个好主意。
+
+## 无共享内存
+每架无人机都有自己的内存，不能直接读取或写入另一架无人机的全局变量。
+
+`x = 0
+
+def increment():
+    global x
+    x += 1
+
+wait_for(spawn_drone(increment))
+print(x)`
+
+这将打印 `0`，因为新的无人机递增了它自己的全局 `x` 的副本，这不影响第一架无人机的 `x`。
+
+## Race Conditions
+多架无人机可以同时与同一个农场地块互动。如果两架无人机在同一个 tick 内与同一个地块互动，两个互动都会发生，但结果可能会因互动的顺序而异。
+
+例如，想象一下无人机 `0` 和 `1` 都在同一棵快要成熟的树上。
 无人机 `0` 调用
 `use_item(Items.Fertilizer)`
 无人机 `1` 调用
 `harvest()`
 
-如果这些动作同时发生，树将首先被施肥然后被收获。在这种情况下，你将从中获得木材。但是，如果无人机 `1` 稍快一些，树将在施肥前被收获，你就不会获得木材。
-这被称为“竞争条件”。这是并行编程中的一个常见问题，即结果取决于操作执行的顺序。
+如果这些动作同时发生，树会先被施肥然后被收获。在这种情况下，你会从中获得木头。然而，如果无人机 `1` 稍快一些，树会在施肥前被收获，你就不会获得木头。
+这被称为“race condition”。这是并行编程中的一个常见问题，其结果取决于操作执行的顺序。
 
-当多架无人机在同一位置同时运行相同代码时，可能会发生另一个问题情况。
+这是另一个可能发生的问题情况，当多架无人机在同一位置同时运行相同的代码时。
 `if get_water() < 0.5:
     use_item(Items.Water)`
 
-如果多架无人机同时运行这段代码，它们都将运行第一行，这会将它们放入 `if` 代码块中。然后，它们都会使用水，从而浪费大量的水。
-当一架无人机到达第二行时，`get_water()` 可能已经不再小于 `0.5`，因为另一架无人机在此期间已经给地块浇了水。
-
-## 无人机通信
-如果你对更高级的策略感兴趣，你可能希望你的无人机使用消息传递函数相互通信。
-
-向另一架无人机发送任何值：
-`send(data, receiver_drone_id)`
-
-接收任何无人机发送的下一个值：
-`data = receive()`
-
-接收特定无人机发送的下一个值：
-`data = receive(sender_drone_id)`
-
-`send()` 的执行时间取决于发送数据的大小。例如，发送一个大的 dictionary 需要复制，这可能需要一些时间。
-
-`receive()` 不会等待消息到达。如果还没有发送任何消息，它将返回 `None`。
-
-你可以像这样构建一个等待消息的函数：
-`def blocking_receive(sender_drone_id = -1):
-    while True:
-        data = receive(sender_drone_id)
-        if data != None:
-            return data`
-
-传递消息的一个有用应用是拥有一个函数，该函数生成一架无人机并向其发送一个要执行的函数。
-在一个名为 `drone_spawning` 的文件中：
-`def run_on_new_drone(f):
-    id = spawn_drone("drone_spawning")
-    send(f, id)
-
-if __name__ == "__main__":
-    f = blocking_receive()
-    f()`
-
-像那样发送函数可能非常慢，因为函数所有捕获的状态，包括所有全局变量，都必须被复制。
+如果多架无人机同时运行这段代码，它们都会运行第一行，这会使它们都进入 `if` 块。然后，它们都会使用水，从而浪费大量的水。
+当一架无人机到达第二行时，`get_water()` 可能已经不再小于 `0.5` 了，因为在此期间另一架无人机已经给地块浇了水。

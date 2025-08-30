@@ -5,10 +5,10 @@
 @warning_no_item_to_use = Intenté usar {0} pero no tenía suficiente.
 @warning_failed_swap_wrap = Se intentó hacer un intercambio fuera de los límites de la granja. Eso no está permitido.
 @warning_failed_swap_unswappable = Se intentó intercambiar {0}, lo cual no se puede intercambiar.
-@warning_weird_substance_not_divisible = Usaste una cantidad de Sustancia Extraña que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad de Sustancia Extraña requerida aumenta a medida que mejoras el laberinto.
+@warning_weird_substance_not_divisible = Usaste una cantidad de Weird Substance que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad de Weird Substance requerida aumenta a medida que mejoras el laberinto.
 
 Para generar un laberinto de tamaño completo, haz:
 `plant(Entities.Bush)
-substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 @warning_recursive_simulation = Las simulaciones y las carreras de leaderboard no se pueden iniciar desde dentro de otras simulaciones y carreras de leaderboard.

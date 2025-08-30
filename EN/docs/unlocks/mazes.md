@@ -5,8 +5,8 @@ Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n
 So to make a full field maze:
 
 `plant(Entities.Bush)
-n_substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
-use_item(Items.Weird_Substance, n_substance)`
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
 
 
 For some reason the drone can't fly over the hedges, even though they don't look that high.

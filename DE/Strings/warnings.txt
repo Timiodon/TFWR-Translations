@@ -5,10 +5,10 @@
 @warning_no_item_to_use = Versucht, {0} zu benutzen, aber du hattest nicht genug davon.
 @warning_failed_swap_wrap = Versucht, einen Tausch über die Farmgrenzen hinweg durchzuführen. Das ist nicht erlaubt.
 @warning_failed_swap_unswappable = Versucht, {0} zu tauschen, was nicht getauscht werden kann.
-@warning_weird_substance_not_divisible = Du hast eine Anzahl von seltsamer Substanz verwendet, die nicht genau der Anzahl entspricht, die zur Erstellung des Labyrinths benötigt wird. Vergiss nicht, dass die erforderliche Menge an seltsamer Substanz mit dem Upgrade des Labyrinths steigt.
+@warning_weird_substance_not_divisible = Du hast eine Menge an seltsamer Substanz verwendet, die nicht genau der Menge entspricht, die zum Erstellen des Labyrinths benötigt wird. Vergiss nicht, dass die benötigte Menge an seltsamer Substanz mit jedem Upgrade des Labyrinths steigt.
 
-Um ein Labyrinth voller Größe zu erzeugen, tue:
+Um ein Labyrinth in voller Größe zu erzeugen:
 `plant(Entities.Bush)
-substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 @warning_recursive_simulation = Simulationen und Leaderboard-Läufe können nicht innerhalb anderer Simulationen und Leaderboard-Läufe gestartet werden.

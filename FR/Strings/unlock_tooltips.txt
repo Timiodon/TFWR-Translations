@@ -67,8 +67,6 @@ for item in cost:
 `set_world_size(3)
 set_execution_speed(1)`
 @unlock_descr_grass = Augmente le rendement de l'herbe.
-
-`harvest()`
 @unlock_descr_auto_unlock = Débloque des choses automatiquement.
 
 `unlock(Unlocks.Megafarm)`
@@ -78,7 +76,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = Tournesols et Puissance.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Rejoins le leaderboard pour le temps de réinitialisation le plus rapide.
+@unlock_descr_leaderboard = Rejoins le leaderboard pour les meilleurs temps.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = Obtiens l'accès aux dictionnaires et aux ensembles.

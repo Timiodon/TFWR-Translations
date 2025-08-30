@@ -72,3 +72,4 @@ x += 1`
 @error_max_drones_reached = The drone limit was exceeded.
 @error_dino_hat_already_used = There is only one dinosaur hat and it's already in use. You can't use it on a second drone.
 @error_invalid_drone_id = There is no drone with ID {0}.
+@error_invalid_handle = {0} no longer exists.

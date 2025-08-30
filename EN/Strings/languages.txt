@@ -6,7 +6,7 @@
 @PT = Protuguese
 @IT = Italian
 @JA = Japanese
-@ZH = Chinese
+@ZH = Simplified Chinese
 @KO = Korean
 @TR = Turkish
 @AR = Arabic

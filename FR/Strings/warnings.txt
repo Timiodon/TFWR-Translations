@@ -5,10 +5,10 @@
 @warning_no_item_to_use = Tentative d'utiliser {0} mais n'en avait pas assez.
 @warning_failed_swap_wrap = Tentative de faire un échange au-delà des limites de la ferme. Ce n'est pas autorisé.
 @warning_failed_swap_unswappable = Tentative d'échanger {0}, qui ne peut pas être échangé.
-@warning_weird_substance_not_divisible = Tu as utilisé une quantité de Substance Étrange qui n'est pas exactement le nombre nécessaire pour créer le labyrinthe. N'oublie pas que la quantité de Substance Étrange requise augmente à mesure que tu améliores le labyrinthe.
+@warning_weird_substance_not_divisible = Tu as utilisé une quantité de substance étrange qui n'est pas exactement celle requise pour créer le labyrinthe. N'oublie pas que la quantité de substance étrange nécessaire augmente à mesure que tu améliores le labyrinthe.
 
-Pour faire apparaître un labyrinthe de taille normale, fais :
+Pour faire apparaître un labyrinthe de taille maximale :
 `plant(Entities.Bush)
-substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 @warning_recursive_simulation = Les simulations et les courses de leaderboard ne peuvent pas être démarrées depuis d'autres simulations et courses de leaderboard.
