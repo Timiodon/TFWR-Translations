@@ -45,7 +45,7 @@ If all available drones have already been spawned, `spawn_drone()` will do nothi
 			row()
 		move(North)
 
-forall(harvest)`
+for_all(harvest)`
 
 One particularly useful pattern is to spawn a drone if one is available and otherwise do it yourself.
 

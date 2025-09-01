@@ -13,6 +13,10 @@ Gameplay:
 -Added `pet_the_piggy()`.
 -`num_unlocked()` now already get's unlocked with Senses.
 
+Audio:
+-The audio has been completely remade.
+-There is music when you start the game now!
+
 Visuals:
 -The visuals of the tech tree have been completely reworked.
 -The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
