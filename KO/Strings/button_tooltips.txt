@@ -51,3 +51,4 @@
 @keybind_tooltip_stop_execution = 실행을 중지합니다.
 @keybind_tooltip_next_step = 실행이 일시정지된 경우 한 단계 실행합니다.
 @keybind_tooltip_pause_execution = 실행을 일시정지합니다.
+@keybind_tooltip_hide_UI = HUD를 숨기거나 표시합니다.

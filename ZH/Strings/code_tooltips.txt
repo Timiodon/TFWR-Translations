@@ -60,6 +60,16 @@ for i in range(10, 0, -1):
 
 示例:
 `move(North)`
+@code_tooltip_can_move() = `can_move(direction)`
+检查无人机是否可以向指定的 `direction` 移动。
+
+如果无人机可以移动，则返回 `True`，否则返回 `False`。
+
+执行需要 `1` tick。
+
+示例:
+`if can_move(North):
+    move(North)`
 @code_tooltip_swap = `swap(direction)`
 将无人机下方的 entity 与指定 `direction` 的相邻 entity 交换。
 不适用于所有 entity。

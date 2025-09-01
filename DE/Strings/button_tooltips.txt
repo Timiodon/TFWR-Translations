@@ -51,3 +51,4 @@
 @keybind_tooltip_stop_execution = Stoppt die Ausführung.
 @keybind_tooltip_next_step = Führe einen Schritt aus, wenn die Ausführung pausiert ist.
 @keybind_tooltip_pause_execution = Pausiere die Ausführung.
+@keybind_tooltip_hide_UI = Blende das HUD ein oder aus.

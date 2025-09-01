@@ -60,6 +60,16 @@ zajmuje `200` ticks, jeśli dron się poruszył, w przeciwnym razie `1` tick.
 
 przykład:
 `move(North)`
+@code_tooltip_can_move() = `can_move(direction)`
+Sprawdza, czy dron może poruszyć się w określonym `direction`.
+
+zwraca `True`, jeśli dron może się poruszyć, w przeciwnym razie `False`.
+
+zajmuje `1` tick.
+
+przykład:
+`if can_move(North):
+    move(North)`
 @code_tooltip_swap = `swap(direction)`
 Zamienia entity pod dronem z entity obok drona w określonym `direction`.
 Nie działa na wszystkich entity.

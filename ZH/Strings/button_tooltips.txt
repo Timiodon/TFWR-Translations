@@ -51,3 +51,4 @@
 @keybind_tooltip_stop_execution = 停止执行。
 @keybind_tooltip_next_step = 如果执行已暂停，则执行单步操作。
 @keybind_tooltip_pause_execution = 暂停执行。
+@keybind_tooltip_hide_UI = 显示或隐藏 HUD。

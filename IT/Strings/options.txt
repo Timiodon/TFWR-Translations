@@ -46,3 +46,4 @@
 @code highlights = Evidenziazione codice
 @resolution = Risoluzione
 @increment number effect = Effetto Incremento Numeri
+@hide UI = Alterna HUD

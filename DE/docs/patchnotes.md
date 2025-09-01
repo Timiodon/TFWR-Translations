@@ -4,6 +4,8 @@ Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock
 Also a large part of the tech tree has been reworked to be a bit more exponential.
 
 Gameplay:
+-Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
+-There is now a `can_move()` function for the maze.
 -Pumpkins now scale up to 6x6 instead of 5x5.
 -The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
 -The cactus grow time is now always exactly 1 second.
@@ -28,6 +30,7 @@ Other:
 -Added a resolution setting.
 -Added a setting to turn off the flashing highlights when the code is running.
 -The code execution has been optimized further, allowing the game to run smoother while code is running.
+-Added a "Toggle HUD" keybind.
 
 Fixes:
 -Some of the most common cases of code highlights being visible through other windows have been fixed.

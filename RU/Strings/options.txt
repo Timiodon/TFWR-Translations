@@ -46,3 +46,4 @@
 @code highlights = Подсветка кода
 @resolution = Разрешение
 @increment number effect = Эффект увеличения чисел
+@hide UI = Переключить HUD

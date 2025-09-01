@@ -46,3 +46,4 @@
 @code highlights = 코드 하이라이트
 @resolution = 해상도
 @increment number effect = 숫자 변경 효과
+@hide UI = HUD 켜기/끄기

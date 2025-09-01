@@ -60,6 +60,16 @@ for i in range(10, 0, -1):
 
 пример:
 `move(North)`
+@code_tooltip_can_move() = `can_move(direction)`
+Проверяет, может ли дрон двигаться в указанном `direction`.
+
+возвращает `True`, если дрон может двигаться, иначе `False`.
+
+занимает `1` tick.
+
+пример:
+`if can_move(North):
+    move(North)`
 @code_tooltip_swap = `swap(direction)`
 Меняет местами entity под дроном с entity рядом с дроном в указанном `direction`.
 Работает не со всеми entity.

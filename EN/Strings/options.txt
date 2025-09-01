@@ -46,3 +46,4 @@
 @code highlights = Code highlights
 @resolution = Resolution
 @increment number effect = Increment Number Effect
+@hide UI = Toggle HUD

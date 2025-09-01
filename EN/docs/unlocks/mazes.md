@@ -22,14 +22,15 @@ Mazes do not contain any loops unless you reuse the maze (see below how to reuse
 You can check if there is a wall by trying to move through it. 
 `move()` returns `True` if it succeeded and `False` otherwise.
 
+`can_move()` can be used to check if there is a wall without moving.
+
 If you have no idea how to get to the treasure, take a look at Hint 1. It shows you how to approach a problem like this.
 
+Using `measure()` anywhere in the maze returns the position of the treasure.
+`x, y = measure()`
 
 For an extra challenge you can also reuse the maze by using the same amount of `Items.Weird_Substance` on the treasure again. 
 This will increase the amount of gold in the treasure by one full maze and move it to a random position in the maze.
-
-Using `measure()` on a treasure returns the position, that it will move to, as a tuple.
-`next_x, next_y = measure()`
 
 Each time the treasure is moved, a random wall may be removed from the maze. So reused mazes can contain loops.
 

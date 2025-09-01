@@ -51,3 +51,4 @@
 @keybind_tooltip_stop_execution = Останавливает выполнение.
 @keybind_tooltip_next_step = Выполнить один шаг, если выполнение на паузе.
 @keybind_tooltip_pause_execution = Поставить выполнение на паузу.
+@keybind_tooltip_hide_UI = Скрыть или показать интерфейс.

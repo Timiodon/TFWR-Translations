@@ -60,6 +60,16 @@ prend `200` ticks pour s'exécuter si le drone s'est déplacé, `1` tick sinon.
 
 exemple :
 `move(North)`
+@code_tooltip_can_move() = `can_move(direction)`
+Vérifie si le drone peut se déplacer dans la `direction` spécifiée.
+
+retourne `True` si le drone peut se déplacer, `False` sinon.
+
+prend `1` tick pour s'exécuter.
+
+exemple :
+`if can_move(North):
+    move(North)`
 @code_tooltip_swap = `swap(direction)`
 Échange l'entité sous le drone avec l'entité adjacente dans la `direction` spécifiée.
 Ne fonctionne pas sur toutes les entités.

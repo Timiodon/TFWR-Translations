@@ -60,6 +60,16 @@ for i in range(10, 0, -1):
 
 例:
 `move(North)`
+@code_tooltip_can_move() = `can_move(direction)`
+ドローンが指定された`direction`に移動できるか確認します。
+
+ドローンが移動できる場合は`True`を、そうでない場合は`False`を返します。
+
+実行に`1` tickかかります。
+
+例:
+`if can_move(North):
+    move(North)`
 @code_tooltip_swap = `swap(direction)`
 ドローンの下のentityと、指定された`direction`の隣にあるentityを入れ替えます。
 すべてのentityで機能するわけではありません。

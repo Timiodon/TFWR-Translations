@@ -407,6 +407,23 @@ def move(direction: Direction) -> bool:
     """
     ...
 
+# -------------------------------------------------------------------------------
+def can_move(direction: Direction) -> bool:
+    """
+    Checks if the drone can move in the specified `direction`.
+
+    returns `True` if the drone can move, `False` otherwise.
+
+    takes `1` tick to execute.
+
+    example usage:
+    ```
+    if can_move(North):
+        move(North)
+    ```
+    """
+    ...
+
 
 # -------------------------------------------------------------------------------
 def swap(direction: Direction) -> bool:
