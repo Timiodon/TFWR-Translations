@@ -5,6 +5,6 @@
 Desenvolvido por Timon Herzog
 
 
-Contribuidores da Tradução:
+Contribuidores de Tradução:
 
 Davide Altamura

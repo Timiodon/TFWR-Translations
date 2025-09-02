@@ -7,6 +7,6 @@
 @save = Sauvegarder
 @don't save = Ne pas sauvegarder
 @popup_warning_corrupted_save = Il semble y avoir eu un problème lors du chargement de {0}. Consulte la section sur les sauvegardes pour plus d'informations.
-@popup_warning_failed_read_save = Échec de la lecture des fichiers de sauvegarde de {0}. Assure-toi de fermer tous les autres programmes accédant aux fichiers et réessaye.
-@popup_warning_failed_write_save = Échec de l'écriture dans les fichiers de sauvegarde de {0}. Assure-toi de fermer tous les autres programmes accédant aux fichiers et réessaye.
+@popup_warning_failed_read_save = Échec de la lecture des fichiers de sauvegarde de {0}. Assure-toi de fermer tous les autres programmes accédant aux fichiers et réessaie.
+@popup_warning_failed_write_save = Échec de l'écriture dans les fichiers de sauvegarde de {0}. Assure-toi de fermer tous les autres programmes accédant aux fichiers et réessaie.
 @ok = ok

@@ -1,6 +1,6 @@
 @word_number = liczba
 @word_direction = kierunek
-@run_cancelled = Uruchomienie nie powiodło się
+@run_cancelled = Uruchomienie nieudane
 @average_text = {0} Ukończono ({2:F1}%)
 {1}
-@unlocked_in = Aby uzyskać więcej powiązanych informacji, zobacz: [{0}]({1})
+@unlocked_in = Więcej powiązanych informacji znajdziesz w: [{0}]({1})

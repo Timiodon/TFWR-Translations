@@ -1,13 +1,13 @@
 @item_tooltip_template_amount = Du hast {0}
 @item_descr_carrot = Erhältlich durch das Ernten von Karotten.
-@item_descr_fertilizer = Rufe `use_item(Items.Fertilizer)` auf, um sofort 2s von der verbleibenden Wachstumszeit der Pflanze zu entfernen.
+@item_descr_fertilizer = Rufe `use_item(Items.Fertilizer)` auf, um sofort 2s von der verbleibenden Wachstumszeit der Pflanzen zu entfernen.
 @item_descr_weird_substance = Rufe `use_item(Items.Weird_Substance)` bei einem Busch auf, um ein Labyrinth wachsen zu lassen, oder bei anderen Pflanzen, um ihren Infektionsstatus umzuschalten. Erhältlich von infizierten Pflanzen. Das Düngen von Pflanzen infiziert sie.
-@item_descr_gold = In Schatztruhen in Labyrinthen gefunden.
+@item_descr_gold = Gefunden in Schatztruhen in Labyrinthen.
 @item_descr_hay = Erhältlich durch das Mähen von Gras.
 @item_descr_piggy = Dieses Item wurde aus dem Spiel entfernt.
 @item_descr_power = Erhältlich durch das Ernten von Sonnenblumen. Die Drohne verwendet dies automatisch, um sich doppelt so schnell zu bewegen.
 @item_descr_pumpkin = Erhältlich durch das Ernten von Kürbissen.
-@item_descr_water = Wird verwendet, um den Boden durch den Aufruf von `use_item(Items.Water)` zu bewässern.
+@item_descr_water = Wird verwendet, um den Boden zu bewässern, indem `use_item(Items.Water)` aufgerufen wird.
 @item_descr_wood = Erhältlich von Büschen und Bäumen.
 @item_descr_cactus = Erhältlich durch das Ernten von sortierten Kakteen.
 @item_descr_cactus_seed = Dieses Item wurde aus dem Spiel entfernt.

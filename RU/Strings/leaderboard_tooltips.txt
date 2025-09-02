@@ -1,4 +1,4 @@
-@lb_descr_fastest_reset = Полностью автоматизируйте всю игру.
+@lb_descr_fastest_reset = Полностью автоматизировать всю игру.
 @lb_descr_maze = Собрать 300000 золота.
 @lb_descr_dinosaur = Собрать 98010 костей.
 @lb_descr_cactus = Собрать 100000 кактусов.
@@ -7,4 +7,4 @@
 @lb_descr_hay = Собрать 100000 сена.
 @lb_descr_wood = Собрать 100000 древесины.
 @lb_descr_carrots = Собрать 100000 моркови.
-@lb_descr_polyculture = Собрать по 100000 сена, древесины и моркови.
+@lb_descr_polyculture = Собрать 100000 сена, древесины и моркови.

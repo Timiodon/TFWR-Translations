@@ -11,7 +11,7 @@
 @unlocks = Freischaltungen
 @farm = Farm
 @unlocked = Freigeschaltet
-@upgrade = Verbessern
+@upgrade = Upgrade
 @max_level = Max Level
 @unlock = Freischalten
 @locked = Gesperrt

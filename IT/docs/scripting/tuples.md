@@ -16,7 +16,7 @@ Le tuple possono essere indicizzate come le liste, ma sono immutabili e non poss
 stampa `2`
 
 `tuple[0] = 3`
-genera un error
+genera un errore
 <unlock=dicts>
 A differenza delle liste, le tuple possono essere usate come chiavi nei dizionari.
 
@@ -25,7 +25,7 @@ A differenza delle liste, le tuple possono essere usate come chiavi nei dizionar
 print(d[(1,2)])`
 `stampa` (4,5)</unlock>
 
-Possono anche essere utili per restituire più valori da una funzione.
+Possono anche essere utili per restituire valori multipli da una funzione.
 
 `def f():
     return 1, 2

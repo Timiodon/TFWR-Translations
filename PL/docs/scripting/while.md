@@ -4,7 +4,7 @@ Odblokowałeś pętlę `while` oraz wartości `True` i `False`. Pętla `while` w
 `while warunek:
 	#ciało pętli`
 
-Nie martw się o tworzenie nieskończonych pętli. Opóźnienia w wykonaniu zapobiegną zawieszeniu się programu.
+Nie martw się o tworzenie pętli nieskończonych. Opóźnienia w wykonywaniu programu zapobiegną jego zawieszeniu.
 
 ## Dla początkujących
 Być może próbowałeś już umieścić kilka wywołań `harvest()` pod rząd:
@@ -13,15 +13,15 @@ Być może próbowałeś już umieścić kilka wywołań `harvest()` pod rząd:
 harvest()
 harvest()`
 
-Pozwala to na zbieranie plonów kilka razy w jednym uruchomieniu programu.
-Jednak fajnie byłoby zbierać plony więcej niż trzy razy, a pisanie tego samego kodu wielokrotnie jest złą praktyką.
-Rozwiązaniem jest pętla.
+Pozwala to na zebranie plonów kilka razy w jednym uruchomieniu programu. 
+Jednakże, dobrze byłoby zebrać więcej niż trzy razy, a pisanie tego samego kodu wielokrotnie jest złą praktyką. 
+Rozwiązaniem jest pętla. 
 Pętla pozwala na wielokrotne uruchamianie tego samego kodu.
 
-Pętla while przyjmuje warunek, który jest wartością logiczną, która może być tylko w jednym z dwóch stanów: `True` lub `False`.
-Taka wartość nazywana jest wartością logiczną (Boolean).
+Pętla while przyjmuje warunek, który jest wartością logiczną mogącą przyjąć tylko jeden z dwóch stanów: `True` lub `False`. 
+Taka wartość nazywana jest wartością boolowską.
 
-Pętla następnie wykonuje kod wewnątrz pętli, dopóki warunek nie jest Fałszywy.
+Pętla wykonuje kod wewnątrz pętli, dopóki warunek nie stanie się `False`.
 Pętla while wygląda tak:
 
 `while warunek:
@@ -29,28 +29,28 @@ Pętla while wygląda tak:
 	#ciało pętli
 	#...`
 	
-Gdzie musisz zastąpić „warunek” wartością logiczną, a `#ciało pętli` tym, co chcesz robić w pętli.
+Gdzie musisz zastąpić „warunek” wartością boolowską, a „#ciało pętli” tym, co chcesz robić w pętli.
 
-Dostępne są dwie stałe wartości logiczne. Stałe to wartości, które nigdy się nie zmieniają podczas działania programu.
+Dostępne są dwie stałe wartości boolowskie. Stałe to wartości, które nigdy się nie zmieniają w trakcie programu.
 
-Aby utworzyć stałą wartość logiczną, która jest zawsze `True`, możesz po prostu napisać `True`. Napisz `False` jako stałą wartość logiczną, która zawsze będzie `False`.
-Więc możesz napisać
+Aby stworzyć stałą wartość boolowską, która jest zawsze `True`, możesz po prostu napisać `True`. Napisz `False` dla stałej wartości boolowskiej, która zawsze będzie `False`.
+Więc możesz napisać albo
 
 
 `while False:
 	do_a_flip()`
 
-lub
+albo
 
 `while True:
 	do_a_flip()`
 
-Pierwszy przykład nigdy nie zrobi fikołka, a drugi będzie robił fikołki w nieskończoność (nieskończona pętla).
+Pierwsza nigdy nie wykona obrotu, a druga będzie je wykonywać w nieskończoność (pętla nieskończona). 
 
-Normalnie tworzenie nieskończonej pętli jest złym pomysłem, ponieważ zawiesza program, ale w tej grze są opóźnienia między każdą iteracją pętli, więc dron będzie robił fikołki, dopóki ręcznie go nie zatrzymasz, naciskając ponownie przycisk wykonania.
+Zwykle tworzenie pętli nieskończonej jest złym pomysłem, ponieważ zawiesi program, ale w tej grze są opóźnienia między każdą iteracją pętli, więc dron będzie wykonywał obroty, dopóki ręcznie go nie zatrzymasz, ponownie naciskając przycisk wykonania.
 
-Zauważ, jak linia po dwukropku jest wcięta. Wcięcia takie jak to służą do oddzielania bloków kodu.
-Wystarczy nacisnąć Tab, aby dodać wcięcie, i Shift + Tab (lub Backspace), aby je usunąć.
+Zauważ, że linia po dwukropku ma wcięcie. Wcięcia takie jak to są używane do oddzielania bloków kodu.
+Po prostu naciśnij Tab, aby dodać wcięcie, i Shift + Tab (lub Backspace), aby je usunąć.
 
 Pętla będzie powtarzać wszystkie instrukcje z wcięciem po dwukropku.
 Instrukcje po bloku z wcięciem zostaną wykonane po zakończeniu pętli.

@@ -1,2 +1,2 @@
 @hat_descr_straw_hat = Domyślny kapelusz.
-@hat_descr_dinosaur_hat = Załóż go, aby rozpocząć grę w dinozaura.
+@hat_descr_dinosaur_hat = Załóż go, aby rozpocząć grę z dinozaurem.

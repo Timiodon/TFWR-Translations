@@ -4,7 +4,7 @@
 `for i in sequence:
 	#用 i 做点什么`
 
-与 `while` 循环类似，`for` 循环也重复调用一个代码块。但它不是基于一个条件来循环，而是对序列中的每个元素执行一次循环体。
+与 `while` 循环类似，`for` 循环也重复调用一个代码块。但它不是基于条件循环，而是为序列中的每个元素执行一次循环体。
 
 ## 语法
 一个 for 循环看起来像这样：
@@ -12,7 +12,7 @@
 `for variable_name in sequence:
 	#代码块`
 
-`variable_name` 可以是你选择的任何名称。它是一个存储序列中当前元素的变量。`sequence` 需要是某个可以被迭代的值，比如一个数字范围。代码块会对每个元素执行，循环变量会被赋值为该元素。
+`variable_name` 可以是你选择的任何名称。它是一个存储序列中当前元素的变量。`sequence` 需要是某个可以迭代的值，比如一个数字范围。代码块会为每个元素执行一次，循环变量会被赋值为该元素。
 
 ## 序列
 [范围](functions/range)      <unlock=lists>[列表](docs/scripting/lists.md)      </unlock><unlock=functions>[元组](docs/scripting/tuples.md)      </unlock><unlock=dicts>[字典](docs/scripting/dicts.md)      </unlock><unlock=sets>[集合](docs/scripting/sets.md)</unlock>
@@ -36,4 +36,4 @@ harvest()`
 
 所以它会调用 `harvest()` 5 次。
 
-另见 [Break](docs/scripting/break.md) 和 [Continue](docs/scripting/continue.md)
+另请参阅[Break](docs/scripting/break.md)和[Continue](docs/scripting/continue.md)

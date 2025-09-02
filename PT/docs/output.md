@@ -1,3 +1,3 @@
-Para o output completo, vê [output.txt](persistent_data_path/output.txt).
-Output Truncado:
+Para a saída completa, veja [output.txt](persistent_data_path/output.txt).
+Saída Truncada:
 {{output}}

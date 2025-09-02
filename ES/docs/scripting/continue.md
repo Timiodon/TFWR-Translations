@@ -3,9 +3,9 @@
 
 `for i in range(10):
 	continue
-    print("esto nunca se imprime")`
+    print("this is never printed")`
 
-Esto ejecuta las `10` iteraciones del bucle, pero la sentencia `print` después de `continue` siempre se salta.
+Esto ejecuta las `10` iteraciones del bucle, pero la instrucción `print` después de `continue` siempre se salta.
 
 También funciona en bucles `while`.
 
@@ -26,7 +26,7 @@ En bucles anidados, `continue` siempre afecta al bucle más interno.
 
 `for i in range(10):
 	for j in range(10):
-	    print("esto se imprime 100 veces")
+	    print("this is printed 100 times")
 		continue
-		print("esto nunca se imprime")
-	print("esto se imprime 10 veces")`
+		print("this is never printed")
+	print("this is printed 10 times")`

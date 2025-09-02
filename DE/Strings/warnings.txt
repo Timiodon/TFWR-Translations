@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = Versucht, {0} zu kaufen, aber du hattest nicht die benötigten Ressourcen.
+@warning_not_enough_items_to_trade = Versucht, {0} zu kaufen, hatte aber nicht die erforderlichen Ressourcen.
 @warning_no_space_to_plant = Versucht, {0} zu pflanzen, aber da war schon etwas.
-@warning_cant_plant_on_ground = Kann {0} nicht auf {1} pflanzen.
-@warning_missing_seed = Hatte nicht die benötigten Items, um {0} zu pflanzen.
-@warning_no_item_to_use = Versucht, {0} zu benutzen, aber du hattest nicht genug davon.
-@warning_failed_swap_wrap = Versucht, einen Tausch über die Farmgrenzen hinweg durchzuführen. Das ist nicht erlaubt.
+@warning_cant_plant_on_ground = {0} kann nicht auf {1} gepflanzt werden.
+@warning_missing_seed = Hatte nicht die erforderlichen Items, um {0} zu pflanzen.
+@warning_no_item_to_use = Versucht, {0} zu verwenden, hatte aber nicht genug davon.
+@warning_failed_swap_wrap = Versucht, über die Farmgrenzen hinweg zu tauschen. Das ist nicht erlaubt.
 @warning_failed_swap_unswappable = Versucht, {0} zu tauschen, was nicht getauscht werden kann.
-@warning_weird_substance_not_divisible = Du hast eine Menge an seltsamer Substanz verwendet, die nicht genau der Menge entspricht, die zum Erstellen des Labyrinths benötigt wird. Vergiss nicht, dass die benötigte Menge an seltsamer Substanz mit jedem Upgrade des Labyrinths steigt.
+@warning_weird_substance_not_divisible = Du hast eine Anzahl von Seltsamer Substanz verwendet, die nicht genau der benötigten Menge zum Erstellen des Labyrinths entspricht. Vergiss nicht, dass die erforderliche Menge an Seltsamer Substanz mit jedem Upgrade des Labyrinths steigt.
 
-Um ein Labyrinth in voller Größe zu erzeugen:
+Um ein Labyrinth voller Größe zu erzeugen, tu Folgendes:
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Simulationen und Leaderboard-Läufe können nicht innerhalb anderer Simulationen und Leaderboard-Läufe gestartet werden.
+@warning_recursive_simulation = Simulationen und Bestenlisten-Läufe können nicht innerhalb anderer Simulationen und Bestenlisten-Läufe gestartet werden.

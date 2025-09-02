@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = Intenté comprar {0} pero no tenía los recursos necesarios.
-@warning_no_space_to_plant = Intenté plantar {0} pero ya había algo allí.
+@warning_not_enough_items_to_trade = Se intentó comprar {0} pero no se tenían los recursos necesarios.
+@warning_no_space_to_plant = Se intentó plantar {0} pero ya había algo allí.
 @warning_cant_plant_on_ground = No se puede plantar {0} en {1}.
-@warning_missing_seed = No tenía los items necesarios para plantar {0}.
-@warning_no_item_to_use = Intenté usar {0} pero no tenía suficiente.
+@warning_missing_seed = No se tenían los ítems necesarios para plantar {0}.
+@warning_no_item_to_use = Se intentó usar {0} pero no había suficiente.
 @warning_failed_swap_wrap = Se intentó hacer un intercambio fuera de los límites de la granja. Eso no está permitido.
-@warning_failed_swap_unswappable = Se intentó intercambiar {0}, lo cual no se puede intercambiar.
-@warning_weird_substance_not_divisible = Usaste una cantidad de Weird Substance que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad de Weird Substance requerida aumenta a medida que mejoras el laberinto.
+@warning_failed_swap_unswappable = Se intentó intercambiar {0}, que no puede ser intercambiado.
+@warning_weird_substance_not_divisible = Usaste una cantidad de Sustancia Extraña que no es exactamente la necesaria para crear el laberinto. No olvides que la cantidad de Sustancia Extraña requerida aumenta a medida que mejoras el laberinto.
 
 Para generar un laberinto de tamaño completo, haz:
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Las simulaciones y las carreras de leaderboard no se pueden iniciar desde dentro de otras simulaciones y carreras de leaderboard.
+@warning_recursive_simulation = Las simulaciones y las carreras de la tabla de clasificación no pueden iniciarse desde dentro de otras simulaciones y carreras de la tabla de clasificación.

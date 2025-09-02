@@ -1,24 +1,24 @@
-# Leaderboard
-Se sei arrivato fin qui, hai superato molte sfide. Ma le hai risolte in modo efficiente?
-Puoi competere con altri giocatori su vari leaderboard per i metodi di coltivazione più efficienti.
+# Classifica
+Se sei arrivato fin qui, hai superato molte sfide. Ma le hai risolte in modo efficiente? 
+Puoi competere con altri giocatori in varie classifiche per i metodi di coltivazione più efficienti.
 
-Puoi iniziare una run del leaderboard chiamando `leaderboard_run(leaderboard, filename, speedup)`.
-Questo avvia una [simulazione](docs/unlocks/simulation.md) simile a `simulate()`, ma le condizioni di partenza sono fisse. Ogni categoria di leaderboard ha condizioni di partenza e di successo diverse.
+Puoi avviare una partita per la classifica chiamando `leaderboard_run(leaderboard, filename, speedup)`.
+Questo avvia una [simulazione](docs/unlocks/simulation.md) simile a `simulate()` tranne che le condizioni di partenza sono fisse. Ogni categoria di classifica ha condizioni di partenza e di successo diverse.
 
-La run del leaderboard ha successo se la condizione di successo è `True` quando la simulazione termina. La simulazione non terminerà automaticamente quando l'obiettivo viene raggiunto. Devi assicurarti che il programma termini.
-Se la run ha successo, il tuo tempo sarà aggiunto al leaderboard.
+La partita per la classifica ha successo se la condizione di successo è `True` quando la simulazione termina. La simulazione non terminerà automaticamente quando l'obiettivo viene raggiunto. Devi assicurarti che il programma termini.
+Se la partita ha successo, il tuo tempo verrà aggiunto alla classifica.
 
-Per ridurre la varianza, tutte le run devono durare almeno 2 ore (puoi accelerarle, quindi non ci vorrà così tanto). Se una run viene completata prima, sarà ripetuta finché non si raggiunge un tempo totale di 2 ore. La media di tutte le run viene quindi caricata come tuo punteggio.
+Per ridurre la varianza, tutte le partite devono durare almeno 2 ore (puoi accelerarle, quindi non ci vorrà così tanto). Se una partita viene completata prima, verrà ripetuta fino al raggiungimento di un tempo totale di 2 ore. La media di tutte le partite viene quindi caricata come tuo punteggio.
 
-Ecco un esempio di configurazione che ti porterà sul leaderboard del fieno.
+Ecco un esempio di configurazione che ti porterà nella classifica del fieno.
 ![](LeaderboardSetup400)
 
-## Reset Più Veloce
-Il reset più veloce è la categoria più prestigiosa. Automatizza completamente il gioco da una singola casella della fattoria fino a sbloccare di nuovo i leaderboard.
+## Reset più Veloce
+Il reset più veloce è la categoria più prestigiosa. Automatizza completamente il gioco da un singolo appezzamento di terreno fino a sbloccare di nuovo le classifiche.
 
 Non devi sbloccare tutto, cerca solo di sbloccare `Unlocks.Leaderboard` il più velocemente possibile.
 
-Ricorda che puoi usare `num_unlocked(unlock) > 0` per controllare se qualcosa è sbloccato e puoi usare `get_cost()` sugli sblocchi per vedere quanto costano, così puoi coltivare automaticamente gli item giusti.
+Ricorda che puoi usare `num_unlocked(unlock) > 0` per controllare se qualcosa è sbloccato e puoi usare `get_cost()` sugli sblocchi per vedere quanto costano, in modo da poter coltivare automaticamente gli oggetti giusti.
 
 Chiamata di Funzione:
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
@@ -66,8 +66,8 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 Condizione di Successo:
 `num_items(Items.Bone) >= 98010`
 
-## Altri Leaderboard di Risorse
-Ogni pianta ha il suo leaderboard per coltivarla il più velocemente possibile. Inizi con tutti gli sblocchi, le risorse necessarie per far crescere la pianta e molta energia. L'obiettivo è coltivare `100000` della risorsa prodotta dalla pianta.
+## Altre Classifiche di Risorse
+Ogni pianta ha la sua classifica per coltivare quella particolare pianta il più velocemente possibile. Inizi con tutti gli sblocchi, le risorse necessarie per far crescere la pianta e molta energia. L'obiettivo è coltivare `100000` della risorsa prodotta dalla pianta.
 
 Chiamate di Funzione:
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
@@ -81,4 +81,4 @@ Chiamate di Funzione:
 Condizione di Successo:
 `num_items(resource) >= 100000`
 
-`Leaderboards.Polyculture` richiede di coltivare `100000` di tutte e tre le risorse della policoltura.
+`Leaderboards.Polyculture` richiede la coltivazione di `100000` di tutte e tre le risorse della policoltura.

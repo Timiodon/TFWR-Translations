@@ -8,4 +8,4 @@ To posadzi krzak pod dronem.
 
 Wywołaj `clear()`, aby zresetować farmę do samej trawy i zresetować pozycję drona.
 
-Wygląda na to, że jeśli uprawiasz więcej niż jeden rodzaj rośliny na farmie w tym samym czasie, czasami możesz uzyskać większy plon. Będziesz musiał zbadać polikulturę, aby dowiedzieć się więcej.
+Wygląda na to, że jeśli uprawiasz więcej niż jeden rodzaj rośliny na farmie w tym samym czasie, czasami możesz uzyskać wyższy plon. Będziesz musiał zbadać uprawę współrzędną, aby dowiedzieć się więcej.

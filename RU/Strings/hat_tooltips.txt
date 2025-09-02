@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = Шляпа по умолчанию.
-@hat_descr_dinosaur_hat = Наденьте её, чтобы начать игру про динозавра.
+@hat_descr_straw_hat = Стандартная шляпа.
+@hat_descr_dinosaur_hat = Наденьте её, чтобы начать игру про динозавров.

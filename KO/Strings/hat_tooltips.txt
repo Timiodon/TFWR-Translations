@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = 기본 모자입니다.
-@hat_descr_dinosaur_hat = 공룡 게임을 시작하려면 착용하세요.
+@hat_descr_straw_hat = 기본 모자.
+@hat_descr_dinosaur_hat = 이것을 장착하면 공룡 게임이 시작돼요.

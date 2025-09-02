@@ -1,20 +1,20 @@
-# Sets
-Os sets são como [dictionaries](docs/scripting/dicts.md), mas sem valores. São apenas um conjunto não ordenado de chaves.
+# Conjuntos
+Conjuntos são como [dicionários](docs/scripting/dicts.md), mas sem valores. Eles são apenas um conjunto não ordenado de chaves. 
 
-São criados como os dictionaries, mas sem valores.
+Eles são criados como dicionários, mas sem valores.
 `set = {North, East, West}`
 
-Usa `set()` para criar um set vazio. Nota que `{}` cria um dictionary vazio.
+Use `set()` para criar um conjunto vazio. Note que `{}` cria um dicionário vazio.
 
-Usa `set.add(elem)` para adicionar um novo elemento ao set.
+Use `set.add(elem)` para adicionar um novo elemento ao conjunto.
 
-Usa `set.remove(elem)` para remover um elemento de um set.
+Use `set.remove(elem)` para remover um elemento de um conjunto.
 
-Usa `if elem in set:` para verificar se o set contém um elemento.
+Use `if elem in set:` para verificar se o conjunto contém um elemento.
 
-Usa `for elem in set:` para iterar todos os elementos no set.
-Para sets maiores, o operador `in` tem um desempenho muito mais rápido do que teria numa lista.
+Use `for elem in set:` para iterar todos os elementos no conjunto.
+Para conjuntos maiores, o operador `in` funciona muito mais rápido do que em uma lista.
 
-Tal como os dictionaries, os sets não são ordenados, por isso não há garantias sobre a ordem em que os elementos são iterados.
+Assim como os dicionários, os conjuntos não são ordenados, então не há garantias sobre a ordem em que os elementos são iterados.
 
-Além disso, os elementos nos sets são únicos, por isso adicionar um elemento que já está no set não alterará o set.
+Além disso, os elementos nos conjuntos são únicos, então adicionar um elemento que já está no conjunto não alterará o conjunto.

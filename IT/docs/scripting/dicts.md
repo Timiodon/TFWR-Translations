@@ -1,5 +1,5 @@
 # Dizionari
-I dizionari sono una struttura dati che ti permette di mappare chiavi a valori nello stesso modo in cui un vero dizionario mappa parole alle loro definizioni e puoi cercarle molto rapidamente.
+I dizionari sono una struttura dati che ti permette di mappare chiavi a valori, allo stesso modo in cui un vero dizionario mappa parole alle loro definizioni, e puoi cercarle molto velocemente.
 
 Un dizionario può essere creato così:
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -11,12 +11,12 @@ Eccone un altro che mappa la posizione del drone all'entità su cui si trova.
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-Accedere al valore mappato a una chiave è simile all'accesso a un elemento in una lista:
+Accedere al valore mappato a una chiave è simile ad accedere a un elemento in una lista:
 `value = dict[key]`
 
 Esempio:
 `orientation = right_of[South]`
-Questo imposta `orientation` su `West`.
+Questo imposta `orientation` a `West`.
 
 Puoi aggiungere una nuova coppia chiave-valore a un dizionario in questo modo:
 `dict[key] = value`
@@ -29,10 +29,10 @@ Le chiavi sono uniche, quindi aggiungere una chiave che esiste già nel dizionar
 
 Usa `dict.pop(key)` per rimuovere una coppia chiave-valore da `dict`.
 
-`key in dict` valuta a `True` se `key` è una chiave nel `dict` e `False` altrimenti.
-Quindi puoi usare `if key in dict:` per controllare se `dict` contiene la chiave.
+`key in dict` restituisce `True` se `key` è una chiave nel `dict` e `False` altrimenti.
+Quindi puoi usare `if key in dict:` per verificare se `dict` contiene la chiave.
 
-Mettere un dizionario in un ciclo for ti permette di iterare attraverso tutte le chiavi:
+Mettere un dizionario in un ciclo for ti permette di iterare su tutte le chiavi:
 `for key in dict:
 	value = dict[key]`
 

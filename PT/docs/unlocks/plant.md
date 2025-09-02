@@ -1,11 +1,11 @@
 # Plantar
-A relva é boa porque cresce automaticamente. Todas as outras plantas têm de ser plantadas com a função `plant()`. A única planta que podes plantar de momento é um arbusto.
-Podes passar o tipo de planta que queres plantar para a função assim:
+A grama é boa porque cresce automaticamente. Todas as outras plantas precisam ser plantadas com a função `plant()`. A única planta que você pode plantar agora é um arbusto.
+Você pode passar o tipo de planta que deseja plantar para a função desta forma:
 
 `plant(Entities.Bush)`
 
-Isto plantará um arbusto debaixo do drone.
+Isso plantará um arbusto sob o drone.
 
-Chama `clear()` para repor a quinta para tudo relva e repor a posição do drone.
+Chame `clear()` para redefinir a fazenda para toda grama e redefinir a posição do drone.
 
-Parece que se cultivares mais do que um tipo de planta na quinta ao mesmo tempo, por vezes podes obter um rendimento maior. Vais precisar de pesquisar policultura para saberes mais.
+Parece que se você cultivar mais de um tipo de planta na fazenda ao mesmo tempo, às vezes pode obter um rendimento maior. Você precisará pesquisar policultura para aprender mais.

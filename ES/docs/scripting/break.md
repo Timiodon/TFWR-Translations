@@ -1,10 +1,10 @@
 # Break
-`break` permite detener un bucle antes de tiempo. Cuando se alcanza la sentencia `break`, saldrá inmediatamente del bucle más interno y comenzará a ejecutar el código después del bucle.
+`break` permite detener un bucle antes de tiempo. Cuando se alcanza la instrucción `break`, saldrá inmediatamente del bucle más interno y comenzará a ejecutar el código después del bucle.
 
 `for i in range(10):
 	break
 print(i)`
-Esto imprime `0` porque `i` es `0` en la primera iteración del bucle y luego la sentencia break termina el bucle.
+Esto imprime `0` porque `i` es `0` en la primera iteración del bucle y luego la instrucción `break` termina el bucle.
 
 También funciona en bucles `while`.
 
@@ -23,5 +23,5 @@ En bucles anidados, `break` siempre sale del bucle más interno.
 `for i in range(10):
 	for j in range(10):
 		break
-		print("esto nunca se imprime")
-	print("esto se imprime 10 veces")`
+		print("this is never printed")
+	print("this is printed 10 times")`

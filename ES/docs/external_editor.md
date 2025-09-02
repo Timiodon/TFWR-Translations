@@ -1,8 +1,8 @@
 # Editor Externo
-El editor de texto del juego suele ser suficiente para jugar a este juego, pero por supuesto no puede competir con editores de texto más sofisticados como Visual Studio Code.
+El editor de texto del juego suele ser suficiente para jugar, pero por supuesto no puede competir con editores de texto más sofisticados como Visual Studio Code.
 
 El juego guarda todos los archivos de código como archivos .py, por lo que puedes editarlos con editores de Python. 
-Ten en cuenta que esto es solo por comodidad. El lenguaje del juego no es realmente Python, pero es lo suficientemente parecido como para que Python IntelliSense funcione decentemente en él.
+Ten en cuenta que esto es solo por conveniencia. El lenguaje del juego no es realmente Python, pero es lo suficientemente parecido como para que Python IntelliSense funcione decentemente.
 Puedes encontrar los archivos en la [carpeta de guardado](persistent_data_path/Saves).
 
 Cada guardado también contiene un archivo `__builtins__.py`, que contiene definiciones integradas de Python que coinciden con las integradas del juego para habilitar IntelliSense. 

@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = El sombrero por default.
-@hat_descr_dinosaur_hat = Equípalo para iniciar el juego del dinosaurio.
+@hat_descr_straw_hat = El sombrero por defecto.
+@hat_descr_dinosaur_hat = Equípalo para empezar el juego del dinosaurio.

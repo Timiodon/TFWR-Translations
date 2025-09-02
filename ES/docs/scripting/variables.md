@@ -1,6 +1,6 @@
 # Variables
-Las variables pueden considerarse como contenedores con nombre que pueden almacenar un valor.
-El operador `=` se utiliza para declarar una variable y almacenar un valor en ella.
+Las variables se pueden considerar como contenedores con nombre que pueden almacenar un valor.
+El operador `=` se usa para declarar una variable y almacenar un valor en ella.
 
 `nombre_variable = valor`
 
@@ -12,11 +12,11 @@ Declara una variable llamada `a` y almacena el valor `5` en ella:
 Declara una variable llamada `b` y almacena el valor de retorno de `can_harvest()` en ella:
 `b = can_harvest()`
 
-No confundas el operador `=` con el operador `==`.
+No confundas el operador `=` con el operador `==`. 
 El operador `==` comprueba si dos valores son iguales y devuelve `True` o `False`.
 El operador `=` asigna el valor de la derecha al nombre de la izquierda.
 
-Después de que una variable ha sido asignada, puedes usarla en el código para recuperar el valor que contiene
+Después de que se ha asignado una variable, puedes usarla en el código para recuperar el valor que contiene
 
 `a = 5
 for i in range(a):
@@ -25,7 +25,7 @@ for i in range(a):
 El bucle anterior se ejecuta 5 veces porque `a` está establecido en `5`.
 La `i` en el bucle `for` también es una variable a la que se le asigna automáticamente el valor actual de la secuencia en cada iteración del bucle. (No tiene que llamarse `i`, puedes darle cualquier nombre de variable válido).
 
-Las variables también te permiten hacer lo mismo con un bucle while:
+Las variables también te permiten hacer lo mismo con un bucle `while`:
 
 `a = 5
 i = 0
@@ -33,8 +33,8 @@ while i < a:
 	do_a_flip()
 	i = i + 1`
 
-Esto hace lo mismo que el bucle for de arriba. Solo tenemos que incrementar i manualmente.
-Ten en cuenta que para incrementar i, lo establecemos a su propio valor más `1`. Cambiar el valor de una variable basándose en su valor anterior es algo muy común.
+Esto hace lo mismo que el bucle `for` de arriba. Solo tenemos que incrementar i manualmente.
+Ten en cuenta que para incrementar i, lo establecemos a su propio valor más `1`. Cambiar el valor de una variable basándose en su valor anterior es algo muy común. 
 Se puede abreviar usando estos operadores: `+=, -=, *=, /=, %=`
 
 `i = i + 1` es lo mismo que `i += 1`

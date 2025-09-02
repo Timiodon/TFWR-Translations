@@ -1,9 +1,9 @@
-@error_missing_default_parameter = 所有默认参数必须在参数列表的末尾。
+@error_missing_default_parameter = 所有默认参数必须放在参数列表的末尾。
 @error_invalid_name = {0} 不是一个有效的名称。名称必须以字母开头，并且只能包含字母、数字和下划线。它也不能是保留关键字。
 @error_reserved_keyword = {0} 是一个保留关键字。你不能用它作为名称。
 @error_invalid_assign_expr = 不能给这个表达式赋值。
-@error_no_statements = 一个代码块必须包含至少一条语句。
-一条语句可以是一个函数调用，如 `harvest()`，或者一个变量赋值。
+@error_no_statements = 一个代码块必须至少包含一条语句。
+一条语句可以是一个函数调用，如 `harvest()`，或一个变量赋值。
 如果你希望在代码块中什么都不做，请使用 `pass` 语句。
 @error_not_enough_indentation = 这里的缩进不够。
 在 : 之后必须有比之前更多的缩进，以分隔新的代码块。
@@ -13,18 +13,18 @@
 @error_not_a_statement = 这不是一个有效的语句。
 @error_not_a_statement2 = 这不是一个有效的语句。你是想写 {0} 吗？
 @error_invalid_expression = 这不是一个有效的表达式。
-@error_new_line_expected = 这里需要一个新行。
-@error_unexpected_token = 这里需要一个 {0}。
+@error_new_line_expected = 这里应该有一个新行。
+@error_unexpected_token = 这里应该有一个 {0}。
 @error_missing_colon = 每个代码块的开头都必须有一个冒号 `:`。
-@error_unexpected_assign = 你不能在这里赋值。要检查是否相等，请改用 `==`。
+@error_unexpected_assign = 这里不能进行赋值。要检查是否相等，请改用 `==`。
 @error_invalid_for_syntax = 这不是一个有效的 for 循环。一个 for 循环看起来像这样：
 `for n in range(3):`
 `for` 后面总是跟着循环变量、一个 `in` 和一个序列。在这个例子中，`n` 是变量名，但它可以被任何其他名称替换。
 @error_unknown_method = 这个方法不存在。
 @error_bad_backslash = 反斜杠可以用来将表达式拆分到多行。但之后你需要添加一个新行。
-@error_mixed_indentation = 制表符和空格不应混用。
-@error_expected_close_token = 需要一个逗号或右括号。
-@error_wrong_dict_literal = 需要一个 : 来分隔 dictionary 的键和值。
+@error_mixed_indentation = 制表符和空格不应混合使用。
+@error_expected_close_token = 应为逗号或右括号。
+@error_wrong_dict_literal = 应用 : 来分隔字典的键和值。
 @error_assign_before_global = {0} 在全局声明之前被赋值。
-@error_wildcard_imports_not_allowed_in_function = `from x import *` 形式的导入不允许在函数内部使用。
-@error_invalid_import = 你不能导入文件名不是有效标识符的文件。有效的标识符只能包含字母、数字和下划线。如果你的文件名包含其他字符，你必须重命名它。
+@error_wildcard_imports_not_allowed_in_function = 形如 `from x import *` 的导入不允许在函数内部使用。
+@error_invalid_import = 你不能导入文件名不是有效标识符的文件。有效标识符只能包含字母、数字和下划线。如果你的文件名包含其他字符，你必须重命名它。

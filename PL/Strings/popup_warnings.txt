@@ -7,6 +7,6 @@
 @save = Zapisz
 @don't save = Nie zapisuj
 @popup_warning_corrupted_save = Wygląda na to, że wystąpił problem z wczytaniem {0}. Sprawdź sekcję dotyczącą kopii zapasowych, aby uzyskać więcej informacji.
-@popup_warning_failed_read_save = Nie udało się odczytać plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy uzyskujące dostęp do plików i spróbuj ponownie.
-@popup_warning_failed_write_save = Nie udało się zapisać do plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy uzyskujące dostęp do plików i spróbuj ponownie.
+@popup_warning_failed_read_save = Nie udało się odczytać plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy korzystające z tych plików i spróbuj ponownie.
+@popup_warning_failed_write_save = Nie udało się zapisać do plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy korzystające z tych plików i spróbuj ponownie.
 @ok = ok

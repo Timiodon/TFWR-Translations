@@ -1,30 +1,30 @@
 @code_tooltip_harvest = `harvest()`
-Raccoglie l'entity sotto il drone.
-Se raccogli un'entity che non può essere raccolta, verrà distrutta.
+Raccoglie l'entità sotto il drone.
+Se raccogli un'entità che non può essere raccolta, verrà distrutta.
 
-restituisce `True` se un'entity è stata rimossa, altrimenti `False`.
+restituisce `True` se un'entità è stata rimossa, `False` altrimenti.
 
-richiede `200` tick per essere eseguita se un'entity è stata rimossa, altrimenti `1` tick.
+richiede `200` tick per essere eseguita se un'entità è stata rimossa, `1` tick altrimenti.
 
 esempio:
 `harvest()`
 @code_tooltip_can_harvest = `can_harvest()`
 Usato per scoprire se le piante sono completamente cresciute.
 
-restituisce `True` se c'è un'entity sotto il drone pronta per essere raccolta, altrimenti `False`.
+restituisce `True` se c'è un'entità sotto il drone pronta per essere raccolta, `False` altrimenti.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if can_harvest():
     harvest()`
 @code_tooltip_range = `range(start = 0, end, step = 1)`
-Genera una sequenza di numeri che inizia da `start`, finisce subito prima di raggiungere `end` (quindi `end` è escluso) usando passi di dimensione `step`.
+Genera una sequenza di numeri che parte da `start` e finisce subito prima di raggiungere `end` (quindi `end` è escluso) usando passi di grandezza `step`.
 
-Nota che start è impostato a `0` di default, e se viene dato un solo argomento, questo si legherà a `end`. Questo normalmente non è possibile.
+Nota che `start` è impostato a `0` di default e, se viene fornito un solo argomento, questo verrà associato a `end`. Normalmente questo non è possibile.
 In Python, `range` è un costruttore di classe che permette questo strano comportamento.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `for i in range(10):
@@ -36,57 +36,57 @@ for i in range(2,6):
 for i in range(10, 0, -1):
     print(i)`
 @code_tooltip_plant = `plant(entity)` 
-Spende il costo dell' `entity` specificata e la pianta sotto il drone.
+Spende il costo dell'`entità` specificata e la pianta sotto il drone.
 Fallisce se non puoi permetterti la pianta, il tipo di terreno è sbagliato o c'è già una pianta lì.
 
-restituisce `True` in caso di successo, altrimenti `False`.
+restituisce `True` se ha avuto successo, `False` altrimenti.
 
-richiede `200` tick per l'esecuzione in caso di successo, altrimenti `1` tick.
+richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altrimenti.
 
 esempio:
 `plant(Entities.Bush)`
 @code_tooltip_move = `move(direction)`
-Muove il drone nella `direction` specificata di una casella.
-Se il drone si muove oltre il bordo della fattoria, riappare dal lato opposto.
+Muove il drone nella `direzione` specificata di una casella.
+Se il drone si muove oltre il bordo della fattoria, riappare dall'altro lato.
 
 `East `  =  destra
 `West `  =  sinistra
 `North`  =  su
 `South`  =  giù
 
-restituisce `True` se il drone si è mosso, altrimenti `False`.
+restituisce `True` se il drone si è mosso, `False` altrimenti.
 
-richiede `200` tick per l'esecuzione se il drone si è mosso, altrimenti `1` tick.
+richiede `200` tick per essere eseguita se il drone si è mosso, `1` tick altrimenti.
 
 esempio:
 `move(North)`
 @code_tooltip_can_move() = `can_move(direction)`
-Controlla se il drone può muoversi nella `direction` specificata.
+Controlla se il drone può muoversi nella `direzione` specificata.
 
-restituisce `True` se il drone può muoversi, altrimenti `False`.
+restituisce `True` se il drone può muoversi, `False` altrimenti.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if can_move(North):
     move(North)`
 @code_tooltip_swap = `swap(direction)`
-Scambia l'entity sotto il drone con l'entity accanto al drone nella `direction` specificata.
-Non funziona su tutte le entity.
-Funziona anche se una (o entrambe) le entity sono `None`.
+Scambia l'entità sotto il drone con l'entità accanto al drone nella `direzione` specificata.
+Non funziona su tutte le entità.
+Funziona anche se una (o entrambe) le entità sono `None`.
 
-restituisce `True` in caso di successo, altrimenti `False`.
+restituisce `True` se ha avuto successo, `False` altrimenti.
 
-richiede `200` tick per l'esecuzione in caso di successo, altrimenti `1` tick.
+richiede `200` tick per essere eseguita in caso di successo, `1` tick altrimenti.
 
 esempio:
 `swap(North)`
 @code_tooltip_till = `till()` 
-Ara il terreno sotto il drone trasformandolo in `Grounds.Soil`. Se è già terra, lo ritrasformerà in `Grounds.Grassland`.
+Ara il terreno sotto il drone trasformandolo in `Grounds.Soil`. Se è già terreno arato, lo riporterà a `Grounds.Grassland`.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `till()`
@@ -96,7 +96,7 @@ La posizione x parte da `0` a ovest e aumenta in direzione est.
 
 restituisce un numero che rappresenta la coordinata x attuale del drone.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `x, y = get_pos_x(), get_pos_y()`
@@ -106,7 +106,7 @@ La posizione y parte da `0` a sud e aumenta in direzione nord.
 
 restituisce un numero che rappresenta la coordinata y attuale del drone.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `x, y = get_pos_x(), get_pos_y()`
@@ -115,17 +115,17 @@ Ottiene la dimensione attuale della fattoria.
 
 restituisce la lunghezza del lato della griglia in direzione nord-sud.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `for i in range(get_world_size()):
     move(North)`
 @code_tooltip_get_entity_type = `get_entity_type()` 
-Scopri che tipo di entity si trova sotto il drone.
+Scopri che tipo di entità si trova sotto il drone.
 
-restituisce `None` se la casella è vuota, altrimenti restituisce il tipo dell'entity sotto il drone.
+restituisce `None` se la casella è vuota, altrimenti restituisce il tipo di entità sotto il drone.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if get_entity_type() == Entities.Grass:
@@ -135,7 +135,7 @@ Scopri che tipo di terreno si trova sotto il drone.
 
 restituisce il tipo di terreno sotto il drone.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if get_ground_type() != Grounds.Soil:
@@ -145,7 +145,7 @@ Ottiene il tempo di gioco attuale.
 
 restituisce il tempo in secondi dall'inizio del gioco.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `start = get_time()
@@ -158,18 +158,18 @@ Usato per misurare il numero di tick eseguiti.
 
 restituisce il numero di tick eseguiti dall'inizio dell'esecuzione.
 
-richiede `0` tick per l'esecuzione.
+richiede `0` tick per essere eseguita.
 
 esempio:
 `do_something()
 
 print(get_tick_count())`
 @code_tooltip_use_item = `use_item(item, n=1)` 
-Tenta di usare l'`item` specificato `n` volte. Può essere usato solo con alcuni oggetti, inclusi `Items.Water`, `Items.Fertilizer`.
+Tenta di usare l'`item` specificato `n` volte. Può essere usato solo con alcuni oggetti, inclusi `Items.Water` e `Items.Fertilizer`.
 
-restituisce `True` se un oggetto è stato usato, altrimenti `False`.
+restituisce `True` se un oggetto è stato usato, `False` altrimenti.
 
-richiede `200` tick per l'esecuzione in caso di successo, altrimenti `1` tick.
+richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altrimenti.
 
 esempio:
 `use_item(Items.Fertilizer)`
@@ -178,7 +178,7 @@ Ottiene il livello d'acqua attuale sotto il drone.
 
 restituisce il livello d'acqua sotto il drone come un numero tra `0` e `1`.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if get_water() < 0.5:
@@ -188,7 +188,7 @@ Fa fare un flip al drone! Questa azione non è influenzata dai potenziamenti di 
 
 restituisce `None`
 
-richiede 1s per l'esecuzione.
+richiede 1s per essere eseguita.
 
 esempio:
 `while True:
@@ -198,18 +198,18 @@ Accarezza il maialino! Questa azione non è influenzata dai potenziamenti di vel
 
 restituisce `None`
 
-richiede 1s per l'esecuzione.
+richiede 1s per essere eseguita.
 
 esempio:
 `while True:
     pet_the_piggy()`
 @code_tooltip_print = `print(*args)` 
-Scrive tutti gli `args` in cielo sopra il drone usando del fumo. Questa azione non è influenzata dai potenziamenti di velocità.
-Possono essere scritti più valori contemporaneamente.
+Stampa tutti gli `args` in aria sopra il drone usando fumo. Questa azione non è influenzata dai potenziamenti di velocità.
+Possono essere stampati più valori contemporaneamente.
 
 restituisce `None`
 
-richiede 1s per l'esecuzione.
+richiede 1s per essere eseguita.
 
 esempio:
 `print("ground:", get_ground_type())`
@@ -218,49 +218,49 @@ Ottiene il numero di elementi in una lista, set, dict o tupla.
 
 restituisce la lunghezza della `collection`.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `for i in range(len(list)):
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
 Crea una nuova lista.
-Se `collection` è `None`, crea una lista vuota.
-Se `collection` è una collezione, crea una nuova lista con gli elementi di quella collezione.
+Se `collection` è None, crea una lista vuota.
+Se `collection` è una collezione di valori, crea una nuova lista con quei valori.
 
 restituisce una lista.
 
-richiede `1 + len(collection)` tick per l'esecuzione.
+richiede `1 + len(collection)` tick per essere eseguita.
 
 esempio:
 `new_list = list((1,2,3))`
 @code_tooltip_dict = `dict(dictionary = None)`
-Crea un nuovo dictionary.
-Se `dictionary` è None, crea un dictionary vuoto.
-Se `dictionary` è un dictionary, ne crea una copia.
+Crea un nuovo dizionario.
+Se `dictionary` è None, crea un dizionario vuoto.
+Se `dictionary` è un dizionario, ne crea una copia.
 
-restituisce un dictionary.
+restituisce un dizionario.
 
-richiede `1 + len(dictionary)` tick per l'esecuzione.
+richiede `1 + len(dictionary)` tick per essere eseguita.
 
 esempio:
 `new_dict = dict()`
 @code_tooltip_set = `set(collection = None)`
 Crea un nuovo set.
 Se `collection` è None, crea un set vuoto.
-Se `collection` è una collezione di valori, crea un nuovo set con quei valori al suo interno.
+Se `collection` è una collezione di valori, crea un nuovo set con quei valori.
 
 restituisce un set.
 
-richiede `1 + len(collection)` tick per l'esecuzione.
+richiede `1 + len(collection)` tick per essere eseguita.
 
 esempio:
 `new_set = set((1,2,3))`
 @code_tooltip_str = `str(object)`
 
-restituisce una rappresentazione in stringa di `object`.
+restituisce una rappresentazione in formato stringa di `object`.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `string = str(1000)`
@@ -269,53 +269,53 @@ Limita la velocità di esecuzione del programma per vedere meglio cosa sta succe
 
 Una `speed` di `1` è la velocità del drone senza potenziamenti di velocità.
 Una `speed` di `10` fa eseguire il codice `10` volte più velocemente e corrisponde alla velocità del drone dopo `9` potenziamenti di velocità.
-Una `speed` di `0.5` fa eseguire il codice a metà della velocità base. Questo può essere utile per vedere cosa sta facendo il codice.
+Una `speed` di `0.5` fa eseguire il codice a metà della velocità senza potenziamenti. Può essere utile per vedere cosa sta facendo il codice.
 
 Se `speed` è più veloce di quanto l'esecuzione possa attualmente andare, andrà semplicemente alla massima velocità.
 
-Se `speed` è `0` o negativa, la velocità torna al massimo.
-L'effetto cessa anche quando l'esecuzione si ferma.
+Se `speed` è `0` o negativa, la velocità viene riportata alla massima velocità.
+L'effetto si interromperà anche quando l'esecuzione si ferma.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
-Limita la dimensione della fattoria per vedere meglio cosa sta succedendo.
+Limita le dimensioni della fattoria per vedere meglio cosa sta succedendo.
 Pulisce anche la fattoria e reimposta la posizione del drone.
-Imposta la fattoria a una griglia `size` x `size`.
+Imposta la fattoria su una griglia `size` x `size`.
 La `size` più piccola possibile è `3`.
-Una `size` inferiore a `3` riporterà la griglia alla sua dimensione massima.
-L'effetto cessa anche quando l'esecuzione si ferma.
+Una `size` inferiore a `3` ripristinerà la griglia alla sua dimensione massima.
+L'effetto si interromperà anche quando l'esecuzione si ferma.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `set_world_size(5)`
 @code_tooltip_num_items = `num_items(item)` 
-Scopri quanti `item` possiedi attualmente.
+Scopri quanti `item` hai al momento.
 
 restituisce il numero di `item` attualmente nel tuo inventario.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `if num_items(Items.Fertilizer) > 0:
     use_item(Items.Fertilizer)`
 @code_tooltip_get_cost = `get_cost(thing)` 
-Ottiene il costo di una `thing`
+Ottiene il costo di una `thing`.
 
-Se `thing` è un'entity, ottiene il costo per piantarla.
+Se `thing` è un'entità, ottiene il costo per piantarla.
 Se `thing` è uno sblocco, ottiene il costo per sbloccarlo.
 
-restituisce un dizionario con gli item come chiavi e i numeri come valori. Ogni item è mappato alla quantità necessaria.
+restituisce un dizionario con gli oggetti come chiavi e i numeri come valori. Ogni oggetto è mappato alla quantità necessaria.
 restituisce `{}` se usato su uno sblocco potenziabile che è già al livello massimo.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `cost = get_cost(Unlocks.Carrots)
@@ -323,11 +323,11 @@ for item in cost:
     if num_items(item) < cost[item]:
         print("not enough items to unlock carrots")`
 @code_tooltip_clear = `clear()` 
-Rimuove tutto dalla fattoria, riporta il drone alla posizione `(0,0)` e cambia il cappello con quello di paglia.
+Rimuove tutto dalla fattoria, sposta il drone alla posizione `(0,0)` e cambia il cappello con quello di paglia.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `clear()`
@@ -336,7 +336,7 @@ Ottiene il compagno preferito della pianta sotto il drone.
 
 restituisce una tupla della forma `(companion_type, (companion_x_position, companion_y_position))`
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `companion = get_companion()
@@ -345,18 +345,18 @@ if companion != None:
 @code_tooltip_unlock = `unlock(unlock)` 
 Ha esattamente lo stesso effetto di cliccare il pulsante corrispondente a `unlock` nell'albero delle ricerche.
 
-restituisce `True` se lo sblocco è riuscito, altrimenti `False`.
+restituisce `True` se lo sblocco è andato a buon fine, `False` altrimenti.
 
-richiede `200` tick per l'esecuzione in caso di successo, altrimenti `1` tick.
+richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altrimenti.
 
 esempio:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Usato per controllare se uno sblocco, un'entity, un terreno o un item è già stato sbloccato.
+Usato per controllare se uno sblocco, un'entità, un terreno o un oggetto è già sbloccato.
 
-restituisce `1` più il numero di volte che `thing` è stato potenziato, se `thing` è potenziabile. Altrimenti, restituisce `1` se `thing` è sbloccato, `0` altrimenti.
+restituisce `1` più il numero di volte che `thing` è stato potenziato, se `thing` è potenziabile. Altrimenti restituisce `1` se `thing` è sbloccato, `0` altrimenti.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `plant(Entities.Bush)
@@ -368,47 +368,47 @@ Non rimuove nessuno dei tuoi codici.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `reset()`
 @code_tooltip_measure = `measure(direction = None)` 
-Può misurare alcuni valori su alcune entity. L'effetto dipende dall'entity.
+Può misurare alcuni valori su alcune entità. L'effetto dipende dall'entità.
 
-Se `direction` non è `None`, misura l'entity adiacente nella direzione data.
+Se `direction` non è `None`, misura l'entità vicina nella direzione data.
 
 restituisce il numero di petali di un girasole.
-restituisce la prossima posizione per un tesoro o una mela.
+restituisce la posizione successiva per un tesoro o una mela.
 restituisce la dimensione di un cactus.
 restituisce un numero misterioso per una zucca.
-restituisce `None` per tutte le altre entity.
+restituisce `None` per tutte le altre entità.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `num_petals = measure()`
 @code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`
-Avvia una simulazione a tempo per il `leaderboard` usando il `file_name` specificato come punto di partenza.
-`speedup` imposta la velocità iniziale.
+Avvia una simulazione a tempo per la `leaderboard` usando il `file_name` specificato come punto di partenza.
+`speedup` imposta l'accelerazione iniziale.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Avvia una simulazione per il leaderboard usando il `filename` specificato come punto di partenza.
+Avvia una simulazione per la leaderboard usando il `filename` specificato come punto di partenza.
 
 `sim_unlocks`: Una sequenza contenente gli sblocchi iniziali.
-`sim_items`: Un dict che mappa gli item alle quantità. La simulazione inizia con questi item.
+`sim_items`: Un dict che mappa gli oggetti alle quantità. La simulazione inizia con questi oggetti.
 `sim_globals`: Un dict che mappa i nomi delle variabili ai valori. La simulazione inizia con queste variabili nello scope globale.
 `seed`: Il seed casuale della simulazione. Deve essere un intero positivo.
-`speedup`: La velocità iniziale.
+`speedup`: L'accelerazione iniziale.
 
 restituisce il tempo impiegato per eseguire la simulazione.
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `filename = "f1"
@@ -420,11 +420,11 @@ speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @code_tooltip_spawn_drone = `spawn_drone(filename)`
-Genera un nuovo drone nella stessa posizione del drone che ha eseguito il comando `spawn_drone`. Il nuovo drone inizia quindi a eseguire la funzione specificata. Una volta terminato, scomparirà automaticamente.
+Genera un nuovo drone nella stessa posizione del drone che ha eseguito il comando `spawn_drone(function)`. Il nuovo drone inizia quindi a eseguire la funzione specificata. Al termine, scomparirà automaticamente.
 
 restituisce l'handle del nuovo drone o `None` se tutti i droni sono già stati generati.
 
-richiede `200` tick per l'esecuzione se un drone è stato generato, altrimenti `1`.
+richiede `200` tick per essere eseguita se un drone è stato generato, `1` altrimenti.
 
 esempio:
 `def harvest_column():
@@ -437,11 +437,11 @@ while True:
         move(East)`
 
 @code_tooltip_wait_for = `wait_for(drone)`
-Attende finché il `drone` specificato non termina.
+Aspetta che il `drone` dato termini.
 
 restituisce il valore di ritorno della funzione che il `drone` stava eseguendo.
 
-richiede `1` tick per l'esecuzione se il `drone` atteso ha già terminato.
+richiede `1` tick per essere eseguita se il `drone` atteso ha già finito.
 
 esempio:
 `def get_entity_type_in_direction(dir):
@@ -457,7 +457,7 @@ print(wait_for(handle))`
 
 restituisce il numero massimo di droni che puoi avere nella fattoria.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `while num_drones() < max_drones():
@@ -468,7 +468,7 @@ esempio:
 
 restituisce il numero di droni attualmente nella fattoria.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `while num_drones() < max_drones():
@@ -480,7 +480,7 @@ Stampa un valore proprio come `print(*args)` ma non si ferma per scriverlo in ar
 
 restituisce `None`
 
-richiede `0` tick per l'esecuzione.
+richiede `0` tick per essere eseguita.
 
 esempio:
 `quick_print("hi mom")`
@@ -489,7 +489,7 @@ Cambia il cappello del drone in `hat`.
 
 restituisce `None`
 
-richiede `200` tick per l'esecuzione.
+richiede `200` tick per essere eseguita.
 
 esempio:
 `change_hat(Hats.Dinosaur_Hat)`
@@ -498,10 +498,10 @@ esempio:
 Ottiene il massimo di una sequenza di elementi o di diversi argomenti passati.
 Può essere usato su numeri e stringhe.
 
-`max(a,b,c)`: Restituisce il massimo di `a`, `b` e `c`.
+`max(a,b,c)`: Restituisce il massimo tra `a`, `b` e `c`.
 `max(sequence)`: Restituisce il massimo di tutti i valori in una sequenza.
 
-richiede #comparazioni tick per l'esecuzione.
+richiede #confronti tick per essere eseguita.
 
 esempio:
 `max([3,6,34,16])`
@@ -509,28 +509,28 @@ esempio:
 Ottiene il minimo di una sequenza di elementi o di diversi argomenti passati.
 Può essere usato su numeri e stringhe.
 
-`min(a,b,c)`: Restituisce il minimo di `a`, `b` e `c`.
+`min(a,b,c)`: Restituisce il minimo tra `a`, `b` e `c`.
 `min(sequence)`: Restituisce il minimo di tutti i valori in una sequenza.
 
-richiede #comparazioni tick per l'esecuzione.
+richiede #confronti tick per essere eseguita.
 
 esempio:
 `min([3,6,34,16])`
 @code_tooltip_abs = `abs(number)`
 Calcola il valore assoluto di un numero.
 
-restituisce `number` se `number` è positivo, altrimenti `-number`.
+restituisce `number` se `number` è positivo, `-number` altrimenti.
 
-richiede 1 tick per l'esecuzione.
+richiede 1 tick per essere eseguita.
 
 esempio:
 `abs(-69)`
 @code_tooltip_random = `random()`
-Estrae un numero casuale tra 0 (incluso) e 1 (escluso).
+Genera un numero casuale tra 0 (incluso) e 1 (escluso).
 
 restituisce il numero casuale.
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `def random_elem(list):
@@ -541,7 +541,7 @@ Aggiunge `element` alla fine della `list`.
 
 restituisce `None`
 
-richiede `1` tick per l'esecuzione.
+richiede `1` tick per essere eseguita.
 
 esempio:
 `list = []
@@ -551,7 +551,7 @@ Aggiunge `element` al `set`.
 
 restituisce `None`
 
-richiede `dimensione elemento` tick per l'esecuzione.
+richiede `dimensione elemento` tick per essere eseguita.
 
 esempio:
 `set = {0}
@@ -561,7 +561,7 @@ Rimuove la prima occorrenza di `element` dalla `collection`.
 
 restituisce `None`
 
-richiede `dimensione elemento` tick per l'esecuzione su un set, #comparazioni + #spostamenti tick su una lista.
+richiede `dimensione elemento` tick per essere eseguita su un set, #confronti + #spostamenti tick su una lista.
 
 esempio:
 `list = [True, False, None]
@@ -572,7 +572,7 @@ Rimuove l'ultimo elemento da una lista o l'elemento specificato da un dizionario
 
 restituisce l'elemento rimosso
 
-richiede `dimensione chiave` tick per l'esecuzione su un dizionario, `len(list) - i + 1` tick su una lista.
+richiede `dimensione chiave` tick per essere eseguita su un dizionario, `len(list) - i + 1` tick su una lista.
 
 esempio:
 `list = [True, False, None]
@@ -587,14 +587,14 @@ richiede `len(list) - i + 1` tick.
 esempio:
 `list = [1,2]
 list.insert(0, 0)`
-@code_tooltip_Items = Contiene tutti gli item che possono trovarsi nell'inventario. Può essere iterato con un ciclo `for`.
+@code_tooltip_Items = Contiene tutti gli oggetti che possono essere nell'inventario. Può essere iterato con un ciclo `for`.
 @code_tooltip_Entities = Contiene tutti i tipi di piante. Può essere iterato con un ciclo `for`.
 @code_tooltip_Grounds = Contiene tutti i possibili tipi di terreno. Può essere iterato con un ciclo `for`.
-@code_tooltip_Unlocks = Contiene tutti gli sblocchi e i potenziamenti del menu di ricerca. Può essere iterato con un ciclo `for`.
+@code_tooltip_Unlocks = Contiene tutti gli sblocchi e i potenziamenti nel menu di ricerca. Può essere iterato con un ciclo `for`.
 @code_tooltip_Hats = Contiene tutti i tipi di cappelli. Può essere iterato con un ciclo `for`.
-@code_tooltip_Leaderboards = Contiene tutte le categorie del leaderboard. Può essere iterato con un ciclo `for`.
+@code_tooltip_Leaderboards = Contiene tutte le categorie della leaderboard. Può essere iterato con un ciclo `for`.
 @code_tooltip_for = Un ciclo che itera su tutti gli elementi di una sequenza. Alcuni linguaggi di programmazione lo chiamano ciclo "foreach".
-@code_tooltip_while = Esegue un ciclo finché la condizione è falsa.
+@code_tooltip_while = Esegue un ciclo finché la condizione non è falsa.
 @code_tooltip_def = Definisce una funzione.
 @code_tooltip_True = Un valore booleano che è sempre vero.
 @code_tooltip_False = Un valore booleano che è sempre falso.
@@ -605,13 +605,13 @@ list.insert(0, 0)`
     if condition:`
 @code_tooltip_None = Un valore che rappresenta l'assenza di un valore.
 @code_tooltip_continue = Continua immediatamente con la successiva iterazione del ciclo. Se ci sono cicli annidati, questo influenzerà sempre il ciclo più interno.
-@code_tooltip_break = Esce da un ciclo e continua ad eseguire le istruzioni dopo il ciclo. Se ci sono cicli annidati, questo influenzerà sempre il ciclo più interno.
-@code_tooltip_North = La direzione verso l'alto dello schermo. A meno che non giri lo schermo.
-@code_tooltip_East = La direzione verso destra dello schermo. A meno che non giri lo schermo.
-@code_tooltip_South = La direzione verso il basso dello schermo. A meno che non giri lo schermo.
-@code_tooltip_West = La direzione verso sinistra dello schermo. A meno che non giri lo schermo.
+@code_tooltip_break = Esce da un ciclo e continua a eseguire le istruzioni dopo il ciclo. Se ci sono cicli annidati, questo influenzerà sempre il ciclo più interno.
+@code_tooltip_North = La direzione verso l'alto sullo schermo. A meno che non giri lo schermo.
+@code_tooltip_East = La direzione verso destra sullo schermo. A meno che non giri lo schermo.
+@code_tooltip_South = La direzione verso il basso sullo schermo. A meno che non giri lo schermo.
+@code_tooltip_West = La direzione verso sinistra sullo schermo. A meno che non giri lo schermo.
 @code_tooltip_not = `not True` è `False` e `not False` è `True`.
-@code_tooltip_and = Valuta il primo operando. Se è falsy (`False`, `0` e collezioni vuote), restituisce immediatamente quel valore (short-circuiting della valutazione), altrimenti, valuta e restituisce il secondo operando.
-@code_tooltip_or = Valuta il primo operando. Se è truthy (qualsiasi cosa diversa da `False`, `0` e collezioni vuote), restituisce immediatamente quel valore (short-circuiting della valutazione), altrimenti, valuta e restituisce il secondo operando.
+@code_tooltip_and = Valuta il primo operando. Se è 'falsy' (`False`, `0` e collezioni vuote), restituisce immediatamente quel valore (cortocircuitando la valutazione), altrimenti, valuta e restituisce il secondo operando.
+@code_tooltip_or = Valuta il primo operando. Se è 'truthy' (qualsiasi cosa diversa da `False`, `0` e collezioni vuote), restituisce immediatamente quel valore (cortocircuitando la valutazione), altrimenti, valuta e restituisce il secondo operando.
 @code_tooltip_return = Usato per restituire un valore da una funzione.
-@code_tooltip_pass = Non fa nulla. Può essere utile perché i blocchi di codice vuoti non sono permessi.
+@code_tooltip_pass = Non fa nulla. Può essere utile perché i blocchi di codice vuoti non sono ammessi.

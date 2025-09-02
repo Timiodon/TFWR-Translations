@@ -1,2 +1,2 @@
-@hat_descr_straw_hat = O chapéu default.
-@hat_descr_dinosaur_hat = Equipa-o para iniciar o jogo do dinossauro.
+@hat_descr_straw_hat = O chapéu padrão.
+@hat_descr_dinosaur_hat = Equipe-o para começar o jogo do dinossauro.

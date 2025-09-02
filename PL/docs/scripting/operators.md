@@ -3,16 +3,16 @@ operatory arytmetyczne: `+, -, *, /, //, %, **`
 operatory porównania: `==, !=, <=, >=, <, >`
 operatory logiczne: `not, and, or`
 
-Uwaga: Wszystkie liczby w grze to liczby zmiennoprzecinkowe (floating point). Więc wszystkie operatory arytmetyczne są operatorami zmiennoprzecinkowymi.
+Uwaga: Wszystkie liczby w grze są liczbami zmiennoprzecinkowymi. Dlatego wszystkie operatory arytmetyczne są operatorami zmiennoprzecinkowymi.
 `//` jest zdefiniowane tak, że po prostu zaokrągla liczbę w dół po dzieleniu.
 
-Aby używać operatorów przypisania, musisz odblokować ulepszenie „Zmienne”.
+Do używania operatorów przypisania musisz odblokować odblokowanie „Zmienne”.
 
 ## Wprowadzenie
-Operatory pozwalają porównywać, modyfikować i łączyć wartości.
-Operatory arytmetyczne `+, -, *, /, //, %, **` służą do wykonywania popularnych operacji matematycznych na liczbach.
+Operatory pozwalają na porównywanie, modyfikowanie i łączenie wartości. 
+Operatory arytmetyczne `+, -, *, /, //, %, **` są używane do wykonywania typowych operacji matematycznych na liczbach. 
 Operatory porównania `==, !=, <=, >=, <, >` służą do porównywania wartości. Wynikiem jest zawsze `True` lub `False`.
-Operatory logiczne (nazywane również operatorami boolean) `not, and, or` służą do łączenia wartości logicznych.
+Operatory logiczne (zwane również operatorami boolowskimi) `not, and, or` służą do łączenia wartości prawdy.
 
 ## Operatory arytmetyczne
 `+` i `-` służą do dodawania i odejmowania.
@@ -25,11 +25,11 @@ Operatory logiczne (nazywane również operatorami boolean) `not, and, or` słu�
 `2 * 3` daje w wyniku `6`
 `5 / 2` daje w wyniku `2.5`
 
-`//` robi to samo co `/`, ale wynik jest zaokrąglany w dół (do następnej liczby całkowitej).
+`//` robi to samo co `/`, ale wynik jest zaokrąglany w dół (do najbliższej liczby całkowitej).
 
 `5 // 2` daje w wyniku `2`
 
-`%` to operator modulo, znany również jako operator reszty z dzielenia. Zasadniczo dzieli dwie liczby, a następnie zwraca resztę. Można też o nim myśleć jako o wielokrotnym odejmowaniu prawej liczby od lewej, aż reszta będzie mniejsza od prawej liczby.
+`%` to operator modulo, znany również jako operator reszty z dzielenia. Zasadniczo dzieli dwie liczby, a następnie zwraca resztę. Można o nim myśleć jako o wielokrotnym odejmowaniu prawej liczby od lewej, aż reszta będzie mniejsza od prawej liczby.
 
 `4 % 2` daje w wyniku `0`
 `5 % 2` daje w wyniku `1`
@@ -49,7 +49,7 @@ Operatory logiczne (nazywane również operatorami boolean) `not, and, or` słu�
 `Entities.Bush != Entities.Bush` daje w wyniku `False`
 `3 != 3 + 1` daje w wyniku `True`
 
-`<=, >=, <, >` mogą być używane tylko na liczbach. Sprawdzają, czy lewa liczba jest „mniejsza lub równa” (`<=`), „większa lub równa” (`>=`), „mniejsza” (`<`) lub „większa” (`>`) niż prawa liczba.
+`<=, >=, <, >` mogą być używane tylko na liczbach. Sprawdzają, czy lewa liczba jest „mniejsza lub równa” (`<=`), „większa lub równa” (`>=`), „mniejsza” (`<`) lub „większa” (`>`) od prawej liczby.
 
 `1 <= 1` daje w wyniku `True`
 `2 >= 3` daje w wyniku `False`

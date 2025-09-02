@@ -11,10 +11,10 @@ Kann auf {3} wachsen.
 @object_descr_pumpkin = Kürbisse wachsen zusammen, wenn sie neben anderen ausgewachsenen Kürbissen stehen. Etwa 1 von 5 Kürbissen stirbt, wenn er erwachsen wird.
 @object_descr_dead_pumpkin = Einer von fünf Kürbissen stirbt, wenn er erwachsen wird, und hinterlässt einen toten Kürbis. Tote Kürbisse sind nutzlos und verschwinden, wenn etwas Neues gepflanzt wird.
 @object_descr_sunflower = Sonnenblumen sammeln die Energie der Sonne. Wenn du sie erntest, erhältst du `Items.Power`.
-Wenn du eine Sonnenblume mit der maximalen Anzahl von Blütenblättern erntest, erhältst du Bonus-Energie.
+Wenn du eine Sonnenblume mit der maximalen Anzahl an Blütenblättern erntest, bekommst du Bonus-Energie.
 @object_descr_cactus = Kakteen gibt es in 10 verschiedenen Größen. Beim Ernten werden auch benachbarte Kakteen geerntet, die "sortiert" sind.
 @object_descr_hedge = Teil des Labyrinths.
-@object_descr_treasure = Ein Schatz, der Gold im Wert der Seitenlänge des Labyrinths enthält, in dem er versteckt ist. Er kann wie eine Pflanze geerntet werden.
-@object_descr_dinosaur = Ein Stück vom Schwanz des Dinosaurierhuts.
+@object_descr_treasure = Ein Schatz, der Gold in Höhe der Seitenlänge des Labyrinths enthält, in dem er versteckt ist. Er kann wie eine Pflanze geerntet werden.
+@object_descr_dinosaur = Ein Stück des Schwanzes vom Dinosaurierhut.
 @object_descr_grassland = Der Standardboden. Gras wächst automatisch darauf.
-@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in Erde. Ein erneuter Aufruf von `till()` verwandelt ihn zurück in Grasland.
+@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in Ackerboden. Ein erneuter Aufruf von `till()` verwandelt ihn zurück in Grasland.

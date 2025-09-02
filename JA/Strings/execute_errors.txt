@@ -1,75 +1,75 @@
-@error_code_after_block = ここにはコードがあってはなりません。削除するか、新しい行に移動してみてください。
-@error_wrong_number_args = {0}は{1}個の引数を取ります。
-@error_expected_no_args = {0}は引数を取りません。
-@error_wrong_args = {1}の{0}番目の引数は{2}でした。これは有効な引数ではありません。
+@error_code_after_block = ここにはコードを記述できません。削除するか、新しい行に移動してください。
+@error_wrong_number_args = {0} は {1} 個の引数を取ります。
+@error_expected_no_args = {0} は引数を取りません。
+@error_wrong_args = {1} の {0} 番目の引数は {2} でした。これは有効な引数ではありません。
 @error_syntax_error_in_import = インポートされたモジュールに構文エラーがあります。
 @error_module_not_found = この名前のモジュールは存在しません。名前はファイル名と一致する必要があります。これはウィンドウの上部に表示される名前です。
-@error_list_element_not_found = {0}はリストの要素ではありません。
-@error_set_element_not_found = {0}はsetの要素ではありません。
-@error_index_out_of_bounds = インデックス{0}はリスト{1}の範囲外でした。
-@error_index_out_of_bounds2 = インデックスがリストの範囲外でした。
-@error_arith_assign_not_used_on_number = {0}は数値にのみ使用できます。
-@error_bool_op_not_used_on_bool = 論理演算子は`True`または`False`に評価されるブール式にのみ使用できます。
-@error_bad_bin_operator = 演算子{0}はオペランド{1}と{2}には使用できません。
-@error_bad_unary_operator = 演算子{0}は{1}には使用できません。
-@error_index = {0}は{1}のインデックスとして使用できません。
-@error_index_on_non_indexable = {0}にインデックスを付けることはできません。
+@error_list_element_not_found = {0} はリストの要素ではありません。
+@error_set_element_not_found = {0} はセットの要素ではありません。
+@error_index_out_of_bounds = インデックス {0} はリスト {1} の範囲外でした。
+@error_index_out_of_bounds2 = インデックスはリストの範囲外でした。
+@error_arith_assign_not_used_on_number = {0} は数値にのみ使用できます。
+@error_bool_op_not_used_on_bool = 論理演算子は `True` または `False` に評価されるブール式にのみ使用できます。
+@error_bad_bin_operator = 演算子 {0} はオペランド {1} と {2} には使用できません。
+@error_bad_unary_operator = 演算子 {0} は {1} には使用できません。
+@error_index = {0} は {1} のインデックスとして使用できません。
+@error_index_on_non_indexable = {0} にインデックス付けすることはできません。
 @error_zero_step = ステップサイズをゼロにすることはできません。
-@error_index_on_tuple = タプルは不変であるため、タプルの要素に代入することはできません。
-@error_bad_key = {0}はキーとして使用できません。
-@error_slice_dict = dictionaryをスライスすることはできません。
-@error_key = {0}はdictionaryのキーではありません。
-@error_condition_not_bool = {0}は有効な条件ではありません。条件はブール値でなければなりません。つまり、常に`True`または`False`のいずれかになる式でなければなりません。
-@error_for_requires_iterable = {0}はforループでイテレートできません。forループにはイテレートするシーケンスを与える必要があります。例：
+@error_index_on_tuple = タプルは不変であるため、タプル要素に代入することはできません。
+@error_bad_key = {0} はキーとして使用できません。
+@error_slice_dict = 辞書をスライスすることはできません。
+@error_key = {0} は辞書のキーではありません。
+@error_condition_not_bool = {0} は有効な条件ではありません。条件はブール値でなければなりません。つまり、常に `True` または `False` のいずれかである式でなければなりません。
+@error_for_requires_iterable = {0} はforループで反復処理できません。forループには反復処理するシーケンスを指定する必要があります。例：
 
 `for i in range(5):`
-ここでrange(5)はシーケンス`0,1,2,3,4`を返します。
-@error_no_loop_to_break = `break`はループ内でのみ使用できます。
-@error_no_loop_to_continue = `continue`はループ内でのみ使用できます。
-@error_no_function_to_return_from = `return`は関数内でのみ使用できます。
-@error_missing_unlock = これを使用するには、まずアンロックする必要があります。
-@error_missing_x_unlock = これを使用するには、まず{0}をアンロックする必要があります。
-@error_name_not_defined = {0}は一度も定義されていません。変数を使用する前に値を代入する必要があります。
-@error_missing_import = {0}は一度も定義されていません。ファイル{1}で定義されているようです。それをインポートし忘れましたか？
-インポートしている場合は、インポートサイクルが発生している可能性があります（インポートのドキュメントページを参照）。
-@error_missing_import_before_unlock = {0}は一度も定義されていません。ファイル{1}で定義されているようです。他のファイルからインポートするには、インポートをアンロックする必要があります。
-@error_call_before_def = {0}は定義されていません。このファイルのどこかで定義されているようですが、その定義はまだ実行されていません。関数は`def`ステートメントの後にのみ呼び出すことができます。
-@error_not_a_function = 関数ではないものを呼び出そうとしました。よくある間違いとして、関数と同じ名前の変数があることが原因でこれが発生することがあります。
-@error_invalid_const = {0}は存在しません。
+ここでrange(5)はシーケンス `0,1,2,3,4` を返します。
+@error_no_loop_to_break = `break` はループ内でのみ使用できます。
+@error_no_loop_to_continue = `continue` はループ内でのみ使用できます。
+@error_no_function_to_return_from = `return` は関数内でのみ使用できます。
+@error_missing_unlock = これを使用する前にアンロックする必要があります。
+@error_missing_x_unlock = これを使用する前に {0} をアンロックする必要があります。
+@error_name_not_defined = {0} は一度も定義されていません。変数を使用する前に値を代入する必要があります。
+@error_missing_import = {0} は一度も定義されていません。ファイル {1} で定義されているようです。それをインポートし忘れましたか？
+インポートしている場合、インポートサイクルが発生している可能性があります（インポートのドキュメントページを参照）。
+@error_missing_import_before_unlock = {0} は一度も定義されていません。ファイル {1} で定義されているようです。他のファイルから何かをインポートできるようにするには、インポートをアンロックする必要があります。
+@error_call_before_def = {0} は定義されていません。このファイルのどこかで定義されているようですが、その定義はまだ実行されていません。関数は `def` ステートメントの後にのみ呼び出すことができます。
+@error_not_a_function = 関数ではないものを呼び出そうとしました。これを引き起こす一般的な間違いは、関数と同じ名前の変数を持つことです。
+@error_invalid_const = {0} は存在しません。
 @error_invalid_const2 = これは存在しません。
-@error_max_stack_size_reached = 最大call stackサイズに達しました。これは、再帰的な関数呼び出しが多すぎることが原因である可能性が最も高いです。
-@error_max_comparison_depth = 最大比較深度に達しました。これは、例えば、自分自身を含むリストを比較している場合に発生する可能性があります。
+@error_max_stack_size_reached = 最大コールスタックサイズに達しました。これは、再帰的な関数呼び出しが多すぎることが原因である可能性が最も高いです。
+@error_max_comparison_depth = 最大比較深度に達しました。例えば、自身を含むリストを比較している場合に発生する可能性があります。
 @error_assign_type_mismatch = 代入の左辺が右辺と一致しませんでした。
 @error_too_many_values_to_unpack = 右辺にはアンパックするのに十分な値が含まれていません。
 @error_not_enough_values = 右辺には左辺にアンパックするには多すぎる値が含まれています。
-@error_empty_print = `print()`には少なくとも1つの引数が必要です。
-@error_in_string = {0}が文字列内にあるかどうかは確認できません。
-@error_collection_changed_size_during_iteration = このコレクションのサイズは、それをイテレートするforループ内で変更することはできません。これは、コレクションのサイズを変更すると、forループが使用しているイテレータオブジェクトが無効になるためです。
-@error_wrong_use_of_max = {0}の最大値を計算できません。
-@error_wrong_use_of_min = {0}の最小値を計算できません。
-@error_function_as_condition = 関数{0}が`True`であるか確認しようとしています。これは関数オブジェクト自体であり、関数の戻り値ではありません。呼び出し演算子`()`で関数を呼び出すつもりでしたか？
+@error_empty_print = `print()` には少なくとも1つの引数が必要です。
+@error_in_string = 文字列内に {0} があるかどうかは確認できません。
+@error_collection_changed_size_during_iteration = このコレクションのサイズは、それを反復処理するforループ内で変更することはできません。これは、コレクションのサイズを変更すると、forループが使用しているイテレータオブジェクトが無効になるためです。
+@error_wrong_use_of_max = {0} の最大値を計算できません。
+@error_wrong_use_of_min = {0} の最小値を計算できません。
+@error_function_as_condition = 関数 {0} が `True` かどうかを確認しようとしています。これは関数オブジェクト自体であり、関数の戻り値ではありません。呼び出し演算子 `()` を使って関数を呼び出すつもりでしたか？
 
-Pythonでは、関数オブジェクトは真であるため、条件として使用すると`True`のように機能します。そのため、Pythonはこのエラーメッセージを出しません。
+Pythonでは、関数オブジェクトは真と見なされるため、条件として使用すると `True` のように機能し、Pythonはこのエラーメッセージを出しません。
 
-これはセーフガードerrorメッセージです。邪魔になる場合はオプションでオフにすることができます。
-@error_function_in_operator = 関数{0}に対して{1}を使用しようとしています。これは関数オブジェクト自体であり、関数の戻り値ではありません。呼び出し演算子`()`で関数を呼び出すつもりでしたか？
+これはセーフガードエラーメッセージであり、邪魔になる場合はオプションでオフにすることができます。
+@error_function_in_operator = 関数 {0} に対して {1} を使用しようとしています。これは関数オブジェクト自体であり、関数の戻り値ではありません。呼び出し演算子 `()` を使って関数を呼び出すつもりでしたか？
 
-これはセーフガードerrorメッセージです。邪魔になる場合はオプションでオフにすることができます。
-@error_zero_step_size = ステップサイズを0にすることはできません。
+これはセーフガードエラーメッセージであり、邪魔になる場合はオプションでオフにすることができます。
+@error_zero_step_size = ステップサイズは0にできません。
 @error_sequence_too_large = シーケンスが大きすぎてコピーできませんでした。
-@error_invalid_sim_unlocks = 開始時のアンロックが無効でした。アンロックのシーケンス、または`(Unlock.Carrots, 3)`の形式のタプルのシーケンスである必要があります。
-@error_invalid_sim_items = 開始時のアイテムが無効でした。`{Items.Hay : 100}`のような、アイテムを数値にマッピングするdictである必要があります。
-@error_invalid_sim_globals = 開始時のグローバルが無効でした。`{"x" : 42}`のような、変数名を値にマッピングするdictである必要があります。
-@error_division_by_zero = なんてこった！`0`で割ってしまいました。かろうじて生き延びましたね。
-@error_negative_use_item = 使用するアイテムの数量は少なくとも`1`でなければなりません。{0}でした。
-@error_use_before_assign = 変数{0}に値が代入される前に読み込もうとしました。
-グローバル変数を変更したい場合は、グローバルキーワードを使用してグローバルscopeに書き込む必要があります。
+@error_invalid_sim_unlocks = 開始時のアンロックが無効でした。アンロックのシーケンスまたは `(Unlock.Carrots, 3)` の形式のタプルである必要があります。
+@error_invalid_sim_items = 開始時のアイテムが無効でした。`{Items.Hay : 100}` のようにアイテムを数値にマッピングする辞書である必要があります。
+@error_invalid_sim_globals = 開始時のグローバル変数が無効でした。`{"x" : 42}` のように変数名を値にマッピングする辞書である必要があります。
+@error_division_by_zero = なんてこった！`0` で割ってしまいました。かろうじて生き延びましたね。
+@error_negative_use_item = アイテムの使用量は少なくとも `1` でなければなりません。{0} でした。
+@error_use_before_assign = 変数 {0} に値が代入される前に読み込もうとしました。
+グローバル変数を変更したい場合は、`global` キーワードを使用してグローバルスコープに書き込む必要があります。
 
 `global x
 x += 1`
-@error_attribute_on_non_module = {0}に属性を割り当てることはできません。
-@error_file_not_found = ファイル{0}は存在しません。
+@error_attribute_on_non_module = {0} に属性を割り当てることはできません。
+@error_file_not_found = ファイル {0} は存在しません。
 @error_max_drones_reached = ドローンの上限を超えました。
-@error_dino_hat_already_used = 恐竜の帽子は1つしかなく、すでに使用されています。2体目のドローンで使用することはできません。
-@error_invalid_drone_id = ID {0} のドローンは存在しません。
-@error_invalid_handle = {0}はもう存在しません。
+@error_dino_hat_already_used = 恐竜の帽子は1つしかなく、すでに使用中です。2台目のドローンでは使用できません。
+@error_invalid_drone_id = ID {0} のドローンはありません。
+@error_invalid_handle = {0} はもう存在しません。

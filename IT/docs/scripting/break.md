@@ -18,7 +18,7 @@ Ha lo stesso effetto di
 `while not can_harvest():
 	pass`
 
-Nei cicli annidati `break` esce sempre dal ciclo più interno.
+Nei cicli annidati, `break` esce sempre dal ciclo più interno.
 
 `for i in range(10):
 	for j in range(10):

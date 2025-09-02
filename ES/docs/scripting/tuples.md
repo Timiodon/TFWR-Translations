@@ -4,7 +4,7 @@ Para crear una tupla, simplemente separa los valores con comas:
 
 `tuple = 1, 2`
 
-También puedes desempaquetarlas en varias variables de nuevo. En el siguiente código, la tupla `(1,2)` se desempaqueta en dos variables `a` y `b`.
+También puedes desempaquetarlas en varias variables de nuevo. En el código de abajo, la tupla `(1,2)` se desempaqueta en dos variables `a` y `b`.
 
 `a, b = 1, 2`
 
@@ -18,7 +18,7 @@ imprime `2`
 `tuple[0] = 3`
 lanza un error
 <unlock=dicts>
-A diferencia de las listas, las tuplas se pueden usar como claves en los dictionaries.
+A diferencia de las listas, las tuplas se pueden usar como claves en los diccionarios.
 
 `d = {(1,2):(4,5)}
 

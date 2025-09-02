@@ -1,5 +1,5 @@
 # If文
-if、elif、elseを使って、条件に応じてコードを実行できます。
+if、elif、else を使って、条件付きでコードを実行できます。
 
 `if condition1:
 	do_a_flip()
@@ -10,22 +10,22 @@ else:
 	harvest()`
 
 ## 構文
-`if`を使うと、ある条件が`True`の場合にのみコードを実行できます。これはループしない`while`ループのようなものです。
-`if`は`while`ループと同様に条件を取り、その条件が`True`と評価された場合にifのコードブロックを実行します:
+`if` を使うと、ある条件が `True` の場合にのみコードを実行できます。これはループしない `while` ループのようなものです。
+`if` は `while` ループと同じように条件を取り、条件が `True` に評価された場合にifコードブロックを実行します:
 
 `#conditionがTrueの場合にフリップを実行
 if condition:
 	do_a_flip()`
 
-ifの後に`else`を追加することもでき、これは条件が`False`と評価された場合に実行されるコードを定義します。
+ifの後に `else` を追加して、条件が `False` に評価された場合に実行されるコードを定義することもできます。
 
-`condition`がTrueの場合はフリップを行い、そうでなければ収穫します。
+`condition` がTrueの場合はフリップを実行し、そうでない場合は収穫します。
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif`はelse ifの短縮形です。
+`elif` は else if の短縮形です。
 
 `if condition1:
 	#a

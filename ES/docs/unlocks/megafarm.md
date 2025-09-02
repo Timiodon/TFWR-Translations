@@ -1,7 +1,7 @@
 # Megagranja
 Este desbloqueo increíblemente poderoso te da acceso a múltiples drones. 
 
-Como antes, sigues empezando con un solo dron. Los drones adicionales deben ser generados primero y desaparecerán después de que el programa termine.
+Como antes, todavía comienzas con un solo dron. Los drones adicionales deben ser generados primero y desaparecerán después de que el programa termine.
 Cada dron ejecuta su propio programa por separado. Se pueden generar nuevos drones usando la función `spawn_drone(function)`.
 
 `def drone_function():
@@ -10,7 +10,7 @@ Cada dron ejecuta su propio programa por separado. Se pueden generar nuevos dron
 
 spawn_drone(drone_function)`
 
-Esto genera un nuevo dron en la misma posición que el dron que ejecutó el comando `spawn_drone(function)`. El nuevo dron comienza a ejecutar la función especificada. Cuando termina, desaparecerá automáticamente.
+Esto genera un nuevo dron en la misma posición que el dron que ejecutó el comando `spawn_drone(function)`. El nuevo dron comienza a ejecutar la función especificada. Después de que termina, desaparecerá automáticamente.
 
 Los drones no chocan entre sí. 
 
@@ -32,7 +32,7 @@ Esto hará que tu primer dron se mueva horizontalmente y genere más drones. Los
 
 Si ya se han generado todos los drones disponibles, `spawn_drone()` no hará nada y devolverá `None`.
 
-<spoiler=mostrar pista> Echa un vistazo a esta súper útil función paralela `for_all`, que toma cualquier función y la ejecuta en cada casilla de la granja. Utiliza todos los drones disponibles para hacerlo.
+<spoiler=show hint> Echa un vistazo a esta súper útil función paralela `for_all`, que toma cualquier función y la ejecuta en cada casilla de la granja. Utiliza todos los drones disponibles para hacerlo.
 
 `def for_all(f):
 	def row():
@@ -47,13 +47,13 @@ Si ya se han generado todos los drones disponibles, `spawn_drone()` no hará nad
 
 for_all(harvest)`
 
-Un patrón particularmente útil es generar un dron si hay uno disponible y, si no, hacerlo tú mismo.
+Un patrón particularmente útil es generar un dron si hay uno disponible y, de lo contrario, hacerlo tú mismo.
 
 `if not spawn_drone(task):
 	task()`
 </spoiler>
 
-## Esperando a Otro Dron
+## Esperar a otro Dron
 Usa la función `wait_for(drone)` para esperar a que otro dron termine. Recibes el handle del `drone` cuando lo generas.
 `wait_for(drone)` devuelve el valor de retorno de la función que el otro dron estaba ejecutando.
 
@@ -66,10 +66,10 @@ def zero_arg_wrapper():
 drone = spawn_drone(zero_arg_wrapper)
 print(wait_for(drone))`
 
-Ten en cuenta que generar drones lleva tiempo, así que no es buena idea generar un nuevo dron para cada pequeña cosa.
+Ten en cuenta que generar drones lleva tiempo, así que no es una buena idea generar un nuevo dron para cada pequeña cosa.
 
 ## Sin Memoria Compartida
-Cada dron tiene su propia memoria y no puede leer o escribir directamente los globales de otro dron.
+Cada dron tiene su propia memoria y no puede leer o escribir directamente las variables globales de otro dron.
 
 `x = 0
 
@@ -80,10 +80,10 @@ def increment():
 wait_for(spawn_drone(increment))
 print(x)`
 
-Esto imprimirá `0` porque el nuevo dron incrementó su propia copia de la `x` global, lo cual no afecta a la `x` del primer dron.
+Esto imprimirá `0` porque el nuevo dron incrementó su propia copia de la `x` global, lo que no afecta a la `x` del primer dron.
 
 ## Condiciones de Carrera
-Múltiples drones pueden interactuar con la misma casilla de la granja al mismo tiempo. Si dos drones interactúan con la misma casilla durante el mismo tick, ambas interacciones ocurrirán, pero los resultados pueden variar según el orden de las interacciones.
+Múltiples drones pueden interactuar con la misma casilla de la granja al mismo tiempo. Si dos drones interactúan con la misma casilla durante el mismo tick, ambas interacciones ocurrirán, pero los resultados pueden diferir según el orden de las interacciones.
 
 Por ejemplo, imagina que los drones `0` y `1` están ambos sobre el mismo árbol que está casi completamente crecido.
 El dron `0` llama a
@@ -91,12 +91,12 @@ El dron `0` llama a
 El dron `1` llama a
 `harvest()`
 
-Si estas acciones ocurren al mismo tiempo, el árbol primero será fertilizado y luego cosechado. En ese caso, recibirás madera de él. Sin embargo, si el Dron `1` es ligeramente más rápido, el árbol será cosechado antes de ser fertilizado, y no recibirás la madera.
+Si estas acciones ocurren al mismo tiempo, el árbol primero será fertilizado y luego cosechado. En ese caso, recibirás madera de él. Sin embargo, si el dron `1` es ligeramente más rápido, el árbol será cosechado antes de ser fertilizado, y no recibirás la madera.
 Esto se llama una "condición de carrera". Es un problema común en la programación paralela, donde el resultado depende del orden en que se realizan las operaciones.
 
 Aquí hay otra situación problemática que puede ocurrir cuando múltiples drones ejecutan el mismo código simultáneamente en la misma posición.
 `if get_water() < 0.5:
     use_item(Items.Water)`
 
-Si múltiples drones ejecutan esto simultáneamente, todos ejecutarán la primera línea, lo que los meterá en el bloque `if`. Luego, todos usarán agua, desperdiciando mucha.
-Para cuando un dron llegue a la segunda línea, `get_water()` podría ya no ser menor que `0.5` porque otro dron ha regado la casilla mientras tanto.
+Si múltiples drones ejecutan esto simultáneamente, todos ejecutarán la primera línea, lo que los pondrá en el bloque `if`. Luego, todos usarán agua, desperdiciando mucha.
+Para cuando un dron llega a la segunda línea, `get_water()` podría ya no ser menor que `0.5` porque otro dron ha regado la casilla mientras tanto.

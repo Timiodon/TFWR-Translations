@@ -14,7 +14,7 @@
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = Powiększa teren farmy i odblokowuje ruch.
+@unlock_descr_expand = Rozszerza teren farmy i odblokowuje ruch.
 @unlock_descr_operators = Operatory arytmetyczne, porównania i logiczne.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
@@ -47,22 +47,22 @@ plant(Entities.Carrot)`
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = Umożliwia dostęp do kosztu rzeczy.
+@unlock_descr_costs = Umożliwia dostęp do kosztów rzeczy.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = Błyskawicznie hoduj rośliny.
+@unlock_descr_fertilizer = Sprawia, że rośliny rosną natychmiast.
 
 `use_item(Items.Fertilizer)`
-@unlock_descr_mazes = Labirynt ze skarbem w środku.
+@unlock_descr_mazes = Labirynt ze skarbem pośrodku.
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
-@unlock_descr_debug = Narzędzia pomocne w debugowaniu programów.
+@unlock_descr_debug = Narzędzia pomocne przy debugowaniu programów.
 
-`print("hi")`
-@unlock_descr_debug2 = Funkcje do tymczasowego spowolnienia wykonania i zmniejszenia farmy.
+`print("cześć")`
+@unlock_descr_debug2 = Funkcje do tymczasowego spowolnienia wykonywania i zmniejszenia farmy.
 
 `set_world_size(3)
 set_execution_speed(1)`
@@ -70,16 +70,16 @@ set_execution_speed(1)`
 @unlock_descr_auto_unlock = Automatycznie odblokowuj rzeczy.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Użyj uprawy współrzędnej, aby zwiększyć plon.
+@unlock_descr_polyculture = Używaj uprawy współrzędnej, aby zwiększyć plon.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Słoneczniki i Moc.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Dołącz do leaderboarda i walcz o najlepsze czasy.
+@unlock_descr_leaderboard = Dołącz do tabeli wyników, aby rywalizować o najlepsze czasy.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = Uzyskaj dostęp do słowników i setów.
+@unlock_descr_dicts = Uzyskaj dostęp do słowników i zbiorów.
 
 `right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Odblokowuje funkcje `min()`, `max()`, `abs()` i `random()`.
@@ -88,7 +88,7 @@ set_execution_speed(1)`
 @unlock_descr_cactus = Kaktus!
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = Wspaniałe starożytne stworzenia.
+@unlock_descr_dinosaurs = Majestatyczne starożytne stworzenia.
 @unlock_descr_simulation = Testuj szybciej i w powtarzalnych warunkach.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
@@ -99,10 +99,10 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = Dużo większa farma z wieloma dronami.
+@unlock_descr_megafarm = Znacznie większa farma z wieloma dronami.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = Powiększa farmę. To również czyści farmę.
+@multi_unlock_descr_expand = Rozszerza farmę. To również czyści farmę.
 @multi_unlock_descr_carrots = Zwiększa plon i koszt marchewek.
 @multi_unlock_descr_trees = Zwiększa plon krzaków i drzew.
 @multi_unlock_descr_pumpkins = Zwiększa plon i koszt dyń.
@@ -110,16 +110,16 @@ other_file.function()`
 @multi_unlock_descr_sunflowers = Zwiększa moc uzyskiwaną ze słoneczników.
 @multi_unlock_descr_cactus = Zwiększa plon i koszt kaktusów.
 @multi_unlock_descr_dinosaur = Zwiększa plon i koszt dinozaurów.
-@multi_unlock_descr_polyculture = Zwiększa mnożnik plonu z uprawy wielokulturowej.
+@multi_unlock_descr_polyculture = Zwiększa mnożnik plonu z uprawy współrzędnej.
 @multi_unlock_descr_watering = Otrzymuj więcej wody.
 @multi_unlock_descr_fertilizer = Otrzymuj więcej nawozu.
-@multi_unlock_descr_megafarm = Zwiększ dalej rozmiar farmy i liczbę dronów.
+@multi_unlock_descr_megafarm = Dalsze zwiększenie rozmiaru farmy i liczby dronów.
 @auto_unlock = Automatyczne odblokowanie
 @cactus = Kaktus
 @carrots = Marchewki
 @costs = Koszty
-@debug = Debug
-@debug_2 = Debug 2
+@debug = Debugowanie
+@debug_2 = Debugowanie 2
 @dictionaries = Słowniki
 @dinosaurs = Dinozaury
 @expand = Rozszerzenie
@@ -127,14 +127,14 @@ other_file.function()`
 @functions = Funkcje
 @grass = Trawa
 @import = Import
-@leaderboard = Leaderboard
+@leaderboard = Tabela wyników
 @lists = Listy
 @loops = Pętle
 @mazes = Labirynty
 @megafarm = Megafarma
 @operators = Operatory
 @plant = Sadzenie
-@polyculture = Polikultura
+@polyculture = Uprawa współrzędna
 @pumpkins = Dynie
 @senses = Zmysły
 @simulation = Symulacja

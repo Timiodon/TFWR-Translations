@@ -1,41 +1,41 @@
-# Dictionaries
-Dictionary 是一种数据结构，它允许你将 key 映射到 value，就像一本真正的词典将单词映射到它们的定义一样，你可以非常快速地查找它们。
+# 字典
+字典是一种数据结构，它允许你将键映射到值，就像真实世界中的字典将单词映射到它们的定义一样，你可以非常快速地查找它们。
 
-可以像这样创建一个 dictionary：
+可以这样创建一个字典：
 `right_of = {North:East, East:South, South:West, West:North}`
 
-冒号前的表达式是 key，冒号后的表达式是 key 映射到的 value。
-上面的 dictionary 将每个方向映射到它右边的方向。
+冒号前的表达式是键，冒号后的表达式是键映射到的值。
+上面的字典将每个方向映射到它右边的方向。
 
-这是另一个将无人机的位置映射到它上方 entity 的例子。
+这是另一个将无人机位置映射到其上方实体的字典。
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-访问映射到 key 的 value 类似于访问 list 中的元素：
+访问映射到键的值类似于访问列表中的元素：
 `value = dict[key]`
 
 示例：
 `orientation = right_of[South]`
 这将 `orientation` 设置为 `West`。
 
-你可以像这样向 dictionary 添加一个新的键值对：
+你可以这样向字典添加一个新的键值对：
 `dict[key] = value`
 
 示例：
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
-这会更新当前位置存储的 entity。
+这会更新当前位置存储的实体。
 
-Key 是唯一的，所以添加一个 dictionary 中已经存在的 key 会覆盖之前的值。
+键是唯一的，所以添加一个字典中已存在的键会覆盖之前的值。
 
 使用 `dict.pop(key)` 从 `dict` 中移除一个键值对。
 
-如果 `key` 是 `dict` 中的一个 key，`key in dict` 的评估结果为 `True`，否则为 `False`。
-所以你可以使用 `if key in dict:` 来检查 `dict` 是否包含该 key。
+如果 `key` 是 `dict` 中的一个键，`key in dict` 的结果为 `True`，否则为 `False`。
+所以你可以使用 `if key in dict:` 来检查 `dict` 是否包含该键。
 
-将一个 dictionary 放入 for 循环中，可以让你遍历所有的 key：
+将字典放入 for 循环中可以让你遍历所有的键：
 `for key in dict:
 	value = dict[key]`
 
-对于 key 的迭代顺序没有任何保证。
+对于键的迭代顺序没有任何保证。
 
-另见 [Sets](docs/scripting/sets.md)
+另请参阅[集合](docs/scripting/sets.md)

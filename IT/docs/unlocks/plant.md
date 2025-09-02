@@ -6,6 +6,6 @@ Puoi passare il tipo di pianta che vuoi piantare alla funzione in questo modo:
 
 Questo pianterà un cespuglio sotto il drone.
 
-Chiama `clear()` per ripristinare la fattoria a tutta erba e resettare la posizione del drone.
+Chiama `clear()` per ripristinare la fattoria a tutta erba e reimpostare la posizione del drone.
 
 Sembra che se coltivi più di un tipo di pianta nella fattoria contemporaneamente, a volte puoi ottenere una resa maggiore. Dovrai ricercare la policoltura per saperne di più.

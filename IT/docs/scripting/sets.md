@@ -10,11 +10,11 @@ Usa `set.add(elem)` per aggiungere un nuovo elemento al set.
 
 Usa `set.remove(elem)` per rimuovere un elemento da un set.
 
-Usa `if elem in set:` per controllare se il set contiene un elemento.
+Usa `if elem in set:` per verificare se il set contiene un elemento.
 
-Usa `for elem in set:` per iterare tutti gli elementi nel set.
-Per set più grandi l'operatore `in` è molto più veloce di quanto lo sarebbe su una lista.
+Usa `for elem in set:` per iterare su tutti gli elementi del set.
+Per set più grandi, l'operatore `in` è molto più veloce di quanto lo sarebbe su una lista.
 
 Proprio come i dizionari, i set non sono ordinati, quindi non ci sono garanzie sull'ordine in cui gli elementi vengono iterati.
 
-Inoltre, gli elementi nei set sono unici, quindi aggiungere un elemento che è già nel set non modificherà il set.
+Inoltre, gli elementi nei set sono unici, quindi aggiungere un elemento che è già nel set non cambierà il set.

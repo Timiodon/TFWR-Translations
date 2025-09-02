@@ -7,16 +7,16 @@ A questo scopo hai ricevuto il nuovo cappello da dinosauro.
 Il cappello può essere equipaggiato con
 `change_hat(Hats.Dinosaur_Hat)`
 
-Sfortunatamente non assomiglia molto a quello della pubblicità...
+Sfortunatamente non ha l'aspetto che aveva nella pubblicità...
 
 Se equipaggi il cappello da dinosauro e hai abbastanza zucche, una [mela](objects/apple) verrà automaticamente acquistata e posizionata sotto il drone.
-Quando il drone si trova sopra una mela e si muove di nuovo, mangerà la mela e la sua coda si allungherà di uno. Se te lo puoi permettere, una nuova mela verrà acquistata e posizionata in un punto casuale.
-La mela non può apparire se c'è già qualcos'altro piantato dove vorrebbe essere.
+Quando il drone si trova su una mela e si muove di nuovo, mangerà la mela e la sua coda si allungherà di uno. Se te lo puoi permettere, una nuova mela verrà acquistata e posizionata in un luogo casuale.
+La mela non può comparire se c'è qualcos'altro piantato dove vorrebbe essere.
 
 La coda del dinosauro verrà trascinata dietro il drone, riempiendo le caselle precedenti su cui si è mosso. Se un drone cerca di muoversi sopra la coda, `move()` fallirà e restituirà `False`. 
-L'ultimo segmento della coda si sposterà durante il movimento, quindi potrai passarci sopra. Tuttavia, se il serpente riempie l'intera fattoria, non potrai più muoverti. Quindi puoi controllare se il serpente è completamente cresciuto verificando se non puoi più muoverti.
+L'ultimo segmento della coda si sposterà durante il movimento, quindi puoi muovertici sopra. Tuttavia, se il serpente riempie tutta la fattoria, non sarai più in grado di muoverti. Quindi puoi controllare se il serpente è completamente cresciuto verificando se non puoi più muoverti.
 
-Usando `measure()` su una mela si otterrà la posizione della prossima mela come una tupla.
+Usando `measure()` su una mela si ottiene la posizione della mela successiva come una tupla.
 
 `next_x, next_y = measure()`
 
@@ -30,7 +30,7 @@ lunghezza 4 => 16 ossa
 lunghezza 16 => 256 ossa
 lunghezza 100 => 10000 ossa
 
-Il Cappello da Dinosauro è molto pesante, quindi se lo equipaggi, `move()` richiederà 400 tick invece di 200. Tuttavia, ogni volta che raccogli una mela, il numero di tick usati da `move()` si riduce del 3% (arrotondato per difetto), perché una coda più lunga ti aiuta a muoverti.
+Il Cappello da Dinosauro è molto pesante, quindi se lo equipaggi, `move()` impiegherà 400 tick invece di 200. Tuttavia, ogni volta che raccogli una mela, il numero di tick usati da `move()` si riduce del 3% (arrotondato per difetto), perché una coda più lunga può aiutarti a muoverti.
 
 Il seguente ciclo stampa il numero di tick usati da `move()` dopo un qualsiasi numero di mele:
 

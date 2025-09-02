@@ -6,7 +6,7 @@ Kommentare können mit `#` hinzugefügt werden. Alles in der gleichen Zeile nach
 
 Dies kann nützlich sein, um Notizen zum Code hinzuzufügen und auch um Teile des Codes vorübergehend zu deaktivieren, ohne sie zu löschen.
 
-Jeder Kommentar in der Zeile vor einer Funktionsdefinition wird Teil der Popup-Information, die erscheint, wenn du mit der Maus über den Funktionsnamen fährst.
+Jeder Kommentar in der Zeile vor einer Funktionsdefinition wird Teil der Popup-Information sein, die erscheint, wenn du mit der Maus über den Funktionsnamen fährst.
 `#Diese Funktion tut nichts.
 def f():
     pass`

@@ -1,8 +1,8 @@
-# Annaffiatura
+# Annaffiare
 Le piante crescono più velocemente quando vengono annaffiate. Il terreno ha un livello d'acqua che va da `0` a `1`.
 La funzione `get_water()` restituisce il livello d'acqua del terreno su cui si trova.
 
-La velocità di crescita di una pianta scala linearmente da una velocità 1x a livello d'acqua 0 a una velocità 5x a livello d'acqua 1.
+La velocità di crescita di una pianta scala linearmente da 1x a livello d'acqua 0 a 5x a livello d'acqua 1.
 
 Il terreno si asciuga nel tempo: in media, perde l'1% della sua acqua attuale al secondo, ma c'è una certa varianza casuale in questo. Mantenere un alto livello d'acqua consumerà molta più acqua che mantenere un basso livello d'acqua.
 

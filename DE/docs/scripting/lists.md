@@ -1,17 +1,17 @@
 # Listen
-Listen sind eine einfache Möglichkeit, mehrere Werte in einer einzigen Variable zu speichern.
+Listen sind eine einfache Möglichkeit, mehrere Werte in einer einzigen Variablen zu speichern.
 Du kannst neue Listen so erstellen:
 
 `list = [2, True, Items.Hay]`
 
-Die Liste enthält nun die Werte `2`, `True` und `Items.Hay`.
+Die Liste enthält jetzt die Werte `2`, `True` und `Items.Hay`.
 Eine Liste kann auch leer sein:
 
 `empty_list = []`
 
 Du kannst auf ein Element einer Liste über seinen Index zugreifen. Der Index ist `0` für das erste Element, `1` für das zweite Element, `2` für das dritte...
 
-pflanzt Karotten
+_pflanzt Karotten_
 `list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(list[1])`
 

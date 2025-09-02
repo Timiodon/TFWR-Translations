@@ -3,11 +3,11 @@
 
 `for i in range(10):
 	continue
-    print("to nigdy nie zostanie wydrukowane")`
+    print("to nigdy nie zostanie wyświetlone")`
 
 To wykonuje wszystkie `10` iteracji pętli, ale instrukcja `print` po `continue` jest zawsze pomijana.
 
-Działa to również na pętlach `while`.
+Działa również na pętlach `while`.
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ Działa to również na pętlach `while`.
     
     harvest()`
 
-Ten kod wywołuje `harvest()` tylko wtedy, gdy `can_harvest()` jest `True`.
+Ten kod wywołuje `harvest()` tylko wtedy, gdy `can_harvest()` jest `True`. 
 Ma to taki sam efekt jak
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-W pętlach zagnieżdżonych `continue` zawsze dotyczy najbardziej wewnętrznej pętli.
+W zagnieżdżonych pętlach `continue` zawsze dotyczy najbardziej wewnętrznej pętli.
 
 `for i in range(10):
 	for j in range(10):
-	    print("to zostanie wydrukowane 100 razy")
+	    print("to zostanie wyświetlone 100 razy")
 		continue
-		print("to nigdy nie zostanie wydrukowane")
-	print("to zostanie wydrukowane 10 razy")`
+		print("to nigdy nie zostanie wyświetlone")
+	print("to zostanie wyświetlone 10 razy")`

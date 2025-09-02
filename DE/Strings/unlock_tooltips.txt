@@ -2,7 +2,7 @@
 @unlock_descr_trees = Schaltet Bäume frei.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = Erhöht die Geschwindigkeit der Drohne und der Code-Ausführung.
+@unlock_descr_speed = Erhöht die Geschwindigkeit sowohl der Drohne als auch der Code-Ausführung.
 @unlock_descr_plant = Schaltet das Pflanzen frei.
 
 `plant(Entities.Bush)`
@@ -14,7 +14,7 @@
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = Erweitert das Ackerland und schaltet Bewegung frei.
+@unlock_descr_expand = Erweitert das Ackerland und schaltet die Bewegung frei.
 @unlock_descr_operators = Arithmetische, Vergleichs- und Logikoperatoren.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
@@ -52,14 +52,14 @@ for p in plants:
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = Lass Pflanzen sofort wachsen.
+@unlock_descr_fertilizer = Lasse Pflanzen sofort wachsen.
 
 `use_item(Items.Fertilizer)`
 @unlock_descr_mazes = Ein Labyrinth mit einem Schatz in der Mitte.
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
-@unlock_descr_debug = Werkzeuge zur Unterstützung beim Debuggen von Programmen.
+@unlock_descr_debug = Werkzeuge, die beim Debuggen von Programmen helfen.
 
 `print("hi")`
 @unlock_descr_debug2 = Funktionen, um die Ausführung vorübergehend zu verlangsamen und die Farm zu verkleinern.
@@ -70,13 +70,13 @@ set_execution_speed(1)`
 @unlock_descr_auto_unlock = Schalte Dinge automatisch frei.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Nutze die Mischkultur, um den Ertrag zu steigern.
+@unlock_descr_polyculture = Nutze Begleitpflanzung, um den Ertrag zu steigern.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Sonnenblumen und Energie.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Mach mit beim Leaderboard für die schnellsten Zeiten.
+@unlock_descr_leaderboard = Tritt der Bestenliste für die schnellsten Zeiten bei.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = Erhalte Zugriff auf Dictionaries und Sets.
@@ -88,7 +88,7 @@ set_execution_speed(1)`
 @unlock_descr_cactus = Kaktus!
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = Majestätische uralte Kreaturen.
+@unlock_descr_dinosaurs = Majestätische urzeitliche Kreaturen.
 @unlock_descr_simulation = Teste schneller und unter reproduzierbaren Bedingungen.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
@@ -102,19 +102,19 @@ other_file.function()`
 @unlock_descr_megafarm = Viel größere Farm mit vielen Drohnen.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = Erweitert die Farm. Dies löscht auch die Farm.
+@multi_unlock_descr_expand = Erweitert die Farm. Dies leert auch die Farm.
 @multi_unlock_descr_carrots = Erhöht den Ertrag und die Kosten von Karotten.
 @multi_unlock_descr_trees = Erhöht den Ertrag von Büschen und Bäumen.
 @multi_unlock_descr_pumpkins = Erhöht den Ertrag und die Kosten von Kürbissen.
 @multi_unlock_descr_mazes = Erhöht das Gold in Schatztruhen und die Menge an seltsamer Substanz, die zum Erzeugen eines Labyrinths benötigt wird.
-@multi_unlock_descr_sunflowers = Erhöht die durch Sonnenblumen gewonnene Energie.
+@multi_unlock_descr_sunflowers = Erhöht die aus Sonnenblumen gewonnene Energie.
 @multi_unlock_descr_cactus = Erhöht den Ertrag und die Kosten von Kakteen.
 @multi_unlock_descr_dinosaur = Erhöht den Ertrag und die Kosten von Dinosauriern.
-@multi_unlock_descr_polyculture = Erhöht den Ertragsmultiplikator der Mischkultur.
+@multi_unlock_descr_polyculture = Erhöht den Ertragsmultiplikator der Polykultur.
 @multi_unlock_descr_watering = Erhalte mehr Wasser.
 @multi_unlock_descr_fertilizer = Erhalte mehr Dünger.
-@multi_unlock_descr_megafarm = Vergrößere die Farmgröße und die Drohnenanzahl weiter.
-@auto_unlock = Automatisch Freischalten
+@multi_unlock_descr_megafarm = Erhöhe die Farmgröße und die Anzahl der Drohnen weiter.
+@auto_unlock = Automatisches Freischalten
 @cactus = Kaktus
 @carrots = Karotten
 @costs = Kosten
@@ -134,9 +134,9 @@ other_file.function()`
 @megafarm = Megafarm
 @operators = Operatoren
 @plant = Pflanze
-@polyculture = Mischkultur
+@polyculture = Polykultur
 @pumpkins = Kürbisse
-@senses = Sensoren
+@senses = Sinne
 @simulation = Simulation
 @speed = Geschwindigkeit
 @sunflowers = Sonnenblumen

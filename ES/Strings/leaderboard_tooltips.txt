@@ -1,4 +1,4 @@
-@lb_descr_fastest_reset = Automatiza completamente todo el juego.
+@lb_descr_fastest_reset = Automatiza por completo todo el juego.
 @lb_descr_maze = Consigue 300000 de oro.
 @lb_descr_dinosaur = Consigue 98010 huesos.
 @lb_descr_cactus = Consigue 100000 cactus.

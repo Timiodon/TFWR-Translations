@@ -1,20 +1,20 @@
-@unlock_tooltip_template_cost = ### Custo do Unlock {{{{itemblock cost unlock {0}}}}}
+@unlock_tooltip_template_cost = ### Custo do Desbloqueio {{{{itemblock cost unlock {0}}}}}
 @unlock_descr_trees = Desbloqueia árvores.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = Aumenta a velocidade do drone e da execução do código.
-@unlock_descr_plant = Desbloqueia a plantação.
+@unlock_descr_speed = Aumenta a velocidade tanto do drone quanto da execução do código.
+@unlock_descr_plant = Desbloqueia o plantio.
 
 `plant(Entities.Bush)`
 @unlock_descr_loops = Desbloqueia um loop while simples.
 
 `while True:
     harvest()`
-@unlock_descr_senses = O drone consegue ver o que está debaixo dele e onde está.
+@unlock_descr_senses = O drone pode ver o que está sob ele e onde ele está.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = Expande a terra da quinta e desbloqueia o movimento.
+@unlock_descr_expand = Expande a terra da fazenda e desbloqueia o movimento.
 @unlock_descr_operators = Operadores aritméticos, de comparação e lógicos.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
@@ -22,37 +22,37 @@
 @unlock_descr_pumpkin = Abóboras!
 
 `plant(Entities.Pumpkin)`
-@unlock_descr_variables = Atribui valores a variáveis.
+@unlock_descr_variables = Atribua valores a variáveis.
 
 `next_plant = Entities.Bush
 plant(next_plant)`
-@unlock_descr_functions = Define as tuas próprias funções.
+@unlock_descr_functions = Defina suas próprias funções.
 
 `def do_two_flips():
     do_a_flip()
     do_a_flip()
 
 do_two_flips()`
-@unlock_descr_watering = Rega as plantas para que cresçam mais rápido.
+@unlock_descr_watering = Regue as plantas para que cresçam mais rápido.
 
 `use_item(Items.Water)`
-@unlock_descr_carrots = Lavra o solo e planta cenouras.
+@unlock_descr_carrots = Are o solo e plante cenouras.
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_lists = Usa listas para armazenar muitos valores.
+@unlock_descr_lists = Use listas para armazenar muitos valores.
 
 `plants = [Entities.Hay, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = Permite o acesso ao custo das coisas.
+@unlock_descr_costs = Permite acesso ao custo das coisas.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = Faz as plantas crescerem instantaneamente.
+@unlock_descr_fertilizer = Faça as plantas crescerem instantaneamente.
 
 `use_item(Items.Fertilizer)`
 @unlock_descr_mazes = Um labirinto com um tesouro no meio.
@@ -61,73 +61,73 @@ for item in cost:
     harvest()`
 @unlock_descr_debug = Ferramentas para ajudar na depuração de programas.
 
-`print("olá")`
-@unlock_descr_debug2 = Funções para abrandar temporariamente a execução e tornar a quinta mais pequena.
+`print("oi")`
+@unlock_descr_debug2 = Funções para diminuir temporariamente a execução e tornar a fazenda menor.
 
 `set_world_size(3)
 set_execution_speed(1)`
-@unlock_descr_grass = Aumenta o rendimento da grama.
-@unlock_descr_auto_unlock = Desbloqueia coisas automaticamente.
+@unlock_descr_grass = Aumenta a produção de grama.
+@unlock_descr_auto_unlock = Desbloqueie coisas automaticamente.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Usa a plantação consorciada para aumentar o rendimento.
+@unlock_descr_polyculture = Use o plantio consorciado para aumentar a produção.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Girassóis e Energia.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Entre na leaderboard para os tempos mais rápidos.
+@unlock_descr_leaderboard = Junte-se ao placar de líderes para os tempos mais rápidos.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = Obtém acesso a dictionaries e sets.
+@unlock_descr_dicts = Tenha acesso a dicionários e conjuntos.
 
 `right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Desbloqueia as funções `min()`, `max()`, `abs()` e `random()`.
 
 `random_index = random() * len(list) // 1`
-@unlock_descr_cactus = Cato!
+@unlock_descr_cactus = Cacto!
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = Criaturas antigas e majestosas.
-@unlock_descr_simulation = Testa mais rápido e em condições reproduzíveis.
+@unlock_descr_dinosaurs = Criaturas antigas majestosas.
+@unlock_descr_simulation = Teste mais rápido e sob condições reproduzíveis.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @unlock_descr_timing = Já estava na hora!
 
 `passed_time = get_time()`
-@unlock_descr_import = Importa coisas de outros ficheiros.
+@unlock_descr_import = Importe coisas de outros arquivos.
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = Quinta muito maior com muitos drones.
+@unlock_descr_megafarm = Fazenda muito maior com muitos drones.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = Expande a quinta. Isto também limpa a quinta.
-@multi_unlock_descr_carrots = Aumenta o rendimento e o custo das cenouras.
-@multi_unlock_descr_trees = Aumenta o rendimento de arbustos e árvores.
-@multi_unlock_descr_pumpkins = Aumenta o rendimento e o custo das abóboras.
-@multi_unlock_descr_mazes = Aumenta o ouro nos baús do tesouro e a quantidade de substância estranha necessária para gerar um labirinto.
-@multi_unlock_descr_sunflowers = Aumenta a energia ganha com os girassóis.
-@multi_unlock_descr_cactus = Aumenta o rendimento e o custo do cato.
-@multi_unlock_descr_dinosaur = Aumenta o rendimento e o custo dos dinossauros.
-@multi_unlock_descr_polyculture = Aumenta o multiplicador de rendimento da policultura.
-@multi_unlock_descr_watering = Recebe mais água.
-@multi_unlock_descr_fertilizer = Recebe mais fertilizante.
-@multi_unlock_descr_megafarm = Aumenta ainda mais o tamanho da quinta e a contagem de drones.
+@multi_unlock_descr_expand = Expande a fazenda. Isso também limpa a fazenda.
+@multi_unlock_descr_carrots = Aumenta a produção e o custo das cenouras.
+@multi_unlock_descr_trees = Aumenta a produção de arbustos e árvores.
+@multi_unlock_descr_pumpkins = Aumenta a produção e o custo das abóboras.
+@multi_unlock_descr_mazes = Aumenta o ouro nos baús de tesouro e a quantidade de substância estranha necessária para gerar um labirinto.
+@multi_unlock_descr_sunflowers = Aumenta a energia ganha dos girassóis.
+@multi_unlock_descr_cactus = Aumenta a produção e o custo de cactos.
+@multi_unlock_descr_dinosaur = Aumenta a produção e o custo dos dinossauros.
+@multi_unlock_descr_polyculture = Aumenta o multiplicador de produção da policultura.
+@multi_unlock_descr_watering = Receba mais água.
+@multi_unlock_descr_fertilizer = Receba mais fertilizante.
+@multi_unlock_descr_megafarm = Aumente ainda mais o tamanho da fazenda e o número de drones.
 @auto_unlock = Desbloqueio Automático
 @cactus = Cacto
 @carrots = Cenouras
 @costs = Custos
-@debug = Debug
-@debug_2 = Debug_2
-@dictionaries = Dictionaries
+@debug = Depuração
+@debug_2 = Depuração_2
+@dictionaries = Dicionários
 @dinosaurs = Dinossauros
 @expand = Expandir
 @fertilizer = Fertilizante
 @functions = Funções
 @grass = Grama
 @import = Importar
-@leaderboard = Leaderboard
+@leaderboard = Placar de Líderes
 @lists = Listas
 @loops = Loops
 @mazes = Labirintos
@@ -140,7 +140,7 @@ other_file.function()`
 @simulation = Simulação
 @speed = Velocidade
 @sunflowers = Girassóis
-@timing = Tempo
+@timing = Cronometragem
 @trees = Árvores
 @utilities = Utilitários
 @variables = Variáveis

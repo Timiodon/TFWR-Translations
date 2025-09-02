@@ -1,30 +1,30 @@
-@error_missing_default_parameter = Tous les arguments par défaut doivent être à la fin de la liste d'arguments.
-@error_invalid_name = {0} n'est pas un nom valide. Les noms doivent commencer par une lettre et ne peuvent contenir que des lettres, des chiffres et des tirets bas. Il ne peut pas non plus s'agir d'un mot-clé réservé.
+@error_missing_default_parameter = Tous les arguments par défaut doivent se trouver à la fin de la liste d'arguments.
+@error_invalid_name = {0} n'est pas un nom valide. Les noms doivent commencer par une lettre et ne peuvent contenir que des lettres, des chiffres et des tirets bas. Il ne peut pas non plus être un mot-clé réservé.
 @error_reserved_keyword = {0} est un mot-clé réservé. Tu ne peux pas l'utiliser comme nom.
 @error_invalid_assign_expr = Impossible d'assigner une valeur à cette expression.
 @error_no_statements = Un bloc de code doit contenir au moins une instruction. 
-Une instruction peut être un appel de fonction comme `harvest()` ou une assignation de variable. 
+Une instruction peut être un appel de fonction comme `harvest()` ou une affectation de variable. 
 Si tu ne souhaites rien faire dans le bloc de code, utilise une instruction `pass`.
 @error_not_enough_indentation = Il n'y a pas assez d'indentation ici. 
 Il doit y avoir plus d'indentation après un : qu'avant pour séparer le nouveau bloc de code. 
 Utilise la touche Tab pour indenter le code.
 @error_too_much_indentation = Il y a trop d'indentation ici. 
-L'indentation doit être la même pour toutes les instructions dans un bloc de code.
-@error_not_a_statement = Ceci n'est pas une instruction valide.
+L'indentation doit être la même pour toutes les instructions d'un même bloc de code.
+@error_not_a_statement = Ceci n'est pas une instruction valide. 
 @error_not_a_statement2 = Ceci n'est pas une instruction valide. Voulais-tu écrire {0} ?
 @error_invalid_expression = Ceci n'est pas une expression valide.
 @error_new_line_expected = Un saut de ligne est attendu ici.
 @error_unexpected_token = Un {0} est attendu ici.
 @error_missing_colon = Il doit y avoir deux-points `:` au début de chaque bloc de code.
-@error_unexpected_assign = Tu ne peux pas faire d'assignation ici. Pour vérifier l'égalité, utilise `==` à la place.
+@error_unexpected_assign = Tu ne peux pas faire d'affectation ici. Pour vérifier l'égalité, utilise `==` à la place.
 @error_invalid_for_syntax = Ceci n'est pas une boucle for valide. Une boucle for ressemble à ceci : 
 `for n in range(3):`
 Le `for` est toujours suivi de la variable de boucle, d'un `in` puis d'une séquence. Dans cet exemple, `n` est le nom de la variable, mais il peut être remplacé par n'importe quel autre nom.
 @error_unknown_method = Cette méthode n'existe pas.
-@error_bad_backslash = L'antislash peut être utilisé pour diviser les expressions sur plusieurs lignes. Mais tu dois ajouter un saut de ligne après.
+@error_bad_backslash = L'antislash peut être utilisé pour diviser des expressions sur plusieurs lignes. Mais tu dois ajouter un saut de ligne après.
 @error_mixed_indentation = Les tabulations et les espaces ne doivent pas être mélangés.
-@error_expected_close_token = Virgule ou parenthèse fermante attendue.
+@error_expected_close_token = Virgule ou crochet fermant attendu.
 @error_wrong_dict_literal = Un : est attendu pour séparer les clés et les valeurs d'un dictionnaire.
 @error_assign_before_global = {0} est assigné avant une déclaration globale.
 @error_wildcard_imports_not_allowed_in_function = Les importations de la forme `from x import *` ne sont pas autorisées à l'intérieur des fonctions.
-@error_invalid_import = Vous ne pouvez pas importer de fichiers dont les noms ne sont pas des identifiants valides. Les identifiants valides ne peuvent contenir que des lettres, des chiffres et des tirets bas. Si le nom de votre fichier contient d'autres caractères, vous devez le renommer.
+@error_invalid_import = Tu ne peux pas importer de fichiers dont les noms ne sont pas des identifiants valides. Les identifiants valides ne peuvent contenir que des lettres, des chiffres et des tirets bas. Si ton nom de fichier contient d'autres caractères, tu dois le renommer.

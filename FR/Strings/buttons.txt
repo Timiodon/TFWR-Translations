@@ -6,12 +6,12 @@
 @join_discord = Discord
 @quit = Quitter
 @open_folder = Ouvrir le dossier
-@new_game = Nouvelle Partie
+@new_game = Nouvelle partie
 @back = Retour
 @unlocks = Déblocages
 @farm = Ferme
 @unlocked = Débloqué
 @upgrade = Améliorer
-@max_level = Niveau Max
+@max_level = Niveau max
 @unlock = Débloquer
 @locked = Verrouillé

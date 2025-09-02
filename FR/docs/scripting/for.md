@@ -4,18 +4,18 @@ La boucle `for` fonctionne comme en Python. (Appelée boucle foreach dans certai
 `for i in sequence:
 	#faire quelque chose avec i`
 
-Similaire à la boucle `while`, la boucle `for` appelle également à plusieurs reprises un bloc de code. Au lieu de boucler en fonction d'une condition, elle exécute le corps de la boucle une fois pour chaque élément d'une séquence.
+Similaire à la boucle `while`, la boucle `for` appelle également un bloc de code de manière répétée. Au lieu de boucler sur la base d'une condition, elle exécute le corps de la boucle une fois pour chaque élément d'une séquence.
 
 ## Syntaxe
 Une boucle for ressemble à ceci :
 
-`for nom_variable in sequence:
+`for variable_name in sequence:
 	#bloc de code`
 
-`nom_variable` peut être n'importe quel nom que vous choisissez. C'est une variable qui stocke l'élément actuel de la séquence. `sequence` doit être une valeur qui peut être itérée comme une plage ou des nombres. Le bloc de code est exécuté pour chaque élément avec la variable de boucle assignée à cet élément.
+`variable_name` peut être n'importe quel nom que tu choisis. C'est une variable qui stocke l'élément actuel dans la séquence. `sequence` doit être une valeur qui peut être itérée comme un range de nombres. Le bloc de code est exécuté pour chaque élément avec la variable de boucle assignée à cet élément.
 
 ## Séquences
-[Plages](functions/range)      <unlock=lists>[Listes](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionnaires](docs/scripting/dicts.md)      </unlock><unlock=sets>[Ensembles](docs/scripting/sets.md)</unlock>
+[Ranges](functions/range)      <unlock=lists>[Listes](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionnaires](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Exemple
 `for i in range(5):
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-Donc, elle appelle `harvest()` 5 fois.
+Elle appelle donc `harvest()` 5 fois.
 
 Voir aussi [Break](docs/scripting/break.md) et [Continue](docs/scripting/continue.md)

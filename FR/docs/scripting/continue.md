@@ -1,11 +1,11 @@
 # Continue
-`continue` permet d'arrêter l'itération actuelle d'une boucle et de sauter à la prochaine itération de la boucle la plus interne.
+`continue` permet d'arrêter l'itération actuelle d'une boucle et de sauter à l'itération suivante de la boucle la plus interne.
 
 `for i in range(10):
 	continue
     print("ceci n'est jamais affiché")`
 
-Cela exécute les 10 itérations de la boucle, mais l'instruction `print` après le `continue` est toujours sautée.
+Ceci exécute les `10` itérations de la boucle, mais l'instruction `print` après le `continue` est toujours ignorée.
 
 Cela fonctionne aussi avec les boucles `while`.
 

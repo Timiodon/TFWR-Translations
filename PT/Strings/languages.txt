@@ -11,4 +11,4 @@
 @TR = Turco
 @AR = Árabe
 @RU = Russo
-@PL = Polaco
+@PL = Polonês

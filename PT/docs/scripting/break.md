@@ -4,7 +4,7 @@
 `for i in range(10):
 	break
 print(i)`
-Isto imprime `0` porque `i` é `0` na primeira iteração do loop e depois a instrução break termina o loop.
+Isso imprime `0` porque `i` é `0` na primeira iteração do loop e então a instrução break encerra o loop.
 
 Também funciona em loops `while`.
 
@@ -12,16 +12,16 @@ Também funciona em loops `while`.
 	if can_harvest():
 		break`
 
-Este código executa o loop `while` até `can_harvest()` ser `True`.
+Este código executa o loop `while` até que `can_harvest()` seja `True`. 
 Tem o mesmo efeito que
 
 `while not can_harvest():
 	pass`
 
-Em loops aninhados, `break` sai sempre do loop mais interno.
+Em loops aninhados, `break` sempre sai do loop mais interno.
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("isto nunca é impresso")
-	print("isto é impresso 10 vezes")`
+		print("isso nunca é impresso")
+	print("isso é impresso 10 vezes")`

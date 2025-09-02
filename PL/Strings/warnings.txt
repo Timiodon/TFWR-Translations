@@ -1,14 +1,14 @@
 @warning_not_enough_items_to_trade = Próbowano kupić {0}, ale brakowało wymaganych zasobów.
-@warning_no_space_to_plant = Próbowano posadzić {0}, ale już coś tam było.
+@warning_no_space_to_plant = Próbowano zasadzić {0}, ale coś już tam było.
 @warning_cant_plant_on_ground = Nie można sadzić {0} na {1}.
-@warning_missing_seed = Brak wymaganych przedmiotów do posadzenia {0}.
-@warning_no_item_to_use = Próbowano użyć {0}, ale nie było go wystarczająco dużo.
+@warning_missing_seed = Brak wymaganych przedmiotów do zasadzenia {0}.
+@warning_no_item_to_use = Próbowano użyć {0}, ale brakowało wystarczającej ilości.
 @warning_failed_swap_wrap = Próbowano dokonać zamiany poza granicami farmy. To jest niedozwolone.
-@warning_failed_swap_unswappable = Próbowano zamienić {0}, czego nie można zamienić.
-@warning_weird_substance_not_divisible = Użyłeś ilości Weird Substance, która nie jest dokładnie równa ilości potrzebnej do stworzenia labiryntu. Nie zapominaj, że wymagana ilość Weird Substance wzrasta wraz z ulepszaniem labiryntu.
+@warning_failed_swap_unswappable = Próbowano zamienić {0}, którego nie można zamienić.
+@warning_weird_substance_not_divisible = Użyto liczby Dziwnej Substancji, która nie jest dokładnie równa liczbie potrzebnej do stworzenia labiryntu. Nie zapominaj, że ilość wymaganej Dziwnej Substancji wzrasta w miarę ulepszania labiryntu.
 
-Aby stworzyć labirynt pełnego rozmiaru, wykonaj:
+Aby stworzyć labirynt pełnych rozmiarów, wykonaj:
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = Symulacje i przebiegi na leaderboardzie nie mogą być uruchamiane wewnątrz innych symulacji i przebiegów na leaderboardzie.
+@warning_recursive_simulation = Symulacji i prób na tabeli wyników nie można uruchamiać wewnątrz innych symulacji i prób na tabeli wyników.

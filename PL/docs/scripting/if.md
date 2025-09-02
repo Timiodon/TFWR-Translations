@@ -1,31 +1,31 @@
 # If
-Możesz użyć if, elif i else, aby uruchomić kod warunkowo.
+Możesz używać if, elif i else, aby uruchamiać kod warunkowo.
 
-`if warunek1:
+`if condition1:
 	do_a_flip()
-elif warunek2:
+elif condition2:
 	harvest()
 else:
 	do_a_flip()
 	harvest()`
 
 ## Składnia
-Instrukcje `if` pozwalają uruchomić kod tylko wtedy, gdy jakiś warunek jest `True`. Są jak pętla `while`, która się nie zapętla.
+Instrukcje `if` pozwalają na uruchomienie kodu tylko wtedy, gdy jakiś warunek jest `True`. Są jak pętla `while`, która się nie zapętla.
 `if` przyjmuje warunek, tak jak pętla `while`, i wykonuje blok kodu `if`, jeśli warunek jest `True`:
 
-`#zrób fikołka, jeśli warunek jest True
+`#wykonaj obrót, jeśli warunek jest True
 if condition:
 	do_a_flip()`
 
 Możesz także dodać `else` po `if`, które definiuje kod do wykonania, jeśli warunek jest `False`.
 
-Zrób fikołka, jeśli `condition` jest True, w przeciwnym razie zbierz plony.
+Wykonaj obrót, jeśli `condition` jest `True`, w przeciwnym razie zbierz plon.
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif` to skrót od else if.
+`elif` to skrót od else if (w przeciwnym razie, jeśli).
 
 `if condition1:
 	#a

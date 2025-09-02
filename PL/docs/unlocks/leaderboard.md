@@ -1,24 +1,24 @@
-# Leaderboard
-Jeśli dotarłeś tak daleko, pokonałeś wiele wyzwań. Ale czy rozwiązałeś je wydajnie?
-Możesz rywalizować z innymi graczami na różnych leaderboardach o najbardziej wydajne metody uprawy.
+# Tabela wyników
+Jeśli dotarłeś tak daleko, pokonałeś wiele wyzwań. Ale czy rozwiązałeś je wydajnie? 
+Możesz konkurować z innymi graczami w różnych tabelach wyników o najbardziej wydajne metody uprawy.
 
-Możesz rozpocząć próbę na leaderboardzie, wywołując `leaderboard_run(leaderboard, filename, speedup)`.
-Rozpoczyna to [symulację](docs/unlocks/simulation.md) podobną do `simulate()`, z tą różnicą, że warunki początkowe są ustalone. Każda kategoria leaderboarda ma inne warunki startowe i warunki sukcesu.
+Możesz rozpocząć próbę w tabeli wyników, wywołując `leaderboard_run(leaderboard, filename, speedup)`.
+Rozpoczyna to [symulację](docs/unlocks/simulation.md) podobną do `simulate()`, z tym wyjątkiem, że warunki początkowe są stałe. Każda kategoria tabeli wyników ma inne warunki początkowe i warunki powodzenia.
 
-Próba na leaderboardzie kończy się sukcesem, jeśli warunek sukcesu jest `True`, gdy symulacja się kończy. Symulacja nie zakończy się automatycznie po osiągnięciu celu. Musisz upewnić się, że program się zakończy.
-Jeśli próba zakończy się sukcesem, Twój czas zostanie dodany do leaderboarda.
+Próba w tabeli wyników kończy się sukcesem, jeśli warunek powodzenia jest `True`, gdy symulacja się kończy. Symulacja nie zakończy się automatycznie po osiągnięciu celu. Musisz upewnić się, że program zakończy działanie.
+Jeśli próba się powiedzie, twój czas zostanie dodany do tabeli wyników.
 
-Aby zmniejszyć wariancję, wszystkie próby muszą trwać co najmniej 2 godziny (możesz to przyspieszyć, więc nie potrwa to tak długo). Jeśli próba zostanie ukończona wcześniej, będzie powtarzana, aż osiągnie łączny czas 2 godzin. Średnia ze wszystkich prób jest następnie przesyłana jako Twój wynik.
+Aby zmniejszyć wariancję, wszystkie próby muszą trwać co najmniej 2 godziny (możesz to przyspieszyć, więc nie potrwa to tak długo). Jeśli próba zostanie ukończona wcześniej, będzie powtarzana, aż do osiągnięcia łącznego czasu 2 godzin. Średnia ze wszystkich prób jest następnie przesyłana jako twój wynik.
 
-Oto przykładowa konfiguracja, która pozwoli Ci znaleźć się na leaderboardzie siana.
+Oto przykładowa konfiguracja, która pozwoli ci znaleźć się w tabeli wyników siana.
 ![](LeaderboardSetup400)
 
-## Fastest Reset
-Najszybszy reset to najbardziej prestiżowa kategoria. Całkowicie zautomatyzuj grę od pojedynczej działki rolnej do ponownego odblokowania leaderboardów.
+## Najszybszy reset
+Najszybszy reset to najbardziej prestiżowa kategoria. Całkowicie zautomatyzuj grę od jednego poletka do ponownego odblokowania tabel wyników.
 
-Nie musisz odblokowywać wszystkiego, po prostu postaraj się jak najszybciej odblokować `Unlocks.Leaderboard`.
+Nie musisz wszystkiego odblokowywać, po prostu spróbuj jak najszybciej odblokować `Unlocks.Leaderboard`.
 
-Pamiętaj, że możesz użyć `num_unlocked(unlock) > 0`, aby sprawdzić, czy coś jest odblokowane, a także `get_cost()` na odblokowaniach, aby zobaczyć, ile kosztują, dzięki czemu możesz automatycznie uprawiać odpowiednie przedmioty.
+Pamiętaj, że możesz użyć `num_unlocked(unlock) > 0`, aby sprawdzić, czy coś jest odblokowane, i możesz użyć `get_cost()` na odblokowaniach, aby zobaczyć, ile kosztują, dzięki czemu możesz automatycznie uprawiać odpowiednie przedmioty.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
@@ -31,11 +31,11 @@ globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek sukcesu:
+Warunek powodzenia:
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
 ## Labirynt
-Zacznij z wszystkim odblokowanym i zdobądź `300000` złota tak szybko, jak potrafisz. To dokładnie tyle złota, ile zarobisz, rozwiązując jeden labirynt `300` razy.
+Zacznij z wszystkim odblokowanym i zbierz `300000` złota tak szybko, jak potrafisz. To dokładnie tyle złota, ile zarobisz, rozwiązując jeden labirynt `300` razy.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
@@ -47,11 +47,11 @@ globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek sukcesu:
+Warunek powodzenia:
 `num_items(Items.Gold) >= 300000`
 
 ## Dinozaur
-Zacznij z wszystkim odblokowanym i zdobądź `98010` kości tak szybko, jak potrafisz. To dokładnie tyle kości, ile zdobędziesz, wypełniając obszar 10x10 ogonem dinozaura.
+Zacznij z wszystkim odblokowanym i zbierz `98010` kości tak szybko, jak potrafisz. To dokładnie tyle kości, ile zdobędziesz, jeśli wypełnisz obszar 10x10 ogonem dinozaura.
 
 Wywołanie funkcji:
 `leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
@@ -63,11 +63,11 @@ globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Warunek sukcesu:
+Warunek powodzenia:
 `num_items(Items.Bone) >= 98010`
 
-## Inne Leaderboardy zasobów
-Każda roślina ma swój własny leaderboard do jak najszybszego zbierania tej konkretnej rośliny. Zaczynasz z wszystkimi odblokowaniami, zasobami potrzebnymi do uprawy rośliny i dużą ilością mocy. Celem jest zebranie `100000` zasobu produkowanego przez roślinę.
+## Inne tabele wyników zasobów
+Każda roślina ma swoją własną tabelę wyników za jak najszybsze uprawianie tej konkretnej rośliny. Zaczynasz z wszystkimi odblokowaniami, zasobami potrzebnymi do uprawy rośliny i dużą ilością energii. Celem jest zebranie `100000` jednostek zasobu produkowanego przez roślinę.
 
 Wywołania funkcji:
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
@@ -78,7 +78,7 @@ Wywołania funkcji:
 `leaderboard_run(Leaderboards.Hay, filename, speedup)`
 `leaderboard_run(Leaderboards.Polyculture, filename, speedup)`
 
-Warunek sukcesu:
+Warunek powodzenia:
 `num_items(resource) >= 100000`
 
-`Leaderboards.Polyculture` wymaga zebrania `100000` wszystkich trzech zasobów polikultury.
+`Leaderboards.Polyculture` wymaga zebrania `100000` jednostek wszystkich trzech zasobów uprawy współrzędnej.

@@ -1,69 +1,69 @@
 @error_code_after_block = Nie powinno tu być żadnego kodu. Spróbuj go usunąć lub umieścić w nowej linii.
 @error_wrong_number_args = {0} przyjmuje {1} argumentów.
 @error_expected_no_args = {0} nie przyjmuje żadnych argumentów.
-@error_wrong_args = {0}. argument funkcji {1} to {2}. To nie jest prawidłowy argument.
-@error_syntax_error_in_import = Zaimportowany moduł ma błąd składni.
-@error_module_not_found = Moduł o tej nazwie nie istnieje. Nazwa musi pasować do nazwy pliku. To jest nazwa wyświetlana na górze okna.
-@error_list_element_not_found = {0} nie jest elementem na liście.
-@error_set_element_not_found = {0} nie jest elementem w secie.
-@error_index_out_of_bounds = Indeks {0} był poza zakresem listy {1}.
-@error_index_out_of_bounds2 = Indeks był poza zakresem listy.
-@error_arith_assign_not_used_on_number = {0} może być używane tylko na liczbach.
-@error_bool_op_not_used_on_bool = Operator logiczny może być używany tylko na wyrażeniach logicznych, które dają w wyniku `True` lub `False`.
+@error_wrong_args = Argument nr {0} funkcji {1} miał wartość {2}. To nie jest prawidłowy argument.
+@error_syntax_error_in_import = Importowany moduł ma błąd składni.
+@error_module_not_found = Moduł o tej nazwie nie istnieje. Nazwa musi odpowiadać nazwie pliku. Jest to nazwa wyświetlana na górze okna.
+@error_list_element_not_found = {0} nie jest elementem tej listy.
+@error_set_element_not_found = {0} nie jest elementem tego zbioru.
+@error_index_out_of_bounds = Indeks {0} jest poza zakresem listy {1}.
+@error_index_out_of_bounds2 = Indeks jest poza zakresem listy.
+@error_arith_assign_not_used_on_number = {0} może być użyte tylko na liczbach.
+@error_bool_op_not_used_on_bool = Operator logiczny może być użyty tylko na wyrażeniach logicznych, które przyjmują wartość `True` lub `False`.
 @error_bad_bin_operator = Operator {0} nie może być użyty na operandach {1} i {2}.
 @error_bad_unary_operator = Operator {0} nie może być użyty na {1}.
-@error_index = {0} nie może być użyte jako indeks na {1}.
-@error_index_on_non_indexable = Nie można indeksować w {0}.
-@error_zero_step = Rozmiar kroku nie może wynosić zero.
-@error_index_on_tuple = Nie możesz przypisać elementu krotki, ponieważ krotki są niezmienne.
+@error_index = {0} nie może być użyte jako indeks dla {1}.
+@error_index_on_non_indexable = Nie możesz indeksować do {0}.
+@error_zero_step = Wielkość kroku nie może być zerowa.
+@error_index_on_tuple = Nie możesz przypisać wartości do elementu krotki, ponieważ krotki są niezmienne.
 @error_bad_key = {0} nie może być użyte jako klucz.
-@error_slice_dict = Nie można wycinać (slice) słowników.
-@error_key = {0} nie jest kluczem w słowniku.
-@error_condition_not_bool = {0} nie jest prawidłowym warunkiem. Warunek musi być wartością logiczną. Oznacza to, że musi to być wyrażenie, które jest zawsze `True` lub `False`.
-@error_for_requires_iterable = {0} nie może być iterowane w pętli for. Pętla for musi otrzymać sekwencję do iteracji. Przykład:
+@error_slice_dict = Nie można wycinać słowników.
+@error_key = {0} nie jest kluczem w tym słowniku.
+@error_condition_not_bool = {0} nie jest prawidłowym warunkiem. Warunek musi być wartością logiczną. Oznacza to, że musi to być wyrażenie, które zawsze jest albo `True`, albo `False`.
+@error_for_requires_iterable = Po {0} nie można iterować w pętli for. Pętla for musi otrzymać sekwencję do iteracji. Przykład:
 
 `for i in range(5):`
 Tutaj range(5) zwraca sekwencję `0,1,2,3,4`.
-@error_no_loop_to_break = `break` może być używane tylko wewnątrz pętli.
-@error_no_loop_to_continue = `continue` może być używane tylko wewnątrz pętli.
-@error_no_function_to_return_from = `return` może być używane tylko wewnątrz funkcji.
-@error_missing_unlock = To musi być odblokowane, zanim będzie można tego użyć.
-@error_missing_x_unlock = {0} musi być odblokowane, zanim będzie można tego użyć.
-@error_name_not_defined = {0} nigdy nie zostało zdefiniowane. Musisz przypisać wartość do zmiennej przed jej użyciem.
-@error_missing_import = {0} nigdy nie zostało zdefiniowane. Wygląda na to, że jest zdefiniowane w pliku {1}. Czy zapomniałeś go zaimportować?
+@error_no_loop_to_break = `break` może być użyte tylko wewnątrz pętli.
+@error_no_loop_to_continue = `continue` może być użyte tylko wewnątrz pętli.
+@error_no_function_to_return_from = `return` może być użyte tylko wewnątrz funkcji.
+@error_missing_unlock = To musi zostać odblokowane, zanim będzie można tego użyć.
+@error_missing_x_unlock = {0} musi zostać odblokowane, zanim będzie można tego użyć.
+@error_name_not_defined = Zmienna {0} nigdy nie została zdefiniowana. Musisz przypisać wartość do zmiennej przed jej użyciem.
+@error_missing_import = Zmienna {0} nigdy nie została zdefiniowana. Wygląda na to, że jest zdefiniowana w pliku {1}. Czy zapomniałeś go zaimportować? 
 Jeśli go zaimportowałeś, prawdopodobnie masz cykl importu (zobacz stronę dokumentacji importu).
-@error_missing_import_before_unlock = {0} nigdy nie zostało zdefiniowane. Wygląda na to, że jest zdefiniowane w pliku {1}. Musisz odblokować importy, aby móc importować rzeczy z innych plików.
-@error_call_before_def = {0} nie jest zdefiniowane. Wygląda na to, że jest zdefiniowane gdzieś w tym pliku, ale definicja nie została jeszcze wykonana. Funkcje mogą być wywoływane tylko po instrukcji `def`.
-@error_not_a_function = Próbowałeś wywołać coś, co nie jest funkcją. Częstym błędem, który może to powodować, jest posiadanie zmiennej o tej samej nazwie co funkcja.
+@error_missing_import_before_unlock = Zmienna {0} nigdy nie została zdefiniowana. Wygląda na to, że jest zdefiniowana w pliku {1}. Musisz odblokować importy, aby móc importować rzeczy z innych plików.
+@error_call_before_def = Zmienna {0} nie jest zdefiniowana. Wygląda na to, że jest zdefiniowana gdzieś w tym pliku, ale definicja nie została jeszcze wykonana. Funkcje można wywoływać tylko po instrukcji `def`.
+@error_not_a_function = Próbujesz wywołać coś, co nie jest funkcją. Częstym błędem, który może to powodować, jest posiadanie zmiennej o tej samej nazwie co funkcja.
 @error_invalid_const = {0} nie istnieje.
 @error_invalid_const2 = To nie istnieje.
-@error_max_stack_size_reached = Osiągnięto maksymalny rozmiar call stack. Prawdopodobnie jest to spowodowane zbyt wieloma rekurencyjnymi wywołaniami funkcji.
-@error_max_comparison_depth = Osiągnięto maksymalną głębokość porównania. Osiągnięto maksymalną głębokość porównania. Może się to zdarzyć na przykład, jeśli porównujesz listy, które zawierają same siebie.
-@error_assign_type_mismatch = Lewa strona przypisania nie pasowała do prawej strony.
+@error_max_stack_size_reached = Osiągnięto maksymalny rozmiar stosu wywołań. Jest to najprawdopodobniej spowodowane zbyt dużą liczbą rekurencyjnych wywołań funkcji.
+@error_max_comparison_depth = Osiągnięto maksymalną głębokość porównania. Może się to zdarzyć na przykład, jeśli porównujesz listy, które zawierają same siebie.
+@error_assign_type_mismatch = Lewa strona przypisania nie pasuje do prawej strony.
 @error_too_many_values_to_unpack = Prawa strona nie zawiera wystarczającej liczby wartości do rozpakowania.
 @error_not_enough_values = Prawa strona zawiera zbyt wiele wartości, aby można je było rozpakować do lewej strony.
 @error_empty_print = `print()` wymaga co najmniej jednego argumentu.
-@error_in_string = Nie można sprawdzić, czy {0} znajduje się w stringu.
-@error_collection_changed_size_during_iteration = Rozmiar tej kolekcji nie może być zmieniony w pętli for, która po niej iteruje. Dzieje się tak, ponieważ zmiana rozmiaru kolekcji unieważniłaby obiekt iteratora, którego używa pętla for.
-@error_wrong_use_of_max = Nie można obliczyć max z {0}.
-@error_wrong_use_of_min = Nie można obliczyć min z {0}.
-@error_function_as_condition = Próbujesz sprawdzić, czy funkcja {0} jest `True`. To jest sam obiekt funkcji, a nie wartość zwracana przez funkcję. Czy chciałeś wywołać funkcję za pomocą operatora wywołania `()`?
+@error_in_string = Nie można sprawdzić, czy {0} znajduje się w ciągu znaków.
+@error_collection_changed_size_during_iteration = Rozmiar tej kolekcji nie może być zmieniany w pętli for, która po niej iteruje. Dzieje się tak, ponieważ zmiana rozmiaru kolekcji unieważniłaby obiekt iteratora, którego używa pętla for.
+@error_wrong_use_of_max = Nie można obliczyć maksimum z {0}.
+@error_wrong_use_of_min = Nie można obliczyć minimum z {0}.
+@error_function_as_condition = Próbujesz sprawdzić, czy funkcja {0} jest `True`. To jest sam obiekt funkcji, a nie wartość zwracana przez funkcję. Czy chciałeś wywołać funkcję za pomocą operatora wywołania `()`? 
 
-W Pythonie obiekty funkcji są „truthy”, co oznacza, że jeśli użyjesz ich jako warunków, działają jak `True`, więc Python nie dałby ci tego komunikatu o błędzie.
+W Pythonie obiekty funkcji są „prawdziwe” (truthy), co oznacza, że jeśli użyjesz ich jako warunków, działają jak `True`, więc Python nie pokazałby tego komunikatu o błędzie. 
 
-To jest komunikat o błędzie zabezpieczającym, możesz go wyłączyć w opcjach, jeśli ci przeszkadza.
-@error_function_in_operator = Próbujesz użyć {1} na funkcji {0}. To jest sam obiekt funkcji, a nie wartość zwracana przez funkcję. Czy chciałeś wywołać funkcję za pomocą operatora wywołania `()`?
+Jest to komunikat o błędzie zabezpieczającym, możesz go wyłączyć w opcjach, jeśli ci przeszkadza.
+@error_function_in_operator = Próbujesz użyć {1} na funkcji {0}. To jest sam obiekt funkcji, a nie wartość zwracana przez funkcję. Czy chciałeś wywołać funkcję za pomocą operatora wywołania `()`? 
 
-To jest komunikat o błędzie zabezpieczającym, możesz go wyłączyć w opcjach, jeśli ci przeszkadza.
-@error_zero_step_size = Rozmiar kroku nie może wynosić 0.
-@error_sequence_too_large = Sekwencja była zbyt duża, aby ją skopiować.
-@error_invalid_sim_unlocks = Początkowe odblokowania były nieprawidłowe. Musi to być sekwencja odblokowań lub krotek w formie `(Unlock.Carrots, 3)`.
-@error_invalid_sim_items = Początkowe przedmioty były nieprawidłowe. Musi to być dict mapujący przedmioty na liczby, np. `{Items.Hay : 100}`.
-@error_invalid_sim_globals = Początkowe zmienne globalne były nieprawidłowe. Musi to być dict mapujący nazwy zmiennych na wartości, np. `{"x" : 42}`.
+Jest to komunikat o błędzie zabezpieczającym, możesz go wyłączyć w opcjach, jeśli ci przeszkadza.
+@error_zero_step_size = Krok nie może wynosić 0.
+@error_sequence_too_large = Sekwencja była zbyt duża do skopiowania.
+@error_invalid_sim_unlocks = Początkowe odblokowania były nieprawidłowe. Musi to być sekwencja odblokowań lub krotek w postaci `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Początkowe przedmioty były nieprawidłowe. Musi to być słownik mapujący przedmioty na liczby, np. `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Początkowe zmienne globalne były nieprawidłowe. Musi to być słownik mapujący nazwy zmiennych na wartości, np. `{"x" : 42}`.
 @error_division_by_zero = O nie! Podzieliłeś przez `0`. Ledwo to przeżyłeś.
-@error_negative_use_item = Ilość użytych przedmiotów musi wynosić co najmniej `1`. Było {0}.
-@error_use_before_assign = Próbowano odczytać zmienną {0} przed przypisaniem jej wartości.
-Jeśli chcesz zmodyfikować zmienną globalną, musisz użyć słowa kluczowego global, aby pisać do globalnego scope.
+@error_negative_use_item = Ilość użytych przedmiotów musi wynosić co najmniej `1`. Wynosiła {0}.
+@error_use_before_assign = Próbowano odczytać zmienną {0} przed przypisaniem jej wartości. 
+Jeśli chcesz zmodyfikować zmienną globalną, musisz użyć słowa kluczowego global, aby pisać w zasięgu globalnym.
 
 `global x
 x += 1`

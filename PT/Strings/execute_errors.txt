@@ -1,26 +1,26 @@
-@error_code_after_block = Não deveria haver código aqui. Tenta removê-lo ou colocá-lo numa nova linha.
-@error_wrong_number_args = {0} leva {1} argumentos.
-@error_expected_no_args = {0} não leva argumentos.
-@error_wrong_args = O {0}. argumento de {1} era {2}. Este não é um argumento válido.
+@error_code_after_block = Não deveria haver nenhum código aqui. Tente removê-lo ou colocá-lo em uma nova linha.
+@error_wrong_number_args = {0} recebe {1} argumentos.
+@error_expected_no_args = {0} не recebe nenhum argumento.
+@error_wrong_args = O {0}º argumento de {1} foi {2}. Este não é um argumento válido.
 @error_syntax_error_in_import = O módulo importado tem um erro de sintaxe.
-@error_module_not_found = Um módulo com este nome não existe. O nome precisa de corresponder a um nome de ficheiro. Este é o nome exibido no topo da janela.
+@error_module_not_found = Um módulo com este nome não existe. O nome precisa corresponder a um nome de arquivo. Este é o nome exibido no topo da janela.
 @error_list_element_not_found = {0} não é um elemento na lista.
-@error_set_element_not_found = {0} não é um elemento do set.
-@error_index_out_of_bounds = O índice {0} estava fora dos limites da lista {1}.
+@error_set_element_not_found = {0} não é um elemento do conjunto.
+@error_index_out_of_bounds = O índice {0} está fora dos limites da lista {1}.
 @error_index_out_of_bounds2 = O índice estava fora dos limites da lista.
 @error_arith_assign_not_used_on_number = {0} só pode ser usado em números.
 @error_bool_op_not_used_on_bool = Um operador lógico só pode ser usado em expressões booleanas que avaliam para `True` ou `False`.
 @error_bad_bin_operator = O operador {0} não pode ser usado nos operandos {1} e {2}.
 @error_bad_unary_operator = O operador {0} não pode ser usado em {1}.
 @error_index = {0} não pode ser usado como um índice em {1}.
-@error_index_on_non_indexable = Não podes indexar em {0}.
+@error_index_on_non_indexable = Você não pode indexar em {0}.
 @error_zero_step = O tamanho do passo não pode ser zero.
-@error_index_on_tuple = Não podes atribuir um elemento de um tuple porque os tuples são imutáveis.
-@error_bad_key = {0} não pode ser usado como uma chave.
-@error_slice_dict = Não se pode fatiar dictionaries.
-@error_key = {0} não é uma chave no dictionary.
-@error_condition_not_bool = {0} não é uma condição válida. A condição deve ser um valor booleano. Isto significa que deve ser uma expressão que é sempre `True` ou `False`.
-@error_for_requires_iterable = {0} não pode ser iterado num loop for. O loop for deve receber uma sequência para iterar. Exemplo:
+@error_index_on_tuple = Você не pode atribuir um elemento de tupla porque tuplas são imutáveis.
+@error_bad_key = {0} не pode ser usado como chave.
+@error_slice_dict = Não é possível fatiar dicionários.
+@error_key = {0} не é uma chave no dicionário.
+@error_condition_not_bool = {0} não é uma condição válida. A condição deve ser um valor booleano. Isso significa que deve ser uma expressão que é sempre `True` ou `False`.
+@error_for_requires_iterable = {0} não pode ser iterado em um loop for. O loop for deve receber uma sequência para iterar. Exemplo:
 
 `for i in range(5):`
 Aqui range(5) retorna a sequência `0,1,2,3,4`.
@@ -28,48 +28,48 @@ Aqui range(5) retorna a sequência `0,1,2,3,4`.
 @error_no_loop_to_continue = `continue` só pode ser usado dentro de um loop.
 @error_no_function_to_return_from = `return` só pode ser usado dentro de uma função.
 @error_missing_unlock = Isto deve ser desbloqueado antes de poder ser usado.
-@error_missing_x_unlock = {0} deve ser desbloqueado antes que isto possa ser usado.
-@error_name_not_defined = {0} nunca foi definido. Deves atribuir um valor a uma variável antes de a usares.
-@error_missing_import = {0} nunca foi definido. Parece estar definido no ficheiro {1}. Esqueceste-te de o importar?
-Se o importaste, provavelmente tens um ciclo de importação (Vê a página de documentação de importação).
-@error_missing_import_before_unlock = {0} nunca foi definido. Parece estar definido no ficheiro {1}. Tens de desbloquear as importações para poderes importar coisas de outros ficheiros.
-@error_call_before_def = {0} não está definido. Parece estar definido algures neste ficheiro, mas a definição ainda não foi executada. As funções só podem ser chamadas após a declaração `def`.
-@error_not_a_function = Tentaste chamar algo que não é uma função. Um erro comum que pode causar isto é ter uma variável com o mesmo nome da função.
+@error_missing_x_unlock = {0} deve ser desbloqueado antes que isso possa ser usado.
+@error_name_not_defined = {0} nunca foi definido. Você deve atribuir um valor a uma variável antes de usá-la.
+@error_missing_import = {0} nunca foi definido. Parece estar definido no arquivo {1}. Você esqueceu de importá-lo? 
+Se você o importou, provavelmente tem um ciclo de importação (Veja a página de documentação de importação).
+@error_missing_import_before_unlock = {0} nunca foi definido. Parece estar definido no arquivo {1}. Você tem que desbloquear importações para poder importar coisas de outros arquivos.
+@error_call_before_def = {0} não está definido. Parece estar definido em algum lugar neste arquivo, mas a definição ainda não foi executada. Funções só podem ser chamadas após a declaração `def`.
+@error_not_a_function = Você tentou chamar algo que не é uma função. Um erro comum que pode causar isso é ter uma variável com o mesmo nome da função.
 @error_invalid_const = {0} não existe.
-@error_invalid_const2 = Isto não existe.
-@error_max_stack_size_reached = O tamanho máximo da call stack foi atingido. Isto é muito provavelmente devido a demasiadas chamadas de função recursivas.
-@error_max_comparison_depth = A profundidade máxima de comparação foi atingida. Isto pode acontecer, por exemplo, se estiveres a comparar listas que se contêm a si próprias.
+@error_invalid_const2 = Isso não existe.
+@error_max_stack_size_reached = O tamanho máximo da pilha de chamadas foi atingido. Isso provavelmente se deve a muitas chamadas de função recursivas.
+@error_max_comparison_depth = A profundidade máxima de comparação foi atingida. Isso pode acontecer, por exemplo, se você estiver comparando listas que contêm a si mesmas.
 @error_assign_type_mismatch = O lado esquerdo da atribuição não correspondeu ao lado direito.
 @error_too_many_values_to_unpack = O lado direito não contém valores suficientes para desempacotar.
-@error_not_enough_values = O lado direito contém demasiados valores para serem desempacotados no lado esquerdo.
+@error_not_enough_values = O lado direito contém valores demais para serem desempacotados no lado esquerdo.
 @error_empty_print = `print()` requer pelo menos um argumento.
-@error_in_string = Não é possível verificar se {0} está numa string.
-@error_collection_changed_size_during_iteration = O tamanho desta coleção não pode ser alterado dentro de um loop for que itera sobre ela. Isto porque alterar o tamanho da coleção invalidaria o objeto iterador que o loop for está a usar.
+@error_in_string = Não é possível verificar se {0} está em uma string.
+@error_collection_changed_size_during_iteration = O tamanho desta coleção não pode ser alterado dentro de um loop for que itera sobre ela. Isso ocorre porque alterar o tamanho da coleção invalidaria o objeto iterador que o loop for está usando.
 @error_wrong_use_of_max = Não é possível calcular o máximo de {0}.
 @error_wrong_use_of_min = Não é possível calcular o mínimo de {0}.
-@error_function_as_condition = A tentar verificar se a função {0} é `True`. Este é o próprio objeto da função, não o valor de retorno da função. Querias chamar a função com o operador de chamada `()`?
+@error_function_as_condition = Tentando verificar se a função {0} é `True`. Este é o objeto da função em si, não o valor de retorno da função. Você quis chamar a função com o operador `()`? 
 
-Em Python, os objetos de função são "truthy" (considerados verdadeiros), o que significa que se os usares como condições, eles funcionam como `True`, então o Python não te daria esta mensagem de error.
+Em Python, objetos de função são considerados verdadeiros (truthy), o que significa que, se você os usar como condições, eles funcionam como `True`, então o Python não lhe daria esta mensagem de erro. 
 
-Esta é uma mensagem de error de salvaguarda, podes desligá-la nas opções se estiver a atrapalhar.
-@error_function_in_operator = A tentar usar {1} na função {0}. Este é o próprio objeto da função, não o valor de retorno da função. Querias chamar a função com o operador de chamada `()`?
+Esta é uma mensagem de erro de proteção, você pode desativá-la nas opções se estiver atrapalhando.
+@error_function_in_operator = Tentando usar {1} na função {0}. Este é o objeto da função em si, não o valor de retorno da função. Você quis chamar a função com o operador `()`? 
 
-Esta é uma mensagem de error de salvaguarda, podes desligá-la nas opções se estiver a atrapalhar.
+Esta é uma mensagem de erro de proteção, você pode desativá-la nas opções se estiver atrapalhando.
 @error_zero_step_size = O tamanho do passo não pode ser 0.
-@error_sequence_too_large = A sequência era demasiado grande para copiar.
-@error_invalid_sim_unlocks = Os unlocks iniciais eram inválidos. Tem de ser uma sequência de unlocks ou tuples no formato `(Unlock.Carrots, 3)`.
-@error_invalid_sim_items = Os itens iniciais eram inválidos. Tem de ser um dict que mapeia itens a números como `{Items.Hay : 100}`.
-@error_invalid_sim_globals = Os globals iniciais eram inválidos. Tem de ser um dict que mapeia nomes de variáveis a valores como `{"x" : 42}`.
-@error_division_by_zero = Oh não! Dividiste por `0`. Sobreviveste por pouco.
-@error_negative_use_item = A quantidade de item a usar deve ser pelo menos `1`. Era {0}.
-@error_use_before_assign = Tentaste ler a variável {0} antes de um valor lhe ser atribuído.
-Se quiseres modificar uma variável global, tens de usar a palavra-chave global para escrever no scope global.
+@error_sequence_too_large = A sequência era muito grande para copiar.
+@error_invalid_sim_unlocks = Os desbloqueios iniciais eram inválidos. Precisa ser uma sequência de desbloqueios ou tuplas no formato `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Os itens iniciais eram inválidos. Precisa ser um dicionário mapeando itens para números como `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Os globais iniciais eram inválidos. Precisa ser um dicionário mapeando nomes de variáveis para valores como `{"x" : 42}`.
+@error_division_by_zero = Oh não! Você dividiu por `0`. Você sobreviveu por pouco.
+@error_negative_use_item = A quantidade de itens a serem usados deve ser de pelo menos `1`. Foi {0}.
+@error_use_before_assign = Tentativa de ler a variável {0} antes que um valor fosse atribuído a ela. 
+Se você quiser modificar uma variável global, você tem que usar a palavra-chave global para escrever no escopo global.
 
 `global x
 x += 1`
-@error_attribute_on_non_module = Não podes atribuir um atributo a {0}.
-@error_file_not_found = O ficheiro {0} não existe.
+@error_attribute_on_non_module = Você не pode atribuir um atributo a {0}.
+@error_file_not_found = O arquivo {0} не existe.
 @error_max_drones_reached = O limite de drones foi excedido.
-@error_dino_hat_already_used = Só existe um chapéu de dinossauro e já está a ser usado. Não o podes usar num segundo drone.
-@error_invalid_drone_id = Não existe nenhum drone com o ID {0}.
+@error_dino_hat_already_used = Há apenas um chapéu de dinossauro e ele já está em uso. Você não pode usá-lo em um segundo drone.
+@error_invalid_drone_id = Não há drone com ID {0}.
 @error_invalid_handle = {0} não existe mais.

@@ -4,27 +4,27 @@
 @error_invalid_assign_expr = Diesem Ausdruck kann kein Wert zugewiesen werden.
 @error_no_statements = Ein Codeblock muss mindestens eine Anweisung enthalten. 
 Eine Anweisung kann ein Funktionsaufruf wie `harvest()` oder eine Variablenzuweisung sein. 
-Wenn du in dem Codeblock nichts tun möchtest, verwende eine `pass`-Anweisung.
-@error_not_enough_indentation = Hier ist nicht genug Einrückung. 
-Nach einem : muss mehr Einrückung sein als davor, um den neuen Codeblock abzugrenzen. 
+Wenn du im Codeblock nichts tun möchtest, verwende eine `pass`-Anweisung.
+@error_not_enough_indentation = Hier ist nicht genügend Einrückung. 
+Nach einem : muss mehr Einrückung als davor sein, um den neuen Codeblock abzugrenzen. 
 Verwende die Tab-Taste, um den Code einzurücken.
 @error_too_much_indentation = Hier ist zu viel Einrückung. 
 Die Einrückung muss für alle Anweisungen innerhalb eines Codeblocks gleich sein.
-@error_not_a_statement = Dies ist keine gültige Anweisung. 
+@error_not_a_statement = Dies ist keine gültige Anweisung.
 @error_not_a_statement2 = Dies ist keine gültige Anweisung. Meintest du {0}?
 @error_invalid_expression = Dies ist kein gültiger Ausdruck.
 @error_new_line_expected = Hier wird eine neue Zeile erwartet.
 @error_unexpected_token = Hier wird ein {0} erwartet.
 @error_missing_colon = Am Anfang jedes Codeblocks muss ein Doppelpunkt `:` stehen.
-@error_unexpected_assign = Du kannst hier keine Zuweisung machen. Um auf Gleichheit zu prüfen, verwende stattdessen `==`.
+@error_unexpected_assign = Hier kannst du keine Zuweisung vornehmen. Um auf Gleichheit zu prüfen, verwende stattdessen `==`.
 @error_invalid_for_syntax = Dies ist keine gültige for-Schleife. Eine for-Schleife sieht so aus: 
 `for n in range(3):`
 Auf das `for` folgt immer die Schleifenvariable, ein `in` und dann eine Sequenz. In diesem Beispiel ist `n` der Variablenname, kann aber durch jeden anderen Namen ersetzt werden.
 @error_unknown_method = Diese Methode existiert nicht.
-@error_bad_backslash = Der Backslash kann verwendet werden, um Ausdrücke auf mehrere Zeilen aufzuteilen. Aber du musst danach einen Zeilenumbruch einfügen.
+@error_bad_backslash = Der Backslash kann verwendet werden, um Ausdrücke auf mehrere Zeilen aufzuteilen. Aber du musst danach einen Zeilenumbruch hinzufügen.
 @error_mixed_indentation = Tabs und Leerzeichen sollten nicht gemischt werden.
 @error_expected_close_token = Eine Komma oder schließende Klammer wurde erwartet.
-@error_wrong_dict_literal = Ein : wurde erwartet, um die Keys und die Values eines Dictionarys zu trennen.
+@error_wrong_dict_literal = Ein : zur Trennung von Schlüsseln und Werten eines Dictionarys wurde erwartet.
 @error_assign_before_global = {0} wird vor einer globalen Deklaration zugewiesen.
 @error_wildcard_imports_not_allowed_in_function = Importe der Form `from x import *` sind innerhalb von Funktionen nicht erlaubt.
 @error_invalid_import = Du kannst keine Dateien importieren, deren Namen keine gültigen Bezeichner sind. Gültige Bezeichner dürfen nur Buchstaben, Zahlen und Unterstriche enthalten. Wenn dein Dateiname andere Zeichen enthält, musst du ihn umbenennen.

@@ -1,10 +1,10 @@
 # Break
-`break` ermöglicht es, eine Schleife vorzeitig zu beenden. Wenn die `break`-Anweisung erreicht wird, verlässt sie sofort die innerste Schleife und beginnt mit der Ausführung des Codes nach der Schleife.
+`break` ermöglicht es, eine Schleife vorzeitig zu beenden. Wenn die `break`-Anweisung erreicht wird, wird die innerste Schleife sofort verlassen und der Code nach der Schleife ausgeführt.
 
 `for i in range(10):
 	break
 print(i)`
-Dies druckt `0`, weil `i` in der ersten Iteration der Schleife `0` ist und dann die break-Anweisung die Schleife beendet.
+Dies gibt `0` aus, weil `i` in der ersten Iteration der Schleife `0` ist und dann die `break`-Anweisung die Schleife beendet.
 
 Es funktioniert auch bei `while`-Schleifen.
 
@@ -12,8 +12,8 @@ Es funktioniert auch bei `while`-Schleifen.
 	if can_harvest():
 		break`
 
-Dieser Code führt die `while`-Schleife aus, bis `can_harvest()` `True` ist. 
-Er hat den gleichen Effekt wie
+Dieser Code führt die `while`-Schleife aus, bis `can_harvest()` `True` ist.
+Es hat den gleichen Effekt wie
 
 `while not can_harvest():
 	pass`

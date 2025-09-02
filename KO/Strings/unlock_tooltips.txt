@@ -1,20 +1,20 @@
 @unlock_tooltip_template_cost = ### 해금 비용 {{{{itemblock cost unlock {0}}}}}
-@unlock_descr_trees = 나무를 해금합니다.
+@unlock_descr_trees = 나무를 해금해요.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = 드론과 코드 실행 속도를 모두 증가시킵니다.
-@unlock_descr_plant = 심기를 해금합니다.
+@unlock_descr_speed = 드론과 코드 실행 속도를 모두 증가시켜요.
+@unlock_descr_plant = 심기를 해금해요.
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = 간단한 while 루프를 해금합니다.
+@unlock_descr_loops = 간단한 while 루프를 해금해요.
 
 `while True:
     harvest()`
-@unlock_descr_senses = 드론이 자기 아래에 무엇이 있고 어디에 있는지 볼 수 있게 됩니다.
+@unlock_descr_senses = 드론이 자기 아래에 무엇이 있고 어디에 있는지 볼 수 있게 돼요.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = 농지를 확장하고 이동을 해금합니다.
+@unlock_descr_expand = 농지를 확장하고 이동을 해금해요.
 @unlock_descr_operators = 산술, 비교 및 논리 연산자.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
@@ -22,98 +22,98 @@
 @unlock_descr_pumpkin = 호박!
 
 `plant(Entities.Pumpkin)`
-@unlock_descr_variables = 변수에 값을 할당합니다.
+@unlock_descr_variables = 변수에 값을 할당해요.
 
 `next_plant = Entities.Bush
 plant(next_plant)`
-@unlock_descr_functions = 자신만의 함수를 정의합니다.
+@unlock_descr_functions = 자신만의 함수를 정의해요.
 
 `def do_two_flips():
     do_a_flip()
     do_a_flip()
 
 do_two_flips()`
-@unlock_descr_watering = 식물에 물을 주어 더 빨리 자라게 합니다.
+@unlock_descr_watering = 식물에 물을 주어 더 빨리 자라게 해요.
 
 `use_item(Items.Water)`
-@unlock_descr_carrots = 흙을 갈고 당근을 심습니다.
+@unlock_descr_carrots = 흙을 갈고 당근을 심어요.
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_lists = list를 사용하여 많은 값을 저장합니다.
+@unlock_descr_lists = 리스트를 사용하여 많은 값을 저장해요.
 
 `plants = [Entities.Hay, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = 사물의 비용에 접근할 수 있게 합니다.
+@unlock_descr_costs = 사물의 비용에 접근할 수 있게 돼요.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = 식물을 즉시 성장시킵니다.
+@unlock_descr_fertilizer = 식물을 즉시 자라게 해요.
 
 `use_item(Items.Fertilizer)`
-@unlock_descr_mazes = 가운데에 보물이 있는 미로입니다.
+@unlock_descr_mazes = 중앙에 보물이 있는 미로.
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
-@unlock_descr_debug = 프로그램 디버깅을 돕는 도구입니다.
+@unlock_descr_debug = 프로그램 디버깅을 돕는 도구들.
 
 `print("hi")`
-@unlock_descr_debug2 = 실행을 일시적으로 늦추고 농장을 작게 만드는 함수입니다.
+@unlock_descr_debug2 = 실행을 일시적으로 늦추고 농장을 더 작게 만드는 함수들.
 
 `set_world_size(3)
 set_execution_speed(1)`
-@unlock_descr_grass = 풀의 수확량을 증가시킵니다.
-@unlock_descr_auto_unlock = 사물을 자동으로 해금합니다.
+@unlock_descr_grass = 풀의 수확량을 증가시켜요.
+@unlock_descr_auto_unlock = 자동으로 해금해요.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = 동반 식물을 사용하여 수확량을 늘립니다.
+@unlock_descr_polyculture = 동반 식재를 사용하여 수확량을 늘려요.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = 해바라기와 파워.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = 가장 빠른 시간을 겨루는 leaderboard에 참여하세요.
+@unlock_descr_leaderboard = 가장 빠른 시간 기록을 위한 리더보드에 참여하세요.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = dictionary와 set에 접근할 수 있게 됩니다.
+@unlock_descr_dicts = 딕셔너리와 세트에 접근할 수 있게 돼요.
 
 `right_of = {North:East, East:South, South:West, West:North}`
-@unlock_descr_utilities = `min()`, `max()`, `abs()`, `random()` 함수를 해금합니다.
+@unlock_descr_utilities = `min()`, `max()`, `abs()`, `random()` 함수를 해금해요.
 
 `random_index = random() * len(list) // 1`
 @unlock_descr_cactus = 선인장!
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = 장엄한 고대 생물입니다.
+@unlock_descr_dinosaurs = 장엄한 고대 생물.
 @unlock_descr_simulation = 더 빠르고 재현 가능한 조건에서 테스트하세요.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@unlock_descr_timing = 때가 됐습니다!
+@unlock_descr_timing = 때가 됐어요!
 
 `passed_time = get_time()`
-@unlock_descr_import = 다른 파일에서 무언가를 import합니다.
+@unlock_descr_import = 다른 파일에서 이것저것 가져와요.
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = 많은 드론이 있는 훨씬 더 큰 농장입니다.
+@unlock_descr_megafarm = 많은 드론이 있는 훨씬 더 큰 농장.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = 농장을 확장합니다. 이 작업은 또한 농장을 비웁니다.
-@multi_unlock_descr_carrots = 당근의 수확량과 비용을 증가시킵니다.
-@multi_unlock_descr_trees = 덤불과 나무의 수확량을 증가시킵니다.
-@multi_unlock_descr_pumpkins = 호박의 수확량과 비용을 증가시킵니다.
-@multi_unlock_descr_mazes = 보물 상자의 금과 미로를 생성하는 데 필요한 기묘한 물질의 양을 증가시킵니다.
-@multi_unlock_descr_sunflowers = 해바라기에서 얻는 파워를 증가시킵니다.
-@multi_unlock_descr_cactus = 선인장의 수확량과 비용을 증가시킵니다.
-@multi_unlock_descr_dinosaur = 공룡의 수확량과 비용을 증가시킵니다.
-@multi_unlock_descr_polyculture = 혼합 재배의 수확량 배율을 증가시킵니다.
-@multi_unlock_descr_watering = 더 많은 물을 받습니다.
-@multi_unlock_descr_fertilizer = 더 많은 비료를 받습니다.
-@multi_unlock_descr_megafarm = 농장 크기와 드론 수를 더욱 늘립니다.
+@multi_unlock_descr_expand = 농장을 확장해요. 이 작업은 농장을 비우기도 해요.
+@multi_unlock_descr_carrots = 당근의 수확량과 비용을 증가시켜요.
+@multi_unlock_descr_trees = 덤불과 나무의 수확량을 증가시켜요.
+@multi_unlock_descr_pumpkins = 호박의 수확량과 비용을 증가시켜요.
+@multi_unlock_descr_mazes = 보물 상자의 금과 미로 생성에 필요한 기묘한 물질의 양을 증가시켜요.
+@multi_unlock_descr_sunflowers = 해바라기에서 얻는 파워를 증가시켜요.
+@multi_unlock_descr_cactus = 선인장의 수확량과 비용을 증가시켜요.
+@multi_unlock_descr_dinosaur = 공룡의 수확량과 비용을 증가시켜요.
+@multi_unlock_descr_polyculture = 혼합 재배의 수확량 배율을 증가시켜요.
+@multi_unlock_descr_watering = 더 많은 물을 받아요.
+@multi_unlock_descr_fertilizer = 더 많은 비료를 받아요.
+@multi_unlock_descr_megafarm = 농장 크기와 드론 수를 더욱 늘려요.
 @auto_unlock = 자동 해금
 @cactus = 선인장
 @carrots = 당근
@@ -131,10 +131,10 @@ other_file.function()`
 @lists = 리스트
 @loops = 루프
 @mazes = 미로
-@megafarm = 거대 농장
+@megafarm = 메가팜
 @operators = 연산자
-@plant = 심기
-@polyculture = 복합재배
+@plant = 식물
+@polyculture = 혼합 재배
 @pumpkins = 호박
 @senses = 감각
 @simulation = 시뮬레이션

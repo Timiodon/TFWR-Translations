@@ -14,7 +14,7 @@
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = Espande il terreno agricolo e sblocca il movimento.
+@unlock_descr_expand = Espande il terreno della fattoria e sblocca il movimento.
 @unlock_descr_operators = Operatori aritmetici, di confronto e logici.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
@@ -33,10 +33,10 @@ plant(next_plant)`
     do_a_flip()
 
 do_two_flips()`
-@unlock_descr_watering = Innaffia le piante per farle crescere più velocemente.
+@unlock_descr_watering = Annaffia le piante per farle crescere più velocemente.
 
 `use_item(Items.Water)`
-@unlock_descr_carrots = Ara il terreno e pianta le carote.
+@unlock_descr_carrots = Ara il terreno e pianta carote.
 
 `till()
 plant(Entities.Carrot)`
@@ -47,7 +47,7 @@ plant(Entities.Carrot)`
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = Permette l'accesso al costo delle cose.
+@unlock_descr_costs = Permette di accedere al costo delle cose.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
@@ -55,11 +55,11 @@ for item in cost:
 @unlock_descr_fertilizer = Fai crescere le piante istantaneamente.
 
 `use_item(Items.Fertilizer)`
-@unlock_descr_mazes = Un labirinto con un tesoro nel mezzo.
+@unlock_descr_mazes = Un labirinto con un tesoro al centro.
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
-@unlock_descr_debug = Strumenti per aiutare nel debugging dei programmi.
+@unlock_descr_debug = Strumenti per aiutare a fare il debug dei programmi.
 
 `print("hi")`
 @unlock_descr_debug2 = Funzioni per rallentare temporaneamente l'esecuzione e rendere la fattoria più piccola.
@@ -70,13 +70,13 @@ set_execution_speed(1)`
 @unlock_descr_auto_unlock = Sblocca le cose automaticamente.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Usa la consociazione di piante per aumentare la resa.
+@unlock_descr_polyculture = Usa la consociazione per aumentare la resa.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Girasoli ed Energia.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Entra in leaderboard per i tempi migliori.
+@unlock_descr_leaderboard = Unisciti alla leaderboard per i tempi più veloci.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = Ottieni accesso a dizionari e set.
@@ -106,7 +106,7 @@ other_file.function()`
 @multi_unlock_descr_carrots = Aumenta la resa e il costo delle carote.
 @multi_unlock_descr_trees = Aumenta la resa di cespugli e alberi.
 @multi_unlock_descr_pumpkins = Aumenta la resa e il costo delle zucche.
-@multi_unlock_descr_mazes = Aumenta l'oro nei forzieri e la quantità di sostanza strana necessaria per creare un labirinto.
+@multi_unlock_descr_mazes = Aumenta l'oro nei forzieri e la quantità di sostanza strana necessaria per generare un labirinto.
 @multi_unlock_descr_sunflowers = Aumenta l'energia ottenuta dai girasoli.
 @multi_unlock_descr_cactus = Aumenta la resa e il costo dei cactus.
 @multi_unlock_descr_dinosaur = Aumenta la resa e il costo dei dinosauri.
@@ -122,7 +122,7 @@ other_file.function()`
 @debug_2 = Debug_2
 @dictionaries = Dizionari
 @dinosaurs = Dinosauri
-@expand = Espansione
+@expand = Espandi
 @fertilizer = Fertilizzante
 @functions = Funzioni
 @grass = Erba
@@ -131,16 +131,16 @@ other_file.function()`
 @lists = Liste
 @loops = Cicli
 @mazes = Labirinti
-@megafarm = Mega Farm
+@megafarm = Megafarm
 @operators = Operatori
-@plant = Semina
+@plant = Pianta
 @polyculture = Policoltura
 @pumpkins = Zucche
-@senses = Sensori
+@senses = Sensi
 @simulation = Simulazione
 @speed = Velocità
 @sunflowers = Girasoli
-@timing = Tempistica
+@timing = Timing
 @trees = Alberi
 @utilities = Utilità
 @variables = Variabili

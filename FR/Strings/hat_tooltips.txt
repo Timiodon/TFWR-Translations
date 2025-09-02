@@ -1,2 +1,2 @@
 @hat_descr_straw_hat = Le chapeau par défaut.
-@hat_descr_dinosaur_hat = Équipe-le pour commencer le jeu du dinosaure.
+@hat_descr_dinosaur_hat = Équipe-le pour commencer le jeu de dinosaure.

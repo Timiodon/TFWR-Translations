@@ -1,10 +1,10 @@
 # Break
-`break` permet d'arrêter une boucle prématurément. Lorsque l'instruction `break` est atteinte, elle quitte immédiatement la boucle la plus interne et commence à exécuter le code après la boucle.
+`break` permet d'arrêter une boucle prématurément. Lorsque l'instruction `break` est atteinte, elle sortira immédiatement de la boucle la plus interne et commencera à exécuter le code après la boucle.
 
 `for i in range(10):
 	break
 print(i)`
-Cela affiche `0` car `i` est `0` dans la première itération de la boucle, puis l'instruction break met fin à la boucle.
+Cela affiche `0` car `i` est `0` à la première itération de la boucle, puis l'instruction break met fin à la boucle.
 
 Cela fonctionne aussi avec les boucles `while`.
 

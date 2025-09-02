@@ -6,7 +6,7 @@
 @unlock_descr_plant = Desbloquea la siembra.
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = Desbloquea un bucle while simple.
+@unlock_descr_loops = Desbloquea un bucle `while` simple.
 
 `while True:
     harvest()`
@@ -36,7 +36,7 @@ do_two_flips()`
 @unlock_descr_watering = Riega las plantas para que crezcan más rápido.
 
 `use_item(Items.Water)`
-@unlock_descr_carrots = Ara la tierra y planta zanahorias.
+@unlock_descr_carrots = Labra la tierra y planta zanahorias.
 
 `till()
 plant(Entities.Carrot)`
@@ -47,7 +47,7 @@ plant(Entities.Carrot)`
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = Permite el acceso al coste de las cosas.
+@unlock_descr_costs = Permite acceder al coste de las cosas.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
@@ -61,7 +61,7 @@ for item in cost:
     harvest()`
 @unlock_descr_debug = Herramientas para ayudar a depurar programas.
 
-`print("hola")`
+`print("hi")`
 @unlock_descr_debug2 = Funciones para ralentizar temporalmente la ejecución y hacer la granja más pequeña.
 
 `set_world_size(3)
@@ -76,10 +76,10 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = Girasoles y Energía.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Compite en el leaderboard por los mejores tiempos.
+@unlock_descr_leaderboard = Únete a la tabla de clasificación para los tiempos más rápidos.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = Obtén acceso a dictionaries y sets.
+@unlock_descr_dicts = Obtén acceso a diccionarios y conjuntos.
 
 `right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Desbloquea las funciones `min()`, `max()`, `abs()` y `random()`.
@@ -108,39 +108,39 @@ other_file.function()`
 @multi_unlock_descr_pumpkins = Aumenta el rendimiento y el coste de las calabazas.
 @multi_unlock_descr_mazes = Aumenta el oro en los cofres del tesoro y la cantidad de sustancia extraña necesaria para generar un laberinto.
 @multi_unlock_descr_sunflowers = Aumenta la energía obtenida de los girasoles.
-@multi_unlock_descr_cactus = Aumenta el rendimiento y el coste de los cactus.
+@multi_unlock_descr_cactus = Aumenta el rendimiento y el coste del cactus.
 @multi_unlock_descr_dinosaur = Aumenta el rendimiento y el coste de los dinosaurios.
 @multi_unlock_descr_polyculture = Aumenta el multiplicador de rendimiento del policultivo.
 @multi_unlock_descr_watering = Recibe más agua.
 @multi_unlock_descr_fertilizer = Recibe más fertilizante.
 @multi_unlock_descr_megafarm = Aumenta aún más el tamaño de la granja y el número de drones.
-@auto_unlock = Desbloqueo Automático
+@auto_unlock = Autodesbloqueo
 @cactus = Cactus
 @carrots = Zanahorias
 @costs = Costes
 @debug = Depuración
-@debug_2 = Depuración 2
-@dictionaries = Dictionaries
+@debug_2 = Depuración_2
+@dictionaries = Diccionarios
 @dinosaurs = Dinosaurios
 @expand = Expandir
 @fertilizer = Fertilizante
 @functions = Funciones
 @grass = Hierba
 @import = Importar
-@leaderboard = Leaderboard
+@leaderboard = Tabla de Clasificación
 @lists = Listas
 @loops = Bucles
 @mazes = Laberintos
 @megafarm = Megagranja
 @operators = Operadores
-@plant = Planta
+@plant = Plantar
 @polyculture = Policultivo
 @pumpkins = Calabazas
 @senses = Sentidos
 @simulation = Simulación
 @speed = Velocidad
 @sunflowers = Girasoles
-@timing = Tiempo
+@timing = Temporización
 @trees = Árboles
 @utilities = Utilidades
 @variables = Variables

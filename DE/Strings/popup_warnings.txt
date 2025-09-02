@@ -6,7 +6,7 @@
 @popup_warning_load_game = Möchtest du vor dem Laden speichern?
 @save = Speichern
 @don't save = Nicht speichern
-@popup_warning_corrupted_save = Es scheint ein Problem beim Laden von {0} gegeben zu haben. Schau dir den Abschnitt über Backups für weitere Informationen an.
-@popup_warning_failed_read_save = Fehler beim Lesen der Speicherdateien von {0}. Stelle sicher, dass alle anderen Programme, die auf die Dateien zugreifen, geschlossen sind, und versuche es erneut.
-@popup_warning_failed_write_save = Fehler beim Schreiben in die Speicherdateien von {0}. Stelle sicher, dass alle anderen Programme, die auf die Dateien zugreifen, geschlossen sind, und versuche es erneut.
-@ok = ok
+@popup_warning_corrupted_save = Es scheint ein Problem beim Laden von {0} gegeben zu haben. Weitere Informationen findest du im Abschnitt über Backups.
+@popup_warning_failed_read_save = Fehler beim Lesen der Speicherdateien von {0}. Stelle sicher, dass du alle anderen Programme schließt, die auf die Dateien zugreifen, und versuche es erneut.
+@popup_warning_failed_write_save = Fehler beim Schreiben in die Speicherdateien von {0}. Stelle sicher, dass du alle anderen Programme schließt, die auf die Dateien zugreifen, und versuche es erneut.
+@ok = OK

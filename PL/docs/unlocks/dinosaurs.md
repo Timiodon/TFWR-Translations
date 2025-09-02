@@ -1,27 +1,27 @@
 # Dinozaury
 Dinozaury to starożytne, majestatyczne stworzenia, które można hodować dla starożytnych kości.
 
-Niestety, dinozaury wyginęły dawno temu, więc najlepsze, co możemy teraz zrobić, to przebrać się za jednego z nich.
+Niestety dinozaury wyginęły dawno temu, więc najlepsze, co możemy teraz zrobić, to przebrać się za jednego.
 W tym celu otrzymałeś nowy kapelusz dinozaura.
 
 Kapelusz można założyć za pomocą
 `change_hat(Hats.Dinosaur_Hat)`
 
-Niestety nie wygląda on tak dobrze, jak w reklamie...
+Niestety nie wygląda on tak jak na reklamie...
 
-Jeśli założysz kapelusz dinozaura i będziesz mieć wystarczająco dużo dyń, [jabłko](objects/apple) zostanie automatycznie kupione i umieszczone pod dronem.
-Gdy dron znajdzie się nad jabłkiem i ponownie się poruszy, zje jabłko, a jego ogon urośnie o jeden. Jeśli cię na to stać, nowe jabłko zostanie kupione i umieszczone w losowej lokalizacji.
-Jabłko nie może się pojawić, jeśli w jego miejscu jest już coś posadzone.
+Jeśli założysz kapelusz dinozaura i masz wystarczająco dużo dyń, [jabłko](objects/apple) zostanie automatycznie zakupione i umieszczone pod dronem.
+Gdy dron znajdzie się nad jabłkiem i ponownie się poruszy, zje jabłko i jego ogon urośnie o jeden. Jeśli cię na to stać, nowe jabłko zostanie zakupione i umieszczone w losowej lokalizacji.
+Jabłko nie może się pojawić, jeśli coś innego jest posadzone tam, gdzie chce być.
 
-Ogon dinozaura będzie ciągnął się za dronem, wypełniając pola, nad którymi dron się przemieszczał. Jeśli dron spróbuje wejść na ogon, `move()` nie powiedzie się i zwróci `False`. 
-Ostatni segment ogona usunie się z drogi podczas ruchu, więc możesz na niego wejść. Jednakże, jeśli wąż wypełni całą farmę, nie będziesz mógł się już poruszać. Możesz więc sprawdzić, czy wąż jest w pełni rozwinięty, sprawdzając, czy nie możesz się już poruszać.
+Ogon dinozaura będzie ciągnięty za dronem, wypełniając poprzednie pola, nad którymi poruszał się dron. Jeśli dron spróbuje wejść na ogon, `move()` nie powiedzie się i zwróci `False`. 
+Ostatni segment ogona usunie się z drogi podczas ruchu, więc możesz na niego wejść. Jednakże, jeśli wąż wypełni całą farmę, nie będziesz mógł się już poruszyć. Możesz więc sprawdzić, czy wąż jest w pełni wyrośnięty, sprawdzając, czy nie możesz się już poruszyć.
 
-Użycie `measure()` na jabłku zwróci pozycję następnego jabłka jako krotkę (tuple).
+Użycie `measure()` na jabłku zwróci pozycję następnego jabłka jako krotkę.
 
 `next_x, next_y = measure()`
 
-Gdy kapelusz zostanie zdjęty poprzez założenie innego kapelusza, ogon zostanie zebrany.
-Otrzymasz kości w liczbie równej kwadratowi długości ogona. Więc za ogon o długości `n` otrzymasz `n**2` `Items.Bone`. 
+Gdy kapelusz zostanie ponownie zdjęty przez założenie innego kapelusza, ogon zostanie zebrany.
+Otrzymasz kości równe długości ogona do kwadratu. Więc za ogon o długości `n` otrzymasz `n**2` `Items.Bone`. 
 Na przykład:
 długość 1 => 1 kość
 długość 2 => 4 kości
@@ -30,16 +30,16 @@ długość 4 => 16 kości
 długość 16 => 256 kości
 długość 100 => 10000 kości
 
-Kapelusz Dinozaura jest bardzo ciężki, więc jeśli go założysz, `move()` będzie zajmować 400 ticks zamiast 200. Jednak za każdym razem, gdy podniesiesz jabłko, liczba ticków używanych przez `move()` zmniejsza się o 3% (zaokrąglone w dół), ponieważ dłuższy ogon pomaga w poruszaniu się.
+Kapelusz dinozaura jest bardzo ciężki, więc jeśli go założysz, wykonanie `move()` zajmie 400 ticków zamiast 200. Jednak za każdym razem, gdy podniesiesz jabłko, liczba ticków używanych przez `move()` jest zmniejszana o 3% (zaokrąglone w dół), ponieważ dłuższy ogon może pomóc w poruszaniu się.
 
-Poniższa pętla drukuje liczbę ticków używanych przez `move()` po zebraniu dowolnej liczby jabłek:
+Poniższa pętla wyświetla liczbę ticków używanych przez `move()` po dowolnej liczbie jabłek:
 
 `ticks = 400
 for i in range(100):
-    print("ticks after ", i, " apples: ", ticks)
+    print("ticki po ", i, " jabłkach: ", ticks)
     ticks -= ticks * 0.03 // 1`
 
 Masz tylko jeden kapelusz dinozaura, więc tylko jeden dron może go nosić.
 
-<spoiler=show hint 1>Jeśli będziesz poruszać się po tej samej ścieżce, która pokrywa całe pole, możesz łatwo uzyskać węża, który za każdym razem pokryje całe pole. Nie jest to bardzo wydajne, ale działa.
-Pełne przemierzenie bardzo dużej farmy może zająć dużo czasu, a być może nie potrzebujesz aż tylu kości. Możesz śmiało użyć `set_farm_size()`, aby zmienić rozmiar farmy na bardziej dogodny.</spoiler>
+<spoiler=pokaż podpowiedź 1>Jeśli będziesz poruszać się po tej samej ścieżce, która obejmuje całe pole, możesz łatwo uzyskać węża, który za każdym razem obejmuje całe pole. Nie jest to bardzo wydajne, ale działa.
+Pełne przemierzenie bardzo dużej farmy może zająć dużo czasu i być może nie potrzebujesz aż tylu kości. Możesz użyć `set_farm_size()`, aby zmienić rozmiar farmy na coś bardziej wygodnego.</spoiler>

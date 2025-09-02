@@ -7,11 +7,11 @@
 @quit = 종료
 @open_folder = 폴더 열기
 @new_game = 새 게임
-@back = 뒤로가기
+@back = 뒤로
 @unlocks = 해금
 @farm = 농장
 @unlocked = 해금됨
 @upgrade = 업그레이드
 @max_level = 최대 레벨
-@unlock = 해금하기
+@unlock = 해금
 @locked = 잠김

@@ -1,5 +1,5 @@
 # Cargando Copias de Seguridad
-Desafortunadamente, a veces un archivo de guardado se corrompe o pierdes algunos archivos de código. Si esto te sucede, puedes intentar cargar una copia de seguridad. Si sucede regularmente, intenta desactivar la Nube de Steam.
+Desafortunadamente, a veces un archivo de guardado se corrompe o pierdes algunos archivos de código. Si esto te sucede, puedes intentar cargar una copia de seguridad. Si sucede con regularidad, intenta desactivar Steam Cloud.
 
 Se hace una copia de seguridad cada vez que se guarda el juego, y se guardan un pequeño número de copias de seguridad en caso de que necesites restaurar algo.
 Estas copias de seguridad se pueden encontrar en el [directorio de copias de seguridad](persistent_data_path/Backup). Son copias de los guardados en el [directorio de guardado](persistent_data_path/Saves).

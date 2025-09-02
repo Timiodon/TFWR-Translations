@@ -1,5 +1,5 @@
 # Listy
-Listy to prosty sposób na przechowywanie wielu wartości w jednej zmiennej.
+Listy to łatwy sposób na przechowywanie wielu wartości w jednej zmiennej.
 Możesz tworzyć nowe listy w ten sposób:
 
 `lista = [2, True, Items.Hay]`
@@ -23,7 +23,7 @@ for liczba in lista:
 	suma += liczba`
 `suma` wynosi teraz `18`
 
-Następujące metody list pozwalają dodawać i usuwać elementy:
+Poniższe metody list pozwalają na dodawanie i usuwanie elementów:
 
 `list.append(elem)` dodaje element na koniec listy:
 
@@ -37,13 +37,13 @@ lista.append(7)`
 lista.remove(2)`
 `lista` to teraz `[1, 4, 2]`
 
-`list.insert(index, elem)` wstawia element pod podanym indeksem:
+`list.insert(index, elem)` wstawia element na podanym indeksie:
 
 `lista = [Entities.Tree, Items.Hay]
 lista.insert(1, Items.Wood)`
 `lista` to teraz `[Entities.Tree, Items.Wood, Items.Hay]`
 
-`list.pop(index)` usuwa element o podanym indeksie.
+`list.pop(index)` usuwa element na określonym indeksie.
 Jeśli nie podano indeksu, usuwany jest ostatni element.
 
 `lista = [3, 5, 8, 25]
@@ -57,7 +57,7 @@ Funkcja `len()` zwraca długość listy.
 x = len(lista)`
 `x` wynosi teraz `3`
 
-Listy mają semantykę referencji. Oznacza to, że przypisanie listy do zmiennej przypisuje ten sam obiekt listy do tej zmiennej, a nie tworzy jej kopii.
+Listy mają semantykę referencji. Oznacza to, że przypisanie listy do zmiennej przypisuje ten sam obiekt listy do tej zmiennej, zamiast tworzyć kopię listy.
 Jeśli dwie zmienne odnoszą się do tej samej listy, zmiany na liście będą widoczne dla obu.
 
 `a = [1,2]

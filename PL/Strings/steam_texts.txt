@@ -1,15 +1,15 @@
-@steam_description = Zaprogramuj drona, używając prostego języka podobnego do Pythona, aby w pełni zautomatyzować różne zadania rolnicze, które w przeciwnym razie byłyby bardzo żmudne. Poczuj satysfakcję z prostego naciśnięcia przycisku „wykonaj” i obserwowania, jak dron wykonuje całą ciężką pracę.
+@steam_description = Zaprogramuj drona używając prostego, podobnego do Pythona języka, aby w pełni zautomatyzować różne zadania rolnicze, które w przeciwnym razie byłyby bardzo żmudne. Poczuj satysfakcję z prostego naciśnięcia "wykonaj" i obserwowania, jak twój dron wykonuje całą ciężką pracę. 
 [img]{STEAM_APP_IMAGE}/extras/Harvesting2.gif[/img]
 
-Uprawa roli zapewnia zasoby, które można wydać na odblokowanie nowej technologii.
+Uprawa roli przynosi zasoby, które można wydać na odblokowanie nowej technologii. 
 Oto jak wygląda ten sam program po kilku ulepszeniach prędkości:
 [img]{STEAM_APP_IMAGE}/extras/HarvestingFast2.gif[/img]
 
-W przeciwieństwie do większości gier programistycznych, gra nie jest podzielona na odrębne poziomy, które trzeba ukończyć, ale oferuje ciągły postęp.
+Inaczej niż w większości gier programistycznych, gra nie jest podzielona na odrębne poziomy do ukończenia, ale oferuje ciągły postęp. 
 
-Programowanie odbywa się w prostym języku podobnym do Pythona. Początek gry ma na celu nauczenie cię wszystkich podstawowych koncepcji programowania, których będziesz potrzebować, wprowadzając je pojedynczo.
+Programowanie odbywa się w prostym języku podobnym do Pythona. Początek gry ma na celu nauczenie cię wszystkich podstawowych koncepcji programowania, wprowadzając je pojedynczo. 
 
-Chociaż wprowadza wszystko, co istotne, nie będzie cię prowadzić za rękę, jeśli chodzi o rozwiązywanie różnych zadań w grze. Będziesz musiał sam je rozgryźć, a to może być bardzo trudne, jeśli nigdy wcześniej nie programowałeś.
+Chociaż wprowadza wszystko, co istotne, nie będzie cię prowadzić za rękę w rozwiązywaniu różnych zadań w grze. Będziesz musiał sam je rozgryźć, co może być bardzo trudne, jeśli nigdy wcześniej nie programowałeś. 
 
-Jeśli jesteś doświadczonym programistą, powinieneś być w stanie bardzo szybko przejść przez początkową fazę gry i przejść do bardziej złożonych zadań w późniejszej fazie gry, które wciąż powinny stanowić interesujące wyzwania.
-@steam_short_description = Zaprogramuj i zoptymalizuj drona, aby zautomatyzować farmę i obserwować, jak wykonuje za ciebie pracę. Zbieraj zasoby, aby odblokować lepszą technologię i stać się najbardziej wydajnym rolnikiem na świecie. Popraw swoje umiejętności rozwiązywania problemów i kodowania.
+Jeśli jesteś doświadczonym programistą, powinieneś być w stanie szybko przejść przez początkową fazę gry i przejść do bardziej złożonych zadań w późniejszej fazie, które wciąż powinny stanowić interesujące wyzwania.
+@steam_short_description = Zaprogramuj i zoptymalizuj drona, aby zautomatyzować farmę i obserwować, jak wykonuje za ciebie pracę. Zbieraj zasoby, aby odblokować lepszą technologię i stać się najwydajniejszym rolnikiem na świecie. Popraw swoje umiejętności rozwiązywania problemów i kodowania.

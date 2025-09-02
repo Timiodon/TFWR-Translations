@@ -15,14 +15,14 @@ Es funktioniert auch bei `while`-Schleifen.
     
     harvest()`
 
-Dieser Code ruft `harvest()` nur auf, wenn `can_harvest()` `True` ist. 
-Er hat den gleichen Effekt wie
+Dieser Code ruft `harvest()` nur auf, wenn `can_harvest()` `True` ist.
+Es hat den gleichen Effekt wie
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-In verschachtelten Schleifen wirkt sich `continue` immer auf die innerste Schleife aus.
+In verschachtelten Schleifen betrifft `continue` immer die innerste Schleife.
 
 `for i in range(10):
 	for j in range(10):

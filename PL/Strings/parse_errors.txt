@@ -1,30 +1,30 @@
 @error_missing_default_parameter = Wszystkie domyślne argumenty muszą znajdować się na końcu listy argumentów.
-@error_invalid_name = {0} nie jest prawidłową nazwą. Nazwy muszą zaczynać się od litery i mogą zawierać tylko litery, cyfry i podkreślenia. Nie może to być również słowo kluczowe.
+@error_invalid_name = {0} nie jest prawidłową nazwą. Nazwy muszą zaczynać się od litery i mogą zawierać tylko litery, cyfry i podkreślenia. Nie mogą też być słowem kluczowym.
 @error_reserved_keyword = {0} jest słowem kluczowym. Nie możesz go używać jako nazwy.
 @error_invalid_assign_expr = Nie można przypisać wartości do tego wyrażenia.
-@error_no_statements = Blok kodu musi zawierać co najmniej jedną instrukcję.
-Instrukcją może być wywołanie funkcji, takie jak `harvest()`, lub przypisanie zmiennej.
+@error_no_statements = Blok kodu musi zawierać co najmniej jedną instrukcję. 
+Instrukcją może być wywołanie funkcji, np. `harvest()`, lub przypisanie zmiennej. 
 Jeśli nie chcesz nic robić w bloku kodu, użyj instrukcji `pass`.
-@error_not_enough_indentation = Za mało wcięć.
-Po : musi być więcej wcięć niż przed nim, aby oddzielić nowy blok kodu.
-Użyj klawisza Tab, aby zrobić wcięcie w kodzie.
-@error_too_much_indentation = Za dużo wcięć.
-Wcięcia muszą być takie same dla wszystkich instrukcji w bloku kodu.
-@error_not_a_statement = To nie jest prawidłowa instrukcja.
+@error_not_enough_indentation = Za małe wcięcie. 
+Po znaku : musi być większe wcięcie niż przed nim, aby oddzielić nowy blok kodu. 
+Użyj klawisza Tab, aby zrobić wcięcie.
+@error_too_much_indentation = Za duże wcięcie. 
+Wszystkie instrukcje w bloku kodu muszą mieć takie samo wcięcie.
+@error_not_a_statement = To nie jest prawidłowa instrukcja. 
 @error_not_a_statement2 = To nie jest prawidłowa instrukcja. Czy chodziło ci o {0}?
 @error_invalid_expression = To nie jest prawidłowe wyrażenie.
 @error_new_line_expected = Oczekiwano nowej linii.
 @error_unexpected_token = Oczekiwano {0}.
 @error_missing_colon = Na początku każdego bloku kodu musi znajdować się dwukropek `:`.
-@error_unexpected_assign = Nie możesz tutaj dokonać przypisania. Aby sprawdzić równość, użyj zamiast tego `==`.
-@error_invalid_for_syntax = To nie jest prawidłowa pętla for. Pętla for wygląda tak:
+@error_unexpected_assign = Nie możesz tu dokonać przypisania. Aby sprawdzić równość, użyj `==`.
+@error_invalid_for_syntax = To nie jest poprawna pętla `for`. Pętla `for` wygląda tak: 
 `for n in range(3):`
-Po `for` zawsze następuje zmienna pętli, `in`, a następnie sekwencja. W tym przykładzie `n` jest nazwą zmiennej, ale można ją zastąpić dowolną inną nazwą.
+Po `for` zawsze następuje zmienna pętli, słowo `in`, a następnie sekwencja. W tym przykładzie `n` to nazwa zmiennej, ale można ją zastąpić dowolną inną nazwą.
 @error_unknown_method = Ta metoda nie istnieje.
-@error_bad_backslash = Ukośnik odwrotny może być używany do dzielenia wyrażeń na wiele linii. Ale musisz dodać po nim nową linię.
-@error_mixed_indentation = Tabulatory i spacje nie powinny być mieszane.
+@error_bad_backslash = Ukośnik odwrotny może być użyty do dzielenia wyrażeń na wiele linii. Ale musisz dodać po nim nową linię.
+@error_mixed_indentation = Nie należy mieszać tabulacji i spacji.
 @error_expected_close_token = Oczekiwano przecinka lub nawiasu zamykającego.
-@error_wrong_dict_literal = Oczekiwano : do oddzielenia kluczy i wartości słownika.
-@error_assign_before_global = {0} jest przypisywane przed deklaracją globalną.
+@error_wrong_dict_literal = Oczekiwano : do oddzielenia kluczy i wartości w słowniku.
+@error_assign_before_global = {0} jest przypisane przed deklaracją globalną.
 @error_wildcard_imports_not_allowed_in_function = Importy w formie `from x import *` nie są dozwolone wewnątrz funkcji.
-@error_invalid_import = Nie możesz importować plików o nazwach, które nie są prawidłowymi identyfikatorami. Prawidłowe identyfikatory mogą zawierać tylko litery, cyfry i podkreślenia. Jeśli nazwa pliku zawiera inne znaki, musisz ją zmienić.
+@error_invalid_import = Nie można importować plików o nazwach, które nie są prawidłowymi identyfikatorami. Prawidłowe identyfikatory mogą zawierać tylko litery, cyfry i podkreślenia. Jeśli nazwa pliku zawiera inne znaki, musisz ją zmienić.

@@ -10,7 +10,7 @@
 
 `while True:
     harvest()`
-@unlock_descr_senses = Le drone peut voir ce qui se trouve sous lui et où il se trouve.
+@unlock_descr_senses = Le drone peut voir ce qu'il y a sous lui et où il se trouve.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
@@ -19,10 +19,10 @@
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
     do_a_flip()`
-@unlock_descr_pumpkin = Citrouilles !
+@unlock_descr_pumpkin = Des citrouilles !
 
 `plant(Entities.Pumpkin)`
-@unlock_descr_variables = Assigne des valeurs à des variables.
+@unlock_descr_variables = Assigne des valeurs aux variables.
 
 `next_plant = Entities.Bush
 plant(next_plant)`
@@ -40,7 +40,7 @@ do_two_flips()`
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_lists = Utilise des listes pour stocker beaucoup de valeurs.
+@unlock_descr_lists = Utilise des listes pour stocker de nombreuses valeurs.
 
 `plants = [Entities.Hay, Entities.Bush, Entities.Tree]
 
@@ -70,16 +70,16 @@ set_execution_speed(1)`
 @unlock_descr_auto_unlock = Débloque des choses automatiquement.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Utilise la plantation compagne pour augmenter le rendement.
+@unlock_descr_polyculture = Utilise la culture associée pour augmenter le rendement.
 
 `plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = Tournesols et Puissance.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Rejoins le leaderboard pour les meilleurs temps.
+@unlock_descr_leaderboard = Rejoins le classement pour les temps les plus rapides.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = Obtiens l'accès aux dictionnaires et aux ensembles.
+@unlock_descr_dicts = Accède aux dictionnaires et aux sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Débloque les fonctions `min()`, `max()`, `abs()` et `random()`.
@@ -88,7 +88,7 @@ set_execution_speed(1)`
 @unlock_descr_cactus = Cactus !
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = Majestueuses créatures anciennes.
+@unlock_descr_dinosaurs = De majestueuses créatures anciennes.
 @unlock_descr_simulation = Teste plus rapidement et dans des conditions reproductibles.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
@@ -102,31 +102,31 @@ other_file.function()`
 @unlock_descr_megafarm = Ferme beaucoup plus grande avec de nombreux drones.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = Agrandit la ferme. Cela efface également la ferme.
+@multi_unlock_descr_expand = Agrandit la ferme. Cela nettoie également la ferme.
 @multi_unlock_descr_carrots = Augmente le rendement et le coût des carottes.
 @multi_unlock_descr_trees = Augmente le rendement des buissons et des arbres.
 @multi_unlock_descr_pumpkins = Augmente le rendement et le coût des citrouilles.
 @multi_unlock_descr_mazes = Augmente l'or dans les coffres au trésor et la quantité de substance étrange nécessaire pour faire apparaître un labyrinthe.
-@multi_unlock_descr_sunflowers = Augmente la puissance gagnée des tournesols.
+@multi_unlock_descr_sunflowers = Augmente la puissance obtenue des tournesols.
 @multi_unlock_descr_cactus = Augmente le rendement et le coût des cactus.
 @multi_unlock_descr_dinosaur = Augmente le rendement et le coût des dinosaures.
 @multi_unlock_descr_polyculture = Augmente le multiplicateur de rendement de la polyculture.
-@multi_unlock_descr_watering = Reçois plus d'eau.
-@multi_unlock_descr_fertilizer = Reçois plus d'engrais.
-@multi_unlock_descr_megafarm = Augmente davantage la taille de la ferme et le nombre de drones.
+@multi_unlock_descr_watering = Recevoir plus d'eau.
+@multi_unlock_descr_fertilizer = Recevoir plus d'engrais.
+@multi_unlock_descr_megafarm = Augmenter davantage la taille de la ferme et le nombre de drones.
 @auto_unlock = Déblocage auto
 @cactus = Cactus
 @carrots = Carottes
 @costs = Coûts
 @debug = Débogage
-@debug_2 = Débogage 2
+@debug_2 = Débogage_2
 @dictionaries = Dictionnaires
 @dinosaurs = Dinosaures
-@expand = Expansion
+@expand = Agrandir
 @fertilizer = Engrais
 @functions = Fonctions
 @grass = Herbe
-@import = Import
+@import = Importer
 @leaderboard = Classement
 @lists = Listes
 @loops = Boucles
@@ -136,7 +136,7 @@ other_file.function()`
 @plant = Plante
 @polyculture = Polyculture
 @pumpkins = Citrouilles
-@senses = Capteurs
+@senses = Sens
 @simulation = Simulation
 @speed = Vitesse
 @sunflowers = Tournesols

@@ -1,11 +1,11 @@
 # Continue
-continue permette di interrompere l'iterazione corrente di un ciclo e di passare alla successiva iterazione del ciclo più interno.
+`continue` permette di interrompere l'iterazione corrente di un ciclo e saltare alla successiva iterazione del ciclo più interno.
 
 `for i in range(10):
 	continue
     print("questo non viene mai stampato")`
 
-Questo esegue tutte le `10` iterazioni del ciclo, ma l'istruzione `print` dopo il `continue` viene sempre saltata.
+Questo esegue tutte le `10` iterazioni del ciclo, ma l'istruzione `print` dopo `continue` viene sempre saltata.
 
 Funziona anche con i cicli `while`.
 
@@ -22,7 +22,7 @@ Ha lo stesso effetto di
 	if can_harvest():
 		harvest()`
 
-Nei cicli annidati `continue` influenza sempre il ciclo più interno.
+Nei cicli annidati, `continue` influisce sempre sul ciclo più interno.
 
 `for i in range(10):
 	for j in range(10):

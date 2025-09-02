@@ -23,7 +23,7 @@ for number in list:
 	sum += number`
 `sum` è ora `18`
 
-I seguenti metodi di lista ti permettono di aggiungere e rimuovere elementi:
+I seguenti metodi delle liste ti permettono di aggiungere e rimuovere elementi:
 
 `list.append(elem)` aggiunge un elemento alla fine della lista:
 
@@ -57,8 +57,8 @@ La funzione `len()` restituisce la lunghezza della lista.
 x = len(list)`
 `x` è ora `3`
 
-Le liste hanno semantica per riferimento. Ciò significa che assegnare una lista a una variabile assegna lo stesso oggetto lista a quella variabile, invece di fare una copia della lista.
-Se due variabili fanno riferimento alla stessa lista, le modifiche alla lista saranno viste da entrambe.
+Le liste hanno semantica per riferimento. Ciò significa che assegnare una lista a una variabile assegna lo stesso oggetto lista a quella variabile, invece di creare una copia della lista.
+Se due variabili fanno riferimento alla stessa lista, le modifiche alla lista saranno visibili da entrambe.
 
 `a = [1,2]
 b = a

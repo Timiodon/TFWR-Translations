@@ -3,18 +3,18 @@ opérateurs arithmétiques : `+, -, *, /, //, %, **`
 opérateurs de comparaison : `==, !=, <=, >=, <, >`
 opérateurs booléens : `not, and, or`
 
-Note : Tous les nombres dans le jeu sont des nombres à virgule flottante. Donc, tous les opérateurs arithmétiques sont des opérateurs à virgule flottante.
-`//` est défini pour simplement arrondir à l'inférieur le nombre après la division.
+Note : Tous les nombres dans le jeu sont des nombres à virgule flottante. Donc tous les opérateurs arithmétiques sont des opérateurs à virgule flottante.
+`//` est défini pour simplement arrondir le nombre à l'inférieur après la division.
 
-Pour les opérateurs d'assignation, vous devez débloquer le déblocage "Variables".
+Pour les opérateurs d'affectation, tu dois débloquer le déblocage "Variables".
 
 ## Introduction
-Les opérateurs vous permettent de comparer, modifier et combiner des valeurs.
+Les opérateurs te permettent de comparer, modifier et combiner des valeurs.
 Les opérateurs arithmétiques `+, -, *, /, //, %, **` sont utilisés pour effectuer des opérations mathématiques courantes sur les nombres.
-Les opérateurs de comparaison `==, !=, <=, >=, <, >` sont utilisés pour comparer des valeurs. Le résultat est toujours soit `True` soit `False`.
+Les opérateurs de comparaison `==, !=, <=, >=, <, >` sont utilisés pour comparer des valeurs. Le résultat est toujours soit `True`, soit `False`.
 Les opérateurs logiques (aussi appelés opérateurs booléens) `not, and, or` sont utilisés pour combiner des valeurs de vérité.
 
-## Opérateurs arithmétiques
+## Opérateurs Arithmétiques
 `+` et `-` sont utilisés pour l'addition et la soustraction.
 
 `2 + 3` s'évalue à `5`
@@ -29,7 +29,7 @@ Les opérateurs logiques (aussi appelés opérateurs booléens) `not, and, or` s
 
 `5 // 2` s'évalue à `2`
 
-`%` est l'opérateur modulo, aussi connu comme l'opérateur de reste. Il divise essentiellement les deux nombres puis retourne le reste. Vous pouvez aussi y penser comme soustrayant répétitivement le nombre de droite du nombre de gauche jusqu'à ce que le reste soit inférieur au nombre de droite.
+`%` est l'opérateur modulo, aussi connu comme l'opérateur de reste. Il divise essentiellement les deux nombres et renvoie ensuite le reste. Tu peux aussi le voir comme soustrayant de manière répétée le nombre de droite du nombre de gauche jusqu'à ce que le reste soit inférieur au nombre de droite.
 
 `4 % 2` s'évalue à `0`
 `5 % 2` s'évalue à `1`
@@ -42,21 +42,21 @@ Les opérateurs logiques (aussi appelés opérateurs booléens) `not, and, or` s
 `2**2` s'évalue à `4`
 `(-5)**3` s'évalue à `-125`
 
-## Opérateurs de comparaison
-`==` et `!=` sont utilisés pour vérifier si deux valeurs sont "égales"(`==`) ou "non égales"(`!=`). Ils peuvent être utilisés sur tous les types de valeurs.
+## Opérateurs de Comparaison
+`==` et `!=` sont utilisés pour vérifier si deux valeurs sont "égales" (`==`) ou "non égales" (`!=`). Ils peuvent être utilisés sur tous les types de valeurs.
 
 `2 == 2` s'évalue à `True`
 `Entities.Bush != Entities.Bush` s'évalue à `False`
 `3 != 3 + 1` s'évalue à `True`
 
-`<=, >=, <, >` ne peuvent être utilisés que sur des nombres. Ils vérifient si le nombre de gauche est "plus petit ou égal"(`<=`), "plus grand ou égal"(`>=`), "plus petit" (`<`) ou "plus grand" (`>`) que le nombre de droite.
+`<=, >=, <, >` ne peuvent être utilisés que sur des nombres. Ils vérifient si le nombre de gauche est "inférieur ou égal" (`<=`), "supérieur ou égal" (`>=`), "inférieur" (`<`) ou "supérieur" (`>`) au nombre de droite.
 
 `1 <= 1` s'évalue à `True`
 `2 >= 3` s'évalue à `False`
 `-2 < -1` s'évalue à `True`
 `6 > 6` s'évalue à `False`
 
-## Opérateurs logiques
+## Opérateurs Logiques
 `not` inverse simplement la valeur :
 
 `not False` s'évalue à `True`

@@ -1,32 +1,32 @@
 @code_tooltip_harvest = `harvest()`
-收获无人机下方的 entity。
-如果你收获了一个无法收获的 entity，它将被摧毁。
+收获无人机下方的实体。
+如果你收获了一个无法收获的实体，它将被摧毁。
 
-如果移除了一个 entity，则返回 `True`，否则返回 `False`。
+如果移除了一个实体，则返回 `True`，否则返回 `False`。
 
-如果移除了一个 entity，执行需要 `200` ticks，否则需要 `1` tick。
+如果移除了一个实体，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `harvest()`
 @code_tooltip_can_harvest = `can_harvest()`
-用于检查植物是否完全成熟。
+用于判断植物是否完全成熟。
 
-如果无人机下方有一个可以收获的 entity，则返回 `True`，否则返回 `False`。
+如果无人机下方有可以收获的实体，则返回 `True`，否则返回 `False`。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if can_harvest():
     harvest()`
 @code_tooltip_range = `range(start = 0, end, step = 1)`
-生成一个数字序列，从 `start` 开始，到 `end` 之前结束（即不包括 `end`），步长为 `step`。
+生成一个数字序列，从 `start` 开始，在到达 `end` 之前结束（所以不包括 `end`），步长为 `step`。
 
-请注意，start 默认设置为 `0`，如果只给出一个参数，它将被绑定到 `end`。这在通常情况下是不可能的。
-在 Python 中，`range` 是一个类构造函数，它允许这种奇怪的行为。
+注意，`start` 默认设置为 `0`，如果只给出一个参数，它会绑定到 `end`。这在通常情况下是不可能的。
+在 Python 中，`range` 是一个类构造函数，允许这种奇怪的行为。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `for i in range(10):
     print(i)
 
@@ -37,107 +37,107 @@ for i in range(10, 0, -1):
     print(i)`
 @code_tooltip_plant = `plant(entity)` 
 消耗指定 `entity` 的成本，并将其种植在无人机下方。
-如果你的资源不足、地面类型错误或那里已经有植物，则会失败。
+如果你的资源不足、地面类型错误或那里已经有植物，则种植会失败。
 
 如果成功，则返回 `True`，否则返回 `False`。
 
-如果成功，执行需要 `200` ticks，否则需要 `1` tick。
+如果成功，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `plant(Entities.Bush)`
 @code_tooltip_move = `move(direction)`
 将无人机向指定 `direction` 移动一格。
-如果无人机移出农场边缘，它会绕回到农场的另一侧。
+如果无人机移出农场边缘，它会绕回到农场的另一边。
 
 `East `  =  右
 `West `  =  左
 `North`  =  上
 `South`  =  下
 
-如果无人机已移动，则返回 `True`，否则返回 `False`。
+如果无人机移动了，则返回 `True`，否则返回 `False`。
 
-如果无人机已移动，执行需要 `200` ticks，否则需要 `1` tick。
+如果无人机移动了，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `move(North)`
 @code_tooltip_can_move() = `can_move(direction)`
-检查无人机是否可以向指定的 `direction` 移动。
+检查无人机是否可以向指定 `direction` 移动。
 
 如果无人机可以移动，则返回 `True`，否则返回 `False`。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if can_move(North):
     move(North)`
 @code_tooltip_swap = `swap(direction)`
-将无人机下方的 entity 与指定 `direction` 的相邻 entity 交换。
-不适用于所有 entity。
-如果其中一个（或两个）entity 是 `None`，此操作也有效。
+将无人机下方的实体与指定 `direction` 方向上相邻的实体交换。
+并非对所有实体都有效。
+如果其中一个（或两个）实体为 `None`，也同样有效。
 
 如果成功，则返回 `True`，否则返回 `False`。
 
-成功时执行需要 `200` ticks，否则需要 `1` tick。
+成功时需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `swap(North)`
 @code_tooltip_till = `till()` 
-将无人机下方的地面耕作成 `Grounds.Soil`。如果已经是土壤，它会把地面变回 `Grounds.Grassland`。
+将无人机下方的地面耕成 `Grounds.Soil`。如果已经是土壤，它会把地面变回 `Grounds.Grassland`。
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `till()`
 @code_tooltip_get_pos_x = `get_pos_x()` 
 获取无人机当前的 x 坐标。
-x 坐标从西边的 `0` 开始，向东增加。
+x 坐标从西边的 `0` 开始，向东递增。
 
-返回一个代表无人机当前 x 坐标的数字。
+返回一个表示无人机当前 x 坐标的数字。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `x, y = get_pos_x(), get_pos_y()`
 @code_tooltip_get_pos_y = `get_pos_y()` 
 获取无人机当前的 y 坐标。
-y 坐标从南边的 `0` 开始，向北增加。
+y 坐标从南边的 `0` 开始，向北递增。
 
-返回一个代表无人机当前 y 坐标的数字。
+返回一个表示无人机当前 y 坐标的数字。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `x, y = get_pos_x(), get_pos_y()`
 @code_tooltip_get_world_size = `get_world_size()` 
 获取农场的当前大小。
 
-返回从北到南方向上格子的边长。
+返回方形农场的边长。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `for i in range(get_world_size()):
     move(North)`
 @code_tooltip_get_entity_type = `get_entity_type()` 
-找出无人机下方是哪种 entity。
+获取无人机下方是什么类型的实体。
 
-如果地块为空，则返回 `None`，否则返回无人机下方 entity 的类型。
+如果地块为空，则返回 `None`，否则返回无人机下方实体的类型。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if get_entity_type() == Entities.Grass:
     harvest()`
 @code_tooltip_get_ground_type = `get_ground_type()` 
-找出无人机下方是哪种地面。
+获取无人机下方是什么类型的地面。
 
 返回无人机下方地面的类型。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if get_ground_type() != Grounds.Soil:
     till()`
 @code_tooltip_get_time = `get_time()` 
@@ -145,9 +145,9 @@ y 坐标从南边的 `0` 开始，向北增加。
 
 返回自游戏开始以来的秒数。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `start = get_time()
 
 do_something()
@@ -156,131 +156,131 @@ time_passed = get_time() - start`
 @code_tooltip_get_tick_count = `get_tick_count()`
 用于测量已执行的 tick 数。
 
-返回自开始执行以来的 tick 数。
+返回自执行开始以来已执行的 tick 数。
 
-执行需要 `0` tick。
+需要 `0` tick 执行。
 
-示例:
+示例：
 `do_something()
 
 print(get_tick_count())`
 @code_tooltip_use_item = `use_item(item, n=1)` 
 尝试使用指定的 `item` `n` 次。只能用于某些物品，包括 `Items.Water`、`Items.Fertilizer`。
 
-如果成功使用了物品，则返回 `True`，否则返回 `False`。
+如果使用了物品，则返回 `True`，否则返回 `False`。
 
-如果成功，执行需要 `200` ticks，否则需要 `1` tick。
+如果成功，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `use_item(Items.Fertilizer)`
 @code_tooltip_get_water = `get_water()` 
 获取无人机下方的当前水位。
 
 返回无人机下方的水位，为一个介于 `0` 和 `1` 之间的数字。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if get_water() < 0.5:
     use_item(Items.Water)`
 @code_tooltip_do_a_flip = `do_a_flip()` 
-让无人机做一个翻转！此动作不受速度升级影响。
+让无人机做一个翻转！此操作不受速度升级影响。
 
 返回 `None`
 
-执行需要 1 秒。
+需要 1 秒执行。
 
-示例:
+示例：
 `while True:
     do_a_flip()`
 @code_tooltip_pet_the_piggy = `pet_the_piggy()` 
-摸摸小猪！此动作不受速度升级影响。
+摸摸小猪！此操作不受速度升级影响。
 
 返回 `None`
 
-执行需要 1 秒。
+需要 1 秒执行。
 
-示例:
+示例：
 `while True:
     pet_the_piggy()`
 @code_tooltip_print = `print(*args)` 
-用烟雾在无人机上方的空中打印出所有 `args`。此动作不受速度升级影响。
+用烟雾将所有 `args` 打印在无人机上方的空中。此操作不受速度升级影响。
 可以一次打印多个值。
 
 返回 `None`
 
-执行需要 1 秒。
+需要 1 秒执行。
 
-示例:
+示例：
 `print("ground:", get_ground_type())`
 @code_tooltip_len = `len(collection)` 
-获取 list、set、dict 或 tuple 中的元素数量。
+获取列表、集合、字典或元组中的元素数量。
 
 返回 `collection` 的长度。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `for i in range(len(list)):
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
-创建一个新的 list。
-如果 `collection` 为 None，则创建一个空 list。
-如果 `collection` 是一个 collection，则创建它的一个副本。
+创建一个新列表。
+如果 `collection` 是 None，则创建一个空列表。
+如果 `collection` 是一个集合，则创建它的一个副本。
 
-返回一个 list。
+返回一个列表。
 
-执行需要 `1 + len(collection)` ticks。
+需要 `1 + len(collection)` ticks 执行。
 
-示例:
+示例：
 `new_list = list((1,2,3))`
 @code_tooltip_dict = `dict(dictionary = None)`
-创建一个新的 dictionary。
-如果 `dictionary` 为 None，则创建一个空 dictionary。
-如果 `dictionary` 是一个 dictionary，则创建它的一个副本。
+创建一个新字典。
+如果 `dictionary` 是 None，则创建一个空字典。
+如果 `dictionary` 是一个字典，则创建它的一个副本。
 
-返回一个 dictionary。
+返回一个字典。
 
-执行需要 `1 + len(dictionary)` ticks。
+需要 `1 + len(dictionary)` ticks 执行。
 
-示例:
+示例：
 `new_dict = dict()`
 @code_tooltip_set = `set(collection = None)`
-创建一个新的 set。
-如果 `collection` 为 None，则创建一个空 set。
-如果 `collection` 是一个值的集合，则用这些值创建一个新的 set。
+创建一个新集合。
+如果 `collection` 是 None，则创建一个空集合。
+如果 `collection` 是一个值的集合，则用这些值创建一个新集合。
 
-返回一个 set。
+返回一个集合。
 
-执行需要 `1 + len(collection)` ticks。
+需要 `1 + len(collection)` ticks 执行。
 
-示例:
+示例：
 `new_set = set((1,2,3))`
 @code_tooltip_str = `str(object)`
 
 返回 `object` 的字符串表示形式。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `string = str(1000)`
 @code_tooltip_set_execution_speed = `set_execution_speed(speed)`
 限制程序的执行速度，以便更好地观察正在发生的事情。
 
-速度 `1` 是无人机在没有任何速度升级时的速度。
-速度 `10` 使代码执行速度快 `10` 倍，并对应于 `9` 次速度升级后无人机的速度。
-速度 `0.5` 使代码以没有速度升级时的一半速度执行。这对于观察代码正在做什么很有用。
+`speed` 为 `1` 是无人机没有任何速度升级时的速度。
+`speed` 为 `10` 使代码执行速度快 `10` 倍，相当于无人机经过 `9` 次速度升级后的速度。
+`speed` 为 `0.5` 使代码以无速度升级时的一半速度执行。这对于观察代码正在做什么很有用。
 
-如果 `speed` 快于当前执行速度，它将以最大速度运行。
+如果 `speed` 快于当前可达到的最大执行速度，它将以最大速度运行。
 
 如果 `speed` 为 `0` 或负数，速度将恢复为最大速度。
-当执行停止时，效果也将停止。
+当执行停止时，效果也会停止。
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 限制农场的大小，以便更好地观察正在发生的事情。
@@ -288,36 +288,36 @@ print(get_tick_count())`
 将农场设置为 `size` x `size` 的网格。
 可能的最小 `size` 是 `3`。
 小于 `3` 的 `size` 会将网格恢复到其完整大小。
-当执行停止时，效果也将停止。
+当执行停止时，效果也会停止。
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `set_world_size(5)`
 @code_tooltip_num_items = `num_items(item)` 
-查看你当前拥有多少 `item`。
+查询你当前拥有多少 `item`。
 
-返回你物品栏中 `item` 的数量。
+返回你物品栏中当前 `item` 的数量。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `if num_items(Items.Fertilizer) > 0:
     use_item(Items.Fertilizer)`
 @code_tooltip_get_cost = `get_cost(thing)` 
 获取一个 `thing` 的成本。
 
-如果 `thing` 是一个 entity，获取种植它的成本。
+如果 `thing` 是一个实体，获取种植它的成本。
 如果 `thing` 是一个解锁项，获取解锁它的成本。
 
-返回一个以物品为键、数字为值的 dictionary。每个物品映射到需要多少数量。
-当用于已达到最高等级的可升级解锁项时，返回 `{}`。
+返回一个字典，其中键是物品，值是数量。每个物品映射到它需要的数量。
+当用于已经达到最高等级的可升级解锁项时，返回 `{}`。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `cost = get_cost(Unlocks.Carrots)
 for item in cost:
     if num_items(item) < cost[item]:
@@ -327,38 +327,38 @@ for item in cost:
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `clear()`
 @code_tooltip_get_companion = `get_companion()` 
-获取无人机下方植物的偏爱伴生植物。
+获取无人机下方植物的偏好伴生植物。
 
-返回一个 `(companion_type, (companion_x_position, companion_y_position))` 形式的 tuple。
+返回一个形式为 `(伴生植物类型, (伴生植物_x坐标, 伴生植物_y坐标))` 的元组。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `companion = get_companion()
 if companion != None:
 	print(companion)`
 @code_tooltip_unlock = `unlock(unlock)` 
-与在研究树中点击与 `unlock` 对应的按钮效果完全相同。
+效果与在科技树中点击对应 `unlock` 的按钮完全相同。
 
 如果解锁成功，则返回 `True`，否则返回 `False`。
 
-如果成功，执行需要 `200` ticks，否则需要 `1` tick。
+如果成功，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-用于检查某个解锁项、entity、地面或物品是否已经解锁。
+用于检查一个解锁项、实体、地面或物品是否已经解锁。
 
 如果 `thing` 是可升级的，则返回 `1` 加上 `thing` 已升级的次数。否则，如果 `thing` 已解锁，则返回 `1`，否则返回 `0`。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `plant(Entities.Bush)
 n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, n_substance)`
@@ -368,49 +368,49 @@ use_item(Items.Weird_Substance, n_substance)`
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `reset()`
 @code_tooltip_measure = `measure(direction = None)` 
-可以测量某些 entity 的一些值。其效果取决于 entity。
+可以测量某些实体上的一些值。效果取决于实体。
 
-如果 `direction` 不为 `None`，它会测量给定方向上相邻的 entity。
+如果 `direction` 不是 `None`，则测量给定方向上的相邻实体。
 
-返回向日葵的花瓣数。
+返回向日葵的花瓣数量。
 返回宝藏或苹果的下一个位置。
 返回仙人掌的大小。
 返回南瓜的一个神秘数字。
-对所有其他 entity 返回 `None`。
+对所有其他实体返回 `None`。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `num_petals = measure()`
 @code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`
-使用指定的 `file_name` 作为起点，为 `leaderboard` 启动一个计时模拟。
+使用指定的 `file_name` 作为起点，为 `leaderboard` 开始一个计时模拟。
 `speedup` 设置起始加速倍率。
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-使用指定的 `filename` 作为起点，为 leaderboard 启动一个模拟。
+使用指定的 `filename` 作为起点，为排行榜开始一个模拟。
 
-`sim_unlocks`：包含起始解锁项的序列。
-`sim_items`：一个将物品映射到数量的 dict。模拟将以这些物品开始。
-`sim_globals`：一个将变量名映射到值的 dict。模拟将在全局 scope 中以这些变量开始。
-`seed`：模拟的随机种子。必须是正整数。
-`speedup`：起始加速倍率。
+`sim_unlocks`: 包含起始解锁项的序列。
+`sim_items`: 一个将物品映射到数量的字典。模拟将以这些物品开始。
+`sim_globals`: 一个将变量名映射到值的字典。模拟开始时，这些变量将存在于全局作用域中。
+`seed`: 模拟的随机种子。必须是正整数。
+`speedup`: 起始加速倍率。
 
 返回运行模拟所花费的时间。
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `filename = "f1"
 sim_unlocks = Unlocks
 sim_items = {Items.Carrot : 10000, Items.Hay : 50}
@@ -420,13 +420,13 @@ speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @code_tooltip_spawn_drone = `spawn_drone(filename)`
-在运行 `spawn_drone(function)` 命令的无人机所在位置生成一架新无人机。新的无人机随后开始执行指定的函数。完成后，它将自动消失。
+在运行 `spawn_drone(function)` 命令的无人机相同位置生成一个新的无人机。新无人机随后开始执行指定的函数。完成后，它将自动消失。
 
-返回新无人机的 handle，如果所有无人机都已生成，则返回 `None`。
+返回新无人机的句柄，如果所有无人机都已生成，则返回 `None`。
 
-如果生成了一架无人机，执行需要 `200` ticks，否则需要 `1` tick。
+如果生成了无人机，需要 `200` ticks 执行，否则需要 `1` tick。
 
-示例:
+示例：
 `def harvest_column():
     for _ in range(get_world_size()):
         harvest()
@@ -438,11 +438,11 @@ while True:
 @code_tooltip_wait_for = `wait_for(drone)`
 等待直到给定的 `drone` 终止。
 
-返回该 `drone` 正在运行的函数的返回值。
+返回 `drone` 正在运行的函数的返回值。
 
-如果等待的 `drone` 已经完成，执行需要 `1` tick。
+如果等待的 `drone` 已经完成，需要 `1` tick 执行。
 
-示例:
+示例：
 `def get_entity_type_in_direction(dir):
     move(dir)
     return get_entity_type()
@@ -453,11 +453,11 @@ handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 @code_tooltip_max_drones = `max_drones()`
 
-返回你可以在农场中拥有的最大无人机数量。
+返回你在农场中可以拥有的最大无人机数量。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `while num_drones() < max_drones():
     spawn_drone("some_file_name")
     move(East)`
@@ -465,29 +465,29 @@ print(wait_for(handle))`
 
 返回当前农场中的无人机数量。
 
-执行需要 `1` tick。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `while num_drones() < max_drones():
     spawn_drone("some_file_name")
     move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
-像 `print(*args)` 一样打印一个值，但它不会停下来在空中书写，所以只能在输出页面上找到。
+像 `print(*args)` 一样打印一个值，但它不会停下来将其写到空中，所以只能在输出页面上找到。
 
 返回 `None`
 
-执行需要 `0` ticks。
+需要 `0` ticks 执行。
 
-示例:
+示例：
 `quick_print("hi mom")`
 @code_tooltip_change_hat = `change_hat(hat)`
 将无人机的帽子更改为 `hat`。
 
 返回 `None`
 
-执行需要 `200` ticks。
+需要 `200` ticks 执行。
 
-示例:
+示例：
 `change_hat(Hats.Dinosaur_Hat)`
 @code_tooltip_max = `max(*args)`
 获取一个元素序列或多个传入参数中的最大值。
@@ -496,9 +496,9 @@ print(wait_for(handle))`
 `max(a,b,c)`: 返回 `a`、`b` 和 `c` 中的最大值。
 `max(sequence)`: 返回序列中所有值的最大值。
 
-执行需要 #比较次数 ticks。
+需要 #比较次数 ticks 执行。
 
-示例:
+示例：
 `max([3,6,34,16])`
 @code_tooltip_min = `min(*args)`
 获取一个元素序列或多个传入参数中的最小值。
@@ -507,27 +507,27 @@ print(wait_for(handle))`
 `min(a,b,c)`: 返回 `a`、`b` 和 `c` 中的最小值。
 `min(sequence)`: 返回序列中所有值的最小值。
 
-执行需要 #比较次数 ticks。
+需要 #比较次数 ticks 执行。
 
-示例:
+示例：
 `min([3,6,34,16])`
 @code_tooltip_abs = `abs(number)`
-计算一个数字的绝对值。
+计算一个数的绝对值。
 
-如果 `number` 是正数，返回 `number`，否则返回 `-number`。
+如果 `number` 是正数，则返回 `number`，否则返回 `-number`。
 
-执行需要 1 tick。
+需要 1 tick 执行。
 
-示例:
+示例：
 `abs(-69)`
 @code_tooltip_random = `random()`
-抽取一个 0 (含) 到 1 (不含) 之间的随机数。
+抽取一个介于 0（含）和 1（不含）之间的随机数。
 
-返回这个随机数。
+返回该随机数。
 
-执行需要 `1` ticks。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `def random_elem(list):
 	index = random() * len(list) // 1
 	return list[index]`
@@ -536,9 +536,9 @@ print(wait_for(handle))`
 
 返回 `None`
 
-执行需要 `1` ticks。
+需要 `1` tick 执行。
 
-示例:
+示例：
 `list = []
 list.append(1)`
 @code_tooltip_add = `set.add(element)` 
@@ -546,9 +546,9 @@ list.append(1)`
 
 返回 `None`
 
-执行需要 `element size` ticks。
+需要 `元素大小` ticks 执行。
 
-示例:
+示例：
 `set = {0}
 set.add(1)`
 @code_tooltip_remove = `collection.remove(element)` 
@@ -556,20 +556,20 @@ set.add(1)`
 
 返回 `None`
 
-在 set 上执行需要 `element size` ticks，在 list 上需要 #比较次数 + #移动次数 ticks。
+在集合上执行需要 `元素大小` ticks，在列表上需要 #比较次数 + #移位次数 ticks。
 
-示例:
+示例：
 `list = [True, False, None]
 list.remove(False)`
 @code_tooltip_pop = `collection.pop()` 
-从 list 中移除最后一个元素，或从 dictionary 中移除指定的元素。
+从列表中移除最后一个元素，或从字典中移除指定的元素。
 `list.pop(i)` 从 `list` 中移除索引为 `i` 的元素。
 
 返回被移除的元素
 
-在 dictionary 上执行需要 `key size` ticks，在 list 上需要 `len(list) - i + 1` ticks。
+在字典上执行需要 `键大小` ticks，在列表上需要 `len(list) - i + 1` ticks。
 
-示例:
+示例：
 `list = [True, False, None]
 list.pop(0)`
 @code_tooltip_insert = `list.insert(i, element)` 
@@ -579,34 +579,34 @@ list.pop(0)`
 
 需要 `len(list) - i + 1` ticks。
 
-示例:
+示例：
 `list = [1,2]
 list.insert(0, 0)`
-@code_tooltip_Items = 包含物品栏中所有可能的物品。可以用 `for` 循环遍历。
-@code_tooltip_Entities = 包含所有植物类型。可以用 `for` 循环遍历。
-@code_tooltip_Grounds = 包含所有可能的地面类型。可以用 `for` 循环遍历。
-@code_tooltip_Unlocks = 包含研究菜单中所有的解锁和升级项。可以用 `for` 循环遍历。
-@code_tooltip_Hats = 包含所有帽子类型。可以用 `for` 循环遍历。
-@code_tooltip_Leaderboards = 包含所有 leaderboard 类别。可以用 `for` 循环遍历。
-@code_tooltip_for = 一个遍历序列中所有元素的循环。有些编程语言称之为“foreach”循环。
-@code_tooltip_while = 循环直到条件为 false。
+@code_tooltip_Items = 包含物品栏中可能存在的所有物品。可以使用 `for` 循环进行迭代。
+@code_tooltip_Entities = 包含所有植物类型。可以使用 `for` 循环进行迭代。
+@code_tooltip_Grounds = 包含所有可能的地面类型。可以使用 `for` 循环进行迭代。
+@code_tooltip_Unlocks = 包含研究菜单中的所有解锁项和升级项。可以使用 `for` 循环进行迭代。
+@code_tooltip_Hats = 包含所有帽子类型。可以使用 `for` 循环进行迭代。
+@code_tooltip_Leaderboards = 包含所有排行榜类别。可以使用 `for` 循环进行迭代。
+@code_tooltip_for = 一种遍历序列中所有元素的循环。一些编程语言称之为 "foreach" 循环。
+@code_tooltip_while = 循环直到条件为假。
 @code_tooltip_def = 定义一个函数。
-@code_tooltip_True = 一个永远为 true 的布尔值。
-@code_tooltip_False = 一个永远为 false 的布尔值。
-@code_tooltip_if = 如果条件为 `True` 则执行代码。
-@code_tooltip_else = 如果之前的 `if` 条件为 `False` 则执行代码。
-@code_tooltip_elif = 和下面这个做同样的事：
+@code_tooltip_True = 一个永远为真的布尔值。
+@code_tooltip_False = 一个永远为假的布尔值。
+@code_tooltip_if = 如果条件为 `True`，则执行代码。
+@code_tooltip_else = 如果前一个 `if` 条件为 `False`，则执行代码。
+@code_tooltip_elif = 和下面的代码作用相同：
 `else:
     if condition:`
 @code_tooltip_None = 一个表示“没有值”的值。
-@code_tooltip_continue = 立即继续下一次循环迭代。如果有嵌套循环，这总是会影响最内层的循环。
-@code_tooltip_break = 跳出循环并继续执行循环之后的语句。如果有嵌套循环，这总是会影响最内层的循环。
-@code_tooltip_North = 屏幕上的上方。除非你把屏幕转过来。
-@code_tooltip_East = 屏幕上的右方。除非你把屏幕转过来。
-@code_tooltip_South = 屏幕上的下方。除非你把屏幕转过来。
-@code_tooltip_West = 屏幕上的左方。除非你把屏幕转过来。
+@code_tooltip_continue = 立即继续下一次循环迭代。如果有嵌套循环，这将始终影响最内层的循环。
+@code_tooltip_break = 跳出循环，并继续执行循环之后的语句。如果有嵌套循环，这将始终影响最内层的循环。
+@code_tooltip_North = 屏幕上的向上方向。除非你把屏幕转过来。
+@code_tooltip_East = 屏幕上的向右方向。除非你把屏幕转过来。
+@code_tooltip_South = 屏幕上的向下方向。除非你把屏幕转过来。
+@code_tooltip_West = 屏幕上的向左方向。除非你把屏幕转过来。
 @code_tooltip_not = `not True` 是 `False`，`not False` 是 `True`。
-@code_tooltip_and = 评估第一个操作数。如果它是假值（`False`、`0` 和空集合），它会立即返回该值（短路求值），否则，它会评估并返回第二个操作数。
-@code_tooltip_or = 评估第一个操作数。如果它是真值（除了 `False`、`0` 和空集合之外的任何东西），它会立即返回该值（短路求值），否则，它会评估并返回第二个操作数。
-@code_tooltip_return = 用于从函数中返回一个值。
-@code_tooltip_pass = 什么也不做。可能很有用，因为不允许有空的代码块。
+@code_tooltip_and = 对第一个操作数求值。如果它是假值（`False`、`0` 和空集合），它会立即返回该值（短路求值），否则，它会对第二个操作数求值并返回。
+@code_tooltip_or = 对第一个操作数求值。如果它是真值（除了 `False`、`0` 和空集合之外的任何东西），它会立即返回该值（短路求值），否则，它会对第二个操作数求值并返回。
+@code_tooltip_return = 用于从函数中返回值。
+@code_tooltip_pass = 什么也不做。因为不允许空代码块，所以它可能很有用。

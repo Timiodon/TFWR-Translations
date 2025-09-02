@@ -11,15 +11,15 @@ else:
 
 ## 语法
 `if` 语句允许你仅在某个条件为 `True` 时运行代码。它们就像一个不循环的 `while` 循环。
-`if` 接受一个像 `while` 循环一样的条件，如果条件评估为 `True`，则执行 if 代码块：
+`if` 语句接受一个条件，就像 `while` 循环一样，如果条件求值为 `True`，则执行 if 代码块：
 
-`#如果条件为 True，则做一个翻转
+`#如果条件为 True，则翻转
 if condition:
 	do_a_flip()`
 
-你也可以在 if 后面添加一个 `else`，它定义了当条件评估为 `False` 时要执行的代码。
+你还可以在 if 之后添加一个 `else`，它定义了当条件求值为 `False` 时要执行的代码。
 
-如果 `condition` 为 True，则做一个翻转，否则收获。
+如果 `condition` 为 True，则翻转，否则收获。
 `if condition:
 	do_a_flip()
 else:

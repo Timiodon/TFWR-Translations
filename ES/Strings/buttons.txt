@@ -1,6 +1,6 @@
 @save = Guardar
 @saved = Guardado
-@play = Iniciar
+@play = Empezar
 @load = Cargar
 @options = Opciones
 @join_discord = Discord

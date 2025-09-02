@@ -1,5 +1,5 @@
 # Listas
-Las listas son una forma fácil de guardar múltiples valores en una sola variable.
+Las listas son una forma fácil de almacenar múltiples valores en una sola variable.
 Puedes crear nuevas listas así:
 
 `list = [2, True, Items.Hay]`
@@ -15,7 +15,7 @@ planta zanahorias
 `list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(list[1])`
 
-Puedes iterar sobre una lista usando un bucle for. El siguiente ejemplo suma todos los elementos de la lista.
+Puedes iterar sobre una lista usando un bucle `for`. El siguiente ejemplo suma todos los elementos de la lista.
 
 `list = [4, 7, 2, 5]
 sum = 0
@@ -44,7 +44,7 @@ list.insert(1, Items.Wood)`
 `list` ahora es `[Entities.Tree, Items.Wood, Items.Hay]`
 
 `list.pop(index)` elimina el elemento en el índice especificado.
-Si no se especifica ningún índice, se elimina el último elemento.
+Si no se especifica ningún índice, se elimina el último ítem.
 
 `list = [3, 5, 8, 25]
 list.pop()`
@@ -57,7 +57,7 @@ La función `len()` devuelve la longitud de la lista.
 x = len(list)`
 `x` ahora es `3`
 
-Las listas tienen semántica de referencia. Esto significa que asignar una lista a una variable asigna el mismo objeto de lista a esa variable, en lugar de hacer una copia de la lista.
+Las listas tienen semántica de referencia. Esto significa que asignar una lista a una variable le asigna el mismo objeto de lista, en lugar de hacer una copia de la lista.
 Si dos variables hacen referencia a la misma lista, los cambios en la lista serán visibles para ambas.
 
 `a = [1,2]

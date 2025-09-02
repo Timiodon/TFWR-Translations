@@ -1,75 +1,75 @@
-@error_code_after_block = 여기에는 코드가 없어야 합니다. 코드를 제거하거나 새 줄에 넣으세요.
-@error_wrong_number_args = {0}은(는) {1}개의 인자를 받습니다.
-@error_expected_no_args = {0}은(는) 인자를 받지 않습니다.
-@error_wrong_args = {1}의 {0}번째 인자는 {2}입니다. 이는 유효한 인자가 아닙니다.
-@error_syntax_error_in_import = import한 모듈에 구문 오류가 있습니다.
-@error_module_not_found = 이 이름을 가진 모듈이 존재하지 않습니다. 이름은 파일 이름과 일치해야 합니다. 창 상단에 표시되는 이름입니다.
-@error_list_element_not_found = {0}은(는) list에 없는 요소입니다.
-@error_set_element_not_found = {0}은(는) set의 요소가 아닙니다.
-@error_index_out_of_bounds = 인덱스 {0}이(가) list {1}의 범위를 벗어났습니다.
-@error_index_out_of_bounds2 = 인덱스가 list의 범위를 벗어났습니다.
-@error_arith_assign_not_used_on_number = {0}은(는) 숫자에만 사용할 수 있습니다.
-@error_bool_op_not_used_on_bool = 논리 연산자는 `True` 또는 `False`로 평가되는 불리언 표현식에만 사용할 수 있습니다.
-@error_bad_bin_operator = 연산자 {0}은(는) 피연산자 {1}와(과) {2}에 사용할 수 없습니다.
-@error_bad_unary_operator = 연산자 {0}은(는) {1}에 사용할 수 없습니다.
-@error_index = {0}은(는) {1}에서 인덱스로 사용할 수 없습니다.
-@error_index_on_non_indexable = {0}을(를) 인덱싱할 수 없습니다.
-@error_zero_step = 단계 크기는 0이 될 수 없습니다.
-@error_index_on_tuple = 튜플은 불변이므로 튜플 요소를 할당할 수 없습니다.
-@error_bad_key = {0}은(는) key로 사용할 수 없습니다.
-@error_slice_dict = dictionary는 슬라이스할 수 없습니다.
-@error_key = {0}은(는) dictionary에 없는 key입니다.
-@error_condition_not_bool = {0}은(는) 유효한 조건이 아닙니다. 조건은 불리언 값이어야 합니다. 즉, 항상 `True` 또는 `False`인 표현식이어야 합니다.
-@error_for_requires_iterable = {0}은(는) for 루프에서 반복할 수 없습니다. for 루프에는 반복할 시퀀스가 주어져야 합니다. 예시:
+@error_code_after_block = 여기에는 코드가 없어야 해요. 코드를 제거하거나 새 줄에 넣으세요.
+@error_wrong_number_args = {0}은(는) {1}개의 인수를 받아요.
+@error_expected_no_args = {0}은(는) 인수를 받지 않아요.
+@error_wrong_args = {1}의 {0}번째 인수는 {2}이었어요. 이것은 유효한 인수가 아니에요.
+@error_syntax_error_in_import = 가져온 모듈에 구문 오류가 있어요.
+@error_module_not_found = 이 이름을 가진 모듈이 존재하지 않아요. 이름은 파일 이름과 일치해야 해요. 창 상단에 표시되는 이름이에요.
+@error_list_element_not_found = {0}은(는) 리스트의 요소가 아니에요.
+@error_set_element_not_found = {0}은(는) 세트의 요소가 아니에요.
+@error_index_out_of_bounds = 인덱스 {0}이(가) 리스트 {1}의 범위를 벗어났어요.
+@error_index_out_of_bounds2 = 인덱스가 리스트의 범위를 벗어났어요.
+@error_arith_assign_not_used_on_number = {0}은(는) 숫자에만 사용할 수 있어요.
+@error_bool_op_not_used_on_bool = 논리 연산자는 `True` 또는 `False`로 평가되는 불리언 표현식에만 사용할 수 있어요.
+@error_bad_bin_operator = 연산자 {0}은(는) 피연산자 {1}과(와) {2}에 사용할 수 없어요.
+@error_bad_unary_operator = 연산자 {0}은(는) {1}에 사용할 수 없어요.
+@error_index = {0}은(는) {1}의 인덱스로 사용할 수 없어요.
+@error_index_on_non_indexable = {0}에 인덱싱할 수 없어요.
+@error_zero_step = 단계 크기는 0이 될 수 없어요.
+@error_index_on_tuple = 튜플은 불변이므로 튜플 요소에 값을 할당할 수 없어요.
+@error_bad_key = {0}은(는) 키로 사용할 수 없어요.
+@error_slice_dict = 딕셔너리는 슬라이싱할 수 없어요.
+@error_key = {0}은(는) 딕셔너리의 키가 아니에요.
+@error_condition_not_bool = {0}은(는) 유효한 조건이 아니에요. 조건은 불리언 값이어야 해요. 즉, 항상 `True` 또는 `False`인 표현식이어야 해요.
+@error_for_requires_iterable = {0}은(는) for 루프에서 반복할 수 없어요. for 루프는 반복할 시퀀스를 받아야 해요. 예시:
 
 `for i in range(5):`
-여기서 range(5)는 시퀀스 `0,1,2,3,4`를 반환합니다.
-@error_no_loop_to_break = `break`는 루프 안에서만 사용할 수 있습니다.
-@error_no_loop_to_continue = `continue`는 루프 안에서만 사용할 수 있습니다.
-@error_no_function_to_return_from = `return`은 함수 안에서만 사용할 수 있습니다.
-@error_missing_unlock = 이것을 사용하려면 먼저 해금해야 합니다.
-@error_missing_x_unlock = 이것을 사용하려면 먼저 {0}을(를) 해금해야 합니다.
-@error_name_not_defined = {0}은(는) 정의된 적이 없습니다. 변수를 사용하기 전에 값을 할당해야 합니다.
-@error_missing_import = {0}은(는) 정의된 적이 없습니다. {1} 파일에 정의된 것 같습니다. import하는 것을 잊으셨나요? 
-import했다면, 아마도 import 순환(import 문서 페이지 참조)이 있을 것입니다.
-@error_missing_import_before_unlock = {0}은(는) 정의된 적이 없습니다. {1} 파일에 정의된 것 같습니다. 다른 파일에서 무언가를 import하려면 import를 해금해야 합니다.
-@error_call_before_def = {0}은(는) 정의되지 않았습니다. 이 파일 어딘가에 정의된 것 같지만, 아직 정의가 실행되지 않았습니다. 함수는 `def` 문 다음에만 호출할 수 있습니다.
-@error_not_a_function = 함수가 아닌 것을 호출하려고 했습니다. 이로 이어질 수 있는 흔한 실수는 함수와 같은 이름의 변수를 갖는 것입니다.
-@error_invalid_const = {0}이(가) 존재하지 않습니다.
-@error_invalid_const2 = 이것은 존재하지 않습니다.
-@error_max_stack_size_reached = 최대 call stack 크기에 도달했습니다. 이는 대부분 너무 많은 재귀 함수 호출 때문일 가능성이 높습니다.
-@error_max_comparison_depth = 최대 비교 깊이에 도달했습니다. 예를 들어, 자기 자신을 포함하는 list를 비교할 때 이런 일이 발생할 수 있습니다.
-@error_assign_type_mismatch = 할당의 왼쪽과 오른쪽이 일치하지 않았습니다.
-@error_too_many_values_to_unpack = 오른쪽에 언패킹할 값이 충분하지 않습니다.
-@error_not_enough_values = 오른쪽에 왼쪽에 언패킹하기에는 너무 많은 값이 있습니다.
-@error_empty_print = `print()`는 최소 하나의 인자가 필요합니다.
-@error_in_string = 문자열에 {0}이(가) 있는지 확인할 수 없습니다.
-@error_collection_changed_size_during_iteration = for 루프가 이 collection을 반복하는 동안에는 collection의 크기를 변경할 수 없습니다. 이는 collection의 크기를 변경하면 for 루프가 사용하고 있는 반복자 객체가 무효화되기 때문입니다.
-@error_wrong_use_of_max = {0}의 최대값을 계산할 수 없습니다.
-@error_wrong_use_of_min = {0}의 최소값을 계산할 수 없습니다.
-@error_function_as_condition = 함수 {0}이(가) `True`인지 확인하려고 합니다. 이것은 함수 자체의 반환 값이 아니라 함수 객체입니다. 호출 연산자 `()`를 사용하여 함수를 호출하려고 하셨나요? 
+여기서 range(5)는 시퀀스 `0,1,2,3,4`를 반환해요.
+@error_no_loop_to_break = `break`는 루프 안에서만 사용할 수 있어요.
+@error_no_loop_to_continue = `continue`는 루프 안에서만 사용할 수 있어요.
+@error_no_function_to_return_from = `return`은 함수 안에서만 사용할 수 있어요.
+@error_missing_unlock = 이것을 사용하려면 먼저 해금해야 해요.
+@error_missing_x_unlock = 이것을 사용하려면 먼저 {0}을(를) 해금해야 해요.
+@error_name_not_defined = {0}이(가) 정의된 적이 없어요. 변수를 사용하기 전에 값을 할당해야 해요.
+@error_missing_import = {0}이(가) 정의된 적이 없어요. {1} 파일에 정의된 것 같아요. 혹시 import하는 걸 잊었나요? 
+import했다면, 아마 import 순환 참조가 있을 거예요 (import 문서 페이지 참조).
+@error_missing_import_before_unlock = {0}이(가) 정의된 적이 없어요. {1} 파일에 정의된 것 같아요. 다른 파일에서 무언가를 import하려면 import를 해금해야 해요.
+@error_call_before_def = {0}이(가) 정의되지 않았어요. 이 파일 어딘가에 정의된 것 같지만, 아직 정의가 실행되지 않았어요. 함수는 `def` 문 뒤에만 호출할 수 있어요.
+@error_not_a_function = 함수가 아닌 것을 호출하려고 했어요. 흔한 실수 중 하나는 함수와 같은 이름의 변수를 갖는 것이에요.
+@error_invalid_const = {0}이(가) 존재하지 않아요.
+@error_invalid_const2 = 이것은 존재하지 않아요.
+@error_max_stack_size_reached = 최대 호출 스택 크기에 도달했어요. 아마도 재귀 함수 호출이 너무 많아서일 거예요.
+@error_max_comparison_depth = 최대 비교 깊이에 도달했어요. 최대 비교 깊이에 도달했어요. 예를 들어, 자기 자신을 포함하는 리스트를 비교할 때 이런 일이 발생할 수 있어요.
+@error_assign_type_mismatch = 할당의 왼쪽 피연산자가 오른쪽 피연산자와 일치하지 않았어요.
+@error_too_many_values_to_unpack = 오른쪽 피연산자에 언패킹할 값이 충분하지 않아요.
+@error_not_enough_values = 오른쪽 피연산자에 왼쪽 피연산자로 언패킹하기에는 값이 너무 많아요.
+@error_empty_print = `print()`는 적어도 하나의 인수가 필요해요.
+@error_in_string = 문자열에 {0}이(가) 있는지 확인할 수 없어요.
+@error_collection_changed_size_during_iteration = 이 컬렉션을 반복하는 for 루프 안에서는 이 컬렉션의 크기를 변경할 수 없어요. 컬렉션의 크기를 변경하면 for 루프가 사용하는 이터레이터 객체가 무효화되기 때문이에요.
+@error_wrong_use_of_max = {0}의 최댓값을 계산할 수 없어요.
+@error_wrong_use_of_min = {0}의 최솟값을 계산할 수 없어요.
+@error_function_as_condition = {0} 함수가 `True`인지 확인하려고 하고 있어요. 이건 함수 객체 자체이지, 함수의 반환값이 아니에요. 호출 연산자 `()`를 써서 함수를 호출하려던 건가요? 
 
-Python에서 함수 객체는 참(truthy)이므로, 조건으로 사용하면 `True`처럼 작동하여 Python은 이 error 메시지를 표시하지 않습니다. 
+Python에서 함수 객체는 참 같은(truthy) 값이에요. 즉, 조건으로 사용하면 `True`처럼 작동해서 Python은 이런 오류 메시지를 보내지 않아요. 
 
-이것은 안전장치 error 메시지이며, 방해가 된다면 옵션에서 끌 수 있습니다.
-@error_function_in_operator = 함수 {0}에 {1}을(를) 사용하려고 합니다. 이것은 함수 자체의 반환 값이 아니라 함수 객체입니다. 호출 연산자 `()`를 사용하여 함수를 호출하려고 하셨나요? 
+이건 보호 오류 메시지이며, 방해가 된다면 옵션에서 끌 수 있어요.
+@error_function_in_operator = {0} 함수에 {1}을(를) 사용하려고 하고 있어요. 이건 함수 객체 자체이지, 함수의 반환값이 아니에요. 호출 연산자 `()`를 써서 함수를 호출하려던 건가요? 
 
-이것은 안전장치 error 메시지이며, 방해가 된다면 옵션에서 끌 수 있습니다.
-@error_zero_step_size = 단계 크기는 0이 될 수 없습니다.
-@error_sequence_too_large = 시퀀스가 너무 커서 복사할 수 없습니다.
-@error_invalid_sim_unlocks = 시작 해금 요소가 유효하지 않습니다. 해금 요소의 시퀀스 또는 `(Unlock.Carrots, 3)` 형태의 튜플이어야 합니다.
-@error_invalid_sim_items = 시작 아이템이 유효하지 않습니다. `{Items.Hay : 100}`과 같이 아이템을 숫자에 매핑하는 dict여야 합니다.
-@error_invalid_sim_globals = 시작 전역 변수가 유효하지 않습니다. `{"x" : 42}`와 같이 변수 이름을 값에 매핑하는 dict여야 합니다.
-@error_division_by_zero = 오 이런! `0`으로 나누었습니다. 간신히 살아남았네요.
-@error_negative_use_item = 아이템 사용 수량은 최소 `1`이어야 합니다. 현재 {0}입니다.
-@error_use_before_assign = 값이 할당되기 전에 변수 {0}을(를) 읽으려고 했습니다. 
-전역 변수를 수정하려면 global 키워드를 사용하여 전역 scope에 써야 합니다.
+이건 보호 오류 메시지이며, 방해가 된다면 옵션에서 끌 수 있어요.
+@error_zero_step_size = 단계 크기는 0이 될 수 없어요.
+@error_sequence_too_large = 시퀀스가 너무 커서 복사할 수 없었어요.
+@error_invalid_sim_unlocks = 시작 해금 요소가 잘못되었어요. 해금 요소 시퀀스이거나 `(Unlock.Carrots, 3)` 형태의 튜플이어야 해요.
+@error_invalid_sim_items = 시작 아이템이 잘못되었어요. `{Items.Hay : 100}`과 같이 아이템을 숫자에 매핑하는 딕셔너리여야 해요.
+@error_invalid_sim_globals = 시작 전역 변수가 잘못되었어요. `{"x" : 42}`와 같이 변수 이름을 값에 매핑하는 딕셔너리여야 해요.
+@error_division_by_zero = 이런! `0`으로 나누었어요. 간신히 살아남았네요.
+@error_negative_use_item = 사용할 아이템 수량은 최소 `1`이어야 해요. 입력된 값은 {0}이었어요.
+@error_use_before_assign = 변수 {0}에 값이 할당되기 전에 읽으려고 했어요. 
+전역 변수를 수정하려면 global 키워드를 사용하여 전역 범위에 써야 해요.
 
 `global x
 x += 1`
-@error_attribute_on_non_module = {0}에 속성을 할당할 수 없습니다.
-@error_file_not_found = 파일 {0}이(가) 존재하지 않습니다.
-@error_max_drones_reached = 드론 한도를 초과했습니다.
-@error_dino_hat_already_used = 공룡 모자는 하나뿐이며 이미 사용 중입니다. 두 번째 드론에는 사용할 수 없습니다.
-@error_invalid_drone_id = ID가 {0}인 드론이 없습니다.
-@error_invalid_handle = {0}은(는) 더 이상 존재하지 않습니다.
+@error_attribute_on_non_module = {0}에 속성을 할당할 수 없어요.
+@error_file_not_found = {0} 파일이 존재하지 않아요.
+@error_max_drones_reached = 드론 한도를 초과했어요.
+@error_dino_hat_already_used = 공룡 모자는 하나뿐이고 이미 사용 중이에요. 두 번째 드론에는 사용할 수 없어요.
+@error_invalid_drone_id = ID {0}을(를) 가진 드론이 없어요.
+@error_invalid_handle = {0}은(는) 더 이상 존재하지 않아요.

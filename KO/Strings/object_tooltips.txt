@@ -1,20 +1,20 @@
 @plant_tooltip_template = {0}
 
-기본 성장 시간 {1} ~ {2}초.
+기본 성장 시간은 {1}초에서 {2}초 사이입니다.
 {3}에서 자랄 수 있습니다.
 @object_tooltip_template_cost = ### 식물 비용 {{{{itemblock cost object {0}}}}}
-@object_descr_apple = 공룡이 좋아하는 것 같습니다.
-@object_descr_grass = 초원에서 자동으로 자랍니다. 수확하면 `Items.Hay`를 얻습니다.
-@object_descr_bush = `Items.Wood`를 떨어뜨리는 작은 덤불입니다.
-@object_descr_tree = 나무는 덤불보다 더 많은 나무를 떨어뜨립니다. 다른 나무 옆에서 자라면 성장하는 데 더 오래 걸립니다.
+@object_descr_apple = 공룡들이 좋아하는 것 같아요.
+@object_descr_grass = 초원에서 자동으로 자라요. 수확하면 `Items.Hay`를 얻을 수 있어요.
+@object_descr_bush = `Items.Wood`를 주는 작은 덤불이에요.
+@object_descr_tree = 나무는 덤불보다 더 많은 나무를 줘요. 다른 나무 옆에서 자라면 성장하는 데 더 오래 걸려요.
 @object_descr_carrot = 당근!
-@object_descr_pumpkin = 호박은 완전히 자란 다른 호박 옆에 있을 때 함께 자랍니다. 자랄 때 약 5개 중 1개의 호박은 죽습니다.
-@object_descr_dead_pumpkin = 호박 5개 중 1개는 자라면서 죽고, 죽은 호박을 남깁니다. 죽은 호박은 쓸모가 없으며 새로운 것을 심으면 사라집니다.
-@object_descr_sunflower = 해바라기는 태양의 힘을 모읍니다. 수확하면 `Items.Power`를 얻습니다.
-최대 꽃잎 수를 가진 해바라기를 수확하면 보너스 파워를 얻습니다.
-@object_descr_cactus = 선인장은 10가지 다른 크기로 나옵니다. 수확 시 "정렬된" 인접 선인장도 함께 수확됩니다.
-@object_descr_hedge = 미로의 일부입니다.
-@object_descr_treasure = 숨겨진 미로의 한 변 길이에 해당하는 금을 포함한 보물입니다. 식물처럼 수확할 수 있습니다.
-@object_descr_dinosaur = 공룡 모자의 꼬리 부분입니다.
-@object_descr_grassland = 기본 땅입니다. 풀이 자동으로 자랍니다.
-@object_descr_soil = `till()`을 호출하면 땅이 흙으로 변합니다. `till()`을 다시 호출하면 초원으로 돌아갑니다.
+@object_descr_pumpkin = 호박은 다 자란 다른 호박 옆에 있으면 함께 자라요. 약 5개 중 1개의 호박은 자라면서 죽어요.
+@object_descr_dead_pumpkin = 다섯 개의 호박 중 하나는 자라다가 죽어서 죽은 호박을 남겨요. 죽은 호박은 쓸모가 없고 새로운 것이 심어지면 사라져요.
+@object_descr_sunflower = 해바라기는 태양의 힘을 모아요. 수확하면 `Items.Power`를 얻을 수 있어요.
+꽃잎 수가 최대인 해바라기를 수확하면 보너스 파워를 얻어요.
+@object_descr_cactus = 선인장은 10가지 다른 크기로 자라요. 수확할 때 "정렬된" 인접 선인장도 함께 수확돼요.
+@object_descr_hedge = 미로의 일부.
+@object_descr_treasure = 숨겨진 미로의 변 길이와 같은 양의 금이 들어있는 보물이에요. 식물처럼 수확할 수 있어요.
+@object_descr_dinosaur = 공룡 모자의 꼬리 부분.
+@object_descr_grassland = 기본 땅이에요. 풀이 자동으로 자라요.
+@object_descr_soil = `till()`을 호출하면 땅이 흙으로 변해요. 다시 `till()`을 호출하면 초원으로 돌아가요.
