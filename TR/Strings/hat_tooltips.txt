@@ -1,2 +1,0 @@
-@hat_descr_straw_hat = Default şapka.
-@hat_descr_dinosaur_hat = Dinozor oyununu başlatmak için tak.
