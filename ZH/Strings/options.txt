@@ -14,6 +14,11 @@
 @vfx limit = 视觉效果限制
 @volume damping = 音量抑制
 @volume = 音量
+@music volume = 音乐音量
+@SFX volume = 音效音量
+@UI volume = UI 音量
+@ambience volume = 环境音量
+@drone volume = 无人机音量
 @fps limit = 最大帧率
 @autosave = 自动保存
 @enabled = 已启用

@@ -20,7 +20,12 @@
 @warning_icon_tooltip = Ton code a déclenché un avertissement. Clique sur l'icône pour voir les détails dans la fenêtre de sortie.
 @option_tooltip_graphics = Affecte divers paramètres du pipeline de rendu comme les ombres, l'occlusion ambiante et le bloom.
 @option_tooltip_vfx_limit = Limite le nombre d'effets visuels pouvant être joués par seconde.
-@option_tooltip_volume = Ajuste le volume de tous les effets sonores.
+@option_tooltip_volume = Ajuste le volume de tous les sons.
+@option_tooltip_music_volume = Ajuste le volume de la musique.
+@option_tooltip_drone_volume = Ajuste le volume des sons du drone.
+@option_tooltip_SFX_volume = Ajuste le volume des effets sonores de la ferme.
+@option_tooltip_UI_volume = Ajuste le volume des sons de l'interface comme les clics de bouton.
+@option_tooltip_ambience_volume = Ajuste le volume des sons d'ambiance comme le vent et les oiseaux.
 @option_tooltip_volume_damping = Le volume est multiplié par ce facteur pour chaque effet sonore joué simultanément, pour ne pas que tes oreilles explosent à haute vitesse de drone.
 @option_tooltip_sfx_limit = Limite le nombre de sons pouvant être joués par seconde.
 @option_tooltip_autosave = Sauvegarde automatiquement le jeu toutes les 30s lorsque cette option est activée. Ne peut pas être activé si le "file watcher" est activé.

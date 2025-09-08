@@ -10,3 +10,4 @@
 @popup_warning_failed_read_save = Error al leer los archivos de guardado de {0}. Asegúrate de cerrar todos los demás programas que acceden a los archivos e inténtalo de nuevo.
 @popup_warning_failed_write_save = Error al escribir en los archivos de guardado de {0}. Asegúrate de cerrar todos los demás programas que acceden a los archivos e inténtalo de nuevo.
 @ok = ok
+@popup_warning_old_save = Este archivo de guardado es de una versión anterior del juego. Como el árbol de tecnologías ha sido rediseñado, todas las mejoras se han reiniciado a algo que tiene más sentido con el nuevo sistema de progresión.

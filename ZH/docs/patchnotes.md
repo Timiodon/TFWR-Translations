@@ -3,6 +3,10 @@
 Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
 Also a large part of the tech tree has been reworked to be a bit more exponential.
 
+Breaking Changes:
+-Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
+-If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
+
 Gameplay:
 -Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
 -There is now a `can_move()` function for the maze.
@@ -11,7 +15,7 @@ Gameplay:
 -The cactus grow time is now always exactly 1 second.
 -Pumpkins now leave behind a dead pumpkin to indicate that they have died.
 -Added `pet_the_piggy()`.
--`num_unlocked()` now already get's unlocked with Senses.
+-`num_unlocked()` now already gets unlocked with Senses.
 
 Audio:
 -The audio has been completely remade.

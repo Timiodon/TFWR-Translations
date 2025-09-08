@@ -14,6 +14,11 @@
 @vfx limit = Limit VFX
 @volume damping = Tłumienie głośności
 @volume = Głośność
+@music volume = Głośność muzyki
+@SFX volume = Głośność efektów
+@UI volume = Głośność interfejsu
+@ambience volume = Głośność otoczenia
+@drone volume = Głośność drona
 @fps limit = Maks. FPS
 @autosave = Autozapis
 @enabled = Włączone

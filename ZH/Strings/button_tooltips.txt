@@ -20,7 +20,12 @@
 @warning_icon_tooltip = 你的代码触发了一个警告。点击图标在输出窗口中查看详情。
 @option_tooltip_graphics = 影响各种渲染管线设置，如阴影、环境光遮蔽和泛光。
 @option_tooltip_vfx_limit = 限制每秒可播放的视觉效果数量。
-@option_tooltip_volume = 调整所有音效的音量。
+@option_tooltip_volume = 调整所有音频的音量。
+@option_tooltip_music_volume = 调整音乐的音量。
+@option_tooltip_drone_volume = 调整无人机嗡嗡声的音量。
+@option_tooltip_SFX_volume = 调整农场音效的音量。
+@option_tooltip_UI_volume = 调整按钮点击等界面音效的音量。
+@option_tooltip_ambience_volume = 调整风声和鸟鸣等环境音的音量。
 @option_tooltip_volume_damping = 每个同时播放的音效的音量都会乘以这个系数，这样在高无人机速度下你的耳朵就不会爆炸了。
 @option_tooltip_sfx_limit = 限制每秒可播放的声音数量。
 @option_tooltip_autosave = 启用后每 30 秒自动保存游戏。无法在文件监视器启用时启用。

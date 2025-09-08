@@ -10,3 +10,4 @@
 @popup_warning_failed_read_save = 读取 {0} 的存档文件失败。请确保关闭所有其他正在访问这些文件的程序，然后重试。
 @popup_warning_failed_write_save = 写入 {0} 的存档文件失败。请确保关闭所有其他正在访问这些文件的程序，然后重试。
 @ok = 好的
+@popup_warning_old_save = 这份存档来自旧版游戏。我们重做了科技树，所以你的所有升级都被重置了，这样能更好地匹配新的游戏进程。

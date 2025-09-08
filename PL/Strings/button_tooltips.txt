@@ -20,7 +20,12 @@
 @warning_icon_tooltip = Twój kod wywołał ostrzeżenie. Kliknij ikonę, aby zobaczyć szczegóły w oknie wyjściowym.
 @option_tooltip_graphics = Wpływa na różne ustawienia potoku renderowania, takie jak cienie, okluzja otoczenia i bloom.
 @option_tooltip_vfx_limit = Ogranicza liczbę efektów wizualnych, które mogą być odtwarzane na sekundę.
-@option_tooltip_volume = Dostosuj głośność wszystkich efektów dźwiękowych.
+@option_tooltip_volume = Dostosuj głośność wszystkich dźwięków.
+@option_tooltip_music_volume = Dostosuj głośność muzyki.
+@option_tooltip_drone_volume = Dostosuj głośność brzęczenia drona.
+@option_tooltip_SFX_volume = Dostosuj głośność efektów dźwiękowych z farmy.
+@option_tooltip_UI_volume = Dostosuj głośność dźwięków interfejsu, takich jak kliknięcia przycisków.
+@option_tooltip_ambience_volume = Dostosuj głośność dźwięków otoczenia, takich jak wiatr i ptaki.
 @option_tooltip_volume_damping = Głośność jest mnożona przez ten współczynnik dla każdego jednocześnie odtwarzanego efektu dźwiękowego, aby twoje uszy nie eksplodowały przy dużych prędkościach drona.
 @option_tooltip_sfx_limit = Ogranicza liczbę dźwięków, które mogą być odtwarzane na sekundę.
 @option_tooltip_autosave = Automatycznie zapisuje grę co 30 sekund, gdy jest włączone. Nie można włączyć, gdy włączony jest file watcher.

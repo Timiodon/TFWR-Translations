@@ -14,6 +14,11 @@
 @vfx limit = Limite VFX
 @volume damping = Atténuation volume
 @volume = Volume
+@music volume = Volume Musique
+@SFX volume = Volume SFX
+@UI volume = Volume UI
+@ambience volume = Volume Ambiance
+@drone volume = Volume Drone
 @fps limit = IPS max
 @autosave = Sauvegarde auto
 @enabled = Activé

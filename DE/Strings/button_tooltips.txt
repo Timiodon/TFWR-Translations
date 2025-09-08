@@ -20,7 +20,12 @@
 @warning_icon_tooltip = Dein Code hat eine Warnung ausgelöst. Klicke auf das Symbol, um Details im Ausgabefenster anzuzeigen.
 @option_tooltip_graphics = Beeinflusst verschiedene Einstellungen der Render-Pipeline wie Schatten, Umgebungsverdeckung und Bloom.
 @option_tooltip_vfx_limit = Begrenzt die Anzahl der visuellen Effekte, die pro Sekunde abgespielt werden können.
-@option_tooltip_volume = Passt die Lautstärke aller Soundeffekte an.
+@option_tooltip_volume = Regelt die Lautstärke aller Töne.
+@option_tooltip_music_volume = Regelt die Lautstärke der Musik.
+@option_tooltip_drone_volume = Regelt die Lautstärke des Drohnensummens.
+@option_tooltip_SFX_volume = Regelt die Lautstärke der Soundeffekte von der Farm.
+@option_tooltip_UI_volume = Regelt die Lautstärke von UI-Sounds wie Button-Klicks.
+@option_tooltip_ambience_volume = Regelt die Lautstärke von Umgebungsgeräuschen wie Wind und Vogelgezwitscher.
 @option_tooltip_volume_damping = Die Lautstärke wird für jeden gleichzeitig abgespielten Soundeffekt mit diesem Faktor multipliziert, damit deine Ohren bei hohen Drohnengeschwindigkeiten nicht explodieren.
 @option_tooltip_sfx_limit = Begrenzt die Anzahl der Sounds, die pro Sekunde abgespielt werden können.
 @option_tooltip_autosave = Speichert das Spiel automatisch alle 30s, wenn aktiviert. Kann nicht aktiviert werden, während der File Watcher aktiviert ist.

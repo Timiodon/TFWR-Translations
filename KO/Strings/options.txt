@@ -14,6 +14,11 @@
 @vfx limit = 시각 효과 제한
 @volume damping = 볼륨 감쇠
 @volume = 볼륨
+@music volume = 음악 볼륨
+@SFX volume = 효과음 볼륨
+@UI volume = UI 볼륨
+@ambience volume = 주변음 볼륨
+@drone volume = 드론 볼륨
 @fps limit = 최대 FPS
 @autosave = 자동 저장
 @enabled = 켜짐

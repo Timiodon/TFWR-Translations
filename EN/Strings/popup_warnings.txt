@@ -10,3 +10,4 @@
 @popup_warning_failed_read_save = Failed to read the save files of {0}. Make sure you close all other programs accessing the files and try again.
 @popup_warning_failed_write_save = Failed to write to the save files of {0}. Make sure you close all other programs accessing the files and try again.
 @ok = ok
+@popup_warning_old_save = This save file is from an older version of the game. Since the tech tree has been reworked, all upgrades have been reset to something that makes more sense with the new progression system.
