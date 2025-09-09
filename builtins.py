@@ -232,6 +232,9 @@ class Unlocks:
     Functions: Unlock
     """Define your own functions."""
 
+    Imports: Unlock
+    """Import code from other files."""
+
     Watering: Unlock
     """Water the plants to make them grow faster."""
 
