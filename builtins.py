@@ -918,7 +918,7 @@ def leaderboard_run(leaderboard: Leaderboard, file_name: str, speedup: float) ->
 
 
 # -------------------------------------------------------------------------------
-def simulate(filename: str, sim_unlocks: dict[Unlocks, float] | Iterable[Unlocks], sim_items: dict[Items, float], sim_globals: dict[str, Any], seed: float, speedup: float) -> None:
+def simulate(filename: str, sim_unlocks: dict[Unlocks, float] | Iterable[Unlocks] | type[Unlocks], sim_items: dict[Item, float], sim_globals: dict[str, Any], seed: float, speedup: float) -> None:
     """
     Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
 
