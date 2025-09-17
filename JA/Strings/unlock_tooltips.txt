@@ -10,6 +10,10 @@
 
 `while True:
     harvest()`
+@unlock_descr_hats = ドローン用の帽子。
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
 @unlock_descr_senses = ドローンは自分の下にあるものと自分の位置を確認できるようになります。
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -126,6 +130,7 @@ other_file.function()`
 @fertilizer = 肥料
 @functions = 関数
 @grass = 草
+@hats = 帽子
 @import = インポート
 @leaderboard = リーダーボード
 @lists = リスト
@@ -142,6 +147,7 @@ other_file.function()`
 @sunflowers = ヒマワリ
 @timing = タイミング
 @trees = 木
+@the_farmers_remains = ？
 @utilities = ユーティリティ
 @variables = 変数
 @watering = 水やり

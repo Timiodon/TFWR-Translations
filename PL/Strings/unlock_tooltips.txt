@@ -10,6 +10,10 @@
 
 `while True:
     harvest()`
+@unlock_descr_hats = Kapelusze dla twojego drona.
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
 @unlock_descr_senses = Dron widzi, co jest pod nim i gdzie się znajduje.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -126,6 +130,7 @@ other_file.function()`
 @fertilizer = Nawóz
 @functions = Funkcje
 @grass = Trawa
+@hats = Kapelusze
 @import = Import
 @leaderboard = Tabela wyników
 @lists = Listy
@@ -142,6 +147,7 @@ other_file.function()`
 @sunflowers = Słoneczniki
 @timing = Czas
 @trees = Drzewa
+@the_farmers_remains = ?
 @utilities = Narzędzia
 @variables = Zmienne
 @watering = Podlewanie

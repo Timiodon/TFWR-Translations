@@ -10,6 +10,10 @@
 
 `while True:
     harvest()`
+@unlock_descr_hats = 为你的无人机准备的帽子。
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
 @unlock_descr_senses = 无人机可以看到它下面有什么以及它在哪里。
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -126,6 +130,7 @@ other_file.function()`
 @fertilizer = 肥料
 @functions = 函数
 @grass = 草
+@hats = 帽子
 @import = 导入
 @leaderboard = 排行榜
 @lists = 列表
@@ -142,6 +147,7 @@ other_file.function()`
 @sunflowers = 向日葵
 @timing = 计时
 @trees = 树木
+@the_farmers_remains = ?
 @utilities = 实用工具
 @variables = 变量
 @watering = 浇水

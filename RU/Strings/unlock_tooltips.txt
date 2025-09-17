@@ -10,6 +10,10 @@
 
 `while True:
     harvest()`
+@unlock_descr_hats = Шляпы для вашего дрона.
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
 @unlock_descr_senses = Дрон может видеть, что под ним и где он находится.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -126,6 +130,7 @@ other_file.function()`
 @fertilizer = Удобрение
 @functions = Функции
 @grass = Трава
+@hats = Шляпы
 @import = Импорт
 @leaderboard = Таблица лидеров
 @lists = Списки
@@ -142,6 +147,7 @@ other_file.function()`
 @sunflowers = Подсолнухи
 @timing = Тайминг
 @trees = Деревья
+@the_farmers_remains = ?
 @utilities = Утилиты
 @variables = Переменные
 @watering = Полив

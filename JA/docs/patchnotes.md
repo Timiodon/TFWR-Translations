@@ -31,6 +31,7 @@ Code Editor:
 -Double clicking identifiers with underscores in them now selects the whole identifier.
 -If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
 -Zooming is now much smoother.
+-The code completer is now properly import aware and can give suggestions from other files.
 
 Other:
 -You can now chain comparison operators like in Python.
@@ -39,12 +40,18 @@ Other:
 -Added a setting to turn off the flashing highlights when the code is running.
 -The code execution has been optimized further, allowing the game to run smoother while code is running.
 -Added a "Toggle HUD" keybind.
+-Added different cursors for editing text and resizing windows.
 
 Fixes:
 -Some of the most common cases of code highlights being visible through other windows have been fixed.
 -Actions like tilling can no longer affect the water drying behavior.
 -Fixed keybinding problems on non US keyboards.
 -Fixed the piggy bank moving really far away from the farm sometimes.
+-Fixed fertilizer not infecting fully grown plants.
+-Fixed `set_world_size(get_world_size())` resetting the drone position.
+-Fixed a simulation + dinosaur interaction that caused lots of apples to be left behind.
+-Fixed the bug that caused error messages to move around when you clicked minimize and then opened the menu.
+-Fixed error messages popping up while you are still typing.
 
 Breaking Changes from older Patches that you might have missed:
 -Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).

@@ -10,6 +10,10 @@
 
 `while True:
     harvest()`
+@unlock_descr_hats = 드론을 위한 모자들이에요.
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
 @unlock_descr_senses = 드론이 자기 아래에 무엇이 있고 어디에 있는지 볼 수 있게 돼요.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -126,6 +130,7 @@ other_file.function()`
 @fertilizer = 비료
 @functions = 함수
 @grass = 풀
+@hats = 모자
 @import = Import
 @leaderboard = 리더보드
 @lists = 리스트
@@ -142,6 +147,7 @@ other_file.function()`
 @sunflowers = 해바라기
 @timing = 타이밍
 @trees = 나무
+@the_farmers_remains = ?
 @utilities = 유틸리티
 @variables = 변수
 @watering = 물주기
