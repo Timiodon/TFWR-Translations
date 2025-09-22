@@ -17,4 +17,9 @@
 @object_descr_treasure = 隠されている迷路の一辺の長さに等しいゴールドが入った宝物。植物のように収穫できます。
 @object_descr_dinosaur = 恐竜の帽子の尻尾の一部。
 @object_descr_grassland = デフォルトの地面。草が自動的に生えてきます。
-@object_descr_soil = `till()` を呼び出すと地面が土壌に変わります。再度 `till()` を呼び出すと草原に戻ります。
+@object_descr_soil = 「`till()`」を呼び出すと地面が土に変わります。もう一度「`till()`」を呼び出すと、草原に戻ります。
+@runtime_entity_tooltip = 収穫すると入手できるもの：
+{{itemblock tooltip}}
+@runtime_growable_tooltip = 合計成長時間：{0}秒
+成長率 {1}%
+@runtime_ground_tooltip = 水分量：{0}

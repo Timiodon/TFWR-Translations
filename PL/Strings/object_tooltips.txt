@@ -17,4 +17,9 @@ Jeśli zbierzesz słonecznik z maksymalną liczbą płatków, otrzymasz dodatkow
 @object_descr_treasure = Skarb, który zawiera złoto równe długości boku labiryntu, w którym jest ukryty. Można go zebrać jak roślinę.
 @object_descr_dinosaur = Kawałek ogona kapelusza dinozaura.
 @object_descr_grassland = Domyślne podłoże. Trawa będzie na nim rosła automatycznie.
-@object_descr_soil = Wywołanie `till()` zamienia podłoże w glebę. Ponowne wywołanie `till()` zmienia je z powrotem w pastwisko.
+@object_descr_soil = Wywołanie `till()` zamienia ziemię w glebę. Ponowne wywołanie `till()` zmienia ją z powrotem w teren trawiasty.
+@runtime_entity_tooltip = Po zebraniu daje:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Całkowity czas wzrostu: {0} sekund
+Wzrost: {1}%
+@runtime_ground_tooltip = Poziom wody: {0}

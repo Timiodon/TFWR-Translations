@@ -17,4 +17,9 @@ Se raccogli un girasole con il numero massimo di petali, ottieni un bonus di ene
 @object_descr_treasure = Un tesoro che contiene oro pari alla lunghezza del lato del labirinto in cui è nascosto. Può essere raccolto come una pianta.
 @object_descr_dinosaur = Un pezzo della coda del cappello da dinosauro.
 @object_descr_grassland = Il terreno di default. L'erba crescerà automaticamente su di esso.
-@object_descr_soil = Chiamando `till()` il terreno si trasforma in terra. Chiamando di nuovo `till()` lo si ritrasforma in prato.
+@object_descr_soil = Chiamare `till()` trasforma il terreno in terra arata. Chiamare `till()` di nuovo lo riporta a prato.
+@runtime_entity_tooltip = Quando raccolto, dà:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Tempo di crescita totale: {0} secondi
+Cresciuto del {1}%
+@runtime_ground_tooltip = Livello d'acqua: {0}

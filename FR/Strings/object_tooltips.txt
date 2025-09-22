@@ -17,4 +17,9 @@ Si tu récoltes un tournesol avec le nombre maximum de pétales, tu obtiens un b
 @object_descr_treasure = Un trésor qui contient de l'or égal à la longueur du côté du labyrinthe dans lequel il est caché. Il peut être récolté comme une plante.
 @object_descr_dinosaur = Un morceau de la queue du chapeau de dinosaure.
 @object_descr_grassland = Le sol par défaut. L'herbe y poussera automatiquement.
-@object_descr_soil = Appeler `till()` transforme le sol en terre. Appeler `till()` à nouveau le retransforme en prairie.
+@object_descr_soil = Appeler `till()` transforme le sol en terre labourée. L'appeler à nouveau le retransforme en prairie.
+@runtime_entity_tooltip = Une fois récolté, donne :
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Temps de croissance total : {0} secondes
+Croissance : {1}%
+@runtime_ground_tooltip = Niveau d'eau : {0}

@@ -17,4 +17,9 @@ Se você colher um girassol com o número máximo de pétalas, você ganha energ
 @object_descr_treasure = Um tesouro que contém ouro igual ao comprimento do lado do labirinto em que está escondido. Pode ser colhido como uma planta.
 @object_descr_dinosaur = Um pedaço da cauda do chapéu de dinossauro.
 @object_descr_grassland = O solo padrão. Grama crescerá automaticamente nele.
-@object_descr_soil = Chamar `till()` transforma o solo em terra. Chamar `till()` novamente o transforma de volta em pastagem.
+@object_descr_soil = Chamar `till()` transforma o solo em terra arada. Chamar `till()` novamente o transforma de volta em grama.
+@runtime_entity_tooltip = Quando colhido, dá:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Tempo total de crescimento: {0} segundos
+Crescimento: {1}%
+@runtime_ground_tooltip = Nível de água: {0}

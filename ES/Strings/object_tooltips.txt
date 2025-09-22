@@ -17,4 +17,9 @@ Si cosechas un girasol con el número máximo de pétalos, obtienes energía ext
 @object_descr_treasure = Un tesoro que contiene oro igual a la longitud del lado del laberinto en el que está escondido. Se puede cosechar como una planta.
 @object_descr_dinosaur = Un trozo de la cola del sombrero de dinosaurio.
 @object_descr_grassland = El terreno por defecto. La hierba crecerá automáticamente sobre él.
-@object_descr_soil = Llamar a `till()` convierte el terreno en tierra de cultivo. Llamar a `till()` de nuevo lo cambia de vuelta a pradera.
+@object_descr_soil = Llamar a `till()` convierte el terreno en tierra de cultivo. Volver a llamar a `till()` lo convierte de nuevo en pradera.
+@runtime_entity_tooltip = Al cosechar, da:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Tiempo total de crecimiento: {0} segundos
+Crecido {1}%
+@runtime_ground_tooltip = Nivel de agua: {0}

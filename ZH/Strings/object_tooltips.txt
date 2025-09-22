@@ -18,3 +18,8 @@
 @object_descr_dinosaur = 恐龙帽尾巴的一部分。
 @object_descr_grassland = 默认的地面。草会自动在上面生长。
 @object_descr_soil = 调用 `till()` 会将地面变成土壤。再次调用 `till()` 会将其变回草地。
+@runtime_entity_tooltip = 收获可得：
+{{itemblock tooltip}}
+@runtime_growable_tooltip = 总生长时间：{0} 秒
+已生长 {1}%
+@runtime_ground_tooltip = 含水量：{0}

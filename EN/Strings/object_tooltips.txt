@@ -18,3 +18,8 @@ If you harvest a sunflower with the maximum number of petals you get bonus power
 @object_descr_dinosaur = A piece of the tail of the dinosaur hat.
 @object_descr_grassland = The default ground. Grass will automatically grow on it.
 @object_descr_soil = Calling `till()` turns the ground into soil. Calling `till()` again changes it back to grassland.
+@runtime_entity_tooltip = When harvested, gives:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Total grow time: {0} seconds
+Grown {1}%
+@runtime_ground_tooltip = Water level: {0}

@@ -17,4 +17,9 @@ Wenn du eine Sonnenblume mit der maximalen Anzahl an Blütenblättern erntest, b
 @object_descr_treasure = Ein Schatz, der Gold in Höhe der Seitenlänge des Labyrinths enthält, in dem er versteckt ist. Er kann wie eine Pflanze geerntet werden.
 @object_descr_dinosaur = Ein Stück des Schwanzes vom Dinosaurierhut.
 @object_descr_grassland = Der Standardboden. Gras wächst automatisch darauf.
-@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in Ackerboden. Ein erneuter Aufruf von `till()` verwandelt ihn zurück in Grasland.
+@object_descr_soil = Der Aufruf von `till()` verwandelt den Boden in Ackerboden. Ein erneuter Aufruf von `till()` verwandelt ihn wieder in Grasland.
+@runtime_entity_tooltip = Ergibt beim Ernten:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Gesamtwachstumszeit: {0} Sekunden
+Gewachsen {1}%
+@runtime_ground_tooltip = Wasserstand: {0}

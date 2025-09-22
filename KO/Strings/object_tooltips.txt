@@ -17,4 +17,9 @@
 @object_descr_treasure = 숨겨진 미로의 변 길이와 같은 양의 금이 들어있는 보물이에요. 식물처럼 수확할 수 있어요.
 @object_descr_dinosaur = 공룡 모자의 꼬리 부분.
 @object_descr_grassland = 기본 땅이에요. 풀이 자동으로 자라요.
-@object_descr_soil = `till()`을 호출하면 땅이 흙으로 변해요. 다시 `till()`을 호출하면 초원으로 돌아가요.
+@object_descr_soil = `till()`을 호출하면 땅이 흙으로 변해요. `till()`을 다시 호출하면 초원으로 돌아와요.
+@runtime_entity_tooltip = 수확 시 획득:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = 총 성장 시간: {0}초
+성장률 {1}%
+@runtime_ground_tooltip = 물 수위: {0}
