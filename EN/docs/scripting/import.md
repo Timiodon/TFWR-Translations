@@ -1,43 +1,30 @@
 # Import
 Putting all your code in a single file quickly becomes unmanageable. 
 `import` statements allow you to import functions and global variables from another file.
+How it works in one screenshot:
+![](ImportsInOnePicture400)
 
-`import filename`
-
-This is the simplest form of import statement. It will give you access to everything defined in the file named `filename`. Each window in the game is a file, and the filename is the name displayed at the top of the window.
-
-Here's an example with two files:
-File named helper:
-`x = 0
-
-def say_hello():
-    print("hello from helper")`
-
-Some other file:
-`import helper
-helper.say_hello()
-helper.x += 1`
-
-Here `import helper` runs the file named `helper` and gives you access to all it's globals.
+Here `import module2` runs the file named `module2` and gives you access to all it's globals.
 You can then access variables and functions within the imported module using the `.` operator.
-So in this example, `helper.say_hello()` calls `say_hello()` inside helper and the last line increments the global variable x.
+So in this example, `module2.print_x()` calls `print_x()` in `module2`.
+
+### No need to read further
 
 You can also move the globals from the imported module into the current scope where the import statement is executed using the `from` syntax.
 
-`from helper import *`
-Imports all globals from helper.
+`from module2 import print_x
+print_x()`
+Imports only the specified globals from `module2`.
 
 or
 
-`from helper import say_hello`
-Imports only the specified globals from helper.
+`from module2 import *
+print_x()`
+Imports all globals from `module2`.
 
-This also imports the helper file, but instead of accessing it through a variable named `helper`, it unpacks globals from `helper` and assigns them directly in the local scope.
+This also imports the `module2` file, but instead of accessing it through a variable named `module2`, it unpacks globals from `module2` and assigns them directly in the local scope.
 
-`from helper import say_hello
-say_hello()`
-
-This form of import is usually not recommended because it doesn't work well when two files import each other, and you may accidentally overwrite variables in the importing file due to name collisions.
+This form of import is usually not recommended because it doesn't work well when two files import each other, and you may accidentally overwrite variables in the importing file due to name collisions. It's safer to avoid the `from` syntax if you don't know what you're doing.
 
 # How it really works
 
