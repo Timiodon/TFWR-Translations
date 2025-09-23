@@ -1053,6 +1053,25 @@ def wait_for(drone: Any) -> Any:
     ...
 
 # -------------------------------------------------------------------------------
+def has_finished(drone: Any) -> Any:
+    """
+    Checks if the given drone has finished.
+
+    returns `True` if the drone has finished, `False` otherwise.
+
+    takes `1` tick to execute.
+
+    example:
+    ```
+    drone = spawn_drone(function)
+    while not has_finished(drone):
+        do_something_else()
+    result = wait_for(drone)
+    ```
+    """
+    ...
+
+# -------------------------------------------------------------------------------
 def max_drones() -> int:
     """
     returns the maximum number of drones that you can have in the farm.
