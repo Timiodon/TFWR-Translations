@@ -38,7 +38,7 @@ If you have imported it, you probably have an import cycle (See the import doc p
 @error_invalid_const = {0} doesn't exist.
 @error_invalid_const2 = This doesn't exist.
 @error_max_stack_size_reached = The maximum call stack size has been reached. This is most likely due to too many recursive function calls.
-@error_max_comparison_depth = The maximum comparison depth has been reached. The maximum comparison depth has been reached. This could happen, for example, if you are comparing lists that contain themselves.
+@error_max_comparison_depth = The maximum comparison depth has been reached. This could happen, for example, if you are comparing lists that contain themselves.
 @error_assign_type_mismatch = The left hand side of the assignment didn't match the right hand side.
 @error_too_many_values_to_unpack = The right hand side doesn't contain enough values to unpack.
 @error_not_enough_values = The right side contains too many values to be unpacked into the left side.

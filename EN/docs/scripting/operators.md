@@ -43,7 +43,7 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 `(-5)**3` evaluates to `-125`
 
 ## Comparison Operators
-`==` and `!=` are used to check of two values are "equal"(`==`) or "not equal"(`!=`). They can be used on all types of values.
+`==` and `!=` are used to check if two values are "equal"(`==`) or "not equal"(`!=`). They can be used on all types of values.
 
 `2 == 2` evaluates to `True`
 `Entities.Bush != Entities.Bush` evaluates to `False`

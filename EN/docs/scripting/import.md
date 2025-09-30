@@ -4,7 +4,7 @@ Putting all your code in a single file quickly becomes unmanageable.
 How it works in one screenshot:
 ![](ImportsInOnePicture400)
 
-Here `import module2` runs the file named `module2` and gives you access to all it's globals.
+Here `import module2` runs the file named `module2` and gives you access to all its globals.
 You can then access variables and functions within the imported module using the `.` operator.
 So in this example, `module2.print_x()` calls `print_x()` in `module2`.
 

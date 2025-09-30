@@ -78,7 +78,7 @@ f()()`
 Here `f()` calls the function `f` which defines and returns a new function `d`. The second `()` then executes the returned function and performs flip.
 (Doing these sort of things is usually not a good idea because it's hard to see what's going on)
 
-Functions that take other functions as arguments let you to get really creative:
+Functions that take other functions as arguments let you get really creative:
 
 `def f(g, arg):
 	for _ in range(10):

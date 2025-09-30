@@ -37,7 +37,7 @@ print(x)`
 
 This code prints `0` because the local `x` inside `f` is not the same variable as the global `x`, so the global `x` remains unchanged. This is important because otherwise a function call could accidentally override a global variable that just happens to have the same name as a local variable of that function.
 
-If you want to write to a global variable you, you must do so explicitly using the `global` keyword.
+If you want to write to a global variable, you must do so explicitly using the `global` keyword.
 
 `x = 0
 

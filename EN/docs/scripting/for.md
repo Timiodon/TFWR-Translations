@@ -12,7 +12,7 @@ A for loop looks like this:
 `for variable_name in sequence:
 	#code block`
 
-`variable_name` can be any name you choose. It is a variable that stores the current element in the sequence. `sequence` needs to be some value that can be iterated like a range or numbers. The code block is executed for every element with the loop variable assigned to that element.
+`variable_name` can be any name you choose. It is a variable that stores the current element in the sequence. `sequence` needs to be some value that can be iterated like a range of numbers. The code block is executed for every element with the loop variable assigned to that element.
 
 ## Sequences
 [Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
