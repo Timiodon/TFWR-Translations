@@ -68,6 +68,8 @@ print(wait_for(drone))`
 
 Ten en cuenta que generar drones lleva tiempo, así que no es una buena idea generar un nuevo dron para cada pequeña cosa.
 
+Puedes usar `has_finished(drone)` para ver si el dron ya terminó sin tener que esperar.
+
 ## Sin Memoria Compartida
 Cada dron tiene su propia memoria y no puede leer o escribir directamente las variables globales de otro dron.
 

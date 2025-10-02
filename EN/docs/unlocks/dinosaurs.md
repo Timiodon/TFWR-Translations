@@ -42,4 +42,4 @@ for i in range(100):
 You only have one dinosaur hat, so only one drone can wear it.
 
 <spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time. It's not very efficient, but it works.
-Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_farm_size()` to change the size of the farm to something more convenient.</spoiler>
+Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_world_size()` to change the size of the farm to something more convenient.</spoiler>

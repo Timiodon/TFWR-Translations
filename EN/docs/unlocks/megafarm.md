@@ -68,6 +68,8 @@ print(wait_for(drone))`
 
 Note that spawning drones takes time, so it's not a good idea to spawn a new drone for every little thing.
 
+You can use `has_finished(drone)` to check if the drone has finished without waiting for it.
+
 ## No Shared Memory
 Each drone has its own memory and cannot directly read or write another drone's globals.
 

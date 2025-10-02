@@ -32,7 +32,7 @@ Użycie `measure()` w dowolnym miejscu labiryntu zwraca pozycję skarbu.
 Dla dodatkowego wyzwania możesz również ponownie użyć labiryntu, używając tej samej ilości `Items.Weird_Substance` na skarbie ponownie. 
 Zwiększy to ilość złota w skarbie o jeden pełny labirynt i przeniesie go w losowe miejsce w labiryncie.
 
-Za każdym razem, gdy skarb jest przenoszony, losowa ściana może zostać usunięta z labiryntu. Więc ponownie używane labirynty mogą zawierać pętle.
+Za każdym razem, gdy skarb jest przenoszony, niektóre ściany labiryntu mogą zostać losowo usunięte. Więc ponownie używane labirynty mogą zawierać pętle.
 
 Zauważ, że pętle w labiryncie znacznie go utrudniają, ponieważ oznaczają, że możesz ponownie dotrzeć do tej samej lokalizacji bez cofania się.
 Ponowne użycie labiryntu nie daje więcej złota niż zebranie i stworzenie nowego labiryntu.

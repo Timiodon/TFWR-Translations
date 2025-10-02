@@ -32,7 +32,7 @@ Usare `measure()` in qualsiasi punto del labirinto restituisce la posizione del 
 Per una sfida extra puoi anche riutilizzare il labirinto usando di nuovo la stessa quantità di `Items.Weird_Substance` sul tesoro. 
 Questo aumenterà la quantità di oro nel tesoro di un intero labirinto e lo sposterà in una posizione casuale nel labirinto.
 
-Ogni volta che il tesoro viene spostato, un muro casuale può essere rimosso dal labirinto. Quindi i labirinti riutilizzati possono contenere cicli.
+Ogni volta che il tesoro viene spostato, alcune delle pareti del labirinto possono essere rimosse casualmente. Quindi i labirinti riutilizzati possono contenere cicli.
 
 Nota che i cicli nel labirinto lo rendono molto più difficile perché significa che puoi arrivare di nuovo alla stessa posizione senza tornare indietro.
 Riutilizzare un labirinto non ti dà più oro che semplicemente raccogliere e creare un nuovo labirinto.

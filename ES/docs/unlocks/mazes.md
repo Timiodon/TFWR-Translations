@@ -32,7 +32,7 @@ Usar `measure()` en cualquier lugar del laberinto devuelve la posición del teso
 Para un desafío extra, también puedes reutilizar el laberinto usando la misma cantidad de `Items.Weird_Substance` en el tesoro de nuevo. 
 Esto aumentará la cantidad de oro en el tesoro en un laberinto completo y lo moverá a una posición aleatoria en el laberinto.
 
-Cada vez que se mueve el tesoro, se puede eliminar una pared aleatoria del laberinto. Así que los laberintos reutilizados pueden contener bucles.
+Cada vez que se mueve el tesoro, se pueden eliminar algunas de las paredes del laberinto de forma aleatoria. Así que los laberintos reutilizados pueden contener bucles.
 
 Ten en cuenta que los bucles en el laberinto lo hacen mucho más difícil porque significa que puedes llegar a la misma ubicación de nuevo sin retroceder.
 Reutilizar un laberinto no te da más oro que simplemente cosechar y generar un nuevo laberinto.

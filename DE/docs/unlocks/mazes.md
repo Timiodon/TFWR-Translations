@@ -32,7 +32,7 @@ Die Verwendung von `measure()` irgendwo im Labyrinth gibt die Position des Schat
 Für eine zusätzliche Herausforderung kannst du das Labyrinth auch wiederverwenden, indem du dieselbe Menge an `Items.Weird_Substance` erneut auf den Schatz anwendest.
 Dies erhöht die Menge an Gold im Schatz um ein volles Labyrinth und verschiebt es an eine zufällige Position im Labyrinth.
 
-Jedes Mal, wenn der Schatz bewegt wird, kann eine zufällige Wand aus dem Labyrinth entfernt werden. Wiederverwendete Labyrinthe können also Schleifen enthalten.
+Jedes Mal, wenn der Schatz bewegt wird, können einige der Wände des Labyrinths zufällig entfernt werden. Wiederverwendete Labyrinthe können also Schleifen enthalten.
 
 Beachte, dass Schleifen im Labyrinth es viel schwieriger machen, da es bedeutet, dass du wieder an denselben Ort gelangen kannst, ohne zurückzugehen.
 Ein Labyrinth wiederzuverwenden gibt dir nicht mehr Gold, als einfach ein neues Labyrinth zu ernten und zu erstellen.

@@ -32,7 +32,7 @@ Usar `measure()` em qualquer lugar no labirinto retorna a posição do tesouro.
 Para um desafio extra, você também pode reutilizar o labirinto usando a mesma quantidade de `Items.Weird_Substance` no tesouro novamente. 
 Isso aumentará a quantidade de ouro no tesouro em um labirinto completo e o moverá para uma posição aleatória no labirinto.
 
-Cada vez que o tesouro é movido, uma parede aleatória pode ser removida do labirinto. Portanto, labirintos reutilizados podem conter loops.
+Cada vez que o tesouro é movido, algumas das paredes do labirinto podem ser removidas aleatoriamente. Portanto, labirintos reutilizados podem conter loops.
 
 Note que loops no labirinto o tornam muito mais difícil, porque significa que você pode chegar ao mesmo local novamente sem voltar.
 Reutilizar um labirinto não lhe dá mais ouro do que apenas colher e gerar um novo labirinto.

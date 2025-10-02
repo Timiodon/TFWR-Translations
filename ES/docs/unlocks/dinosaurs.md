@@ -42,4 +42,4 @@ for i in range(100):
 Solo tienes un sombrero de dinosaurio, así que solo un dron puede llevarlo.
 
 <spoiler=show hint 1>Si sigues moviéndote por el mismo camino que cubre todo el campo, puedes conseguir fácilmente una serpiente que cubra todo el campo cada vez. No es muy eficiente, pero funciona.
-Recorrer completamente una granja muy grande puede llevar mucho tiempo y es posible que no necesites tantos huesos. Siéntete libre de usar `set_farm_size()` para cambiar el tamaño de la granja a algo más conveniente.</spoiler>
+Recorrer completamente una granja muy grande puede llevar mucho tiempo y es posible que no necesites tantos huesos. Siéntete libre de usar `set_world_size()` para cambiar el tamaño de la granja a algo más conveniente.</spoiler>

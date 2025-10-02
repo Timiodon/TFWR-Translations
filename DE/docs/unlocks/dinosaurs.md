@@ -42,4 +42,4 @@ for i in range(100):
 Du hast nur einen Dinosaurier-Hut, also kann ihn nur eine Drohne tragen.
 
 <spoiler=zeige Hinweis 1>Wenn du dich immer auf demselben Pfad bewegst, der das gesamte Feld abdeckt, kannst du leicht eine Schlange bekommen, die jedes Mal das gesamte Feld bedeckt. Es ist nicht sehr effizient, aber es funktioniert.
-Das vollständige Durchqueren einer sehr großen Farm kann lange dauern, und möglicherweise benötigst du gar nicht so viele Knochen. Du kannst `set_farm_size()` verwenden, um die Größe der Farm auf etwas Praktischeres zu ändern.</spoiler>
+Das vollständige Durchqueren einer sehr großen Farm kann lange dauern, und möglicherweise benötigst du gar nicht so viele Knochen. Du kannst `set_world_size()` verwenden, um die Größe der Farm auf etwas Praktischeres zu ändern.</spoiler>

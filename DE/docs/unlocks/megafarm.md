@@ -68,6 +68,8 @@ print(wait_for(drone))`
 
 Beachte, dass das Spawnen von Drohnen Zeit braucht, daher ist es keine gute Idee, für jede Kleinigkeit eine neue Drohne zu spawnen.
 
+Du kannst `has_finished(drone)` benutzen, um zu checken, ob die Drohne fertig ist, ohne dass du warten musst.
+
 ## Kein gemeinsamer Speicher
 Jede Drohne hat ihren eigenen Speicher und kann nicht direkt die globalen Variablen einer anderen Drohne lesen oder schreiben.
 

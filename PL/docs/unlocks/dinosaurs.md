@@ -42,4 +42,4 @@ for i in range(100):
 Masz tylko jeden kapelusz dinozaura, więc tylko jeden dron może go nosić.
 
 <spoiler=pokaż podpowiedź 1>Jeśli będziesz poruszać się po tej samej ścieżce, która obejmuje całe pole, możesz łatwo uzyskać węża, który za każdym razem obejmuje całe pole. Nie jest to bardzo wydajne, ale działa.
-Pełne przemierzenie bardzo dużej farmy może zająć dużo czasu i być może nie potrzebujesz aż tylu kości. Możesz użyć `set_farm_size()`, aby zmienić rozmiar farmy na coś bardziej wygodnego.</spoiler>
+Pełne przemierzenie bardzo dużej farmy może zająć dużo czasu i być może nie potrzebujesz aż tylu kości. Możesz użyć `set_world_size()`, aby zmienić rozmiar farmy na coś bardziej wygodnego.</spoiler>

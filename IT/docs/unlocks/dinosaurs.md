@@ -42,4 +42,4 @@ for i in range(100):
 Hai solo un cappello da dinosauro, quindi solo un drone può indossarlo.
 
 <spoiler=mostra suggerimento 1>Se continui a muoverti lungo lo stesso percorso che copre l'intero campo, puoi facilmente ottenere un serpente che copre l'intero campo ogni volta. Non è molto efficiente, ma funziona.
-Attraversare completamente una fattoria molto grande può richiedere molto tempo e potresti non aver bisogno di così tante ossa. Sentiti libero di usare `set_farm_size()` per cambiare la dimensione della fattoria in qualcosa di più conveniente.</spoiler>
+Attraversare completamente una fattoria molto grande può richiedere molto tempo e potresti non aver bisogno di così tante ossa. Sentiti libero di usare `set_world_size()` per cambiare la dimensione della fattoria in qualcosa di più conveniente.</spoiler>

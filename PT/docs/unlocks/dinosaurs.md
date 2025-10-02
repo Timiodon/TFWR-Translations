@@ -42,4 +42,4 @@ for i in range(100):
 Você só tem um chapéu de dinossauro, então apenas um drone pode usá-lo.
 
 <spoiler=show hint 1>Se você continuar se movendo pelo mesmo caminho que cobre todo o campo, poderá facilmente obter uma cobra que cubra todo o campo todas as vezes. Não é muito eficiente, mas funciona.
-Percorrer completamente uma fazenda muito grande pode levar muito tempo e você pode não precisar de tantos ossos. Sinta-se à vontade para usar `set_farm_size()` para alterar o tamanho da fazenda para algo mais conveniente.</spoiler>
+Percorrer completamente uma fazenda muito grande pode levar muito tempo e você pode não precisar de tantos ossos. Sinta-se à vontade para usar `set_world_size()` para alterar o tamanho da fazenda para algo mais conveniente.</spoiler>
