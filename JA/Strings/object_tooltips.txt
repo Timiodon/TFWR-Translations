@@ -8,16 +8,16 @@
 @object_descr_bush = `Items.Wood` をドロップする小さな茂み。
 @object_descr_tree = 木は茂みよりも多くの木材をドロップします。隣に他の木が育っていると成長に時間がかかります。
 @object_descr_carrot = ニンジン！
-@object_descr_pumpkin = カボチャは、完全に成長した他のカボチャの隣にあると一緒に成長します。約5分の1のカボチャは成長時に枯れてしまいます。
+@object_descr_pumpkin = カボチャは、完全に成長した他のカボチャの隣にあると、一緒に成長します。約5分の1のカボチャは成長時に枯れてしまいます。
 @object_descr_dead_pumpkin = 5分の1のカボチャは成長時に枯れ、枯れたカボチャを残します。枯れたカボチャは役に立たず、新しいものが植えられると消えます。
 @object_descr_sunflower = ヒマワリは太陽の力を集めます。収穫すると `Items.Power` を得られます。
 最大数の花びらを持つヒマワリを収穫すると、ボーナスパワーを得られます。
-@object_descr_cactus = サボテンは10種類のサイズがあります。収穫すると、「ソート」された隣接するサボテンも収穫されます。
+@object_descr_cactus = サボテンには10種類のサイズがあります。収穫すると、「ソート」された隣接するサボテンも収穫されます。
 @object_descr_hedge = 迷路の一部。
-@object_descr_treasure = 隠されている迷路の一辺の長さに等しいゴールドが入った宝物。植物のように収穫できます。
+@object_descr_treasure = ゴールドを含む宝物で、そのゴールドは宝物が隠された迷路の一辺の長さに等しいです。植物のように収穫できます。
 @object_descr_dinosaur = 恐竜の帽子の尻尾の一部。
 @object_descr_grassland = デフォルトの地面。草が自動的に生えてきます。
-@object_descr_soil = 「`till()`」を呼び出すと地面が土に変わります。もう一度「`till()`」を呼び出すと、草原に戻ります。
+@object_descr_soil = `till()`を呼び出すと地面が土に変わります。もう一度`till()`を呼び出すと、草原に戻ります。
 @runtime_entity_tooltip = 収穫すると入手できるもの：
 {{itemblock tooltip}}
 @runtime_growable_tooltip = 合計成長時間：{0}秒

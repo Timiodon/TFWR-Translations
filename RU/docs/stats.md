@@ -1,5 +1,5 @@
 # Статистика
 
-За последние 60 секунд вы собрали: {{itemblock stats_sum}}
+За последние 60 секунд собрано: {{itemblock stats_sum}}
 
-Ваш личный рекорд по каждому ресурсу: {{itemblock stats_best}}
+Твой рекорд по каждому ресурсу: {{itemblock stats_best}}

@@ -6,7 +6,7 @@
 @unlock_descr_plant = 植え付けをアンロックします。
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = 単純なwhileループをアンロックします。
+@unlock_descr_loops = 簡単なwhileループをアンロックします。
 
 `while True:
     harvest()`
@@ -65,7 +65,7 @@ for item in cost:
     harvest()`
 @unlock_descr_debug = プログラムのデバッグに役立つツール。
 
-`print("hi")`
+`print("こんにちは")`
 @unlock_descr_debug2 = 実行を一時的に遅くし、農場を小さくする関数。
 
 `set_world_size(3)
@@ -80,7 +80,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = ヒマワリとパワー。
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = 最速タイムを競うリーダーボードに参加します。
+@unlock_descr_leaderboard = 最速タイムを競うランキングに参加します。
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
 @unlock_descr_dicts = 辞書とセットへのアクセスを取得します。
@@ -103,14 +103,14 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = 多くのドローンを持つはるかに大きな農場。
+@unlock_descr_megafarm = 多くのドローンを備えたはるかに大きな農場。
 
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = 農場を拡大します。これにより農場もクリアされます。
 @multi_unlock_descr_carrots = ニンジンの収穫量とコストを増やします。
 @multi_unlock_descr_trees = 茂みや木の収穫量を増やします。
 @multi_unlock_descr_pumpkins = カボチャの収穫量とコストを増やします。
-@multi_unlock_descr_mazes = 宝箱のゴールドと迷路を生成するために必要な奇妙な物質の量を増やします。
+@multi_unlock_descr_mazes = 宝箱のゴールドと、迷路を生成するために必要な奇妙な物質の量を増やします。
 @multi_unlock_descr_sunflowers = ヒマワリから得られるパワーを増やします。
 @multi_unlock_descr_cactus = サボテンの収穫量とコストを増やします。
 @multi_unlock_descr_dinosaur = 恐竜の収穫量とコストを増やします。
@@ -132,7 +132,7 @@ other_file.function()`
 @grass = 草
 @hats = 帽子
 @import = インポート
-@leaderboard = リーダーボード
+@leaderboard = ランキング
 @lists = リスト
 @loops = ループ
 @mazes = 迷路

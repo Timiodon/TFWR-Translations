@@ -1,14 +1,14 @@
-@warning_not_enough_items_to_trade = {0} を購入しようとしましたが、必要なリソースがありませんでした。
+@warning_not_enough_items_to_trade = {0} を購入しようとしましたが、必要な資源がありませんでした。
 @warning_no_space_to_plant = {0} を植えようとしましたが、すでに何かがありました。
 @warning_cant_plant_on_ground = {1} に {0} を植えることはできません。
 @warning_missing_seed = {0} を植えるために必要なアイテムがありませんでした。
-@warning_no_item_to_use = {0} を使おうとしましたが、足りませんでした。
-@warning_failed_swap_wrap = 農場の境界を越えて交換しようとしました。それは許可されていません。
-@warning_failed_swap_unswappable = 交換できない {0} を交換しようとしました。
-@warning_weird_substance_not_divisible = 迷路を作るのに必要な数と正確に一致しない数の奇妙な物質を使用しました。迷路をアップグレードするにつれて必要な奇妙な物質の量が増えることを忘れないでください。
+@warning_no_item_to_use = {0} を使おうとしましたが、量が足りませんでした。
+@warning_failed_swap_wrap = 農場の境界を越えて入れ替えをしようとしましたが、これは許可されていません。
+@warning_failed_swap_unswappable = {0} を入れ替えようとしましたが、これは入れ替えられません。
+@warning_weird_substance_not_divisible = 迷路生成の必要数とは多少異なる数の奇妙な物質を使用しました。迷路をアップグレードするにつれて、奇妙な物質の必要量が増えることを忘れないでください。
 
-フルサイズの迷路を生成するには、次のようにします：
+フルサイズの迷路を生成するには、次のようにします。
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
-@warning_recursive_simulation = シミュレーションとリーダーボードの実行は、他のシミュレーションやリーダーボードの実行内から開始することはできません。
+@warning_recursive_simulation = シミュレーションとランキングの実行は、他のシミュレーションやランキングの実行内から開始することはできません。

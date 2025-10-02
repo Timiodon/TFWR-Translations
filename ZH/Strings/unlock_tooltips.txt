@@ -6,15 +6,15 @@
 @unlock_descr_plant = 解锁种植功能。
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = 解锁一个简单的 while 循环。
+@unlock_descr_loops = 解锁简单的 while 循环。
 
 `while True:
     harvest()`
-@unlock_descr_hats = 为你的无人机准备的帽子。
+@unlock_descr_hats = 给无人机戴的帽子。
 
 `change_hat(Hats.Green_Hat)`
 @unlock_descr_the_farmers_remains = ?????????
-@unlock_descr_senses = 无人机可以看到它下面有什么以及它在哪里。
+@unlock_descr_senses = 无人机可以看到下方有什么以及自己所在的位置。
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
@@ -37,7 +37,7 @@ plant(next_plant)`
     do_a_flip()
 
 do_two_flips()`
-@unlock_descr_watering = 给植物浇水让它们长得更快。
+@unlock_descr_watering = 给植物浇水，加快其生长速度。
 
 `use_item(Items.Water)`
 @unlock_descr_carrots = 耕地并种植胡萝卜。
@@ -56,17 +56,17 @@ for p in plants:
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = 让植物瞬间生长。
+@unlock_descr_fertilizer = 让植物立即生长。
 
 `use_item(Items.Fertilizer)`
-@unlock_descr_mazes = 一个中间有宝藏的迷宫。
+@unlock_descr_mazes = 中间有宝藏的迷宫。
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
 @unlock_descr_debug = 帮助调试程序的工具。
 
-`print("hi")`
-@unlock_descr_debug2 = 用于暂时减慢执行速度和缩小农场的功能。
+`print("嗨")`
+@unlock_descr_debug2 = 用于暂时减慢执行速度和缩小农场的函数。
 
 `set_world_size(3)
 set_execution_speed(1)`
@@ -92,7 +92,7 @@ set_execution_speed(1)`
 @unlock_descr_cactus = 仙人掌！
 
 `plant(Entities.Cactus)`
-@unlock_descr_dinosaurs = 雄伟的远古生物。
+@unlock_descr_dinosaurs = 奇伟的远古生物。
 @unlock_descr_simulation = 在更快和可复现的条件下进行测试。
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
@@ -106,7 +106,7 @@ other_file.function()`
 @unlock_descr_megafarm = 拥有许多无人机的更大农场。
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = 扩大农场。这也会清空农场。
+@multi_unlock_descr_expand = 扩大农场，同时还会清空农场。
 @multi_unlock_descr_carrots = 增加胡萝卜的产量和成本。
 @multi_unlock_descr_trees = 增加灌木和树木的产量。
 @multi_unlock_descr_pumpkins = 增加南瓜的产量和成本。
@@ -114,7 +114,7 @@ other_file.function()`
 @multi_unlock_descr_sunflowers = 增加从向日葵中获得的能量。
 @multi_unlock_descr_cactus = 增加仙人掌的产量和成本。
 @multi_unlock_descr_dinosaur = 增加恐龙的产量和成本。
-@multi_unlock_descr_polyculture = 增加混作的产量倍率。
+@multi_unlock_descr_polyculture = 增加混作的产量乘数。
 @multi_unlock_descr_watering = 获得更多水。
 @multi_unlock_descr_fertilizer = 获得更多肥料。
 @multi_unlock_descr_megafarm = 进一步增加农场大小和无人机数量。

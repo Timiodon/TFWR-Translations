@@ -1,89 +1,89 @@
-@unlock_tooltip_template_cost = ### Стоимость разблокировки {{{{itemblock cost unlock {0}}}}}
+@unlock_tooltip_template_cost = ### Стоимость разблокировки: {{{{itemblock cost unlock {0}}}}}
 @unlock_descr_trees = Разблокирует деревья.
 
 `plant(Entities.Trees)`
-@unlock_descr_speed = Увеличивает скорость как дрона, так и выполнения кода.
-@unlock_descr_plant = Разблокирует посадку.
+@unlock_descr_speed = Увеличивает скорость дрона и выполнения кода.
+@unlock_descr_plant = Разблокирует посадку растений.
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = Разблокирует простой цикл while.
+@unlock_descr_loops = Разблокирует простой цикл `while`.
 
 `while True:
     harvest()`
-@unlock_descr_hats = Шляпы для вашего дрона.
+@unlock_descr_hats = Шляпы для дрона.
 
 `change_hat(Hats.Green_Hat)`
 @unlock_descr_the_farmers_remains = ?????????
-@unlock_descr_senses = Дрон может видеть, что под ним и где он находится.
+@unlock_descr_senses = Дрон понимает, что под ним и где он находится.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
     plant(Entities.Bush)`
-@unlock_descr_expand = Расширяет фермерские угодья и разблокирует движение.
-@unlock_descr_operators = Арифметические, сравнительные и логические операторы.
+@unlock_descr_expand = Расширяет ферму и разблокирует движение.
+@unlock_descr_operators = Арифметические, логические операторы и операторы сравнения.
 
 `if not can_harvest() and (1 + 1 == 4 / 2):
     do_a_flip()`
 @unlock_descr_pumpkin = Тыквы!
 
 `plant(Entities.Pumpkin)`
-@unlock_descr_variables = Присваивайте значения переменным.
+@unlock_descr_variables = Возможность присваивать значения переменным.
 
 `next_plant = Entities.Bush
 plant(next_plant)`
-@unlock_descr_functions = Определяйте свои собственные функции.
+@unlock_descr_functions = Возможность определять собственные функции.
 
 `def do_two_flips():
     do_a_flip()
     do_a_flip()
 
 do_two_flips()`
-@unlock_descr_watering = Поливайте растения, чтобы они росли быстрее.
+@unlock_descr_watering = Возможность поливать растения, чтобы они росли быстрее.
 
 `use_item(Items.Water)`
-@unlock_descr_carrots = Вспахивайте почву и сажайте морковь.
+@unlock_descr_carrots = Возможность делать грядки и сажать морковь.
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_lists = Используйте списки для хранения множества значений.
+@unlock_descr_lists = Возможность использовать списки для хранения множества значений.
 
 `plants = [Entities.Hay, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
     move(North)`
-@unlock_descr_costs = Позволяет получить доступ к стоимости вещей.
+@unlock_descr_costs = Возможность узнавать стоимость вещей.
 
 `cost = get_cost(Entities.Carrot)
 for item in cost:
 	amount_needed = cost[item]`
-@unlock_descr_fertilizer = Мгновенно выращивайте растения.
+@unlock_descr_fertilizer = Возможность мгновенно выращивать растения.
 
 `use_item(Items.Fertilizer)`
-@unlock_descr_mazes = Лабиринт с сокровищем в центре.
+@unlock_descr_mazes = Лабиринт с кладом в центре.
 
 `if get_entity_type() == Entities.Treasure:
     harvest()`
-@unlock_descr_debug = Инструменты для помощи в отладке программ.
+@unlock_descr_debug = Инструменты для отладки программ.
 
-`print("hi")`
-@unlock_descr_debug2 = Функции для временного замедления выполнения и уменьшения размера фермы.
+`print("привет")`
+@unlock_descr_debug2 = Функции, позволяющие на время замедлить выполнение кода и уменьшить размер фермы.
 
 `set_world_size(3)
 set_execution_speed(1)`
 @unlock_descr_grass = Увеличивает урожай травы.
-@unlock_descr_auto_unlock = Автоматически разблокируйте вещи.
+@unlock_descr_auto_unlock = Возможность автоматически разблокировать вещи.
 
 `unlock(Unlocks.Megafarm)`
-@unlock_descr_polyculture = Используйте совместные посадки для увеличения урожайности.
+@unlock_descr_polyculture = Возможность сажать компаньонов для повышения урожая.
 
 `plant_type, (x, y) = get_companion()`
-@unlock_descr_sunflowers = Подсолнухи и Энергия.
+@unlock_descr_sunflowers = Подсолнухи и энергия.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Присоединяйтесь к таблице лидеров за лучшие времена.
+@unlock_descr_leaderboard = Разблокирует рейтинг лучших результатов по времени.
 
 `leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
-@unlock_descr_dicts = Получите доступ к словарям и множествам.
+@unlock_descr_dicts = Возможность пользоваться словарями и множествами.
 
 `right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = Разблокирует функции `min()`, `max()`, `abs()` и `random()`.
@@ -93,61 +93,61 @@ set_execution_speed(1)`
 
 `plant(Entities.Cactus)`
 @unlock_descr_dinosaurs = Величественные древние существа.
-@unlock_descr_simulation = Тестируйте быстрее и в воспроизводимых условиях.
+@unlock_descr_simulation = Возможность тестировать код быстрее и в воспроизводимых условиях.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@unlock_descr_timing = Время пришло!
+@unlock_descr_timing = Самое время!
 
 `passed_time = get_time()`
-@unlock_descr_import = Импортируйте вещи из других файлов.
+@unlock_descr_import = Возможность импортировать вещи из других файлов.
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = Гораздо большая ферма с множеством дронов.
+@unlock_descr_megafarm = Ферма с большей площадью и множеством дронов.
 
 `spawn_drone(file_to_run)`
-@multi_unlock_descr_expand = Расширяет ферму. Это также очищает ферму.
-@multi_unlock_descr_carrots = Увеличивает урожайность и стоимость моркови.
-@multi_unlock_descr_trees = Увеличивает урожайность кустов и деревьев.
-@multi_unlock_descr_pumpkins = Увеличивает урожайность и стоимость тыкв.
-@multi_unlock_descr_mazes = Увеличивает золото в сундуках с сокровищами и количество странной субстанции, необходимой для создания лабиринта.
+@multi_unlock_descr_expand = Расширяет ферму, а также очищает ее.
+@multi_unlock_descr_carrots = Повышает урожай и стоимость моркови.
+@multi_unlock_descr_trees = Повышает урожай кустов и деревьев.
+@multi_unlock_descr_pumpkins = Повышает урожай и стоимость тыкв.
+@multi_unlock_descr_mazes = Увеличивает количество золота в кладах и странного вещества, необходимого для создания лабиринта.
 @multi_unlock_descr_sunflowers = Увеличивает количество энергии, получаемой от подсолнухов.
-@multi_unlock_descr_cactus = Увеличивает урожайность и стоимость кактуса.
-@multi_unlock_descr_dinosaur = Увеличивает урожайность и стоимость динозавров.
-@multi_unlock_descr_polyculture = Увеличивает множитель урожайности от поликультуры.
-@multi_unlock_descr_watering = Получайте больше воды.
-@multi_unlock_descr_fertilizer = Получайте больше удобрений.
+@multi_unlock_descr_cactus = Повышает урожай и стоимость кактуса.
+@multi_unlock_descr_dinosaur = Повышает производство и стоимость динозавров.
+@multi_unlock_descr_polyculture = Увеличивает множитель урожая поликультуры.
+@multi_unlock_descr_watering = Возможность получать больше воды.
+@multi_unlock_descr_fertilizer = Возможность получать больше удобрений.
 @multi_unlock_descr_megafarm = Дальнейшее увеличение размера фермы и количества дронов.
 @auto_unlock = Авторазблокировка
 @cactus = Кактус
 @carrots = Морковь
 @costs = Стоимость
 @debug = Отладка
-@debug_2 = Отладка_2
+@debug_2 = Отладка 2
 @dictionaries = Словари
 @dinosaurs = Динозавры
-@expand = Расширить
+@expand = Расширение
 @fertilizer = Удобрение
 @functions = Функции
 @grass = Трава
 @hats = Шляпы
 @import = Импорт
-@leaderboard = Таблица лидеров
+@leaderboard = Рейтинг
 @lists = Списки
 @loops = Циклы
 @mazes = Лабиринты
 @megafarm = Мегаферма
 @operators = Операторы
-@plant = Растение
+@plant = Посадка
 @polyculture = Поликультура
 @pumpkins = Тыквы
 @senses = Датчики
 @simulation = Симуляция
 @speed = Скорость
 @sunflowers = Подсолнухи
-@timing = Тайминг
+@timing = Время
 @trees = Деревья
 @the_farmers_remains = ?
-@utilities = Утилиты
+@utilities = Инструменты
 @variables = Переменные
 @watering = Полив

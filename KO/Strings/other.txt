@@ -1,6 +1,6 @@
 @word_number = number
 @word_direction = direction
 @run_cancelled = 실행 실패
-@average_text = {0} 완료 ({2:F1}%)
+@average_text = {0} 완료({2:F1}%)
 {1}
-@unlocked_in = 더 관련된 정보는 다음을 참조하세요: [{0}]({1})
+@unlocked_in = 자세한 관련 정보는 다음을 참조하세요. [{0}]({1})

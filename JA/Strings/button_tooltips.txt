@@ -1,4 +1,4 @@
-@button_tooltip_load = 他のセーブデータをロードするか、新しく作ります。
+@button_tooltip_load = 他のセーブデータをロードするか、新しく作成します。
 @button_tooltip_save = ゲームをセーブします。
 @button_tooltip_options = 設定メニューを開きます。
 @button_tooltip_discord = Discordに参加して、他のプレイヤーや開発者とチャットしたり、バグを報告したり、助けを求めたりできます。
@@ -17,7 +17,7 @@
 @button_tooltip_next_search = 次の一致項目に移動します。
 @button_tooltip_previous_search = 前の一致項目に移動します。
 @button_tooltip_close_search = 検索メニューを閉じます。
-@warning_icon_tooltip = あなたのコードで警告が発生しました。アイコンをクリックして、アウトプットウィンドウで詳細を確認してください。
+@warning_icon_tooltip = あなたのコードで警告が発生しました。アイコンをクリックして、出力ウィンドウで詳細を確認してください。
 @option_tooltip_graphics = 影、アンビエントオクルージョン、ブルームなど、様々なレンダーパイプライン設定に影響します。
 @option_tooltip_vfx_limit = 1秒あたりに再生できるビジュアルエフェクトの数を制限します。
 @option_tooltip_volume = すべてのオーディオの音量を調整します。
@@ -29,7 +29,7 @@
 @option_tooltip_volume_damping = ドローンのスピードが速いときに耳が爆発しないように、同時に再生される効果音ごとに音量がこの係数で乗算されます。
 @option_tooltip_sfx_limit = 1秒あたりに再生できるサウンドの数を制限します。
 @option_tooltip_autosave = 有効にすると、30秒ごとにゲームを自動でセーブします。ファイルウォッチャーが有効な場合は有効にできません。
-@option_tooltip_file_watcher = セーブフォルダー内のコードファイルに加えられた変更を自動的に適用し、外部のコードエディターを使用できるようにします。オートセーブが有効な場合は有効にできません。
+@option_tooltip_file_watcher = セーブフォルダー内のコードファイルに加えられた変更を自動的に適用し、外部のコードエディターを使用できるようにします。自動セーブが有効な場合は有効にできません。
 @option_tooltip_frames = ゲームのfpsを制限します。Vsyncはfpsをモニターのリフレッシュレートに同期させます。
 @option_tooltip_viewport_sliding = ドラッグして離したときのビューポートのスライドを無効にします。
 @option_tooltip_UI_size = UI要素のサイズを変更します。
@@ -41,8 +41,8 @@
 @option_tooltip_code_highlights = コード実行中の点滅するハイライトをオフにします。
 @option_tooltip_resolution = 画面の解像度を変更します。
 @option_tooltip_increment_number_effect = インベントリで数字が変わるときに再生されるエフェクトを無効にします。
-@keybind_tooltip_indent_selection = 選択したすべての行にインデントを追加します。これが機能するには、文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
-@keybind_tooltip_unindent_selection = 選択したすべての行からインデントを削除します。これが機能するには、文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
+@keybind_tooltip_indent_selection = 選択したすべての行にインデントを追加します。動作させるには、これが文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
+@keybind_tooltip_unindent_selection = 選択したすべての行からインデントを削除します。動作させるには、これが文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
 @keybind_tooltip_menu = メインメニューを開閉します。
 @keybind_tooltip_move_down = カメラを下に移動します。
 @keybind_tooltip_move_left = カメラを左に移動します。
