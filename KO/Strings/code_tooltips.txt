@@ -61,13 +61,13 @@ for i in range(10, 0, -1):
 예시:
 `move(North)`
 @code_tooltip_can_move = `can_move(direction)`
-Checks if the drone can move in the specified `direction`.
+드론이 지정된 `direction`으로 이동할 수 있는지 확인합니다.
 
-returns `True` if the drone can move, `False` otherwise.
+드론이 움직일 수 있으면 `True`를, 그렇지 않으면 `False`를 반환합니다.
 
-takes `1` tick to execute.
+실행하는 데 `1`틱이 필요합니다.
 
-example:
+예시:
 `if can_move(North):
     move(North)`
 @code_tooltip_swap = `swap(direction)`

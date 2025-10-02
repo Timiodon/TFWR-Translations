@@ -60,7 +60,7 @@ dauert `200` Ticks, wenn sich die Drohne bewegt hat, andernfalls `1` Tick.
 
 Beispiel:
 `move(North)`
-@code_tooltip_can_move() = `can_move(direction)`
+@code_tooltip_can_move = `can_move(direction)`
 Überprüft, ob sich die Drohne in die angegebene `direction` bewegen kann.
 
 gibt `True` zurück, wenn sich die Drohne bewegen kann, andernfalls `False`.

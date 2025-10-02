@@ -61,13 +61,13 @@ for i in range(10, 0, -1):
 示例：
 `move(North)`
 @code_tooltip_can_move = `can_move(direction)`
-Checks if the drone can move in the specified `direction`.
+检查无人机是否可以向指定 `direction` 移动。
 
-returns `True` if the drone can move, `False` otherwise.
+如果无人机可以移动，则返回 `True`，否则返回 `False`。
 
-takes `1` tick to execute.
+需要 `1` tick 执行。
 
-example:
+示例：
 `if can_move(North):
     move(North)`
 @code_tooltip_swap = `swap(direction)`

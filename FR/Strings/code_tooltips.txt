@@ -60,7 +60,7 @@ prend `200` ticks pour s'exécuter si le drone s'est déplacé, `1` tick sinon.
 
 exemple :
 `move(North)`
-@code_tooltip_can_move() = `can_move(direction)`
+@code_tooltip_can_move = `can_move(direction)`
 Vérifie si le drone peut se déplacer dans la `direction` spécifiée.
 
 renvoie `True` si le drone peut se déplacer, `False` sinon.

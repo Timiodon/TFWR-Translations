@@ -60,7 +60,7 @@ zajmuje `200` ticków, jeśli dron się poruszył, w przeciwnym razie `1` tick.
 
 przykład:
 `move(North)`
-@code_tooltip_can_move() = `can_move(direction)`
+@code_tooltip_can_move = `can_move(direction)`
 Sprawdza, czy dron może poruszyć się w określonym kierunku (`direction`).
 
 zwraca `True`, jeśli dron może się poruszyć, w przeciwnym razie `False`.

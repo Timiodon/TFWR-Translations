@@ -60,7 +60,7 @@ richiede `200` tick per essere eseguita se il drone si è mosso, `1` tick altrim
 
 esempio:
 `move(North)`
-@code_tooltip_can_move() = `can_move(direction)`
+@code_tooltip_can_move = `can_move(direction)`
 Controlla se il drone può muoversi nella `direzione` specificata.
 
 restituisce `True` se il drone può muoversi, `False` altrimenti.

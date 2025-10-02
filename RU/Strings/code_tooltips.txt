@@ -61,13 +61,13 @@ for i in range(10, 0, -1):
 Пример:
 `move(North)`
 @code_tooltip_can_move = `can_move(direction)`
-Checks if the drone can move in the specified `direction`.
+Проверяет, может ли дрон двигаться в указанном направлении `direction`.
 
-returns `True` if the drone can move, `False` otherwise.
+Возвращает `True`, если дрон может двигаться, в противном случае — `False`.
 
-takes `1` tick to execute.
+Выполнение занимает `1` тик.
 
-example:
+Пример:
 `if can_move(North):
     move(North)`
 @code_tooltip_swap = `swap(direction)`
