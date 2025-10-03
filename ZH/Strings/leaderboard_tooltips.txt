@@ -1,5 +1,5 @@
 @lb_descr_fastest_reset = 使整个游戏完全自动化。
-@lb_descr_maze = 收获 300000 黄金。
+@lb_descr_maze = 收获 300000 金币。
 @lb_descr_dinosaur = 收获 98010 骨头。
 @lb_descr_cactus = 收获 100000 仙人掌。
 @lb_descr_sunflowers = 收获 100000 能量。

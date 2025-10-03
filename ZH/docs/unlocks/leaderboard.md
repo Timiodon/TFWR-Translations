@@ -35,7 +35,7 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
 ## 迷宫
-从解锁全部内容开始，尽快收获 `300000` 份黄金。这正好是破解一个迷宫 `300` 次所能获得的黄金数量。
+从解锁全部内容开始，尽快收获 `300000` 份金币。这正好是破解一个迷宫 `300` 次所能获得的金币数量。
 
 函数调用：
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
@@ -81,4 +81,4 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 成功条件：
 `num_items(resource) >= 100000`
 
-`Leaderboards.Polyculture` 要求收获 `100000` 份所有三种混作资源。
+`Leaderboards.Polyculture` 要求收获 `100000` 份所有三种混合种植资源。

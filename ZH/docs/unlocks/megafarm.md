@@ -47,7 +47,7 @@ while True:
 
 for_all(harvest)`
 
-一个特别有用的模式是，如果有可用的无人机就生成一架，没有就自己做。
+一个特别有用的模式是，如果有可用的无人机就生成一架，没有就自己执行。
 
 `if not spawn_drone(task):
 	task()`

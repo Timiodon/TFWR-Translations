@@ -8,7 +8,7 @@
 @item_descr_power = 通过收获向日葵获得。无人机会自动使用它来以两倍的速度移动。
 @item_descr_pumpkin = 通过收获南瓜获得。
 @item_descr_water = 通过调用 `use_item(Items.Water)` 来给地块浇水。
-@item_descr_wood = 从灌木和树木中获得。
+@item_descr_wood = 从灌木和树中获得。
 @item_descr_cactus = 通过收获已排序的仙人掌获得。
 @item_descr_cactus_seed = 此物品已从游戏中移除。
 @item_descr_bone = 一种远古生物的骨头。
