@@ -1,5 +1,5 @@
 @unlock_tooltip_template_cost = ### 解锁成本 {{{{itemblock cost unlock {0}}}}}
-@unlock_descr_trees = 解锁树木。
+@unlock_descr_trees = 解锁树。
 
 `plant(Entities.Trees)`
 @unlock_descr_speed = 提高无人机和代码执行的速度。
@@ -108,13 +108,13 @@ other_file.function()`
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = 扩大农场，同时还会清空农场。
 @multi_unlock_descr_carrots = 增加胡萝卜的产量和成本。
-@multi_unlock_descr_trees = 增加灌木和树木的产量。
+@multi_unlock_descr_trees = 增加灌木和树的产量。
 @multi_unlock_descr_pumpkins = 增加南瓜的产量和成本。
-@multi_unlock_descr_mazes = 增加宝箱中的黄金和生成迷宫所需的奇异物质数量。
+@multi_unlock_descr_mazes = 增加宝箱中的金币和生成迷宫所需的奇异物质数量。
 @multi_unlock_descr_sunflowers = 增加从向日葵中获得的能量。
 @multi_unlock_descr_cactus = 增加仙人掌的产量和成本。
 @multi_unlock_descr_dinosaur = 增加恐龙的产量和成本。
-@multi_unlock_descr_polyculture = 增加混作的产量乘数。
+@multi_unlock_descr_polyculture = 增加混合种植的产量乘数。
 @multi_unlock_descr_watering = 获得更多水。
 @multi_unlock_descr_fertilizer = 获得更多肥料。
 @multi_unlock_descr_megafarm = 进一步增加农场大小和无人机数量。
@@ -139,14 +139,14 @@ other_file.function()`
 @megafarm = 巨型农场
 @operators = 运算符
 @plant = 种植
-@polyculture = 混作
+@polyculture = 混合种植
 @pumpkins = 南瓜
 @senses = 感官
 @simulation = 模拟
 @speed = 速度
 @sunflowers = 向日葵
 @timing = 计时
-@trees = 树木
+@trees = 树
 @the_farmers_remains = ?
 @utilities = 实用工具
 @variables = 变量
