@@ -1,6 +1,15 @@
 @word_number = número
 @word_direction = direção
 @run_cancelled = Falha na Execução
-@average_text = {0} Concluído ({2:F1}%)
+@average_text = {0} Corridas Concluídas ({2:F1}%)
+{1}
+@average_text2 = {0} Corridas Concluídas
 {1}
 @unlocked_in = Para mais informações relacionadas, veja: [{0}]({1})
+@table_of_contents_section_general_info = Informações Gerais
+@table_of_contents_section_programming = Programação
+@table_of_contents_section_unlocks = Desbloqueios
+@table_of_contents_section_builtins = Funções Nativas
+@table_of_contents_section_items = Itens
+@table_of_contents_section_entities = Entidades
+@table_of_contents_section_grounds = Solos

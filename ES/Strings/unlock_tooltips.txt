@@ -80,9 +80,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = Girasoles y Energía.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Únete a la tabla de clasificación para los tiempos más rápidos.
-
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+@unlock_descr_leaderboard = Únete a la tabla de clasificación para los tiempos más rápidos.\n\n`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = Obtén acceso a diccionarios y conjuntos.
 
 `right_of = {North:East, East:South, South:West, West:North}`

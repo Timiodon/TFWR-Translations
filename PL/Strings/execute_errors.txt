@@ -33,6 +33,9 @@ Tutaj range(5) zwraca sekwencję `0,1,2,3,4`.
 @error_missing_import = Zmienna {0} nigdy nie została zdefiniowana. Wygląda na to, że jest zdefiniowana w pliku {1}. Czy zapomniałeś go zaimportować? 
 Jeśli go zaimportowałeś, prawdopodobnie masz cykl importu (zobacz stronę dokumentacji importu).
 @error_missing_import_before_unlock = Zmienna {0} nigdy nie została zdefiniowana. Wygląda na to, że jest zdefiniowana w pliku {1}. Musisz odblokować importy, aby móc importować rzeczy z innych plików.
+@error_missing_module_access = Zmienna {0} nigdy nie została zdefiniowana. Wygląda na to, że jest zdefiniowana w pliku {1}, który został zaimportowany. Aby jej użyć, musisz odwołać się do niej poprzez nazwę modułu, w ten sposób:
+
+{1}`.`{0}
 @error_call_before_def = Zmienna {0} nie jest zdefiniowana. Wygląda na to, że jest zdefiniowana gdzieś w tym pliku, ale definicja nie została jeszcze wykonana. Funkcje można wywoływać tylko po instrukcji `def`.
 @error_not_a_function = Próbujesz wywołać coś, co nie jest funkcją. Częstym błędem, który może to powodować, jest posiadanie zmiennej o tej samej nazwie co funkcja.
 @error_invalid_const = {0} nie istnieje.

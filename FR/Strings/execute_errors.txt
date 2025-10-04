@@ -33,6 +33,9 @@ Ici range(5) renvoie la séquence `0,1,2,3,4`.
 @error_missing_import = {0} n'a jamais été défini. Il semble être défini dans le fichier {1}. As-tu oublié de l'importer ? 
 Si tu l'as importé, tu as probablement un cycle d'importation (voir la page de documentation sur l'importation).
 @error_missing_import_before_unlock = {0} n'a jamais été défini. Il semble être défini dans le fichier {1}. Tu dois débloquer les importations pour pouvoir importer des choses depuis d'autres fichiers.
+@error_missing_module_access = {0} n'a jamais été défini. Il semble pourtant être défini dans le fichier {1} que tu as importé mais tu ne l'utilises pas. Tu dois y accéder en utilisant le nom du module, comme ceci :
+
+{1}`.`{0}
 @error_call_before_def = {0} n'est pas défini. Il semble être défini quelque part dans ce fichier, mais la définition n'a pas encore été exécutée. Les fonctions ne peuvent être appelées qu'après l'instruction `def`.
 @error_not_a_function = Tu as essayé d'appeler quelque chose qui n'est pas une fonction. Une erreur courante qui peut causer cela est d'avoir une variable avec le même nom que la fonction.
 @error_invalid_const = {0} n'existe pas.

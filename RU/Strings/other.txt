@@ -3,4 +3,13 @@
 @run_cancelled = Не удалось запустить
 @average_text = Завершено: {0} ({2:F1}%)
 {1}
+@average_text2 = Завершено: {0}
+{1}
 @unlocked_in = Больше информации см. здесь: [{0}]({1})
+@table_of_contents_section_general_info = Общая информация
+@table_of_contents_section_programming = Программирование
+@table_of_contents_section_unlocks = Технологии
+@table_of_contents_section_builtins = Встроенные функции
+@table_of_contents_section_items = Предметы
+@table_of_contents_section_entities = Сущности
+@table_of_contents_section_grounds = Типы земли

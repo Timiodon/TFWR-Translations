@@ -3,4 +3,13 @@
 @run_cancelled = 실행 실패
 @average_text = {0} 완료({2:F1}%)
 {1}
+@average_text2 = {0} 완료
+{1}
 @unlocked_in = 자세한 관련 정보는 다음을 참조하세요. [{0}]({1})
+@table_of_contents_section_general_info = 일반 정보
+@table_of_contents_section_programming = 프로그래밍
+@table_of_contents_section_unlocks = 해금
+@table_of_contents_section_builtins = 내장 함수
+@table_of_contents_section_items = 아이템
+@table_of_contents_section_entities = 개체
+@table_of_contents_section_grounds = 땅

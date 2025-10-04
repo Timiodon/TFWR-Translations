@@ -3,4 +3,13 @@
 @run_cancelled = Lauf fehlgeschlagen
 @average_text = {0} abgeschlossen ({2:F1}%)
 {1}
+@average_text2 = {0} abgeschlossen
+{1}
 @unlocked_in = Für weitere verwandte Informationen siehe: [{0}]({1})
+@table_of_contents_section_general_info = Allgemeine Infos
+@table_of_contents_section_programming = Programmierung
+@table_of_contents_section_unlocks = Freischaltungen
+@table_of_contents_section_builtins = Eingebaute Funktionen
+@table_of_contents_section_items = Items
+@table_of_contents_section_entities = Entities
+@table_of_contents_section_grounds = Böden

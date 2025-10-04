@@ -82,7 +82,7 @@ set_execution_speed(1)`
 `plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = 最速タイムを競うランキングに参加します。
 
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = 辞書とセットへのアクセスを取得します。
 
 `right_of = {North:East, East:South, South:West, West:North}`

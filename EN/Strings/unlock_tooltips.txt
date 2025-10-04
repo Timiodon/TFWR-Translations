@@ -80,9 +80,9 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = Sunflowers and Power.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Join the leaderboard for the fastest times.
+@unlock_descr_leaderboard = Enter the leaderboard for the fastest times.
 
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = Get access to dictionaries and sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`

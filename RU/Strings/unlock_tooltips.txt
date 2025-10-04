@@ -82,7 +82,7 @@ set_execution_speed(1)`
 `plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = Разблокирует рейтинг лучших результатов по времени.
 
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = Возможность пользоваться словарями и множествами.
 
 `right_of = {North:East, East:South, South:West, West:North}`

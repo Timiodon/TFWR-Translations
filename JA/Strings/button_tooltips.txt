@@ -17,6 +17,7 @@
 @button_tooltip_next_search = 次の一致項目に移動します。
 @button_tooltip_previous_search = 前の一致項目に移動します。
 @button_tooltip_close_search = 検索メニューを閉じます。
+@button_tooltip_open_unlock_menu = アンロックツリーを開きます。
 @warning_icon_tooltip = あなたのコードで警告が発生しました。アイコンをクリックして、出力ウィンドウで詳細を確認してください。
 @option_tooltip_graphics = 影、アンビエントオクルージョン、ブルームなど、様々なレンダーパイプライン設定に影響します。
 @option_tooltip_vfx_limit = 1秒あたりに再生できるビジュアルエフェクトの数を制限します。

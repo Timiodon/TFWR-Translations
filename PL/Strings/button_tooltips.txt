@@ -17,6 +17,7 @@
 @button_tooltip_next_search = Przejdź do następnego wyniku wyszukiwania.
 @button_tooltip_previous_search = Przejdź do poprzedniego wyniku wyszukiwania.
 @button_tooltip_close_search = Zamknij menu wyszukiwania.
+@button_tooltip_open_unlock_menu = Otwórz drzewko odblokowań.
 @warning_icon_tooltip = Twój kod wywołał ostrzeżenie. Kliknij ikonę, aby zobaczyć szczegóły w oknie wyjściowym.
 @option_tooltip_graphics = Wpływa na różne ustawienia potoku renderowania, takie jak cienie, okluzja otoczenia i bloom.
 @option_tooltip_vfx_limit = Ogranicza liczbę efektów wizualnych, które mogą być odtwarzane na sekundę.

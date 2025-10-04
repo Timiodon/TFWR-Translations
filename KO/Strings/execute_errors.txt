@@ -33,6 +33,9 @@
 @error_missing_import = {0}이(가) 정의된 적이 없습니다. {1} 파일에 정의된 것 같습니다. 혹시 import를 잊으셨나요? 
 import했다면, 아마 import 순환 참조가 있을 겁니다(import 문서 페이지 참조).
 @error_missing_import_before_unlock = {0}이(가) 정의된 적이 없습니다. {1} 파일에 정의된 것 같습니다. 다른 파일에서 무언가를 import하려면 import를 해금해야 합니다.
+@error_missing_module_access = {0}은(는) 정의되지 않았습니다. import하신 {1} 파일 안에 정의된 것으로 보입니다. 다음과 같이 모듈 이름을 통해 접근해야 합니다:
+
+{1}`.`{0}
 @error_call_before_def = {0}이(가) 정의되지 않았습니다. 이 파일 어딘가에 정의된 것 같지만, 아직 정의가 실행되지 않았습니다. 함수는 `def` 문장 뒤에만 호출할 수 있습니다.
 @error_not_a_function = 함수가 아닌 것을 호출하려고 했습니다. 흔한 실수 중 하나는 함수와 같은 이름의 변수를 갖는 것입니다.
 @error_invalid_const = {0}이(가) 존재하지 않습니다.

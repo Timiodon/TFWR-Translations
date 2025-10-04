@@ -17,6 +17,7 @@
 @button_tooltip_next_search = 前往下一个匹配的搜索词。
 @button_tooltip_previous_search = 前往上一个匹配的搜索词。
 @button_tooltip_close_search = 关闭搜索菜单。
+@button_tooltip_open_unlock_menu = 打开科技树。
 @warning_icon_tooltip = 你的代码触发了警告。点击图标在输出窗口中查看详情。
 @option_tooltip_graphics = 影响各种渲染管线设置，如阴影、环境光遮蔽和泛光。
 @option_tooltip_vfx_limit = 限制每秒可播放的视觉效果数量。

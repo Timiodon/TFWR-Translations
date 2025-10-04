@@ -3,4 +3,13 @@
 @run_cancelled = Uruchomienie nieudane
 @average_text = {0} Ukończono ({2:F1}%)
 {1}
+@average_text2 = {0} Ukończono
+{1}
 @unlocked_in = Więcej powiązanych informacji znajdziesz w: [{0}]({1})
+@table_of_contents_section_general_info = Informacje ogólne
+@table_of_contents_section_programming = Programowanie
+@table_of_contents_section_unlocks = Odblokowania
+@table_of_contents_section_builtins = Funkcje wbudowane
+@table_of_contents_section_items = Przedmioty
+@table_of_contents_section_entities = Obiekty
+@table_of_contents_section_grounds = Podłoża

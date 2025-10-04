@@ -82,7 +82,7 @@ set_execution_speed(1)`
 `plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = Dołącz do tabeli wyników, aby rywalizować o najlepsze czasy.
 
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+`leaderboard_run(Leaderboards.Hay, "plik_siano", speedup)`
 @unlock_descr_dicts = Uzyskaj dostęp do słowników i zbiorów.
 
 `right_of = {North:East, East:South, South:West, West:North}`

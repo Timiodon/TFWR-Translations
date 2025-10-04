@@ -3,4 +3,13 @@
 @run_cancelled = 运行失败
 @average_text = 已完成 {0} 次 ({2:F1}%)
 {1}
+@average_text2 = 已完成 {0} 次
+{1}
 @unlocked_in = 更多相关信息请见：[{0}]({1})
+@table_of_contents_section_general_info = 通用信息
+@table_of_contents_section_programming = 编程
+@table_of_contents_section_unlocks = 解锁
+@table_of_contents_section_builtins = 内置函数
+@table_of_contents_section_items = 物品
+@table_of_contents_section_entities = 实体
+@table_of_contents_section_grounds = 地块

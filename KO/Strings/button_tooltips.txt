@@ -17,6 +17,7 @@
 @button_tooltip_next_search = 검색어의 다음 일치 항목으로 이동합니다.
 @button_tooltip_previous_search = 검색어의 이전 일치 항목으로 이동합니다.
 @button_tooltip_close_search = 검색 메뉴를 닫습니다.
+@button_tooltip_open_unlock_menu = 해금 트리를 엽니다.
 @warning_icon_tooltip = 코드가 경고를 발동했습니다. 아이콘을 클릭해서 출력 창에서 자세한 내용을 확인하세요.
 @option_tooltip_graphics = 그림자, 앰비언트 오클루전, 블룸 같은 다양한 렌더 파이프라인 설정에 영향을 줍니다.
 @option_tooltip_vfx_limit = 초당 재생할 수 있는 시각 효과의 수를 제한합니다.

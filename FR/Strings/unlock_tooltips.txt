@@ -80,9 +80,7 @@ set_execution_speed(1)`
 @unlock_descr_sunflowers = Tournesols et Puissance.
 
 `plant(Entities.Sunflowers)`
-@unlock_descr_leaderboard = Rejoins le classement pour les temps les plus rapides.
-
-`leaderboard_run(Leaderboards.Hay, hay_file, speedup)`
+@unlock_descr_leaderboard = Rejoins le classement pour les temps les plus rapides.\n\n`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = Accède aux dictionnaires et aux sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`

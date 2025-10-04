@@ -17,6 +17,7 @@
 @button_tooltip_next_search = Ir a la siguiente coincidencia del término de búsqueda.
 @button_tooltip_previous_search = Ir a la coincidencia anterior del término de búsqueda.
 @button_tooltip_close_search = Cierra el menú de búsqueda.
+@button_tooltip_open_unlock_menu = Abre el árbol de desbloqueos.
 @warning_icon_tooltip = Tu código generó una advertencia. Haz clic en el ícono para ver los detalles en la ventana de Salida.
 @option_tooltip_graphics = Afecta varias configuraciones del renderizado como sombras, oclusión ambiental y bloom.
 @option_tooltip_vfx_limit = Limita el número de efectos visuales que se pueden reproducir por segundo.

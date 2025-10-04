@@ -17,6 +17,7 @@
 @button_tooltip_next_search = Va à la prochaine occurrence du terme recherché.
 @button_tooltip_previous_search = Va à l'occurrence précédente du terme recherché.
 @button_tooltip_close_search = Ferme le menu de recherche.
+@button_tooltip_open_unlock_menu = Ouvre l'arbre des déblocages.
 @warning_icon_tooltip = Ton code a déclenché un avertissement. Clique sur l'icône pour voir les détails dans la fenêtre de sortie.
 @option_tooltip_graphics = Affecte divers paramètres du pipeline de rendu comme les ombres, l'occlusion ambiante et le bloom.
 @option_tooltip_vfx_limit = Limite le nombre d'effets visuels pouvant être joués par seconde.
