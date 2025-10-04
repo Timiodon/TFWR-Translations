@@ -1,67 +1,68 @@
-# 补丁说明（Patch Notes）
+# Patch Notes
 
-**新增内容**
-- 新增多种无人机。可解锁全新 “Megafarm（超级农场）”。
-- 科技树大幅重做，成长更接近指数型。
+Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
+Also a large part of the tech tree has been reworked to be a bit more exponential.
 
-## 重大变更（Breaking Changes）
-- 由于科技树重做，旧存档中的升级数值不再有效。打开旧存档时，游戏会将所有升级重置到合理水平。
-- 复用迷宫时，流程改为：先重新放置宝物，再测量位置；不再是先测量后放置。
+Breaking Changes:
+-Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
+-If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
 
-## 玩法（Gameplay）
-- 在迷宫任意位置调用 `measure()` 现在都会返回当前宝物的位置，无需对准宝物测量。
-- 新增迷宫函数 `can_move()`。
-- 南瓜规模上限由 5x5 提升为 6x6。
-- 土地干燥机制调整：不再是每 0.8–1.2 秒干燥 1%，而是每个地块每 0.1 秒有 10% 概率干燥。
-- 仙人掌生长时间固定为 1 秒。
-- 南瓜死亡后会留下“枯萎南瓜”作为提示。
-- 新增 `pet_the_piggy()`。
-- `num_unlocked()` 现在在解锁 Senses 时即已可用。
+Gameplay:
+-Added tooltips with helpful information when hovering tiles in the farm.
+-Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
+-There is now a `can_move()` function for the maze.
+-Pumpkins now scale up to 6x6 instead of 5x5.
+-The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
+-The cactus grow time is now always exactly 1 second.
+-Pumpkins now leave behind a dead pumpkin to indicate that they have died.
+-Added `pet_the_piggy()`.
+-`num_unlocked()` now already gets unlocked with Senses.
 
-## 音频（Audio）
-- 音频系统完全重制。
-- 现在进入游戏会播放音乐。
+Audio:
+-The audio has been completely remade.
+-There is music when you start the game now!
 
-## 视觉（Visuals）
-- 科技树的视觉表现完全重做。
-- 屏幕左上角的物品栏新增拾取物品时的视觉效果。
-- 仙人掌在未被正确归类时会显示为棕色，更显眼。
-- 植物种下后立即可见，即便尚未生长。
+Visuals:
+-The visuals of the tech tree have been completely reworked.
+-The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
+-Cacti are now brown when they aren't correctly sorted to make it more visible.
+-Plants are now visible immediately after planting, even if they haven't grown yet.
 
-## 代码编辑器（Code Editor）
-- 双击包含下划线的标识符会选中整个标识符。
-- 当关闭“用空格替换制表符（tabs to spaces）”时，缩进空格会转换为制表符。
-- 缩放更顺滑。
-- 代码补全器具备导入感知，可从其他文件提供建议。
+Code Editor:
+-Double clicking identifiers with underscores in them now selects the whole identifier.
+-If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
+-Zooming is now much smoother.
+-The code completer is now properly import aware and can give suggestions from other files.
+-Added different cursors for editing text and resizing windows.
+-Debugger steps are now based on the code line instead of simulation ticks.
 
-## 其他（Other）
-- 支持类似 Python 的链式比较运算符。
-- `get_cost(Entities.Hedge)` 与 `get_cost(Entities.Treasure)` 现在返回 1x1 迷宫的成本。
-- 新增分辨率设置。
-- 新增关闭代码运行时闪烁高亮的设置。
-- 进一步优化代码执行，运行代码时游戏更流畅。
-- 新增“切换 HUD（Toggle HUD）”按键绑定。
-- 文本编辑与窗口缩放使用不同光标样式。
+Other:
+-You can now chain comparison operators like in Python.
+-`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
+-Added a resolution setting.
+-Added a setting to turn off the flashing highlights when the code is running.
+-The code execution has been optimized further, allowing the game to run smoother while code is running.
+-Added a "Toggle HUD" keybind.
 
-## 修复（Fixes）
-- 修复多类代码高亮会透过其他窗口显示的问题。
-- 像翻地这类动作不再影响水分干燥行为。
-- 修复非美式键盘的按键绑定问题。
-- 修复存钱罐有时会远离农场的问题。
-- 修复肥料无法感染已成熟植物的问题。
-- 修复 `set_world_size(get_world_size())` 会重置无人机位置的问题。
-- 修复某些模拟与恐龙交互导致遗留大量苹果的问题。
-- 修复最小化后再打开菜单时错误消息位置乱跳的问题。
-- 修复输入过程中提前弹出错误信息的问题。
+Fixes:
+-Some of the most common cases of code highlights being visible through other windows have been fixed.
+-Actions like tilling can no longer affect the water drying behavior.
+-Fixed keybinding problems on non US keyboards.
+-Fixed the piggy bank moving really far away from the farm sometimes.
+-Fixed fertilizer not infecting fully grown plants.
+-Fixed `set_world_size(get_world_size())` resetting the drone position.
+-Fixed a simulation + dinosaur interaction that caused lots of apples to be left behind.
+-Fixed the bug that caused error messages to move around when you clicked minimize and then opened the menu.
+-Fixed error messages popping up while you are still typing.
 
-## 之前补丁中可能错过的重大变更
-- 其他文件（游戏内窗口）中定义的函数不再隐式导入。现在必须解锁并显式使用 `import`，用法类似 Python（见 import 解锁）。
-- `Items.Bones` 重命名为 `Items.Bone`（物品统一为单数）。
-- `Entities.Carrots` 重命名为 `Entities.Carrot`（实体统一为单数）。
-- `Grounds.Turf` 重命名为 `Grounds.Grassland`，更易理解。
-- `Items.Water_Tank` 重命名为 `Items.Water`（水箱补给功能已移除）。
-- `Unlocks.Benchmark` 被 `Unlocks.Timing` 取代。
-- `get_op_count()` 重命名为 `get_tick_count()`。
-- `set_farm_size()` 重命名为 `set_world_size()`，与 `get_world_size()` 保持一致。
-- `get_companion()` 现在返回形如 `(entity, (x, y))` 的元组，而非列表。
-- 移除 `trade()`。
+Breaking Changes from older Patches that you might have missed:
+-Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).
+-`Items.Bones` has been renamed to `Items.Bone` so all items are singular.
+-`Entities.Carrots` has been renamed to `Entities.Carrot` so all entities are singular.
+-`Grounds.Turf` has been renamed to `Grounds.Grassland` to make it easier to understand.
+-`Items.Water_Tank` has been renamed to `Items.Water` because the tank refill feature has been removed.
+-`Unlocks.Benchmark` has been replaced with `Unlocks.Timing`.
+-`get_op_count()` has been renamed to `get_tick_count()`.
+-`set_farm_size()` has been renamed to `set_world_size()` to be consistent with `get_world_size()`.
+-`get_companion()` now returns a tuple of the form (entity, (x, y)) instead of a list.
+-`trade()` has been removed from the game.
