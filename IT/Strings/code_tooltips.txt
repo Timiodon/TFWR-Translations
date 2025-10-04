@@ -224,9 +224,9 @@ esempio:
 `for i in range(len(list)):
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
-Crea una nuova lista.
+Crea una nuova lista. 
 Se `collection` è None, crea una lista vuota.
-Se `collection` è una collezione di valori, crea una nuova lista con quei valori.
+Se `collection` è una sequenza, crea una nuova lista con gli elementi della sequenza.
 
 restituisce una lista.
 
@@ -452,6 +452,19 @@ def zero_arg_wrapper():
     return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
+
+@code_tooltip_has_finished = `has_finished(drone)`
+Controlla se il `drone` dato ha finito.
+
+restituisce `True` se il `drone` ha finito, `False` altrimenti.
+
+richiede `1` tick per essere eseguita.
+
+esempio:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
 
 @code_tooltip_max_drones = `max_drones()`
 

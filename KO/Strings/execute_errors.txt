@@ -73,4 +73,4 @@ x += 1`
 @error_dino_hat_already_used = 공룡 모자는 하나뿐이며 이미 사용 중입니다. 두 번째 드론에는 사용할 수 없습니다.
 @error_invalid_drone_id = ID가 {0}인 드론은 없습니다.
 @error_invalid_handle = {0}은(는) 더 이상 존재하지 않습니다.
-@error_spawn_drone_builtin = You can't use `spawn_drone()` with built-in functions directly. You have to define your own function.
+@error_spawn_drone_builtin = `spawn_drone()`은 내장 함수와 직접 사용할 수 없어요. 자신만의 함수를 정의해야 해요.

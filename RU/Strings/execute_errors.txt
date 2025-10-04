@@ -73,4 +73,4 @@ x += 1`
 @error_dino_hat_already_used = Есть только одна шляпа динозавра, и она уже используется. Нельзя надеть ее на второй дрон.
 @error_invalid_drone_id = Нет дрона с ID {0}.
 @error_invalid_handle = {0} больше не существует.
-@error_spawn_drone_builtin = You can't use `spawn_drone()` with built-in functions directly. You have to define your own function.
+@error_spawn_drone_builtin = `spawn_drone()` нельзя использовать со встроенными функциями напрямую. Нужно определить собственную функцию.

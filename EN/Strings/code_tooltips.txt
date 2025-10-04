@@ -225,8 +225,8 @@ example:
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
 Creates a new list. 
-If `dictionary` is None, it creates an empty dictionary.
-If `dictionary` is a dictionary, it creates a copy of it.
+If `collection` is None, it creates an empty list.
+If `collection` is any sequence, it creates a new list with the element of the sequence.
 
 returns a list.
 
@@ -452,6 +452,19 @@ def zero_arg_wrapper():
     return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
+
+@code_tooltip_has_finished = `has_finished(drone)`
+Checks if the given `drone` has finished.
+
+returns `True` if the `drone` has finished, `False` otherwise.
+
+takes `1` tick to execute.
+
+example:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
 
 @code_tooltip_max_drones = `max_drones()`
 

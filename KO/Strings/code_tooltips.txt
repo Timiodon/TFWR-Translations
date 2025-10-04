@@ -225,8 +225,8 @@ print(get_tick_count())`
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
 새로운 리스트를 만듭니다. 
-`list`가 None이면 빈 리스트를 만듭니다.
-`list`가 리스트면 그 복사본을 만듭니다.
+`collection`이 None이면 빈 리스트를 만듭니다.
+`collection`이 시퀀스이면, 해당 시퀀스의 요소로 새로운 리스트를 만듭니다.
 
 리스트를 반환합니다.
 
@@ -454,13 +454,13 @@ handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 
 @code_tooltip_has_finished = `has_finished(drone)`
-Checks if the given `drone` has finished.
+주어진 `drone`이 끝났는지 확인합니다.
 
-returns `True` if the `drone` has finished, `False` otherwise.
+`drone`이 끝났으면 `True`를, 그렇지 않으면 `False`를 반환합니다.
 
-takes `1` tick to execute.
+실행하는 데 `1`틱이 필요합니다.
 
-example:
+예시:
 `drone = spawn_drone(function)
 while not has_finished(drone):
     do_something_else()

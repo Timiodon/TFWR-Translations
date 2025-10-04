@@ -454,13 +454,13 @@ handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 
 @code_tooltip_has_finished = `has_finished(drone)`
-Checks if the given `drone` has finished.
+指定された `drone` が終了したかどうかをチェックします。
 
-returns `True` if the `drone` has finished, `False` otherwise.
+`drone` が終了した場合は `True` を、それ以外の場合は `False` を返します。
 
-takes `1` tick to execute.
+実行に `1` ティックかかります。
 
-example:
+例:
 `drone = spawn_drone(function)
 while not has_finished(drone):
     do_something_else()

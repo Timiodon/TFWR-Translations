@@ -226,7 +226,7 @@ exemplo:
 @code_tooltip_list = `list(collection = None)`
 Cria uma nova lista. 
 Se `collection` for None, cria uma lista vazia.
-Se `collection` for uma coleção, cria uma cópia dela.
+Se `collection` for qualquer sequência, cria uma nova lista com os elementos da sequência.
 
 retorna uma lista.
 
@@ -451,6 +451,19 @@ def zero_arg_wrapper():
     return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
+@code_tooltip_has_finished = `has_finished(drone)`
+Verifica se o `drone` terminou.
+
+retorna `True` se o `drone` terminou, `False` caso contrário.
+
+leva `1` tick para executar.
+
+exemplo:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
+
 @code_tooltip_max_drones = `max_drones()`
 
 retorna o número máximo de drones que você pode ter na fazenda.

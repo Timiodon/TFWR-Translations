@@ -73,4 +73,4 @@ x += 1`
 @error_dino_hat_already_used = 恐龙帽只有一个，而且已在使用中。无法将其用于第二架无人机上。
 @error_invalid_drone_id = 不存在 ID 为 {0} 的无人机。
 @error_invalid_handle = {0} 已不复存在。
-@error_spawn_drone_builtin = You can't use `spawn_drone()` with built-in functions directly. You have to define your own function.
+@error_spawn_drone_builtin = 你不能直接用 `spawn_drone()` 运行内置函数。你必须定义自己的函数。

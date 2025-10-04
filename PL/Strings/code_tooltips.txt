@@ -226,7 +226,7 @@ przykład:
 @code_tooltip_list = `list(collection = None)`
 Tworzy nową listę. 
 Jeśli `collection` to None, tworzy pustą listę.
-Jeśli `collection` to inna kolekcja, tworzy nową listę z jej elementami.
+Jeśli `collection` to dowolna sekwencja, tworzy nową listę z elementami tej sekwencji.
 
 zwraca listę.
 
@@ -451,6 +451,18 @@ def zero_arg_wrapper():
     return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
+@code_tooltip_has_finished = `has_finished(drone)`
+Sprawdza, czy podany `drone` zakończył działanie.
+
+zwraca `True`, jeśli `drone` zakończył działanie, w przeciwnym razie `False`.
+
+zajmuje `1` tick.
+
+przykład:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
 @code_tooltip_max_drones = `max_drones()`
 
 zwraca maksymalną liczbę dronów, które możesz mieć na farmie.

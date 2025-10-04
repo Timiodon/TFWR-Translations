@@ -73,4 +73,4 @@ x += 1`
 @error_dino_hat_already_used = 恐竜の帽子は1つしかなく、すでに使用中です。2台目のドローンでは使用できません。
 @error_invalid_drone_id = ID {0} のドローンはありません。
 @error_invalid_handle = {0} はもう存在しません。
-@error_spawn_drone_builtin = You can't use `spawn_drone()` with built-in functions directly. You have to define your own function.
+@error_spawn_drone_builtin = `spawn_drone()` は、組み込み関数を直接使うことはできません。独自の関数を定義してください。

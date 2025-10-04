@@ -73,3 +73,4 @@ x += 1`
 @error_dino_hat_already_used = Il n'y a qu'un seul chapeau de dinosaure et il est déjà utilisé. Tu ne peux pas l'utiliser sur un deuxième drone.
 @error_invalid_drone_id = Il n'y a pas de drone avec l'ID {0}.
 @error_invalid_handle = {0} n'existe plus.
+@error_spawn_drone_builtin = Tu ne peux pas utiliser `spawn_drone()` directement avec les fonctions intégrées. Tu dois définir ta propre fonction.

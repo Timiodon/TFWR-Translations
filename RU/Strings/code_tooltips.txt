@@ -224,9 +224,9 @@ print(get_tick_count())`
 `for i in range(len(list)):
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
-Создает новый список (list).
-Если значение `collection` — `None`, создается пустой список.
-Если `collection` содержит значения, создается новый список с ее элементами.
+Создает новый список.
+Если `collection` равно `None`, создается пустой список.
+Если `collection` — какая-либо последовательность, создается новый список с элементами этой последовательности.
 
 Возвращает список.
 
@@ -454,13 +454,13 @@ handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 
 @code_tooltip_has_finished = `has_finished(drone)`
-Checks if the given `drone` has finished.
+Проверяет, завершил ли работу указанный дрон `drone`.
 
-returns `True` if the `drone` has finished, `False` otherwise.
+Возвращает `True`, если дрон `drone` завершил работу, в противном случае — `False`.
 
-takes `1` tick to execute.
+Выполнение занимает `1` тик.
 
-example:
+Пример:
 `drone = spawn_drone(function)
 while not has_finished(drone):
     do_something_else()

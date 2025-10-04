@@ -8,6 +8,7 @@ Breaking Changes:
 -If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
 
 Gameplay:
+-Added tooltips with helpful information when hovering tiles in the farm.
 -Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
 -There is now a `can_move()` function for the maze.
 -Pumpkins now scale up to 6x6 instead of 5x5.
@@ -32,6 +33,8 @@ Code Editor:
 -If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
 -Zooming is now much smoother.
 -The code completer is now properly import aware and can give suggestions from other files.
+-Added different cursors for editing text and resizing windows.
+-Debugger steps are now based on the code line instead of simulation ticks.
 
 Other:
 -You can now chain comparison operators like in Python.
@@ -40,7 +43,6 @@ Other:
 -Added a setting to turn off the flashing highlights when the code is running.
 -The code execution has been optimized further, allowing the game to run smoother while code is running.
 -Added a "Toggle HUD" keybind.
--Added different cursors for editing text and resizing windows.
 
 Fixes:
 -Some of the most common cases of code highlights being visible through other windows have been fixed.

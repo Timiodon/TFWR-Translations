@@ -226,7 +226,7 @@ print(get_tick_count())`
 @code_tooltip_list = `list(collection = None)`
 创建一个新列表。
 如果 `collection` 是 None，则创建一个空列表。
-如果 `collection` 是任意序列，则创建一个含有序列元素的新列表。
+如果 `collection` 是任何序列，则用该序列的元素创建一个新列表。
 
 返回一个列表。
 
@@ -454,13 +454,13 @@ handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 
 @code_tooltip_has_finished = `has_finished(drone)`
-Checks if the given `drone` has finished.
+检查给定的 `drone` 是否已完成。
 
-returns `True` if the `drone` has finished, `False` otherwise.
+如果 `drone` 已完成，则返回 `True`，否则返回 `False`。
 
-takes `1` tick to execute.
+需要 `1` tick 执行。
 
-example:
+示例：
 `drone = spawn_drone(function)
 while not has_finished(drone):
     do_something_else()
