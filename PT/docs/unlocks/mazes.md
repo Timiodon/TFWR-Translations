@@ -39,7 +39,7 @@ Reutilizar um labirinto não lhe dá mais ouro do que apenas colher e gerar um n
 Este é 100% um desafio extra que você pode simplesmente pular.
 Só vale a pena se as informações extras e os atalhos o ajudarem a resolver o labirinto mais rápido.
 
-O mesmo labirinto pode ser resolvido no máximo 300 vezes. Isso corresponde a 299 realocações. Depois disso, usar substância estranha no tesouro não aumentará mais o ouro nele e `measure()` retornará `None`.
+O mesmo labirinto pode ser resolvido no máximo 300 vezes. Isso corresponde a 299 realocações. Depois disso, usar substância estranha no tesouro não aumentará mais o ouro nele e ele não se moverá mais.
 
 <spoiler=show hint 1>Aqui está uma abordagem geral para resolver o problema:
 
@@ -54,7 +54,7 @@ Agora tente traduzir seus passos em código.
 <spoiler=show hint 2>Enquanto não houver loops: todas as paredes são, na verdade, uma grande parede conectada. Se você seguir a parede, ela o levará por todo o labirinto.
 Esta abordagem requer muito pouco código e você não precisa acompanhar onde já esteve. Cerca de 10 linhas de código é tudo o que você precisa.</spoiler>
 <spoiler=show hint 3>Em vez de mover o drone em direções absolutas como leste ou oeste, pode ser muito útil mover o drone em direções relativas como "virar à direita" ou "virar à esquerda". Para fazer isso, você precisa acompanhar para qual lado o drone está se movendo atualmente. O drone nunca gira de fato, mas você ainda pode manter uma rotação "virtual" no código.
-O seguinte truque de índice é útil для isso:
+O seguinte truque de índice é útil para isso:
 
 `directions = [North, East, South, West]
 index = 0`

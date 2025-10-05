@@ -32,6 +32,13 @@ Spowoduje to, że twój pierwszy dron będzie poruszał się poziomo i tworzył 
 
 Jeśli wszystkie dostępne drony zostały już stworzone, `spawn_drone()` nic nie zrobi i zwróci `None`.
 
+Oto inny przykład, który przekazuje każdemu dronowi inny kierunek.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=pokaż podpowiedź> Sprawdź tę super przydatną, równoległą funkcję `for_all`, która przyjmuje dowolną funkcję i uruchamia ją na każdym polu farmy. Wykorzystuje do tego wszystkie dostępne drony.
 
 `def for_all(f):

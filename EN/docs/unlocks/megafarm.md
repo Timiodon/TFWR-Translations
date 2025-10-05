@@ -32,6 +32,13 @@ This will cause your first drone to move horizontally and spawn more drones. The
 
 If all available drones have already been spawned, `spawn_drone()` will do nothing and return `None`.
 
+Here's another example that passes a different direction to each drone.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=show hint> Check out this super useful parallel `for_all` function, which takes any function and runs it on every farm tile. It makes use of all available drones to do so.
 
 `def for_all(f):

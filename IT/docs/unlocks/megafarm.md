@@ -32,6 +32,13 @@ Questo farà sì che il tuo primo drone si muova orizzontalmente e crei altri dr
 
 Se tutti i droni disponibili sono già stati creati, `spawn_drone()` non farà nulla e restituirà `None`.
 
+Ecco un altro esempio che passa una direzione diversa a ogni drone.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=mostra suggerimento> Dai un'occhiata a questa utilissima funzione parallela `for_all`, che prende qualsiasi funzione e la esegue su ogni casella della fattoria. Utilizza tutti i droni disponibili per farlo.
 
 `def for_all(f):

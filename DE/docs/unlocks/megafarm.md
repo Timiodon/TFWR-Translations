@@ -32,6 +32,13 @@ Dies bewirkt, dass deine erste Drohne sich horizontal bewegt und weitere Drohnen
 
 Wenn alle verfügbaren Drohnen bereits gespawnt wurden, tut `spawn_drone()` nichts und gibt `None` zurück.
 
+Hier ist ein weiteres Beispiel, das jeder Drohne eine andere Richtung übergibt.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=zeige Hinweis> Schau dir diese super nützliche parallele `for_all`-Funktion an, die eine beliebige Funktion nimmt und sie auf jedem Farmfeld ausführt. Sie nutzt alle verfügbaren Drohnen dafür.
 
 `def for_all(f):

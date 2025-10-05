@@ -19,7 +19,7 @@ Si tu utilises `harvest()` n'importe où ailleurs, le labyrinthe disparaîtra si
 
 Les labyrinthes ne contiennent aucune boucle, sauf si tu réutilises le labyrinthe (voir ci-dessous comment réutiliser un labyrinthe). Il n'y a donc aucun moyen pour le drone de se retrouver à la même position sans revenir en arrière.
 
-Tu peux vérifier s'il y a un mur en essayant de le traverser.
+Tu peux vérifier s'il y a un mur en essayant de le traverser. 
 `move()` renvoie `True` en cas de succès et `False` sinon.
 
 `can_move()` peut être utilisé pour vérifier s'il y a un mur sans se déplacer.
@@ -39,7 +39,7 @@ Réutiliser un labyrinthe ne te donne pas plus d'or que de simplement récolter 
 C'est un défi 100% supplémentaire que tu peux simplement ignorer.
 Cela ne vaut le coup que si les informations supplémentaires et les raccourcis t'aident à résoudre le labyrinthe plus rapidement.
 
-Le même labyrinthe peut être résolu un maximum de 300 fois. Cela correspond à 299 déplacements. Après cela, utiliser de la substance bizarre sur le trésor n'augmentera plus l'or qu'il contient et `measure()` renverra `None`.
+Le même labyrinthe peut être résolu un maximum de 300 fois. Cela correspond à 299 déplacements. Après cela, utiliser de la substance bizarre sur le trésor n'augmentera plus l'or qu'il contient et il ne se déplacera plus.
 
 <spoiler=montrer l'indice 1>Voici une approche générale pour résoudre le problème :
 

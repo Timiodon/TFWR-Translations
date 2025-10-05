@@ -32,6 +32,13 @@ Esto hará que tu primer dron se mueva horizontalmente y genere más drones. Los
 
 Si ya se han generado todos los drones disponibles, `spawn_drone()` no hará nada y devolverá `None`.
 
+Aquí hay otro ejemplo que pasa una dirección diferente a cada dron.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=show hint> Echa un vistazo a esta súper útil función paralela `for_all`, que toma cualquier función y la ejecuta en cada casilla de la granja. Utiliza todos los drones disponibles para hacerlo.
 
 `def for_all(f):
@@ -47,7 +54,7 @@ Si ya se han generado todos los drones disponibles, `spawn_drone()` no hará nad
 
 for_all(harvest)`
 
-Un patrón particularmente útil es generar un dron si hay uno disponible y, de lo contrario, hacerlo tú mismo.
+Un patrón particularly útil es generar un dron si hay uno disponible y, de lo contrario, hacerlo tú mismo.
 
 `if not spawn_drone(task):
 	task()`

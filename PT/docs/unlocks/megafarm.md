@@ -32,6 +32,13 @@ Isso fará com que seu primeiro drone se mova horizontalmente e gere mais drones
 
 Se todos os drones disponíveis já tiverem sido gerados, `spawn_drone()` não fará nada e retornará `None`.
 
+Aqui está outro exemplo que passa uma direção diferente para cada drone.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=show hint> Confira esta função paralela super útil `for_all`, que pega qualquer função e a executa em cada casa da fazenda. Ela utiliza todos os drones disponíveis para fazer isso.
 
 `def for_all(f):
@@ -71,7 +78,7 @@ Note que gerar drones leva tempo, então não é uma boa ideia gerar um novo dro
 Você pode usar `has_finished(drone)` pra ver se o drone terminou sem precisar esperar.
 
 ## Sem Memória Compartilhada
-Cada drone tem sua própria memória e не pode ler ou escrever diretamente as variáveis globais de outro drone.
+Cada drone tem sua própria memória e não pode ler ou escrever diretamente as variáveis globais de outro drone.
 
 `x = 0
 
@@ -82,7 +89,7 @@ def increment():
 wait_for(spawn_drone(increment))
 print(x)`
 
-Isso imprimirá `0` porque o novo drone incrementou sua própria cópia do `x` global, o que не afeta o `x` do primeiro drone.
+Isso imprimirá `0` porque o novo drone incrementou sua própria cópia do `x` global, o que não afeta o `x` do primeiro drone.
 
 ## Condições de Corrida
 Vários drones podem interagir com a mesma casa da fazenda ao mesmo tempo. Se dois drones interagirem com a mesma casa durante o mesmo tick, ambas as interações ocorrerão, mas os resultados podem diferir com base na ordem das interações.

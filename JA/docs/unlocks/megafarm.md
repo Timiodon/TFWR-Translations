@@ -32,7 +32,14 @@ while True:
 
 利用可能なすべてのドローンがすでにスポーンされている場合、`spawn_drone()` は何もしないで `None` を返します。
 
-<spoiler=show hint>この非常に便利な並列 `for_all` 関数をチェックしてください。これは任意の関数を受け取り、すべての農場のタイルで実行します。そのために利用可能なすべてのドローンを使用します。
+各ドローンに異なる方向を渡す、もう一つの例です。
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
+<spoiler=show hint> この非常に便利な並列 `for_all` 関数をチェックしてください。これは任意の関数を受け取り、すべての農場のタイルで実行します。そのために利用可能なすべてのドローンを使用します。
 
 `def for_all(f):
 	def row():

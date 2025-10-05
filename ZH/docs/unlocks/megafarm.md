@@ -32,6 +32,13 @@ while True:
 
 如果生成的无人机数量已达上限，`spawn_drone()` 将什么也不做并返回 `None`。
 
+以下是另一个为每架无人机传递不同方向的示例。
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=显示提示>这个并行 `for_all` 函数超级实用，可接受任何函数并在每个农场地块上运行。它会利用所有可用的无人机来做到这一点。
 
 `def for_all(f):

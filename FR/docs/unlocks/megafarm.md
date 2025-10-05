@@ -1,5 +1,5 @@
 # Mégaferme
-Ce déblocage incroyablement puissant te donne accès à plusieurs drones.
+Ce déblocage incroyablement puissant te donne accès à plusieurs drones. 
 
 Comme avant, tu commences toujours avec un seul drone. Les drones supplémentaires doivent d'abord être créés et disparaîtront après la fin du programme.
 Chaque drone exécute son propre programme séparé. De nouveaux drones peuvent être créés en utilisant la fonction `spawn_drone(function)`.
@@ -12,7 +12,7 @@ spawn_drone(drone_function)`
 
 Cela crée un nouveau drone à la même position que le drone qui a exécuté la commande `spawn_drone(function)`. Le nouveau drone commence alors à exécuter la fonction spécifiée. Une fois terminé, il disparaîtra automatiquement.
 
-Les drones n'entrent pas en collision les uns avec les autres.
+Les drones n'entrent pas en collision les uns avec les autres. 
 
 Utilise `max_drones()` pour obtenir le nombre maximum de drones pouvant être créés.
 Utilise `num_drones()` pour obtenir le nombre de drones qui sont déjà dans la ferme.
@@ -31,6 +31,13 @@ while True:
 Cela fera que ton premier drone se déplacera horizontalement et créera d'autres drones. Les drones créés se déplaceront alors verticalement et récolteront tout sur leur passage.
 
 Si tous les drones disponibles ont déjà été créés, `spawn_drone()` ne fera rien et renverra `None`.
+
+Voici un autre exemple qui passe une direction différente à chaque drone.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
 
 <spoiler=montrer l'indice> Jette un œil à cette fonction parallèle super utile `for_all`, qui prend n'importe quelle fonction et l'exécute sur chaque case de la ferme. Elle utilise tous les drones disponibles pour le faire.
 
@@ -54,7 +61,7 @@ Un modèle particulièrement utile est de créer un drone si un est disponible e
 </spoiler>
 
 ## Attendre un autre drone
-Utilise la fonction `wait_for(drone)` pour attendre qu'un autre drone ait fini. Tu reçois le handle `drone` lorsque tu crées le drone.
+Utilise la fonction `wait_for(drone)` pour attendre qu'un autre drone ait fini. Tu reçois le handle du drone lorsque tu le crées.
 `wait_for(drone)` renvoie la valeur de retour de la fonction que l'autre drone exécutait.
 
 `def get_entity_type_in_direction(dir):

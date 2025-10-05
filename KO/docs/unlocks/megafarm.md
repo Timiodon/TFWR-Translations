@@ -32,6 +32,13 @@ while True:
 
 사용 가능한 모든 드론이 이미 생성되었다면, `spawn_drone()`은 아무것도 하지 않고 `None`을 반환할 거예요.
 
+각 드론에 다른 방향을 전달하는 또 다른 예시예요.
+`for dir in [North, East, South, West]:
+    def task():
+        move(dir)
+        do_a_flip()
+    spawn_drone(task)`
+
 <spoiler=힌트 보기> 이 매우 유용한 병렬 `for_all` 함수를 확인해보세요. 어떤 함수든 받아서 모든 농장 타일에서 실행해요. 이를 위해 사용 가능한 모든 드론을 활용하죠.
 
 `def for_all(f):
