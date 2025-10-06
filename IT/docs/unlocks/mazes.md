@@ -39,7 +39,7 @@ Riutilizzare un labirinto non ti dà più oro che semplicemente raccogliere e cr
 Questa è al 100% una sfida extra che puoi semplicemente saltare.
 Vale la pena solo se le informazioni extra e le scorciatoie ti aiutano a risolvere il labirinto più velocemente.
 
-Lo stesso labirinto può essere risolto un massimo di 300 volte. Ciò corrisponde a 299 riposizionamenti. Dopodiché, usare la sostanza strana sul tesoro non aumenterà più l'oro al suo interno e non si sposterà più.
+Lo stesso labirinto può essere risolto un massimo di 301 volte. Ciò corrisponde a 300 riposizionamenti. Dopodiché, usare la sostanza strana sul tesoro non aumenterà più l'oro al suo interno e non si sposterà più.
 
 <spoiler=mostra suggerimento 1>Ecco un approccio generale per risolvere il problema:
 

@@ -39,7 +39,7 @@ Reutilizar um labirinto não lhe dá mais ouro do que apenas colher e gerar um n
 Este é 100% um desafio extra que você pode simplesmente pular.
 Só vale a pena se as informações extras e os atalhos o ajudarem a resolver o labirinto mais rápido.
 
-O mesmo labirinto pode ser resolvido no máximo 300 vezes. Isso corresponde a 299 realocações. Depois disso, usar substância estranha no tesouro não aumentará mais o ouro nele e ele não se moverá mais.
+O tesouro pode ser realocado até 300 vezes. Depois disso, usar substância estranha no tesouro não aumentará mais o ouro nele e ele não se moverá mais.
 
 <spoiler=show hint 1>Aqui está uma abordagem geral para resolver o problema:
 

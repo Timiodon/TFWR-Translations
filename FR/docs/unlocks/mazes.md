@@ -39,7 +39,7 @@ Réutiliser un labyrinthe ne te donne pas plus d'or que de simplement récolter 
 C'est un défi 100% supplémentaire que tu peux simplement ignorer.
 Cela ne vaut le coup que si les informations supplémentaires et les raccourcis t'aident à résoudre le labyrinthe plus rapidement.
 
-Le même labyrinthe peut être résolu un maximum de 300 fois. Cela correspond à 299 déplacements. Après cela, utiliser de la substance bizarre sur le trésor n'augmentera plus l'or qu'il contient et il ne se déplacera plus.
+Le trésor peut être déplacé jusqu'à 300 fois. Après cela, utiliser de la substance bizarre sur le trésor n'augmentera plus l'or qu'il contient et il ne se déplacera plus.
 
 <spoiler=montrer l'indice 1>Voici une approche générale pour résoudre le problème :
 

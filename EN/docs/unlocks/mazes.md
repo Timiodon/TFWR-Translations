@@ -39,7 +39,7 @@ Reusing a maze doesn't give you more gold than just harvesting and spawning a ne
 This is 100% an extra challenge that you can just skip.
 It's only worth it if the extra information and the shortcuts help you solve the maze faster.
 
-The same maze can be solved a maximum of 300 times. This corresponds to 299 relocations. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
+The treasure can be relocated up to 300 times. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
 
 <spoiler=show hint 1>Here's a general approach to solving the problem:
 

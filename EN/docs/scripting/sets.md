@@ -4,7 +4,7 @@ Sets are like [dictionaries](docs/scripting/dicts.md), but without values. They'
 They are created like dictionaries, but without values.
 `set = {North, East, West}`
 
-Use `set()` to create an empty set. Note that `{}` creates am empty dictionary.
+Use `set()` to create an empty set. Note that `{}` creates an empty dictionary.
 
 Use `set.add(elem)` to add a new element to the set.
 

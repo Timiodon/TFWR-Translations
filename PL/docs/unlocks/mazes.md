@@ -39,7 +39,7 @@ Ponowne użycie labiryntu nie daje więcej złota niż zebranie i stworzenie now
 To jest w 100% dodatkowe wyzwanie, które możesz po prostu pominąć.
 Opłaca się to tylko wtedy, gdy dodatkowe informacje i skróty pomagają szybciej rozwiązać labirynt.
 
-Ten sam labirynt można rozwiązać maksymalnie 300 razy. Odpowiada to 299 relokacjom. Po tym czasie użycie dziwnej substancji na skarbie nie będzie już zwiększać w nim złota, a `measure()` zwróci `None`.
+Skarb może być przenoszony do 300 razy. Po tym czasie użycie dziwnej substancji na skarbie nie będzie już ani zwiększać w nim złota, ani go przemieszczać.
 
 <spoiler=pokaż podpowiedź 1>Oto ogólne podejście do rozwiązania problemu:
 

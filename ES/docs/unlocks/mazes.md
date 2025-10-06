@@ -39,7 +39,7 @@ Reutilizar un laberinto no te da más oro que simplemente cosechar y generar un 
 Este es un desafío 100% extra que puedes omitir.
 Solo vale la pena si la información extra y los atajos te ayudan a resolver el laberinto más rápido.
 
-El mismo laberinto se puede resolver un máximo de 300 veces. Esto corresponde a 299 reubicaciones. Después de eso, usar sustancia rara en el tesoro ya no aumentará el oro en él y ya no se moverá más.
+El tesoro se puede reubicar hasta 300 veces. Después de eso, usar sustancia rara en el tesoro ya no aumentará el oro en él y ya no se moverá más.
 
 <spoiler=show hint 1>Aquí tienes un enfoque general para resolver el problema:
 
