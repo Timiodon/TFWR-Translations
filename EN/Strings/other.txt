@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Items
 @table_of_contents_section_entities = Entities
 @table_of_contents_section_grounds = Grounds
+@new_hat_unlocked = ## New Hat Unlocked
+`change_hat(`{0}`)`

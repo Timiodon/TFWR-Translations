@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Items
 @table_of_contents_section_entities = Entities
 @table_of_contents_section_grounds = Böden
+@new_hat_unlocked = ## Neuer Hut freigeschaltet
+`change_hat(`{0}`)`

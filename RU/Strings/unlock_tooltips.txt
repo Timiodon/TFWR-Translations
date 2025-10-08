@@ -103,7 +103,7 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = Ферма с большей площадью и множеством дронов.
+@unlock_descr_megafarm = Больше дронов!
 
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = Расширяет ферму, а также очищает ее.
@@ -117,7 +117,7 @@ other_file.function()`
 @multi_unlock_descr_polyculture = Увеличивает множитель урожая поликультуры.
 @multi_unlock_descr_watering = Возможность получать больше воды.
 @multi_unlock_descr_fertilizer = Возможность получать больше удобрений.
-@multi_unlock_descr_megafarm = Дальнейшее увеличение размера фермы и количества дронов.
+@multi_unlock_descr_megafarm = Ещё больше дронов.
 @auto_unlock = Авторазблокировка
 @cactus = Кактус
 @carrots = Морковь

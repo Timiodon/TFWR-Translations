@@ -103,7 +103,7 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = 많은 드론이 있는 훨씬 더 큰 농장입니다.
+@unlock_descr_megafarm = 더 많은 드론!
 
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = 농장을 확장합니다. 이 작업은 농장을 비웁니다.
@@ -117,7 +117,7 @@ other_file.function()`
 @multi_unlock_descr_polyculture = 혼합 재배의 수확량 배율이 증가합니다.
 @multi_unlock_descr_watering = 더 많은 물을 받습니다.
 @multi_unlock_descr_fertilizer = 더 많은 비료를 받습니다.
-@multi_unlock_descr_megafarm = 농장 크기와 드론 수가 증가합니다.
+@multi_unlock_descr_megafarm = 드론 수를 더 늘립니다.
 @auto_unlock = 자동 해금
 @cactus = 선인장
 @carrots = 당근

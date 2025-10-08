@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Ítems
 @table_of_contents_section_entities = Entidades
 @table_of_contents_section_grounds = Terrenos
+@new_hat_unlocked = ## Nuevo Sombrero Desbloqueado
+`change_hat(`{0}`)`

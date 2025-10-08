@@ -13,3 +13,5 @@
 @table_of_contents_section_items = アイテム
 @table_of_contents_section_entities = エンティティ
 @table_of_contents_section_grounds = 地面
+@new_hat_unlocked = ## 新しい帽子がアンロックされました
+`change_hat(`{0}`)`

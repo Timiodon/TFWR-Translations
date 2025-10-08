@@ -103,7 +103,7 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = 拥有许多无人机的更大农场。
+@unlock_descr_megafarm = 更多无人机，更大农场！
 
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = 扩大农场，同时还会清空农场。

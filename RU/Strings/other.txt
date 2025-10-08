@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Предметы
 @table_of_contents_section_entities = Сущности
 @table_of_contents_section_grounds = Типы земли
+@new_hat_unlocked = ## Разблокирована новая шляпа
+`change_hat(`{0}`)`

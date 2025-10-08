@@ -13,3 +13,5 @@
 @table_of_contents_section_items = 物品
 @table_of_contents_section_entities = 实体
 @table_of_contents_section_grounds = 地块
+@new_hat_unlocked = ## 已解锁新帽子
+`change_hat(`{0}`)`

@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Objets
 @table_of_contents_section_entities = Entités
 @table_of_contents_section_grounds = Sols
+@new_hat_unlocked = ## Nouveau Chapeau Débloqué
+`change_hat(`{0}`)`

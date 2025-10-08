@@ -13,3 +13,5 @@
 @table_of_contents_section_items = Przedmioty
 @table_of_contents_section_entities = Obiekty
 @table_of_contents_section_grounds = Podłoża
+@new_hat_unlocked = ## Odblokowano nowy kapelusz
+`change_hat(`{0}`)`

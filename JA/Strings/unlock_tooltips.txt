@@ -103,7 +103,7 @@ set_execution_speed(1)`
 
 `import other_file
 other_file.function()`
-@unlock_descr_megafarm = 多くのドローンを備えたはるかに大きな農場。
+@unlock_descr_megafarm = もっとドローンを！
 
 `spawn_drone(file_to_run)`
 @multi_unlock_descr_expand = 農場を拡大します。これにより農場もクリアされます。
@@ -117,7 +117,7 @@ other_file.function()`
 @multi_unlock_descr_polyculture = 混植の収穫量倍率を増やします。
 @multi_unlock_descr_watering = より多くの水を受け取ります。
 @multi_unlock_descr_fertilizer = より多くの肥料を受け取ります。
-@multi_unlock_descr_megafarm = 農場のサイズとドローンの数をさらに増やします。
+@multi_unlock_descr_megafarm = ドローンの数をさらに増やします。
 @auto_unlock = 自動アンロック
 @cactus = サボテン
 @carrots = ニンジン

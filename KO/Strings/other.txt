@@ -13,3 +13,5 @@
 @table_of_contents_section_items = 아이템
 @table_of_contents_section_entities = 개체
 @table_of_contents_section_grounds = 땅
+@new_hat_unlocked = ## 새로운 모자 해금
+`change_hat(`{0}`)`
