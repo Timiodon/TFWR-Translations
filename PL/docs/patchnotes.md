@@ -1,68 +1,84 @@
-# Patch Notes
+# Nareszcie 1.0!
+Po ponad trzech i pół roku ciągłego rozwoju, ponad 20 aktualizacjach i waszych niesamowitych opiniach, Wczesny Dostęp wreszcie dobiegł końca.
 
-Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
-Also a large part of the tech tree has been reworked to be a bit more exponential.
+## Co nowego w 1.0?
+- Wiele dronów, aby zmaksymalizować wydajność farmy
+- Przerobione drzewko odblokowań z bardziej wykładniczym postępem
+- 60 osiągnięć, aby sprawdzić swoje umiejętności
+- Odblokowanie niektórych osiągnięć da twojemu dronowi specjalne kapelusze
+- Całkowicie przerobiony dźwięk
+- Jeden nowy utwór muzyczny
+- Ulepszenia jakości gry i różne poprawki
+- Ważne zmiany: Ulepszenia zostaną częściowo zresetowane. Ponowne używanie labiryntów działa nieco inaczej.
 
-Breaking Changes:
--Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
--If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
+Bardzo wam wszystkim dziękuję za wspieranie The Farmer Was Replaced od Wczesnego Dostępu aż do pełnego wydania. 
+Nie mogę się doczekać, aby zobaczyć, jak wykorzystacie wiele dronów w kreatywny i sprytny sposób!
+-Timon
 
-Gameplay:
--Added tooltips with helpful information when hovering tiles in the farm.
--Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
--There is now a `can_move()` function for the maze.
--Pumpkins now scale up to 6x6 instead of 5x5.
--The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
--The cactus grow time is now always exactly 1 second.
--Pumpkins now leave behind a dead pumpkin to indicate that they have died.
--Added `pet_the_piggy()`.
--`num_unlocked()` now already gets unlocked with Senses.
+Pamiętajcie też, aby dołączyć do nas na Discordzie: 
+[Discord](https://discord.com/invite/kj33cJkeJn)
 
-Audio:
--The audio has been completely remade.
--There is music when you start the game now!
+## Pełna lista zmian
+Ważne zmiany:
+-Z powodu przeróbki drzewka technologicznego, liczby ulepszeń w starych zapisach gry nie będą już ważne. Gra zresetuje wszystkie ulepszenia do rozsądnego poziomu po otwarciu starego zapisu.
+-Jeśli ponownie używasz labiryntów, musisz teraz najpierw zmienić pozycję skarbu, a potem zmierzyć pozycję, zamiast najpierw mierzyć, a potem zmieniać pozycję.
 
-Visuals:
--The visuals of the tech tree have been completely reworked.
--The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
--Cacti are now brown when they aren't correctly sorted to make it more visible.
--Plants are now visible immediately after planting, even if they haven't grown yet.
+Rozgrywka:
+-Dodano podpowiedzi z przydatnymi informacjami po najechaniu na pola na farmie.
+-Użycie `measure()` w dowolnym miejscu labiryntu teraz zawsze zwraca pozycję obecnego skarbu. Nie musisz już mierzyć konkretnie skarbu.
+-Dla labiryntu jest teraz dostępna funkcja `can_move()`.
+-Dynie skalują się teraz do 6x6 zamiast 5x5.
+-Zachowanie wysychania ziemi nieznacznie się zmieniło. Zamiast wysychać o 1% co 0.8 do 1.2 sekundy, każde pole ma teraz 10% szansy na wyschnięcie co 0.1 sekundy.
+-Czas wzrostu kaktusa wynosi teraz zawsze dokładnie 1 sekundę.
+-Dynie pozostawiają teraz po sobie martwą dynię, aby zasygnalizować, że obumarły.
+-Dodano `pet_the_piggy()`.
+-`num_unlocked()` jest teraz odblokowywane już wraz ze Zmysłami.
 
-Code Editor:
--Double clicking identifiers with underscores in them now selects the whole identifier.
--If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
--Zooming is now much smoother.
--The code completer is now properly import aware and can give suggestions from other files.
--Added different cursors for editing text and resizing windows.
--Debugger steps are now based on the code line instead of simulation ticks.
+Dźwięk:
+-Dźwięk został całkowicie przerobiony.
+-Jest teraz muzyka po uruchomieniu gry!
 
-Other:
--You can now chain comparison operators like in Python.
--`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
--Added a resolution setting.
--Added a setting to turn off the flashing highlights when the code is running.
--The code execution has been optimized further, allowing the game to run smoother while code is running.
--Added a "Toggle HUD" keybind.
+Grafika:
+-Wygląd drzewka technologicznego został całkowicie przerobiony.
+-Panel ekwipunku w lewym górnym rogu ekranu ma teraz ładny efekt wizualny podnoszenia przedmiotów.
+-Kaktusy są teraz brązowe, gdy nie są poprawnie posortowane, aby było to bardziej widoczne.
+-Rośliny są teraz widoczne natychmiast po posadzeniu, nawet jeśli jeszcze nie urosły.
 
-Fixes:
--Some of the most common cases of code highlights being visible through other windows have been fixed.
--Actions like tilling can no longer affect the water drying behavior.
--Fixed keybinding problems on non US keyboards.
--Fixed the piggy bank moving really far away from the farm sometimes.
--Fixed fertilizer not infecting fully grown plants.
--Fixed `set_world_size(get_world_size())` resetting the drone position.
--Fixed a simulation + dinosaur interaction that caused lots of apples to be left behind.
--Fixed the bug that caused error messages to move around when you clicked minimize and then opened the menu.
--Fixed error messages popping up while you are still typing.
+Edytor kodu:
+-Podwójne kliknięcie identyfikatorów z podkreśleniami zaznacza teraz cały identyfikator.
+-Jeśli opcja „tabulatory na spacje” jest wyłączona, spacje wcięć są teraz konwertowane na tabulatory.
+-Powiększanie jest teraz znacznie płynniejsze.
+-Uzupełnianie kodu jest teraz świadome importów i może podawać sugestie z innych plików.
+-Dodano różne kursory do edycji tekstu i zmiany rozmiaru okien.
+-Kroki debugera są teraz oparte na linii kodu, a nie na tickach symulacji.
 
-Breaking Changes from older Patches that you might have missed:
--Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).
--`Items.Bones` has been renamed to `Items.Bone` so all items are singular.
--`Entities.Carrots` has been renamed to `Entities.Carrot` so all entities are singular.
--`Grounds.Turf` has been renamed to `Grounds.Grassland` to make it easier to understand.
--`Items.Water_Tank` has been renamed to `Items.Water` because the tank refill feature has been removed.
--`Unlocks.Benchmark` has been replaced with `Unlocks.Timing`.
--`get_op_count()` has been renamed to `get_tick_count()`.
--`set_farm_size()` has been renamed to `set_world_size()` to be consistent with `get_world_size()`.
--`get_companion()` now returns a tuple of the form (entity, (x, y)) instead of a list.
--`trade()` has been removed from the game.
+Inne:
+-Można teraz łączyć operatory porównania, tak jak w Pythonie.
+-`get_cost(Entities.Hedge)` i `get_cost(Entities.Treasure)` zwracają teraz koszt labiryntu 1x1.
+-Dodano ustawienie rozdzielczości.
+-Dodano ustawienie wyłączające migające podświetlenia podczas działania kodu.
+-Wykonywanie kodu zostało dodatkowo zoptymalizowane, co pozwala na płynniejsze działanie gry podczas działania kodu.
+-Dodano skrót klawiszowy „Przełącz HUD”.
+
+Poprawki:
+-Naprawiono niektóre z najczęstszych przypadków, w których podświetlenia kodu były widoczne przez inne okna.
+-Działania takie jak orka nie mogą już wpływać na zachowanie wysychania wody.
+-Naprawiono problemy ze skrótami klawiszowymi na klawiaturach innych niż amerykańskie.
+-Naprawiono skarbonkę, która czasami oddalała się bardzo daleko od farmy.
+-Naprawiono problem z nawozem, który nie rozprzestrzeniał się na w pełni wyrośnięte rośliny.
+-Naprawiono resetowanie pozycji drona przez `set_world_size(get_world_size())`.
+-Naprawiono interakcję symulacji i dinozaura, która powodowała pozostawianie dużej ilości jabłek.
+-Naprawiono błąd, który powodował przesuwanie się komunikatów o błędach po kliknięciu minimalizacji, a następnie otwarciu menu.
+-Naprawiono komunikaty o błędach pojawiające się podczas pisania.
+
+Ważne zmiany z poprzednich patchy, które mogłeś przegapić:
+-Funkcje zdefiniowane w innych plikach (oknach w grze) nie są już importowane niejawnie. Musisz teraz odblokować i używać jawnych instrukcji importu, tak jak w Pythonie (zobacz odblokowanie importu).
+-`Items.Bones` zostało zmienione na `Items.Bone`, aby wszystkie przedmioty były w liczbie pojedynczej.
+-`Entities.Carrots` zostało zmienione na `Entities.Carrot`, aby wszystkie obiekty były w liczbie pojedynczej.
+-`Grounds.Turf` zostało zmienione na `Grounds.Grassland`, aby było łatwiejsze do zrozumienia.
+-`Items.Water_Tank` zostało zmienione na `Items.Water`, ponieważ funkcja napełniania zbiornika została usunięta.
+-`Unlocks.Benchmark` zostało zastąpione przez `Unlocks.Timing`.
+-`get_op_count()` zostało zmienione na `get_tick_count()`.
+-`set_farm_size()` zostało zmienione na `set_world_size()`, aby było spójne z `get_world_size()`.
+-`get_companion()` zwraca teraz krotkę w formie (obiekt, (x, y)) zamiast listy.
+-`trade()` zostało usunięte z gry.

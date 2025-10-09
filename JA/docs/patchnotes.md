@@ -1,68 +1,84 @@
-# Patch Notes
+# 1.0がついに登場！
+3年半以上にわたる着実な開発、20回以上のアップデート、そして皆様からの素晴らしいフィードバックを経て、早期アクセスがついに終了しました。
 
-Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
-Also a large part of the tech tree has been reworked to be a bit more exponential.
+## 1.0の新機能は？
+- 複数のドローンで農業を最大限に効率化
+- より指数関数的な進行になった、刷新されたアンロックツリー
+- あなたのスキルを試す60の実績
+- 特定の実績をアンロックすると、ドローンに特別な帽子が贈られます
+- サウンドの完全な見直し
+- 新しいBGMを1曲追加
+- QOLの向上と様々な修正
+- 破壊的変更：アップグレードは部分的にリセットされます。迷路の再利用の仕組みが少し異なります。
 
-Breaking Changes:
--Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
--If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
+早期アクセスから正式リリースまで「The Farmer Was Replaced」をサポートしていただき、誠にありがとうございます。
+皆さんが複数のドローンを創造的かつ賢い方法でどのように活用するのか、楽しみにしています！
+-Timon
 
-Gameplay:
--Added tooltips with helpful information when hovering tiles in the farm.
--Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
--There is now a `can_move()` function for the maze.
--Pumpkins now scale up to 6x6 instead of 5x5.
--The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
--The cactus grow time is now always exactly 1 second.
--Pumpkins now leave behind a dead pumpkin to indicate that they have died.
--Added `pet_the_piggy()`.
--`num_unlocked()` now already gets unlocked with Senses.
+ぜひDiscordにもご参加ください：
+[Discord](https://discord.com/invite/kj33cJkeJn)
 
-Audio:
--The audio has been completely remade.
--There is music when you start the game now!
+## パッチノート全文
+破壊的変更：
+-技術ツリーの再設計により、古いセーブデータのアップグレード数が無効になります。古いセーブデータを開くと、ゲームはすべてのアップグレードを妥当なレベルにリセットします。
+-迷路を再利用する際、以前はまず測定してから宝を再配置していましたが、これからはまず宝を再配置してから測定するように変更されました。
 
-Visuals:
--The visuals of the tech tree have been completely reworked.
--The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
--Cacti are now brown when they aren't correctly sorted to make it more visible.
--Plants are now visible immediately after planting, even if they haven't grown yet.
+ゲームプレイ：
+-農場のタイルにカーソルを合わせると、役立つ情報がツールチップで表示されるようになりました。
+-迷路のどこで `measure()` を使用しても、現在の宝の位置が常に返されるようになりました。宝を特定して測定する必要はもうありません。
+-迷路用に `can_move()` 関数が追加されました。
+-カボチャが5x5ではなく6x6までスケールアップするようになりました。
+-地面の乾燥挙動が少し変更されました。0.8秒から1.2秒ごとに1%乾燥する代わりに、各地面タイルが0.1秒ごとに10%の確率で乾燥するようになりました。
+-サボテンの成長時間が常に正確に1秒になりました。
+-カボチャが枯れたことを示すために、枯れたカボチャが残るようになりました。
+-`pet_the_piggy()` を追加しました。
+-`num_unlocked()` が「感覚」でアンロックされるようになりました。
 
-Code Editor:
--Double clicking identifiers with underscores in them now selects the whole identifier.
--If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
--Zooming is now much smoother.
--The code completer is now properly import aware and can give suggestions from other files.
--Added different cursors for editing text and resizing windows.
--Debugger steps are now based on the code line instead of simulation ticks.
+オーディオ：
+-オーディオが完全に作り直されました。
+-ゲーム開始時に音楽が流れるようになりました！
 
-Other:
--You can now chain comparison operators like in Python.
--`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
--Added a resolution setting.
--Added a setting to turn off the flashing highlights when the code is running.
--The code execution has been optimized further, allowing the game to run smoother while code is running.
--Added a "Toggle HUD" keybind.
+ビジュアル：
+-技術ツリーのビジュアルが完全に刷新されました。
+-画面左上のインベントリパネルに、きれいなアイテムピックアップのビジュアルエフェクトが追加されました。
+-正しくソートされていないサボテンが、より見やすくなるように茶色で表示されるようになりました。
+-まだ成長していなくても、植えた直後から植物が見えるようになりました。
 
-Fixes:
--Some of the most common cases of code highlights being visible through other windows have been fixed.
--Actions like tilling can no longer affect the water drying behavior.
--Fixed keybinding problems on non US keyboards.
--Fixed the piggy bank moving really far away from the farm sometimes.
--Fixed fertilizer not infecting fully grown plants.
--Fixed `set_world_size(get_world_size())` resetting the drone position.
--Fixed a simulation + dinosaur interaction that caused lots of apples to be left behind.
--Fixed the bug that caused error messages to move around when you clicked minimize and then opened the menu.
--Fixed error messages popping up while you are still typing.
+コードエディタ：
+-アンダースコアを含む識別子をダブルクリックすると、識別子全体が選択されるようになりました。
+-「タブをスペースに変換」オプションがオフの場合、インデントのスペースがタブに変換されるようになりました。
+-ズームがよりスムーズになりました。
+-コード補完機能がインポートを正しく認識し、他のファイルからの提案もできるようになりました。
+-テキスト編集用とウィンドウサイズ変更用に異なるカーソルを追加しました。
+-デバッガのステップがシミュレーションのティックではなく、コード行に基づくようになりました。
 
-Breaking Changes from older Patches that you might have missed:
--Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).
--`Items.Bones` has been renamed to `Items.Bone` so all items are singular.
--`Entities.Carrots` has been renamed to `Entities.Carrot` so all entities are singular.
--`Grounds.Turf` has been renamed to `Grounds.Grassland` to make it easier to understand.
--`Items.Water_Tank` has been renamed to `Items.Water` because the tank refill feature has been removed.
--`Unlocks.Benchmark` has been replaced with `Unlocks.Timing`.
--`get_op_count()` has been renamed to `get_tick_count()`.
--`set_farm_size()` has been renamed to `set_world_size()` to be consistent with `get_world_size()`.
--`get_companion()` now returns a tuple of the form (entity, (x, y)) instead of a list.
--`trade()` has been removed from the game.
+その他：
+-Pythonのように比較演算子を連鎖させることができるようになりました。
+-`get_cost(Entities.Hedge)` と `get_cost(Entities.Treasure)` が1x1の迷路のコストを返すようになりました。
+-解像度設定を追加しました。
+-コード実行中の点滅ハイライトをオフにする設定を追加しました。
+-コード実行がさらに最適化され、コード実行中のゲームがよりスムーズに動作するようになりました。
+-「HUDの表示/非表示」キーバインドを追加しました。
+
+修正：
+-他のウィンドウを通してコードのハイライトが見えてしまう最も一般的なケースのいくつかが修正されました。
+-耕作などのアクションが、水の乾燥挙動に影響を与えなくなりました。
+-US配列以外のキーボードでのキーバインドの問題を修正しました。
+-貯金箱が時々農場から非常に遠くに移動してしまう問題を修正しました。
+-完全に成長した植物に肥料が感染しない問題を修正しました。
+-`set_world_size(get_world_size())` がドローンの位置をリセットする問題を修正しました。
+-シミュレーションと恐竜のインタラクションによって多くのリンゴが残される問題を修正しました。
+-最小化をクリックしてからメニューを開くとエラーメッセージが動き回るバグを修正しました。
+-入力中にエラーメッセージがポップアップする問題を修正しました。
+
+見逃したかもしれない古いパッチからの破壊的変更：
+-他のファイル（ゲーム内のウィンドウ）で定義された関数は、暗黙的にインポートされなくなりました。Pythonのように、明示的なimport文をアンロックして使用する必要があります（importのアンロックを参照）。
+-すべてのアイテムを単数形にするため、`Items.Bones` は `Items.Bone` に名前が変更されました。
+-すべてのエンティティを単数形にするため、`Entities.Carrots` は `Entities.Carrot` に名前が変更されました。
+-分かりやすくするため、`Grounds.Turf` は `Grounds.Grassland` に名前が変更されました。
+-タンク補充機能が削除されたため、`Items.Water_Tank` は `Items.Water` に名前が変更されました。
+-`Unlocks.Benchmark` は `Unlocks.Timing` に置き換えられました。
+-`get_op_count()` は `get_tick_count()` に名前が変更されました。
+-`get_world_size()` との一貫性を保つため、`set_farm_size()` は `set_world_size()` に名前が変更されました。
+-`get_companion()` はリストの代わりに (entity, (x, y)) という形式のタプルを返すようになりました。
+-`trade()` はゲームから削除されました。

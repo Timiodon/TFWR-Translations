@@ -2,9 +2,33 @@
 
 ## The Farmer Was Replaced
 
-Développé par Timon Herzog
+### Programmation, conception de jeu et graphismes
+Timon Herzog
 
+### Musique et effets sonores
+Floris Demandt
 
-Contributeurs à la traduction :
+### Publié par Metaroot
+Andri Weidmann
+Flurin Weidmann
+Nathalie Weidmann
 
+### Illustration principale
+Stephanie Stutz
+
+### Traductions par Allcorrect
+
+### Contributeurs de la traduction communautaire
+HoshiyomiLusia
 Davide Altamura
+
+### Modérateurs Discord
+Josh Markey
+Jeff Siebold alias Noon Knight
+
+### Remerciements spéciaux
+Jonas Bornhöft
+danielrab
+ThatMerlinGuy
+Ramón Buchenberger
+Swiss Game Hub

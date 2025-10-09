@@ -1,68 +1,84 @@
-# Patch Notes
+# 1.0 版本终于来啦！
+经过三年半的稳定开发、20 多次更新以及各位玩家的出色反馈，抢先体验阶段终于结束了。
 
-Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
-Also a large part of the tech tree has been reworked to be a bit more exponential.
+## 1.0 版本有什么新内容？
+- 多架无人机，最大化你的农场效率
+- 重制了科技树，进度曲线更加指数化
+- 60 项成就来考验你的技术
+- 解锁特定成就将为你的无人机提供特殊帽子
+- 完整的音效重制
+- 一首新的背景音乐
+- 生活质量改进和各种修复
+- 重大变更：升级将被部分重置。迷宫的复用机制略有不同。
 
-Breaking Changes:
--Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
--If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
+非常感谢大家从抢先体验到正式版一路以来对 The Farmer Was Replaced 的支持。
+我迫不及待地想看看大家会如何用富有创意和聪明的方式来使用多无人机！
+-Timon
 
-Gameplay:
--Added tooltips with helpful information when hovering tiles in the farm.
--Using `measure()` anywhere in the maze now always returns the position of the current treasure. You no longer have to measure the treasure specifically.
--There is now a `can_move()` function for the maze.
--Pumpkins now scale up to 6x6 instead of 5x5.
--The ground drying behavior has slightly changed. Instead of drying by 1% every 0.8 to 1.2 seconds, each ground tile now has a 10% chance of drying every 0.1 seconds.
--The cactus grow time is now always exactly 1 second.
--Pumpkins now leave behind a dead pumpkin to indicate that they have died.
--Added `pet_the_piggy()`.
--`num_unlocked()` now already gets unlocked with Senses.
+也别忘了加入我们的 Discord：
+[Discord](https://discord.com/invite/kj33cJkeJn)
 
-Audio:
--The audio has been completely remade.
--There is music when you start the game now!
+## 完整更新说明
+重大变更：
+-由于科技树重制，旧存档的升级数据将不再有效。当你打开旧存档时，游戏会将所有升级重置到一个合理的水平。
+-如果你在复用迷宫，现在必须先重新定位宝藏，然后再测量位置，而不是先测量再重新定位。
 
-Visuals:
--The visuals of the tech tree have been completely reworked.
--The inventory panel in the top left corner of the screen now has a nice item pickup visual effect.
--Cacti are now brown when they aren't correctly sorted to make it more visible.
--Plants are now visible immediately after planting, even if they haven't grown yet.
+游戏玩法：
+-为农场地块添加了悬停提示，显示有用的信息。
+-现在在迷宫的任何地方使用 `measure()` 都会返回当前宝藏的位置。你不再需要专门测量宝藏本身。
+-现在迷宫有了 `can_move()` 函数。
+-南瓜现在可以长到 6x6，而不是 5x5。
+-地块变干的行为略有改变。现在每块地每 0.1 秒有 10% 的几率变干，而不是每 0.8 到 1.2 秒变干 1%。
+-仙人掌的生长时间现在固定为 1 秒。
+-南瓜现在枯死后会留下枯萎南瓜，以示其已经枯死。
+-添加了 `pet_the_piggy()`。
+-`num_unlocked()` 现在通过 Senses 解锁。
 
-Code Editor:
--Double clicking identifiers with underscores in them now selects the whole identifier.
--If the "tabs to spaces" option is turned off, indentation spaces are now converted to tabs.
--Zooming is now much smoother.
--The code completer is now properly import aware and can give suggestions from other files.
--Added different cursors for editing text and resizing windows.
--Debugger steps are now based on the code line instead of simulation ticks.
+音频：
+-音频已完全重制。
+-现在游戏启动时有音乐了！
 
-Other:
--You can now chain comparison operators like in Python.
--`get_cost(Entities.Hedge)` and `get_cost(Entities.Treasure)` now return the cost of a 1x1 maze.
--Added a resolution setting.
--Added a setting to turn off the flashing highlights when the code is running.
--The code execution has been optimized further, allowing the game to run smoother while code is running.
--Added a "Toggle HUD" keybind.
+视觉效果：
+-科技树的视觉效果已完全重制。
+-屏幕左上角的物品栏现在有了很好看的物品拾取视觉效果。
+-仙人掌在未正确排序时现在会显示为棕色，使其更加显眼。
+-植物在种植后会立即显示，即使它们还没有开始生长。
 
-Fixes:
--Some of the most common cases of code highlights being visible through other windows have been fixed.
--Actions like tilling can no longer affect the water drying behavior.
--Fixed keybinding problems on non US keyboards.
--Fixed the piggy bank moving really far away from the farm sometimes.
--Fixed fertilizer not infecting fully grown plants.
--Fixed `set_world_size(get_world_size())` resetting the drone position.
--Fixed a simulation + dinosaur interaction that caused lots of apples to be left behind.
--Fixed the bug that caused error messages to move around when you clicked minimize and then opened the menu.
--Fixed error messages popping up while you are still typing.
+代码编辑器：
+-双击带有下划线的标识符现在会选中整个标识符。
+-如果关闭“制表符转空格”选项，缩进的空格现在会被转换成制表符。
+-缩放现在更加平滑。
+-代码补全现在能正确识别导入，并可以提供来自其他文件的建议。
+-为编辑文本和调整窗口大小添加了不同的光标。
+-调试器步进现在基于代码行，而不是模拟的 tick。
 
-Breaking Changes from older Patches that you might have missed:
--Functions defined in other files (windows in the game) are no longer imported implicitly. You now have to unlock and use explicit import statements like in Python (See the import unlock).
--`Items.Bones` has been renamed to `Items.Bone` so all items are singular.
--`Entities.Carrots` has been renamed to `Entities.Carrot` so all entities are singular.
--`Grounds.Turf` has been renamed to `Grounds.Grassland` to make it easier to understand.
--`Items.Water_Tank` has been renamed to `Items.Water` because the tank refill feature has been removed.
--`Unlocks.Benchmark` has been replaced with `Unlocks.Timing`.
--`get_op_count()` has been renamed to `get_tick_count()`.
--`set_farm_size()` has been renamed to `set_world_size()` to be consistent with `get_world_size()`.
--`get_companion()` now returns a tuple of the form (entity, (x, y)) instead of a list.
--`trade()` has been removed from the game.
+其他：
+-现在可以像在 Python 中一样链式使用比较运算符。
+-`get_cost(Entities.Hedge)` 和 `get_cost(Entities.Treasure)` 现在会返回一个 1x1 迷宫的成本。
+-添加了分辨率设置。
+-添加了一个设置，用于在代码运行时关闭闪烁高亮。
+-代码执行已进一步优化，使得游戏在代码运行时更加流畅。
+-添加了“切换 HUD”的快捷键绑定。
+
+修复：
+-修复了一些最常见的代码高亮穿透其他窗口显示的问题。
+-耕地等操作现在不会再影响地块变干的行为了。
+-修复了在非美式键盘上的按键绑定问题。
+-修复了存钱罐有时会移动到离农场很远的地方的问题。
+-修复了肥料不会感染完全成熟植物的问题。
+-修复了 `set_world_size(get_world_size())` 会重置无人机位置的问题。
+-修复了模拟+恐龙互动导致留下大量苹果的问题。
+-修复了点击最小化然后打开菜单时错误信息会移动的 bug。
+-修复了在你仍在输入时弹出错误信息的问题。
+
+你可能错过的旧版本更新中的重大变更：
+-在其他文件（游戏中的窗口）中定义的函数不再被隐式导入。现在你必须解锁并使用像 Python 中那样的显式导入语句（参见导入解锁项）。
+-`Items.Bones` 已重命名为 `Items.Bone`，以使所有物品名称都是单数。
+-`Entities.Carrots` 已重命名为 `Entities.Carrot`，以使所有实体名称都是单数。
+-`Grounds.Turf` 已重命名为 `Grounds.Grassland`，使其更易于理解。
+-`Items.Water_Tank` 已重命名为 `Items.Water`，因为水箱补充功能已被移除。
+-`Unlocks.Benchmark` 已被 `Unlocks.Timing` 替换。
+-`get_op_count()` 已重命名为 `get_tick_count()`。
+-`set_farm_size()` 已重命名为 `set_world_size()`，以与 `get_world_size()` 保持一致。
+-`get_companion()` 现在返回一个形如 (entity, (x, y)) 的元组，而不是列表。
+-`trade()` 已从游戏中移除。

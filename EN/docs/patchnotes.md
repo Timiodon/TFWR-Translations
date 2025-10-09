@@ -1,8 +1,24 @@
-# Patch Notes
+# 1.0 is finally here!
+After over three and a half years of steady development, over 20 updates, and your amazing feedback, Early Access has finally come to an end.
 
-Multiple Drones Have been added to the game. Check out the new "Megafarm" unlock!
-Also a large part of the tech tree has been reworked to be a bit more exponential.
+## What’s new in 1.0?
+- Multiple drones to maximize your farming
+- A reworked unlock tree with a more exponential progression
+- 60 achievements to test your skills
+- Unlocking certain achievements will give your drone special hats
+- A complete sound overhaul
+- One new music track
+- Quality of life improvements and various fixes
+- Breaking Changes: Upgrades will be partially reset. Reusing mazes works slightly differently.
 
+Thank you all so much for supporting The Farmer Was Replaced from Early Access to full release. 
+I can’t wait to see how you use the multiple drones in creative and clever ways!
+-Timon
+
+Also make sure to join us on Discord: 
+[Discord](https://discord.com/invite/kj33cJkeJn)
+
+## Full Patch Notes
 Breaking Changes:
 -Due to the rework of the tech tree, the upgrade numbers of old savegames will no longer be valid. The game will reset all upgrades to a reasonable level when you open an old save.
 -If you are reusing mazes you now have to first reposition the treasure and then measure the position instead of first measuring and then repositioning.
