@@ -23,6 +23,7 @@ HoshiyomiLusia
 Davide Altamura
 
 ### Moderadores de Discord
+MrBlobfish
 Josh Markey
 Jeff Siebold aka Noon Knight
 

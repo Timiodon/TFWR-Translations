@@ -23,6 +23,7 @@ HoshiyomiLusia
 Davide Altamura
 
 ### Discord 관리자
+MrBlobfish
 Josh Markey
 Jeff Siebold aka Noon Knight
 
