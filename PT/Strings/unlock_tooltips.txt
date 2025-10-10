@@ -14,6 +14,7 @@
 
 `change_hat(Hats.Green_Hat)`
 @unlock_descr_the_farmers_remains = ?????????
+@unlock_descr_top_hat = Um chapéu muito elegante que só os melhores drones podem usar.
 @unlock_descr_senses = O drone pode ver o que está sob ele e onde ele está.
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -148,6 +149,7 @@ other_file.function()`
 @timing = Cronometragem
 @trees = Árvores
 @the_farmers_remains = ?
+@top_hat = Cartola
 @utilities = Utilitários
 @variables = Variáveis
 @watering = Rega

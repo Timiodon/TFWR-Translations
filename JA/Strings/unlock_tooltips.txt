@@ -14,6 +14,7 @@
 
 `change_hat(Hats.Green_Hat)`
 @unlock_descr_the_farmers_remains = ?????????
+@unlock_descr_top_hat = 最高のドローンだけが身につけられる、とってもおしゃれな帽子。
 @unlock_descr_senses = ドローンは自分の下にあるものと自分の位置を確認できるようになります。
 
 `if get_pos_x() < 5 and num_items(Items.Wood) < 200:
@@ -148,6 +149,7 @@ other_file.function()`
 @timing = タイミング
 @trees = 木
 @the_farmers_remains = ？
+@top_hat = トップハット
 @utilities = ユーティリティ
 @variables = 変数
 @watering = 水やり
