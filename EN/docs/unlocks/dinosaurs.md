@@ -9,7 +9,7 @@ The hat can be equipped with
 
 Unfortunately it doesn't quite look like on the advertisement...
 
-If you equip the dinosaur hat and have enough pumpkins, an [apple](objects/apple) will automatically be purchased and placed under the drone.
+If you equip the dinosaur hat and have enough cactus, an [apple](objects/apple) will automatically be purchased and placed under the drone.
 When the drone is over an apple and moves again, it will eat the apple and grow its tail by one. If you can afford it, a new apple will be purchased and placed in a random location.
 The apple cannot spawn if something else is planted where it wants to be.
 
