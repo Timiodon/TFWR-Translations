@@ -39,7 +39,8 @@ Here's another example that passes a different direction to each drone.
         do_a_flip()
     spawn_drone(task)`
 
-<spoiler=show hint> Check out this super useful parallel `for_all` function, which takes any function and runs it on every farm tile. It makes use of all available drones to do so.
+<spoiler=show hint>
+Check out this super useful parallel `for_all` function, which takes any function and runs it on every farm tile. It makes use of all available drones to do so.
 
 `def for_all(f):
 	def row():

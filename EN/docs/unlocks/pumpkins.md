@@ -3,7 +3,7 @@
 
 When all the pumpkins in a square are fully grown, they will grow together to form a giant pumpkin. Unfortunately, pumpkins have a 20% chance of dying once they are fully grown, so you will need to replant the dead ones if you want them to merge. 
 
-When a pumpkin dies, it leaves behind a dead pumpkin that won't drop anything when harvested. Planting a new plant in its place automatically removes the dead pumpkin, so there is no need to harvest it. `can_harvest()` always returns `False` on dead pumpkins.
+When a pumpkin dies, it leaves behind a dead pumpkin that won't drop anything when harvested. Planting a new plant in its place automatically removes the dead pumpkin, so there is no need to harvest it. Even though you can `harvest()` dead pumpkins, `can_harvest()` always returns `False` on dead pumpkins.
 
 The yield of a giant pumpkin depends on the size of the pumpkin.
 
