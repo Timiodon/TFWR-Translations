@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = Le chapeau d'un sorcier. Le débloquer a dû demander un peu de magie de programmation !
 @hat_descr_top_hat = Il a l'air cher et distingué.
 @hat_descr_traffic_cone = La sécurité d'abord !
+@hat_descr_traffic_cone_stack = La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord !
 @hat_descr_pumpkin_hat = Une citrouille pour ta tête. Parfait pour Halloween.
 @hat_descr_carrot_hat = Qui ne voudrait pas de carottes sur la tête ?
 @hat_descr_cactus_hat = Un peu piquant.

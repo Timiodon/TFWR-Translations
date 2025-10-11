@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = Il cappello di un mago. Sbloccarlo deve aver richiesto un po' di magia di programmazione!
 @hat_descr_top_hat = Sembra costoso e distinto.
 @hat_descr_traffic_cone = La sicurezza prima di tutto!
+@hat_descr_traffic_cone_stack = La sicurezza prima di tutto! La sicurezza prima di tutto! La sicurezza prima di tutto! La sicurezza prima di tutto! La sicurezza prima di tutto! La sicurezza prima di tutto!
 @hat_descr_pumpkin_hat = Una zucca per la tua testa. Perfetto per Halloween.
 @hat_descr_carrot_hat = Chi non vorrebbe delle carote in testa?
 @hat_descr_cactus_hat = Un po' spinoso.

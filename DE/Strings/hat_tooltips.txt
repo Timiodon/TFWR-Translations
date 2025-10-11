@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = Der Hut eines Zauberers. Das Freischalten muss wohl etwas Programmiermagie erfordert haben!
 @hat_descr_top_hat = Er sieht teuer und vornehm aus.
 @hat_descr_traffic_cone = Sicherheit geht vor!
+@hat_descr_traffic_cone_stack = Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor!
 @hat_descr_pumpkin_hat = Ein Kürbis für deinen Kopf. Perfekt für Halloween.
 @hat_descr_carrot_hat = Wer will denn keine Karotten auf dem Kopf?
 @hat_descr_cactus_hat = Etwas stachelig.

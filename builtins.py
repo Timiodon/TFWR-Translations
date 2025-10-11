@@ -1,6 +1,6 @@
 # This file gives Python type definitions to TFWR builtins to allow editing code with Python editors.
 # Note that the games language is not Python and these definitions are only an approximation.
-# Contributed by @Noon, @KlingonDragon and @dieckie on the TFWR Discord server.
+# Contributed by @Noon, @KlingonDragon, @dieckie and @Flekay on the TFWR Discord server.
 
 from typing import Any, Optional, Iterable
 
@@ -52,46 +52,136 @@ class Hat:
     """A member of the Hats class"""
 
 class Hats:
-    Straw_Hat: Hat
-    """The default hat."""
+    Brown_Hat: Hat
+    """A brown hat."""
+
+    Cactus_Hat: Hat
+    """A hat shaped like a cactus."""
+
+    Carrot_Hat: Hat
+    """A hat shaped like a carrot."""
 
     Dinosaur_Hat: Hat
     """Equip it to start the dinosaur game."""
+
+    Gold_Hat: Hat
+    """A golden hat."""
+
+    Gold_Trophy_Hat: Hat
+    """A golden trophy hat."""
+
+    Golden_Cactus_Hat: Hat
+    """A golden hat shaped like a cactus."""
+
+    Golden_Carrot_Hat: Hat
+    """A golden hat shaped like a carrot."""
+
+    Golden_Gold_Hat: Hat
+    """A golden version of the gold hat."""
+
+    Golden_Pumpkin_Hat: Hat
+    """A golden hat shaped like a pumpkin."""
+
+    Golden_Sunflower_Hat: Hat
+    """A golden hat shaped like a sunflower."""
+
+    Golden_Tree_Hat: Hat
+    """A golden hat shaped like a tree."""
+
+    Gray_Hat: Hat
+    """A gray hat."""
+
+    Green_Hat: Hat
+    """A green hat."""
+
+    Pumpkin_Hat: Hat
+    """A hat shaped like a pumpkin."""
+
+    Purple_Hat: Hat
+    """A purple hat."""
+
+    Silver_Trophy_Hat: Hat
+    """A silver trophy hat."""
+
+    Straw_Hat: Hat
+    """The default hat."""
+
+    Sunflower_Hat: Hat
+    """A hat shaped like a sunflower."""
+
+    The_Farmers_Remains: Hat
+    """The remains of the farmer."""
+
+    Top_Hat: Hat
+    """A fancy top hat."""
+
+    Traffic_Cone: Hat
+    """A traffic cone hat."""
+
+    Traffic_Cone_Stack: Hat
+    """A stack of traffic cones as a hat."""
+
+    Tree_Hat: Hat
+    """A hat shaped like a tree."""
+
+    Wizard_Hat: Hat
+    """A magical wizard hat."""
+
+    Wood_Trophy_Hat: Hat
+    """A wooden trophy hat."""
 
 # -------------------------------------------------------------------------------
 class Leaderboard:
     """A member of the Leaderboards class"""
 
 class Leaderboards:
-    Fastest_Reset: Leaderboard
-    """Fully automate the entire game."""
-
-    Maze: Leaderboard
-    """Farm 300000 gold."""
-
-    Dinosaur: Leaderboard
-    """Farm 98000 bones."""
-
     Cactus: Leaderboard
-    """Farm 100000 cacti."""
+    """Farm 33554432 cacti with multiple drones."""
 
-    Wood: Leaderboard
-    """Farm 100000 wood"""
+    Cactus_Single: Leaderboard
+    """Farm 131072 cacti with a single drone on an 8x8 farm."""
 
     Carrots: Leaderboard
-    """Farm 100000 carrots"""
+    """Farm 2000000000 carrots with multiple drones."""
 
-    Pumpkins: Leaderboard
-    """Farm 100000 pumpkins"""
+    Carrots_Single: Leaderboard
+    """Farm 100000000 carrots with a single drone on an 8x8 farm."""
+
+    Dinosaur: Leaderboard
+    """Farm 33488928 bones with multiple drones."""
+
+    Fastest_Reset: Leaderboard
+    """The most prestigious category. Completely automate the game from a single farm plot to unlocking the leaderboards again."""
 
     Hay: Leaderboard
-    """Farm 100000 hay"""
+    """Farm 2000000000 hay with multiple drones."""
 
-    Polyculture: Leaderboard
-    """Farm 100000 hay, wood and carrots"""
-    
+    Hay_Single: Leaderboard
+    """Farm 100000000 hay with a single drone on an 8x8 farm."""
+
+    Maze: Leaderboard
+    """Farm 9863168 gold with multiple drones."""
+
+    Maze_Single: Leaderboard
+    """Farm 616448 gold with a single drone on an 8x8 farm."""
+
+    Pumpkins: Leaderboard
+    """Farm 200000000 pumpkins with multiple drones."""
+
+    Pumpkins_Single: Leaderboard
+    """Farm 10000000 pumpkins with a single drone on an 8x8 farm."""
+
     Sunflowers: Leaderboard
-    """Farm 100000 sunflowers"""
+    """Farm 100000 sunflowers with multiple drones."""
+
+    Sunflowers_Single: Leaderboard
+    """Farm 10000 sunflowers with a single drone on an 8x8 farm."""
+
+    Wood: Leaderboard
+    """Farm 10000000000 wood with multiple drones."""
+
+    Wood_Single: Leaderboard
+    """Farm 500000000 wood with a single drone on an 8x8 farm."""
 
 # -------------------------------------------------------------------------------
 class Entity:

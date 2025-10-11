@@ -9,11 +9,11 @@ Le chapeau peut être équipé avec
 
 Malheureusement, il n'a pas tout à fait l'air de ce qu'on voit sur la publicité...
 
-Si tu équipes le chapeau de dinosaure et que tu as assez de citrouilles, une [pomme](objects/apple) sera automatiquement achetée et placée sous le drone.
+Si tu équipes le chapeau de dinosaure et que tu as assez de cactus, une [pomme](objects/apple) sera automatiquement achetée et placée sous le drone.
 Quand le drone est sur une pomme et se déplace à nouveau, il mangera la pomme et sa queue grandira de un. Si tu peux te le permettre, une nouvelle pomme sera achetée et placée à un endroit aléatoire.
 La pomme ne peut pas apparaître si quelque chose d'autre est planté là où elle veut être.
 
-La queue du dinosaure sera traînée derrière le drone, remplissant les cases précédentes sur lesquelles le drone s'est déplacé. Si un drone essaie de se déplacer sur la queue, `move()` échouera et renverra `False`.
+La queue du dinosaure sera traînée derrière le drone, remplissant les cases précédentes sur lesquelles le drone s'est déplacé. Si un drone essaie de se déplacer sur la queue, `move()` échouera et renverra `False`. 
 Le dernier segment de la queue s'écartera pendant le déplacement, tu pourras donc te déplacer dessus. Cependant, si le serpent remplit toute la ferme, tu ne pourras plus te déplacer. Tu peux donc vérifier si le serpent est adulte en vérifiant si tu ne peux plus bouger.
 
 Utiliser `measure()` sur une pomme renverra la position de la prochaine pomme sous forme de tuple.
@@ -21,7 +21,7 @@ Utiliser `measure()` sur une pomme renverra la position de la prochaine pomme so
 `next_x, next_y = measure()`
 
 Lorsque le chapeau est de nouveau retiré en équipant un chapeau différent, la queue sera récoltée.
-Tu recevras un nombre d'os égal au carré de la longueur de la queue. Donc pour une queue de longueur `n`, tu recevras `n**2` `Items.Bone`.
+Tu recevras un nombre d'os égal au carré de la longueur de la queue. Donc pour une queue de longueur `n`, tu recevras `n**2` `Items.Bone`. 
 Par Exemple :
 longueur 1 => 1 os
 longueur 2 => 4 os

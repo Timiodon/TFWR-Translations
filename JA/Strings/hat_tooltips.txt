@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = 魔法使いの帽子。これをアンロックするには、プログラミングの魔法のようなものが必要だったに違いありません！
 @hat_descr_top_hat = 高価で気品があるように見えます。
 @hat_descr_traffic_cone = 安全第一！
+@hat_descr_traffic_cone_stack = 安全第一！安全第一！安全第一！安全第一！安全第一！安全第一！
 @hat_descr_pumpkin_hat = 頭にかぶるカボチャ。ハロウィンにぴったりです。
 @hat_descr_carrot_hat = 頭にニンジンを乗せたくない人がいるでしょうか？
 @hat_descr_cactus_hat = 少しトゲトゲしています。

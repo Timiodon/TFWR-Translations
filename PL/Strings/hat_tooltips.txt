@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = Kapelusz czarodzieja. Odblokowanie go musiało wymagać programistycznej magii!
 @hat_descr_top_hat = Wygląda drogo i dystyngowanie.
 @hat_descr_traffic_cone = Bezpieczeństwo przede wszystkim!
+@hat_descr_traffic_cone_stack = Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim!
 @hat_descr_pumpkin_hat = Dynia na twoją głowę. Idealna na Halloween.
 @hat_descr_carrot_hat = Kto by nie chciał mieć marchewek na głowie?
 @hat_descr_cactus_hat = Trochę kłujący.

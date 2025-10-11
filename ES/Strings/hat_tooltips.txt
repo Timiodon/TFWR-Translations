@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = El sombrero de un mago. ¡Desbloquear esto debe haber requerido algo de magia de programación!
 @hat_descr_top_hat = Se ve caro y distinguido.
 @hat_descr_traffic_cone = ¡La seguridad es lo primero!
+@hat_descr_traffic_cone_stack = ¡Seguridad primero! ¡Seguridad primero! ¡Seguridad primero! ¡Seguridad primero! ¡Seguridad primero! ¡Seguridad primero!
 @hat_descr_pumpkin_hat = Una calabaza para tu cabeza. Perfecta para Halloween.
 @hat_descr_carrot_hat = ¿Quién no querría zanahorias en la cabeza?
 @hat_descr_cactus_hat = Un poco puntiagudo.

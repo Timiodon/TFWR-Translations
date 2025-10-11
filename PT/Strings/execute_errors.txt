@@ -35,7 +35,7 @@ Se você o importou, provavelmente tem um ciclo de importação (Veja a página 
 @error_missing_import_before_unlock = {0} nunca foi definido. Parece estar definido no arquivo {1}. Você tem que desbloquear importações para poder importar coisas de outros arquivos.
 @error_missing_module_access = {0} nunca foi definido. Parece estar definido no arquivo {1}, que foi importado, mas não está sendo usado. Você precisa acessá-lo através do nome do módulo, assim:
 
-`{1}`.`{0}`
+{1}`.`{0}
 @error_call_before_def = {0} não está definido. Parece estar definido em algum lugar neste arquivo, mas a definição ainda não foi executada. Funções só podem ser chamadas após a declaração `def`.
 @error_not_a_function = Você tentou chamar algo que не é uma função. Um erro comum que pode causar isso é ter uma variável com o mesmo nome da função.
 @error_invalid_const = {0} não existe.

@@ -7,6 +7,7 @@
 @hat_descr_wizard_hat = The hat of a wizard. Unlocking this must have taken some programming magic!
 @hat_descr_top_hat = It looks expensive and distinguished.
 @hat_descr_traffic_cone = Safety first!
+@hat_descr_traffic_cone_stack = Safety first! Safety first! Safety first! Safety first! Safety first! Safety first!
 @hat_descr_pumpkin_hat = A pumpkin for your head. Perfect for Halloween.
 @hat_descr_carrot_hat = Who wouldn't want carrots on their head?
 @hat_descr_cactus_hat = A bit spiky.
