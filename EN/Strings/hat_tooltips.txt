@@ -18,6 +18,7 @@
 @hat_descr_sunflower_hat = Bright and cheerful.
 @hat_descr_golden_sunflower_hat = Can be obtained by completing all Mini-Games, Puzzle Mode, and Survival Mode.
 @hat_descr_gold_hat = Show off your wealth with this golden hat.
+@hat_descr_golden_gold_hat = Okay at this point you are just making the leprechauns jealous.
 @hat_descr_tree_hat = How nice!
 @hat_descr_golden_tree_hat = Can be admired by visiting the east coast of San Andreas near Braddock Pass on Mount Gordo at night. 
 @hat_descr_gold_trophy_hat = Only for the best farmer.
