@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Un peu piquant.
 @hat_descr_sunflower_hat = Vif et joyeux.
 @hat_descr_gold_hat = Montre ta richesse avec ce chapeau doré.
+@hat_descr_golden_gold_hat = Il est encore plus doré que le chapeau en or normal.
 @hat_descr_tree_hat = Joli !
 @hat_descr_gold_trophy_hat = Seulement pour le meilleur fermier.
 @hat_descr_silver_trophy_hat = Pour le deuxième meilleur fermier.

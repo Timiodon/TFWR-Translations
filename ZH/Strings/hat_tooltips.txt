@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = 有点扎手。
 @hat_descr_sunflower_hat = 明亮又欢快。
 @hat_descr_gold_hat = 戴上这顶金帽子炫富吧。
+@hat_descr_golden_gold_hat = 比普通的金帽子还要金光闪闪。
 @hat_descr_tree_hat = 真不错！
 @hat_descr_gold_trophy_hat = 只属于最棒的农民。
 @hat_descr_silver_trophy_hat = 属于第二棒的农民。

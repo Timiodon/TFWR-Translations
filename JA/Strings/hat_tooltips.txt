@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = 少しトゲトゲしています。
 @hat_descr_sunflower_hat = 明るくて陽気。
 @hat_descr_gold_hat = この黄金の帽子で財力を見せつけましょう。
+@hat_descr_golden_gold_hat = 通常の金の帽子よりも、さらに輝く金色です。
 @hat_descr_tree_hat = なんて素敵！
 @hat_descr_gold_trophy_hat = 最高の農家だけに与えられます。
 @hat_descr_silver_trophy_hat = 2番目に優れた農家に与えられます。

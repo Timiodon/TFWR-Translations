@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Etwas stachelig.
 @hat_descr_sunflower_hat = Hell und fröhlich.
 @hat_descr_gold_hat = Zeig deinen Reichtum mit diesem goldenen Hut.
+@hat_descr_golden_gold_hat = Er ist sogar noch goldener als der normale Goldhut.
 @hat_descr_tree_hat = Wie schön!
 @hat_descr_gold_trophy_hat = Nur für den besten Farmer.
 @hat_descr_silver_trophy_hat = Für den zweitbesten Farmer.

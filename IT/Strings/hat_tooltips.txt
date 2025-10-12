@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Un po' spinoso.
 @hat_descr_sunflower_hat = Luminoso e allegro.
 @hat_descr_gold_hat = Mostra la tua ricchezza con questo cappello d'oro.
+@hat_descr_golden_gold_hat = È ancora più dorato del normale cappello d'oro.
 @hat_descr_tree_hat = Che carino!
 @hat_descr_gold_trophy_hat = Solo per il miglior contadino.
 @hat_descr_silver_trophy_hat = Per il secondo miglior contadino.

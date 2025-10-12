@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Trochę kłujący.
 @hat_descr_sunflower_hat = Jasny i wesoły.
 @hat_descr_gold_hat = Pochwal się swoim bogactwem dzięki temu złotemu kapeluszowi.
+@hat_descr_golden_gold_hat = Jest jeszcze bardziej złoty niż zwykły złoty kapelusz.
 @hat_descr_tree_hat = Jak miło!
 @hat_descr_gold_trophy_hat = Tylko dla najlepszego rolnika.
 @hat_descr_silver_trophy_hat = Dla drugiego najlepszego rolnika.

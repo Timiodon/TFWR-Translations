@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Немного колется.
 @hat_descr_sunflower_hat = Яркая и веселая.
 @hat_descr_gold_hat = Похвастайся своим богатством!
+@hat_descr_golden_gold_hat = Она даже золотее, чем обычная золотая шляпа.
 @hat_descr_tree_hat = Как мило!
 @hat_descr_gold_trophy_hat = Только для лучшего фермера.
 @hat_descr_silver_trophy_hat = Для фермера на втором месте.

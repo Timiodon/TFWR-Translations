@@ -13,6 +13,7 @@
 @hat_descr_cactus_hat = Un poco puntiagudo.
 @hat_descr_sunflower_hat = Brillante y alegre.
 @hat_descr_gold_hat = Presume de tu riqueza con este sombrero dorado.
+@hat_descr_golden_gold_hat = Es incluso más dorado que el sombrero de oro normal.
 @hat_descr_tree_hat = ¡Qué bonito!
 @hat_descr_gold_trophy_hat = Solo para el mejor granjero.
 @hat_descr_silver_trophy_hat = Para el segundo mejor granjero.
