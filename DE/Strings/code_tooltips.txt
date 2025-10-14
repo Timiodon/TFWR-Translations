@@ -352,7 +352,7 @@ dauert `200` Ticks bei Erfolg, andernfalls `1` Tick.
 Beispiel:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Wird verwendet, um zu prüfen, ob eine Freischaltung, eine Entität, ein Boden oder ein Item bereits freigeschaltet ist.
+Wird verwendet, um zu prüfen, ob eine Freischaltung, eine Entität, ein Boden, ein Item oder ein Hut bereits freigeschaltet ist.
 
 gibt `1` plus die Anzahl der Upgrades von `thing` zurück, falls `thing` verbesserbar ist. Andernfalls gibt es `1` zurück, wenn `thing` freigeschaltet ist, sonst `0`.
 

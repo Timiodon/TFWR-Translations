@@ -943,7 +943,7 @@ def unlock(unlock: Unlock) -> bool:
 # -------------------------------------------------------------------------------
 def num_unlocked(thing: Unlock | Entity | Ground | Item) -> int:
     """
-    Used to check if an unlock, entity, ground or item is already unlocked.
+    Used to check if an unlock, entity, ground, item or hat is already unlocked.
 
     returns `1` plus the number of times `thing` has been upgraded if `thing` is upgradable. Otherwise returns `1` if `thing` is unlocked, `0` otherwise.
 

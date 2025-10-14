@@ -352,7 +352,7 @@ prend `200` ticks pour s'exécuter en cas de succès, `1` tick sinon.
 exemple :
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Utilisé pour vérifier si un déblocage, une entité, un sol ou un objet est déjà débloqué.
+Utilisé pour vérifier si un déblocage, une entité, un sol, un objet ou un chapeau est déjà débloqué.
 
 renvoie `1` plus le nombre de fois que `thing` a été amélioré si `thing` est améliorable. Sinon, renvoie `1` si `thing` est débloqué, `0` sinon.
 

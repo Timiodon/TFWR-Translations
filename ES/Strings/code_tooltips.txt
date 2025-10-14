@@ -352,9 +352,9 @@ tarda `200` ticks en ejecutarse si tuvo éxito, `1` tick en caso contrario.
 ejemplo:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Se usa para comprobar si un desbloqueo, entidad, terreno o ítem ya está desbloqueado.
+Se usa para comprobar si un desbloqueo, entidad, terreno, ítem o sombrero ya está desbloqueado.
 
-devuelve `1` más el número de veces que `thing` ha sido mejorada si `thing` es mejorable. De lo contrario, devuelve `1` si `thing` está desbloqueado, `0` en caso contrario.
+devuelve `1` más el número de veces que `thing` ha sido mejorado si `thing` es mejorable. De lo contrario, devuelve `1` si `thing` está desbloqueado, `0` en caso contrario.
 
 tarda `1` tick en ejecutarse.
 

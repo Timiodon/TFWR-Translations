@@ -352,7 +352,7 @@ if companion != None:
 예시:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-해금 요소, 엔터티, 땅 또는 아이템이 이미 해금되었는지 확인하는 데 사용됩니다.
+해금 요소, 엔터티, 땅, 아이템 또는 모자가 이미 해금되었는지 확인하는 데 사용됩니다.
 
 `thing`이 업그레이드 가능하면 `1`에 `thing`이 업그레이드된 횟수를 더한 값을 반환합니다. 그렇지 않으면 `thing`이 해금된 경우 `1`을, 아니면 `0`을 반환합니다.
 

@@ -352,7 +352,7 @@ if companion != None:
 示例：
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-用于检查某个解锁项、实体、地块或物品是否已经解锁。
+用于检查某个解锁项、实体、地块、物品或帽子是否已经解锁。
 
 如果 `thing` 可升级，则返回 `1` 加上 `thing` 已升级的次数。如果不可升级，则在 `thing` 已解锁时返回 `1`，否则返回 `0`。
 

@@ -352,7 +352,7 @@ zajmuje `200` ticków, jeśli operacja się powiodła, w przeciwnym razie `1` ti
 przykład:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Służy do sprawdzania, czy odblokowanie, obiekt, podłoże lub przedmiot jest już odblokowany.
+Służy do sprawdzania, czy odblokowanie, obiekt, podłoże, przedmiot lub kapelusz jest już odblokowany.
 
 zwraca `1` plus liczbę ulepszeń danej rzeczy (`thing`), jeśli `thing` jest ulepszalna. W przeciwnym razie zwraca `1`, jeśli `thing` jest odblokowana, lub `0` w innym przypadku.
 
