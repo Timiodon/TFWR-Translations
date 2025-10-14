@@ -28,7 +28,7 @@ Em cada uma dessas grades, todos os cactos estão em ordem e a colheita se espal
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-Nesta grade, apenas o cacto inferior esquerdo está em ordem, o que не é suficiente para que a colheita se espalhe:
+Nesta grade, apenas o cacto inferior esquerdo está em ordem, o que não é suficiente para que a colheita se espalhe:
 `1 5 3
 4 9 7
 3 3 2`
@@ -37,5 +37,5 @@ Nesta grade, apenas o cacto inferior esquerdo está em ordem, o que не é sufi
 Se as linhas já estiverem ordenadas, ordenar as colunas não desordenará as linhas.
 </spoiler>
 <spoiler=show hint 2>
-Se você не está familiarizado com algoritmos de ordenação, pode querer pesquisá-los online e pensar sobre quais poderiam ser adaptados para este problema. Lembre-se que nem todos funcionam porque você só pode trocar cactos vizinhos.
+Se você não está familiarizado com algoritmos de ordenação, pode querer pesquisá-los online e pensar sobre quais poderiam ser adaptados para este problema. Lembre-se que nem todos funcionam porque você só pode trocar cactos vizinhos.
 </spoiler>

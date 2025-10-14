@@ -1,5 +1,5 @@
 @error_missing_default_parameter = Todos os argumentos padrão devem estar no final da lista de argumentos.
-@error_invalid_name = {0} não é um nome válido. Nomes devem começar com uma letra e só podem conter letras, dígitos e sublinhados. Também не pode ser uma palavra-chave reservada.
+@error_invalid_name = {0} não é um nome válido. Nomes devem começar com uma letra e só podem conter letras, dígitos e sublinhados. Também não pode ser uma palavra-chave reservada.
 @error_reserved_keyword = {0} é uma palavra-chave reservada. Você não pode usá-la como um nome.
 @error_invalid_assign_expr = Não é possível atribuir um valor a esta expressão.
 @error_no_statements = Um bloco de código deve conter pelo menos uma instrução. 
@@ -17,10 +17,10 @@ A indentação deve ser a mesma para todas as instruções dentro de um bloco de
 @error_unexpected_token = Um {0} é esperado aqui.
 @error_missing_colon = Deve haver dois pontos `:` no início de cada bloco de código.
 @error_unexpected_assign = Você não pode fazer uma atribuição aqui. Para verificar a igualdade, use `==`.
-@error_invalid_for_syntax = Este не é um loop for válido. Um loop for se parece com isto: 
+@error_invalid_for_syntax = Este não é um loop for válido. Um loop for se parece com isto: 
 `for n in range(3):`
 O `for` é sempre seguido pela variável do loop, um `in` e depois uma sequência. Neste exemplo, `n` é o nome da variável, mas pode ser substituído por qualquer outro nome.
-@error_unknown_method = Este método не existe.
+@error_unknown_method = Este método não existe.
 @error_bad_backslash = A barra invertida pode ser usada para dividir expressões em várias linhas. Mas você precisa adicionar uma nova linha depois.
 @error_mixed_indentation = Tabulações e espaços não devem ser misturados.
 @error_expected_close_token = Esperava-se uma vírgula ou um colchete de fechamento.
