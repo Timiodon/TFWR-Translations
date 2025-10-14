@@ -268,7 +268,7 @@ example:
 Limits the speed at which the program is executed to better see what's happening.
 
 A `speed` of `1` is the speed the drone has without any speed upgrades.
-A `speed` of `10` makes the code execute `10` times faster and corresponds to the speed of the drone after `9` speed upgrades.
+A `speed` of `8` makes the code execute `8` times faster and corresponds to the speed of the drone after `3` speed upgrades.
 A `speed` of `0.5` makes the code execute at half of the speed without speed upgrades. This can be useful to see what the code is doing.
 
 If `speed` is faster than the execution can currently go it will just go at max speed.

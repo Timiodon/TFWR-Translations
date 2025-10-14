@@ -79,7 +79,7 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 
 ### `Leaderboards.Sunflowers`
 `leaderboard_run(Leaderboards.Sunflowers, filename, speedup)`
-成功条件: `num_items(Items.Sunflower) >= 100000`
+成功条件: `num_items(Items.Power) >= 100000`
 
 ### `Leaderboards.Pumpkins`
 `leaderboard_run(Leaderboards.Pumpkins, filename, speedup)`
@@ -110,7 +110,7 @@ simulate(filename, unlocks, items, globals, seed, speedup)`
 
 ### `Leaderboards.Sunflowers_Single`
 `leaderboard_run(Leaderboards.Sunflowers_Single, filename, speedup)`
-成功条件: `num_items(Items.Sunflower) >= 10000`
+成功条件: `num_items(Items.Power) >= 10000`
 
 ### `Leaderboards.Pumpkins_Single`
 `leaderboard_run(Leaderboards.Pumpkins_Single, filename, speedup)`

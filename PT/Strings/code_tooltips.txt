@@ -268,7 +268,7 @@ exemplo:
 Limita a velocidade na qual o programa é executado para ver melhor o que está acontecendo.
 
 Uma `speed` de `1` é a velocidade que o drone tem sem nenhuma melhoria de velocidade.
-Uma `speed` de `10` faz o código executar `10` vezes mais rápido e corresponde à velocidade do drone após `9` melhorias de velocidade.
+Uma `speed` de `8` faz o código executar `8` vezes mais rápido e corresponde à velocidade do drone após `3` melhorias de velocidade.
 Uma `speed` de `0.5` faz o código executar na metade da velocidade sem melhorias. Isso pode ser útil para ver o que o código está fazendo.
 
 Se `speed` for mais rápido do que a execução atual, ele simplesmente irá na velocidade máxima.
