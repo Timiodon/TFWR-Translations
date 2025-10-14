@@ -7,7 +7,7 @@ Die Wachstumsgeschwindigkeit einer Pflanze skaliert linear von 1x Geschwindigkei
 Der Boden trocknet mit der Zeit aus: Im Durchschnitt verliert er 1% seines aktuellen Wassers pro Sekunde, aber es gibt dabei eine gewisse zufällige Abweichung. Ein hoher Wasserstand verbraucht viel mehr Wasser als ein niedriger Wasserstand.
 
 Du kannst Wasser für deine Pflanzen verwenden. Alle 10 Sekunden wird automatisch ein Wassertank zu deinem Inventar hinzugefügt.
-Ein Upgrade von `Unlocks.Watering` gibt dir alle 10 Sekunden einen zusätzlichen Wassertank.
+Ein Upgrade von `Unlocks.Watering` verdoppelt die Menge an Wasser, die du alle 10 Sekunden bekommst.
 
 Ein Tank fasst `0.25` Wasser.
 

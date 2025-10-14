@@ -2,7 +2,7 @@
 
 ## The Farmer Was Replaced
 
-### 프로그래밍, 게임 디자인, 아트
+### 프로그래밍, 게임 디자인 및 아트
 Timon Herzog
 
 ### 음악 및 음향 효과
@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### 키 아트
 Stephanie Stutz
 
-### 번역: Allcorrect
+### Allcorrect
+Maria Pavlova (러시아어 번역)
+Evgeniia Ushakova (러시아어 번역)
+Melanie Chen (중국어 번역)
+Siyoon Ji (한국어 번역)
+Mina Horiba-Maguire (일본어 번역)
+Danil Belousov (계정 관리자)
+Elizaveta Shevchenko (팀 리드)
+Yulia Tregubova (프로젝트 매니저)
 
 ### 커뮤니티 번역 기여자
 HoshiyomiLusia

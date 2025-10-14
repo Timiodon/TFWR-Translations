@@ -17,6 +17,14 @@ Nathalie Weidmann
 Stephanie Stutz
 
 ### Tłumaczenia: Allcorrect
+Maria Pavlova (tłumaczenie na rosyjski)
+Evgeniia Ushakova (tłumaczenie na rosyjski)
+Melanie Chen (tłumaczenie na chiński)
+Siyoon Ji (tłumaczenie na koreański)
+Mina Horiba-Maguire (tłumaczenie na japoński)
+Danil Belousov (Account Manager)
+Elizaveta Shevchenko (Team Lead)
+Yulia Tregubova (Project Manager)
 
 ### Tłumacze społecznościowi
 HoshiyomiLusia

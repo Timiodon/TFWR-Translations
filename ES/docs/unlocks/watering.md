@@ -8,7 +8,7 @@ El suelo se seca con el tiempo: de media, pierde el 1% de su agua actual por seg
 Mantener un nivel de agua alto consumirá mucha más agua que mantener un nivel de agua bajo.
 
 Puedes usar agua en tus plantas. Se añade automáticamente un tanque de agua a tu inventario cada 10 segundos.
-Mejorar `Unlocks.Watering` te dará un tanque de agua adicional cada 10 segundos.
+Mejorar `Unlocks.Watering` duplicará la cantidad de agua que obtienes cada 10 segundos.
 
 Un tanque contiene `0.25` de agua.
 

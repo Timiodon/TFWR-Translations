@@ -1,6 +1,6 @@
 # Fertilizante
 En algún momento, esperar a que las plantas crezcan ya no es lo suficientemente eficiente. 
-Similar al agua, recibirás automáticamente 1 fertilizante cada 10 segundos, más uno extra por cada mejora.
+Similar al agua, recibirás automáticamente 1 fertilizante cada 10 segundos, y uno más con cada mejora.
 
 El fertilizante puede hacer que las plantas crezcan instantáneamente. `use_item(Items.Fertilizer)` reduce el tiempo de crecimiento restante de la planta bajo el dron en 2 segundos.
 
