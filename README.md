@@ -1,5 +1,5 @@
 This is a repository containing all the text for the game "The Farmer Was Replaced". It allows community members to submit translation corrections and improvements.
-The default translations are machine translations. They are reasonably good, but there are sometimes errors, especially in the shorter strings.
+Some of the translations are still machine translations though many have been revised or remade by translators. They are reasonably good, but there are sometimes errors, especially in the shorter strings.
 Any corrections are greatly appreciated.
 
 Note that the original game texts may still be updated. This will cause any community translations of that text to be overridden. 
