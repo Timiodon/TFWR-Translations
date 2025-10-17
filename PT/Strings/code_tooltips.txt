@@ -375,7 +375,7 @@ exemplo:
 @code_tooltip_measure = `measure(direction = None)` 
 Pode medir alguns valores em algumas entidades. O efeito disso depende da entidade.
 
-Se `direction` не for `None`, ele mede a entidade vizinha na direção dada.
+Se `direction` não for `None`, ele mede a entidade vizinha na direção dada.
 
 retorna o número de pétalas de um girassol.
 retorna a próxima posição para um tesouro ou maçã.
