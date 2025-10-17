@@ -15,14 +15,14 @@ Dê uma pirueta se estiver sobre um arbusto:
 A palavra-chave `None` também está desbloqueada agora! `None` é um valor que representa a ausência de valor.
 Por exemplo, uma função que não tem uma declaração `return` na verdade retornará `None`.
 
-`get_entity_type()` retorna `None` se не houver entidade sob o drone.
+`get_entity_type()` retorna `None` se não houver entidade sob o drone.
 
 
 Se você quiser descobrir quantos de um determinado desbloqueio você tem, use a função `num_unlocked(unlock)`.
 
 Por exemplo, `num_unlocked(Unlocks.Speed)` retornará o número de melhorias de velocidade que você tem.
 
-`num_unlocked(Unlocks.Senses)` retornará `1` se os sentidos estiverem desbloqueados e `0` se не estiverem.
+`num_unlocked(Unlocks.Senses)` retornará `1` se os sentidos estiverem desbloqueados e `0` se não estiverem.
 
 Você também pode usar `num_unlocked()` em Itens, Entidades ou Solos. Isso retornará `1` se estiver desbloqueado, caso contrário `0`.
 
