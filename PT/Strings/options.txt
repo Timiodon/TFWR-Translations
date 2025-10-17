@@ -27,7 +27,7 @@
 @full vsync = Vsync Completo
 @half vsync = Meio Vsync
 @1/4 vsync = 1/4 Vsync
-@viewport sliding = Deslize da Visão
+@viewport sliding = Deslizamento da visão
 @UI size = Tamanho da UI
 @file watcher = Monitor de Arquivos
 @indent selection = Indentar Seleção
