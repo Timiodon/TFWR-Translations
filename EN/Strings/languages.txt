@@ -3,7 +3,7 @@
 @FR = French
 @DE = German
 @ES = Spanish
-@PT = Protuguese
+@PT = Portuguese
 @IT = Italian
 @JA = Japanese
 @ZH = Simplified Chinese
