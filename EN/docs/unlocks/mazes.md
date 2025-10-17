@@ -41,7 +41,8 @@ It's only worth it if the extra information and the shortcuts help you solve the
 
 The treasure can be relocated up to 300 times. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
 
-<spoiler=show hint 1>Here's a general approach to solving the problem:
+<spoiler=show hint 1>
+Here's a general approach to solving the problem:
 
 Create a maze and imagine that you are the drone.
 
@@ -51,9 +52,12 @@ Write down your strategy step by step so that someone else could follow it witho
 
 Now try translating your steps into code.
 </spoiler>
-<spoiler=show hint 2>As long as there are no loops: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.
-This approach requires very little code and you do not need to keep track of where you have already been. Around 10 lines of code is all you need.</spoiler>
-<spoiler=show hint 3>Instead of moving the drone in absolute directions like east or west it can be very useful to move the drone in relative directions like "turn right" or "turn left". To do this you need to keep track of which way the drone is currently moving. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
+<spoiler=show hint 2>
+As long as there are no loops: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.
+This approach requires very little code and you do not need to keep track of where you have already been. Around 10 lines of code is all you need.
+</spoiler>
+<spoiler=show hint 3>
+Instead of moving the drone in absolute directions like east or west it can be very useful to move the drone in relative directions like "turn right" or "turn left". To do this you need to keep track of which way the drone is currently moving. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
 The following index trick is helpful for this:
 
 `directions = [North, East, South, West]
@@ -66,6 +70,9 @@ index = (index + 1) % 4`
 `# turn left
 index = (index - 1) % 4
 
-move(directions[index])`</spoiler>
-<spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-Solvig a `1`x`1` maze is trivial.</spoiler>
+move(directions[index])`
+</spoiler>
+<spoiler=show hint 4>
+If you can't solve it, you can always make your life easy and do it less efficiently. 
+Solving a `1`x`1` maze is trivial.
+</spoiler>

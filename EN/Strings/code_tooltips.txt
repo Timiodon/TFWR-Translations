@@ -188,7 +188,7 @@ Makes the drone do a flip! This action is not affected by speed upgrades.
 
 returns `None`
 
-takes 1s to execute.
+takes `400` ticks to execute.
 
 example:
 `while True:
@@ -198,7 +198,7 @@ Pets the piggy! This action is not affected by speed upgrades.
 
 returns `None`
 
-takes 1s to execute.
+takes `400` ticks to execute.
 
 example:
 `while True:
@@ -209,7 +209,7 @@ Multiple values can be printed at once.
 
 returns `None`
 
-takes 1s to execute.
+takes `400` ticks to execute.
 
 example:
 `print("ground:", get_ground_type())`
@@ -514,7 +514,7 @@ Can be used on numbers and strings.
 `max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
 `max(sequence)`: Returns the maximum of all values in a sequence.
 
-takes #comparisons ticks to execute.
+takes `#comparisons` ticks to execute.
 
 example:
 `max([3,6,34,16])`
@@ -525,7 +525,7 @@ Can be used on numbers and strings.
 `min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
 `min(sequence)`: Returns the minimum of all values in a sequence.
 
-takes #comparisons ticks to execute.
+takes `#comparisons` ticks to execute.
 
 example:
 `min([3,6,34,16])`
@@ -534,7 +534,7 @@ Computes the absolute value of a number.
 
 returns `number` if `number` is positive, `-number` otherwise.
 
-takes 1 tick to execute.
+takes `1` tick to execute.
 
 example:
 `abs(-69)`
