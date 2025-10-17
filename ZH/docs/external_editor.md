@@ -17,7 +17,7 @@ Visual Studio Code 是《编程农场》推荐使用的代码编辑器。
 
 下载完成后，需要在 VS Code 中安装 Python 扩展。
 
-安装完 Python 扩展后，在 VS Code 中打开存放你的 `.py` 文件的[文件夹](persistent_data_path/Saves)。必须打开整个文件夹，而不知道是单个文件，否则 `__builtins__.py` 文件将不起作用。
+安装完 Python 扩展后，在 VS Code 中打开存放你的 `.py` 文件的[文件夹](persistent_data_path/Saves)。必须打开整个文件夹，而不只是单个文件，否则 `__builtins__.py` 文件将不起作用。
 
 在游戏中，确保你已经启用了“文件监视器”选项。现在，你只需要在 VS Code 中保存，游戏中也会同步修改。
 
