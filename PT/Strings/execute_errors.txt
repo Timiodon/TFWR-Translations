@@ -1,6 +1,6 @@
 @error_code_after_block = Não deveria haver nenhum código aqui. Tente removê-lo ou colocá-lo em uma nova linha.
 @error_wrong_number_args = {0} recebe {1} argumentos.
-@error_expected_no_args = {0} не recebe nenhum argumento.
+@error_expected_no_args = {0} não recebe nenhum argumento.
 @error_wrong_args = O {0}º argumento de {1} foi {2}. Este não é um argumento válido.
 @error_syntax_error_in_import = O módulo importado tem um erro de sintaxe.
 @error_module_not_found = Um módulo com este nome não existe. O nome precisa corresponder a um nome de arquivo. Este é o nome exibido no topo da janela.
@@ -15,10 +15,10 @@
 @error_index = {0} não pode ser usado como um índice em {1}.
 @error_index_on_non_indexable = Você não pode indexar em {0}.
 @error_zero_step = O tamanho do passo não pode ser zero.
-@error_index_on_tuple = Você не pode atribuir um elemento de tupla porque tuplas são imutáveis.
-@error_bad_key = {0} не pode ser usado como chave.
+@error_index_on_tuple = Você não pode atribuir um elemento de tupla porque tuplas são imutáveis.
+@error_bad_key = {0} não pode ser usado como chave.
 @error_slice_dict = Não é possível fatiar dicionários.
-@error_key = {0} не é uma chave no dicionário.
+@error_key = {0} não é uma chave no dicionário.
 @error_condition_not_bool = {0} não é uma condição válida. A condição deve ser um valor booleano. Isso significa que deve ser uma expressão que é sempre `True` ou `False`.
 @error_for_requires_iterable = {0} não pode ser iterado em um loop for. O loop for deve receber uma sequência para iterar. Exemplo:
 
@@ -37,7 +37,7 @@ Se você o importou, provavelmente tem um ciclo de importação (Veja a página 
 
 `{1}`.`{0}`
 @error_call_before_def = {0} não está definido. Parece estar definido em algum lugar neste arquivo, mas a definição ainda não foi executada. Funções só podem ser chamadas após a declaração `def`.
-@error_not_a_function = Você tentou chamar algo que не é uma função. Um erro comum que pode causar isso é ter uma variável com o mesmo nome da função.
+@error_not_a_function = Você tentou chamar algo que não é uma função. Um erro comum que pode causar isso é ter uma variável com o mesmo nome da função.
 @error_invalid_const = {0} não existe.
 @error_invalid_const2 = Isso não existe.
 @error_max_stack_size_reached = O tamanho máximo da pilha de chamadas foi atingido. Isso provavelmente se deve a muitas chamadas de função recursivas.
@@ -70,8 +70,8 @@ Se você quiser modificar uma variável global, você tem que usar a palavra-cha
 
 `global x
 x += 1`
-@error_attribute_on_non_module = Você не pode atribuir um atributo a {0}.
-@error_file_not_found = O arquivo {0} не existe.
+@error_attribute_on_non_module = Você não pode atribuir um atributo a {0}.
+@error_file_not_found = O arquivo {0} não existe.
 @error_max_drones_reached = O limite de drones foi excedido.
 @error_dino_hat_already_used = Há apenas um chapéu de dinossauro e ele já está em uso. Você não pode usá-lo em um segundo drone.
 @error_invalid_drone_id = Não há drone com ID {0}.
