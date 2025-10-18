@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### Key Art
 Stephanie Stutz
 
-### Translations by Allcorrect
+### Allcorrect
+Maria Pavlova (Russian Translation)
+Evgeniia Ushakova (Russian Translation)
+Melanie Chen (Chinese Translation)
+Siyoon Ji (Korean Translation)
+Mina Horiba-Maguire (Japanese Translation)
+Danil Belousov (Account Manager)
+Elizaveta Shevchenko (Team Lead)
+Yulia Tregubova (Project Manager)
 
 ### Community Translation Contributors
 HoshiyomiLusia

@@ -9,7 +9,7 @@ Der Hut kann ausgerüstet werden mit
 
 Leider sieht er nicht ganz so aus wie in der Werbung...
 
-Wenn du den Dinosaurier-Hut ausrüstest und genügend Kürbisse hast, wird automatisch ein [Apfel](objects/apple) gekauft und unter der Drohne platziert.
+Wenn du den Dinosaurier-Hut ausrüstest und genügend Kakteen hast, wird automatisch ein [Apfel](objects/apple) gekauft und unter der Drohne platziert.
 Wenn die Drohne über einem Apfel ist und sich wieder bewegt, frisst sie den Apfel und ihr Schwanz wächst um eins. Wenn du es dir leisten kannst, wird ein neuer Apfel gekauft und an einem zufälligen Ort platziert.
 Der Apfel kann nicht erscheinen, wenn an seiner gewünschten Stelle etwas anderes gepflanzt ist.
 

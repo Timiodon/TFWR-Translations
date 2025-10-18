@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### キーアート
 Stephanie Stutz
 
-### 翻訳 Allcorrect
+### Allcorrect
+Maria Pavlova (ロシア語翻訳)
+Evgeniia Ushakova (ロシア語翻訳)
+Melanie Chen (中国語翻訳)
+Siyoon Ji (韓国語翻訳)
+Mina Horiba-Maguire (日本語翻訳)
+Danil Belousov (アカウントマネージャー)
+Elizaveta Shevchenko (チームリード)
+Yulia Tregubova (プロジェクトマネージャー)
 
 ### コミュニティ翻訳協力者
 HoshiyomiLusia

@@ -1,6 +1,6 @@
 # Engrais
-À un certain moment, attendre que les plantes poussent n'est tout simplement plus assez efficace.
-Comme pour l'eau, tu recevras automatiquement 1 engrais toutes les 10 secondes, plus un supplémentaire pour chaque amélioration.
+À un certain moment, attendre que les plantes poussent n'est tout simplement plus assez efficace. 
+Comme pour l'eau, tu recevras automatiquement 1 engrais toutes les 10 secondes, et cette quantité double à chaque amélioration.
 
 L'engrais peut faire pousser les plantes instantanément. `use_item(Items.Fertilizer)` réduit le temps de croissance restant de la plante sous le drone de 2 secondes.
 

@@ -268,7 +268,7 @@ przykład:
 Ogranicza prędkość, z jaką wykonywany jest program, aby lepiej widzieć, co się dzieje.
 
 Prędkość (`speed`) `1` to prędkość drona bez żadnych ulepszeń.
-Prędkość `10` sprawia, że kod wykonuje się `10` razy szybciej i odpowiada prędkości drona po `9` ulepszeniach.
+Prędkość `8` sprawia, że kod wykonuje się `8` razy szybciej i odpowiada prędkości drona po `3` ulepszeniach.
 Prędkość `0.5` sprawia, że kod wykonuje się o połowę wolniej niż bez ulepszeń. Może to być przydatne, aby zobaczyć, co robi kod.
 
 Jeśli `speed` jest większa niż aktualna możliwa prędkość, program będzie działał z maksymalną prędkością.
@@ -352,7 +352,7 @@ zajmuje `200` ticków, jeśli operacja się powiodła, w przeciwnym razie `1` ti
 przykład:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Służy do sprawdzania, czy odblokowanie, obiekt, podłoże lub przedmiot jest już odblokowany.
+Służy do sprawdzania, czy odblokowanie, obiekt, podłoże, przedmiot lub kapelusz jest już odblokowany.
 
 zwraca `1` plus liczbę ulepszeń danej rzeczy (`thing`), jeśli `thing` jest ulepszalna. W przeciwnym razie zwraca `1`, jeśli `thing` jest odblokowana, lub `0` w innym przypadku.
 

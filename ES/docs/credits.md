@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### Arte Principal
 Stephanie Stutz
 
-### Traducciones por Allcorrect
+### Allcorrect
+Maria Pavlova (Traducción al ruso)
+Evgeniia Ushakova (Traducción al ruso)
+Melanie Chen (Traducción al chino)
+Siyoon Ji (Traducción al coreano)
+Mina Horiba-Maguire (Traducción al japonés)
+Danil Belousov (Gerente de cuentas)
+Elizaveta Shevchenko (Líder de equipo)
+Yulia Tregubova (Gerente de proyecto)
 
 ### Colaboradores de la Comunidad en la Traducción
 HoshiyomiLusia

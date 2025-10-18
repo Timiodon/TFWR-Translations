@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = 마법사의 모자입니다. 이걸 해금하려면 상당한 프로그래밍 마법이 필요했겠군요!
 @hat_descr_top_hat = 비싸고 고급스러워 보입니다.
 @hat_descr_traffic_cone = 안전 제일!
+@hat_descr_traffic_cone_stack = 안전 제일! 안전 제일! 안전 제일! 안전 제일! 안전 제일! 안전 제일!
 @hat_descr_pumpkin_hat = 머리에 쓰는 호박입니다. 핼러윈에 딱이죠.
 @hat_descr_carrot_hat = 누가 머리에 당근을 얹고 싶지 않겠어요?
 @hat_descr_cactus_hat = 조금 뾰족합니다.
 @hat_descr_sunflower_hat = 밝고 명랑합니다.
 @hat_descr_gold_hat = 이 황금 모자로 부를 뽐내보세요.
+@hat_descr_golden_gold_hat = 보통 금 모자보다도 더 황금빛이에요.
 @hat_descr_tree_hat = 정말 멋져요!
 @hat_descr_gold_trophy_hat = 최고의 농부만을 위한 모자입니다.
 @hat_descr_silver_trophy_hat = 두 번째로 뛰어난 농부를 위한 모자입니다.

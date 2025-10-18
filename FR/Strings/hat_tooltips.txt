@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = Le chapeau d'un sorcier. Le débloquer a dû demander un peu de magie de programmation !
 @hat_descr_top_hat = Il a l'air cher et distingué.
 @hat_descr_traffic_cone = La sécurité d'abord !
+@hat_descr_traffic_cone_stack = La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord ! La sécurité d'abord !
 @hat_descr_pumpkin_hat = Une citrouille pour ta tête. Parfait pour Halloween.
 @hat_descr_carrot_hat = Qui ne voudrait pas de carottes sur la tête ?
 @hat_descr_cactus_hat = Un peu piquant.
 @hat_descr_sunflower_hat = Vif et joyeux.
 @hat_descr_gold_hat = Montre ta richesse avec ce chapeau doré.
+@hat_descr_golden_gold_hat = Il est encore plus doré que le chapeau en or normal.
 @hat_descr_tree_hat = Joli !
 @hat_descr_gold_trophy_hat = Seulement pour le meilleur fermier.
 @hat_descr_silver_trophy_hat = Pour le deuxième meilleur fermier.

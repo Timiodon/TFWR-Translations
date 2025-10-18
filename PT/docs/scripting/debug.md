@@ -1,5 +1,5 @@
 # Depuração
-Às vezes, seu código simplesmente не funciona e você precisa descobrir o porquê. Existem algumas ferramentas para ajudá-lo com isso.
+Às vezes, seu código simplesmente não funciona e você precisa descobrir o porquê. Existem algumas ferramentas para ajudá-lo com isso.
 
 A primeira é executar o programa passo a passo. 
 Você pode entrar no modo passo a passo com o botão ao lado do botão Executar ou definindo um ponto de interrupção.

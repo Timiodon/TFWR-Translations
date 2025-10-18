@@ -9,7 +9,7 @@ Il cappello può essere equipaggiato con
 
 Sfortunatamente non ha l'aspetto che aveva nella pubblicità...
 
-Se equipaggi il cappello da dinosauro e hai abbastanza zucche, una [mela](objects/apple) verrà automaticamente acquistata e posizionata sotto il drone.
+Se equipaggi il cappello da dinosauro e hai abbastanza cactus, una [mela](objects/apple) verrà automaticamente acquistata e posizionata sotto il drone.
 Quando il drone si trova su una mela e si muove di nuovo, mangerà la mela e la sua coda si allungherà di uno. Se te lo puoi permettere, una nuova mela verrà acquistata e posizionata in un luogo casuale.
 La mela non può comparire se c'è qualcos'altro piantato dove vorrebbe essere.
 

@@ -1,7 +1,7 @@
 # Expansão 2
 Sua fazenda expandiu novamente! Agora as casas não estão mais em uma bela fila, então você precisa encontrar uma maneira de percorrer uma grade quadrada.
 
-Com o loop `while` isso не é possível até que você desbloqueie sensores e operadores.
+Com o loop `while` isso não é possível até que você desbloqueie sensores e operadores.
 É hora de apresentar o loop `for`.
 
 Você pode ler tudo sobre o loop `for` na página [Loop For](docs/scripting/for.md), mas por enquanto você só precisará dele para repetir código um número fixo de vezes.
