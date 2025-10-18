@@ -3,7 +3,7 @@
 # Contributed by @Noon, @KlingonDragon, @dieckie and @Flekay on the TFWR Discord server.
 
 from typing import Any, Optional, Iterable, Tuple, Dict
-from builtins import type, bool, int, float, str, list
+from builtins import type, bool, int, float, str, list, set, dict
 
 
 # -------------------------------------------------------------------------------
