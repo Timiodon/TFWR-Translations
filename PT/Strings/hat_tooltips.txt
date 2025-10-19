@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = O chapéu de um mago. Desbloquear isso deve ter exigido um pouco de mágica de programação!
 @hat_descr_top_hat = Parece caro e distinto.
 @hat_descr_traffic_cone = Segurança em primeiro lugar!
+@hat_descr_traffic_cone_stack = Segurança em primeiro lugar! Segurança em primeiro lugar! Segurança em primeiro lugar! Segurança em primeiro lugar! Segurança em primeiro lugar! Segurança em primeiro lugar!
 @hat_descr_pumpkin_hat = Uma abóbora para sua cabeça. Perfeito para o Halloween.
 @hat_descr_carrot_hat = Quem não iria querer cenouras na cabeça?
 @hat_descr_cactus_hat = Um pouco espinhoso.
 @hat_descr_sunflower_hat = Brilhante e alegre.
 @hat_descr_gold_hat = Mostre sua riqueza com este chapéu dourado.
+@hat_descr_golden_gold_hat = É ainda mais dourado que o chapéu de ouro normal.
 @hat_descr_tree_hat = Que legal!
 @hat_descr_gold_trophy_hat = Apenas para o melhor fazendeiro.
 @hat_descr_silver_trophy_hat = Para o segundo melhor fazendeiro.

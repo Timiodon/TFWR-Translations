@@ -268,7 +268,7 @@ exemplo:
 Limita a velocidade na qual o programa é executado para ver melhor o que está acontecendo.
 
 Uma `speed` de `1` é a velocidade que o drone tem sem nenhuma melhoria de velocidade.
-Uma `speed` de `10` faz o código executar `10` vezes mais rápido e corresponde à velocidade do drone após `9` melhorias de velocidade.
+Uma `speed` de `8` faz o código executar `8` vezes mais rápido e corresponde à velocidade do drone após `3` melhorias de velocidade.
 Uma `speed` de `0.5` faz o código executar na metade da velocidade sem melhorias. Isso pode ser útil para ver o que o código está fazendo.
 
 Se `speed` for mais rápido do que a execução atual, ele simplesmente irá na velocidade máxima.
@@ -352,7 +352,7 @@ leva `200` ticks para executar se bem-sucedido, `1` tick caso contrário.
 exemplo:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Usado para verificar se um desbloqueio, entidade, solo ou item já está desbloqueado.
+Usado para verificar se um desbloqueio, entidade, solo, item ou chapéu já está desbloqueado.
 
 retorna `1` mais o número de vezes que `thing` foi melhorado se `thing` for melhorável. Caso contrário, retorna `1` se `thing` estiver desbloqueado, `0` caso contrário.
 
@@ -375,7 +375,7 @@ exemplo:
 @code_tooltip_measure = `measure(direction = None)` 
 Pode medir alguns valores em algumas entidades. O efeito disso depende da entidade.
 
-Se `direction` не for `None`, ele mede a entidade vizinha na direção dada.
+Se `direction` não for `None`, ele mede a entidade vizinha na direção dada.
 
 retorna o número de pétalas de um girassol.
 retorna a próxima posição para um tesouro ou maçã.

@@ -1,6 +1,6 @@
 # Dünger
-Irgendwann ist es einfach nicht mehr effizient genug, auf das Wachsen der Pflanzen zu warten.
-Ähnlich wie bei Wasser erhältst du automatisch alle 10 Sekunden 1 Dünger, plus einen zusätzlichen für jedes Upgrade.
+Irgendwann ist es einfach nicht mehr effizient genug, auf das Wachsen der Pflanzen zu warten. 
+Ähnlich wie bei Wasser erhältst du automatisch alle 10 Sekunden 1 Dünger, wobei sich die Menge mit jedem Upgrade verdoppelt.
 
 Dünger kann Pflanzen sofort wachsen lassen. `use_item(Items.Fertilizer)` reduziert die verbleibende Wachstumszeit der Pflanze unter der Drohne um 2 Sekunden.
 

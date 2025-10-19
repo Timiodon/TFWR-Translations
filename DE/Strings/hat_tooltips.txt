@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = Der Hut eines Zauberers. Das Freischalten muss wohl etwas Programmiermagie erfordert haben!
 @hat_descr_top_hat = Er sieht teuer und vornehm aus.
 @hat_descr_traffic_cone = Sicherheit geht vor!
+@hat_descr_traffic_cone_stack = Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor! Sicherheit geht vor!
 @hat_descr_pumpkin_hat = Ein Kürbis für deinen Kopf. Perfekt für Halloween.
 @hat_descr_carrot_hat = Wer will denn keine Karotten auf dem Kopf?
 @hat_descr_cactus_hat = Etwas stachelig.
 @hat_descr_sunflower_hat = Hell und fröhlich.
 @hat_descr_gold_hat = Zeig deinen Reichtum mit diesem goldenen Hut.
+@hat_descr_golden_gold_hat = Er ist sogar noch goldener als der normale Goldhut.
 @hat_descr_tree_hat = Wie schön!
 @hat_descr_gold_trophy_hat = Nur für den besten Farmer.
 @hat_descr_silver_trophy_hat = Für den zweitbesten Farmer.

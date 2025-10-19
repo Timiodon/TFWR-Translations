@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = 巫师的帽子。解锁它一定用了一些编程魔法！
 @hat_descr_top_hat = 这顶帽子看起来昂贵又气派。
 @hat_descr_traffic_cone = 安全第一！
+@hat_descr_traffic_cone_stack = 安全第一！安全第一！安全第一！安全第一！安全第一！安全第一！
 @hat_descr_pumpkin_hat = 戴在头上的南瓜。万圣节绝配。
 @hat_descr_carrot_hat = 谁不想把胡萝卜戴在头上呢？
 @hat_descr_cactus_hat = 有点扎手。
 @hat_descr_sunflower_hat = 明亮又欢快。
 @hat_descr_gold_hat = 戴上这顶金帽子炫富吧。
+@hat_descr_golden_gold_hat = 比普通的金帽子还要金光闪闪。
 @hat_descr_tree_hat = 真不错！
 @hat_descr_gold_trophy_hat = 只属于最棒的农民。
 @hat_descr_silver_trophy_hat = 属于第二棒的农民。

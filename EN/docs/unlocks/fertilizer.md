@@ -1,6 +1,6 @@
 # Fertilizer
 At some point, waiting for the plants to grow is just not efficient enough anymore. 
-Similar to water, you will automatically receive 1 fertilizer every 10 seconds, plus an extra one for each upgrade.
+Similar to water, you will automatically receive 1 fertilizer every 10 seconds, doubling with each upgrade.
 
 Fertilizer can make plants grow instantly. `use_item(Items.Fertilizer)` reduces the remaining growing time of the plant under the drone by 2 seconds.
 

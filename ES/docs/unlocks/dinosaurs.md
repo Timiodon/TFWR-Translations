@@ -9,7 +9,7 @@ El sombrero se puede equipar con
 
 Lamentablemente, no se ve como en el anuncio...
 
-Si equipas el sombrero de dinosaurio y tienes suficientes calabazas, se comprará automáticamente una [manzana](objects/apple) y se colocará debajo del dron.
+Si equipas el sombrero de dinosaurio y tienes suficientes cactus, se comprará automáticamente una [manzana](objects/apple) y se colocará debajo del dron.
 Cuando el dron está sobre una manzana y se mueve de nuevo, se comerá la manzana y su cola crecerá en uno. Si puedes permitírtelo, se comprará una nueva manzana y se colocará en una ubicación aleatoria.
 La manzana no puede aparecer si hay algo más plantado donde quiere estar.
 

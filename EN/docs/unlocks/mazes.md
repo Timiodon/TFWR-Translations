@@ -68,4 +68,4 @@ index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
 <spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-Solvig a `1`x`1` maze is trivial.</spoiler>
+Solving a `1`x`1` maze is trivial.</spoiler>

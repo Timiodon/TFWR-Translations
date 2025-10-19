@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### Key Art
 Stephanie Stutz
 
-### Übersetzungen von Allcorrect
+### Allcorrect
+Maria Pavlova (Russische Übersetzung)
+Evgeniia Ushakova (Russische Übersetzung)
+Melanie Chen (Chinesische Übersetzung)
+Siyoon Ji (Koreanische Übersetzung)
+Mina Horiba-Maguire (Japanische Übersetzung)
+Danil Belousov (Account Manager)
+Elizaveta Shevchenko (Team Lead)
+Yulia Tregubova (Project Manager)
 
 ### Community-Übersetzer
 HoshiyomiLusia

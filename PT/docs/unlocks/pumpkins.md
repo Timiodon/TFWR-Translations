@@ -3,7 +3,7 @@
 
 Quando todas as abóboras em um quadrado estão totalmente crescidas, elas se juntam para formar uma abóbora gigante. Infelizmente, as abóboras têm 20% de chance de morrer quando estão totalmente crescidas, então você precisará replantar as mortas se quiser que elas se fundam. 
 
-Quando uma abóbora morre, ela deixa para trás uma abóbora morta que не renderá nada quando colhida. Plantar uma nova planta em seu lugar remove automaticamente a abóbora morta, então не há necessidade de colhê-la. `can_harvest()` sempre retorna `False` em abóboras mortas.
+Quando uma abóbora morre, ela deixa para trás uma abóbora morta que não renderá nada quando colhida. Plantar uma nova planta em seu lugar remove automaticamente a abóbora morta, então não há necessidade de colhê-la. `can_harvest()` sempre retorna `False` em abóboras mortas.
 
 O rendimento de uma abóbora gigante depende do tamanho da abóbora.
 

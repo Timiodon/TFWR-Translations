@@ -7,7 +7,7 @@ Prędkość wzrostu rośliny skaluje się liniowo od 1x prędkości przy poziomi
 Ziemia z czasem wysycha: Średnio traci 1% swojej obecnej wody na sekundę, ale jest w tym pewna losowa zmienność. Utrzymywanie wysokiego poziomu wody zużyje znacznie więcej wody niż utrzymywanie niskiego poziomu.
 
 Możesz używać wody na swoich roślinach. Jeden zbiornik wody jest automatycznie dodawany do twojego ekwipunku co 10 sekund.
-Ulepszenie `Unlocks.Watering` da ci dodatkowy zbiornik wody co 10 sekund.
+Ulepszenie `Unlocks.Watering` podwoi ilość wody, którą otrzymujesz co 10 sekund.
 
 Jeden zbiornik mieści `0.25` wody.
 

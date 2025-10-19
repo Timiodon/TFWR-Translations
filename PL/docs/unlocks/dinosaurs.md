@@ -9,7 +9,7 @@ Kapelusz można założyć za pomocą
 
 Niestety nie wygląda on tak jak na reklamie...
 
-Jeśli założysz kapelusz dinozaura i masz wystarczająco dużo dyń, [jabłko](objects/apple) zostanie automatycznie zakupione i umieszczone pod dronem.
+Jeśli założysz kapelusz dinozaura i masz wystarczająco dużo kaktusów, [jabłko](objects/apple) zostanie automatycznie zakupione i umieszczone pod dronem.
 Gdy dron znajdzie się nad jabłkiem i ponownie się poruszy, zje jabłko i jego ogon urośnie o jeden. Jeśli cię na to stać, nowe jabłko zostanie zakupione i umieszczone w losowej lokalizacji.
 Jabłko nie może się pojawić, jeśli coś innego jest posadzone tam, gdzie chce być.
 

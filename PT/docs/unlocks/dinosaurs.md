@@ -9,7 +9,7 @@ O chapéu pode ser equipado com
 
 Infelizmente, ele não se parece muito com o da propaganda...
 
-Se você equipar o chapéu de dinossauro e tiver abóboras suficientes, uma [maçã](objects/apple) será comprada e colocada automaticamente sob o drone.
+Se você equipar o chapéu de dinossauro e tiver cactos suficientes, uma [maçã](objects/apple) será comprada e colocada automaticamente sob o drone.
 Quando o drone está sobre uma maçã e se move novamente, ele come a maçã e sua cauda cresce em um. Se você puder pagar, uma nova maçã será comprada e colocada em um local aleatório.
 A maçã não pode surgir se outra coisa estiver plantada onde ela quer estar.
 

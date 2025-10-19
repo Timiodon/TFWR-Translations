@@ -268,7 +268,7 @@ esempio:
 Limita la velocità di esecuzione del programma per vedere meglio cosa sta succedendo.
 
 Una `speed` di `1` è la velocità del drone senza potenziamenti di velocità.
-Una `speed` di `10` fa eseguire il codice `10` volte più velocemente e corrisponde alla velocità del drone dopo `9` potenziamenti di velocità.
+Una `speed` di `8` fa eseguire il codice `8` volte più velocemente e corrisponde alla velocità del drone dopo `3` potenziamenti di velocità.
 Una `speed` di `0.5` fa eseguire il codice a metà della velocità senza potenziamenti. Può essere utile per vedere cosa sta facendo il codice.
 
 Se `speed` è più veloce di quanto l'esecuzione possa attualmente andare, andrà semplicemente alla massima velocità.
@@ -352,9 +352,9 @@ richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altriment
 esempio:
 `unlock(Unlocks.Carrots)`
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
-Usato per controllare se uno sblocco, un'entità, un terreno o un oggetto è già sbloccato.
+Usato per controllare se uno sblocco, un'entità, un terreno, un oggetto o un cappello è già sbloccato.
 
-restituisce `1` più il numero di volte che `thing` è stato potenziato, se `thing` è potenziabile. Altrimenti restituisce `1` se `thing` è sbloccato, `0` altrimenti.
+restituisce `1` più il numero di volte che `thing` è stato potenziato se `thing` è potenziabile. Altrimenti restituisce `1` se `thing` è sbloccato, `0` altrimenti.
 
 richiede `1` tick per essere eseguita.
 

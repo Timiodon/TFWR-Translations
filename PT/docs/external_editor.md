@@ -17,7 +17,7 @@ Você pode instalá-lo [aqui](https://code.visualstudio.com/download).
 
 Após baixá-lo, instale a extensão Python no VS Code.
 
-Depois de fazer isso, abra a [pasta](persistent_data_path/Saves) que contém seus arquivos `.py` no VS Code. Certifique-se de abrir a pasta inteira, não apenas os arquivos individuais, caso contrário, o arquivo `__builtins__.py` не vai funcionar.
+Depois de fazer isso, abra a [pasta](persistent_data_path/Saves) que contém seus arquivos `.py` no VS Code. Certifique-se de abrir a pasta inteira, não apenas os arquivos individuais, caso contrário, o arquivo `__builtins__.py` não vai funcionar.
 
 No jogo, certifique-se de que a opção "File Watcher" está ativada. Agora, toda vez que você salvar no VS Code, as alterações aparecerão automaticamente no jogo.
 

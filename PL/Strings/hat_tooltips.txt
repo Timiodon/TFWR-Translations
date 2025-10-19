@@ -7,11 +7,13 @@
 @hat_descr_wizard_hat = Kapelusz czarodzieja. Odblokowanie go musiało wymagać programistycznej magii!
 @hat_descr_top_hat = Wygląda drogo i dystyngowanie.
 @hat_descr_traffic_cone = Bezpieczeństwo przede wszystkim!
+@hat_descr_traffic_cone_stack = Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim! Bezpieczeństwo przede wszystkim!
 @hat_descr_pumpkin_hat = Dynia na twoją głowę. Idealna na Halloween.
 @hat_descr_carrot_hat = Kto by nie chciał mieć marchewek na głowie?
 @hat_descr_cactus_hat = Trochę kłujący.
 @hat_descr_sunflower_hat = Jasny i wesoły.
 @hat_descr_gold_hat = Pochwal się swoim bogactwem dzięki temu złotemu kapeluszowi.
+@hat_descr_golden_gold_hat = Jest jeszcze bardziej złoty niż zwykły złoty kapelusz.
 @hat_descr_tree_hat = Jak miło!
 @hat_descr_gold_trophy_hat = Tylko dla najlepszego rolnika.
 @hat_descr_silver_trophy_hat = Dla drugiego najlepszego rolnika.

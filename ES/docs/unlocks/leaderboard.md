@@ -79,7 +79,7 @@ Condición de éxito: `num_items(Items.Cactus) >= 33554432`
 
 ### `Leaderboards.Sunflowers`
 `leaderboard_run(Leaderboards.Sunflowers, filename, speedup)`
-Condición de éxito: `num_items(Items.Sunflower) >= 100000`
+Condición de éxito: `num_items(Items.Power) >= 100000`
 
 ### `Leaderboards.Pumpkins`
 `leaderboard_run(Leaderboards.Pumpkins, filename, speedup)`
@@ -110,7 +110,7 @@ Condición de éxito: `num_items(Items.Cactus) >= 131072`
 
 ### `Leaderboards.Sunflowers_Single`
 `leaderboard_run(Leaderboards.Sunflowers_Single, filename, speedup)`
-Condición de éxito: `num_items(Items.Sunflower) >= 10000`
+Condición de éxito: `num_items(Items.Power) >= 10000`
 
 ### `Leaderboards.Pumpkins_Single`
 `leaderboard_run(Leaderboards.Pumpkins_Single, filename, speedup)`

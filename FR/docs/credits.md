@@ -16,7 +16,15 @@ Nathalie Weidmann
 ### Illustration principale
 Stephanie Stutz
 
-### Traductions par Allcorrect
+### Allcorrect
+Maria Pavlova (Traduction russe)
+Evgeniia Ushakova (Traduction russe)
+Melanie Chen (Traduction chinoise)
+Siyoon Ji (Traduction coréenne)
+Mina Horiba-Maguire (Traduction japonaise)
+Danil Belousov (Gestionnaire de compte)
+Elizaveta Shevchenko (Chef d'équipe)
+Yulia Tregubova (Chef de projet)
 
 ### Contributeurs de la traduction communautaire
 HoshiyomiLusia

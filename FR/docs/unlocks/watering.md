@@ -7,7 +7,7 @@ La vitesse de croissance d'une plante évolue linéairement de 1x à un niveau d
 Le sol s'assèche avec le temps : en moyenne, il perd 1% de son eau actuelle par seconde, mais il y a une certaine variance aléatoire. Maintenir un niveau d'eau élevé consommera beaucoup plus d'eau que de maintenir un niveau d'eau bas.
 
 Tu peux utiliser de l'eau sur tes plantes. Un réservoir d'eau est automatiquement ajouté à ton inventaire toutes les 10 secondes.
-Améliorer `Unlocks.Watering` te donnera un réservoir d'eau supplémentaire toutes les 10 secondes.
+Améliorer `Unlocks.Watering` doublera la quantité d'eau que tu obtiens toutes les 10 secondes.
 
 Un réservoir contient `0.25` d'eau.
 

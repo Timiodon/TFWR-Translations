@@ -1,6 +1,6 @@
 # Nawóz
 W pewnym momencie, czekanie na wzrost roślin po prostu przestaje być wystarczająco wydajne. 
-Podobnie jak woda, będziesz automatycznie otrzymywać 1 nawóz co 10 sekund, plus dodatkowy za każde ulepszenie.
+Podobnie jak woda, będziesz automatycznie otrzymywać 1 nawóz co 10 sekund, a ilość ta podwaja się z każdym ulepszeniem.
 
 Nawóz może sprawić, że rośliny będą rosły natychmiast. `use_item(Items.Fertilizer)` skraca pozostały czas wzrostu rośliny pod dronem o 2 sekundy.
 
