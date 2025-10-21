@@ -106,7 +106,7 @@ set_execution_speed(1)`
 other_file.function()`
 @unlock_descr_megafarm = 更多无人机，更大农场！
 
-`spawn_drone(file_to_run)`
+`spawn_drone(task)`
 @multi_unlock_descr_expand = 扩大农场，同时还会清空农场。
 @multi_unlock_descr_carrots = 增加胡萝卜的产量和成本。
 @multi_unlock_descr_trees = 增加灌木和树的产量。

@@ -106,7 +106,7 @@ set_execution_speed(1)`
 other_file.function()`
 @unlock_descr_megafarm = 더 많은 드론!
 
-`spawn_drone(file_to_run)`
+`spawn_drone(task)`
 @multi_unlock_descr_expand = 농장을 확장합니다. 이 작업은 농장을 비웁니다.
 @multi_unlock_descr_carrots = 당근의 수확량과 비용이 증가합니다.
 @multi_unlock_descr_trees = 덤불과 나무의 수확량이 증가합니다.

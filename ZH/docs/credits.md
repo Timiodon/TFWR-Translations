@@ -33,11 +33,11 @@ Davide Altamura
 ### Discord 管理员
 MrBlobfish
 Josh Markey
+danielrab
 Jeff Siebold aka Noon Knight
 
 ### 特别鸣谢
 Jonas Bornhöft
-danielrab
 ThatMerlinGuy
 Ramón Buchenberger
 Swiss Game Hub

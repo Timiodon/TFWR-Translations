@@ -33,11 +33,11 @@ Davide Altamura
 ### Discord Moderators
 MrBlobfish
 Josh Markey
+danielrab
 Jeff Siebold aka Noon Knight
 
 ### Special Thanks
 Jonas Bornhöft
-danielrab
 ThatMerlinGuy
 Ramón Buchenberger
 Swiss Game Hub

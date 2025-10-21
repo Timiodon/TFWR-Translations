@@ -106,7 +106,7 @@ set_execution_speed(1)`
 other_file.function()`
 @unlock_descr_megafarm = Больше дронов!
 
-`spawn_drone(file_to_run)`
+`spawn_drone(task)`
 @multi_unlock_descr_expand = Расширяет ферму, а также очищает ее.
 @multi_unlock_descr_carrots = Повышает урожай и стоимость моркови.
 @multi_unlock_descr_trees = Повышает урожай кустов и деревьев.
