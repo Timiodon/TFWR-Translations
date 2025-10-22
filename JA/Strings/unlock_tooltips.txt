@@ -106,7 +106,7 @@ set_execution_speed(1)`
 other_file.function()`
 @unlock_descr_megafarm = もっとドローンを！
 
-`spawn_drone(file_to_run)`
+`spawn_drone(task)`
 @multi_unlock_descr_expand = 農場を拡大します。これにより農場もクリアされます。
 @multi_unlock_descr_carrots = ニンジンの収穫量とコストを増やします。
 @multi_unlock_descr_trees = 茂みや木の収穫量を増やします。

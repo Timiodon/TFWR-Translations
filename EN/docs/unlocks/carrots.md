@@ -3,4 +3,4 @@ Before you can plant carrots with `plant(Entities.Carrot)`, you have to till the
 
 Planting carrots costs wood and hay. These items will be automatically removed when calling `plant(Entities.Carrot)`.
 
-You can see the cost of any plant on it's [own page](objects/carrot).
+You can see the cost of any plant on its [own page](objects/carrot).
