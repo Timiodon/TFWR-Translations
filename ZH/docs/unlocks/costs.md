@@ -1,17 +1,17 @@
-# 成本
-任何成本都可以表示为一个将物品映射到数字的字典。
+# 耗材数量
+所有的耗材数量都一个包含物品和数字的字典映射。
 
-`get_cost()` 函数返回的就是这样一个字典：某种植物或某个解锁项的成本。
+`get_cost()` 函数返回的值就是这样的一个字典：某种植物或某个科技树项目的耗材。
 
-`get_cost(Entities.Pumpkin)`
-返回 `{Items.Carrot:1}`
+调用 `get_cost(Entities.Pumpkin)` 函数
+会返回 `{Items.Carrot:1}`
 
-对于解锁项，若传递可选的第二个参数，则可获取你想要的解锁等级对应的成本。默认情况下为当前的解锁等级。
+向科技树中的各种项目添加第二个可选参数，就可以获取你想要的解锁等级对应的耗材数量。默认情况下为当前的解锁等级。
 
-`get_cost(Unlocks.Loops, 0)`
-返回 `{Items.Hay:5}`
+调用 `get_cost(Unlocks.Loops, 0)`
+会返回 `{Items.Hay:5}`
 
-对于已经达到最高等级的解锁项，`get_cost()` 将返回 `None`。
+如果科技树中的某些项目已经到达最高等级，调用 `get_cost()` 函数则返回 `None`。
 
 使用示例如下：
 `cost = get_cost(something)
