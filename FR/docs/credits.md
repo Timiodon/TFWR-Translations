@@ -29,6 +29,7 @@ Yulia Tregubova (Chef de projet)
 ### Contributeurs de la traduction communautaire
 HoshiyomiLusia
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Modérateurs Discord
 MrBlobfish

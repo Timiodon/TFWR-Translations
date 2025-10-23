@@ -1,0 +1,15 @@
+@language = Jazyk
+@EN = Angličtina
+@FR = Francouzština
+@DE = Němčina
+@ES = Španělština
+@PT = Portugalština
+@IT = Italština
+@JA = Japonština
+@ZH = Zjednodušená čínština
+@KO = Korejština
+@TR = Turečtina
+@AR = Arabština
+@RU = Ruština
+@PL = Polština
+@CZ = Čeština

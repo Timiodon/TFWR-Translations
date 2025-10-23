@@ -29,6 +29,7 @@ Yulia Tregubova (项目经理)
 ### 社区翻译贡献者
 HoshiyomiLusia
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Discord 管理员
 MrBlobfish

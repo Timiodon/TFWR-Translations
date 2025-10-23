@@ -12,3 +12,4 @@
 @AR = Arabe
 @RU = Russe
 @PL = Polonais
+@CZ = Tchèque
