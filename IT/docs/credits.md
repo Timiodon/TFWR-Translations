@@ -21,6 +21,7 @@ Stephanie Stutz
 ### Contributi alla traduzione dalla comunità
 HoshiyomiLusia
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Moderatori Discord
 MrBlobfish

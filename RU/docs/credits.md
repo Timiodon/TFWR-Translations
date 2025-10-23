@@ -29,6 +29,7 @@ Yulia Tregubova (менеджер проекта)
 ### Участники перевода от сообщества
 HoshiyomiLusia
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Модераторы Discord
 MrBlobfish

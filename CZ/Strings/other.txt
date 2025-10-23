@@ -1,0 +1,17 @@
+@word_number = číslo
+@word_direction = směr
+@run_cancelled = Spuštění selhalo
+@average_text = Dokončeno {0} běhů ({2:F1}%)
+{1}
+@average_text2 = Dokončeno {0} běhů
+{1}
+@unlocked_in = Další související informace najdeš zde: [{0}]({1})
+@table_of_contents_section_general_info = Obecné informace
+@table_of_contents_section_programming = Programování
+@table_of_contents_section_unlocks = Odemknuté prvky
+@table_of_contents_section_builtins = Vestavěné funkce
+@table_of_contents_section_items = Předměty
+@table_of_contents_section_entities = Objekty
+@table_of_contents_section_grounds = Povrchy
+@new_hat_unlocked = ## Nový klobouk odemčen
+`change_hat(`{0}`)`

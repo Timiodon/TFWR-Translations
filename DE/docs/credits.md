@@ -29,6 +29,7 @@ Yulia Tregubova (Project Manager)
 ### Community-Übersetzer
 HoshiyomiLusia
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Discord-Moderatoren
 MrBlobfish

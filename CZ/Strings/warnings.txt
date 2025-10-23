@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Pokusil ses koupit {0}, ale nemáš potřebné suroviny.
+@warning_no_space_to_plant = Pokusil ses zasadit {0}, ale na tom místě už něco roste.
+@warning_cant_plant_on_ground = Nelze zasadit {0} na {1}.
+@warning_missing_seed = Nemáš potřebné předměty pro zasazení {0}.
+@warning_no_item_to_use = Pokusil ses použít {0}, ale nemáš ho dostatek.
+@warning_failed_swap_wrap = Pokusil ses provést výměnu mimo hranice farmy. To není povoleno.
+@warning_failed_swap_unswappable = Pokusil ses vyměnit {0}, což nelze vyměnit.
+@warning_weird_substance_not_divisible = Použil jsi množství Podivné látky, které neodpovídá přesně potřebnému množství pro vytvoření bludiště. Nezapomeň, že s vylepšováním bludiště se požadované množství Podivné látky zvyšuje.
+
+Pro vytvoření plnohodnotného bludiště použij:
+`plant(Entities.Bush)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Simulace ani záznamy do žebříčku nelze spouštět uvnitř jiných simulací nebo záznamů do žebříčku.

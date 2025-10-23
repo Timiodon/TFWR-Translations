@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = Plně automatizuj celou hru.
+@lb_descr_maze = Nasbírej 9 863 168 zlata.
+@lb_descr_maze_single = Nasbírej 616 448 zlata.
+@lb_descr_dinosaur = Nasbírej 33 488 928 kostí.
+@lb_descr_cactus = Nasbírej 33 554 432 kaktusů.
+@lb_descr_cactus_single = Nasbírej 131 072 kaktusů.
+@lb_descr_sunflowers = Nasbírej 100 000 energie.
+@lb_descr_sunflowers_single = Nasbírej 10 000 energie.
+@lb_descr_pumpkins = Nasbírej 200 mil. dýní.
+@lb_descr_pumpkins_single = Nasbírej 20 mil. dýní.
+@lb_descr_hay = Nasbírej 2 mld. sena.
+@lb_descr_hay_single = Nasbírej 200 mil. sena.
+@lb_descr_wood = Nasbírej 10 mld. dřeva.
+@lb_descr_wood_single = Nasbírej 1 mld. dřeva.
+@lb_descr_carrots = Nasbírej 2 mld. mrkví.
+@lb_descr_carrots_single = Nasbírej 200 mil. mrkví.
