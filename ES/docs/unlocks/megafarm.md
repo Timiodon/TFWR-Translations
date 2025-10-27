@@ -14,7 +14,7 @@ Esto genera un nuevo dron en la misma posición que el dron que ejecutó el coma
 
 Los drones no chocan entre sí. 
 
-Usa `max_drones()` para obtener el número máximo de drones que se pueden generar.
+Usa `max_drones()` para obtener el número máximo de drones que pueden existir simultáneamente.
 Usa `num_drones()` para obtener el número de drones que ya están en la granja.
 
 
@@ -54,7 +54,7 @@ Aquí hay otro ejemplo que pasa una dirección diferente a cada dron.
 
 for_all(harvest)`
 
-Un patrón particularly útil es generar un dron si hay uno disponible y, de lo contrario, hacerlo tú mismo.
+Un patrón particularmente útil es generar un dron si hay uno disponible y, de lo contrario, hacerlo tú mismo.
 
 `if not spawn_drone(task):
 	task()`

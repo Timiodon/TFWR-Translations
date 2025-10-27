@@ -14,7 +14,7 @@ Isso gera um novo drone na mesma posição que o drone que executou o comando `s
 
 Drones não colidem entre si. 
 
-Use `max_drones()` para obter o número máximo de drones que podem ser gerados.
+Use `max_drones()` para obter o número máximo de drones que podem existir simultaneamente.
 Use `num_drones()` para obter o número de drones que já estão na fazenda.
 
 
@@ -75,7 +75,7 @@ print(wait_for(drone))`
 
 Note que gerar drones leva tempo, então não é uma boa ideia gerar um novo drone para cada pequena coisa.
 
-Você pode usar `has_finished(drone)` pra ver se o drone terminou sem precisar esperar.
+Você pode usar `has_finished(drone)` para ver se o drone terminou sem precisar esperar.
 
 ## Sem Memória Compartilhada
 Cada drone tem sua própria memória e não pode ler ou escrever diretamente as variáveis globais de outro drone.
@@ -103,7 +103,7 @@ O drone `1` chama
 Se essas ações ocorrerem ao mesmo tempo, a árvore será primeiro fertilizada e depois colhida. Nesse caso, você receberá madeira dela. No entanto, se o Drone `1` for um pouco mais rápido, a árvore será colhida antes de ser fertilizada, e você não receberá a madeira.
 Isso é chamado de "condição de corrida". É um problema comum em programação paralela, onde o resultado depende da ordem em que as operações são realizadas.
 
-Eis outra situação problemática que pode acontecer quando vários drones executam o mesmo código simultaneamente na mesma posição.
+Aqui está outra situação problemática que pode acontecer quando vários drones executam o mesmo código simultaneamente na mesma posição.
 `if get_water() < 0.5:
     use_item(Items.Water)`
 

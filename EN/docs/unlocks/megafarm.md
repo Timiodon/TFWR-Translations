@@ -14,7 +14,7 @@ This spawns a new drone in the same position as the drone that ran the `spawn_dr
 
 Drones do not collide with each other. 
 
-Use `max_drones()` to get the maximum number of drones that can be spawned.
+Use `max_drones()` to get the maximum number of drones that can exist simultaneously.
 Use `num_drones()` to get the number of drones that are already on the farm.
 
 

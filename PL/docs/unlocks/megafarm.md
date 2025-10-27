@@ -14,7 +14,7 @@ To tworzy nowego drona w tej samej pozycji co dron, który uruchomił polecenie 
 
 Drony nie zderzają się ze sobą. 
 
-Użyj `max_drones()`, aby uzyskać maksymalną liczbę dronów, które można stworzyć.
+Użyj `max_drones()`, aby uzyskać maksymalną liczbę dronów, które mogą istnieć jednocześnie.
 Użyj `num_drones()`, aby uzyskać liczbę dronów, które już są na farmie.
 
 

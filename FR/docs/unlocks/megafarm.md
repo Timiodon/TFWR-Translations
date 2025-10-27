@@ -14,7 +14,7 @@ Cela crée un nouveau drone à la même position que le drone qui a exécuté la
 
 Les drones n'entrent pas en collision les uns avec les autres. 
 
-Utilise `max_drones()` pour obtenir le nombre maximum de drones pouvant être créés.
+Utilise `max_drones()` pour obtenir le nombre maximum de drones qui peuvent exister simultanément.
 Utilise `num_drones()` pour obtenir le nombre de drones qui sont déjà dans la ferme.
 
 

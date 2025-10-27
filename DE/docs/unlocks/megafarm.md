@@ -14,7 +14,7 @@ Dies spawnt eine neue Drohne an derselben Position wie die Drohne, die den Befeh
 
 Drohnen kollidieren nicht miteinander.
 
-Verwende `max_drones()`, um die maximale Anzahl an Drohnen zu erhalten, die gespawnt werden können.
+Verwende `max_drones()`, um die maximale Anzahl von Drohnen zu erhalten, die gleichzeitig existieren können.
 Verwende `num_drones()`, um die Anzahl der Drohnen zu erhalten, die sich bereits auf der Farm befinden.
 
 

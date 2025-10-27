@@ -14,7 +14,7 @@ spawn_drone(drone_function)`
 
 无人机之间不会相互碰撞。
 
-使用 `max_drones()` 获取可生成的无人机数量上限。
+使用 `max_drones()` 获取可同时存在的无人机数量上限。
 使用 `num_drones()` 获取农场上已有的无人机数量。
 
 
