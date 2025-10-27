@@ -174,10 +174,10 @@ class Leaderboards:
     """Farm 1 000 000 pumpkins with a single drone on an 8x8 farm."""
 
     Sunflowers: Leaderboard
-    """Farm 10 000 sunflowers with multiple drones."""
+    """Farm 10 000 power with multiple drones."""
 
     Sunflowers_Single: Leaderboard
-    """Farm 10 000 sunflowers with a single drone on an 8x8 farm."""
+    """Farm 10 000 power with a single drone on an 8x8 farm."""
 
     Wood: Leaderboard
     """Farm 10 000 000 000 wood with multiple drones."""
