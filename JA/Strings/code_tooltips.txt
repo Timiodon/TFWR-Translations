@@ -419,7 +419,7 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@code_tooltip_spawn_drone = `spawn_drone(filename)`
+@code_tooltip_spawn_drone = `spawn_drone(function)`
 `spawn_drone(function)` コマンドを実行したドローンと同じ位置に新しいドローンをスポーンします。新しいドローンは指定された関数の実行を開始します。完了後、自動的に消えます。
 
 新しいドローンのハンドルを返します。すべてのドローンがすでにスポーンされている場合は `None` を返します。

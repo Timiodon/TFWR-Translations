@@ -1209,7 +1209,7 @@ def change_hat(hat: Hat) -> None:
 
 
 # -------------------------------------------------------------------------------
-def spawn_drone(filename: str) -> Any:
+def spawn_drone(function: str) -> Any:
     """
     Spawns a new drone in the same position as the drone that ran the `spawn_drone(function)` command. The new drone then begins executing the specified function. After it is done, it will disappear automatically.
 

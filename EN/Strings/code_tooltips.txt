@@ -419,7 +419,7 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@code_tooltip_spawn_drone = `spawn_drone(filename)`
+@code_tooltip_spawn_drone = `spawn_drone(function)`
 Spawns a new drone in the same position as the drone that ran the `spawn_drone(function)` command. The new drone then begins executing the specified function. After it is done, it will disappear automatically.
 
 returns the handle of the new drone or `None` if all drones are already spawned.
