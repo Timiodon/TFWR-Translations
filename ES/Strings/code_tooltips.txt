@@ -341,7 +341,8 @@ tarda `1` tick en ejecutarse.
 ejemplo:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 Tiene exactamente el mismo efecto que hacer clic en el botón correspondiente a `unlock` en el árbol de investigación.
 

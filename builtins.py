@@ -917,7 +917,7 @@ def get_companion() -> Tuple[Entity, Tuple[int, int]] | None:
     companion = get_companion()
     if companion != None:
         plant_type, (x, y) = companion
-        print(f"Companion: {plant_type} at ({x}, {y})")
+        print("Companion:", plant_type, "at", x, ",", y)
     ```
     """
     ...

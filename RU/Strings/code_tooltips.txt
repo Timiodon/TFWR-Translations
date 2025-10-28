@@ -341,7 +341,8 @@ for item in cost:
 Пример:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)`
 Имеет тот же эффект, что и нажатие кнопки, соответствующей `unlock` («Разблокировать») в дереве технологий.
 

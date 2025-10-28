@@ -341,7 +341,8 @@ takes `1` tick to execute.
 example:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 Has exactly the same effect as clicking the button corresponding to `unlock` in the research tree.
 

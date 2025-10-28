@@ -341,7 +341,8 @@ zajmuje `1` tick.
 przykład:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 Ma dokładnie taki sam efekt jak kliknięcie przycisku odpowiadającego danemu odblokowaniu (`unlock`) w drzewku badań.
 

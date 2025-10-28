@@ -341,7 +341,8 @@ for item in cost:
 例:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 研究ツリーで `unlock` に対応するボタンをクリックするのとまったく同じ効果があります。
 

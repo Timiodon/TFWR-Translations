@@ -341,7 +341,8 @@ for item in cost:
 示例：
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 效果与在科技树中点击对应 `unlock` 的按钮完全相同。
 

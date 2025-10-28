@@ -341,7 +341,8 @@ richiede `1` tick per essere eseguita.
 esempio:
 `companion = get_companion()
 if companion != None:
-	print(companion)`
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
 @code_tooltip_unlock = `unlock(unlock)` 
 Ha esattamente lo stesso effetto di cliccare il pulsante corrispondente a `unlock` nell'albero delle ricerche.
 
