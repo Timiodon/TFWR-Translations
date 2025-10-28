@@ -28,3 +28,4 @@ Le `for` est toujours suivi de la variable de boucle, d'un `in` puis d'une séqu
 @error_assign_before_global = {0} est assigné avant une déclaration globale.
 @error_wildcard_imports_not_allowed_in_function = Les importations de la forme `from x import *` ne sont pas autorisées à l'intérieur des fonctions.
 @error_invalid_import = Tu ne peux pas importer de fichiers dont les noms ne sont pas des identifiants valides. Les identifiants valides ne peuvent contenir que des lettres, des chiffres et des tirets bas. Si ton nom de fichier contient d'autres caractères, tu dois le renommer.
+@error_invalid_number_format = Ce format de nombre n'est pas valide.

@@ -28,3 +28,4 @@
 @error_assign_before_global = {0} 在全局声明之前被赋值。
 @error_wildcard_imports_not_allowed_in_function = 形如 `from x import *` 的导入不允许在函数内部使用。
 @error_invalid_import = 不能导入文件名不是有效标识符的文件。有效标识符只能包含字母、数字和下划线。如果文件名包含其他字符，则必须重命名。
+@error_invalid_number_format = 这个数字格式无效。

@@ -28,3 +28,4 @@ Auf das `for` folgt immer die Schleifenvariable, ein `in` und dann eine Sequenz.
 @error_assign_before_global = {0} wird vor einer globalen Deklaration zugewiesen.
 @error_wildcard_imports_not_allowed_in_function = Importe der Form `from x import *` sind innerhalb von Funktionen nicht erlaubt.
 @error_invalid_import = Du kannst keine Dateien importieren, deren Namen keine gültigen Bezeichner sind. Gültige Bezeichner dürfen nur Buchstaben, Zahlen und Unterstriche enthalten. Wenn dein Dateiname andere Zeichen enthält, musst du ihn umbenennen.
+@error_invalid_number_format = Dieses Zahlenformat ist nicht gültig.

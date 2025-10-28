@@ -28,3 +28,4 @@ The `for` is always followed by the loop variable, an `in` and then a sequence. 
 @error_assign_before_global = {0} is assigned before a global declaration.
 @error_wildcard_imports_not_allowed_in_function = Imports of the form `from x import *` are not allowed inside functions.
 @error_invalid_import = You cannot import files with names that are not valid identifiers. Valid identifiers can only contain letters, numbers, and underscores. If your file name contains other characters, you must rename it.
+@error_invalid_number_format = This number format is not valid.

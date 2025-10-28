@@ -28,3 +28,4 @@ Tab 키를 사용하여 코드를 들여쓰세요.
 @error_assign_before_global = {0}이(가) 전역 선언 전에 할당되었습니다.
 @error_wildcard_imports_not_allowed_in_function = `from x import *` 형태의 import는 함수 내에서 허용되지 않습니다.
 @error_invalid_import = 유효한 식별자가 아닌 이름의 파일은 가져올 수 없습니다. 유효한 식별자는 문자, 숫자, 밑줄만 포함할 수 있습니다. 파일 이름에 다른 문자가 포함된 경우 이름을 바꿔야 합니다.
+@error_invalid_number_format = 유효한 숫자 형식이 아닙니다.

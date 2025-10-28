@@ -28,3 +28,4 @@ Tabキーを使用してコードをインデントしてください。
 @error_assign_before_global = {0} がグローバル宣言の前に割り当てられています。
 @error_wildcard_imports_not_allowed_in_function = `from x import *` 形式のインポートは関数内では許可されていません。
 @error_invalid_import = 有効な識別子でない名前のファイルはインポートできません。有効な識別子は英文字、数字、アンダースコアのみを含むことができます。ファイル名に他の文字が含まれている場合は、名前を変更する必要があります。
+@error_invalid_number_format = この数値形式は無効です。

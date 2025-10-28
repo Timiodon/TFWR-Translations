@@ -28,3 +28,4 @@ Po `for` zawsze następuje zmienna pętli, słowo `in`, a następnie sekwencja. 
 @error_assign_before_global = {0} jest przypisane przed deklaracją globalną.
 @error_wildcard_imports_not_allowed_in_function = Importy w formie `from x import *` nie są dozwolone wewnątrz funkcji.
 @error_invalid_import = Nie można importować plików o nazwach, które nie są prawidłowymi identyfikatorami. Prawidłowe identyfikatory mogą zawierać tylko litery, cyfry i podkreślenia. Jeśli nazwa pliku zawiera inne znaki, musisz ją zmienić.
+@error_invalid_number_format = Ten format liczby jest nieprawidłowy.
