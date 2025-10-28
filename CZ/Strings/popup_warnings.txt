@@ -1,0 +1,13 @@
+@popup_warning_delete_files = Opravdu chceš trvale smazat {0}? Tuto akci nelze vrátit zpět.
+@popup_warning_delete_save = Opravdu chceš smazat {0}?
+@delete = Smazat
+@cancel = Zrušit
+@popup_warning_exit_game = Chceš hru před ukončením uložit?
+@popup_warning_load_game = Chceš hru uložit před načtením?
+@save = Uložit
+@don't save = Neukládat
+@popup_warning_corrupted_save = Při načítání {0} došlo k problému. Více informací najdeš v části o zálohách.
+@popup_warning_failed_read_save = Nepodařilo se načíst soubory savů {0}. Ujisti se, že jsi zavřel všechny programy, které mají tyto soubory otevřené, a zkus to znovu.
+@popup_warning_failed_write_save = Nepodařilo se zapsat do souborů savů {0}. Ujisti se, že jsi zavřel všechny programy, které mají tyto soubory otevřené, a zkus to znovu.
+@ok = OK
+@popup_warning_old_save = Tento save pochází ze starší verze hry. Protože byl přepracován technologický strom, všechny upgrady byly resetovány, aby odpovídaly novému systému postupu.
