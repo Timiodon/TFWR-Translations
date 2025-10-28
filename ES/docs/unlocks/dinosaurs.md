@@ -15,6 +15,7 @@ La manzana no puede aparecer si hay algo más plantado donde quiere estar.
 
 La cola del dinosaurio se arrastrará detrás del dron, llenando las casillas anteriores por las que se movió el dron. Si un dron intenta moverse encima de la cola, `move()` fallará y devolverá `False`. 
 El último segmento de la cola se apartará durante el movimiento, por lo que puedes moverte sobre él. Sin embargo, si la serpiente llena toda la granja, ya no podrás moverte. Así que puedes comprobar si la serpiente ha crecido completamente verificando si ya no puedes moverte.
+Mientras llevas el sombrero de dinosaurio, el dron no puede moverse por el borde de la granja para llegar al otro lado.
 
 Usar `measure()` en una manzana devolverá la posición de la siguiente manzana como una tupla.
 

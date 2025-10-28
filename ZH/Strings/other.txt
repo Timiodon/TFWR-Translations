@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = 地块
 @new_hat_unlocked = ## 已解锁新帽子
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- 右键点击获取更多信息 --

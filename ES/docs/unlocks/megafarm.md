@@ -39,6 +39,9 @@ Aquí hay otro ejemplo que pasa una dirección diferente a cada dron.
         do_a_flip()
     spawn_drone(task)`
 
+## Todos los Drones son Iguales
+No hay un dron "principal" especial. Todos los drones pueden generar otros drones, y todos cuentan para el límite de drones. Todos los drones desaparecen cuando terminan. Si el primer dron termina su programa antes de tiempo, otro dron se convertirá en aquel cuya ejecución se visualiza con el resaltado de código. Todos los drones pueden activar breakpoints, y cuando un dron activa un breakpoint, el resaltado de código cambia a ese dron.
+
 <spoiler=show hint> Echa un vistazo a esta súper útil función paralela `for_all`, que toma cualquier función y la ejecuta en cada casilla de la granja. Utiliza todos los drones disponibles para hacerlo.
 
 `def for_all(f):

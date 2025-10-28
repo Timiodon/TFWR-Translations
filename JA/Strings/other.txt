@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = 地面
 @new_hat_unlocked = ## 新しい帽子がアンロックされました
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- 詳細については右クリック --

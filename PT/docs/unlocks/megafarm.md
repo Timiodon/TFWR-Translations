@@ -39,6 +39,9 @@ Aqui está outro exemplo que passa uma direção diferente para cada drone.
         do_a_flip()
     spawn_drone(task)`
 
+## Todos os Drones São Iguais
+Não existe um drone "principal" especial. Todos os drones podem gerar outros drones, e todos contam para o limite de drones. Todos os drones desaparecem quando terminam. Se o primeiro drone terminar seu programa mais cedo, outro drone se tornará aquele cuja execução é visualizada com destaques de código. Todos os drones podem acionar breakpoints, e quando um drone aciona um breakpoint, o destaque de código muda para aquele drone.
+
 <spoiler=show hint> Confira esta função paralela super útil `for_all`, que pega qualquer função e a executa em cada casa da fazenda. Ela utiliza todos os drones disponíveis para fazer isso.
 
 `def for_all(f):

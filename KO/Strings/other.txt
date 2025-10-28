@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = 땅
 @new_hat_unlocked = ## 새로운 모자 해금
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- 자세한 정보를 보려면 우클릭하세요 --

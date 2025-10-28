@@ -39,6 +39,9 @@ Here's another example that passes a different direction to each drone.
         do_a_flip()
     spawn_drone(task)`
 
+## All Drones Are Equal
+There is no special "main" drone. All drones can spawn other drones, and they all count toward the drone limit. All drones disappear when they terminate. If the first drone finishes its program early, another drone will become the one whose execution is visualized with code highlights. All drones can trigger breakpoints, and when a drone triggers a breakpoint, the code highlighting switches to that drone.
+
 <spoiler=show hint> Check out this super useful parallel `for_all` function, which takes any function and runs it on every farm tile. It makes use of all available drones to do so.
 
 `def for_all(f):

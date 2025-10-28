@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = Типы земли
 @new_hat_unlocked = ## Разблокирована новая шляпа
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- щелкни ПКМ, чтобы узнать больше --

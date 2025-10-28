@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = Podłoża
 @new_hat_unlocked = ## Odblokowano nowy kapelusz
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- prawy klik po więcej informacji --

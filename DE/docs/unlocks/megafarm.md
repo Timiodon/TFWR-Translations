@@ -39,6 +39,9 @@ Hier ist ein weiteres Beispiel, das jeder Drohne eine andere Richtung übergibt.
         do_a_flip()
     spawn_drone(task)`
 
+## Alle Drohnen sind gleich
+Es gibt keine spezielle „Hauptdrohne“. Alle Drohnen können andere Drohnen spawnen, und alle zählen für das Drohnenlimit. Alle Drohnen verschwinden, wenn ihr Programm endet. Wenn die erste Drohne ihr Programm frühzeitig beendet, übernimmt eine andere Drohne die Visualisierung mit Code-Hervorhebungen. Alle Drohnen können Breakpoints auslösen, und wenn eine Drohne einen Breakpoint auslöst, wechselt die Code-Hervorhebung zu dieser Drohne.
+
 <spoiler=zeige Hinweis> Schau dir diese super nützliche parallele `for_all`-Funktion an, die eine beliebige Funktion nimmt und sie auf jedem Farmfeld ausführt. Sie nutzt alle verfügbaren Drohnen dafür.
 
 `def for_all(f):

@@ -15,6 +15,7 @@ Jabłko nie może się pojawić, jeśli coś innego jest posadzone tam, gdzie ch
 
 Ogon dinozaura będzie ciągnięty za dronem, wypełniając poprzednie pola, nad którymi poruszał się dron. Jeśli dron spróbuje wejść na ogon, `move()` nie powiedzie się i zwróci `False`. 
 Ostatni segment ogona usunie się z drogi podczas ruchu, więc możesz na niego wejść. Jednakże, jeśli wąż wypełni całą farmę, nie będziesz mógł się już poruszyć. Możesz więc sprawdzić, czy wąż jest w pełni wyrośnięty, sprawdzając, czy nie możesz się już poruszyć.
+Nosząc kapelusz dinozaura, dron nie może przekroczyć granicy farmy, aby przejść na drugą stronę.
 
 Użycie `measure()` na jabłku zwróci pozycję następnego jabłka jako krotkę.
 

@@ -15,6 +15,7 @@ The apple cannot spawn if something else is planted where it wants to be.
 
 The tail of the dinosaur will be dragged behind the drone filling the previous tiles the drone moved over. If a drone tries to move on top of the tail `move()` will fail and return `False`. 
 The last segment of the tail will move out of the way during the move, so you can move onto it. However, if the snake fills out the whole farm, you will not be able to move anymore. So you can check if the snake is fully grown by checking if you can't move anymore.
+While wearing the dinosaur hat, the drone can't move over the farm border to get to the other side.
 
 Using `measure()` on an apple will return the position of the next apple as a tuple.
 

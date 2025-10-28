@@ -39,6 +39,9 @@ Oto inny przykład, który przekazuje każdemu dronowi inny kierunek.
         do_a_flip()
     spawn_drone(task)`
 
+## Wszystkie drony są równe
+Nie ma specjalnego drona "głównego". Wszystkie drony mogą tworzyć inne drony i wszystkie wliczają się do limitu dronów. Wszystkie drony znikają po zakończeniu działania. Jeśli pierwszy dron zakończy swój program wcześniej, inny dron stanie się tym, którego wykonanie jest wizualizowane za pomocą podświetleń kodu. Wszystkie drony mogą wywoływać punkty przerwania, a gdy dron wywoła punkt przerwania, podświetlanie kodu przełącza się na tego drona.
+
 <spoiler=pokaż podpowiedź> Sprawdź tę super przydatną, równoległą funkcję `for_all`, która przyjmuje dowolną funkcję i uruchamia ją na każdym polu farmy. Wykorzystuje do tego wszystkie dostępne drony.
 
 `def for_all(f):

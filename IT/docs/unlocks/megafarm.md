@@ -14,7 +14,7 @@ Questo crea un nuovo drone nella stessa posizione del drone che ha eseguito il c
 
 I droni non si scontrano tra loro. 
 
-Usa `max_drones()` per ottenere il numero massimo di droni che possono essere creati.
+Usa `max_drones()` per ottenere il numero massimo di droni che possono esistere contemporaneamente.
 Usa `num_drones()` per ottenere il numero di droni che sono già sulla fattoria.
 
 
@@ -38,6 +38,9 @@ Ecco un altro esempio che passa una direzione diversa a ogni drone.
         move(dir)
         do_a_flip()
     spawn_drone(task)`
+
+## Tutti i Droni Sono Uguali
+Non c'è un drone "principale" speciale. Tutti i droni possono creare altri droni, e tutti contano per il limite di droni. Tutti i droni scompaiono quando terminano. Se il primo drone finisce il suo programma in anticipo, un altro drone diventerà quello la cui esecuzione è visualizzata con le evidenziazioni del codice. Tutti i droni possono attivare i breakpoint e, quando un drone attiva un breakpoint, l'evidenziazione del codice passa a quel drone.
 
 <spoiler=mostra suggerimento> Dai un'occhiata a questa utilissima funzione parallela `for_all`, che prende qualsiasi funzione e la esegue su ogni casella della fattoria. Utilizza tutti i droni disponibili per farlo.
 

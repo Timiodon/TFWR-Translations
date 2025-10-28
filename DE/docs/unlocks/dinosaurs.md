@@ -15,6 +15,7 @@ Der Apfel kann nicht erscheinen, wenn an seiner gewünschten Stelle etwas andere
 
 Der Schwanz des Dinosauriers wird hinter der Drohne hergezogen und füllt die Felder, über die sich die Drohne zuvor bewegt hat. Wenn eine Drohne versucht, sich auf den Schwanz zu bewegen, schlägt `move()` fehl und gibt `False` zurück.
 Das letzte Segment des Schwanzes wird während der Bewegung aus dem Weg geräumt, sodass du dich darauf bewegen kannst. Wenn die Schlange jedoch die gesamte Farm ausfüllt, kannst du dich nicht mehr bewegen. Du kannst also prüfen, ob die Schlange ausgewachsen ist, indem du prüfst, ob du dich nicht mehr bewegen kannst.
+Während des Tragens des Dinosaurier-Huts kann sich die Drohne nicht über den Farmrand bewegen, um auf die andere Seite zu gelangen.
 
 Die Verwendung von `measure()` auf einem Apfel gibt die Position des nächsten Apfels als Tupel zurück.
 

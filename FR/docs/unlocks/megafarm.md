@@ -39,6 +39,9 @@ Voici un autre exemple qui passe une direction différente à chaque drone.
         do_a_flip()
     spawn_drone(task)`
 
+## Tous les drones sont égaux
+Il n'y a pas de drone "principal" spécial. Tous les drones peuvent créer d'autres drones, et ils comptent tous dans la limite de drones. Tous les drones disparaissent lorsqu'ils ont terminé. Si le premier drone termine son programme en avance, un autre drone deviendra celui dont l'exécution est visualisée avec la surbrillance du code. Tous les drones peuvent déclencher des points d'arrêt, et quand un drone déclenche un point d'arrêt, la surbrillance du code bascule sur ce drone.
+
 <spoiler=montrer l'indice> Jette un œil à cette fonction parallèle super utile `for_all`, qui prend n'importe quelle fonction et l'exécute sur chaque case de la ferme. Elle utilise tous les drones disponibles pour le faire.
 
 `def for_all(f):

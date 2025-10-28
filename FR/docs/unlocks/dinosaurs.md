@@ -15,6 +15,7 @@ La pomme ne peut pas apparaître si quelque chose d'autre est planté là où el
 
 La queue du dinosaure sera traînée derrière le drone, remplissant les cases précédentes sur lesquelles le drone s'est déplacé. Si un drone essaie de se déplacer sur la queue, `move()` échouera et renverra `False`. 
 Le dernier segment de la queue s'écartera pendant le déplacement, tu pourras donc te déplacer dessus. Cependant, si le serpent remplit toute la ferme, tu ne pourras plus te déplacer. Tu peux donc vérifier si le serpent est adulte en vérifiant si tu ne peux plus bouger.
+En portant le chapeau de dinosaure, le drone ne peut pas traverser la bordure de la ferme pour atteindre l'autre côté.
 
 Utiliser `measure()` sur une pomme renverra la position de la prochaine pomme sous forme de tuple.
 

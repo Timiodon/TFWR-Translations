@@ -15,6 +15,7 @@ A maçã não pode surgir se outra coisa estiver plantada onde ela quer estar.
 
 A cauda do dinossauro será arrastada atrás do drone, preenchendo as casas anteriores por onde o drone passou. Se um drone tentar se mover sobre a cauda, `move()` falhará e retornará `False`. 
 O último segmento da cauda sairá do caminho durante o movimento, então você pode se mover para ele. No entanto, se a cobra preencher toda a fazenda, você não poderá mais se mover. Assim, você pode verificar se a cobra está totalmente crescida, verificando se não consegue mais se mover.
+Enquanto estiver usando o chapéu de dinossauro, o drone não pode atravessar a borda da fazenda para chegar ao outro lado.
 
 Usar `measure()` em uma maçã retornará a posição da próxima maçã como uma tupla.
 

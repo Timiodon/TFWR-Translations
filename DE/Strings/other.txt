@@ -15,3 +15,4 @@
 @table_of_contents_section_grounds = Böden
 @new_hat_unlocked = ## Neuer Hut freigeschaltet
 `change_hat(`{0}`)`
+@right_click_for_more_info = -- Rechtsklick für mehr Informationen --

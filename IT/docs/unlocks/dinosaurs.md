@@ -15,6 +15,7 @@ La mela non può comparire se c'è qualcos'altro piantato dove vorrebbe essere.
 
 La coda del dinosauro verrà trascinata dietro il drone, riempiendo le caselle precedenti su cui si è mosso. Se un drone cerca di muoversi sopra la coda, `move()` fallirà e restituirà `False`. 
 L'ultimo segmento della coda si sposterà durante il movimento, quindi puoi muovertici sopra. Tuttavia, se il serpente riempie tutta la fattoria, non sarai più in grado di muoverti. Quindi puoi controllare se il serpente è completamente cresciuto verificando se non puoi più muoverti.
+Mentre indossi il cappello da dinosauro, il drone non può superare il bordo della fattoria per passare dall'altro lato.
 
 Usando `measure()` su una mela si ottiene la posizione della mela successiva come una tupla.
 
