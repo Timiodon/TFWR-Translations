@@ -1,5 +1,5 @@
 # 列表
-列表是在单个变量中存储多个值的简单方法。
+列表可以通过 1 个变量存储多个值。
 新列表的创建方式如下：
 
 `list = [2, True, Items.Hay]`
@@ -25,7 +25,7 @@ for number in list:
 
 使用以下列表方法可添加和删除元素：
 
-`list.append(elem)` 在列表末尾添加一个元素：
+`list.append(elem)` 在列表末尾添加 1 个元素：
 
 `list = [2, 6, 12]
 list.append(7)`
@@ -37,7 +37,7 @@ list.append(7)`
 list.remove(2)`
 `list` 现在是 `[1, 4, 2]`
 
-`list.insert(index, elem)` 在给定索引处插入一个元素：
+`list.insert(index, elem)` 在给定索引处插入 1 个元素：
 
 `list = [Entities.Tree, Items.Hay]
 list.insert(1, Items.Wood)`
@@ -57,8 +57,8 @@ list.pop()`
 x = len(list)`
 `x` 现在是 `3`
 
-列表具有引用语义。也就是说，将一个列表赋给一个变量，会将相应的列表对象赋给该变量，而不是创建列表的复制副本。
-如果两个变量引用同一个列表，更改列表会同时影响这两个变量。
+列表具有引用语义。也就是说，将 1 个列表赋给 1 个变量，会将相应的列表对象赋给该变量，而不是创建列表的副本。
+如果多个变量引用同一个列表，更改列表会同时影响这些变量。
 
 `a = [1,2]
 b = a
