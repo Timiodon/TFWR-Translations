@@ -28,6 +28,7 @@ Yulia Tregubova (Chef de projet)
 
 ### Contributeurs de la traduction communautaire
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Modérateurs Discord

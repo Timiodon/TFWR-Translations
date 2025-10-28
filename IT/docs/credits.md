@@ -20,6 +20,7 @@ Stephanie Stutz
 
 ### Contributi alla traduzione dalla comunità
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Moderatori Discord

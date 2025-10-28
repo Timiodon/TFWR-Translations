@@ -28,6 +28,7 @@ Yulia Tregubova (プロジェクトマネージャー)
 
 ### コミュニティ翻訳協力者
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Discordモデレーター

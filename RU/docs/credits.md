@@ -28,6 +28,7 @@ Yulia Tregubova (менеджер проекта)
 
 ### Участники перевода от сообщества
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Модераторы Discord

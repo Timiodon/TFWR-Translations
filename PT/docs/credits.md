@@ -28,6 +28,7 @@ Yulia Tregubova (Gerente de Projeto)
 
 ### Colaboradores da Tradução da Comunidade
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Moderadores do Discord

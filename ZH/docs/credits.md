@@ -28,6 +28,7 @@ Yulia Tregubova (项目经理)
 
 ### 社区翻译贡献者
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Discord 管理员

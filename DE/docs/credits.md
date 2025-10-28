@@ -28,6 +28,7 @@ Yulia Tregubova (Project Manager)
 
 ### Community-Übersetzer
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Discord-Moderatoren

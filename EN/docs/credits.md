@@ -28,6 +28,7 @@ Yulia Tregubova (Project Manager)
 
 ### Community Translation Contributors
 HoshiyomiLusia
+Liuxun
 Davide Altamura
 
 ### Discord Moderators
