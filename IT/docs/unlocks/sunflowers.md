@@ -4,7 +4,8 @@ I [girasoli](objects/sunflower) raccolgono l'energia del sole. Puoi raccogliere 
 Piantarli funziona esattamente come piantare carote o zucche. 
 
 La raccolta di un girasole cresciuto produce energia.
-Se ci sono almeno 10 girasoli nella fattoria e raccogli quello con il maggior numero di petali, ottieni `5` volte più energia!
+Se ci sono almeno 10 girasoli nella fattoria e raccogli quello con il maggior numero di petali, ottieni `8` volte più energia!
+Se raccogli un girasole mentre ce n'è un altro con più petali, anche il prossimo girasole che raccoglierai ti darà solo la quantità normale di energia (non il bonus 8x).
 
 `measure()` restituisce il numero di petali del girasole sotto il drone.
 I girasoli hanno almeno `7` e al massimo `15` petali.

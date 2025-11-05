@@ -4,7 +4,8 @@ Les [tournesols](objects/sunflower) collectent la puissance du soleil. Tu peux r
 Les planter fonctionne exactement de la même manière que pour les carottes ou les citrouilles.
 
 Récolter un tournesol adulte rapporte de la puissance.
-S'il y a au moins 10 tournesols dans la ferme et que tu récoltes celui avec le plus grand nombre de pétales, tu obtiens `5` fois plus de puissance !
+S'il y a au moins 10 tournesols dans la ferme et que tu récoltes celui avec le plus grand nombre de pétales, tu obtiens `8` fois plus de puissance !
+Si tu récoltes un tournesol alors qu'un autre a plus de pétales, le prochain tournesol que tu récolteras ne te donnera que la quantité normale de puissance (pas le bonus de 8x).
 
 `measure()` renvoie le nombre de pétales du tournesol sous le drone.
 Les tournesols ont au moins `7` et au plus `15` pétales.

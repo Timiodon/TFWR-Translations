@@ -4,7 +4,8 @@
 Plantá-los funciona exatamente como plantar cenouras ou abóboras. 
 
 Colher um girassol crescido rende energia.
-Se houver pelo menos 10 girassóis na fazenda e você colher aquele com o maior número de pétalas, você ganha `5` vezes mais energia!
+Se houver pelo menos 10 girassóis na fazenda e você colher aquele com o maior número de pétalas, você ganha `8` vezes mais energia!
+Se você colher um girassol enquanto houver outro com mais pétalas, o próximo girassol que você colher também dará apenas a quantidade normal de energia (sem o bônus de 8x).
 
 `measure()` retorna o número de pétalas do girassol sob o drone.
 Girassóis têm pelo menos `7` e no máximo `15` pétalas.

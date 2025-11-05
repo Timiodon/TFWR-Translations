@@ -4,7 +4,8 @@
 Das Pflanzen funktioniert genauso wie bei Karotten oder Kürbissen. 
 
 Das Ernten einer ausgewachsenen Sonnenblume liefert Energie.
-Wenn mindestens 10 Sonnenblumen auf der Farm sind und du die mit der größten Anzahl an Blütenblättern erntest, bekommst du `5` mal mehr Energie!
+Wenn mindestens 10 Sonnenblumen auf der Farm sind und du die mit der größten Anzahl an Blütenblättern erntest, bekommst du `8` mal mehr Energie!
+Wenn du eine Sonnenblume erntest, während eine andere Sonnenblume mehr Blütenblätter hat, gibt auch die nächste Ernte nur die normale Menge Energie (nicht den 8x Bonus).
 
 `measure()` gibt die Anzahl der Blütenblätter der Sonnenblume unter der Drohne zurück.
 Sonnenblumen haben mindestens `7` und höchstens `15` Blütenblätter.

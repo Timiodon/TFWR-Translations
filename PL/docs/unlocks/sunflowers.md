@@ -4,7 +4,8 @@
 Sadzenie ich działa dokładnie tak samo, jak sadzenie marchewek czy dyń. 
 
 Zbieranie dojrzałego słonecznika daje energię.
-Jeśli na farmie jest co najmniej 10 słoneczników i zbierzesz ten z największą liczbą płatków, otrzymasz `5` razy więcej energii!
+Jeśli na farmie jest co najmniej 10 słoneczników i zbierzesz ten z największą liczbą płatków, otrzymasz `8` razy więcej energii!
+Jeśli zbierzesz słonecznik, podczas gdy na farmie jest inny z większą liczbą płatków, następny zebrany słonecznik również da ci tylko normalną ilość energii (bez bonusu 8x).
 
 `measure()` zwraca liczbę płatków słonecznika pod dronem.
 Słoneczniki mają co najmniej `7` i co najwyżej `15` płatków.

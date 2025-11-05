@@ -4,7 +4,8 @@
 Planting them works exactly like planting carrots or pumpkins. 
 
 Harvesting a grown sunflower yields power.
-If there are at least 10 sunflowers on the farm and you harvest the one with the largest number of petals you get `5` times more power!
+If there are at least 10 sunflowers on the farm and you harvest the one with the largest number of petals you get `8` times more power!
+If you harvest a sunflower while there is another sunflower with more petals, the next sunflower you harvest will also only give you the normal amount of power (not the 8x bonus).
 
 `measure()` returns the number of petals of the sunflower under the drone.
 Sunflowers have at least `7` and at most `15` petals.

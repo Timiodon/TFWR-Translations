@@ -4,7 +4,8 @@ Los [girasoles](objects/sunflower) recogen la energía del sol. Puedes cosechar 
 Plantarlos funciona exactamente igual que plantar zanahorias o calabazas. 
 
 Cosechar un girasol crecido produce energía.
-Si hay al menos 10 girasoles en la granja y cosechas el que tiene el mayor número de pétalos, ¡obtienes `5` veces más energía!
+Si hay al menos 10 girasoles en la granja y cosechas el que tiene el mayor número de pétalos, ¡obtienes `8` veces más energía!
+Si cosechas un girasol mientras hay otro girasol con más pétalos, el siguiente girasol que coseches también te dará solo la cantidad normal de energía (no el bonus de 8x).
 
 `measure()` devuelve el número de pétalos del girasol debajo del dron.
 Los girasoles tienen al menos `7` y como máximo `15` pétalos.
