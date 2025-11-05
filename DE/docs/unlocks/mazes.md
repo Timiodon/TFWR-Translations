@@ -31,6 +31,7 @@ Die Verwendung von `measure()` irgendwo im Labyrinth gibt die Position des Schat
 
 Für eine zusätzliche Herausforderung kannst du das Labyrinth auch wiederverwenden, indem du dieselbe Menge an `Items.Weird_Substance` erneut auf den Schatz anwendest.
 Dies erhöht die Menge an Gold im Schatz um ein volles Labyrinth und verschiebt es an eine zufällige Position im Labyrinth.
+Nur Labyrinthe der Größe 8x8 oder größer können wiederverwendet werden.
 
 Jedes Mal, wenn der Schatz bewegt wird, können einige der Wände des Labyrinths zufällig entfernt werden. Wiederverwendete Labyrinthe können also Schleifen enthalten.
 
@@ -39,7 +40,7 @@ Ein Labyrinth wiederzuverwenden bringt nicht mehr Gold, als es einfach zu ernten
 Dies ist zu 100% eine zusätzliche Herausforderung, die du einfach überspringen kannst.
 Es lohnt sich nur, wenn die zusätzlichen Informationen und die Abkürzungen dir helfen, das Labyrinth schneller zu lösen.
 
-Dasselbe Labyrinth kann maximal 300 Mal wiederverwendet werden. Danach erhöht die Verwendung von seltsamer Substanz auf dem Schatz das Gold darin nicht mehr und er wird sich nicht mehr bewegen.
+Der Schatz kann bis zu 300 Mal verschoben werden. Danach erhöht die Verwendung von seltsamer Substanz auf dem Schatz das Gold darin nicht mehr und er wird sich nicht mehr bewegen.
 
 <spoiler=zeige Hinweis 1>Hier ist ein allgemeiner Ansatz zur Lösung des Problems:
 

@@ -31,6 +31,7 @@ Usare `measure()` in qualsiasi punto del labirinto restituisce la posizione del 
 
 Per una sfida extra puoi anche riutilizzare il labirinto usando di nuovo la stessa quantità di `Items.Weird_Substance` sul tesoro. 
 Questo aumenterà la quantità di oro nel tesoro di un intero labirinto e lo sposterà in una posizione casuale nel labirinto.
+Solo i labirinti di dimensioni 8x8 o superiori possono essere riutilizzati.
 
 Ogni volta che il tesoro viene spostato, alcune delle pareti del labirinto possono essere rimosse casualmente. Quindi i labirinti riutilizzati possono contenere cicli.
 
@@ -39,7 +40,7 @@ Riutilizzare un labirinto non ti dà più oro che semplicemente raccogliere e cr
 Questa è al 100% una sfida extra che puoi semplicemente saltare.
 Vale la pena solo se le informazioni extra e le scorciatoie ti aiutano a risolvere il labirinto più velocemente.
 
-Lo stesso labirinto può essere risolto un massimo di 301 volte. Ciò corrisponde a 300 riposizionamenti. Dopodiché, usare la sostanza strana sul tesoro non aumenterà più l'oro al suo interno e non si sposterà più.
+Il tesoro può essere riposizionato fino a 300 volte. Dopodiché, usare la sostanza strana sul tesoro non aumenterà più l'oro al suo interno e non si sposterà più.
 
 <spoiler=mostra suggerimento 1>Ecco un approccio generale per risolvere il problema:
 

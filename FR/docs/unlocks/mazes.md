@@ -1,7 +1,7 @@
 # Labyrinthes
 `Items.Weird_Substance`, qui est obtenu en [fertilisant](docs/unlocks/fertilizer.md) les plantes, a un effet étrange sur les buissons. Si le drone est au-dessus d'un buisson et que tu appelles `use_item(Items.Weird_Substance, amount)`, le buisson se transformera en un labyrinthe de haies.
 La taille du labyrinthe dépend de la quantité de `Items.Weird_Substance` utilisée (le deuxième argument de l'appel `use_item()`).
-Sans améliorations de labyrinthe, utiliser `n` `Items.Weird_Substance` résultera en un labyrinthe de `n`x`n`. Chaque niveau d'amélioration de labyrinthe double le trésor, mais double aussi la quantité de `Items.Weird_Substance` nécessaire.
+Sans améliorations de labyrinthe, utiliser `n` `Items.Weird_Substance` résultera en un labyrinthe de `n`x`n`. Chaque niveau d'amélioration de labyrinthe double le trésor, mais double aussi la quantité de `Items.Weird_Substance` nécessaire. 
 Donc, pour créer un labyrinthe de la taille du champ :
 
 `plant(Entities.Bush)
@@ -29,8 +29,9 @@ Si tu n'as aucune idée de comment atteindre le trésor, jette un œil à l'Indi
 Utiliser `measure()` n'importe où dans le labyrinthe renvoie la position du trésor.
 `x, y = measure()`
 
-Pour un défi supplémentaire, tu peux également réutiliser le labyrinthe en utilisant à nouveau la même quantité de `Items.Weird_Substance` sur le trésor.
+Pour un défi supplémentaire, tu peux également réutiliser le labyrinthe en utilisant à nouveau la même quantité de `Items.Weird_Substance` sur le trésor. 
 Cela augmentera la quantité d'or dans le trésor d'un labyrinthe complet et le déplacera à une position aléatoire dans le labyrinthe.
+Seuls les labyrinthes de taille 8x8 ou plus peuvent être réutilisés.
 
 Chaque fois que le trésor est déplacé, certaines des cloisons du labyrinthe peuvent être retirées aléatoirement. Les labyrinthes réutilisés peuvent donc contenir des boucles.
 
@@ -67,5 +68,5 @@ index = (index + 1) % 4`
 index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
-<spoiler=montrer l'indice 4>Si tu n'arrives pas à le résoudre, tu peux toujours te simplifier la vie et le faire de manière moins efficace.
+<spoiler=montrer l'indice 4>Si tu n'arrives pas à le résoudre, tu peux toujours te simplifier la vie et le faire de manière moins efficace. 
 Résoudre un labyrinthe de `1`x`1` est trivial.</spoiler>

@@ -31,6 +31,7 @@ Using `measure()` anywhere in the maze returns the position of the treasure.
 
 For an extra challenge you can also reuse the maze by using the same amount of `Items.Weird_Substance` on the treasure again. 
 This will increase the amount of gold in the treasure by one full maze and move it to a random position in the maze.
+Only mazes of size 8x8 or larger can be reused.
 
 Each time the treasure is moved, some of the maze's walls may be randomly removed. So reused mazes can contain loops.
 
