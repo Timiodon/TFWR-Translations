@@ -30,7 +30,7 @@ Utiliser `measure()` n'importe où dans le labyrinthe renvoie la position du tr�
 `x, y = measure()`
 
 Pour un défi supplémentaire, tu peux également réutiliser le labyrinthe en utilisant à nouveau la même quantité de `Items.Weird_Substance` sur le trésor. 
-Cela augmentera la quantité d'or dans le trésor d'un labyrinthe complet et le déplacera à une position aléatoire dans le labyrinthe.
+Cela permet de récolter le trésor et le déplace à une nouvelle position aléatoire dans le labyrinthe.
 Seuls les labyrinthes de taille 8x8 ou plus peuvent être réutilisés.
 
 Chaque fois que le trésor est déplacé, certaines des cloisons du labyrinthe peuvent être retirées aléatoirement. Les labyrinthes réutilisés peuvent donc contenir des boucles.
