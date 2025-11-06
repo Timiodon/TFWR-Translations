@@ -1,0 +1,35 @@
+@error_missing_default_parameter = 所有預設參數必須放在參數列表的尾端。
+@error_invalid_name = {0} 不是有效的名稱。名稱必須以字母開頭，且只能包含字母、數字與底線，且不能為保留字。
+@error_reserved_keyword = {0} 為保留字，不能當作名稱。
+@error_invalid_assign_expr = 無法對此表達式進行賦值。
+@error_no_statements = 程式碼區塊必須包含至少一個陳述式。
+陳述式可以是函式呼叫，如 `harvest()`，或是變數賦值。
+如果希望在程式碼區塊中什麼都不做，可以使用 `pass` 陳述式。
+@error_not_enough_indentation = 這裡縮排不足。
+在 `:` 之後的縮排必須比其之前多，以區分新的程式碼區塊。
+使用 Tab 鍵進行縮排。
+@error_too_much_indentation = 這裡縮排過多。
+程式碼區塊內所有陳述式的縮排必須一致。
+@error_not_a_statement = 這不是一個有效的陳述式。
+@error_not_a_statement2 = 這不是一個有效的陳述式。你是想寫成 {0} 嗎？
+@error_invalid_expression = 這不是一個有效的表達式。
+@error_new_line_expected = 這裡預期有新行。
+@error_unexpected_token = 這裡預期為 {0}。
+@error_missing_colon = 每個程式碼區塊必須有 `:`。
+@error_unexpected_assign = 這裡不能進行賦值。如果要比較是否相等請使用 `==`。
+@error_invalid_for_syntax = 這不是一個有效的 for 迴圈。for 迴圈的範例如下：
+
+```
+for n in range(3):
+```
+
+`for` 後面必須接迴圈變數、一個 `in` 接著是一個序列。在此範例中，`n` 是變數名稱，可以替換成其他名稱。
+@error_unknown_method = 這個方法不存在。
+@error_bad_backslash = 反斜線可用來將表達式拆成多行，但在反斜線後必須換行。
+@error_mixed_indentation = 製表符和空格不應該混用。
+@error_expected_close_token = 預期為逗號或右括號。
+@error_wrong_dict_literal = 預期使用 `:` 分隔字典的鍵和值。
+@error_assign_before_global = {0} 在全域聲明前被賦值。
+@error_wildcard_imports_not_allowed_in_function = 不允許在函式內使用 `from x import *` 形式的匯入。
+@error_invalid_import = 無法匯入檔名非有效識別字的檔案。有效的識別字只能包含字母、數字和底線。如果檔名包含其他字元，請重新命名。
+@error_invalid_number_format = 這個數字格式無效。

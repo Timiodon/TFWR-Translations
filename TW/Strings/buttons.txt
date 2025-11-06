@@ -1,0 +1,17 @@
+@save = 儲存
+@saved = 已儲存
+@play = 開始
+@load = 載入
+@options = 選項
+@join_discord = Discord
+@quit = 退出
+@open_folder = 打開資料夾
+@new_game = 新遊戲
+@back = 返回
+@unlocks = 解鎖項
+@farm = 農場
+@unlocked = 已解鎖
+@upgrade = 升級
+@max_level = 已滿級
+@unlock = 解鎖
+@locked = 未解鎖

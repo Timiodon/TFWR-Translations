@@ -1,0 +1,13 @@
+@popup_warning_delete_files = 你是否要永久刪除 {0}？此操作無法撤銷。
+@popup_warning_delete_save = 你確定要刪除 {0} 嗎？
+@delete = 刪除
+@cancel = 取消
+@popup_warning_exit_game = 退出前是否要儲存？
+@popup_warning_load_game = 載入前是否要儲存？
+@save = 儲存
+@don't save = 不儲存
+@popup_warning_corrupted_save = 載入 {0} 時似乎出現問題。更多資訊請查看「載入備份」章節。
+@popup_warning_failed_read_save = 無法讀取 {0} 的存檔。請確保關閉所有其他存取該檔案的程式後重試。
+@popup_warning_failed_write_save = 無法寫入 {0} 的存檔。請確保關閉所有其他存取該檔案的程式後重試。
+@ok = 確定
+@popup_warning_old_save = 這份存檔來自舊版本的遊戲。由於科技樹已經重製，所有升級都已被重置，以便更好適應新的進度系統。

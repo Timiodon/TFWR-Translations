@@ -1,0 +1,83 @@
+@error_code_after_block = 此處不應該有任何程式碼。請嘗試刪除它或將其放在新的一行。
+@error_wrong_number_args = {0} 需要 {1} 個參數。
+@error_expected_no_args = {0} 不需要任何參數。
+@error_wrong_args = {1} 的第 {0} 個參數是 {2}。這不是一個有效的參數。
+@error_syntax_error_in_import = 匯入的模組存在語法錯誤。
+@error_module_not_found = 不存在此名稱的模組。名稱需要與檔案名稱相符。此名稱顯示在視窗頂部。
+@error_list_element_not_found = {0} 不是串列中的元素。
+@error_set_element_not_found = {0} 不是集合的元素。
+@error_index_out_of_bounds = 索引 {0} 超出了串列 {1} 的範圍。
+@error_index_out_of_bounds2 = 索引超出了串列的範圍。
+@error_arith_assign_not_used_on_number = {0} 只能用於數字。
+@error_bool_op_not_used_on_bool = 邏輯運算子只能用於結果為 `True` 或 `False` 的布林表達式。
+@error_bad_bin_operator = 運算子 {0} 無法用於運算元 {1} 和 {2}。
+@error_bad_unary_operator = 運算子 {0} 無法用於 {1}。
+@error_index = {0} 無法當作 {1} 的索引。
+@error_index_on_non_indexable = 無法對 {0} 進行索引。
+@error_zero_step = 步進不得為零。
+@error_index_on_tuple = 無法指派元組元素，因為元組是不可更改的。
+@error_bad_key = {0} 無法當作鍵。
+@error_slice_dict = 無法對字典進行切片。
+@error_key = {0} 不是字典中的鍵。
+@error_condition_not_bool = {0} 不是一個有效的條件。條件必須是一個布林值，也就是說，它必須是始終是 `True` 或 `False` 的表達式。
+@error_for_requires_iterable = {0} 無法在 for 迴圈中迭代。for 迴圈必須指定一個序列才能進行迭代。例如：
+
+```
+for i in range(5):
+```
+這裡 range(5) 會回傳序列 `0, 1, 2, 3, 4`。
+@error_no_loop_to_break = `break` 只能在迴圈内使用。
+@error_no_loop_to_continue = `continue` 只能在迴圈内使用。
+@error_no_function_to_return_from = `return` 只能在函式内使用。
+@error_missing_unlock = 必須先解鎖才能使用。
+@error_missing_x_unlock = 必須先解鎖 {0} 才能使用。
+@error_name_not_defined = {0} 尚未被定義。使用變數前必須賦值。
+@error_missing_import = {0} 尚未被定義。但它似乎在檔案 {1} 中定義過。你是否忘了匯入檔案？
+如果已經匯入，可能是遇到了匯入迴圈（請查看「匯入」章節）。
+@error_missing_import_before_unlock = {0} 尚未被定義。但它似乎在檔案 {1} 中定義過。你必須先解鎖匯入功能才能從其他檔案匯入内容。
+@error_missing_module_access = {0} 尚未被定義。但它似乎在檔案 {1} 中定義過。你需要透過模組名稱存取它，例如：
+
+{1}`.`{0}
+@error_call_before_def = {0} 尚未定義。它似乎已在此檔案的某個位置有定義，但尚未執行。函式只能在 `def` 陳述式之後被呼叫。
+@error_not_a_function = 你嘗試呼叫的不是函式。一個常見的錯誤是使用與函式同名的變數。
+@error_invalid_const = {0} 不存在。
+@error_invalid_const2 = 此常數不存在。
+@error_max_stack_size_reached = 已達最大呼叫堆疊大小。這很可能是由於遞迴函式呼叫過多所致。
+@error_max_comparison_depth = 已達最大比較深度。例如當你比較包含自身的串列時，可能回發生這種情況。
+@error_assign_type_mismatch = 賦值的左側與右側不符。
+@error_too_many_values_to_unpack = 右側沒有足夠的值可供解包。
+@error_not_enough_values = 右右側包含太多值，無法解包到左側。
+@error_empty_print = `print()` 至少需要一個參數。
+@error_in_string = 無法檢查 {0} 是否在字串中。
+@error_collection_changed_size_during_iteration = 在對此集合進行迭代的 for 迴圈中，不能改變集合的大小。因為改變集合大小會使 for 迴圈所使用的迭代器失效。
+@error_wrong_use_of_max = 無法計算 {0} 的最大值。
+@error_wrong_use_of_min = 無法計算 {0} 的最小值。
+@error_function_as_condition = 嘗試檢查函式 {0} 是否為 `True`。這裡指的是函式物件本身，而不是該函式的回傳值。你是否想要使用呼叫運算子 () 來呼叫該函式？
+
+在 Python 中，函式物件是真值，也就是說如果你將函式直接當作條件使用，它會像 `True` 一樣，因此 Python 本身不會拋出此錯誤訊息。
+
+這是一則安全性保護錯誤訊息；如果它妨礙到你，可以在選項中將其關閉。
+@error_function_in_operator = 嘗試在函式 {0} 上使用 {1}。這裡指的是函式物件本身，而不是該函式的回傳值。你是否想要使用呼叫運算子 `()` 來呼叫該函式？
+
+這是一則安全性保護錯誤訊息；如果它妨礙到你，可以在選項中將其關閉。
+@error_zero_step_size = 步進大小不得為零 0。
+@error_sequence_too_large = 序列過大，無法複製。
+@error_invalid_sim_unlocks = 起始解鎖項目無效，必須是一個解鎖項目的序列，或形如 `(Unlock.Carrots, 3)` 的元組。
+@error_invalid_sim_items = 起始物品無效，必須是一個將物品對應到數量的字典，例如 `{Items.Hay : 100}`。
+@error_invalid_sim_globals = 起始全域變數無效，必須是一個將變數名稱映射到值的字典，例如 `{"x" : 42}`。
+@error_division_by_zero = 喔不！你除以了 `0`，你差點因此出錯。
+@error_negative_use_item = 使用物品的數量必須至少為 `1`，目前為 {0}。
+@error_use_before_assign = 嘗試在變數 {0} 被賦值前讀取它。
+如果你想要修改全域變數，必須使用 global 關鍵字在全域作用域中寫入。
+
+```
+global x
+x += 1
+```
+@error_attribute_on_non_module = 你不能為 {0} 指派屬性。
+@error_file_not_found = 檔案 {0} 不存在。
+@error_max_drones_reached = 已超過無人機數量上限。
+@error_dino_hat_already_used = 恐龍帽只有一頂，而且已被使用。无你無法在第二架無人機上使用它。
+@error_invalid_drone_id = 不存在 ID 為 {0} 的無人機。
+@error_invalid_handle = {0} 已不存在。
+@error_spawn_drone_builtin = 你不能直接將內建函式用於 `spawn_drone()`。你必須定義自己的函式。

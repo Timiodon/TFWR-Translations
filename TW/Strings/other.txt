@@ -1,0 +1,18 @@
+@word_number = 數字
+@word_direction = 方向
+@run_cancelled = 運行失敗
+@average_text = 已完成 {0} 次運行（{2:F1}%）
+{1}
+@average_text2 = 已完成 {0} 次運行
+{1}
+@unlocked_in = 更多相關資訊詳見：[{0}]({1})
+@table_of_contents_section_general_info = 通用資訊
+@table_of_contents_section_programming = 程式設計
+@table_of_contents_section_unlocks = 解鎖
+@table_of_contents_section_builtins = 內建函式
+@table_of_contents_section_items = 物品
+@table_of_contents_section_entities = 實體
+@table_of_contents_section_grounds = 地塊
+@new_hat_unlocked = ## 已解鎖新帽子
+`change_hat(`{0}`)`
+@right_click_for_more_info = -- 右鍵點擊查看更多資訊 --
