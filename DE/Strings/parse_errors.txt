@@ -29,3 +29,34 @@ Auf das `for` folgt immer die Schleifenvariable, ein `in` und dann eine Sequenz.
 @error_wildcard_imports_not_allowed_in_function = Importe der Form `from x import *` sind innerhalb von Funktionen nicht erlaubt.
 @error_invalid_import = Du kannst keine Dateien importieren, deren Namen keine gültigen Bezeichner sind. Gültige Bezeichner dürfen nur Buchstaben, Zahlen und Unterstriche enthalten. Wenn dein Dateiname andere Zeichen enthält, musst du ihn umbenennen.
 @error_invalid_number_format = Dieses Zahlenformat ist nicht gültig.
+@error_compared_item_with_number = {0} ist keine Zahl, sondern ein Item. Ein Vergleich mit einer Zahl ergibt keinen Sinn.
+
+Wenn du prüfen möchtest, wie viel du von diesem Item hast, verwende stattdessen `num_items(`{0}`)`.
+@error_compared_entity_with_number = {0} ist keine Zahl, sondern eine Entität. Ein Vergleich mit einer Zahl ergibt keinen Sinn.
+@error_compared_unlock_with_number = {0} ist keine Zahl, sondern eine Freischaltung. Ein Vergleich mit einer Zahl ergibt keinen Sinn.
+
+Wenn du prüfen möchtest, wie oft du sie freigeschaltet hast, verwende stattdessen `num_unlocked(`{0}`)`.
+@error_nonsensical_or = `or `{0}` in einer Bedingung zu verwenden, ergibt keinen Sinn, denn {0} ist eine Konstante. 
+Beachte, dass Vergleichsoperatoren vor `or` ausgewertet werden.
+
+Beispiel:
+`x == 5 or 6` 
+ist äquivalent zu 
+`(x == 5) or 6`
+Zahlen außer `0` gelten als `True`, also ist dies äquivalent zu 
+`(x == 5) or True`
+was immer `True` ist.
+
+Dies ist theoretisch gültiger Python-Code, aber es gibt keinen Grund, ihn jemals so zu schreiben.
+@error_item_condition = {0} ist ein Item und kein boolescher Wert. Es allein als Bedingung zu verwenden, ergibt keinen Sinn. 
+Vielleicht wolltest du prüfen, ob ein Wert gleich diesem Item ist?
+`some_variable == `{0}
+@error_unlock_condition = {0} ist eine Freischaltung und kein boolescher Wert. Sie allein als Bedingung zu verwenden, ergibt keinen Sinn. 
+So kannst du prüfen, ob die Freischaltung freigeschaltet ist:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} ist eine Entität und kein boolescher Wert. Sie allein als Bedingung zu verwenden, ergibt keinen Sinn.
+So kannst du den Typ der Entität unter der Drohne überprüfen:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} ist ein Bodentyp und kein boolescher Wert. Ihn allein als Bedingung zu verwenden, ergibt keinen Sinn.
+So kannst du den Bodentyp unter der Drohne überprüfen:
+`get_ground_type() == `{0}

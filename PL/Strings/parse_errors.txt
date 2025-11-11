@@ -29,3 +29,34 @@ Po `for` zawsze następuje zmienna pętli, słowo `in`, a następnie sekwencja. 
 @error_wildcard_imports_not_allowed_in_function = Importy w formie `from x import *` nie są dozwolone wewnątrz funkcji.
 @error_invalid_import = Nie można importować plików o nazwach, które nie są prawidłowymi identyfikatorami. Prawidłowe identyfikatory mogą zawierać tylko litery, cyfry i podkreślenia. Jeśli nazwa pliku zawiera inne znaki, musisz ją zmienić.
 @error_invalid_number_format = Ten format liczby jest nieprawidłowy.
+@error_compared_item_with_number = {0} nie jest liczbą, to przedmiot. Porównywanie go z liczbą nie ma sensu.
+
+Jeśli chcesz sprawdzić, ile masz tego przedmiotu, użyj zamiast tego `num_items(`{0}`)`.
+@error_compared_entity_with_number = {0} nie jest liczbą, to obiekt. Porównywanie go z liczbą nie ma sensu.
+@error_compared_unlock_with_number = {0} nie jest liczbą, to odblokowanie. Porównywanie go z liczbą nie ma sensu.
+
+Jeśli chcesz sprawdzić, ile razy je odblokowałeś, użyj zamiast tego `num_unlocked(`{0}`)`.
+@error_nonsensical_or = Użycie `or `{0} w warunku nie ma sensu, ponieważ {0} jest stałą. 
+Zauważ, że operatory porównania są oceniane przed `or`.
+
+Przykład:
+`x == 5 or 6` 
+jest równoważne 
+`(x == 5) or 6`
+Liczby różne od zera są uważane za prawdę, więc jest to równoważne 
+`(x == 5) or True`
+co jest zawsze prawdą.
+
+Jest to teoretycznie poprawny kod w Pythonie, ale nie ma powodu, aby kiedykolwiek pisać go w ten sposób.
+@error_item_condition = {0} to przedmiot, a nie wartość logiczna. Używanie go samego jako warunku nie ma sensu. 
+Może chciałeś sprawdzić, czy jakaś wartość jest równa temu przedmiotowi?
+`some_variable == `{0}
+@error_unlock_condition = {0} to odblokowanie, a nie wartość logiczna. Używanie go samego jako warunku nie ma sensu. 
+Tak możesz sprawdzić, czy to odblokowanie jest odblokowane:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} to obiekt, a nie wartość logiczna. Używanie go samego jako warunku nie ma sensu.
+Tak możesz sprawdzić typ obiektu pod dronem:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} to typ podłoża, a nie wartość logiczna. Używanie go samego jako warunku nie ma sensu.
+Tak możesz sprawdzić typ podłoża pod dronem:
+`get_ground_type() == `{0}

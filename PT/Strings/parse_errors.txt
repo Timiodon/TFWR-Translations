@@ -29,3 +29,34 @@ O `for` é sempre seguido pela variável do loop, um `in` e depois uma sequênci
 @error_wildcard_imports_not_allowed_in_function = Importações da forma `from x import *` não são permitidas dentro de funções.
 @error_invalid_import = Você não pode importar arquivos com nomes que não são identificadores válidos. Identificadores válidos só podem conter letras, números e sublinhados. Se o nome do seu arquivo contiver outros caracteres, você deve renomeá-lo.
 @error_invalid_number_format = Este formato de número não é válido.
+@error_compared_item_with_number = {0} não é um número, é um item. Compará-lo com um número não faz sentido.
+
+Se você quiser verificar a quantidade desse item que você tem, use `num_items(`{0}`)`.
+@error_compared_entity_with_number = {0} não é um número, é uma entidade. Compará-lo com um número não faz sentido.
+@error_compared_unlock_with_number = {0} não é um número, é um desbloqueio. Compará-lo com um número não faz sentido.
+
+Se você quiser verificar quantas vezes o desbloqueou, use `num_unlocked(`{0}`)`.
+@error_nonsensical_or = Usar `or `{0} em uma condição não faz sentido porque {0} é uma constante. 
+Note que os operadores de comparação são avaliados antes do `or`.
+
+Exemplo:
+`x == 5 or 6` 
+é equivalente a 
+`(x == 5) or 6`
+Números diferentes de zero são considerados verdadeiros, então isso é equivalente a 
+`(x == 5) or True`
+o que é sempre verdadeiro.
+
+Isso é, teoricamente, um código Python válido, mas não há motivo para escrevê-lo dessa forma.
+@error_item_condition = {0} é um item e não um booleano. Usá-lo como condição por si só não faz sentido. 
+Talvez você quisesse verificar se um valor é igual a esse item?
+`alguma_variavel == `{0}
+@error_unlock_condition = {0} é um desbloqueio e não um booleano. Usá-lo como condição por si só não faz sentido. 
+É assim que você pode verificar se o desbloqueio foi feito:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} é uma entidade e não um booleano. Usá-lo como condição por si só não faz sentido.
+É assim que você pode verificar o tipo da entidade sob o drone:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} é um tipo de solo e não um booleano. Usá-lo como condição por si só não faz sentido.
+É assim que você pode verificar o tipo do solo sob o drone:
+`get_ground_type() == `{0}

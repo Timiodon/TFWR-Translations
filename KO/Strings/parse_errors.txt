@@ -29,3 +29,34 @@ Tab 키를 사용하여 코드를 들여쓰세요.
 @error_wildcard_imports_not_allowed_in_function = `from x import *` 형태의 import는 함수 내에서 허용되지 않습니다.
 @error_invalid_import = 유효한 식별자가 아닌 이름의 파일은 가져올 수 없습니다. 유효한 식별자는 문자, 숫자, 밑줄만 포함할 수 있습니다. 파일 이름에 다른 문자가 포함된 경우 이름을 바꿔야 합니다.
 @error_invalid_number_format = 유효한 숫자 형식이 아닙니다.
+@error_compared_item_with_number = {0}은(는) 숫자가 아니라 아이템이에요. 숫자와 비교하는 것은 의미가 없어요.
+
+해당 아이템을 얼마나 가지고 있는지 확인하고 싶다면, 대신 `num_items(`{0}`)`를 사용하세요.
+@error_compared_entity_with_number = {0}은(는) 숫자가 아니라 엔티티예요. 숫자와 비교하는 것은 의미가 없어요.
+@error_compared_unlock_with_number = {0}은(는) 숫자가 아니라 해금 요소예요. 숫자와 비교하는 것은 의미가 없어요.
+
+몇 번이나 해금했는지 확인하고 싶다면, 대신 `num_unlocked(`{0}`)`를 사용하세요.
+@error_nonsensical_or = 조건문에서 `or `{0}를 사용하는 것은 {0}이(가) 상수이기 때문에 의미가 없어요. 
+`or`보다 비교 연산자가 먼저 평가된다는 점에 유의하세요.
+
+예시:
+`x == 5 or 6` 
+은 다음과 같아요 
+`(x == 5) or 6`
+0이 아닌 숫자는 true로 간주되므로, 이것은 다음과 같아요 
+`(x == 5) or True`
+이것은 항상 true가 돼요.
+
+이론적으로는 유효한 Python 코드이지만, 이런 식으로 코드를 작성할 이유는 전혀 없어요.
+@error_item_condition = {0}은(는) 아이템이며 불리언이 아니에요. 그 자체를 조건으로 사용하는 것은 의미가 없어요. 
+혹시 어떤 값이 그 아이템과 같은지 확인하고 싶었나요?
+`some_variable == `{0}
+@error_unlock_condition = {0}은(는) 해금 요소이며 불리언이 아니에요. 그 자체를 조건으로 사용하는 것은 의미가 없어요. 
+해금 요소가 해금되었는지는 이렇게 확인할 수 있어요:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0}은(는) 엔티티이며 불리언이 아니에요. 그 자체를 조건으로 사용하는 것은 의미가 없어요.
+드론 아래에 있는 엔티티의 종류는 이렇게 확인할 수 있어요:
+`get_entity_type() == `{0}
+@error_ground_condition = {0}은(는) 땅의 종류이며 불리언이 아니에요. 그 자체를 조건으로 사용하는 것은 의미가 없어요.
+드론 아래에 있는 땅의 종류는 이렇게 확인할 수 있어요:
+`get_ground_type() == `{0}

@@ -47,7 +47,7 @@ do_two_flips()`
 plant(Entities.Carrot)`
 @unlock_descr_lists = リストを使ってたくさんの値を保存します。
 
-`plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+`plants = [Entities.Grass, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
