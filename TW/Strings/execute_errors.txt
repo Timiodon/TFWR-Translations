@@ -1,5 +1,5 @@
 @error_code_after_block = 此處不應該有任何程式碼。請嘗試刪除它或將其放在新的一行。
-@error_wrong_number_args = {0} 需要 {1} 個參數。
+@error_wrong_number_args = {0} 需要 {1} 個參數。你在呼叫時使用了以下參數：{2}
 @error_expected_no_args = {0} 不需要任何參數。
 @error_wrong_args = {1} 的第 {0} 個參數是 {2}。這不是一個有效的參數。
 @error_syntax_error_in_import = 匯入的模組存在語法錯誤。
@@ -46,7 +46,7 @@ for i in range(5):
 @error_max_comparison_depth = 已達最大比較深度。例如當你比較包含自身的串列時，可能回發生這種情況。
 @error_assign_type_mismatch = 賦值的左側與右側不符。
 @error_too_many_values_to_unpack = 右側沒有足夠的值可供解包。
-@error_not_enough_values = 右右側包含太多值，無法解包到左側。
+@error_not_enough_values = 右側包含太多值，無法解包到左側。
 @error_empty_print = `print()` 至少需要一個參數。
 @error_in_string = 無法檢查 {0} 是否在字串中。
 @error_collection_changed_size_during_iteration = 在對此集合進行迭代的 for 迴圈中，不能改變集合的大小。因為改變集合大小會使 for 迴圈所使用的迭代器失效。

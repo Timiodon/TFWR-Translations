@@ -33,3 +33,34 @@ for n in range(3):
 @error_wildcard_imports_not_allowed_in_function = 不允許在函式內使用 `from x import *` 形式的匯入。
 @error_invalid_import = 無法匯入檔名非有效識別字的檔案。有效的識別字只能包含字母、數字和底線。如果檔名包含其他字元，請重新命名。
 @error_invalid_number_format = 這個數字格式無效。
+@error_compared_item_with_number = {0} 不是一個數字，它是一個物品。將它與數字進行比較是沒有意義的。
+
+如果要檢查你擁有該物品的數量，請改用 `num_items(`{0}`)`。
+@error_compared_entity_with_number = {0} 不是一個數字，它是一個實體。將它與數字進行比較是沒有意義的。
+@error_compared_unlock_with_number = {0} 不是一個數字，它是一個解鎖項目。將它與數字進行比較是沒有意義的。
+
+如果要檢查你升級它的次數，請改用 `num_unlocked(`{0}`)`。
+@error_nonsensical_or = 在條件中使用 `or `{0} 是沒有意義的，因為 {0} 是一個常數。
+請注意比較運算子會在 `or` 之前被評估。
+
+範例：
+`x == 5 or 6` 
+等同於 
+`(x == 5) or 6`
+非零數字會被視為 True，因此等同於 
+`(x == 5) or True`
+這會永遠為 True。
+
+這段 Python 程式碼理論上是有效的，但沒有理由這樣寫。
+@error_item_condition = {0} 是一個物品，而非布林值。單獨將它當作條件是沒有意義的。
+也許你想檢查某個變數是否等於該物品？
+`some_variable == `{0}
+@error_unlock_condition = {0} 是一個解鎖項目，而非布林值。單獨將它當作條件是沒有意義的。
+你可以這樣檢查該解鎖項目是否已解鎖：
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} 是一個實體，而非布林值。單獨將它當作條件是沒有意義的。
+你可以這樣檢查無人機下方實體的類型：
+`get_entity_type() == `{0}
+@error_ground_condition = {0} 是一個地塊類型，而非布林值。單獨將它當作條件是沒有意義的。
+你可以這樣檢查無人機下方地塊的類型：
+`get_ground_type() == `{0}

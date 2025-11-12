@@ -70,7 +70,7 @@ plant(Entities.Carrot)
 @unlock_descr_lists = 使用串列儲存大量的值。
 
 ```
-plants = [Entities.Hay, Entities.Bush, Entities.Tree]
+plants = [Entities.Grass, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
