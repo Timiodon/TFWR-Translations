@@ -30,6 +30,7 @@ Yulia Tregubova (プロジェクトマネージャー)
 HoshiyomiLusia
 Liuxun
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Discordモデレーター
 MrBlobfish
