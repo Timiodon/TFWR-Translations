@@ -1,5 +1,5 @@
 @error_code_after_block = 此处不应有任何代码。尝试删除代码或另起一行。
-@error_wrong_number_args = {0} 需要 {1} 个参数。
+@error_wrong_number_args = {0} 需要 {1} 个参数。你传入的参数是：{2}。
 @error_expected_no_args = {0} 不需要任何参数。
 @error_wrong_args = {1} 的第 {0} 个参数是 {2}，非有效参数。
 @error_syntax_error_in_import = 导入的模块存在语法错误。

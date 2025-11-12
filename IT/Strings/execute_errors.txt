@@ -1,5 +1,5 @@
 @error_code_after_block = Non dovrebbero esserci codici qui. Prova a rimuoverli o metterli su una nuova linea.
-@error_wrong_number_args = {0} prende {1} argomenti.
+@error_wrong_number_args = {0} richiede {1} argomenti. L'hai chiamato con questi argomenti: {2}.
 @error_expected_no_args = {0} non accetta nessun argomento.
 @error_wrong_args = L'argomento {0} di {1} era {2}. Questo non è un argomento valido.
 @error_syntax_error_in_import = Il modulo importato ha un errore di sintassi.
