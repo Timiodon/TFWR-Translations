@@ -1,5 +1,5 @@
 @error_code_after_block = Nie powinno tu być żadnego kodu. Spróbuj go usunąć lub umieścić w nowej linii.
-@error_wrong_number_args = {0} przyjmuje {1} argumentów.
+@error_wrong_number_args = {0} przyjmuje {1} argumentów. Podano następujące argumenty: {2}.
 @error_expected_no_args = {0} nie przyjmuje żadnych argumentów.
 @error_wrong_args = Argument nr {0} funkcji {1} miał wartość {2}. To nie jest prawidłowy argument.
 @error_syntax_error_in_import = Importowany moduł ma błąd składni.

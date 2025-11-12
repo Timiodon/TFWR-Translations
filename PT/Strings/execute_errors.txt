@@ -1,5 +1,5 @@
 @error_code_after_block = Não deveria haver nenhum código aqui. Tente removê-lo ou colocá-lo em uma nova linha.
-@error_wrong_number_args = {0} recebe {1} argumentos.
+@error_wrong_number_args = {0} recebe {1} argumentos. Você passou estes argumentos: {2}.
 @error_expected_no_args = {0} não recebe nenhum argumento.
 @error_wrong_args = O {0}º argumento de {1} foi {2}. Este não é um argumento válido.
 @error_syntax_error_in_import = O módulo importado tem um erro de sintaxe.

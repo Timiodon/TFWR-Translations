@@ -1,5 +1,5 @@
 @error_code_after_block = There shouldn't be any code here. Try removing it or putting it on a new line.
-@error_wrong_number_args = {0} takes {1} arguments.
+@error_wrong_number_args = {0} takes {1} arguments. You called it with these arguments: {2}.
 @error_expected_no_args = {0} doesn't take any arguments.
 @error_wrong_args = The {0}. argument of {1} was {2}. This is not a valid argument.
 @error_syntax_error_in_import = The imported module has a syntax error.

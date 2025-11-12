@@ -29,3 +29,34 @@
 @error_wildcard_imports_not_allowed_in_function = 形如 `from x import *` 的导入不允许在函数内部使用。
 @error_invalid_import = 不能导入文件名不是有效标识符的文件。有效标识符只能包含字母、数字和下划线。如果文件名包含其他字符，则必须重命名。
 @error_invalid_number_format = 这个数字格式无效。
+@error_compared_item_with_number = {0} 不是一个数字，它是一个物品。将它与数字进行比较是没有意义的。
+
+如果你想检查你拥有的该物品数量，请改用 `num_items(`{0}`)`。
+@error_compared_entity_with_number = {0} 不是一个数字，它是一个实体。将它与数字进行比较是没有意义的。
+@error_compared_unlock_with_number = {0} 不是一个数字，它是一个解锁项。将它与数字进行比较是没有意义的。
+
+如果你想检查你解锁了它多少次，请改用 `num_unlocked(`{0}`)`。
+@error_nonsensical_or = 在条件中使用 `or `{0} 是没有意义的，因为 {0} 是一个常量。
+请注意，比较运算符的求值优先于 `or`。
+
+示例：
+`x == 5 or 6` 
+等同于 
+`(x == 5) or 6`
+非零数字被视为 true，所以这等同于 
+`(x == 5) or True`
+这个表达式的结果永远是 true。
+
+理论上这是有效的 Python 代码，但没有任何理由要这样写。
+@error_item_condition = {0} 是一个物品，而不是布尔值。单独将它用作条件是没有意义的。
+也许你是想检查某个值是否等于该物品？
+`some_variable == `{0}
+@error_unlock_condition = {0} 是一个解锁项，而不是布尔值。单独将它用作条件是没有意义的。
+你可以这样检查该解锁项是否已解锁：
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} 是一个实体，而不是布尔值。单独将它用作条件是没有意义的。
+你可以这样检查无人机下方实体的类型：
+`get_entity_type() == `{0}
+@error_ground_condition = {0} 是一种地块类型，而不是布尔值。单独将它用作条件是没有意义的。
+你可以这样检查无人机下方地块的类型：
+`get_ground_type() == `{0}

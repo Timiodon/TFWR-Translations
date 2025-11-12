@@ -29,3 +29,34 @@ Le `for` est toujours suivi de la variable de boucle, d'un `in` puis d'une séqu
 @error_wildcard_imports_not_allowed_in_function = Les importations de la forme `from x import *` ne sont pas autorisées à l'intérieur des fonctions.
 @error_invalid_import = Tu ne peux pas importer de fichiers dont les noms ne sont pas des identifiants valides. Les identifiants valides ne peuvent contenir que des lettres, des chiffres et des tirets bas. Si ton nom de fichier contient d'autres caractères, tu dois le renommer.
 @error_invalid_number_format = Ce format de nombre n'est pas valide.
+@error_compared_item_with_number = {0} n'est pas un nombre, c'est un objet. Le comparer à un nombre n'a pas de sens.
+
+Si tu veux vérifier combien tu as de cet objet, utilise `num_items(`{0}`)` à la place.
+@error_compared_entity_with_number = {0} n'est pas un nombre, c'est une entité. Le comparer à un nombre n'a pas de sens.
+@error_compared_unlock_with_number = {0} n'est pas un nombre, c'est un déblocage. Le comparer à un nombre n'a pas de sens.
+
+Si tu veux vérifier combien de fois tu l'as débloqué, utilise `num_unlocked(`{0}`)` à la place.
+@error_nonsensical_or = Utiliser `or `{0} dans une condition n'a pas de sens car {0} est une constante. 
+Note que les opérateurs de comparaison sont évalués avant `or`.
+
+Exemple :
+`x == 5 or 6` 
+est équivalent à 
+`(x == 5) or 6`
+Les nombres non nuls sont considérés comme vrais, c'est donc équivalent à 
+`(x == 5) or True`
+ce qui est toujours vrai.
+
+C'est du code Python théoriquement valide, mais il n'y a aucune raison de l'écrire de cette façon.
+@error_item_condition = {0} est un objet et non un booléen. L'utiliser comme condition seule n'a pas de sens. 
+Peut-être voulais-tu vérifier si une valeur est égale à cet objet ?
+`some_variable == `{0}
+@error_unlock_condition = {0} est un déblocage et non un booléen. L'utiliser comme condition seule n'a pas de sens. 
+Voici comment tu peux vérifier si le déblocage est déverrouillé :
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} est une entité et non un booléen. L'utiliser comme condition seule n'a pas de sens.
+Voici comment tu peux vérifier le type de l'entité sous le drone :
+`get_entity_type() == `{0}
+@error_ground_condition = {0} est un type de sol et non un booléen. L'utiliser comme condition seule n'a pas de sens.
+Voici comment tu peux vérifier le type du sol sous le drone :
+`get_ground_type() == `{0}

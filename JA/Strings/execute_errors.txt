@@ -1,5 +1,5 @@
 @error_code_after_block = ここにはコードを記述できません。削除するか、新しい行に移動してください。
-@error_wrong_number_args = {0} は {1} 個の引数を取ります。
+@error_wrong_number_args = {0} は {1} 個の引数を取ります。これらの引数で呼び出されました: {2}
 @error_expected_no_args = {0} は引数を取りません。
 @error_wrong_args = {1} の {0} 番目の引数は {2} でした。これは有効な引数ではありません。
 @error_syntax_error_in_import = インポートされたモジュールに構文エラーがあります。

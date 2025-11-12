@@ -1,5 +1,5 @@
 @error_code_after_block = 여기에는 코드가 없어야 합니다. 코드를 제거하거나 새 줄에 넣으세요.
-@error_wrong_number_args = {0}은(는) {1}개의 인수를 받습니다.
+@error_wrong_number_args = {0}은(는) {1}개의 인수를 받습니다. 전달한 인수는 다음과 같습니다: {2}.
 @error_expected_no_args = {0}은(는) 인수를 받지 않습니다.
 @error_wrong_args = {1}의 {0}번째 인수는 {2}이었습니다. 유효한 인수가 아닙니다.
 @error_syntax_error_in_import = 가져온 모듈에 구문 오류가 있습니다.

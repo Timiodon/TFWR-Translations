@@ -29,3 +29,34 @@ The `for` is always followed by the loop variable, an `in` and then a sequence. 
 @error_wildcard_imports_not_allowed_in_function = Imports of the form `from x import *` are not allowed inside functions.
 @error_invalid_import = You cannot import files with names that are not valid identifiers. Valid identifiers can only contain letters, numbers, and underscores. If your file name contains other characters, you must rename it.
 @error_invalid_number_format = This number format is not valid.
+@error_compared_item_with_number = {0} is not a number, it is an item. Comparing it to a number doesn't make sense.
+
+If you want to check how much of the item you have, use `num_items(`{0}`)` instead.
+@error_compared_entity_with_number = {0} is not a number, it is an entity. Comparing it to a number doesn't make sense.
+@error_compared_unlock_with_number = {0} is not a number, it is an unlock. Comparing it to a number doesn't make sense.
+
+If you want to check how many times you have unlocked it, use `num_unlocked(`{0}`)` instead.
+@error_nonsensical_or = Using `or `{0} in a condition doesn't make sense because {0} is a constant. 
+Note that comparison operators are evaluated before `or`.
+
+Example:
+`x == 5 or 6` 
+is equivalent to 
+`(x == 5) or 6`
+Non-zero numbers are considered true, so this is equivalent to 
+`(x == 5) or True`
+which is always true.
+
+This is theoretically valid Python code, but there is no reason to ever write it this way.
+@error_item_condition = {0} is an item and not a boolean. Using it as a condition on it's own doesn't make sense. 
+Maybe you wanted to check if a value is equal to that item?
+`some_variable == `{0}
+@error_unlock_condition = {0} is an unlock and not a boolean. Using it as a condition on it's own doesn't make sense. 
+This is how you can check if the unlock is unlocked:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} is an entity and not a boolean. Using it as a condition on it's own doesn't make sense.
+This is how you can check for the type of the entity under the drone:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} is a type of ground and not a boolean. Using it as a condition on it's own doesn't make sense.
+This is how you can check for the type of the ground under the drone:
+`get_ground_type() == `{0}
