@@ -1,0 +1,25 @@
+@plant_tooltip_template = {0}
+
+基礎生長時間在 {1} 到 {2} 秒之间。
+可以在 {3} 上生長。
+@object_tooltip_template_cost = ### 種植成本 {{{{itemblock cost object {0}}}}}
+@object_descr_apple = 恐龍似乎很喜歡它們。
+@object_descr_grass = 在草地上自動生長。收穫它可獲得 `Items.Hay`。
+@object_descr_bush = 一種會掉落 `Items.Wood` 的小灌木。
+@object_descr_tree = 樹木比灌木掉落更多木材。如果旁邊有其他樹木生長，樹木的生長速度會變慢。
+@object_descr_carrot = 胡蘿蔔！
+@object_descr_pumpkin = 南瓜與其他完全成熟的南瓜相鄰時會一起生長。大約五分之一的南瓜在成熟後會死亡。
+@object_descr_dead_pumpkin = 五分之一的南瓜在成熟後會死亡，留下一個枯萎南瓜。枯萎南瓜毫無用處，種植新植物後會消失。
+@object_descr_sunflower = 向日葵會吸收太陽的能量。收穫它可獲得 `Items.Power`。
+如果你收穫達到最大花瓣數量的向日葵，你將獲得額外能量。
+@object_descr_cactus = 仙人掌有 10 種不同的尺寸。收穫時，相鄰的「已排序」仙人掌也會被收穫。
+@object_descr_hedge = 迷宮的一部分。
+@object_descr_treasure = 一份寶藏，內含的黃金數量等於其所在迷宮的邊長。它可以像植物一樣被採收。
+@object_descr_dinosaur = 恐龍帽尾巴的碎片。
+@object_descr_grassland = 預設地塊。牧草會自動在上面生長。
+@object_descr_soil = 呼叫 `till()` 會將地塊變成土壤。再次呼叫 `till()` 會將其變回草地。
+@runtime_entity_tooltip = 收穫後，可獲得：
+{{itemblock tooltip}}
+@runtime_growable_tooltip = 總生長時間：{0} 秒
+已生長 {1}%
+@runtime_ground_tooltip = 含水量：{0}
