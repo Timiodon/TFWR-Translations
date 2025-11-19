@@ -31,7 +31,6 @@ Użycie `measure()` w dowolnym miejscu labiryntu zwraca pozycję skarbu.
 
 Dla dodatkowego wyzwania możesz również ponownie użyć labiryntu, używając tej samej ilości `Items.Weird_Substance` na skarbie ponownie. 
 To zbierze skarb i stworzy nowy w losowej pozycji w labiryncie.
-Ponownie można używać tylko labiryntów o rozmiarze 8x8 lub większych.
 
 Za każdym razem, gdy skarb jest przenoszony, niektóre ściany labiryntu mogą zostać losowo usunięte. Więc ponownie używane labirynty mogą zawierać pętle.
 

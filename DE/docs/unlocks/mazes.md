@@ -31,7 +31,6 @@ Die Verwendung von `measure()` irgendwo im Labyrinth gibt die Position des Schat
 
 Für eine zusätzliche Herausforderung kannst du das Labyrinth auch wiederverwenden, indem du dieselbe Menge an `Items.Weird_Substance` erneut auf den Schatz anwendest.
 Dies sammelt den Schatz ein und erzeugt einen neuen Schatz an einer zufälligen Position im Labyrinth.
-Nur Labyrinthe der Größe 8x8 oder größer können wiederverwendet werden.
 
 Jedes Mal, wenn der Schatz bewegt wird, können einige der Wände des Labyrinths zufällig entfernt werden. Wiederverwendete Labyrinthe können also Schleifen enthalten.
 

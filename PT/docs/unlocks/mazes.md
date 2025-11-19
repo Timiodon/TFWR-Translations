@@ -31,7 +31,6 @@ Usar `measure()` em qualquer lugar no labirinto retorna a posição do tesouro.
 
 Para um desafio extra, você também pode reutilizar o labirinto usando a mesma quantidade de `Items.Weird_Substance` no tesouro novamente. 
 Isso irá coletar o tesouro e gerar um novo tesouro em uma posição aleatória no labirinto.
-Apenas labirintos de tamanho 8x8 ou maiores podem ser reutilizados.
 
 Cada vez que o tesouro é movido, algumas das paredes do labirinto podem ser removidas aleatoriamente. Portanto, labirintos reutilizados podem conter loops.
 

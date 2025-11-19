@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = すべてのタブを4つのスペースに変換します。
 @option_tooltip_error_forgot_call = 有効にすると、関数オブジェクトの真偽値を評価しようとした場合にセーフガードエラーが発生します。これは通常、`()` を忘れていることを意味します。
 @option_tooltip_error_shadow = 有効にすると、グローバル変数と同じ名前のローカル変数がある場合にセーフガードエラーが発生します。
+@option_tooltip_allow_locked_features = 有効にすると、まだアンロックしていないロック中の機能も使用できるようになります。これは意図された遊び方ではありません。
 @option_tooltip_print_warnings = 警告と、時々表示される警告アイコンを有効にします。
 @option_tooltip_language = ゲームの言語を変更します。
 @option_tooltip_code_highlights = コード実行中の点滅するハイライトをオフにします。

@@ -46,6 +46,7 @@
 @next step = Next Step
 @pause execution = Pause Execution
 @tabs to spaces = Tabs to Spaces
+@allow locked features = Allow Locked Features
 @error forgot call = Error on Missing ()
 @print warnings = Print Warnings
 @code highlights = Code highlights

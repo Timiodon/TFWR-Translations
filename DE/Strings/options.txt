@@ -46,6 +46,7 @@
 @next step = Nächster Schritt
 @pause execution = Ausführung pausieren
 @tabs to spaces = Tabs zu Leerzeichen
+@allow locked features = Gesperrte Features erlauben
 @error forgot call = Fehler bei fehlenden ()
 @print warnings = Warnungen ausgeben
 @code highlights = Code-Hervorhebungen

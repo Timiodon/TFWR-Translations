@@ -46,6 +46,7 @@
 @next step = 다음 단계
 @pause execution = 실행 일시 중지
 @tabs to spaces = 탭을 공백으로 변환
+@allow locked features = 잠긴 기능 허용
 @error forgot call = () 누락 시 오류
 @print warnings = 경고 출력
 @code highlights = 코드 하이라이트

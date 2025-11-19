@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = Turns all tabs into 4 spaces.
 @option_tooltip_error_forgot_call = When enabled, the game will throw a safeguard error if you try to evalutate the truthiness of a function object, because this usually means that you forgot the `()`.
 @option_tooltip_error_shadow = When enabled, the game will throw a safeguard error if there is a local variable that has the same name as a global variable.
+@option_tooltip_allow_locked_features = When enabled, locked features can be used even if they haven't been unlocked yet. This is not the intended way of playing.
 @option_tooltip_print_warnings = Activates warnings and the warning icon that sometimes appears.
 @option_tooltip_language = Change the language of the game.
 @option_tooltip_code_highlights = Turn off the flashing highlights when the code is running.

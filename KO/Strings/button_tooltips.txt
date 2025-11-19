@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = 모든 탭을 4개의 공백으로 바꿉니다.
 @option_tooltip_error_forgot_call = 활성화하면 함수 객체의 진위를 평가하려고 할 때 게임이 세이프가드 오류를 발생시킵니다. 보통 이 경우는 `()`를 빠뜨렸다는 의미입니다.
 @option_tooltip_error_shadow = 활성화 시, 전역 변수와 이름이 같은 지역 변수가 존재하면 게임이 세이프가드 오류를 발생시킵니다.
+@option_tooltip_allow_locked_features = 활성화하면 아직 해금하지 않은 기능도 사용할 수 있어요. 이것은 의도된 플레이 방식이 아니에요.
 @option_tooltip_print_warnings = 가끔 나타나는 경고 및 경고 아이콘을 활성화합니다.
 @option_tooltip_language = 게임의 언어를 변경합니다.
 @option_tooltip_code_highlights = 코드가 실행될 때 깜빡이는 하이라이트를 끕니다.
