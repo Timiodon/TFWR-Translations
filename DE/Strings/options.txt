@@ -20,7 +20,8 @@
 @ambience volume = Umgebungslautstärke
 @drone volume = Drohnenlautstärke
 @fps limit = Max. Framerate
-@autosave = Autom. Speichern
+@autosave = Autom. Code-Speichern
+@autosave progress = Autom. Spielfortschritt
 @enabled = Aktiviert
 @disabled = Deaktiviert
 @frames = Frames

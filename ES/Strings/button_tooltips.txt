@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = Ajusta el volumen de los sonidos ambientales, como el viento y los pájaros.
 @option_tooltip_volume_damping = El volumen se multiplica por este factor por cada efecto de sonido que se reproduce simultáneamente para que no te exploten los oídos a altas velocidades del dron.
 @option_tooltip_sfx_limit = Limita el número de sonidos que se pueden reproducir por segundo.
-@option_tooltip_autosave = Guarda automáticamente la partida cada 30 segundos cuando está activado. No se puede activar mientras el observador de archivos esté activado.
+@option_tooltip_autosave = Guarda automáticamente el código cada 30 segundos cuando está activado. No se puede activar mientras el observador de archivos esté activado.
+@option_tooltip_autosave_progress = Guarda automáticamente el progreso del juego cada 30 segundos cuando está activado.
 @option_tooltip_file_watcher = Aplica automáticamente los cambios realizados en los archivos de código en la carpeta de guardado, permitiendo el uso de un editor de código externo. No se puede activar mientras el autoguardado esté activado.
 @option_tooltip_frames = Limita los FPS del juego. Vsync sincroniza los FPS con la frecuencia de actualización de tu monitor.
 @option_tooltip_viewport_sliding = Desactiva el deslizamiento de la vista al arrastrar y soltar.

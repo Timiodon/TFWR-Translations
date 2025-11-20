@@ -20,7 +20,8 @@
 @ambience volume = Głośność otoczenia
 @drone volume = Głośność drona
 @fps limit = Maks. FPS
-@autosave = Autozapis
+@autosave = Autozapis kodu
+@autosave progress = Autozapis postępu
 @enabled = Włączone
 @disabled = Wyłączone
 @frames = Klatki

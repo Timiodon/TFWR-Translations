@@ -20,7 +20,8 @@
 @ambience volume = 环境音量
 @drone volume = 无人机音量
 @fps limit = 最大帧率
-@autosave = 自动存档
+@autosave = 自动保存代码
+@autosave progress = 自动存档
 @enabled = 已启用
 @disabled = 已禁用
 @frames = 帧数

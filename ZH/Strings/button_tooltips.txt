@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = 调整风声和鸟鸣等环境音的音量。
 @option_tooltip_volume_damping = 每个同时播放的音效的音量都会乘以这个系数，这样在无人机高速运行时你的耳朵就不会爆炸了。
 @option_tooltip_sfx_limit = 限制每秒可播放的声音数量。
-@option_tooltip_autosave = 启用后，每 30 秒自动保存游戏。无法与文件监视器同时启用。
+@option_tooltip_autosave = 启用后每 30 秒自动保存代码。文件监视器启用时无法启用。
+@option_tooltip_autosave_progress = 启用后每 30 秒自动保存游戏进度。
 @option_tooltip_file_watcher = 自动应用对存档文件夹中代码文件所做的更改，以便使用外部代码编辑器。无法与自动存档同时启用。
 @option_tooltip_frames = 限制游戏的帧率。垂直同步会使帧率与你的显示器刷新率保持同步。
 @option_tooltip_viewport_sliding = 禁用拖放时的视口滑动效果。

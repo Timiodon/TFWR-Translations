@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = Regelt die Lautstärke von Umgebungsgeräuschen wie Wind und Vogelgezwitscher.
 @option_tooltip_volume_damping = Die Lautstärke wird für jeden gleichzeitig abgespielten Soundeffekt mit diesem Faktor multipliziert, damit deine Ohren bei hohen Drohnengeschwindigkeiten nicht explodieren.
 @option_tooltip_sfx_limit = Begrenzt die Anzahl der Sounds, die pro Sekunde abgespielt werden können.
-@option_tooltip_autosave = Speichert das Spiel automatisch alle 30s, wenn aktiviert. Kann nicht aktiviert werden, während der File Watcher aktiviert ist.
+@option_tooltip_autosave = Speichert den Code automatisch alle 30s, wenn aktiviert. Kann nicht aktiviert werden, während der File Watcher aktiviert ist.
+@option_tooltip_autosave_progress = Speichert den Spielfortschritt automatisch alle 30s, wenn aktiviert.
 @option_tooltip_file_watcher = Wendet Änderungen an Codedateien im Speicherordner automatisch an, was die Verwendung eines externen Code-Editors ermöglicht. Kann nicht aktiviert werden, während automatisches Speichern aktiviert ist.
 @option_tooltip_frames = Begrenzt die FPS des Spiels. Vsync synchronisiert die FPS mit der Bildwiederholfrequenz deines Monitors.
 @option_tooltip_viewport_sliding = Deaktiviert das Gleiten der Ansicht, wenn du ziehst und loslässt.
