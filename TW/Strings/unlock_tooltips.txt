@@ -180,10 +180,11 @@ spawn_drone(task)
 @carrots = 胡蘿蔔
 @costs = 成本
 @debug = 偵錯
-@debug_2 = 偵錯_2
+@debug_2 = 偵錯 2
 @dictionaries = 字典
 @dinosaurs = 恐龍
 @expand = 擴張
+@expand_2 = 擴張 2
 @fertilizer = 肥料
 @functions = 函式
 @grass = 牧草

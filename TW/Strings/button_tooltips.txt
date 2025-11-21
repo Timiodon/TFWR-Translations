@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = 將所有製表符轉為 4 個空格。
 @option_tooltip_error_forgot_call = 啟用後，如果你嘗試評估函式的真值，遊戲會拋出安全保護錯誤，因為這通常表示你忘記了 `()`。
 @option_tooltip_error_shadow = 啟用後，如果區域變數和全域變數同名，遊戲會拋出安全保護錯誤。
+@option_tooltip_allow_locked_features = 啟用後，即使尚未解鎖也可以使用鎖定的功能。這並非預期的遊玩方式。
 @option_tooltip_print_warnings = 啟用警告和有時出現的警告圖示。
 @option_tooltip_language = 變更遊戲語言。
 @option_tooltip_code_highlights = 關閉程式碼運行時的醒目標示。

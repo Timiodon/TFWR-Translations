@@ -46,6 +46,7 @@
 @next step = 單步執行
 @pause execution = 暫停執行
 @tabs to spaces = 製表符轉空格
+@allow locked features = 允許使用鎖定的功能
 @error forgot call = 缺少 () 時報錯
 @print warnings = 印出警告
 @code highlights = 程式碼醒目標示
