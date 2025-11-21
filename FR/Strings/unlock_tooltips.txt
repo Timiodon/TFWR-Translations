@@ -126,6 +126,7 @@ other_file.function()`
 @dictionaries = Dictionnaires
 @dinosaurs = Dinosaures
 @expand = Agrandir
+@expand_2 = Agrandir 2
 @fertilizer = Engrais
 @functions = Fonctions
 @grass = Herbe

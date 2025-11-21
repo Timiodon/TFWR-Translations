@@ -46,6 +46,7 @@
 @next step = 次のステップ
 @pause execution = 一時停止
 @tabs to spaces = タブをスペースに変換
+@allow locked features = ロック機能の許可
 @error forgot call = ()抜けでエラー
 @print warnings = 警告を表示
 @code highlights = コードのハイライト

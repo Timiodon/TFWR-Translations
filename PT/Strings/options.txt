@@ -46,6 +46,7 @@
 @next step = Próximo Passo
 @pause execution = Pausar Execução
 @tabs to spaces = Tabs para Espaços
+@allow locked features = Permitir Recursos Bloqueados
 @error forgot call = Erro por Falta de ()
 @print warnings = Imprimir Avisos
 @code highlights = Destaques de Código

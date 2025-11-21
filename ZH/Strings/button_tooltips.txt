@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = 将所有制表符转换成 4 个空格。
 @option_tooltip_error_forgot_call = 启用后，如果你尝试对一个函数对象求值，游戏会抛出安全保护错误，因为这通常意味着你忘记了 `()`。
 @option_tooltip_error_shadow = 启用后，如果存在与全局变量同名的局部变量，游戏会抛出安全保护错误。
+@option_tooltip_allow_locked_features = 启用后，即使尚未解锁，也可以使用被锁定的功能。这并非预期的游玩方式。
 @option_tooltip_print_warnings = 激活警告以及有时会出现的警告图标。
 @option_tooltip_language = 更改游戏语言。
 @option_tooltip_code_highlights = 关闭代码运行时的高亮闪烁。

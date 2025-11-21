@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = Zamienia wszystkie tabulacje na 4 spacje.
 @option_tooltip_error_forgot_call = Gdy włączone, gra zgłosi błąd zabezpieczający, jeśli spróbujesz ocenić prawdziwość obiektu funkcji, ponieważ zwykle oznacza to, że zapomniałeś o `()`.
 @option_tooltip_error_shadow = Gdy włączone, gra zgłosi błąd zabezpieczający, jeśli istnieje zmienna lokalna o tej samej nazwie co zmienna globalna.
+@option_tooltip_allow_locked_features = Po włączeniu, zablokowane funkcje mogą być używane, nawet jeśli nie zostały jeszcze odblokowane. To nie jest zamierzony sposób gry.
 @option_tooltip_print_warnings = Aktywuje ostrzeżenia i ikonę ostrzeżenia, która czasami się pojawia.
 @option_tooltip_language = Zmień język gry.
 @option_tooltip_code_highlights = Wyłącz migające podświetlenia podczas działania kodu.

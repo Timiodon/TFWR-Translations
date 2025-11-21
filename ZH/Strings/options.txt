@@ -46,6 +46,7 @@
 @next step = 单步执行
 @pause execution = 暂停执行
 @tabs to spaces = 制表符转空格
+@allow locked features = 允许未解锁功能
 @error forgot call = 缺少 () 时报错
 @print warnings = 打印警告
 @code highlights = 代码高亮

@@ -128,6 +128,7 @@ other_file.function()`
 @dictionaries = 字典
 @dinosaurs = 恐龙
 @expand = 扩张
+@expand_2 = 扩张 2
 @fertilizer = 肥料
 @functions = 函数
 @grass = 草

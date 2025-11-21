@@ -1,5 +1,5 @@
 @audio = Звук
-@visuals = Графика
+@visuals = Качество графики
 @graphics = Качество графики
 @general = Общие
 @controls = Управление
@@ -46,6 +46,7 @@
 @next step = Следующий шаг
 @pause execution = Пауза
 @tabs to spaces = Табы в пробелы
+@allow locked features = Разрешить заблокированные
 @error forgot call = Ошибка при пропуске ()
 @print warnings = Показывать предупреждения
 @code highlights = Подсветка кода

@@ -46,6 +46,7 @@
 @next step = Następny krok
 @pause execution = Wstrzymaj
 @tabs to spaces = Tabulatory na spacje
+@allow locked features = Dostęp do zablokowanych
 @error forgot call = Błąd przy braku ()
 @print warnings = Wyświetlaj ostrzeżenia
 @code highlights = Podświetlanie kodu

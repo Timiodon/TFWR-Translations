@@ -46,6 +46,7 @@
 @next step = Passo Successivo
 @pause execution = Metti in Pausa
 @tabs to spaces = Tab in Spazi
+@allow locked features = Usa Funzionalità Bloccate
 @error forgot call = Errore su () Mancanti
 @print warnings = Mostra Avvisi
 @code highlights = Evidenziazione Codice

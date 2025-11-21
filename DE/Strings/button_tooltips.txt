@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = Wandelt alle Tabs in 4 Leerzeichen um.
 @option_tooltip_error_forgot_call = Wenn aktiviert, wirft das Spiel einen Schutzfehler, wenn du versuchst, den Wahrheitswert eines Funktionsobjekts auszuwerten, da dies normalerweise bedeutet, dass du die `()` vergessen hast.
 @option_tooltip_error_shadow = Wenn aktiviert, wirft das Spiel einen Schutzfehler, wenn eine lokale Variable den gleichen Namen wie eine globale Variable hat.
+@option_tooltip_allow_locked_features = Wenn aktiviert, können gesperrte Features verwendet werden, auch wenn sie noch nicht freigeschaltet sind. Dies ist nicht die vorgesehene Spielweise.
 @option_tooltip_print_warnings = Aktiviert Warnungen und das Warnsymbol, das manchmal erscheint.
 @option_tooltip_language = Ändert die Sprache des Spiels.
 @option_tooltip_code_highlights = Schaltet die blinkenden Hervorhebungen aus, wenn der Code ausgeführt wird.

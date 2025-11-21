@@ -37,6 +37,7 @@
 @option_tooltip_tabs_to_spaces = Trasforma tutti i tab in 4 spazi.
 @option_tooltip_error_forgot_call = Se abilitata, il gioco genererà un errore di safeguard quando si prova a valutare la verità di un oggetto funzione, perché questo di solito indica che hai dimenticato di invocarlo con ().
 @option_tooltip_error_shadow = Quando abilitato, il gioco genererà un errore di safeguard se c'è una variabile locale che ha lo stesso nome di una variabile globale.
+@option_tooltip_allow_locked_features = Quando abilitato, le funzionalità bloccate possono essere usate anche se non sono ancora state sbloccate. Questo non è il modo previsto di giocare.
 @option_tooltip_print_warnings = Attiva gli avvisi e l'icona di avviso che a volte appare.
 @option_tooltip_language = Cambia la lingua del gioco.
 @option_tooltip_code_highlights = Disattiva le evidenziazioni lampeggianti quando il codice è in esecuzione.
