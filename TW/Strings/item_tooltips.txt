@@ -1,0 +1,14 @@
+@item_tooltip_template_amount = 你有 {0} 個
+@item_descr_carrot = 透過收穫胡蘿蔔獲得。
+@item_descr_fertilizer = 呼叫 `use_item(Items.Fertilizer)` 立即將植物剩餘生長時間縮短 2 秒。
+@item_descr_weird_substance = 在灌木叢上呼叫 `use_item(Items.Weird_Substance)` 可以升成一個迷宮，或對其他植物呼叫可切換其感染狀態。從受感染的植物中獲得。給植物施肥會使它們感染。
+@item_descr_gold = 在迷宮的寶箱中找到。
+@item_descr_hay = 透過收割牧草獲得。
+@item_descr_piggy = 此物品已從遊戲中移除。
+@item_descr_power = 透過收穫向日葵獲得。無人機會自動使用此物品將移動速度提升一倍。
+@item_descr_pumpkin = 透過收穫南瓜獲得。
+@item_descr_water = 透過呼叫 `use_item(Items.Water)` 來給地塊澆水。
+@item_descr_wood = 從灌木和樹木中獲得。
+@item_descr_cactus = 透過收穫已排序的仙人掌獲得。
+@item_descr_cactus_seed = 此物品已從遊戲中移除。
+@item_descr_bone = 遠古生物的骨頭。
