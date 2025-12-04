@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = 調整風聲和鳥鳴等環境聲音的音量。
 @option_tooltip_volume_damping = 每個同時撥放的聲音的音量都會乘以這個係數，這樣你的耳朵就不會在高速運行的無人機嗡嗡聲中爆炸。
 @option_tooltip_sfx_limit = 限制每秒可撥放的聲音數量。
-@option_tooltip_autosave = 啟用後每 30 秒自動儲存遊戲。無法與檔案監視器功能同時啟用。
+@option_tooltip_autosave = 啟用後每 30 秒自動儲存程式碼。無法與檔案監視器功能同時啟用。
+@option_tooltip_autosave_progress = 啟用後每 30 秒自動儲存遊戲進度。
 @option_tooltip_file_watcher = 自動套用對存檔資料夾中程式碼檔案的變更，從而允許使用外部編輯器。無法與自動存檔功能同時啟用。
 @option_tooltip_frames = 限制遊戲的幀率。垂直同步會將幀率與顯示器的刷新率同步。
 @option_tooltip_viewport_sliding = 拖曳和釋放時停用視窗的滑動。
