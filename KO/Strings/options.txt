@@ -20,7 +20,8 @@
 @ambience volume = 주변음 볼륨
 @drone volume = 드론 볼륨
 @fps limit = 최대 FPS
-@autosave = 자동 저장
+@autosave = 코드 자동 저장
+@autosave progress = 게임 자동 저장
 @enabled = 활성화됨
 @disabled = 비활성화됨
 @frames = 프레임

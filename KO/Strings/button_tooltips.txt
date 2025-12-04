@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = 바람이나 새소리 같은 주변 환경음 볼륨을 조절합니다.
 @option_tooltip_volume_damping = 드론 속도가 빠를 때 너무 큰 소리에 괴롭지 않도록, 동시에 재생되는 음향 효과마다 볼륨에 이 계수를 곱합니다.
 @option_tooltip_sfx_limit = 초당 재생할 수 있는 소리의 수를 제한합니다.
-@option_tooltip_autosave = 활성화하면 30초마다 게임을 자동 저장합니다. 파일 감시 기능이 활성화된 동안에는 켤 수 없습니다.
+@option_tooltip_autosave = 활성화하면 30초마다 코드를 자동 저장합니다. 파일 감시 기능이 활성화된 동안에는 켤 수 없습니다.
+@option_tooltip_autosave_progress = 활성화하면 30초마다 게임 진행 상황을 자동 저장합니다.
 @option_tooltip_file_watcher = 저장 폴더에 있는 코드 파일의 변경 사항을 자동으로 적용해서 외부 코드 에디터를 사용할 수 있게 합니다. 자동 저장이 활성화된 동안에는 켤 수 없습니다.
 @option_tooltip_frames = 게임의 fps를 제한합니다. Vsync는 fps를 모니터 주사율에 동기화합니다.
 @option_tooltip_viewport_sliding = 드래그했다가 놓았을 때 뷰포트가 미끄러지는 것을 비활성화합니다.

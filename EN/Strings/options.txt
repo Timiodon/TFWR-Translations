@@ -20,7 +20,8 @@
 @ambience volume = Ambience Volume
 @drone volume = Drone Volume
 @fps limit = Max Framerate
-@autosave = Autosave
+@autosave = Autosave Code
+@autosave progress = Autosave Progress
 @enabled = Enabled
 @disabled = Disabled
 @frames = Frames

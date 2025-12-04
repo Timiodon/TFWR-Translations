@@ -20,7 +20,8 @@
 @ambience volume = Volumen ambiental
 @drone volume = Volumen del dron
 @fps limit = FPS máximos
-@autosave = Autoguardado
+@autosave = Autoguardar Código
+@autosave progress = Autoguardar Progreso
 @enabled = Activado
 @disabled = Desactivado
 @frames = Fotogramas

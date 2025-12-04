@@ -20,7 +20,8 @@
 @ambience volume = 環境音量
 @drone volume = ドローン音量
 @fps limit = 最大フレームレート
-@autosave = 自動セーブ
+@autosave = コード自動セーブ
+@autosave progress = 進行状況自動セーブ
 @enabled = 有効
 @disabled = 無効
 @frames = フレーム

@@ -20,7 +20,8 @@
 @ambience volume = Volume Ambiance
 @drone volume = Volume Drone
 @fps limit = IPS max
-@autosave = Sauvegarde auto
+@autosave = Sauvegarde auto code
+@autosave progress = Sauvegarde auto jeu
 @enabled = Activé
 @disabled = Désactivé
 @frames = IPS

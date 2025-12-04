@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = 風や鳥の鳴き声などの環境音の音量を調整します。
 @option_tooltip_volume_damping = ドローンのスピードが速いときに耳が爆発しないように、同時に再生される効果音ごとに音量がこの係数で乗算されます。
 @option_tooltip_sfx_limit = 1秒あたりに再生できるサウンドの数を制限します。
-@option_tooltip_autosave = 有効にすると、30秒ごとにゲームを自動でセーブします。ファイルウォッチャーが有効な場合は有効にできません。
+@option_tooltip_autosave = 有効にすると、30秒ごとにコードを自動でセーブします。ファイルウォッチャーが有効な場合は有効にできません。
+@option_tooltip_autosave_progress = 有効にすると、30秒ごとにゲームの進行状況を自動でセーブします。
 @option_tooltip_file_watcher = セーブフォルダー内のコードファイルに加えられた変更を自動的に適用し、外部のコードエディターを使用できるようにします。自動セーブが有効な場合は有効にできません。
 @option_tooltip_frames = ゲームのfpsを制限します。Vsyncはfpsをモニターのリフレッシュレートに同期させます。
 @option_tooltip_viewport_sliding = ドラッグして離したときのビューポートのスライドを無効にします。

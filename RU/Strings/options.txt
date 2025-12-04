@@ -20,7 +20,8 @@
 @ambience volume = Громкость окружения
 @drone volume = Громкость дрона
 @fps limit = Макс. частота кадров
-@autosave = Автосохранение
+@autosave = Автосохранение кода
+@autosave progress = Автосохранение прогресса
 @enabled = Включено
 @disabled = Выключено
 @frames = Частота кадров

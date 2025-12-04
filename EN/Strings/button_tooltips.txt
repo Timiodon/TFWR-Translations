@@ -29,7 +29,8 @@
 @option_tooltip_ambience_volume = Adjust the volume of ambient sounds like wind and birds.
 @option_tooltip_volume_damping = The volume is multiplied by this factor for every sound effect playing concurrently so your ears don't explode at high drone speeds.
 @option_tooltip_sfx_limit = Limits the number of sounds that can be played per second.
-@option_tooltip_autosave = Automatically saves the game every 30s when enabled. Can't be enabled while file watcher is enabled.
+@option_tooltip_autosave = Automatically saves the code every 30s when enabled. Can't be enabled while file watcher is enabled.
+@option_tooltip_autosave_progress = Automatically saves the game progress every 30s when enabled.
 @option_tooltip_file_watcher = Automatically applies changes made to the code files in the save folder allowing the use of an external code editor. Can't be enabled while autosaves are enabled.
 @option_tooltip_frames = Limit the game's fps. Vsync syncs the fps to your monitors refresh rate.
 @option_tooltip_viewport_sliding = Disables the sliding of the viewport when you drag and release.
