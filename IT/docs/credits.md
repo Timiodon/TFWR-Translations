@@ -22,6 +22,7 @@ Stephanie Stutz
 HoshiyomiLusia
 Liuxun
 Davide Altamura
+Milan Tuma (Czech Translation)
 
 ### Moderatori Discord
 MrBlobfish
