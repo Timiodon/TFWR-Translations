@@ -1,0 +1,212 @@
+@unlock_tooltip_template_cost = ### 解鎖成本 {{{{itemblock cost unlock {0}}}}}
+@unlock_descr_trees = 解鎖樹木。
+
+```
+plant(Entities.Trees)
+```
+@unlock_descr_speed = 提升無人機與程式執行的速度。
+@unlock_descr_plant = 解鎖種植功能。
+
+```
+plant(Entities.Bush)
+```
+@unlock_descr_loops = 解鎖基本的 while 迴圈。
+
+```
+while True:
+    harvest()
+```
+@unlock_descr_hats = 給無人機戴帽子。
+
+```
+change_hat(Hats.Green_Hat)
+```
+@unlock_descr_the_farmers_remains = ？？？？？？？？？
+@unlock_descr_top_hat = 一頂只有最優秀的無人機才能戴的高級帽子。
+@unlock_descr_senses = 無人機可以看見自己下方的事物與所在位置。
+
+```
+if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)
+```
+@unlock_descr_expand = 擴張農場並解鎖移動功能。
+@unlock_descr_operators = 算樹、比較和邏輯運算子。
+
+```
+if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()
+```
+@unlock_descr_pumpkin = 南瓜！
+
+```
+plant(Entities.Pumpkin)
+```
+@unlock_descr_variables = 為變數賦值。
+
+```
+next_plant = Entities.Bush
+plant(next_plant)
+```
+@unlock_descr_functions = 定義你自己的函式。
+
+```
+def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()
+```
+@unlock_descr_watering = 澆水讓植物生長得更快。
+
+```
+use_item(Items.Water)
+```
+@unlock_descr_carrots = 耕地並種植胡蘿蔔。
+
+```
+till()
+plant(Entities.Carrot)
+```
+@unlock_descr_lists = 使用串列儲存大量的值。
+
+```
+plants = [Entities.Grass, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)
+```
+@unlock_descr_costs = 允許存取物品的成本。
+
+```
+cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]
+```
+@unlock_descr_fertilizer = 讓植物立即成長。
+
+```
+use_item(Items.Fertilizer)
+```
+@unlock_descr_mazes = 有寶藏在中央的迷宮。
+
+```
+if get_entity_type() == Entities.Treasure:
+    harvest()
+```
+@unlock_descr_debug = 協助偵錯程式的工具。
+
+```
+print("嗨")
+```
+@unlock_descr_debug2 = 用於暫時降低執行速度和縮小農場的函式。
+
+```
+set_world_size(3)
+set_execution_speed(1)
+```
+@unlock_descr_grass = 提升牧草的產量。
+@unlock_descr_auto_unlock = 自動解鎖物品。
+
+```
+unlock(Unlocks.Megafarm)
+```
+@unlock_descr_polyculture = 使用混合種植提升產量。
+
+```
+plant_type, (x, y) = get_companion()
+```
+@unlock_descr_sunflowers = 向日葵和能量。
+
+```
+plant(Entities.Sunflowers)
+```
+@unlock_descr_leaderboard = 加入排行榜，挑戰最快完成時間。
+
+```
+leaderboard_run(Leaderboards.Hay, "hay_file", speedup)
+```
+@unlock_descr_dicts = 存取字典和集合。
+
+```
+right_of = {North: East, East: South, South: West, West: North}
+```
+@unlock_descr_utilities = 解鎖 `min()`、`max()`、`abs()` 和 `random()` 函式。
+
+```
+random_index = random() * len(list) // 1
+```
+@unlock_descr_cactus = 仙人掌！
+
+```
+plant(Entities.Cactus)
+```
+@unlock_descr_dinosaurs = 壯麗的遠古生物。
+@unlock_descr_simulation = 在可重現的條件下快速進行測試。
+
+```
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)
+```
+@unlock_descr_timing = 是時候了！
+
+```
+passed_time = get_time()
+```
+@unlock_descr_import = 從其他檔案匯入內容。
+
+```
+import other_file
+other_file.function()
+```
+@unlock_descr_megafarm = 更多無人機！
+
+```
+spawn_drone(task)
+```
+@multi_unlock_descr_expand = 擴張農場。這同時會清空農場。
+@multi_unlock_descr_carrots = 提升胡蘿蔔的產量和成本。
+@multi_unlock_descr_trees = 提升灌木和樹木的產量。
+@multi_unlock_descr_pumpkins = 提升南瓜的產量和成本。
+@multi_unlock_descr_mazes = 提升寶箱中的金碧樹量，以及生成迷宮所需的奇異物質數量。
+@multi_unlock_descr_sunflowers = 提升從向日葵中獲得的能量。
+@multi_unlock_descr_cactus = 提升仙人掌的產量和成本。
+@multi_unlock_descr_dinosaur = 提升恐龍的產量和成本。
+@multi_unlock_descr_polyculture = 提升混合種植的產量倍數。
+@multi_unlock_descr_watering = 獲得更多水。
+@multi_unlock_descr_fertilizer = 獲得更多肥料。
+@multi_unlock_descr_megafarm = 進一步提升無人機數量。
+@auto_unlock = 自動解鎖
+@cactus = 仙人掌
+@carrots = 胡蘿蔔
+@costs = 成本
+@debug = 偵錯
+@debug_2 = 偵錯 2
+@dictionaries = 字典
+@dinosaurs = 恐龍
+@expand = 擴張
+@expand_2 = 擴張 2
+@fertilizer = 肥料
+@functions = 函式
+@grass = 牧草
+@hats = 帽子
+@import = 匯入
+@leaderboard = 排行榜
+@lists = 串列
+@loops = 迴圈
+@mazes = 迷宮
+@megafarm = 巨型農場
+@operators = 運算子
+@plant = 種植
+@polyculture = 混合種植
+@pumpkins = 南瓜
+@senses = 感測
+@simulation = 模擬
+@speed = 速度
+@sunflowers = 向日葵
+@timing = 計時
+@trees = 樹木
+@the_farmers_remains = ？？？
+@top_hat = 高頂禮帽
+@utilities = 實用工具
+@variables = 變數
+@watering = 澆水
