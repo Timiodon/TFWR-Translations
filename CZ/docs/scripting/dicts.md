@@ -1,41 +1,40 @@
-# Dictionaries
-Dictionaries are a datastructure that allows you to map keys to values in the same way that a real dictionary maps words to their definitions and you can look them up very quickly.
+# Slovníky
+Slovník (dictionary) je datová struktura, která mapuje klíče na hodnoty — podobně jako slovník mapuje slova na jejich definice.
 
-A dictionary can be created like this:
+Slovník lze vytvořit takto:
 `right_of = {North:East, East:South, South:West, West:North}`
 
-The expression before the colon is the key and the expression after the colon is the value to which the key maps.
-The above dictionary maps each direction to the direction to it's right.
+Výraz před dvojtečkou je klíč a výraz za dvojtečkou je hodnota, na kterou klíč ukazuje.
+Výše uvedený slovník mapuje každý směr na směr napravo.
 
-Here's another one that maps the drone's position to the entity it's over.
+Jiný příklad mapuje pozici dronu na entitu pod ním:
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-Accessing the value mapped to a key is similar to accessing an element in a list:
+Přístup k hodnotě přes klíč je podobný přístupu k prvku seznamu:
 `value = dict[key]`
 
-Example:
+Příklad:
 `orientation = right_of[South]`
-This sets `orientation` to `West`.
+Tím se nastaví `orientation` na `West`.
 
-You can add a new key-value pair to a dictionary like this:
+Novou dvojici klíč–hodnota přidáte:
 `dict[key] = value`
 
-Example:
+Příklad:
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
-This updates the entity stored for the current position.
+Tím aktualizujete entitu uloženou pro aktuální pozici.
 
-Keys are unique, so adding a key that already exists in the dictionary will overwrite the previous value.
+Klíče jsou unikátní; přidání existujícího klíče přepíše předchozí hodnotu.
 
-Use `dict.pop(key)` to remove a key-value pair from `dict`.
+K odstranění použijte `dict.pop(key)`.
 
-`key in dict` evaluates to `True` if `key` is a key in the `dict` and `False` otherwise.
-So you can use `if key in dict:` to check if `dict` contains the key.
+Výraz `key in dict` vrátí `True`, pokud `key` v `dict` existuje, jinak `False`. Můžete tedy použít `if key in dict:`.
 
-Putting a dictionary in a for loop allows you to iterate through all keys:
+Zařazením slovníku do `for` smyčky projdete všechny jeho klíče:
 `for key in dict:
-	value = dict[key]`
+    value = dict[key]`
 
-There are no guarantees about the order in which the keys are iterated.
+Pořadí iterace klíčů není garantováno.
 
-See also [Sets](docs/scripting/sets.md)
+Viz také [Množiny](docs/scripting/sets.md)

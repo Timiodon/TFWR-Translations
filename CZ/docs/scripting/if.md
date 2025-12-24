@@ -1,45 +1,29 @@
-# If
-You can use if, elif and else to run code conditionally.
+# Podmínky (`if`)
+Konstrukce `if`, `elif` a `else` umožňují podmíněné provádění kódu.
 
 `if condition1:
-	do_a_flip()
+    do_a_flip()
 elif condition2:
-	harvest()
+    harvest()
 else:
-	do_a_flip()
-	harvest()`
+    do_a_flip()
+    harvest()`
 
-## Syntax
-`if`s allow you to run code only if some condition is `True`. They are like a `while` loop that doesn't loop.
-The `if` takes a condition just like the `while` loop and executes the if code block if the condition evaluates to `True`:
+## Syntaxe
+`if` provede blok kódu pouze, pokud podmínka vyhodnotí na `True`. Je podobný `while`, akorát se neopakuje.
+`if` přijímá podmínku stejně jako smyčka `while` a provede blok kódu if, pokud je podmínka vyhodnocena jako `True`:
 
 `#do a flip if condition is True
 if condition:
 	do_a_flip()`
 
-You can also add an `else` after the if that defines code to be executed if the condition evaluates to `False`.
+Po `if` můžete přidat `else`, který se vykoná, pokud je podmínka `False`.
 
-Do a flip if `condition` is True, otherwise harvest.
-`if condition:
-	do_a_flip()
-else:
-	harvest()`
-
-`elif` is short for else if.
+`elif` je zkratka pro `else if` a umožňuje řetězit více podmínek:
 
 `if condition1:
-	#a
-else:
-	if condition2:
-		#b
-	else:
-		#c`
-
-can be shortened to:
-
-`if condition1:
-	#a
+    #a
 elif condition2:
-	#b
+    #b
 else:
-	#c`
+    #c`

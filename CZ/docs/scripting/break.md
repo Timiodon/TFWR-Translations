@@ -1,27 +1,28 @@
 # Break
-`break` allows stopping a loop early. When the `break` statement is reached it will immediately exit the innermost loop and start running the code after the loop.
+Příkaz `break` umožňuje předčasné ukončení smyčky. Když program narazí na `break`, okamžitě opustí nejvnitřnější smyčku a pokračuje prováděním kódu za ní.
 
 `for i in range(10):
-	break
+    break
 print(i)`
-This prints `0` because `i` is `0` in the first iteration of the loop and then the break statement ends the loop.
 
-It also works on `while` loops.
+Tento příklad vytiskne `0`, protože `i` má v první iteraci hodnotu `0` a `break` smyčku ukončí.
+
+`break` funguje i v `while` smyčkách.
 
 `while True:
-	if can_harvest():
-		break`
+    if can_harvest():
+        break`
 
-This code runs the `while` loop until `can_harvest()` is `True`. 
-It has the same effect as
+Tento kód poběží, dokud `can_harvest()` není `True`.
+Má stejný efekt jako:
 
 `while not can_harvest():
-	pass`
+    pass`
 
-In nested loops `break` always exits the innermost loop.
+V případě vnořených smyček `break` vždy opustí tu nejvnitřnější.
 
 `for i in range(10):
-	for j in range(10):
-		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+    for j in range(10):
+        break
+        print("this is never printed")
+    print("this is printed 10 times")`

@@ -1,75 +1,75 @@
-# Operators
-arithmetic operators: `+, -, *, /, //, %, **`
-comparison operators: `==, !=, <=, >=, <, >`
-boolean operators: `not, and, or`
+# Operátory
+aritmetické operátory: `+, -, *, /, //, %, **`
+porovnávací operátory: `==, !=, <=, >=, <, >`
+booleovské operátory: `not, and, or`
 
-Note: All numbers in the game are floating point numbers. So all arithmetic operators are floating point operators.
-`//` is defined to just floor the number after the division.
+Poznámka: Všechna čísla ve hře jsou čísla s plovoucí desetinnou čárkou. Takže všechny aritmetické operátory jsou operátory s plovoucí desetinnou čárkou.
+`//` je definováno tak, že po dělení číslo zaokrouhlí dolů.
 
-For assignment operators you need to unlock the "Variables" unlock.
+Pro operátory přiřazení musíte odemknout vylepšení "Proměnné".
 
-## Introduction
-Operators allow you to compare, modify and combine values. 
-The arithmetic operators `+, -, *, /, //, %, **` are used to perform common mathematical operations on numbers. 
-The comparison operators `==, !=, <=, >=, <, >` are used to compare values. The result is always either `True` or `False`.
-The logic operators (also called boolean operators) `not, and, or` are used to combine truth values.
+## Úvod
+Operátory umožňují porovnávat, upravovat a kombinovat hodnoty. 
+Aritmetické operátory `+, -, *, /, //, %, **` se používají k provádění běžných matematických operací s čísly. 
+Porovnávací operátory `==, !=, <=, >=, <, >` se používají k porovnávání hodnot. Výsledek je vždy buď `True` (pravda) nebo `False` (nepravda).
+Logické operátory (také nazývané booleovské operátory) `not, and, or` se používají ke kombinování pravdivostních hodnot.
 
-## Arithmetic Operators
-`+` and `-` are used for addition and subtraction.
+## Aritmetické operátory
+`+` a `-` se používají pro sčítání a odčítání.
 
-`2 + 3` evaluates to `5`
-`3 - 2` evaluates to `1`
+`2 + 3` se vyhodnotí jako `5`
+`3 - 2` se vyhodnotí jako `1`
 
-`*`, `/` and `//` are used for multiplication and division.
+`*`, `/` a `//` se používají pro násobení a dělení.
 
-`2 * 3` evaluates to `6`
-`5 / 2` evaluates to `2.5`
+`2 * 3` se vyhodnotí jako `6`
+`5 / 2` se vyhodnotí jako `2.5`
 
-`//` does the same thing as `/` but the result is floored (rounded down to the next integer).
+`//` dělá totéž co `/`, ale výsledek je zaokrouhlen dolů (na nejbližší nižší celé číslo).
 
-`5 // 2` evaluates to `2`
+`5 // 2` se vyhodnotí jako `2`
 
-`%` is the modulo operator, also known as the remainder operator. It essentially divides the two numbers and then returns the remainder. You can also think of it as repeatedly subtracting the right number from the left number until the remainder is less than the right number.
+`%` je operátor modulo, známý také jako operátor zbytku. V podstatě vydělí dvě čísla a poté vrátí zbytek. Můžete si to také představit jako opakované odečítání pravého čísla od levého, dokud není zbytek menší než pravé číslo.
 
-`4 % 2` evaluates to `0`
-`5 % 2` evaluates to `1`
-`6 % 2` evaluates to `0`
-`2 % 6` evaluates to `2`
-`1.5 % 1` evaluates to `0.5`
+`4 % 2` se vyhodnotí jako `0`
+`5 % 2` se vyhodnotí jako `1`
+`6 % 2` se vyhodnotí jako `0`
+`2 % 6` se vyhodnotí jako `2`
+`1.5 % 1` se vyhodnotí jako `0.5`
 
-`**` is the power operator.
+`**` je operátor mocnění.
 
-`2**2` evaluates to `4`
-`(-5)**3` evaluates to `-125`
+`2**2` se vyhodnotí jako `4`
+`(-5)**3` se vyhodnotí jako `-125`
 
-## Comparison Operators
-`==` and `!=` are used to check if two values are "equal"(`==`) or "not equal"(`!=`). They can be used on all types of values.
+## Porovnávací operátory
+`==` a `!=` se používají ke kontrole, zda jsou dvě hodnoty "rovny" (`==`) nebo "nerovny" (`!=`). Lze je použít na všechny typy hodnot.
 
-`2 == 2` evaluates to `True`
-`Entities.Bush != Entities.Bush` evaluates to `False`
-`3 != 3 + 1` evaluates to `True`
+`2 == 2` se vyhodnotí jako `True`
+`Entities.Bush != Entities.Bush` se vyhodnotí jako `False`
+`3 != 3 + 1` se vyhodnotí jako `True`
 
-`<=, >=, <, >` can only be used on numbers. They check if the left number is "smaller or equal"(`<=`), "bigger or equal"(`>=`), "smaller" (`<`) or "bigger" (`>`) than the right number.
+`<=, >=, <, >` lze použít pouze na čísla. Kontrolují, zda je levé číslo "menší nebo rovno" (`<=`), "větší nebo rovno" (`>=`), "menší" (`<`) nebo "větší" (`>`) než pravé číslo.
 
-`1 <= 1` evaluates to `True`
-`2 >= 3` evaluates to `False`
-`-2 < -1` evaluates to `True`
-`6 > 6` evaluates to `False`
+`1 <= 1` se vyhodnotí jako `True`
+`2 >= 3` se vyhodnotí jako `False`
+`-2 < -1` se vyhodnotí jako `True`
+`6 > 6` se vyhodnotí jako `False`
 
-## Logic Operators
-`not` simply inverts the value:
+## Logické operátory
+`not` jednoduše invertuje hodnotu:
 
-`not False` evaluates to `True`
-`not True` evaluates to `False`
+`not False` se vyhodnotí jako `True`
+`not True` se vyhodnotí jako `False`
 
-`and` evaluates to `True` only if both values are `True`
+`and` se vyhodnotí jako `True` pouze pokud jsou obě hodnoty `True`
 
-`True and True` evaluates to `True`
-`True and False` evaluates to `False`
-`False and False` evaluates to `False`
+`True and True` se vyhodnotí jako `True`
+`True and False` se vyhodnotí jako `False`
+`False and False` se vyhodnotí jako `False`
 
-`or` evaluates to `True` if at least one of the values is `True`
+`or` se vyhodnotí jako `True`, pokud je alespoň jedna z hodnot `True`
 
-`True or True` evaluates to `True`
-`True or False` evaluates to `True`
-`False or False` evaluates to `False`
+`True or True` se vyhodnotí jako `True`
+`True or False` se vyhodnotí jako `True`
+`False or False` se vyhodnotí jako `False`

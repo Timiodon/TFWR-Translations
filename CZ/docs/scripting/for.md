@@ -1,39 +1,24 @@
-# For Loop
-The `for` loop works like in Python. (Called a foreach loop in some languages, not to be confused with the C-style for loop, which is a different thing).
+# Smyčka `for`
+Smyčka `for` funguje podobně jako v Pythonu.
 
 `for i in sequence:
-	#do something with i`
+    #něco s i` 
 
-Similar to the `while` loop, the `for` loop also repeatedly calls a block of code. Instead of looping based on a condition, it executes the loop body once for each element in a sequence.
+Na rozdíl od `while`, která běží podle podmínky, `for` provede tělo smyčky pro každý prvek v sekvenci.
 
-## Syntax
-A for loop looks like this:
-
+## Syntaxe
 `for variable_name in sequence:
-	#code block`
+    #blok kódu`
 
-`variable_name` can be any name you choose. It is a variable that stores the current element in the sequence. `sequence` needs to be some value that can be iterated like a range of numbers. The code block is executed for every element with the loop variable assigned to that element.
+`variable_name` je libovolné jméno, které přijme aktuální prvek ze sekvence. `sequence` musí být něco, přes co lze iterovat (např. `range` nebo `list`).
 
-## Sequences
-[Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+## Sekvence
+[Rozsahy](functions/range)      <unlock=lists>[Seznamy](docs/scripting/lists.md)      </unlock><unlock=functions>[N-tice](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Slovníky](docs/scripting/dicts.md)      </unlock><unlock=sets>[Množiny](docs/scripting/sets.md)</unlock>
 
-## Example
+## Příklad
 `for i in range(5):
     harvest()`
 
-This loop executes the body a fixed number of times. It is essentially the same as writing
+Tato smyčka zavolá `harvest()` pětkrát.
 
-`i = 0
-harvest()
-i = 1
-harvest()
-i = 2
-harvest()
-i = 3
-harvest()
-i = 4
-harvest()`
-
-So it calls `harvest()` 5 times.
-
-See also [Break](docs/scripting/break.md) and [Continue](docs/scripting/continue.md)
+Viz také [Break](docs/scripting/break.md) a [Continue](docs/scripting/continue.md)

@@ -1,32 +1,32 @@
 # Continue
-continue allows stopping the current iteration of a loop and jumping to the next iteration of the innermost loop.
+`continue` umožňuje přeskočit aktuální iteraci smyčky a pokračovat další iterací nejvnitřnější smyčky.
 
 `for i in range(10):
-	continue
+    continue
     print("this is never printed")`
 
-This runs all `10` iterations of the loop, but the `print` statement after the `continue` is always skipped.
+Tento příklad projde všech 10 iterací smyčky, ale `print` za `continue` se nikdy nevykoná.
 
-It also works on `while` loops.
+`continue` funguje i v `while` smyčkách.
 
 `while True:
-	if not can_harvest():
-		continue
-    
+    if not can_harvest():
+        continue
+
     harvest()`
 
-This code only calls `harvest()` when `can_harvest()` is `True`. 
-It has the same effect as
+Tento kód zavolá `harvest()` jen tehdy, když je `can_harvest()` `True`.
+Má stejný efekt jako:
 
 `while True:
-	if can_harvest():
-		harvest()`
+    if can_harvest():
+        harvest()`
 
-In nested loops `continue` always affects the innermost loop.
+Ve vnořených smyčkách `continue` ovlivní vždy nejvnitřnější smyčku.
 
 `for i in range(10):
-	for j in range(10):
-	    print("this is printed 100 times")
-		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+    for j in range(10):
+        print("this is printed 100 times")
+        continue
+        print("this is never printed")
+    print("this is printed 10 times")`

@@ -1,32 +1,32 @@
-# Name Scopes
-Scopes determine which variables can be accessed from where. A scope is basically a mapping from names to values.
-They work basically the same as in Python.
+# Rozsahy názvů (Scopes)
+Rozsahy určují, ke kterým proměnným lze odkud přistupovat. Rozsah je v podstatě mapování z názvů na hodnoty.
+Fungují v podstatě stejně jako v Pythonu.
 
-There is a global scope, and each function has a local scope.
-When you define a variable, it gets added to the current scope.
-Anything outside of a function definition is considered part of the global scope.
+Existuje globální rozsah a každá funkce má lokální rozsah.
+Když definujete proměnnou, přidá se do aktuálního rozsahu.
+Cokoli mimo definici funkce je považováno za součást globálního rozsahu.
 
 `x = 1`
-Assigns a value of `1` to the name `x` in the global scope.
+Přiřadí hodnotu `1` názvu `x` v globálním rozsahu.
 
-This `def` statement assigns a function to the name `f` in the global scope.
+Tento příkaz `def` přiřadí funkci názvu `f` v globálním rozsahu.
 `def f():
-    `Assign a value of `1` to the name `y` in the local scope of `f`.`
+    `Přiřadí hodnotu `1` názvu `y` v lokálním rozsahu `f`.`
     y = 1
 
-    `Assign a function to the name `g` in the local scope of `f`.`
+    `Přiřadí funkci názvu `g` v lokálním rozsahu `f`.`
     def g():
         pass`
 
 `f()`
-Retrieves the function stored in `f` from the global scope and calls it.
+Získá funkci uloženou v `f` z globálního rozsahu a zavolá ji.
 
 `print(y)`
-This print statement in the global scope throws an error because `y` was never declared in the global scope so we can't read it here.
-It only existed in the local scope of `f`.
+Tento příkaz print v globálním rozsahu vyvolá chybu, protože `y` nebylo nikdy deklarováno v globálním rozsahu, takže ho zde nemůžeme číst.
+Existovalo pouze v lokálním rozsahu `f`.
 
-## The global keyword
-By default all variables in functions bind to the local scope, even if a variable of the same name exists in the global scope.
+## Klíčové slovo global
+Ve výchozím nastavení se všechny proměnné ve funkcích vážou k lokálnímu rozsahu, i když proměnná se stejným názvem existuje v globálním rozsahu.
 
 `x = 0
 
@@ -35,9 +35,9 @@ def f():
 f()
 print(x)`
 
-This code prints `0` because the local `x` inside `f` is not the same variable as the global `x`, so the global `x` remains unchanged. This is important because otherwise a function call could accidentally override a global variable that just happens to have the same name as a local variable of that function.
+Tento kód vypíše `0`, protože lokální `x` uvnitř `f` není stejná proměnná jako globální `x`, takže globální `x` zůstává nezměněno. To je důležité, protože jinak by volání funkce mohlo omylem přepsat globální proměnnou, která má náhodou stejný název jako lokální proměnná této funkce.
 
-If you want to write to a global variable, you must do so explicitly using the `global` keyword.
+Pokud chcete zapisovat do globální proměnné, musíte tak učinit explicitně pomocí klíčového slova `global`.
 
 `x = 0
 
@@ -47,14 +47,14 @@ def f():
 f()
 print(x)`
 
-In this example, `global x` binds `x` to the global variable `x` defined above it. This will now print `1`.
-Note that changing global variables is usually the first step towards spaghetti code, where every part of the program affects every other part of the program, so don't overuse it.
+V tomto příkladu `global x` váže `x` ke globální proměnné `x` definované nad ní. Toto nyní vypíše `1`.
+Pamatujte, že změna globálních proměnných je obvykle prvním krokem ke "špagetovému kódu", kde každá část programu ovlivňuje každou jinou část programu, takže to nepřehánějte.
 
-## Loops and branches
-Loops and branches do not create their own scopes, so anything declared within them can still be used outside.
+## Cykly a větvení
+Cykly a větvení nevytvářejí své vlastní rozsahy, takže cokoli deklarované v nich lze stále používat i vně.
 
 `for i in range(3):
     pass
 print(i)`
 
-This will print `2` because the last iteration of the `for` loop assigned `2` to `i`.
+Toto vypíše `2`, protože poslední iterace cyklu `for` přiřadila `2` do `i`.

@@ -1,12 +1,12 @@
-# Comments
-Comments are parts of the code that are ignored during execution.
-Comments can be added using `#`. Anything on the same line after the `#` is a comment and will be ignored.
+# Komentáře
+Komentáře jsou části kódu, které jsou při provádění ignorovány.
+Komentáře se přidávají pomocí `#`. Vše, co je na stejné řádce za `#`, je komentář a bude ignorováno.
 
-`#this is a comment`
+`#toto je komentář`
 
-This can be useful to add notes to the code, and also to temporarily disable parts of the code without deleting them.
+Komentáře se hodí pro poznámky v kódu nebo pro dočasné zakázání částí kódu bez jejich mazání.
 
-Any comment on the line before a function definition will be part of the popup information that appears when you mouse over the function name.
-`#This function does nothing.
+Komentář na řádce před definicí funkce bude součástí popup informace, která se zobrazí při najetí myší na název funkce.
+`#Tato funkce nic nedělá.
 def f():
     pass`

@@ -1,90 +1,75 @@
-# Functions
-Use the `def` keyword to define a new function:
+# Funkce
+Použijte klíčové slovo `def` pro definici nové funkce:
 `def f(arg1, arg2 = False):
-	#function code`
+    #kód funkce`
 
-You can use the call operator `()` to call the function:
+Funkci pak zavoláte pomocí závorek:
 `f(42)`
 
-Also see [Scopes](docs/scripting/scopes.md) to learn about local and global variables in functions.
+Viz také [Prostory názvů](docs/scripting/scopes.md) pro informace o lokálních a globálních proměnných.
 
-## Introduction
-You've already seen built-in functions like `harvest()`.
-You can also define your own functions which allows structuring your code in a modular way. It basically allows you to give a name to a block of code so you can call it from anywhere you want.
+## Úvod
+Vestavěné funkce jako `harvest()` už znáte. Můžete si také definovat vlastní funkce a strukturovat tak kód modulárně.
 
-## Function Definitions
-For example, you could define a function that moves the drone several times.
+## Definice funkcí
+Příklad funkce, která několikrát posune dron:
 
 `def move_n_dir(n, dir):
-	for i in range(n):
-		move(dir)`
+    for i in range(n):
+        move(dir)`
 
-The `def` keyword signals that this is a function definition. 
-`move_n_dir` is the name that the function gets bound to. This can be any valid variable name and will be used to call the function.
-`n` and `dir` are parameters. They are variables that hold the values that are passed into the function (These values are also called arguments). You can add as many parameters to a function definition as you want.
-After the `:` comes the code block that will run when the function is called.
+`def` označuje definici funkce. `move_n_dir` je jméno, pod kterým je funkce dostupná. `n` a `dir` jsou parametry — proměnné, které drží předané argumenty.
+Po dvojtečce následuje blok kódu, který se vykoná při volání funkce.
 
-With the above definition the following code then moves the drone `10` tiles `North` and `2` tiles `West`.
-
+S výše uvedenou definicí:
 `move_n_dir(10, North)
 move_n_dir(2, West)`
 
-When you see `def function():` you should really think of it as a variable assignment like this:
+Definici funkce lze chápat jako přiřazení hodnoty funkce do proměnné:
 `function = create_new_function_object()`
-Like with all assignments, you can't use the variable before it was assigned!
-The `def` statement has to run before any function calls.
-This code will throw an error:
+Proto nemůžete funkci použít dříve, než je přiřazena — `def` musí být provedeno před voláním.
 
-`func()
-def func():
-	pass`
-
-## Return Values
-Use the `return` keyword to make a function return a value. 
-For example, the following function defines the exclusive or operation. The exclusive or returns `True` if one value is `True` and the other one is `False`:
+## Návratové hodnoty
+Pomocí `return` může funkce vrátit hodnotu.
 
 `def xor(a, b):
-	return a != b
+    return a != b
 
 if xor(True, False):
-	do_a_flip()`
+    do_a_flip()`
 
-[Tuples](docs/scripting/tuples.md) allow returning multiple values.
+Více hodnot lze vrátit pomocí [N-tic](docs/scripting/tuples.md).
 
-## Default Arguments
-You can also assign default values that will be used if no arguments are passed.
+## Výchozí argumenty
+Argumenty mohou mít výchozí hodnoty, které se použijí, pokud nejsou při volání poskytnuty.
 
 `def f(a = False):
-	if a:
-		do_a_flip()
+    if a:
+        do_a_flip()
 
 f()
 
 f(True)`
 
-An argument that has a default value cannot be followed by an argument that doesn't have a default value.
+Argument s výchozí hodnotou nesmí být následován argumentem bez výchozí hodnoty.
 
-## Advanced Function Usage
-Functions are values just like any other value, and the `def` statement just acts like an assignment statement, assigning the function to whatever name you give it.
-This allows doing things like this:
+## Pokročilejší použití
+Funkce jsou hodnoty jako jiné proměnné a `def` funguje jako přiřazení, takže můžete vracet a předávat funkce jako hodnoty.
 
 `def f():
-	def d():
-		do_a_flip()
-	return d
+    def d():
+        do_a_flip()
+    return d
 
 f()()`
 
-Here `f()` calls the function `f` which defines and returns a new function `d`. The second `()` then executes the returned function and performs flip.
-(Doing these sort of things is usually not a good idea because it's hard to see what's going on)
-
-Functions that take other functions as arguments let you get really creative:
+Funkce mohou také jako argumenty přijímat jiné funkce:
 
 `def f(g, arg):
-	for _ in range(10):
-		g(arg)
+    for _ in range(10):
+        g(arg)
 
 f(move, North)
 f(use_item, Items.Fertilizer)`
 
-This code moves the drone `North` 10 times and then uses fertilizer 10 times.
+Tento kód posune dron 10× na sever a poté 10× použije hnojivo.

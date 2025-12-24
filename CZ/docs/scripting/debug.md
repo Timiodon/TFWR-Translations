@@ -1,33 +1,32 @@
-# Debug
-Sometimes your code just doesn't work and you need to find out why. There are a couple of tools to help you do that.
+# Ladění
+Někdy kód nefunguje a je potřeba najít proč. K dispozici je několik nástrojů, které s tím pomůžou.
 
-The first is to execute the program step by step. 
-You can go into step-by-step mode with the button next to the Execute button or by setting a breakpoint.
+Prvním je krokové (step-by-step) provádění programu.
+Do krokového režimu se dostanete tlačítkem vedle tlačítka Execute nebo nastavením breakpointu.
 
-Breakpoints can be added by clicking on the breakpoint panel to the left of the code.
+Breakpointy lze přidat kliknutím do panelu vlevo od kódu.
 ![](Breakpoints227)
-When execution reaches the line where the breakpoint is, it will automatically switch to step-by-step mode.
+Když se provádění dostane na řádek s breakpointem, přepne se automaticky do krokového režimu.
 
-When you move your mouse over a variable, its current value is displayed.
+Po najetí myší na proměnnou se zobrazí její aktuální hodnota.
 
-The `print()` function can also be very useful. It will write any value passed to it directly into the air.
+Funkce `print()` je také velmi užitečná — vypíše libovolnou předanou hodnotu přímo do vzduchu.
 
-Examples:
+Příklady:
 
-Print "0.24".
+Vytiskne "0.24".
 `print(0.24)`
 
-Print "True" or "False".
+Vytiskne "True" nebo "False".
 `print(can_harvest())`
 
-Print the current position.
+Vytiskne aktuální pozici.
 `print(get_pos_x(), get_pos_y())`
 
-The print function prints the value directly into the air and to the [Output](docs/output.md) page.
+Funkce `print` zapisuje hodnotu do vzduchu i na stránku [Výstup](docs/output.md).
 
-Writing into the air can sometimes be a bit slow if you want to print a lot of values.
-In this case you can use the `quick_print()` function which prints only to the output window.
+Pokud chcete tisknout hodně hodnot a je to pomalé, použijte `quick_print()`, která tiskne pouze do výstupního okna.
 
-The output window also logs warnings and errors, so if something doesn't work as expected it can be useful to check that.
+Výstupní okno také loguje varování a chyby, takže pokud něco nefunguje, je užitečné ho zkontrolovat.
 
-When the execution stops, the output is also written to the output.txt file in the game folder. [output.txt](persistent_data_path/output.txt).
+Po zastavení provádění se vypisují data i do souboru `output.txt` ve složce hry. [output.txt](persistent_data_path/output.txt).

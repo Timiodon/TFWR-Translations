@@ -1,47 +1,47 @@
 # Import
-Putting all your code in a single file quickly becomes unmanageable. 
-`import` statements allow you to import functions and global variables from another file.
-How it works in one screenshot:
+Vkládání veškerého kódu do jednoho souboru se rychle stane nezvladatelným. 
+Příkazy `import` vám umožňují importovat funkce a globální proměnné z jiného souboru.
+Jak to funguje na jednom obrázku:
 ![](ImportsInOnePicture400)
 
-Here `import module2` runs the file named `module2` and gives you access to all its globals.
-You can then access variables and functions within the imported module using the `.` operator.
-So in this example, `module2.print_x()` calls `print_x()` in `module2`.
+Zde `import module2` spustí soubor s názvem `module2` a zpřístupní vám všechny jeho globální proměnné.
+K proměnným a funkcím v importovaném modulu pak můžete přistupovat pomocí operátoru `.`.
+Takže v tomto příkladu `module2.print_x()` zavolá `print_x()` v `module2`.
 
-### No need to read further
+### Není třeba číst dále
 
-You can also move the globals from the imported module into the current scope where the import statement is executed using the `from` syntax.
+Globální proměnné z importovaného modulu můžete také přesunout do aktuálního rozsahu (scope), kde je příkaz importu spuštěn, pomocí syntaxe `from`.
 
 `from module2 import print_x
 print_x()`
-Imports only the specified globals from `module2`.
+Importuje pouze specifikované globální proměnné z `module2`.
 
-or
+nebo
 
 `from module2 import *
 print_x()`
-Imports all globals from `module2`.
+Importuje všechny globální proměnné z `module2`.
 
-This also imports the `module2` file, but instead of accessing it through a variable named `module2`, it unpacks globals from `module2` and assigns them directly in the local scope.
+Tím se také importuje soubor `module2`, ale místo přístupu k němu přes proměnnou s názvem `module2` se globální proměnné z `module2` rozbalí a přiřadí přímo do lokálního rozsahu.
 
-This form of import is usually not recommended because it doesn't work well when two files import each other, and you may accidentally overwrite variables in the importing file due to name collisions. It's safer to avoid the `from` syntax if you don't know what you're doing.
+Tato forma importu se obvykle nedoporučuje, protože nefunguje dobře, když se dva soubory importují navzájem, a můžete omylem přepsat proměnné v importujícím souboru kvůli kolizím názvů. Je bezpečnější se syntaxi `from` vyhnout, pokud nevíte přesně, co děláte.
 
-# How it really works
+# Jak to doopravdy funguje
 
-## TLDR
-Imports can be quite unintuitive, but most problems can be avoided by sticking to the `import file` syntax instead of `from file import`, and wrapping everything that isn't a global definition in
+## TLDR (Ve zkratce)
+Importy mohou být docela neintuitivní, ale většině problémů se lze vyhnout tím, že se budete držet syntaxe `import file` místo `from file import` a zabalíte vše, co není definicí globální proměnné, do
 `if __name__ == "__main__":`
 
-## Import Side Effects
-The first time you import a file, it will execute the entire file and then give you access to all variables that have been defined during the execution.
-If you import the same file again, it will just return the cached module from the first time again.
+## Vedlejší efekty importu
+Při prvním importu souboru se provede celý soubor a poté získáte přístup ke všem proměnným, které byly během provádění definovány.
+Pokud stejný soubor importujete znovu, vrátí se pouze uložený modul z prvního importu.
 
-This means that import statements can have side effects. If you import a file that calls `harvest()`, it will actually harvest during the import. But when you import it again, it won't harvest again because the file is only run once.
+To znamená, že příkazy importu mohou mít vedlejší efekty. Pokud importujete soubor, který volá `harvest()`, skutečně se během importu provede sklizeň. Ale když jej importujete znovu, sklizeň se znovu neprovede, protože soubor se spouští pouze jednou.
 
-There is a way to avoid such side effects using the `__name__` variable. This is a variable that is automatically set to `"__main__"` when a file is run directly, and to the name of the file when a file is run through `import`.
-It is considered good practice to put any code that you don't want to run when the file is imported inside of a `if __name__ == "__main__":` block.
+Těmto vedlejším efektům se lze vyhnout pomocí proměnné `__name__`. Jedná se o proměnnou, která je automaticky nastavena na `"__main__"`, když je soubor spuštěn přímo, a na název souboru, když je soubor spuštěn přes `import`.
+Považuje se za dobrou praxi umístit jakýkoli kód, který nechcete spouštět při importu souboru, do bloku `if __name__ == "__main__":`.
 
-A common file structure in Python is to put the code that should be executed when the file is run into a `main()` function. This way you have a clear distinction between local variables (defined inside `main()`) and global variables that can be imported (defined outside `main()`).
+Běžnou strukturou souborů v Pythonu je umístit kód, který by se měl provést při spuštění souboru, do funkce `main()`. Tím získáte jasné rozlišení mezi lokálními proměnnými (definovanými uvnitř `main()`) a globálními proměnnými, které lze importovat (definovanými mimo `main()`).
 
 `a_global_variable = "global"
 
@@ -52,45 +52,45 @@ def main():
 if __name__ == "__main__":
     main()`
 
-## Import Cycles
-What happens if file `a` imports file `b` and file `b` imports file `a`?
+## Cyklické importy
+Co se stane, když soubor `a` importuje soubor `b` a soubor `b` importuje soubor `a`?
 
-file `a`:
+soubor `a`:
 `import b
 x = 0`
 
-file `b`:
+soubor `b`:
 `import a
 def f():
     print(a.x)`
 
-This will work fine. Let's say neither of the two files are loaded yet, and someone else executes `import a`.
+To bude fungovat v pořádku. Řekněme, že ani jeden ze dvou souborů ještě není načten a někdo jiný provede `import a`.
 
--`a` runs until the `import b` line.
--`b` runs until the `import a` line.
--The module `a` already exists, but doesn't contain `x` because it has only reached the `import b` line.
--`b` stores a reference to the half-loaded module `a` in a variable called `a`.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-`a` běží až k řádku `import b`.
+-`b` běží až k řádku `import a`.
+-Modul `a` již existuje, ale neobsahuje `x`, protože dosáhl pouze řádku `import b`.
+-`b` uloží odkaz na napůl načtený modul `a` do proměnné s názvem `a`.
+-`b` provede příkaz `def` a uloží funkci `f()`.
+-`a` pokračuje v běhu a inicializuje `x`.
 
-When someone calls `b.f()` it will correctly print `0` because the module `a` that `b` has a reference to is now fully loaded.
+Když někdo zavolá `b.f()`, správně vypíše `0`, protože modul `a`, na který má `b` odkaz, je nyní plně načten.
 
-Now consider the same code using the `from` syntax.
+Nyní zvažte stejný kód pomocí syntaxe `from`.
 
-file `a`:
+soubor `a`:
 `from b import *
 x = 0`
 
-file `b`:
+soubor `b`:
 `from a import *
 def f():
     print(x)`
 
--`a` runs until the `from b import *` line.
--`b` runs until the `from a import *` line.
--The module `a` already exists, but hasn't been fully executed yet.
--`b` unpacks everything that is currently in `a` into it's own global scope. At this point, `a` contains nothing because it hasn't reached the `x = 0` line yet, so nothing is imported.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-`a` běží až k řádku `from b import *`.
+-`b` běží až k řádku `from a import *`.
+-Modul `a` již existuje, ale ještě nebyl plně proveden.
+-`b` rozbalí vše, co je aktuálně v `a`, do svého vlastního globálního rozsahu. V tomto okamžiku `a` neobsahuje nic, protože ještě nedosáhl řádku `x = 0`, takže se nic neimportuje.
+-`b` provede příkaz `def` a uloží funkci `f()`.
+-`a` pokračuje v běhu a inicializuje `x`.
 
-If someone now calls `b.f()`, they will get an error that `x` doesn't exist in the current scope. This is because this time `b` does not have a reference to the still-loading `a` and does not see definitions that were added after the import.
+Pokud nyní někdo zavolá `b.f()`, dostane chybu, že `x` v aktuálním rozsahu neexistuje. Je to proto, že tentokrát `b` nemá odkaz na stále se načítající `a` a nevidí definice, které byly přidány po importu.

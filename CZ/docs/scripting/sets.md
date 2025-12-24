@@ -1,20 +1,20 @@
-# Sets
-Sets are like [dictionaries](docs/scripting/dicts.md), but without values. They're just an unordered set of keys. 
+# Množiny (Sets)
+Množiny jsou jako [slovníky](docs/scripting/dicts.md), ale bez hodnot. Jsou to jen neuspořádané sady klíčů. 
 
-They are created like dictionaries, but without values.
+Vytvářejí se jako slovníky, ale bez hodnot.
 `set = {North, East, West}`
 
-Use `set()` to create an empty set. Note that `{}` creates an empty dictionary.
+Použijte `set()` k vytvoření prázdné množiny. Všimněte si, že `{}` vytvoří prázdný slovník.
 
-Use `set.add(elem)` to add a new element to the set.
+Použijte `set.add(elem)` k přidání nového prvku do množiny.
 
-Use `set.remove(elem)` to remove an element from a set.
+Použijte `set.remove(elem)` k odstranění prvku z množiny.
 
-Use `if elem in set:` to check if the set contains an element.
+Použijte `if elem in set:` ke kontrole, zda množina obsahuje prvek.
 
-Use `for elem in set:` to iterate all elements in the set.
-For larger sets the `in` operator performs much faster than it would on a list.
+Použijte `for elem in set:` k iteraci všech prvků v množině.
+U větších množin funguje operátor `in` mnohem rychleji než u seznamu.
 
-Just like dictionaries, sets are unordered, so there are no guarantees about the order in which the elements are iterated.
+Stejně jako slovníky jsou množiny neuspořádané, takže neexistují žádné záruky ohledně pořadí, v jakém jsou prvky iterovány.
 
-Also, elements in sets are unique, so adding an element that is already in the set will not change the set.
+Prvky v množinách jsou také jedinečné, takže přidání prvku, který již v množině je, množinu nezmění.
