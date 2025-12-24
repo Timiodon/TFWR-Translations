@@ -1,0 +1,25 @@
+@plant_tooltip_template = {0}
+
+Základní doba růstu mezi {1} a {2} sekundami.
+Může růst na {3}.
+@object_tooltip_template_cost = ### Plant Cost {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Zdá se, že je dinosauři milují.
+@object_descr_grass = Na travnaté půdě roste automaticky. Sklizením získáte `Items.Hay`.
+@object_descr_bush = Malý keř, který dává `Items.Wood`.
+@object_descr_tree = Stromy dávají více dřeva než keře. Růst trvá déle, pokud vedle nich rostou jiné stromy.
+@object_descr_carrot = Mrkev!
+@object_descr_pumpkin = Dýně rostou společně, když jsou vedle jiných plně vyrostlých dýní. Přibližně jedna z pěti dýní uhyne při dozrání.
+@object_descr_dead_pumpkin = Jedna z pěti dýní uhyne při dozrání a zanechá po sobě mrtvou dýni. Mrtvé dýně jsou k ničemu a zmizí, když je něco nové zasazeno.
+@object_descr_sunflower = Slunečnice sbírají energii ze slunce. Sklizí vám dají `Items.Power`.
+Pokud sklidíte slunečnici s maximálním počtem okvětních lístků, získáte bonusovou energii.
+@object_descr_cactus = Kaktusy existují ve 10 různých velikostech. Při sklizni se také sklidí sousední kaktusy, které jsou „setříděné".
+@object_descr_hedge = Součást bludiště.
+@object_descr_treasure = Poklad obsahující zlato rovné délce strany bludiště, v němž je ukryt. Lze jej sklidit jako rostlinu.
+@object_descr_dinosaur = Kousek ocasu z dinosauřího klobouku.
+@object_descr_grassland = Výchozí typ půdy. Na něm se automaticky vytvoří tráva.
+@object_descr_soil = Volání `till()` změní půdu na oraniště. Další volání `till()` ji změní zpět na travnatou půdu.
+@runtime_entity_tooltip = Při sklizni dává:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Celková doba růstu: {0} sekund
+Vyrostlo {1}%
+@runtime_ground_tooltip = Úroveň zavlažení: {0}

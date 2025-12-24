@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Pokusil jsem se koupit {0}, ale neměl jsem potřebné prostředky.
+@warning_no_space_to_plant = Pokusil jsem se zasadit {0}, ale už tam něco bylo.
+@warning_cant_plant_on_ground = Nelze zasadit {0} na {1}.
+@warning_missing_seed = Neměl jsem potřebné věci k zasazení {0}.
+@warning_no_item_to_use = Zkusil jsem použít {0}, ale neměl jsem ho dostatek.
+@warning_failed_swap_wrap = Pokusil jsem se provést výměnu přes okraj farmy. To není povoleno.
+@warning_failed_swap_unswappable = Pokus o výměnu {0}, která nelze vyměnit.
+@warning_weird_substance_not_divisible = Použil jsi množství Wierd Substance, které není přesně takové, jaké je potřeba k vytvoření bludiště. Nezapomeň, že množství potřebné Wierd Substance se zvyšuje s vylepšováním bludiště.
+
+Chcete-li vytvořit bludiště v plné velikosti, proveďte následující:
+`plant(Entities.Bush)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Simulace a běhy žebříčku nelze spustit z jiných simulací a běhů žebříčku.

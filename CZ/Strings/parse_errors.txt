@@ -1,0 +1,67 @@
+@error_missing_default_parameter = Všechny výchozí argumenty musí být na konci seznamu parametrů.
+@error_invalid_name = {0} není platné jméno. Jména musí začínat písmenem a mohou obsahovat pouze písmena, číslice a podtržítka. Také nesmí být rezervovaným klíčovým slovem.
+@error_reserved_keyword = {0} je rezervované klíčové slovo. Nelze jej použít jako jméno.
+@error_invalid_assign_expr = Nelze přiřadit hodnotu tomuto výrazu.
+@error_no_statements = Blok kódu musí obsahovat alespoň jeden příkaz.
+Příkaz může být volání funkce jako `harvest()` nebo přiřazení proměnné.
+Pokud v bloku kódu nechcete nic dělat, použijte příkaz `pass`.
+@error_not_enough_indentation = Zde není dostatečné odsazení.
+Musí být větší odsazení za dvojtečkou než před ní, aby se oddělil nový blok kódu.
+Použijte klávesu Tab pro odsazení kódu.
+@error_too_much_indentation = Zde je příliš mnoho odsazení.
+Odsazení musí být stejné pro všechny příkazy v rámci bloku kódu.
+@error_not_a_statement = Toto není platný příkaz.
+@error_not_a_statement2 = Toto není platný příkaz. Měli jste na mysli {0} ?
+@error_invalid_expression = Toto není platný výraz.
+@error_new_line_expected = Zde se očekává nový řádek.
+@error_unexpected_token = Zde se očekává {0}.
+@error_missing_colon = Na začátku každého bloku kódu musí být dvojtečka `:`.
+@error_unexpected_assign = Zde nelze provést přiřazení. Pro porovnání použijte `==`.
+@error_invalid_for_syntax = Toto není platný příkaz for. For smyčka vypadá takto:
+
+`for n in range(3):`
+
+Po `for` vždy následuje proměnná smyčky, `in` a poté sekvence. V tomto příkladu `n` je název proměnné, ale lze jej nahradit jiným.
+@error_unknown_method = Tato metoda neexistuje.
+@error_bad_backslash = Zpětné lomítko lze použít pro rozdělení výrazů na více řádků. Je však třeba po něm přidat nový řádek.
+@error_mixed_indentation = Nesmí se míchat tabulátory a mezery.
+@error_expected_close_token = Očekává se čárka nebo zavírací závorka.
+@error_wrong_dict_literal = Očekává se `:` k oddělení klíčů a hodnot ve slovníku.
+@error_assign_before_global = {0} je přiřazeno před deklarací `global`.
+@error_wildcard_imports_not_allowed_in_function = Importy ve formě `from x import *` nejsou povoleny uvnitř funkcí.
+@error_invalid_import = Nelze importovat soubory s názvy, které nejsou platnými identifikátory. Platné identifikátory mohou obsahovat pouze písmena, čísla a podtržítka. Pokud váš název souboru obsahuje jiné znaky, přejmenujte jej.
+@error_invalid_number_format = Tento formát čísla není platný.
+@error_compared_item_with_number = {0} není číslo, je to položka. Porovnávání s číslem nedává smysl.
+
+Máte-li zájem zjistit, kolik dané položky máte, použijte `num_items(`{0}`)`.
+@error_compared_entity_with_number = {0} není číslo, je to entita. Porovnávání s číslem nedává smysl.
+@error_compared_unlock_with_number = {0} není číslo, je to odemčení. Porovnávání s číslem nedává smysl.
+
+Pro zjištění, kolikrát jste něco odemkli, použijte `num_unlocked(`{0}`)`.
+@error_nonsensical_or = Použití `or` s hodnotou `{0}` v podmínce nedává smysl, protože {0} je konstanta.
+Všimněte si, že porovnávací operátory se vyhodnocují před `or`.
+
+Příklad:
+`x == 5 or 6`
+
+je ekvivalentní
+`(x == 5) or 6`
+
+Ne-nulová čísla se považují za pravdivá, takže je to ekvivalentní
+`(x == 5) or True`
+
+což je vždy pravda.
+
+Technicky je to platný Python kód, ale není důvod jej takto psát.
+@error_item_condition = {0} je položka, nikoli booleovská hodnota. Použití samostatně jako podmínky nedává smysl.
+Možná jste chtěli zkontrolovat, zda se proměnná rovná této položce?
+`some_variable == `{0}
+@error_unlock_condition = {0} je odemčení, nikoli booleovská hodnota. Použití samostatně jako podmínky nedává smysl.
+Takto můžete zkontrolovat, zda je odemčení odemčeno:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} je entita, nikoli booleovská hodnota. Použití samostatně jako podmínky nedává smysl.
+Takto můžete zkontrolovat typ entity pod dronem:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} je typ půdy, nikoli booleovská hodnota. Použití samostatně jako podmínky nedává smysl.
+Takto můžete zkontrolovat typ půdy pod dronem:
+`get_ground_type() == `{0}`
