@@ -1,0 +1,17 @@
+@save = Uložit
+@saved = Uloženo
+@play = Spustit
+@load = Načíst
+@options = Nastavení
+@join_discord = Discord
+@quit = Ukončit
+@open_folder = Otevřít složku
+@new_game = Nová hra
+@back = Zpět
+@unlocks = Odemčení
+@farm = Farma
+@unlocked = Odemčeno
+@upgrade = Vylepšit
+@max_level = Maximální úroveň
+@unlock = Odemknout
+@locked = Zamčeno

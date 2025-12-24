@@ -1,0 +1,77 @@
+@error_code_after_block = Zde by neměl být žádný další kód. Odstraňte jej nebo přesuňte na nový řádek.
+@error_wrong_number_args = {0} očekává {1} parametrů. Zavolali jste jej s těmito argumenty: {2}.
+@error_expected_no_args = {0} nepřijímá žádné argumenty.
+@error_wrong_args = {0}. argument u {1} byl {2}. Toto není platný argument.
+@error_syntax_error_in_import = Importovaný modul obsahuje syntaktickou chybu.
+@error_module_not_found = Modul s tímto názvem neexistuje. Název musí odpovídat názvu souboru. Toto je název zobrazený v záhlaví okna.
+@error_list_element_not_found = {0} není prvkem seznamu.
+@error_set_element_not_found = {0} není prvkem množiny.
+@error_index_out_of_bounds = Index {0} byl mimo rozsah seznamu {1}.
+@error_index_out_of_bounds2 = Index byl mimo rozsah seznamu.
+@error_arith_assign_not_used_on_number = {0} lze použít pouze na čísla.
+@error_bool_op_not_used_on_bool = Logický operátor lze použít pouze na booleovské výrazy vracející `True` nebo `False`.
+@error_bad_bin_operator = Operátor {0} nelze použít na operandy {1} a {2}.
+@error_bad_unary_operator = Operátor {0} nelze použít na {1}.
+@error_index = {0} nelze použít jako index u {1}.
+@error_index_on_non_indexable = Do {0} nelze indexovat.
+@error_zero_step = Velikost kroku nemůže být nulová.
+@error_index_on_tuple = Nelze přiřadit prvek n-tice, protože n-tice jsou neměnné.
+@error_bad_key = {0} nelze použít jako klíč.
+@error_slice_dict = Slovníky nelze řezat (slice).
+@error_key = {0} není klíčem ve slovníku.
+@error_condition_not_bool = {0} není platná podmínka. Podmínka musí být booleovská hodnota (`True` nebo `False`).
+@error_for_requires_iterable = {0} není iterovatelný ve smyčce for. Smyčce musíte předat sekvenci k iteraci. Příklad:
+
+`for i in range(5):`
+V tomto případě `range(5)` vrací sekvenci `0,1,2,3,4`.
+@error_no_loop_to_break = `break` lze použít pouze uvnitř smyčky.
+@error_no_loop_to_continue = `continue` lze použít pouze uvnitř smyčky.
+@error_no_function_to_return_from = `return` lze použít pouze uvnitř funkce.
+@error_missing_unlock = Toto musí být nejprve odemčeno, než to lze použít.
+@error_missing_x_unlock = {0} musí být odemčeno, než to lze použít.
+@error_name_not_defined = {0} nebylo nikdy definováno. Před použitím musíte přiřadit proměnné hodnotu.
+@error_missing_import = {0} nebylo nikdy definováno. Zdá se, že je definováno v souboru {1}. Nezapomněli jste to importovat?
+Pokud jste to importovali, pravděpodobně máte importní cyklus (viz stránka s dokumentací o importu).
+@error_missing_import_before_unlock = {0} nebylo nikdy definováno. Zdá se, že je definováno v souboru {1}. Aby bylo možné importovat věci z jiných souborů, musíte nejprve odemknout importy.
+@error_missing_module_access = {0} nebylo nikdy definováno. Zdá se, že je definováno v souboru {1}, který je sice importován, ale nepřistupujete k němu přes název modulu. Musíte k němu přistupovat takto:
+
+{1}`.`{0}
+@error_call_before_def = {0} není definováno. Zdá se, že je definováno někde v tomto souboru, ale definice ještě nebyla provedena. Funkce lze volat až po `def`.
+@error_not_a_function = Pokusili jste se zavolat něco, co není funkcí. Častou chybou je proměnná se stejným názvem jako funkce.
+@error_invalid_const = {0} neexistuje.
+@error_invalid_const2 = Toto neexistuje.
+@error_max_stack_size_reached = Byl dosažen maximální počet volání zásobníku. Pravděpodobně kvůli příliš mnoha rekurzivním voláním funkcí.
+@error_max_comparison_depth = Byl dosažen maximální rozsah porovnání. Může se to stát např. při porovnávání seznamů, které obsahují samy sebe.
+@error_assign_type_mismatch = Levá strana přiřazení neodpovídala pravé straně.
+@error_too_many_values_to_unpack = Pravá strana neobsahovala dost hodnot k rozbalení.
+@error_not_enough_values = Pravá strana obsahovala příliš mnoho hodnot pro rozbalení do levé strany.
+@error_empty_print = `print()` vyžaduje alespoň jeden argument.
+@error_in_string = Nelze zkontrolovat, zda je {0} v řetězci.
+@error_collection_changed_size_during_iteration = Velikost této kolekce nelze měnit během for smyčky, která ji iteruje. Změna velikosti by totiž neplatnou iterátor.
+@error_wrong_use_of_max = Nelze spočítat `max` z {0}.
+@error_wrong_use_of_min = Nelze spočítat `min` z {0}.
+@error_function_as_condition = Pokoušíte se zkontrolovat, zda funkce {0} je `True`. Jedná se o objekt funkce, nikoli návratovou hodnotu funkce. Měli jste volat funkci pomocí `()`?
+
+V Pythonu jsou objekty funkcí truthy, takže by Python tuto chybu normálně nedal. Toto je ochranná chybová zpráva, lze ji vypnout v nastavení.
+@error_function_in_operator = Pokoušíte se použít {1} na funkci {0}. Jedná se o objekt funkce, nikoli návratovou hodnotu. Měli jste volat funkci pomocí `()`?
+
+Toto je ochranná chybová zpráva, lze ji vypnout v nastavení.
+@error_zero_step_size = Velikost kroku nemůže být 0.
+@error_sequence_too_large = Sekvence byla příliš velká na zkopírování.
+@error_invalid_sim_unlocks = Počáteční odemčení bylo neplatné. Musí to být sekvence odemčení nebo n-tice ve tvaru `(Unlock.Carrots, 3)`.
+@error_invalid_sim_items = Počáteční položky jsou neplatné. Musí to být slovník mapující položky na čísla, např. `{Items.Hay : 100}`.
+@error_invalid_sim_globals = Počáteční globální proměnné jsou neplatné. Musí to být slovník mapující názvy proměnných na hodnoty, např. `{"x" : 42}`.
+@error_division_by_zero = Jejda! Dělení `0`. Naštěstí jste to přežili.
+@error_negative_use_item = Počet použití položky musí být alespoň `1`. Bylo to {0}.
+@error_use_before_assign = Pokus o čtení proměnné {0} před přiřazením hodnoty.
+Pokud chcete upravit globální proměnnou, musíte použít klíčové slovo `global` pro zápis do globálního prostoru:
+
+`global x
+x += 1`
+@error_attribute_on_non_module = Nemůžete přiřadit atribut k {0}.
+@error_file_not_found = Soubor {0} neexistuje.
+@error_max_drones_reached = Byl překročen limit dronů.
+@error_dino_hat_already_used = Existuje pouze jeden dinosauří klobouk a je již používán. Nelze jej použít na druhém dronu.
+@error_invalid_drone_id = Neexistuje dron s ID {0}.
+@error_invalid_handle = {0} již neexistuje.
+@error_spawn_drone_builtin = `spawn_drone()` nelze volat přímo s vestavěnými funkcemi. Musíte nejprve definovat vlastní funkci.
