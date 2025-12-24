@@ -1,24 +1,24 @@
-# External Editor
-The in-game text editor is usually sufficient to play this game, but of course it cannot compete with more sophisticated text editors like Visual Studio Code.
+# Externí editor
+Vestavěný editor textu ve hře většinou stačí pro hraní, ale samozřejmě se nemůže rovnat pokročilejším editorům jako Visual Studio Code.
 
-The game saves all code files as .py files, so you can edit them with Python editors. 
-Note that this is for convenience only. The in-game language isn't actually Python, but it's close enough that Python IntelliSense works decently on it.
-You can find the files in the [save folder](persistent_data_path/Saves).
+Hra ukládá všechny soubory s kódem jako `.py`, takže je můžete upravovat v Python editorech.
+Upozornění: jde jen o pohodlí — vestavěný jazyk hry není přesně Python, ale je natolik podobný, že v něm funguje IntelliSense Pythonu docela dobře.
+Soubory najdete ve [složce se savy](persistent_data_path/Saves).
 
-Each save also contains a `__builtins__.py` file, which contains built-in Python definitions that match the in-game builtins to enable IntelliSense. 
-VS Code is able to detect `__builtins__.py` automatically, but the some editors may only work if you do `from __builtins__ import *`.
+Každé save obsahuje také soubor `__builtins__.py`, který obsahuje vestavěné definice odpovídající herním vestavěným funkcím, aby fungovalo IntelliSense.
+VS Code `__builtins__.py` obvykle detekuje automaticky, některé editory však mohou vyžadovat `from __builtins__ import *`.
 
-To see external changes in-game without having to reload the save, you must enable the "File Watcher" option. If you create or delete files externally, you will still need to reload the save to see them.
+Abyste viděli změny provedené externě přímo ve hře bez načítání save, zapněte volbu „File Watcher“. Pokud externě vytvoříte nebo smažete soubory, budete i tak muset reloadovat save, aby se projevily v UI.
 
-## Using VS Code
-Visual Studio Code is the recommended code editor to use with The Farmer Was Replaced.
+## Použití VS Code
+Visual Studio Code je doporučený editor k používání s The Farmer Was Replaced.
 
-You can install it [here](https://code.visualstudio.com/download).
+Můžete si ho stáhnout [zde](https://code.visualstudio.com/download).
 
-After downloading it, install the Python extension in VS Code.
+Po instalaci nainstalujte ve VS Code rozšíření Python.
 
-Once you have that, open the [folder](persistent_data_path/Saves) that holds your `.py` files in VS Code. Make sure you open the whole folder, not just the individual files, otherwise the `__builtins__.py` file won't work.
+Poté otevřete ve VS Code složku, která obsahuje vaše `.py` soubory (viz [persistent_data_path/Saves]). Ujistěte se, že otevřete celou složku, ne jen jednotlivé soubory; jinak `__builtins__.py` nebude fungovat správně.
 
-In the game, make sure you have the "File Watcher" option turned on. Now, every time you save in VS Code, the changes will automatically show up in the game.
+Ve hře mějte zapnutou volbu „File Watcher“. Teď se při každém uložení ve VS Code změny automaticky projeví ve hře.
 
-That's it! Now you can write your code in a professional code editor!
+To je vše! Nyní můžete psát kód v profesionálním editoru.

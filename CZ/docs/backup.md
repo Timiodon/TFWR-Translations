@@ -1,9 +1,9 @@
-# Loading Backups
-Unfortunately, sometimes a save file gets corrupted or you lose some code files. If this happens to you, you can try loading a backup. If it happens regularly, try turning off the Steam Cloud.
+# Načítání záloh
+Bohužel se občas stane, že je soubor se save poškozený nebo přijdete o některé soubory s kódem. Když se to stane, můžete zkusit načíst zálohu. Pokud se to děje opakovaně, zkuste vypnout Steam Cloud.
 
-A backup is made every time the game is saved, and a small number of backups are kept in case you need to restore something.
-These backups can be found in the [backup directory](persistent_data_path/Backup). They are copies of the saves in the [save directory](persistent_data_path/Saves).
-The easiest way to load a backup is to copy the folder of the specific backup you want to load to the save directory.
+Záloha se vytvoří při každém uložení hry a uchovává se několik posledních záloh pro případ, že budete něco potřebovat obnovit.
+Zálohy najdete ve [složce záloh](persistent_data_path/Backup). Jsou to kopie uložených her ze [složky se savy](persistent_data_path/Saves).
+Nejjednodušší způsob, jak načíst zálohu, je zkopírovat složku konkrétní zálohy, kterou chcete obnovit, do složky se savy.
 
-A save is a folder with a `save.json` file and a bunch of `.py` files.
-If you only lost a few code files, or the code files are still there but the `save.json` file is corrupted, you can also replace only the corrupted parts with the corresponding files from the backup.
+Save je složka obsahující soubor `save.json` a řadu `.py` souborů.
+Pokud jste přišli jen o pár souborů s kódem, nebo jsou soubory s kódem stále přítomné, ale `save.json` je poškozený, můžete ze zálohy zkopírovat pouze chybějící nebo poškozené soubory.

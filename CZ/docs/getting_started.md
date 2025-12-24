@@ -1,9 +1,20 @@
-# Getting Started
-This window contains information about everything in the game.
+# Začínáme
+Toto okno obsahuje informace o všem ve hře.
 
-You can move windows around by dragging and dropping the gray part of the window.
-You can move around by dragging anywhere outside the windows.
+Okna můžete přesouvat tažením šedé části okna.
+Pohybovat se po hře můžete tažením kdekoli mimo okna.
 
-To get started with programming, go to the [First Program](docs/first_program.md) page by clicking it.
+Pro začátek programování přejděte na stránku [První program](docs/first_program.md) kliknutím na odkaz.
 
-Be sure to check out the buttons in the top right corner of the screen. Hover over them to see a tooltip explaining what they do. One of them opens the tech tree!
+Nezapomeňte se podívat na tlačítka v pravém horním rohu obrazovky. Najetím myší na ně zobrazíte tooltip s vysvětlením. Jedno z nich otevírá technologický strom (tech tree)!
+```
+```markdown
+# Začínáme
+Toto okno obsahuje informace o všem ve hře.
+
+Okna můžete přesouvat tažením šedé části okna.
+Pohybovat se po hře můžete tažením kdekoli mimo okna.
+
+Pro začátek programování přejděte na stránku [První program](docs/first_program.md) kliknutím na odkaz.
+
+Nezapomeňte se podívat na tlačítka v pravém horním rohu obrazovky. Najetím myší na ně zobrazíte tooltip s vysvětlením. Jedno z nich otevírá technologický strom (tech tree)!

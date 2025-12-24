@@ -1,5 +1,5 @@
-# Stats
+# Statistiky
 
-Over the last 60s you farmed: {{itemblock stats_sum}}
+Během posledních 60 s jste vypěstovali: {{itemblock stats_sum}}
 
-Your personal best per resource is: {{itemblock stats_best}}
+Váš osobní rekord pro jednotlivé zdroje je: {{itemblock stats_best}}
