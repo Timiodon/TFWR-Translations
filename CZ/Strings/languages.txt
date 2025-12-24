@@ -1,4 +1,5 @@
 @language = Jazyk
+@CZ = Čeština
 @EN = Angličtina
 @FR = Francouzština
 @DE = Němčina
