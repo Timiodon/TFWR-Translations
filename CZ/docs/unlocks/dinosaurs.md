@@ -1,46 +1,46 @@
-# Dinosaurs
-Dinosaurs are ancient, majestic creatures that can be farmed for ancient bones.
+# Dinosauři
+Dinosauři jsou prastará, majestátní stvoření, která lze chovat pro starověké kosti.
 
-Unfortunately dinosaurs have gone extinct a long time ago, so the best we can do now is dressing up as one.
-For this purpose you have received the new dinosaur hat.
+Bohužel dinosauři již dávno vyhynuli, takže to nejlepší, co můžeme udělat, je převléknout se za jednoho z nich.
+Za tímto účelem jste obdrželi nový dinosauří klobouk.
 
-The hat can be equipped with
+Klobouk lze nasadit pomocí
 `change_hat(Hats.Dinosaur_Hat)`
 
-Unfortunately it doesn't quite look like on the advertisement...
+Bohužel nevypadá úplně jako v reklamě...
 
-If you equip the dinosaur hat and have enough cactus, an [apple](objects/apple) will automatically be purchased and placed under the drone.
-When the drone is over an apple and moves again, it will eat the apple and grow its tail by one. If you can afford it, a new apple will be purchased and placed in a random location.
-The apple cannot spawn if something else is planted where it wants to be.
+Pokud si nasadíte dinosauří klobouk a máte dostatek kaktusů, automaticky se zakoupí [jablko](objects/apple) a umístí se pod drona.
+Když je dron nad jablkem a znovu se pohne, sní jablko a jeho ocas se zvětší o jedna. Pokud si to můžete dovolit, zakoupí se nové jablko a umístí se na náhodné místo.
+Jablko se nemůže objevit, pokud je na místě, kde chce být, zasazeno něco jiného.
 
-The tail of the dinosaur will be dragged behind the drone filling the previous tiles the drone moved over. If a drone tries to move on top of the tail `move()` will fail and return `False`. 
-The last segment of the tail will move out of the way during the move, so you can move onto it. However, if the snake fills out the whole farm, you will not be able to move anymore. So you can check if the snake is fully grown by checking if you can't move anymore.
-While wearing the dinosaur hat, the drone can't move over the farm border to get to the other side.
+Ocas dinosaura se potáhne za dronem a zaplní předchozí políčka, přes která se dron pohyboval. Pokud se dron pokusí pohnout na ocas, `move()` selže a vrátí `False`.
+Poslední segment ocasu se během pohybu uhne z cesty, takže se na něj můžete přesunout. Pokud však had zaplní celou farmu, nebudete se moci dále pohybovat. Můžete tedy zkontrolovat, zda je had plně vzrostlý, kontrolou, zda se již nemůžete pohnout.
+Při nošení dinosauřího klobouku se dron nemůže pohybovat přes hranici farmy na druhou stranu.
 
-Using `measure()` on an apple will return the position of the next apple as a tuple.
+Použití `measure()` na jablko vrátí pozici dalšího jablka jako n-tici (tuple).
 
 `next_x, next_y = measure()`
 
-When the hat is unequipped again by equipping a different hat, the tail will be harvested.
-You will receive bones equal to the tail length squared. So for a tail of length `n` you will receive `n**2` `Items.Bone`. 
-For Example:
-length 1 => 1 bone
-length 2 => 4 bones
-length 3 => 9 bones
-length 4 => 16 bones
-length 16 => 256 bones
-length 100 => 10000 bones
+Když se klobouk znovu sundá nasazením jiného klobouku, ocas se sklidí.
+Získáte kosti rovné délce ocasu na druhou. Takže za ocas o délce `n` získáte `n**2` `Items.Bone`.
+Například:
+délka 1 => 1 kost
+délka 2 => 4 kosti
+délka 3 => 9 kostí
+délka 4 => 16 kostí
+délka 16 => 256 kostí
+délka 100 => 10000 kostí
 
-The Dinosaur Hat is very heavy, so if you equip it, it will make `move()` take 400 ticks instead of 200. However, each time you pick up an apple, the number of ticks used by `move()` is reduced by 3% (rounded down), because a longer tail can help you move.
+Dinosauří klobouk je velmi těžký, takže pokud si ho nasadíte, `move()` bude trvat 400 tiků místo 200. Nicméně pokaždé, když seberete jablko, počet tiků použitých funkcí `move()` se sníží o 3 % (zaokrouhleno dolů), protože delší ocas vám může pomoci v pohybu.
 
-The following loop prints the number of ticks used by `move()` after any number of apples:
+Následující smyčka vypíše počet tiků použitých funkcí `move()` po libovolném počtu jablek:
 
 `ticks = 400
 for i in range(100):
     print("ticks after ", i, " apples: ", ticks)
     ticks -= ticks * 0.03 // 1`
 
-You only have one dinosaur hat, so only one drone can wear it.
+Máte pouze jeden dinosauří klobouk, takže ho může nosit pouze jeden dron.
 
-<spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time. It's not very efficient, but it works.
-Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_world_size()` to change the size of the farm to something more convenient.</spoiler>
+<spoiler=zobrazit nápovědu 1>Pokud se budete pohybovat po stejné cestě, která pokrývá celé pole, můžete snadno získat hada, který pokaždé pokryje celé pole. Není to příliš efektivní, ale funguje to.
+Úplné projití velmi velké farmy může trvat dlouho a možná ve skutečnosti nepotřebujete tolik kostí. Nebojte se použít `set_world_size()` ke změně velikosti farmy na něco pohodlnějšího.</spoiler>

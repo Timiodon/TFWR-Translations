@@ -1,13 +1,13 @@
-# Polyculture
-You may have already noticed that sometimes plants yield more when planted together.
-Grass, bushes, trees, and carrots yield more when they have the right plant companion. Companion preference is different for each individual plant and cannot be predicted. Fortunately, the companion preference of the plant under the drone can be measured using `get_companion()`. It returns a tuple where the first element is the type of plant it wants as its companion and the second element is the position where it wants its companion.
+# Polykultura
+Možná jste si již všimli, že někdy rostliny vynášejí více, když jsou vysazeny společně.
+Tráva, keře, stromy a mrkve vynášejí více, když mají správného rostlinného společníka. Preference společníka je pro každou jednotlivou rostlinu jiná a nelze ji předvídat. Naštěstí lze preferenci společníka rostliny pod dronem změřit pomocí `get_companion()`. Vrací n-tici, kde prvním prvkem je typ rostliny, kterou chce jako společníka, a druhým prvkem je pozice, kde chce svého společníka.
 
 `plant_type, (x, y) = get_companion()`
 
-For example if you plant a bush and then call `get_companion()` it will return something like `(Entities.Carrot, (3, 5))`. This means that this bush would like to have carrots at the position `(3,5)`. So if you plant carrots at `(3,5)` and then harvest the bush, it will yield more wood. The growth stage of the carrot doesn't matter.
+Například pokud zasadíte keř a poté zavoláte `get_companion()`, vrátí něco jako `(Entities.Carrot, (3, 5))`. To znamená, že tento keř by chtěl mít mrkve na pozici `(3,5)`. Takže pokud zasadíte mrkve na `(3,5)` a poté sklidíte keř, vynese více dřeva. Na fázi růstu mrkve nezáleží.
 
-A plant's companion preference can be either `Entities.Grass`, `Entities.Bush`, `Entities.Tree` or `Entities.Carrot`. Each plant chooses this randomly, but it will always choose a different plant than itself. The position can also be any position within 3 moves of the plant except the position of the plant itself.
+Preference společníka rostliny může být buď `Entities.Grass`, `Entities.Bush`, `Entities.Tree` nebo `Entities.Carrot`. Každá rostlina si to vybírá náhodně, ale vždy si vybere jinou rostlinu než sebe. Pozice může být také jakákoli pozice do 3 tahů od rostliny kromě pozice samotné rostliny.
 
-If there is no plant under the drone that has a companion preference `get_companion()` will return `None`.
+Pokud pod dronem není žádná rostlina, která má preferenci společníka, `get_companion()` vrátí `None`.
 
-Before polyculture is unlocked, the yield multiplier is `5`. It doubles everytime you upgrade it.
+Před odemčením polykultury je násobitel výnosu `5`. Zdvojnásobuje se pokaždé, když ji vylepšíte.

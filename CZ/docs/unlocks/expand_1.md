@@ -1,12 +1,12 @@
-# Expand 1
-<unlock=for>Also see [Expand_2](docs/unlocks/expand_2.md)
+# Rozšíření 1
+<unlock=for>Viz také [Rozšíření 2](docs/unlocks/expand_2.md)
 
-</unlock>Your farm has grown! This space is not much use if you can't move the drone, so there is a new function `move()` that moves the drone. `move()` requires that you specify the direction in which you want the drone to move. There are four new constants for this: `North, East, South, West`
+</unlock>Vaše farma se rozrostla! Tento prostor není moc užitečný, pokud nemůžete pohybovat dronem, takže je tu nová funkce `move()`, která pohybuje dronem. `move()` vyžaduje, abyste specifikovali směr, kterým chcete, aby se dron pohyboval. Pro tento účel existují čtyři nové konstanty: `North, East, South, West` (Sever, Východ, Jih, Západ).
 
-For example, `move(North)` will move the drone one square to the north.
+Například `move(North)` posune drona o jedno políčko na sever.
 
-If you move over the edge of the farm the drone will be moved to the other side of the farm.
-The following example code will keep moving the drone north and wrap back to the start when it reaches the edge of the farm:
+Pokud se přesunete přes okraj farmy, dron se přesune na druhou stranu farmy.
+Následující ukázkový kód bude neustále posouvat drona na sever a vrátí se na začátek, když dosáhne okraje farmy:
 
 `while True:
 	move(North)`

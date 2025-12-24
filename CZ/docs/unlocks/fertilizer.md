@@ -1,15 +1,15 @@
-# Fertilizer
-At some point, waiting for the plants to grow is just not efficient enough anymore. 
-Similar to water, you will automatically receive 1 fertilizer every 10 seconds, doubling with each upgrade.
+# Hnojivo
+V určitém okamžiku čekání na růst rostlin prostě už není dostatečně efektivní.
+Podobně jako u vody automaticky obdržíte 1 hnojivo každých 10 sekund, což se s každým vylepšením zdvojnásobuje.
 
-Fertilizer can make plants grow instantly. `use_item(Items.Fertilizer)` reduces the remaining growing time of the plant under the drone by 2 seconds.
+Hnojivo může způsobit, že rostliny vyrostou okamžitě. `use_item(Items.Fertilizer)` zkrátí zbývající dobu růstu rostliny pod dronem o 2 sekundy.
 
-This has some side effects.
-Plants grown with fertilizer will be infected.
+To má určité vedlejší účinky.
+Rostliny vypěstované s hnojivem budou infikovány.
 
-When a plant is infected, half of its yield is turned into `Items.Weird_Substance` when it is harvested.
-Weird Substance can also be used on plants, which has the effect of toggling the infected status of the plant and all adjacent plants.
+Když je rostlina infikována, polovina jejího výnosu se při sklizni změní na `Items.Weird_Substance` (podivná látka).
+Podivnou látku lze také použít na rostliny, což má za následek přepnutí stavu infikování rostliny a všech sousedních rostlin.
 
-So if you call `use_item(Items.Weird_Substance)` on an infected plant it will cure it, but if you use it on a healthy plant it will infect it.
+Takže pokud zavoláte `use_item(Items.Weird_Substance)` na infikovanou rostlinu, vyléčí ji to, ale pokud ji použijete na zdravou rostlinu, infikuje ji to.
 
-If you use it on an infected plant that has healthy neighbors, it will cure the plant but infect the neighbors and vice versa.
+Pokud ji použijete na infikovanou rostlinu, která má zdravé sousedy, rostlinu vyléčí, ale infikuje sousedy a naopak.

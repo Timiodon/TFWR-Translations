@@ -1,21 +1,21 @@
-# Sunflowers
-[Sunflowers](objects/sunflower) collect the power of the sun. You can harvest that power. 
+# Slunečnice
+[Slunečnice](objects/sunflower) sbírají sílu slunce. Tuto sílu můžete sklízet.
 
-Planting them works exactly like planting carrots or pumpkins. 
+Jejich sázení funguje přesně jako sázení mrkví nebo dýní.
 
-Harvesting a grown sunflower yields power.
-If there are at least 10 sunflowers on the farm and you harvest the one with the largest number of petals you get `8` times more power!
-If you harvest a sunflower while there is another sunflower with more petals, the next sunflower you harvest will also only give you the normal amount of power (not the 8x bonus).
+Sklizeň vzrostlé slunečnice dává energii.
+Pokud je na farmě alespoň 10 slunečnic a sklidíte tu s největším počtem okvětních lístků, získáte `8`krát více energie!
+Pokud sklidíte slunečnici, zatímco existuje jiná slunečnice s více okvětními lístky, další slunečnice, kterou sklidíte, vám také dá pouze normální množství energie (ne 8x bonus).
 
-`measure()` returns the number of petals of the sunflower under the drone.
-Sunflowers have at least `7` and at most `15` petals.
-They can already be measured before they are fully grown.
+`measure()` vrací počet okvětních lístků slunečnice pod dronem.
+Slunečnice mají alespoň `7` a nejvíce `15` okvětních lístků.
+Lze je změřit již předtím, než jsou plně vzrostlé.
 
-Several sunflowers can have the same number of petals so there can also be several sunflowers with the largest number of petals. In this case, it doesn't matter which one of them you harvest.
+Několik slunečnic může mít stejný počet okvětních lístků, takže může existovat i několik slunečnic s největším počtem okvětních lístků. V tomto případě nezáleží na tom, kterou z nich sklidíte.
 
-As long as you have power the drone will use it to run twice as fast. 
-It consumes 1 power every 30 actions (like moves, harvests, plants...)
-Executing other code statements can also use power but a lot less than drone actions.
+Dokud máte energii, dron ji bude využívat k tomu, aby běžel dvakrát rychleji.
+Spotřebuje 1 energii každých 30 akcí (jako pohyby, sklizně, sázení...).
+Provádění jiných příkazů kódu může také spotřebovávat energii, ale mnohem méně než akce dronu.
 
-In general, everything that is sped up by speed upgrades is also sped up by power.
-Anything sped up by power also uses power proportional to the time it takes to execute it, ignoring speed upgrades.
+Obecně platí, že vše, co je zrychleno vylepšeními rychlosti, je také zrychleno energií.
+Cokoli zrychlené energií také spotřebovává energii úměrně času, který trvá její provedení, bez ohledu na vylepšení rychlosti.

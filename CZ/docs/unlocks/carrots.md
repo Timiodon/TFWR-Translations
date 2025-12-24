@@ -1,6 +1,6 @@
-# Carrots
-Before you can plant carrots with `plant(Entities.Carrot)`, you have to till the soil. This will change the ground to `Grounds.Soil`. To till the soil, simply call `till()`. Calling `till()` again will change it back to `Grounds.Grassland`.
+# Mrkve
+Než budete moci zasadit mrkve pomocí `plant(Entities.Carrot)`, musíte zorat půdu. Tím se změní podklad na `Grounds.Soil`. Pro zorání půdy jednoduše zavolejte `till()`. Opětovné zavolání `till()` ji změní zpět na `Grounds.Grassland`.
 
-Planting carrots costs wood and hay. These items will be automatically removed when calling `plant(Entities.Carrot)`.
+Sázení mrkví stojí dřevo a seno. Tyto předměty budou automaticky odebrány při volání `plant(Entities.Carrot)`.
 
-You can see the cost of any plant on its [own page](objects/carrot).
+Cenu jakékoli rostliny můžete vidět na její [vlastní stránce](objects/carrot).

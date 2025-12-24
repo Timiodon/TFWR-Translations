@@ -1,24 +1,24 @@
-# Speed Upgrade
-The execution speed has been doubled. The problem is that the drone now harvests faster than the grass can grow resulting in no harvest at all. To deal with this [if](docs/scripting/if.md) branches and the [can_harvest](functions/can_harvest) function are now unlocked.
+# Vylepšení rychlosti
+Rychlost provádění byla zdvojnásobena. Problém je v tom, že dron nyní sklízí rychleji, než tráva stihne dorůst, což má za následek žádnou sklizeň. K vyřešení tohoto problému jsou nyní odemčeny větve [if](docs/scripting/if.md) a funkce [can_harvest](functions/can_harvest).
 
-## Checking Before Harvesting
-So far we only had `True` and `False` as conditions, which is of course not very useful with `if`. 
+## Kontrola před sklizní
+Doposud jsme měli jako podmínky pouze `True` a `False`, což samozřejmě není s `if` příliš užitečné.
 
-The new function can_harvest() provides a better condition. `can_harvest()` returns `True` if the plant under the drone can be harvested and `False` otherwise.
+Nová funkce can_harvest() poskytuje lepší podmínku. `can_harvest()` vrací `True`, pokud lze rostlinu pod dronem sklidit, a `False` v opačném případě.
 
 `if can_harvest():
-	#do something`
+	#udělej něco`
 
-The reason you can use this function as a condition like this is because it returns a boolean value.
+Důvod, proč můžete tuto funkci použít jako podmínku takto, je ten, že vrací booleovskou hodnotu.
 
-A return value essentially means that after the functionality is executed, the function call expression evaluates to the returned value.
+Návratová hodnota v podstatě znamená, že po provedení funkčnosti se výraz volání funkce vyhodnotí na vrácenou hodnotu.
 
-What happens when the above code runs:
-	-the if runs
-	-`can_harvest()` is called
-	-`can_harvest()` does its thing
-	-`can_harvest()` returns `True` or `False`
-	-the statement is now `if True:` or `if False:`
-	-the code block is only executed if it can harvest
+Co se stane, když běží výše uvedený kód:
+	- spustí se if
+	- zavolá se `can_harvest()`
+	- `can_harvest()` udělá svou věc
+	- `can_harvest()` vrátí `True` nebo `False`
+	- příkaz je nyní `if True:` nebo `if False:`
+	- blok kódu se provede pouze tehdy, pokud lze sklízet
 
-Now we can use `if` to prevent the drone from harvesting too early.
+Nyní můžeme použít `if`, abychom zabránili dronu sklízet příliš brzy.

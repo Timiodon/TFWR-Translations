@@ -1,8 +1,8 @@
-# Hats
+# Klobouky
 
-You have unlocked a few new hat colors for your drone.
+Odemkli jste několik nových barev klobouků pro svého drona.
 
-Equip them like this:
+Nasadíte je takto:
 `change_hat(Hats.Gray_Hat)
 do_a_flip()
 change_hat(Hats.Purple_Hat)

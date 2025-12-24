@@ -1,19 +1,19 @@
-# Costs
-Any cost can be represented as a dictionary that maps items to numbers.
+# Náklady
+Jakýkoli náklad lze reprezentovat jako slovník, který mapuje předměty na čísla.
 
-The `get_cost()` function returns such a dictionary. It returns the cost of a plant or an unlock.
+Funkce `get_cost()` vrací takový slovník. Vrací cenu rostliny nebo odemčení.
 
 `get_cost(Entities.Pumpkin)`
-returns `{Items.Carrot:1}`
+vrátí `{Items.Carrot:1}`
 
-For unlocks, an optional second argument can be passed for the unlock level you want to get the cost for. By default, it's the current unlock level.
+Pro odemčení lze předat volitelný druhý argument pro úroveň odemčení, pro kterou chcete získat cenu. Ve výchozím nastavení je to aktuální úroveň odemčení.
 
 `get_cost(Unlocks.Loops, 0)`
-returns `{Items.Hay:5}`
+vrátí `{Items.Hay:5}`
 
-For unlocks that are already at the max level, `get_cost()` will return `None`.
+Pro odemčení, která jsou již na maximální úrovni, vrátí `get_cost()` hodnotu `None`.
 
-It can be used like this:
+Lze to použít takto:
 `cost = get_cost(something)
 for item in cost:
 	amount_of_this_item_needed = cost[item]`

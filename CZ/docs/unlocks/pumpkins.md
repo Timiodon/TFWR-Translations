@@ -1,19 +1,19 @@
-# Pumpkins
-[Pumpkins](objects/pumpkin) grow like carrots on tilled soil. Planting them costs carrots.
+# Dýně
+[Dýně](objects/pumpkin) rostou jako mrkve na zorané půdě. Jejich sázení stojí mrkve.
 
-When all the pumpkins in a square are fully grown, they will grow together to form a giant pumpkin. Unfortunately, pumpkins have a 20% chance of dying once they are fully grown, so you will need to replant the dead ones if you want them to merge. 
+Když jsou všechny dýně ve čtverci plně vzrostlé, srostou dohromady a vytvoří obří dýni. Bohužel dýně mají 20% šanci, že uhynou, jakmile jsou plně vzrostlé, takže budete muset ty mrtvé znovu zasadit, pokud chcete, aby se spojily.
 
-When a pumpkin dies, it leaves behind a dead pumpkin that won't drop anything when harvested. Planting a new plant in its place automatically removes the dead pumpkin, so there is no need to harvest it. `can_harvest()` always returns `False` on dead pumpkins.
+Když dýně uhyne, zanechá po sobě mrtvou dýni, ze které při sklizni nic nevypadne. Zasazení nové rostliny na její místo automaticky odstraní mrtvou dýni, takže není třeba ji sklízet. `can_harvest()` na mrtvých dýních vždy vrací `False`.
 
-The yield of a giant pumpkin depends on the size of the pumpkin.
+Výnos obří dýně závisí na velikosti dýně.
 
-A 1x1 pumpkin yields `1*1*1 = 1` pumpkins.
-A 2x2 pumpkin yields `2*2*2 = 8` pumpkins instead of `4`.
-A 3x3 pumpkin yields `3*3*3 = 27` pumpkins instead of `9`.
-A 4x4 pumpkin yields `4*4*4 = 64` pumpkins instead of `16`.
-A 5x5 pumpkin yields `5*5*5 = 125` pumpkins instead of `25`.
-A `n`x`n` pumpkin yields `n*n*6` pumpkins for `n >= 6`.
+Dýně 1x1 vynese `1*1*1 = 1` dýni.
+Dýně 2x2 vynese `2*2*2 = 8` dýní místo `4`.
+Dýně 3x3 vynese `3*3*3 = 27` dýní místo `9`.
+Dýně 4x4 vynese `4*4*4 = 64` dýní místo `16`.
+Dýně 5x5 vynese `5*5*5 = 125` dýní místo `25`.
+Dýně `n`x`n` vynese `n*n*6` dýní pro `n >= 6`.
 
-It's a good idea to get at least 6x6 size pumpkins to get the full multiplier. 
+Je dobrý nápad získat dýně o velikosti alespoň 6x6, abyste získali plný násobitel.
 
-This means that even if you plant a pumpkin on every tile in a square, one of the pumpkins may die and prevent the mega pumpkin from growing.
+To znamená, že i když zasadíte dýni na každé políčko ve čtverci, jedna z dýní může uhynout a zabránit růstu mega dýně.

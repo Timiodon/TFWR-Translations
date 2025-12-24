@@ -1,103 +1,103 @@
-# Leaderboard
-If you have made it this far, you have overcome many challenges. But have you solved them efficiently? 
-You can compete with other players on various leaderboards for the most efficient farming methods.
+# Žebříček
+Pokud jste se dostali až sem, překonali jste mnoho výzev. Ale vyřešili jste je efektivně?
+Můžete soutěžit s ostatními hráči v různých žebříčcích o nejefektivnější metody farmaření.
 
-You can start a leaderboard run by calling `leaderboard_run(leaderboard, filename, speedup)`.
-This starts a [simulation](docs/unlocks/simulation.md) similar to `simulate()` except that the starting conditions are fixed. Each leaderboard category has different start and success conditions.
+Běh žebříčku můžete spustit zavoláním `leaderboard_run(leaderboard, filename, speedup)`.
+Tím se spustí [simulace](docs/unlocks/simulation.md) podobná `simulate()`, s tím rozdílem, že počáteční podmínky jsou pevně dané. Každá kategorie žebříčku má jiné počáteční a úspěšné podmínky.
 
-The leaderboard run succeeds if the success condition is `True` when the simulation ends. 
+Běh žebříčku je úspěšný, pokud je podmínka úspěchu `True` (pravda), když simulace skončí.
 
-The simulation will NOT end automatically when the goal is reached. You must make sure that the program terminates.
-If the run is successful, your time will be added to the leaderboard.
+Simulace se NEUKONČÍ automaticky, když je dosaženo cíle. Musíte zajistit, aby se program ukončil.
+Pokud je běh úspěšný, váš čas bude přidán do žebříčku.
 
-To reduce variance, all runs are required to run for at least 2 hours (You can speed it up, so it won't take that long). If a run is completed earlier, it will be repeated until a total time of 2 hours is reached. The average of all runs is then uploaded as your score.
+Pro snížení rozptylu je vyžadováno, aby všechny běhy trvaly alespoň 2 hodiny (můžete to zrychlit, takže to nebude trvat tak dlouho). Pokud je běh dokončen dříve, bude se opakovat, dokud nebude dosaženo celkového času 2 hodin. Průměr všech běhů je poté nahrán jako vaše skóre.
 
-Here's an example setup that will get you on the hay leaderboard.
+Zde je příklad nastavení, které vás dostane do žebříčku sena.
 ![](LeaderboardSetup400)
 
-## Fastest Reset
-The fastest reset is the most prestigious category. Completely automate the game from a single farm plot to unlocking the leaderboards again.
+## Nejrychlejší reset
+Nejrychlejší reset je nejprestižnější kategorie. Zcela zautomatizujte hru od jediného políčka farmy až po opětovné odemčení žebříčků.
 
-You do not have to unlock everything, just try to unlock `Unlocks.Leaderboard` as fast as possible.
+Nemusíte odemykat vše, stačí se pokusit odemknout `Unlocks.Leaderboard` co nejrychleji.
 
-Remember that you can use `num_unlocked(unlock) > 0` to check if something is unlocked and you can use `get_cost()` on unlocks to see what they cost so you can automatically farm the right items.
+Pamatujte, že můžete použít `num_unlocked(unlock) > 0` ke kontrole, zda je něco odemčeno, a můžete použít `get_cost()` na odemčení, abyste viděli, co stojí, takže můžete automaticky farmit správné předměty.
 
-Function Call:
+Volání funkce:
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
 
-Equivalent Simulation:
+Ekvivalentní simulace:
 `unlocks = {}
 items = {}
 globals = {}
-#a negative seed value means a random seed
+#záporná hodnota seed znamená náhodný seed
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Podmínka úspěchu:
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
-## Maze
-Start with everything unlocked and farm `9863168` gold as fast as you can. This is exactly the amount of gold you will earn by reusing one 32x32 maze `300` times.
+## Bludiště
+Začněte se vším odemčeným a nafarměte `9863168` zlata co nejrychleji. To je přesně množství zlata, které získáte opětovným použitím jednoho bludiště 32x32 `300` krát.
 
-Function Call:
+Volání funkce:
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
 
-Equivalent Simulation:
+Ekvivalentní simulace:
 `unlocks = Unlocks
 items = {Items.Weird_Substance : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Podmínka úspěchu:
 `num_items(Items.Gold) >= 9863168`
 
-## Dinosaur
-Start with everything unlocked and farm `33488928` bones as fast as you can. This is exactly the number of bones you will get if you fill a 32x32 area with the dinosaur tail.
+## Dinosaurus
+Začněte se vším odemčeným a nafarměte `33488928` kostí co nejrychleji. To je přesně počet kostí, které získáte, pokud zaplníte oblast 32x32 dinosauřím ocasem.
 
-Function Call:
+Volání funkce:
 `leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
 
-Equivalent Simulation:
+Ekvivalentní simulace:
 `unlocks = Unlocks
 items = {Items.Cactus : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Podmínka úspěchu:
 `num_items(Items.Bone) >= 33488928`
 
-## Other Resource Leaderboards
-Each plant has its own leaderboard for farming that particular plant as quickly as possible. You start with all the unlocks, the resources you need to grow the plant, and lots of power. The goal is to farm a set amount of the resource produced by the plant.
+## Žebříčky ostatních zdrojů
+Každá rostlina má svůj vlastní žebříček pro farmaření této konkrétní rostliny co nejrychleji. Začínáte se všemi odemčeními, zdroji, které potřebujete k pěstování rostliny, a spoustou energie. Cílem je nafarmit stanovené množství zdroje produkovaného rostlinou.
 
-As always, you need to make sure that your program terminates when you reach the goal. A run is not finished until the program ends, even if the goal is reached.
+Jako vždy musíte zajistit, aby se váš program ukončil, když dosáhnete cíle. Běh není dokončen, dokud program neskončí, i když je cíle dosaženo.
 
 ### `Leaderboards.Cactus`
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
-Success Condition: `num_items(Items.Cactus) >= 33554432`
+Podmínka úspěchu: `num_items(Items.Cactus) >= 33554432`
 
 ### `Leaderboards.Sunflowers`
 `leaderboard_run(Leaderboards.Sunflowers, filename, speedup)`
-Success Condition: `num_items(Items.Power) >= 100000`
+Podmínka úspěchu: `num_items(Items.Power) >= 100000`
 
 ### `Leaderboards.Pumpkins`
 `leaderboard_run(Leaderboards.Pumpkins, filename, speedup)`
-Success Condition: `num_items(Items.Pumpkin) >= 200000000`
+Podmínka úspěchu: `num_items(Items.Pumpkin) >= 200000000`
 
 ### `Leaderboards.Wood`
 `leaderboard_run(Leaderboards.Wood, filename, speedup)`
-Success Condition: `num_items(Items.Wood) >= 10000000000`
+Podmínka úspěchu: `num_items(Items.Wood) >= 10000000000`
 
 ### `Leaderboards.Carrots`
 `leaderboard_run(Leaderboards.Carrots, filename, speedup)`
-Success Condition: `num_items(Items.Carrot) >= 2000000000`
+Podmínka úspěchu: `num_items(Items.Carrot) >= 2000000000`
 
 ### `Leaderboards.Hay`
 `leaderboard_run(Leaderboards.Hay, filename, speedup)`
-Success Condition: `num_items(Items.Hay) >= 2000000000`
+Podmínka úspěchu: `num_items(Items.Hay) >= 2000000000`
 
-## Single Drone Leaderboards
+## Žebříčky pro jednoho drona
 There are also Leaderboards for farming with a single drone. You only get one drone and an 8x8 farm and have to farm a certain amount of resources as quickly as possible.
 
 ### `Leaderboards.Maze_Single`

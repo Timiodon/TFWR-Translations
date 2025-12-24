@@ -1,71 +1,71 @@
-# Mazes
-`Items.Weird_Substance`, which is obtained by [fertilizing](docs/unlocks/fertilizer.md) plants, has a strange effect on bushes. If the drone is over a bush and you call `use_item(Items.Weird_Substance, amount)` the bush will grow into a maze of hedges.
-The size of the maze depends on the amount of `Items.Weird_Substance` used (the second argument of the `use_item()` call).
-Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n` maze. Each maze upgrade level doubles the treasure, but it also doubles the amount of `Items.Weird_Substance` needed. 
-So to make a full field maze:
+# Bludiště
+`Items.Weird_Substance` (podivná látka), která se získává [hnojením](docs/unlocks/fertilizer.md) rostlin, má zvláštní účinek na keře. Pokud je dron nad keřem a zavoláte `use_item(Items.Weird_Substance, amount)`, keř vyroste do bludiště živých plotů.
+Velikost bludiště závisí na množství použité `Items.Weird_Substance` (druhý argument volání `use_item()`).
+Bez vylepšení bludiště bude použití `n` `Items.Weird_Substance` mít za následek bludiště `n`x`n`. Každá úroveň vylepšení bludiště zdvojnásobuje poklad, ale také zdvojnásobuje množství potřebné `Items.Weird_Substance`.
+Takže pro vytvoření bludiště přes celé pole:
 
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 
 
-For some reason the drone can't fly over the hedges, even though they don't look that high.
+Z nějakého důvodu dron nemůže létat přes živé ploty, i když nevypadají tak vysoko.
 
-There is a treasure hidden somewhere in the hedge. Use `harvest()` on the treasure to receive gold equal to the area of the maze. (For example, a 5x5 maze will yield 25 gold.)
+Někde v živém plotě je ukrytý poklad. Použijte `harvest()` na poklad, abyste získali zlato rovné ploše bludiště. (Například bludiště 5x5 vynese 25 zlata.)
 
-If you use `harvest()` anywhere else the maze will simply disappear.
+Pokud použijete `harvest()` kdekoli jinde, bludiště jednoduše zmizí.
 
-`get_entity_type()` is equal to `Entities.Treasure` if the drone is over the treasure and `Entities.Hedge` everywhere else in the maze.
+`get_entity_type()` je rovno `Entities.Treasure`, pokud je dron nad pokladem, a `Entities.Hedge` všude jinde v bludišti.
 
-Mazes do not contain any loops unless you reuse the maze (see below how to reuse a maze). So there is no way for the drone to end up in the same position again without going back.
+Bludiště neobsahují žádné smyčky, pokud bludiště znovu nepoužijete (viz níže, jak znovu použít bludiště). Takže neexistuje způsob, jak by se dron ocitl na stejné pozici znovu, aniž by se vrátil zpět.
 
-You can check if there is a wall by trying to move through it. 
-`move()` returns `True` if it succeeded and `False` otherwise.
+Zda je tam zeď, můžete zkontrolovat pokusem o průchod skrz ni.
+`move()` vrací `True`, pokud uspěl, a `False` v opačném případě.
 
-`can_move()` can be used to check if there is a wall without moving.
+`can_move()` lze použít ke kontrole, zda je tam zeď, bez pohybu.
 
-If you have no idea how to get to the treasure, take a look at Hint 1. It shows you how to approach a problem like this.
+Pokud nemáte tušení, jak se dostat k pokladu, podívejte se na Nápovědu 1. Ukazuje, jak přistupovat k problému, jako je tento.
 
-Using `measure()` anywhere in the maze returns the position of the treasure.
+Použití `measure()` kdekoli v bludišti vrátí pozici pokladu.
 `x, y = measure()`
 
-For an extra challenge you can also reuse the maze by using the same amount of `Items.Weird_Substance` on the treasure again. 
-This will collect the treasure and spawn a new treasure at a random position in the maze.
+Pro extra výzvu můžete bludiště také znovu použít použitím stejného množství `Items.Weird_Substance` na poklad znovu.
+Tím se poklad sebere a objeví se nový poklad na náhodné pozici v bludišti.
 
-Each time the treasure is moved, some of the maze's walls may be randomly removed. So reused mazes can contain loops.
+Pokaždé, když se poklad přesune, mohou být některé zdi bludiště náhodně odstraněny. Takže znovu použitá bludiště mohou obsahovat smyčky.
 
-Note that loops in the maze make it much more difficult because it means that you can get to the same location again without moving back.
-Reusing a maze doesn't give you more gold than just harvesting and spawning a new maze.
-This is 100% an extra challenge that you can just skip.
-It's only worth it if the extra information and the shortcuts help you solve the maze faster.
+Všimněte si, že smyčky v bludišti to dělají mnohem obtížnější, protože to znamená, že se můžete dostat na stejné místo znovu, aniž byste se vraceli zpět.
+Opětovné použití bludiště vám nedá více zlata než jen sklizeň a vytvoření nového bludiště.
+Toto je 100% extra výzva, kterou můžete prostě přeskočit.
+Stojí to za to pouze tehdy, pokud vám extra informace a zkratky pomohou vyřešit bludiště rychleji.
 
-The treasure can be relocated up to 300 times. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
+Poklad lze přemístit až 300krát. Poté už použití podivné látky na poklad nezvýší zlato v něm a už se nebude pohybovat.
 
-<spoiler=show hint 1>Here's a general approach to solving the problem:
+<spoiler=zobrazit nápovědu 1>Zde je obecný přístup k řešení problému:
 
-Create a maze and imagine that you are the drone.
+Vytvořte bludiště a představte si, že jste dron.
 
-Think about how you would try to find the treasure if you were in the maze.
+Přemýšlejte o tom, jak byste se pokusili najít poklad, kdybyste byli v bludišti.
 
-Write down your strategy step by step so that someone else could follow it without thinking.
+Zapište si svou strategii krok za krokem, aby ji mohl někdo jiný následovat bez přemýšlení.
 
-Now try translating your steps into code.
+Nyní zkuste přeložit své kroky do kódu.
 </spoiler>
-<spoiler=show hint 2>As long as there are no loops: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.
-This approach requires very little code and you do not need to keep track of where you have already been. Around 10 lines of code is all you need.</spoiler>
-<spoiler=show hint 3>Instead of moving the drone in absolute directions like east or west it can be very useful to move the drone in relative directions like "turn right" or "turn left". To do this you need to keep track of which way the drone is currently moving. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
-The following index trick is helpful for this:
+<spoiler=zobrazit nápovědu 2>Dokud nejsou žádné smyčky: Všechny zdi jsou ve skutečnosti jen jedna velká spojená zeď. Pokud budete sledovat zeď, provede vás celým bludištěm.
+Tento přístup vyžaduje velmi málo kódu a nemusíte sledovat, kde jste již byli. Asi 10 řádků kódu je vše, co potřebujete.</spoiler>
+<spoiler=zobrazit nápovědu 3>Místo pohybu dronem v absolutních směrech, jako je východ nebo západ, může být velmi užitečné pohybovat dronem v relativních směrech, jako je "zahni doprava" nebo "zahni doleva". K tomu musíte sledovat, kterým směrem se dron aktuálně pohybuje. Dron se ve skutečnosti nikdy neotáčí, ale stále můžete v kódu udržovat "virtuální" rotaci.
+Následující trik s indexem je pro to užitečný:
 
 `directions = [North, East, South, West]
 index = 0`
 
-Use `% 4` to allow it to rotate "around the circle", so that after `West` it wraps back to `North`.
-`# turn right
+Použijte `% 4`, abyste umožnili rotaci "kolem kruhu", takže po `West` (západ) se vrátí zpět na `North` (sever).
+`# zahni doprava
 index = (index + 1) % 4`
 
-`# turn left
+`# zahni doleva
 index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
-<spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-Solving a `1`x`1` maze is trivial.</spoiler>
+<spoiler=zobrazit nápovědu 4>Pokud to nemůžete vyřešit, můžete si vždy usnadnit život a udělat to méně efektivně.
+Vyřešení bludiště `1`x`1` je triviální.</spoiler>

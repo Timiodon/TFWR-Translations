@@ -1,41 +1,41 @@
-# Cactus
-Like other plants, [cacti](objects/cactus) can be grown on soil and harvested as usual.
+# Kaktus
+Stejně jako ostatní rostliny, [kaktusy](objects/cactus) lze pěstovat na půdě a sklízet jako obvykle.
 
-However, they come in various sizes and have a strange sense of order.
+Přicházejí však v různých velikostech a mají zvláštní smysl pro pořádek.
 
-If you harvest a fully-grown cactus and all neighboring cacti are in sorted order, it will also harvest all neighboring cacti recursively.
+Pokud sklidíte plně vzrostlý kaktus a všechny sousední kaktusy jsou seřazeny, sklidí se také všechny sousední kaktusy rekurzivně.
 
-A cactus is considered to be in sorted order if all neighboring cacti to the `North` and `East` are fully grown and larger or equal in size and all neighboring cacti to the `South` and `West` are fully grown and smaller or equal in size.
+Kaktus je považován za seřazený, pokud jsou všechny sousední kaktusy na `North` (sever) a `East` (východ) plně vzrostlé a větší nebo stejné velikosti a všechny sousední kaktusy na `South` (jih) a `West` (západ) jsou plně vzrostlé a menší nebo stejné velikosti.
 
-The harvest will only spread if all adjacent cacti are fully grown and in sorted order.
-This means that if a square of grown cacti is sorted by size and you harvest one cactus, it will harvest the entire square.
+Sklizeň se rozšíří pouze tehdy, pokud jsou všechny sousední kaktusy plně vzrostlé a seřazené.
+To znamená, že pokud je čtverec vzrostlých kaktusů seřazen podle velikosti a sklidíte jeden kaktus, sklidí se celý čtverec.
 
-A fully grown cactus will appear brown if it is not sorted. Once sorted, it will turn green again.
+Plně vzrostlý kaktus bude vypadat hnědě, pokud není seřazen. Jakmile je seřazen, znovu zezelená.
 
-You will receive cactus equal to the number of harvested cacti squared. So if you harvest `n` cacti simultaneously you will receive `n**2` `Items.Cactus`.
+Získáte kaktusy rovné počtu sklizených kaktusů na druhou. Takže pokud sklidíte `n` kaktusů současně, získáte `n**2` `Items.Cactus`.
 
-The size of a cactus can be measured with `measure()`.
-It is always one of these numbers: `0,1,2,3,4,5,6,7,8,9`.
+Velikost kaktusu lze změřit pomocí `measure()`.
+Je to vždy jedno z těchto čísel: `0,1,2,3,4,5,6,7,8,9`.
 
-You can also pass a direction into `measure(direction)` to measure the neighboring tile in that direction of the drone.
+Můžete také předat směr do `measure(direction)` pro změření sousedního políčka v daném směru od drona.
 
-You can swap a cactus with its neighbor in any direction using the `swap()` command.
-`swap(direction)` swaps the object under the drone with the object one tile in the `direction` of the drone.
+Kaktus můžete prohodit s jeho sousedem v libovolném směru pomocí příkazu `swap()`.
+`swap(direction)` prohodí objekt pod dronem s objektem o jedno políčko ve směru `direction` od drona.
 
-## Examples
-In each of these grids, all the cacti are in sorted order and the harvest will spread over the entire field:
+## Příklady
+V každé z těchto mřížek jsou všechny kaktusy seřazeny a sklizeň se rozšíří po celém poli:
 `3 4 5    3 3 3    1 2 3    1 5 9
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-In this grid, only the lower left cactus is in sorted order, which is not enough for it to spread:
+V této mřížce je seřazen pouze levý dolní kaktus, což nestačí k tomu, aby se sklizeň rozšířila:
 `1 5 3
 4 9 7
 3 3 2`
 
-<spoiler=show hint 1>
-If the rows are already sorted, sorting the columns will not unsort the rows.
+<spoiler=zobrazit nápovědu 1>
+Pokud jsou řádky již seřazeny, seřazení sloupců řádky nerozhází.
 </spoiler>
-<spoiler=show hint 2>
-If you're not familiar with sorting algorithms, you might want to look them up online and think about which ones could be adapted to this problem. Keep in mind that not all of them work because you can only swap neighboring cacti.
+<spoiler=zobrazit nápovědu 2>
+Pokud nejste obeznámeni s řadicími algoritmy, možná si je budete chtít vyhledat online a zamyslet se nad tím, které z nich by se daly přizpůsobit tomuto problému. Mějte na paměti, že ne všechny fungují, protože můžete prohazovat pouze sousední kaktusy.
 </spoiler>

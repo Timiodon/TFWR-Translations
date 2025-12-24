@@ -1,58 +1,58 @@
-# Simulation
+# Simulace
 
-Simulations allow you to quickly test code without changing the state of the real farm.
-The starting state of the simulation can be chosen freely, and when the simulation ends, the real farm will be in the exact state it was in before the simulation started.
+Simulace vám umožňují rychle testovat kód bez změny stavu skutečné farmy.
+Počáteční stav simulace lze libovolně zvolit a po skončení simulace bude skutečná farma v přesně stejném stavu, v jakém byla před zahájením simulace.
 
-The `simulate()` function is used to start a simulation.
+Funkce `simulate()` se používá ke spuštění simulace.
 
-the file the execution should start in
+soubor, ve kterém by mělo provádění začít
 `filename = "f1"`
 
-start with everything unlocked and fully upgraded
+začít se vším odemčeným a plně vylepšeným
 `sim_unlocks = Unlocks`
 
-start with 10000 carrots and 50 hay
+začít s 10000 mrkvemi a 50 senem
 `sim_items = {Items.Carrot : 10000, Items.Hay : 50}`
 
-start with a global variable "a" with a value of 13
+začít s globální proměnnou "a" s hodnotou 13
 `sim_globals = {"a" : 13}`
 
-use a fixed random seed
+použít pevný náhodný seed (semínko)
 `seed = 0`
 
-speed up the simulation by a factor 64
+zrychlit simulaci faktorem 64
 `speedup = 64`
 
-run the simulation
+spustit simulaci
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 
-The `simulate()` function returns the time, in seconds, that it took to simulate the given start file.
+Funkce `simulate()` vrací čas v sekundách, který trvalo simulovat daný startovní soubor.
 
-### File Name
-The first argument of the simulate function is the filename. This is the name that is displayed at the top of the code window. The simulation will run the specified file as if you had clicked the Execute button on it.
+### Název souboru
+Prvním argumentem funkce simulate je název souboru. Toto je název, který se zobrazuje v horní části okna s kódem. Simulace spustí zadaný soubor, jako byste na něj klikli tlačítkem Spustit (Execute).
 
-### Starting Unlocks
-All programming features such as loops, if statements, lists, dicts,... will always remain unlocked. 
+### Počáteční odemčení
+Všechny programovací funkce, jako jsou smyčky, příkazy if, seznamy, slovníky,... zůstanou vždy odemčeny.
 
-The second argument allows you to specify which unlocks/upgrades the simulation should start with in addition to the programming features. This should be a sequence of unlocks. The simulation will start with all unlocks in the sequence upgraded to their maximum level.
+Druhý argument vám umožňuje specifikovat, se kterými odemčeními/vylepšeními by měla simulace začít navíc k programovacím funkcím. Měla by to být sekvence odemčení. Simulace začne se všemi odemčeními v sekvenci vylepšenými na jejich maximální úroveň.
 
-If you want to specify an upgrade level other than the maximum, you can pass a dictionary that maps the unlocks to unlock levels. In this case, negative values correspond to the maximum unlock level.
+Pokud chcete specifikovat jinou úroveň vylepšení než maximální, můžete předat slovník, který mapuje odemčení na úrovně odemčení. V tomto případě záporné hodnoty odpovídají maximální úrovni odemčení.
 
-### Starting Items
-The third argument allows you to pass a dictionary that maps items to numbers. It specifies the items to start the simulation with.
+### Počáteční předměty
+Třetí argument vám umožňuje předat slovník, který mapuje předměty na čísla. Určuje předměty, se kterými se má simulace začít.
 
-### Starting Globals
-Because the simulation starts a completely new program execution, you can't access variables from the program that starts the simulation.
-However, it is possible to pass values to the simulation using the fourth argument. This is a dict that maps variable names in the form of strings to values. These variables are then added to the global scope of the execution inside the simulation.
+### Počáteční globální proměnné
+Protože simulace spouští zcela nové provádění programu, nemůžete přistupovat k proměnným z programu, který simulaci spouští.
+Je však možné předat hodnoty do simulace pomocí čtvrtého argumentu. Toto je slovník, který mapuje názvy proměnných ve formě řetězců na hodnoty. Tyto proměnné jsou poté přidány do globálního rozsahu provádění uvnitř simulace.
 
-Note that this copies all values, so mutating them inside the simulation won't affect the original values outside the simulation. It's not possible to return values from the simulation other than the time it took to run.
+Všimněte si, že toto kopíruje všechny hodnoty, takže jejich změna uvnitř simulace neovlivní původní hodnoty mimo simulaci. Není možné vrátit hodnoty ze simulace jiné než čas, který trval běh.
 
-### Random Seed
-The fifth argument allows you to specify the random seed used in the simulation. This must be a positive integer. Negative values will cause a random seed to be used.
+### Náhodný seed
+Pátý argument vám umožňuje specifikovat náhodný seed použitý v simulaci. Musí to být kladné celé číslo. Záporné hodnoty způsobí použití náhodného seedu.
 
-The random seed affects everything from plant growth times to maze layouts to water decay times. If you start the same simulation multiple times with the same random seed and the same starting conditions, the result should always be the same.
+Náhodný seed ovlivňuje vše od doby růstu rostlin přes rozložení bludiště až po dobu rozpadu vody. Pokud spustíte stejnou simulaci vícekrát se stejným náhodným seedem a stejnými počátečními podmínkami, výsledek by měl být vždy stejný.
 
-### Speedup
-The sixth argument is the starting speedup of the simulation. This allows you to test things quickly. If the game is unable to keep up with the set speed it will slow down automatically.
+### Zrychlení
+Šestým argumentem je počáteční zrychlení simulace. To vám umožní rychle testovat věci. Pokud hra nestíhá nastavenou rychlost, automaticky se zpomalí.
 
-The speedup does not affect the result of the simulation in any way. It exists only to reduce the waiting time.
+Zrychlení nijak neovlivňuje výsledek simulace. Existuje pouze pro zkrácení doby čekání.
