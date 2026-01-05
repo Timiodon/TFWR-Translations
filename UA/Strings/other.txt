@@ -1,0 +1,18 @@
+@word_number = номер
+@word_direction = напрямок
+@run_cancelled = Помилка запуску
+@average_text = {0} Запуски завершено ({2:F1}%)
+{1}
+@average_text2 = {0} Запуски завершено
+{1}
+@unlocked_in = Для отримання додаткової інформації див.: [{0}]({1})
+@table_of_contents_section_general_info = Загальна інформація
+@table_of_contents_section_programming = Програмування
+@table_of_contents_section_unlocks = Розблоковує
+@table_of_contents_section_builtins = Вбудовані функції
+@table_of_contents_section_items = Ресурси
+@table_of_contents_section_entities = Об'єкти ??
+@table_of_contents_section_grounds = Ділянки
+@new_hat_unlocked = ## Новий капелюх розблоковано
+`change_hat(`{0}`)`
+@right_click_for_more_info = -- клацніть ПКМ для додаткової інформації --
