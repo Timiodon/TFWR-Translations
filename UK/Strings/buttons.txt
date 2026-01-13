@@ -1,0 +1,17 @@
+@save = Зберегти
+@saved = Збережено
+@play = Грати
+@load = Завантажити
+@options = Налаштування
+@join_discord = Discord
+@quit = Вийти
+@open_folder = Відкрити папку
+@new_game = Нова гра
+@back = Назад
+@unlocks = Розблокування
+@farm = Ферма
+@unlocked = Розблоковано
+@upgrade = Покращити
+@max_level = Макс. рівень
+@unlock = Розблокувати
+@locked = Заблоковано

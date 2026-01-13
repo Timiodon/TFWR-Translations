@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Спроба купити {0} не вдалася, оскільки недостатньо необхідних ресурсів.
+@warning_no_space_to_plant = Спроба посадити {0} не вдалася, оскільки це місце вже зайняте.
+@warning_cant_plant_on_ground = Неможливо посадити {0} на {1}.
+@warning_missing_seed = Недостатньо необхідних предметів для посадки {0}.
+@warning_no_item_to_use = Спроба використати {0} не вдалася, оскільки його недостатньо в інвентарі.
+@warning_failed_swap_wrap = Спроба виконати обмін (swap) за межами ферми. Це заборонено.
+@warning_failed_swap_unswappable = Спроба перемістити {0}, але цей об'єкт неможливо перемістити через swap.
+@warning_weird_substance_not_divisible = Ви використали кількість таємничої речовини (Weird Substance), яка не відповідає точній кількості, необхідній для створення лабіринту. Пам'ятайте, що необхідна кількість речовини зростає з кожним покращенням лабіринту.
+
+Щоб створити лабіринт повного розміру, зробіть так:
+`plant(Entities.Bush)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Симуляції та забіги для таблиці лідерів не можна запускати всередині інших симуляцій або забігів.

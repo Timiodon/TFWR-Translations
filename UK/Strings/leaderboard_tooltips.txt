@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = Повністю автоматизуйте всю гру.
+@lb_descr_maze = Назбирайте 9 863 168 золота.
+@lb_descr_maze_single = Назбирайте 616 448 золота.
+@lb_descr_dinosaur = Назбирайте 33 488 928 кісток.
+@lb_descr_cactus = Назбирайте 33 554 432 кактуси.
+@lb_descr_cactus_single = Назбирайте 131 072 кактуси.
+@lb_descr_sunflowers = Назбирайте 100 000 енергії.
+@lb_descr_sunflowers_single = Назбирайте 10 000 енергії.
+@lb_descr_pumpkins = Назбирайте 200M гарбузів.
+@lb_descr_pumpkins_single = Назбирайте 20M гарбузів.
+@lb_descr_hay = Назбирайте 2B сіна.
+@lb_descr_hay_single = Назбирайте 200M сіна.
+@lb_descr_wood = Назбирайте 10B деревини.
+@lb_descr_wood_single = Назбирайте 1M деревини.
+@lb_descr_carrots = Назбирайте 2B моркви.
+@lb_descr_carrots_single = Назбирайте 200M моркви.
