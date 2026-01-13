@@ -13,3 +13,4 @@
 @AR = Arabski
 @RU = Rosyjski
 @PL = Polski
+@CZ = Czeski
