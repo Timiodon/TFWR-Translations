@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = Повністю автоматизуйте всю гру.
+@lb_descr_maze = Здобудьте 9863168 золота.
+@lb_descr_maze_single = Здобудьте 616448 золота.
+@lb_descr_dinosaur = Здобудьте 33488928 кісток.
+@lb_descr_cactus = Здобудьте 33554432 кактуса.
+@lb_descr_cactus_single = Здобудьте 131072 кактуса.
+@lb_descr_sunflowers = Здобудьте 100000 сили.
+@lb_descr_sunflowers_single = Здобудьте 10000 сили.
+@lb_descr_pumpkins = Здобудьте 200М гарбузів.
+@lb_descr_pumpkins_single = Здобудьте 20М гарбузів.
+@lb_descr_hay = Здобудьте 2Б сіна.
+@lb_descr_hay_single = Здобудьте 200М сіна.
+@lb_descr_wood = Здобудьте 10Б деревини.
+@lb_descr_wood_single = Здобудьте 1Б деревини.
+@lb_descr_carrots = Здобудьте 2Б моркви.
+@lb_descr_carrots_single = Здобудьте 200М моркви.
