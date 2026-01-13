@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = 完全自動化整個遊戲。
+@lb_descr_maze = 收穫 9863168 黃金。
+@lb_descr_maze_single = 收穫 616448 黃金。
+@lb_descr_dinosaur = 收穫 33488928 骨頭。
+@lb_descr_cactus = 收穫 33554432 仙人掌。
+@lb_descr_cactus_single = 收穫 131072 仙人掌。
+@lb_descr_sunflowers = 收穫 100000 能量。
+@lb_descr_sunflowers_single = 收穫 10000 能量。
+@lb_descr_pumpkins = 收穫 200M 南瓜。
+@lb_descr_pumpkins_single = 收穫 20M 南瓜。
+@lb_descr_hay = 收穫 2B 乾草。
+@lb_descr_hay_single = 收穫 200M 乾草。
+@lb_descr_wood = 收穫 10B 木材。
+@lb_descr_wood_single = 收穫 1B 木材。
+@lb_descr_carrots = 收穫 2B 胡蘿蔔。
+@lb_descr_carrots_single = 收穫 200M 胡蘿蔔。

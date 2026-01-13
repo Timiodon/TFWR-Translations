@@ -1,0 +1,17 @@
+@warning_not_enough_items_to_trade = 嘗試購買 {0}，但沒有足夠的資源。
+@warning_no_space_to_plant = 嘗試種植 {0}，但該位置已有植物。
+@warning_cant_plant_on_ground = 無法在 {1} 上種植 {0}。
+@warning_missing_seed = 沒有種植 {0} 所需的物品。
+@warning_no_item_to_use = 嘗試使用 {0}，但數量不足。
+@warning_failed_swap_wrap = 嘗試對農場邊界外進行交換，這是不允許的。
+@warning_failed_swap_unswappable = 嘗試交換 {0}，但其無法交換。
+@warning_weird_substance_not_divisible = 你使用的奇異物質數量並非正好建立迷宮所需的數量。別忘了，所需的奇異物質數量會隨著你升級迷宮而增加。
+
+如果生成完整大小的迷宮，請執行：
+
+```
+plant(Entities.Bush)
+substance = get_world_size() * (num_unlocked(Unlocks.Mazes) - 1) ** 2
+use_item(Items.Weird_Substance, substance)
+```
+@warning_recursive_simulation = 無法從其他模擬或排行榜執行內啟動模擬或排行榜執行。

@@ -7,6 +7,7 @@
 @IT = Włoski
 @JA = Japoński
 @ZH = Chiński uproszczony
+@TW = Chiński tradycyjny
 @KO = Koreański
 @TR = Turecki
 @AR = Arabski

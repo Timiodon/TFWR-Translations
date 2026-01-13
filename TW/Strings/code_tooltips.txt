@@ -1,0 +1,785 @@
+@code_tooltip_harvest = `harvest()`
+採收無人機下方的實體。
+如果對一個無法採收的實體執行採收，則它將被摧毀。
+
+如果移除了一個實體，則回傳 `True`，否則回傳 `False`。
+
+如果移除了一個實體，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+harvest()
+```
+@code_tooltip_can_harvest = `can_harvest()`
+用於判斷植物是否完全成熟。
+
+如果無人機下方有可以採收的實體，則回傳 `True`，否則回傳 `False`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if can_harvest():
+    harvest()
+```
+@code_tooltip_range = `range(start = 0, end, step = 1)`
+生成一個從 `start` 開始，到 `end` 之前（所以排除 `end`）結束的數字序列，步進為 `step`。
+
+注意，`start` 預設為 `0`，如果只給一個参數，它將綁定到 `end`。這在通常情况下是不可能的。
+然而在 Python 中，`range` 是一個類別建構函式，它允許這種奇怪的行為。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+for i in range(10):
+    print(i)
+
+for i in range(2,6):
+    print(i)
+
+for i in range(10, 0, -1):
+    print(i)
+```
+@code_tooltip_plant = `plant(entity)` 
+消耗指定 `entity` 所需的成本，將其種植在無人機下方。
+如果資源不足、地塊類型錯誤或下方已有植物，則種植失敗。
+
+如果成功，則回傳 `True`，否則回傳 `False`。
+
+如果成功，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+plant(Entities.Bush)
+```
+@code_tooltip_move = `move(direction)`
+將無人機向指定 `direction` 移動一格。
+如果無人機越過農場的邊緣，它會繞回農場的另一側。
+
+`East ` = 右
+`West ` = 左
+`North` = 上
+`South` = 下
+
+如果無人機移動了，則回傳 `True`，否則回傳 `False`。
+
+如果無人機移動了，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+move(North)
+```
+@code_tooltip_can_move = `can_move(direction)`
+檢查無人機是否可以向指定 `direction` 移動。
+
+如果無人機可以移動，則回傳 `True`，否則回傳 `False`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if can_move(North):
+    move(North)
+```
+@code_tooltip_swap = `swap(direction)`
+將無人機下方的實體與指定 `direction` 的相鄰實體交换。
+並非對所有實體都適用。
+如果其中一個（或兩個）實體為 `None`，也同樣有效。
+
+如果成功，則回傳 `True`，否則回傳 `False`。
+
+如果成功，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+swap(North)
+```
+@code_tooltip_till = `till()`
+將無人機下方的地塊耕成 `Grounds.Soil`。如果已經是土壤，則會把地塊變回˙ `Grounds.Grassland`。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+till()
+```
+@code_tooltip_get_pos_x = `get_pos_x()`
+取得無人機目前的 x 座標。
+x 座標從西邊的 `0` 開始，向東遞增。
+
+回傳一個表示無人機目前 x 座標的數字。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+x, y = get_pos_x(), get_pos_y()
+```
+@code_tooltip_get_pos_y = `get_pos_y()`
+取得無人機目前的 y 座標。
+y 座標從南邊的 `0` 開始，向北遞增。
+
+回傳一個表示無人機目前 y 座標的數字。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+x, y = get_pos_x(), get_pos_y()
+```
+@code_tooltip_get_world_size = `get_world_size()`
+取得目前農場的大小。
+
+回傳網格南北方向的邊長。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+for i in range(get_world_size()):
+    move(North)
+```
+@code_tooltip_get_entity_type = `get_entity_type()`
+判斷無人機下方的實體類型。
+
+如果地塊為空，則回傳 `None`，否則回傳無人機下方的實體類型。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if get_entity_type() == Entities.Grass:
+    harvest()
+```
+@code_tooltip_get_ground_type = `get_ground_type()`
+判斷無人機下方地塊的類型。
+
+回傳無人機下方地塊的類型。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if get_ground_type() != Grounds.Soil:
+    till()
+```
+@code_tooltip_get_time = `get_time()`
+取得目前的遊戲時間。
+
+回傳自遊戲開始以來的秒數。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```start = get_time()
+
+do_something()
+
+time_passed = get_time() - start
+```
+@code_tooltip_get_tick_count = `get_tick_count()`
+用於測量已執行的時間刻數。
+
+回傳自執行開始以來經過的時間刻數。
+
+需要 `0` 時間刻執行。
+
+範例：
+
+```
+do_something()
+
+print(get_tick_count())
+```
+@code_tooltip_use_item = `use_item(item, n = 1)`
+嘗試使用指定的 `item` `n` 次。只能與某些物品一起使用，包括 `Items.Water`、`Items.Fertilizer`。
+
+如果使用了物品，則回傳 `True`，否則回傳 `False`。
+
+如果使用了物品，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+use_item(Items.Fertilizer)
+```
+@code_tooltip_get_water = `get_water()`
+取得無人機下方地塊目前的含水量。
+
+回傳無人機下方地塊的含水量，為介於 `0` 到 `1` 之間的數字。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if get_water() < 0.5:
+    use_item(Items.Water)
+```
+@code_tooltip_do_a_flip = `do_a_flip()`
+讓無人機做一次翻轉！此操作不受速度升級影響。
+
+回傳 `None`。
+
+需要 `1` 秒執行。
+
+範例：
+
+```
+while True:
+    do_a_flip()
+```
+@code_tooltip_pet_the_piggy = `pet_the_piggy()`
+摸摸小豬！此操作不受速度升級影響。
+
+回傳 `None`。
+
+需要 `1` 秒執行。
+
+範例：
+
+```
+while True:
+    pet_the_piggy()
+```
+@code_tooltip_print = `print(*args)`
+用煙霧將所有 `args` 書寫在無人機上方的空中。此操作不受速度升級影響。
+可以一次印出多個值。
+
+回傳 `None`。
+
+需要 `1` 秒執行。
+
+範例：
+
+```
+print("ground:", get_ground_type())
+```
+@code_tooltip_len = `len(collection)`
+取得串列、集合、字典或元組中的元素數量。
+
+回傳 `collection` 的長度。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+for i in range(len(list)):
+    list[i] += 1
+```
+@code_tooltip_list = `list(collection = None)`
+建立一個新串列。
+如果 `collection` 是 None，則建立一個空串列。
+如果 `collection` 是任何序列，則用該序列的元素建立一個新串列。
+
+回傳一個串列。
+
+需要 `1 + len(collection)` 時間刻執行。
+
+範例：
+
+```
+new_list = list((1,2,3))
+```
+@code_tooltip_dict = `dict(dictionary = None)`
+建立一個新字典。
+如果 `dictionary` 是 None，則建立一個空字典。
+如果 `dictionary` 是一個字典，則建立一個它的副本。
+
+回傳一個字典。
+
+需要 `1 + len(dictionary)` 時間刻執行。
+
+範例：
+
+```
+new_dict = dict()
+```
+@code_tooltip_set = `set(collection = None)`
+建立一個新集合。
+如果 `collection` 是 None，則建立一個空集合。
+如果 `collection` 是一個值的集合，則會建立一個包含這些值的新集合。
+
+回傳一個集合。
+
+需要 `1 + len(collection)` 時間刻執行。
+
+範例：
+
+```
+new_set = set((1,2,3))
+```
+@code_tooltip_str = `str(object)`
+
+回傳 `object` 的字串表示形式。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+string = str(1000)
+```
+@code_tooltip_set_execution_speed = `set_execution_speed(speed)`
+限制程式執行的速度，以便更好地觀察執行情況。
+
+`speed` 為 `1` 時，是無人機没有任何速度升級時的速度。
+`speed` 為 `8` 時，程式碼執行速度達到 `8` 倍，相當於無人機速度升級 `3` 次後的速度。
+`speed` 為 `0.5` 時，程式碼執行速度為未進行任何速度升級時的一半。這有助於了解程式碼的執行情況。
+
+如果 `speed` 高於目前可達到的執行速度上限，則直接以最大速度執行。
+
+如果 `speed` 為 `0` 或負數，則速度會恢復為最大速度。
+執行停止時，效果也會停止。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+set_execution_speed(1)
+```
+@code_tooltip_set_world_size = `set_world_size(size)`
+限制農場的大小，以便更好地觀察執行情況。
+同時會清空農場並重置無人機位置。
+將農場設為 `size` x `size` 的網格。
+可用的最小 `size` 是 `3`。
+如果 `size` 小於 `3`，則農場會恢復到完整大小。
+執行停止時，效果也會停止。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+set_world_size(5)
+```
+@code_tooltip_num_items = `num_items(item)`
+查詢你目前擁有多少 `item`。
+
+回傳物品欄中目前 `item` 的數量。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+if num_items(Items.Fertilizer) > 0:
+    use_item(Items.Fertilizer)
+```
+@code_tooltip_get_cost = `get_cost(thing)`
+取得 `thing` 的成本。
+
+如果 `thing` 是一個實體，則取得種植它的成本。
+如果 `thing` 是一項解鎖，則取得解鎖它的成本。
+
+回傳一個字典，其中鍵是物品，值是數量。每個物品都對應其所需的數量。
+當用於已達到最高等級的可升級項時，則回傳 `{}`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+cost = get_cost(Unlocks.Carrots)
+for item in cost:
+    if num_items(item) < cost[item]:
+        print("物品不足，無法解鎖胡蘿蔔")
+```
+@code_tooltip_clear = `clear()`
+移除農場裡的一切，將無人機移回位置 `(0, 0)`，並將帽子換回草帽。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+clear()
+```
+@code_tooltip_get_companion = `get_companion()`
+取得無人機下方植物的偏好伴生植物。
+
+回傳一個形式為 `(companion_type, (companion_x_position, companion_y_position))` 的元組。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+companion = get_companion()
+if companion != None:
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)
+```
+@code_tooltip_unlock = `unlock(unlock)` 
+與點擊科技樹中「解鎖」對應的按鈕有相同效果。
+
+如果解鎖成功，則回傳 `True`，否則回傳 `False`。
+
+如果解鎖成功，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+unlock(Unlocks.Carrots)
+```
+@code_tooltip_num_unlocked = `num_unlocked(thing)`
+檢查某個升級、實體、地塊、物品或帽子是否已經解鎖。
+
+如果 `thing` 可升級，則回傳 `1` 加上 `thing` 已升級的次數。如果不可升級，則若 `thing` 已解鎖時回傳 `1`，否則回傳 `0`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)
+```
+@code_tooltip_reset = `reset()`
+將農場重置為 1x1 的區塊，移除所有資源並鎖定大部分升級項。
+此操作不會移除你的任何程式碼。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+reset()
+```
+@code_tooltip_measure = `measure(direction = None)`
+可以測量某些實體的某些值。其效果取決於實體。
+
+如果 `direction` 不為 `None`，則測量指定方向上的相鄰實體。
+
+回傳向日葵花瓣的樹量。
+回傳葬或蘋果的下一個位置。
+回傳仙人掌的大小。
+回傳南瓜的神秘數字。
+對所有其他實體回傳 `None`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+num_petals = measure()
+```
+@code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, filename, speedup)`
+使用指定的 `filename` 作為起點，啟動 `leaderboard` 的定時模擬。
+`speedup` 設定起始加速倍率。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)
+```
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+使用指定的 `filename` 作為起點，啟動一次排行榜的模擬。
+
+`sim_unlocks`：一個包含起始升級項的序列。
+`sim_items`：一個將物品映射到數量的字典。模擬將從這些物品開始。
+`sim_globals`：一個將變數名稱映射到值的字典。模擬開始時，這些變數將存在於全域作用域中。
+`seed`：模擬的亂數種子。必須是正整數。
+`speedup`：起始加速倍率。
+
+回傳運行模擬所花費的時間。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+filename = "f1"
+sim_unlocks = Unlocks
+sim_items = {Items.Carrot : 10000, Items.Hay : 50}
+sim_globals = {"a" : 13}
+seed = 0
+speedup = 64
+
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)
+```
+@code_tooltip_spawn_drone = `spawn_drone(function)`
+在執行 `spawn_drone(function)` 命令的無人機相同位置生成一架新的無人機。新的無人機隨後開始執行指定的函式。完成後，它將自動消失。
+
+回傳新無人機的控制代碼；如果所有無人機都已生成，則回傳 `None`。
+
+如果成功生成無人機，需要 `200` 時間刻執行，否則需要 `1` 時間刻。
+
+範例：
+
+```
+def harvest_column():
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
+
+while True:
+    if spawn_drone(harvest_column):
+        move(East)
+```
+@code_tooltip_wait_for = `wait_for(drone)`
+等待直到指定的 `drone` 終止。
+
+回傳 `drone` 正在執行的函式的回傳值。
+
+如果等待的 `drone` 已經完成，需要 `1` 時間刻執行。
+
+範例：
+
+```
+def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
+
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+handle = spawn_drone(zero_arg_wrapper)
+print(wait_for(handle))
+```
+@code_tooltip_has_finished = `has_finished(drone)`
+檢查指定的 `drone` 是否已完成。
+
+如果 `drone` 已完成，則回傳 `True`，否則回傳 `False`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)
+```
+@code_tooltip_max_drones = `max_drones()`
+
+回傳農場中你可以擁有的無人機數量上限。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)
+```
+@code_tooltip_num_drones = `num_drones()`
+
+回傳農場中目前的無人機數量。
+
+需要 `1` 時間刻執行。
+
+範例：
+```
+while num_drones() < max_drones():
+    spawn_drone("some_file_name")
+    move(East)
+```
+@code_tooltip_quick_print = `quick_print(*args)`
+像 `print(*args)` 一樣印出某些值，但它不會停下來將其書寫到空中，所以只能在輸出頁面中找到。
+
+回傳 `None`。
+
+需要 `0` 時間刻執行。
+
+範例：
+
+```
+quick_print("嗨，老媽")
+```
+@code_tooltip_change_hat = `change_hat(hat)`
+將無人機的帽子變更為 `hat`。
+
+回傳 `None`。
+
+需要 `200` 時間刻執行。
+
+範例：
+
+```
+change_hat(Hats.Dinosaur_Hat)
+```
+@code_tooltip_max = `max(*args)`
+取得一個元素序列或多個傳入参數中的最大值。
+可用於數字和字串。
+
+`max(a, b, c)`：回傳 `a`、`b` 和 `c` 中的最大值。
+`max(sequence)`：回傳序列中所有值中的最大值。
+
+需要`「比較次數」`時間刻執行。
+
+範例：
+
+```
+max([3, 6, 34, 16])
+```
+@code_tooltip_min = `min(*args)`
+取得一個元素序列或多個傳入参數中的最小值。
+可用於數字和字串。
+
+`min(a, b, c)`：回傳 `a`、`b` 和 `c` 中的最小值。
+`min(sequence)`：回傳序列中所有值中的最小值。
+
+需要`「比較次數」`時間刻執行。
+
+範例：
+
+```
+min([3, 6, 34, 16])
+```
+@code_tooltip_abs = `abs(number)`
+計算一個數的絕對值。
+
+如果 `number` 是正數，則回傳 `number`，否則回傳 `-number`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+abs(-69)
+```
+@code_tooltip_random = `random()`
+在 0（含）和 1（不含）之間採樣一個隨機數。
+
+回傳該隨機數。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+def random_elem(list):
+	index = random() * len(list) // 1
+	return list[index]
+```
+@code_tooltip_append = `list.append(element)`
+將 `element` 加入到 `list` 的尾端。
+
+回傳 `None`。
+
+需要 `1` 時間刻執行。
+
+範例：
+
+```
+list = []
+list.append(1)
+```
+@code_tooltip_add = `set.add(element)`
+將 `element` 加入到 `set` 中。
+
+回傳 `None`。
+
+需要`「元素大小」`時間刻執行。
+
+範例：
+
+```
+set = {0}
+set.add(1)
+```
+@code_tooltip_remove = `collection.remove(element)`
+從 `collection` 中移除第一個出現的 `element`。
+
+回傳 `None`。
+
+在集合上值行需要`「元素大小」`時間刻執行；在串列上執行需要`「比較次數 + 位移次數」`時間刻執行。
+
+範例：
+
+```
+list = [True, False, None]
+list.remove(False)
+```
+@code_tooltip_pop = `collection.pop()`
+從串列中移除最後一個元素，或從字典中移除指定元素。
+`list.pop(i)` 從 `list` 中移除索引為 `i` 的元素。
+
+回傳被移除的元素。
+
+在字典上值行需要`「鍵大小」`時間刻執行；在串列上執行需要 `len(list) - i + 1` 時間刻執行。
+
+範例：
+
+```
+list = [True, False, None]
+list.pop(0)
+```
+@code_tooltip_insert = `list.insert(i, element)`
+將 `element` 插入到 `list` 的索引 `i` 處。
+
+回傳 `None`。
+
+需要 `len(list) - i + 1` 時間刻執行。
+
+範例：
+
+```
+list = [1,2]
+list.insert(0, 0)
+```
+@code_tooltip_Items = 包含所有可放入物品欄中的物品。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_Entities = 包含所有植物類型。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_Grounds = 包含所有可能的地塊類型。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_Unlocks = 包含科技樹中所有升級項。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_Hats = 包含所有帽子類型。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_Leaderboards = 包含所有排行榜類別。可以使用 `for` 迴圈進行迭代。
+@code_tooltip_for = 一個迭代序列中所有元素的迴圈。某些程式語言稱之為 "foreach" 迴圈。
+@code_tooltip_while = 迴圈直到條件為 `False`。
+@code_tooltip_def = 定義一個函式。
+@code_tooltip_True = 一個始終為真的布林值。
+@code_tooltip_False = 一個始終為假的布林值。
+@code_tooltip_if = 如果條件為 `True`，則執行程式碼。
+@code_tooltip_else = 如果前一個 `if` 條件為 `False`，則執行程式碼。
+@code_tooltip_elif = 和以下程式碼作用相同：
+
+```
+else:
+    if condition:
+```
+@code_tooltip_None = 一個表示「没有值」的值。
+@code_tooltip_continue = 立即繼續迴圈的下一次迭代。如果有巢狀迴圈，則始終影響最內層的迴圈。
+@code_tooltip_break = 跳出迴圈，並繼續執行迴圈之後的陳述式。如果有巢狀迴圈，則始終影響最內層的迴圈。
+@code_tooltip_North = 螢幕上的向上方向。除非你旋轉螢幕。
+@code_tooltip_East = 螢幕上的向右方向。除非你旋轉螢幕。
+@code_tooltip_South = 螢幕上的向下方向。除非你旋轉螢幕。
+@code_tooltip_West = 螢幕上的向左方向。除非你旋轉螢幕。
+@code_tooltip_not = `not True` 是 `False`，以及`not False` 是 `True`。
+@code_tooltip_and = 計算第一個運算元。如果結果為假值（`False`、`0` 或空集合），則立即回傳該值（短路求值），否則，計算並回傳第二個運算元。
+@code_tooltip_or = 計算第一個運算元。如果結果為真值（除了 `False`、`0` 和空集合之外的任何值），則立即回傳該值（短路求值），否則，計算並回傳第二個運算元。
+@code_tooltip_return = 用於從函式中回傳值。
+@code_tooltip_pass = 什麼都不做。由於不允許空的程式碼區塊，因此必要時可用它進行填充。
