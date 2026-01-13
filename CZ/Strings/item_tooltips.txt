@@ -1,0 +1,14 @@
+@item_tooltip_template_amount = Máte {0}
+@item_descr_carrot = Získává se sklizní mrkve.
+@item_descr_fertilizer = Zavolejte `use_item(Items.Fertilizer)`, abyste okamžitě zkrátili zbývající dobu růstu rostlin o 2s.
+@item_descr_weird_substance = Zavolejte `use_item(Items.Weird_Substance)` na keř, aby vyrostlo bludiště, nebo na jiné rostliny pro přepnutí jejich infikovaného stavu. Získává se z infikovaných rostlin. Hnojení rostlin je infikuje.
+@item_descr_gold = Nachází se v truhlách s pokladem v bludištích.
+@item_descr_hay = Získává se sekáním trávy.
+@item_descr_piggy = Tato položka byla ze hry odstraněna.
+@item_descr_power = Získává se sklizní slunečnic. Dron jej automaticky používá k dvojnásobnému pohybu.
+@item_descr_pumpkin = Získává se sklizní dýní.
+@item_descr_water = Používá se k zalévání půdy voláním `use_item(Items.Water)`.
+@item_descr_wood = Získává se z keřů a stromů.
+@item_descr_cactus = Získává se sklizní setříděných kaktusů.
+@item_descr_cactus_seed = Tato položka byla ze hry odstraněna.
+@item_descr_bone = Kosti pradávného tvora.
