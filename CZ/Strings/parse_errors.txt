@@ -1,0 +1,30 @@
+@error_missing_default_parameter = Všechny výchozí argumenty musí být na konci seznamu argumentů.
+@error_invalid_name = {0} není platný název. Názvy musí začínat písmenem a mohou obsahovat jen písmena, číslice a podtržítka. Také nesmí být rezervované klíčové slovo.
+@error_reserved_keyword = {0} je rezervované klíčové slovo. Nelze ho použít jako název.
+@error_invalid_assign_expr = Tomuto výrazu nelze přiřadit hodnotu.
+@error_no_statements = Blok kódu musí obsahovat alespoň jeden příkaz. 
+Příkaz může být volání funkce jako `harvest()` nebo přiřazení do proměnné. 
+Pokud chceš, aby blok nic nedělal, použij příkaz `pass`.
+@error_not_enough_indentation = Tady není dostatečné odsazení. 
+Za dvojtečkou musí být větší odsazení než před ní, aby se oddělil nový blok kódu. 
+K odsazení použij klávesu Tab.
+@error_too_much_indentation = Odsazení je zde příliš velké. 
+Odsazení musí být stejné pro všechny příkazy v rámci jednoho bloku kódu.
+@error_not_a_statement = Toto není platný příkaz. 
+@error_not_a_statement2 = Toto není platný příkaz. Chtěl jsi napsat {0}?
+@error_invalid_expression = Toto není platný výraz.
+@error_new_line_expected = Zde se očekává nový řádek.
+@error_unexpected_token = Zde se očekává {0}.
+@error_missing_colon = Na začátku každého bloku kódu musí být dvojtečka `:`.
+@error_unexpected_assign = Zde nelze provést přiřazení. Pro porovnání rovnosti použij `==`.
+@error_invalid_for_syntax = Toto není platná smyčka for. Smyčka for vypadá takto: 
+`for n in range(3):`
+`for` je vždy následováno proměnnou smyčky, klíčovým slovem `in` a poté sekvencí. V tomto příkladu je `n` název proměnné, ale můžeš použít jakýkoli jiný název.
+@error_unknown_method = Tato metoda neexistuje.
+@error_bad_backslash = Zpětné lomítko lze použít k rozdělení výrazu na více řádků. Poté ale musí následovat nový řádek.
+@error_mixed_indentation = Tabulátory a mezery by se neměly míchat.
+@error_expected_close_token = Očekávána čárka nebo uzavírací závorka.
+@error_wrong_dict_literal = Očekává se `:`, který oddělí klíče a hodnoty slovníku.
+@error_assign_before_global = {0} je přiřazeno dříve, než je deklarováno jako `global`.
+@error_wildcard_imports_not_allowed_in_function = Importy ve tvaru `from x import *` nejsou uvnitř funkcí povoleny.
+@error_invalid_import = Nelze importovat soubory s názvy, které nejsou platnými identifikátory. Platné identifikátory mohou obsahovat pouze písmena, čísla a podtržítka. Pokud název souboru obsahuje jiné znaky, musíš ho přejmenovat.

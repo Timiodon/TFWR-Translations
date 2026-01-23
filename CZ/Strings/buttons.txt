@@ -1,0 +1,17 @@
+@save = Uložit
+@saved = Uloženo
+@play = Start
+@load = Nahrát
+@options = Volby
+@join_discord = Discord
+@quit = Konec
+@open_folder = Otevřít Adresář
+@new_game = Nová Hra
+@back = Zpět
+@unlocks = Odemčeno
+@farm = Farma
+@unlocked = Odemčeno
+@upgrade = Upgrade
+@max_level = Max Úroveň
+@unlock = Odemknout
+@locked = Zamčeno
