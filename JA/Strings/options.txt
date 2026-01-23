@@ -24,6 +24,7 @@
 @autosave progress = 進行状況自動セーブ
 @enabled = 有効
 @disabled = 無効
+@language = 言語
 @frames = フレーム
 @full vsync = フル Vsync
 @half vsync = ハーフ Vsync

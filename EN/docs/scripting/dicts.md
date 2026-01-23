@@ -5,7 +5,7 @@ A dictionary can be created like this:
 `right_of = {North:East, East:South, South:West, West:North}`
 
 The expression before the colon is the key and the expression after the colon is the value to which the key maps.
-The above dictionary maps each direction to the direction to it's right.
+The above dictionary maps each direction to the direction to its right.
 
 Here's another one that maps the drone's position to the entity it's over.
 `x, y = get_pos_x(), get_pos_y()

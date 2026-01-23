@@ -89,7 +89,7 @@ def f():
 -`a` runs until the `from b import *` line.
 -`b` runs until the `from a import *` line.
 -The module `a` already exists, but hasn't been fully executed yet.
--`b` unpacks everything that is currently in `a` into it's own global scope. At this point, `a` contains nothing because it hasn't reached the `x = 0` line yet, so nothing is imported.
+-`b` unpacks everything that is currently in `a` into its own global scope. At this point, `a` contains nothing because it hasn't reached the `x = 0` line yet, so nothing is imported.
 -`b` runs the `def` statement and stores the function `f()`.
 -`a` continues to run and initializes `x`.
 

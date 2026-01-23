@@ -30,7 +30,9 @@ Yulia Tregubova (Chef de projet)
 HoshiyomiLusia
 Liuxun
 Davide Altamura
-Milan Tuma (Czech Translation)
+Milan Tuma
+Ivan Bondar
+Jimmy Sheep
 
 ### Modérateurs Discord
 MrBlobfish

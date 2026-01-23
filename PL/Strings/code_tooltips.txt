@@ -145,7 +145,7 @@ Pobiera aktualny czas gry.
 
 zwraca czas w sekundach od rozpoczęcia gry.
 
-zajmuje `1` tick.
+zajmuje `0` ticków.
 
 przykład:
 `start = get_time()

@@ -10,7 +10,7 @@ You can read all about the `for` loop on the [For Loop](docs/scripting/for.md) p
 for i in range(5):
 	do_a_flip()`
 
-`range(n)` creates a range of numbers from `0` to `n-1` which has `n` elements in it. The `for` loop runs it's loop body once for every element in the sequence. In this example `do_a_flip()` will be called `5` times.
+`range(n)` creates a range of numbers from `0` to `n-1` which has `n` elements in it. The `for` loop runs its loop body once for every element in the sequence. In this example `do_a_flip()` will be called `5` times.
 
 The function `get_world_size()` is also available now. It returns the side length of your farm. This way you can write code that won't break with the next expand upgrade.
 

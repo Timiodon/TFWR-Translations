@@ -145,7 +145,7 @@ Get the current game time.
 
 returns the time in seconds since the start of the game.
 
-takes `1` tick to execute.
+takes `0` ticks to execute.
 
 example:
 `start = get_time()
@@ -475,7 +475,7 @@ takes `1` tick to execute.
 
 example:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_num_drones = `num_drones()`
@@ -486,7 +486,7 @@ takes `1` tick to execute.
 
 example:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_quick_print = `quick_print(*args)`

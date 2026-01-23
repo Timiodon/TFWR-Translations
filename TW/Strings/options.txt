@@ -1,5 +1,5 @@
 @audio = 音訊
-@visuals = 圖像
+@visuals = 圖像品質
 @graphics = 圖像品質
 @general = 通用
 @controls = 控制
@@ -24,6 +24,7 @@
 @autosave progress = 自動儲存進度
 @enabled = 已啟用
 @disabled = 已停用
+@language = 語言
 @frames = 幀數
 @full vsync = 完全垂直同步
 @half vsync = 半垂直同步

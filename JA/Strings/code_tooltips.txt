@@ -145,7 +145,7 @@ y座標は南端の `0` から始まり、北に向かって増加します。
 
 ゲーム開始からの経過時間を秒単位で返します。
 
-実行に `1` ティックかかります。
+実行に `0` ティックかかります。
 
 例:
 `start = get_time()
@@ -475,7 +475,7 @@ result = wait_for(drone)`
 
 例:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_num_drones = `num_drones()`
@@ -486,7 +486,7 @@ result = wait_for(drone)`
 
 例:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_quick_print = `quick_print(*args)`

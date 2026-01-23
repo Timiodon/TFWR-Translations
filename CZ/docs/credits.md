@@ -35,7 +35,9 @@ Yulia Tregubova (Project Manager)
 
 HoshiyomiLusia
 Davide Altamura
-Milan Tuma (Czech Translation)
+Milan Tuma
+Ivan Bondar
+Jimmy Sheep
 
 ### Discord Moderátoři
 

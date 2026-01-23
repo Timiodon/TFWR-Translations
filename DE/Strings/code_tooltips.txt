@@ -145,7 +145,7 @@ Gibt die aktuelle Spielzeit zurück.
 
 gibt die Zeit in Sekunden seit Spielbeginn zurück.
 
-dauert `1` Tick.
+dauert `0` Ticks.
 
 Beispiel:
 `start = get_time()
@@ -472,7 +472,7 @@ dauert `1` Tick.
 
 Beispiel:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 @code_tooltip_num_drones = `num_drones()`
 
@@ -482,7 +482,7 @@ dauert `1` Tick.
 
 Beispiel:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 @code_tooltip_quick_print = `quick_print(*args)`
 Druckt einen Wert genau wie `print(*args)`, hält aber nicht an, um ihn in die Luft zu schreiben, sodass er nur auf der Ausgabeseite zu finden ist.

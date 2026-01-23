@@ -145,7 +145,7 @@ y 坐标从南边的 `0` 开始，向北递增。
 
 返回自游戏开始以来的秒数。
 
-需要 `1` tick 执行。
+需要 `0` ticks 执行。
 
 示例：
 `start = get_time()
@@ -486,7 +486,7 @@ result = wait_for(drone)`
 
 示例：
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_quick_print = `quick_print(*args)`

@@ -30,6 +30,9 @@ Yulia Tregubova (Project Manager)
 HoshiyomiLusia
 Liuxun
 Davide Altamura
+Milan Tuma
+Ivan Bondar
+Jimmy Sheep
 
 ### Модератори Discord
 MrBlobfish

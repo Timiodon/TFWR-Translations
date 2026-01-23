@@ -24,6 +24,7 @@
 @autosave progress = 게임 자동 저장
 @enabled = 활성화됨
 @disabled = 비활성화됨
+@language = 언어
 @frames = 프레임
 @full vsync = 전체 Vsync
 @half vsync = 절반 Vsync

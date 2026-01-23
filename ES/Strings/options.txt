@@ -24,6 +24,7 @@
 @autosave progress = Autoguardar Progreso
 @enabled = Activado
 @disabled = Desactivado
+@language = Idioma
 @frames = Fotogramas
 @full vsync = Vsync completo
 @half vsync = Medio Vsync

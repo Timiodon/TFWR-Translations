@@ -672,7 +672,7 @@ def get_time() -> float:
 
     returns the time in seconds since the start of the game.
 
-    takes `1` tick to execute.
+    takes `0` ticks to execute.
 
     example usage:
     ```
@@ -1284,7 +1284,7 @@ def max_drones() -> int:
     example:
     ```
     while num_drones() < max_drones():
-        spawn_drone("some_file_name")
+        spawn_drone(task)
         move(East)
     ```
     """
@@ -1300,7 +1300,7 @@ def num_drones() -> int:
     example:
     ```
     while num_drones() < max_drones():
-        spawn_drone("some_file_name")
+        spawn_drone(task)
         move(East)
     ```
     """

@@ -24,6 +24,7 @@
 @autosave progress = Autom. Spielfortschritt
 @enabled = Aktiviert
 @disabled = Deaktiviert
+@language = Sprache
 @frames = Frames
 @full vsync = Voller Vsync
 @half vsync = Halber Vsync

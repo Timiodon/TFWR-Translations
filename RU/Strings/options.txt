@@ -24,6 +24,7 @@
 @autosave progress = Автосохранение прогресса
 @enabled = Включено
 @disabled = Выключено
+@language = Язык
 @frames = Частота кадров
 @full vsync = Полноценная VSync
 @half vsync = Половинная VSync

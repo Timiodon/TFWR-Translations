@@ -140,12 +140,12 @@ for i in range(10, 0, -1):
 Пример:
 `if get_ground_type() != Grounds.Soil:
     till()`
-@code_tooltip_get_time = `get_time()`
+@code_tooltip_get_time = `get_time()` 
 Получает текущее время в игре.
 
 Возвращает время в секундах с начала игры.
 
-Выполнение занимает `1` тик.
+Выполнение занимает `0` тик.
 
 Пример:
 `start = get_time()
@@ -486,7 +486,7 @@ result = wait_for(drone)`
 
 Пример:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_quick_print = `quick_print(*args)`

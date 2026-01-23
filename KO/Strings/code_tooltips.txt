@@ -145,7 +145,7 @@ y 위치는 남쪽에서 `0`으로 시작해서 북쪽 방향으로 증가합니
 
 게임 시작 후 지난 시간을 초 단위로 반환합니다.
 
-실행하는 데 `1`틱이 필요합니다.
+실행하는 데 `0`틱이 필요합니다.
 
 예시:
 `start = get_time()
@@ -475,7 +475,7 @@ result = wait_for(drone)`
 
 예시:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_num_drones = `num_drones()`
@@ -486,7 +486,7 @@ result = wait_for(drone)`
 
 예시:
 `while num_drones() < max_drones():
-    spawn_drone("some_file_name")
+    spawn_drone(task)
     move(East)`
 
 @code_tooltip_quick_print = `quick_print(*args)`
