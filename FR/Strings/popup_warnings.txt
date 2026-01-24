@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = Échec de l'écriture dans les fichiers de sauvegarde de {0}. Assure-toi de fermer tous les autres programmes accédant aux fichiers et réessaie.
 @ok = ok
 @popup_warning_old_save = Ce fichier de sauvegarde provient d'une ancienne version du jeu. Comme l'arbre de recherche a été retravaillé, toutes tes améliorations ont été réinitialisées pour mieux correspondre au nouveau système de progression.
+@popup_warning_unofficial_language = Ceci est une traduction non officielle créée par la communauté qui n'est pas maintenue par les développeurs du jeu. Certains textes peuvent être manquants ou inexacts.

@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = 写入 {0} 的存档文件失败。请确保关闭所有其他正在访问这些文件的程序，然后重试。
 @ok = 好的
 @popup_warning_old_save = 这份存档来自旧版游戏。由于我们重做了科技树，因此所有升级均已被重置，以便更好地匹配新的游戏进程。
+@popup_warning_unofficial_language = 这是由社区创作的非官方翻译，并不由游戏开发人员维护。部分文本可能存在缺失或不准确的情况。

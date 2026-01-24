@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = 無法寫入 {0} 的存檔。請確保關閉所有其他存取該檔案的程式後重試。
 @ok = 確定
 @popup_warning_old_save = 這份存檔來自舊版本的遊戲。由於科技樹已經重製，所有升級都已被重置，以便更好適應新的進度系統。
+@popup_warning_unofficial_language = 這是一份由社群玩家製作的非官方翻譯，並非由遊戲開發者進行維護。部分文字可能會有遺漏或是不太準確的地方。

@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = Falha ao escrever nos arquivos de salvamento de {0}. Certifique-se de fechar todos os outros programas que acessam os arquivos e tente novamente.
 @ok = ok
 @popup_warning_old_save = Este arquivo de salvamento é de uma versão mais antiga do jogo. Como a árvore de tecnologia foi reformulada, todas as melhorias foram redefinidas para algo que faz mais sentido com o novo sistema de progressão.
+@popup_warning_unofficial_language = Esta é uma tradução não oficial criada pela comunidade e não é mantida pelos desenvolvedores do jogo. Alguns textos podem estar faltando ou estarem incorretos.

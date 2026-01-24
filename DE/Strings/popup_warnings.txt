@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = Fehler beim Schreiben in die Speicherdateien von {0}. Stelle sicher, dass du alle anderen Programme schließt, die auf die Dateien zugreifen, und versuche es erneut.
 @ok = OK
 @popup_warning_old_save = Dieser Spielstand stammt von einer älteren Version des Spiels. Da der Forschungsbaum überarbeitet wurde, wurden alle Upgrades zurückgesetzt, um besser zum neuen Fortschrittssystem zu passen.
+@popup_warning_unofficial_language = Dies ist eine inoffizielle Übersetzung aus der Community, die nicht von den Entwicklern des Spiels gepflegt wird. Manche Texte könnten fehlen oder ungenau sein.

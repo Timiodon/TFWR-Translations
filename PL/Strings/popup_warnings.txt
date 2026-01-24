@@ -11,3 +11,4 @@
 @popup_warning_failed_write_save = Nie udało się zapisać do plików zapisu {0}. Upewnij się, że zamknąłeś wszystkie inne programy korzystające z tych plików i spróbuj ponownie.
 @ok = ok
 @popup_warning_old_save = Ten plik zapisu pochodzi ze starszej wersji gry. Ponieważ drzewko technologiczne zostało przerobione, wszystkie ulepszenia zostały zresetowane do stanu, który ma więcej sensu w nowym systemie postępów.
+@popup_warning_unofficial_language = To jest nieoficjalne tłumaczenie stworzone przez społeczność, które nie jest wspierane przez twórców gry. Niektóre teksty mogą być niekompletne lub zawierać błędy.
