@@ -2,7 +2,7 @@
 Список — это простой способ хранить несколько значений в одной переменной.
 Ты можешь создавать новые списки так:
 
-`list = [2, True, Items.Hay]`
+`some_list = [2, True, Items.Hay]`
 
 Этот список содержит значения `2`, `True` и `Items.Hay`.
 Список может быть пустым:
@@ -12,55 +12,55 @@
 Ты можешь получить доступ к элементу списка по его индексу. Индекс первого элемента — `0`, второго — `1`, третьего — `2` и так далее.
 
 Сажает морковь:
-`list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
-plant(list[1])`
+`entities = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
+plant(entities[1])`
 
 Ты можешь перебирать список с помощью цикла `for`. Следующий пример суммирует все элементы в списке.
 
-`list = [4, 7, 2, 5]
+`numbers = [4, 7, 2, 5]
 sum = 0
-for number in list:
+for number in numbers:
 	sum += number`
 `sum` теперь равно `18`.
 
 Следующие методы списка позволяют добавлять и удалять элементы.
 
-`list.append(elem)` добавляет элемент в конец списка:
+`elements.append(elem)` добавляет элемент в конец списка:
 
-`list = [2, 6, 12]
-list.append(7)`
-`list` теперь `[2, 6, 12, 7]`.
+`numbers = [2, 6, 12]
+numbers.append(7)`
+`numbers` теперь `[2, 6, 12, 7]`.
 
-`list.remove(elem)` удаляет первое вхождение элемента из списка:
+`elements.remove(elem)` удаляет первое вхождение элемента из списка:
 
-`list = [1, 2, 4, 2]
-list.remove(2)`
-`list` теперь `[1, 4, 2]`.
+`numbers = [1, 2, 4, 2]
+numbers.remove(2)`
+`numbers` теперь `[1, 4, 2]`.
 
-`list.insert(index, elem)` вставляет элемент по указанному индексу:
+`elements.insert(index, elem)` вставляет элемент по указанному индексу:
 
-`list = [Entities.Tree, Items.Hay]
-list.insert(1, Items.Wood)`
-`list` теперь `[Entities.Tree, Items.Wood, Items.Hay]`.
+`some_list = [Entities.Tree, Items.Hay]
+some_list.insert(1, Items.Wood)`
+`some_list` теперь `[Entities.Tree, Items.Wood, Items.Hay]`.
 
-`list.pop(index)` удаляет элемент по указанному индексу.
+`elements.pop(index)` удаляет элемент по указанному индексу.
 Если индекс не указан, удаляется последний элемент:
 
-`list = [3, 5, 8, 25]
-list.pop()`
-`list` теперь `[3, 5, 8]`.
-`list.pop(1)`
-`list` теперь `[3, 8]`.
+`numbers = [3, 5, 8, 25]
+numbers.pop()`
+`numbers` теперь `[3, 5, 8]`.
+`numbers.pop(1)`
+`numbers` теперь `[3, 8]`.
 
 Функция `len()` возвращает длину списка:
-`list = [3, 2, 1]
-x = len(list)`
+`numbers = [3, 2, 1]
+x = len(numbers)`
 `x` теперь `3`.
 
 Списки имеют ссылочную семантику. То есть, если переменной присваивается список, не создается его копия, а присваивается тот же самый объект-список.
 Если две переменные ссылаются на один и тот же список, изменения в нем будут видны обеим.
 
-`a = [1,2]
+`a = [1, 2]
 b = a
 b.pop()`
 `a` и `b` теперь оба равны `[1]`.
