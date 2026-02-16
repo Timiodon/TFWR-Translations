@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = Désactive la surbrillance clignotante lorsque le code s'exécute.
 @option_tooltip_resolution = Change la résolution de l'écran.
 @option_tooltip_increment_number_effect = Désactive les effets dans l'inventaire qui se jouent lorsque les nombres changent.
+@option_tooltip_color_theme = Change le thème de couleur de l'interface. Tu peux ajouter tes propres thèmes dans le dossier "Themes" de ton dossier de sauvegarde.
 @keybind_tooltip_indent_selection = Ajoute une indentation à toutes les lignes sélectionnées. Cela doit être une touche qui insère un caractère pour fonctionner. Les combinaisons avec ctrl ou alt ne fonctionneront donc pas.
 @keybind_tooltip_unindent_selection = Supprime l'indentation de toutes les lignes sélectionnées. Cela doit être une touche qui insère un caractère pour fonctionner. Les combinaisons avec ctrl ou alt ne fonctionneront donc pas.
 @keybind_tooltip_menu = Ouvre ou ferme le menu principal.

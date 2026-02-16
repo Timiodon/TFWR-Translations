@@ -55,3 +55,9 @@
 @resolution = Rozdzielczość
 @increment number effect = Efekt inkrementacji liczb
 @hide UI = Przełącz HUD
+@color theme = Motyw kolorystyczny
+@Default = Domyślny
+@Night = Nocny
+@Light = Jasny
+@Lunar New Year = Księżycowy Nowy Rok
+@Custom = Własny

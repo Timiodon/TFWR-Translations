@@ -55,3 +55,9 @@
 @resolution = Resolución
 @increment number effect = Efecto de incremento
 @hide UI = Alternar HUD
+@color theme = Tema de color
+@Default = Predeterminado
+@Night = Noche
+@Light = Claro
+@Lunar New Year = Año Nuevo Lunar
+@Custom = Personalizado

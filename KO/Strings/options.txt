@@ -55,3 +55,9 @@
 @resolution = 해상도
 @increment number effect = 숫자 증가 효과
 @hide UI = HUD 토글
+@color theme = 색상 테마
+@Default = 기본
+@Night = 나이트
+@Light = 라이트
+@Lunar New Year = 설날
+@Custom = 커스텀

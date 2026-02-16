@@ -55,3 +55,9 @@
 @resolution = Résolution
 @increment number effect = Effet d'incrémentation
 @hide UI = Basculer ATH
+@color theme = Thème de couleur
+@Default = Par défaut
+@Night = Nuit
+@Light = Clair
+@Lunar New Year = Nouvel An lunaire
+@Custom = Personnalisé

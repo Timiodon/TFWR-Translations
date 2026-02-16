@@ -55,3 +55,9 @@
 @resolution = 解析度
 @increment number effect = 數字變化特效
 @hide UI = 切換 HUD
+@color theme = 色彩主題
+@Default = 預設
+@Night = 夜間
+@Light = 淺色
+@Lunar New Year = 農曆新年
+@Custom = 自定義

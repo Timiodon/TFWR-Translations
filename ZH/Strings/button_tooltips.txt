@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = 关闭代码运行时的高亮闪烁。
 @option_tooltip_resolution = 更改屏幕分辨率。
 @option_tooltip_increment_number_effect = 禁用物品栏中数字变化时播放的特效。
+@option_tooltip_color_theme = 更改 UI 的颜色主题。你可以在存档目录下的“Themes”文件夹中添加自定义主题。
 @keybind_tooltip_indent_selection = 为所有选定行添加缩进。必须是一个能插入字符的键。任何带有 ctrl 或 alt 的组合键都无效。
 @keybind_tooltip_unindent_selection = 移除所有选定行的缩进。必须是一个能插入字符的键。任何带有 ctrl 或 alt 的组合键都无效。
 @keybind_tooltip_menu = 打开或关闭主菜单。

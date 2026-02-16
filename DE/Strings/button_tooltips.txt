@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = Schaltet die blinkenden Hervorhebungen aus, wenn der Code ausgeführt wird.
 @option_tooltip_resolution = Ändert die Bildschirmauflösung.
 @option_tooltip_increment_number_effect = Deaktiviert die Effekte im Inventar, die abgespielt werden, wenn sich die Zahlen ändern.
+@option_tooltip_color_theme = Ändere das Farbschema der UI. Eigene Themes können im Ordner "Themes" im Speicherverzeichnis hinzugefügt werden.
 @keybind_tooltip_indent_selection = Fügt allen ausgewählten Zeilen eine Einrückung hinzu. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Kombinationen mit Strg oder Alt funktionieren also nicht.
 @keybind_tooltip_unindent_selection = Entfernt die Einrückung von allen ausgewählten Zeilen. Dies muss eine Taste sein, die ein Zeichen einfügt, damit es funktioniert. Kombinationen mit Strg oder Alt funktionieren also nicht.
 @keybind_tooltip_menu = Öffnet oder schließt das Hauptmenü.

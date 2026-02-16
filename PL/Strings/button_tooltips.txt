@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = Wyłącz migające podświetlenia podczas działania kodu.
 @option_tooltip_resolution = Zmień rozdzielczość ekranu.
 @option_tooltip_increment_number_effect = Wyłącz efekty w ekwipunku, które odtwarzają się, gdy zmieniają się liczby.
+@option_tooltip_color_theme = Zmień motyw kolorystyczny interfejsu. Własne motywy można dodać w folderze „Themes” w katalogu zapisu.
 @keybind_tooltip_indent_selection = Dodaj wcięcie do wszystkich zaznaczonych linii. Musi to być klawisz, który wstawia znak, aby to zadziałało. Kombinacje z klawiszami Ctrl lub Alt nie będą działać.
 @keybind_tooltip_unindent_selection = Usuń wcięcie ze wszystkich zaznaczonych linii. Musi to być klawisz, który wstawia znak, aby to zadziałało. Kombinacje z klawiszami Ctrl lub Alt nie będą działać.
 @keybind_tooltip_menu = Otwórz lub zamknij menu główne.

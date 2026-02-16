@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = コード実行中の点滅するハイライトをオフにします。
 @option_tooltip_resolution = 画面の解像度を変更します。
 @option_tooltip_increment_number_effect = インベントリで数字が変わるときに再生されるエフェクトを無効にします。
+@option_tooltip_color_theme = UIのカラーテーマを変更します。カスタムテーマはセーブディレクトリ内の「Themes」フォルダーに追加できます。
 @keybind_tooltip_indent_selection = 選択したすべての行にインデントを追加します。動作させるには、これが文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
 @keybind_tooltip_unindent_selection = 選択したすべての行からインデントを削除します。動作させるには、これが文字を挿入するキーである必要があります。そのため、ctrlやaltとの組み合わせは機能しません。
 @keybind_tooltip_menu = メインメニューを開閉します。

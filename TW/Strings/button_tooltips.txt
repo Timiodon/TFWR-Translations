@@ -44,6 +44,7 @@
 @option_tooltip_code_highlights = 關閉程式碼運行時的醒目標示。
 @option_tooltip_resolution = 變更遊戲解析度。
 @option_tooltip_increment_number_effect = 停用物品欄中數字變化時的特效。
+@option_tooltip_color_theme = 變更 UI 的色彩主題。你可以在存檔目錄裡的「Themes」資料夾中加入自定義主題。
 @keybind_tooltip_indent_selection = 為所有選取的行新增縮排。必須是一個能插入字元的鍵。任何與 Ctrl 或 Alt 的組合鍵均無效。
 @keybind_tooltip_unindent_selection = 移除所有選取的行的縮排。必須是一個能插入字元的鍵。任何與 Ctrl 或 Alt 的組合鍵均無效。
 @keybind_tooltip_menu = 開啟或關閉主選單。

@@ -55,3 +55,9 @@
 @resolution = Разрешение
 @increment number effect = Эффект увеличения чисел
 @hide UI = Скрыть интерфейс
+@color theme = Цветовая тема
+@Default = Стандартная
+@Night = Ночная
+@Light = Светлая
+@Lunar New Year = Лунный Новый год
+@Custom = Своя
