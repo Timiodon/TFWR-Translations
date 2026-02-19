@@ -1,5 +1,5 @@
 @audio = 音訊
-@visuals = 圖像品質
+@visuals = 圖像
 @graphics = 圖像品質
 @general = 通用
 @controls = 控制
@@ -57,7 +57,7 @@
 @hide UI = 切換 HUD
 @color theme = 色彩主題
 @Default = 預設
-@Night = 夜間
-@Light = 淺色
+@Night = 夜晚
+@Light = 白晝
 @Lunar New Year = 農曆新年
 @Custom = 自定義
