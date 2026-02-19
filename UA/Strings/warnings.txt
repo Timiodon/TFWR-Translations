@@ -1,0 +1,14 @@
+@warning_not_enough_items_to_trade = Намагався купити {0} , але не мав необхідних ресурсів.
+@warning_no_space_to_plant = Намагався посадити {0} , але там вже щось росло.
+@warning_cant_plant_on_ground = Неможливо посадити {0} на {1}.
+@warning_missing_seed = Не було необхідних ресурсів для посадки {0}.
+@warning_no_item_to_use = Спробував використати {0} , але мені його не вистачило.
+@warning_failed_swap_wrap = Намагався зробити обмін через межі ферми. Це заборонено.
+@warning_failed_swap_unswappable = Намагався поміняти місцями {0} те, що неможливо поміняти.
+@warning_weird_substance_not_divisible = Ви використали кількість дивної речовини, яка не зовсім відповідає кількості, необхідній для створення лабіринту. Не забувайте, що кількість необхідної дивної речовини збільшується в міру покращення лабіринту.
+
+To spawn a full-size maze do:
+`plant(Entities.Bush)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Симуляції та запуски для таблиці лідерів не можуть бути розпочаті всередині інших симуляцій або запусків для таблиці лідерів.
