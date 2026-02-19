@@ -1,7 +1,7 @@
 # First Program
 ## Text editor
 All programming is done in code windows. Each code window corresponds to a text file containing code. 
-you can rename the file by clicking on its name at the top of the window.
+You can rename the file by clicking on its name at the top of the window.
 
 The code can be edited like in any text editor as long as it's not running.
 You can execute the program directly by pressing the green play button in the code window.
