@@ -657,7 +657,7 @@ class Unlocks:
 
 # -------------------------------------------------------------------------------
 type IterableCollections = (
-	dict | list | set | _tuple | _str |
+	_dict | _list | _set | _tuple | _str |
 	Entities | Grounds | Hats | Items | Leaderboard | Unlocks
 )
 
@@ -940,7 +940,7 @@ class set[key: Any](_set):
 	...
 
 # -------------------------------------------------------------------------------
-def add(get_set: set, object: Any):
+def add(get_set: _set[Any], object: Any):
 	"""
 	Add `object` to the end of a list provided as `given_list`.
 	
@@ -963,7 +963,7 @@ def add(get_set: set, object: Any):
 	...
 
 # --------------------------------------------------
-def append(given_list: list, object: Any):
+def append(given_list: _list[Any], object: Any):
 	"""
 	Add `object` to the end of a list provided as `given_list`.
 	
@@ -986,7 +986,7 @@ def append(given_list: list, object: Any):
 	...
 
 # --------------------------------------------------
-def insert(given_list: list, object: Any):
+def insert(given_list: _list[Any], object: Any):
 	"""
 	Add a `object` to the specified `index` to a list provided as `given_list`.
 	
@@ -1009,7 +1009,7 @@ def insert(given_list: list, object: Any):
 	...
 
 # --------------------------------------------------
-def len(object : _str | dict | list | set | _tuple) -> _int:
+def len(object : _str | _dict[Any, Any] | _list[Any] | _set[Any] | _tuple[Any]) -> _int:
 	"""
 	Returns the number of items in the dict, list, set or str provided as `collection`.
 	
@@ -1034,7 +1034,7 @@ def len(object : _str | dict | list | set | _tuple) -> _int:
 	...
 
 # --------------------------------------------------
-def pop(collection: dict | list, object: Any):
+def pop(collection: _dict[Any, Any] | _list[Any], object: Any):
 	"""
 	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
 	
@@ -1141,7 +1141,7 @@ def range(start: _float, stop: _float, step: _float) -> _range:  # type: ignore
 	...
 
 # --------------------------------------------------
-def remove(collection: list | set, object: Any):
+def remove(collection: _list[Any] | _set[Any], object: Any):
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 	
