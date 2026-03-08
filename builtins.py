@@ -3,15 +3,27 @@
 
 # Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay and @Zoroark-Zwart on the TFWR Discord server.
 
-from typing import Self, Any, overload
+from typing import Self, Any as _Any, overload
 from collections.abc import Iterable, Callable
 from builtins import (bool as _bool, int as _int, float as _float, str as _str,
 					  range as _range,
 					  tuple as _tuple, list as _list, set as _set, dict as _dict)
 
+type Any = (
+    _bool | _int | _float | _str | _range | # Python builtin    - basic types
 
+	_tuple[Any] | _list[Any] |				# Python builtin    - collection types
+    _set[Any] | _dict[Any, Any] |
 
+	Direction | Entity | Entities | 		# Game builtins		- enum classes
+    Ground | Grounds | Hat | Hats |
+    Item | Items | Leaderboard |
+    Leaderboards | Unlock | Unlocks |
 
+	Drone |									# Game builtins		- megafarm classes
+
+    None									# Python builtin	- None
+)
 
 # -------------------------------------------------------------------------------
 # In-Game Enums
@@ -656,13 +668,13 @@ class Unlocks:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-type IterableCollections = (
-	_dict | _list | _set | _tuple | _str |
+type AnyInterable = (
+	_dict[_Any, _Any] | _list[_Any] | _set[_Any] | _tuple[_Any] | _str |
 	Entities | Grounds | Hats | Items | Leaderboard | Unlocks
 )
 
 # --------------------------------------------------
-class dict[key: Any, value: Any](_dict):
+class dict[key: Any, value: Any](_dict[Any, Any]):
 	"""
 	Builds an unordered collection of key-value pairs
 	
@@ -674,7 +686,7 @@ class dict[key: Any, value: Any](_dict):
 	takes `1` tick to execute if no input is given.
 	"""
 
-	def __init__(self: Self, input: dict | None = None) -> None:
+	def __init__(self: Self, input: dict[Any, Any] | None = None) -> None:
 		...
 
 	def len(self: Self) -> _int:
@@ -729,7 +741,7 @@ class dict[key: Any, value: Any](_dict):
 
 
 # --------------------------------------------------
-class list[value: Any](_list):
+class list[index: Any](_list[Any]):
 	"""
 	Builds an ordered sequence of values.
 	
@@ -745,7 +757,7 @@ class list[value: Any](_list):
 	takes `1` tick to execute if no input is given.
 	"""
 
-	def __init__(self: Self, input: IterableCollections | None = None) -> None:
+	def __init__(self: Self, input: AnyInterable | None = None) -> None:
 		...
 
 	def append(self: Self, object: Any) -> None:
@@ -770,7 +782,7 @@ class list[value: Any](_list):
 		"""
 		...
 
-	def insert(self: Self, object: Any, index: _int) -> None:
+	def insert(self: Self, index: _int, object: Any) -> None: # type: ignore
 		"""
 		Add a `object` to the specified `index` to a list provided as `given_list`.
 		
@@ -851,7 +863,7 @@ class list[value: Any](_list):
 
 
 # --------------------------------------------------
-class set[key: Any](_set):
+class set[key: Any](_set[Any]):
 	"""
 	Builds an unordered collection of elements
 	
@@ -867,7 +879,7 @@ class set[key: Any](_set):
 	takes `1` tick to execute if no input is given.
 	"""
 
-	def __init__(self: Self, input: IterableCollections | None = None) -> None:
+	def __init__(self: Self, input: AnyInterable | None = None) -> None:
 		...
 
 	def add(self: Self, object: Any) -> None:
@@ -940,24 +952,24 @@ class set[key: Any](_set):
 	...
 
 # -------------------------------------------------------------------------------
-def add(get_set: _set[Any], object: Any):
+def add(given_set: _set[Any], object: Any):
 	"""
-	Add `object` to the end of a list provided as `given_list`.
+	Add the `object` to a `given_set`.
 	
 	takes `1` tick to execute.
 	
 	example usage:
 	
 	```
-	my_list = [1, 2, 3]
-	my_list.append(4)
-	print(my_list)
+	my_set = {1, 2, 3}
+	my_set.add(4)
+	print(my_set)
 	```
 	
 	Output:
 	
 	```
-	[1,2,3,4]
+	{1,2,3,4}
 	```
 	"""
 	...
@@ -986,7 +998,7 @@ def append(given_list: _list[Any], object: Any):
 	...
 
 # --------------------------------------------------
-def insert(given_list: _list[Any], object: Any):
+def insert(given_list: _list[Any], index: _int, object: Any):
 	"""
 	Add a `object` to the specified `index` to a list provided as `given_list`.
 	
@@ -1516,11 +1528,12 @@ def get_water() -> _float:
 
 
 # --------------------------------------------------
-def num_items(item: Item) -> _float:
+def num_items(item: Item) -> _int | _float:
 	"""
 	Find out how much of `item` you currently have.
 	
 	returns the number of `item` currently in your inventory.
+	`Items.Power` may return a number as float
 	
 	takes `1` tick to execute.
 	
@@ -1591,11 +1604,18 @@ def measure(direction: Direction | None = None) -> _int | _tuple[_int, _int] | N
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def spawn_drone(task: Callable[[], Any]) -> Any:
+class Drone:
+    """
+    A class representing a spawned drone given a task to execute.
+    """
+    ...
+
+# -------------------------------------------------------------------------------
+def spawn_drone(task: Callable[[], Any]) -> Drone:
 	"""
-	Spawns a new drone in the same position as the drone that ran the `spawn_drone(callback)` command. The new drone then begins executing the specified `callback` function. After it is done, it will disappear automatically.
+	Spawns a new drone in the same position as the drone that ran `spawn_drone(task)`. The new drone then begins executing the specified `task` function. After it is done, it will disappear automatically.
 	
-	returns the handle of the new drone or `None` if all drones are already spawned.
+	returns the a `Drone` object for the new drone or `None` if all drones are already spawned.
 	
 	takes `200` ticks to execute if a drone was spawned, `1` otherwise.
 	
@@ -1616,13 +1636,14 @@ def spawn_drone(task: Callable[[], Any]) -> Any:
 
 
 # --------------------------------------------------
-def wait_for(drone: Any) -> Any:
+def wait_for(drone: Drone) -> Any:
 	"""
-	Waits until the given drone terminates.
+	Waits until the given `drone` terminates.
 	
-	returns the return value of the function that the drone was running.
+	returns the return value of the function that the `drone` was running.
 	
-	takes `1` tick to execute if the awaited drone is already done.
+	takes `1 + remaining task ticks` remaining in the given drone's task function.
+	takes `1` tick to execute if the awaited `drone` is already done.
 	
 	example:
 	
@@ -1641,9 +1662,9 @@ def wait_for(drone: Any) -> Any:
 
 
 # --------------------------------------------------
-def has_finished(drone: Any) -> Any:
+def has_finished(drone: Drone) -> _bool:
 	"""
-	Checks if the given drone has finished.
+	Checks if the given 1drone1 has finished.
 	
 	returns `True` if the drone has finished, `False` otherwise.
 	
@@ -1664,6 +1685,8 @@ def has_finished(drone: Any) -> Any:
 # --------------------------------------------------
 def max_drones() -> _int:
 	"""
+	Gets the maximum number of drones available on the farm.
+	
 	returns the maximum number of drones that you can have in the farm.
 	
 	takes `1` tick to execute.
@@ -1682,6 +1705,8 @@ def max_drones() -> _int:
 # --------------------------------------------------
 def num_drones() -> _int:
 	"""
+	Gets the current number of drones running a task on the farm.
+	
 	returns the number of drones currently in the farm.
 	
 	takes `1` tick to execute.
@@ -1794,7 +1819,13 @@ def set_world_size(size: _float) -> None:
 
 
 # --------------------------------------------------
-def simulate(filename: _str, sim_unlocks: dict[Unlocks, _float] | Iterable[Unlocks] | Unlocks, sim_items: dict[Item, _float], sim_globals: dict[_str, Any], seed: _float, speedup: _float) -> _float:
+def simulate(
+		filename: _str,
+		sim_unlocks: dict[Unlocks, _float] | _dict[Unlocks, _float] | Iterable[Unlocks] | Unlocks,
+		sim_items: dict[Item, _float] | _dict[Item, _float],
+		sim_globals: dict[_str, Any] | _dict[_str, Any],
+		seed: _float, speedup: _float
+	) -> _float:
 	"""
 	Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
 	
@@ -1834,7 +1865,7 @@ def simulate(filename: _str, sim_unlocks: dict[Unlocks, _float] | Iterable[Unloc
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_cost(thing: Entity | Item | Unlock, level: _int | None = None) -> dict[Item, _float] | None:
+def get_cost(thing: Entity | Item | Unlock, level: _int | None = None) -> dict[Item, _int] | None:
 	"""
 	Gets the cost of a `thing`
 	
