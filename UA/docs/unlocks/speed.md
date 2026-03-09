@@ -1,24 +1,25 @@
-# Speed Upgrade
-The execution speed has been doubled. The problem is that the drone now harvests faster than the grass can grow resulting in no harvest at all. To deal with this [if](docs/scripting/if.md) branches and the [can_harvest](functions/can_harvest) function are now unlocked.
+# Покращення швидкості
+Швидкість виконання була подвоєна.
+Проблема в тому, що дрон тепер збирає врожай швидше, ніж трава встигає рости, через що можна залишитись без врожаю. Щоб впоратися з цим використовуйте [if](docs/scripting/if.md) гілки та функцію [can_harvest](functions/can_harvest) для перевірки, чи можна збирати рослину.
 
-## Checking Before Harvesting
-So far we only had `True` and `False` as conditions, which is of course not very useful with `if`. 
+## Перевірка перед збиранням
+До цього часу умовами були лише `True` та `False`, що, звичайно, не дуже корисно для використання з `if`. 
 
-The new function can_harvest() provides a better condition. `can_harvest()` returns `True` if the plant under the drone can be harvested and `False` otherwise.
+Нова функція `can_harvest()` дає кориснішу умову. `can_harvest()` повертає `True` якщо рослину під дроном можна зібрати та `False`, якщо зібрати її ще не можна.
 
 `if can_harvest():
-	#do something`
+	#щось робити`
 
-The reason you can use this function as a condition like this is because it returns a boolean value.
+Ви можете використовувати цю функцію як умову, оскільки вона повертає логічне значення.
 
-A return value essentially means that after the functionality is executed, the function call expression evaluates to the returned value.
+Значення, що повертається, по суті означає, що після виконання функції вираз виклику функції обчислюється як значення, що повертається.
 
-What happens when the above code runs:
-	-the if runs
-	-`can_harvest()` is called
-	-`can_harvest()` does its thing
-	-`can_harvest()` returns `True` or `False`
-	-the statement is now `if True:` or `if False:`
-	-the code block is only executed if it can harvest
+Що відбувається при виконанні вищевказаного коду:
+	- запускається `if`;
+	- викликається `can_harvest()`;
+	-`can_harvest()` робить свою справу;
+	-`can_harvest()` повертає `True` або `False`;
+	- умова тепер: `if True:` або `if False:`;
+	- блок коду виконується тільки якщо збір можливий.
 
-Now we can use `if` to prevent the drone from harvesting too early.
+Тепер ми можемо використовувати `if` щоб дрон не починав збирати врожай занадто рано.

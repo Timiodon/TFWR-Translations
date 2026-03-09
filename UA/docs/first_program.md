@@ -1,41 +1,42 @@
-# First Program
-## Text editor
-All programming is done in code windows. Each code window corresponds to a text file containing code. 
-You can rename the file by clicking on it's name at the top of the window.
+# Перша програма
+## Текстовий редактор
+Все програмування виконується у вікнах коду. Кожне вікно коду відповідає текстовому файлу, що містить код. 
+Ви можете перейменувати файл, натиснувши на його назву у верхній частині вікна.
 
-The code can be edited like in any text editor as long as it's not running.
-You can execute the program directly by pressing the green play button in the code window.
+Код можна редагувати як у будь-якому текстовому редакторі, якщо він не запущений.
+Ви можете запустити програму безпосередньо, натиснувши зелену кнопку відтворення у вікні коду.
+
 ![](PlayButton50)
 
-You can create more code files using the "+" button in the upper right corner of the screen.
-You can dock a window to another window by dragging it onto it.
+Ви можете створити більше вікон коду за допомогою кнопки `+` у верхньому правому куті екрана.
+Ви можете прикріпити вікно до іншого вікна, перетягнувши його на нього.
 
-You will notice that once you start typing, a simple code completion window will pop up.
-Press Tab to insert the code completion.
-Use the arrow keys to navigate through the completion options.
+Ви помітите, що як тільки почнете вводити текст, з’явиться просте вікно автозавершення коду.
+Натисніть `Tab`, щоб вставити обраний варіант автозавершення.
+Використовуйте стрілки на клавіатурі, щоб переміщатися між доступними варіантами.
 
-Don't worry if this is your first time programming. The language is unlocked step by step, so you won't be overwhelmed by all the things you can do. 
-The syntax is also similar to that of Python, which is one of the most widely used programming languages in the world, so learning it is not completely wasted.
+Не хвилюйтеся, якщо ви вперше займаєтеся програмуванням. Мова розкривається крок за кроком, тому ви не будете перевантажені всіма можливостями, які вона надає. 
+Синтаксис також схожий на Python, одну з найпоширеніших мов програмування у світі, тому вивчення цієї мови не буде марним.
 
-If you already know Python, it's not a problem either, you'll just be able to skip the early game quickly to get to the more interesting stuff.
+Якщо ви вже знаєте Python, це теж не проблема, ви просто зможете швидко пропустити початок гри, щоб перейти до більш цікавих речей.
 
-Currently, there are two drone commands available.
+Наразі доступні дві команди для дронів:
 
 `harvest()`
 
-and 
+та 
 
 `do_a_flip()`
 
-These are function calls. You can think of a function as a command that can be executed. You execute it using the `()` parentheses.
+Це виклики функцій. Функцію можна розглядати як команду, яку можна виконати. Ви виконуєте її за допомогою дужок `()`.
 
-Try typing these statements in the code window and pressing the execute button.
+Спробуйте ввести ці команди у вікно коду та натиснути кнопку виконання.
 
-You can think of your code as a sequence of statements. You can run multiple statements in a row like this:
+Ви можете розглядати свій код як послідовність команд. Ви можете виконати кілька команд поспіль, наприклад:
 
 `harvest()
 do_a_flip()
 harvest()`
 
-## Unlocks
-Collecting grass will give you hay. Hay can be used to unlock loops in the unlock menu. Open the unlock menu with the button in the top right corner.
+## Розблокування
+Збираючи траву, ви отримаєте сіно. Сіно можна використовувати для розблокування циклів у меню розблокування. Відкрийте меню розблокування за допомогою кнопки у верхньому правому куті.

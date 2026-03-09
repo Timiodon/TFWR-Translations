@@ -1,30 +1,30 @@
-# Senses
-The drone can see now! 
+# Сенсори
+Тепер дрон може бачити! 
 
-The functions `get_pos_x()` and `get_pos_y()` return the current x and y position of the drone. At the start position they are both `0`. The x position increases by `1` every tile towards `East` and the y position increases by `1` every tile towards `North`.
+Функції `get_pos_x()` і `get_pos_y()` повертають поточні `x` та `y` координати дрона. На стартовій позиції обидва значення дорівнюють `0`. Координата `x` збільшується на `1` за кожну клітинку в напрямку `East`. Координата `y` збільшується на `1` за кожну клітинку в напрямку `North`.
 
-`num_items(item)` returns how many of an item you have.
-For example `num_items(Items.Hay)` returns how much hay you have.
+`num_items(item)` повертає кількість певного предмета, яку ви маєте.
+Наприклад, `num_items(Items.Hay)` повертає кількість наявного сіна.
 
-`get_entity_type()` and `get_ground_type()` return the type of entity or ground that is under the drone.
+`get_entity_type()` і `get_ground_type()` повертають відповідно тип об'єкта та ґрунту під дроном.
 
-Do a flip if you are over a bush:
+Зробити переворот, якщо під дроном кущ:
+
 `if get_entity_type() == Entities.Bush:
 	do_a_flip()`
 
-The `None` keyword is also unlocked now! `None` is a value that represents that there is no value.
-For example, a function that has no `return` statement will actually return `None`.
+Ключове слово `None` також розблоковано! `None` — це значення, яке означає відсутність значення.
+Наприклад, функція, яка не має `return` поверне `None`.
 
-`get_entity_type()` returns `None` if there is no entity under the drone.
+`get_entity_type()` повертає `None`, якщо під дроном немає жодної сутності.
 
+Щоб дізнатись, скільки разів було розблоковано певне покращення, використовуйте функцію `num_unlocked(unlock)`.
 
-If you want to find out how many of a particular unlock you have, use the `num_unlocked(unlock)` function.
+Наприклад, `num_unlocked(Unlocks.Speed)` поверне кількість покращень швидкості.
 
-For example, `num_unlocked(Unlocks.Speed)` will return the number of speed upgrades you have.
+`num_unlocked(Unlocks.Senses)` поверне `1`, якщо сенсори розблоковані або `0`, якщо ні.
 
-`num_unlocked(Unlocks.Senses)` will return `1` if senses are unlocked and `0` if they are not.
+Ви також можете використовувати `num_unlocked()` для Предметів, Сутностей чи Ґрунтів. Функція поверне `1`, якщо об'єкт розблоковано; інакше поверне `0`.
 
-You can also use `num_unlocked()` on Items, Entities or Grounds. This will return `1` if it's unlocked otherwise `0`.
-
-Be careful `num_unlocked(Unlocks.Carrots)` will return the number of times it was unlocked/upgraded.
-`num_unlocked(Items.Carrot)` will only return `0` or `1`. (Same for other plants)
+Важливо: `num_unlocked(Unlocks.Carrots)` повертає кількість разів, коли це розблокування було покращено.
+`num_unlocked(Items.Carrot)` повертає лише `0` або `1`. (Для інших рослин аналогічно.)

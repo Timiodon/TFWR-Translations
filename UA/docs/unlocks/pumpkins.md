@@ -1,19 +1,19 @@
-# Pumpkins
-[Pumpkins](objects/pumpkin) grow like carrots on tilled soil. Planting them costs carrots.
+# Гарбузи
+[Гарбузи](objects/pumpkin) ростуть так само, як і морква, — на зораному ґрунті. Їх висаджування коштує моркви.
 
-When all the pumpkins in a square are fully grown, they will grow together to form a giant pumpkin. Unfortunately, pumpkins have a 20% chance of dying once they are fully grown, so you will need to replant the dead ones if you want them to merge. 
+Коли всі гарбузи в квадраті повністю виростають, вони зливаються в один гігантський гарбуз. На жаль, після повного дозрівання гарбуз має 20% шанс загинути, тому вам доведеться викорчовувати загиблі, якщо ви хочете, щоб вони об’єдналися.
 
-When a pumpkin dies, it leaves behind a dead pumpkin that won't drop anything when harvested. Planting a new plant in its place automatically removes the dead pumpkin, so there is no need to harvest it. `can_harvest()` always returns `False` on dead pumpkins.
+Коли гарбуз гине, він залишає після себе мертвий гарбуз, який нічого не дає під час збирання. Якщо посадити нову рослину на його місці, мертвий гарбуз автоматично зникає, тому збирати його не потрібно. `can_harvest()` завжди повертає `False` для мертвих гарбузів.
 
-The yield of a giant pumpkin depends on the size of the pumpkin.
+Кількість урожаю з гігантського гарбуза залежить від його розміру:
 
-A 1x1 pumpkin yields `1*1*1 = 1` pumpkins.
-A 2x2 pumpkin yields `2*2*2 = 8` pumpkins instead of `4`.
-A 3x3 pumpkin yields `3*3*3 = 27` pumpkins instead of `9`.
-A 4x4 pumpkin yields `4*4*4 = 64` pumpkins instead of `16`.
-A 5x5 pumpkin yields `5*5*5 = 125` pumpkins instead of `25`.
-A `n`x`n` pumpkin yields `n*n*6` pumpkins for `n >= 6`.
+Гарбуз 1x1 дає `1*1*1 = 1` гарбуз.
+Гарбуз 2x2 дає `2*2*2 = 8` гарбузів замість `4`.
+Гарбуз 3x3 дає `3*3*3 = 27` гарбузів замість `9`.
+Гарбуз 4x4 дає `4*4*4 = 64` гарбузи замість `16`.
+Гарбуз 5x5 дає `5*5*5 = 125` гарбузів замість `25`.
+Гарбуз `n`x`n` дає `n*n*6` гарбузів для `n >= 6`.
 
-It's a good idea to get at least 6x6 size pumpkins to get the full multiplier. 
+Рекомендується вирощувати гарбузи розміром щонайменше 6x6.
 
-This means that even if you plant a pumpkin on every tile in a square, one of the pumpkins may die and prevent the mega pumpkin from growing.
+Це означає, що навіть якщо ви посадите гарбуз на кожній клітинці квадрата, один із них може загинути й завадити виростанню мегагарбуза.

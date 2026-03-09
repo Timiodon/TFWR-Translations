@@ -1,129 +1,164 @@
-# Leaderboard
-If you have made it this far, you have overcome many challenges. But have you solved them efficiently? 
-You can compete with other players on various leaderboards for the most efficient farming methods.
+# Таблиця лідерів
+Якщо ви зайшли так далеко, то вже подолали багато викликів. Але чи зробили ви це ефективно?
+Ви можете змагатися з іншими гравцями в різних таблицях лідерів за найефективніші методи фермерства.
 
-You can start a leaderboard run by calling `leaderboard_run(leaderboard, filename, speedup)`.
-This starts a [simulation](docs/unlocks/simulation.md) similar to `simulate()` except that the starting conditions are fixed. Each leaderboard category has different start and success conditions.
+Ви можете почати забіг у таблиці лідерів, використавши: `leaderboard_run(leaderboard, filename, speedup)`.
+Це запускає [симуляцію](docs/unlocks/simulation.md) подібно до `simulate()` , але з фіксованими початковими умовами. Кожна категорія має власні стартові умови та умови для успіху.
 
-The leaderboard run succeeds if the success condition is `True` when the simulation ends. 
+Забіг вважається успішним, якщо умова для успіху дорівнює `True` на момент завершення симуляції. 
 
-The simulation will NOT end automatically when the goal is reached. You must make sure that the program terminates.
-If the run is successful, your time will be added to the leaderboard.
+Симуляція НЕ завершується автоматично, коли ціль досягнута. Ви повинні самі подбати про завершення програми.
+Якщо забіг успішний, ваш час буде додано до таблиці лідерів.
 
-To reduce variance, all runs are required to run for at least 2 hours (You can speed it up, so it won't take that long). If a run is completed earlier, it will be repeated until a total time of 2 hours is reached. The average of all runs is then uploaded as your score.
+Щоб зменшити випадковість результатів, кожен забіг має тривати щонайменше 2 години (можна прискорити, тому це не займе реального часу). Якщо забіг завершується раніше, його буде повторено, доки загальний час не досягне 2 годин. Потім завантажується середній результат усіх спроб.
 
-Here's an example setup that will get you on the hay leaderboard.
+Ось приклад налаштування, який дозволить вам потрапити в таблицю лідерів сіна.
 ![](LeaderboardSetup400)
 
-## Fastest Reset
-The fastest reset is the most prestigious category. Completely automate the game from a single farm plot to unlocking the leaderboards again.
+## Швидке скидання
+Швидке скидання – це найпрестижніша категорія. Повністю автоматизуйте гру від однієї фермерської ділянки до повторного розблокування таблиці лідерів.
 
-You do not have to unlock everything, just try to unlock `Unlocks.Leaderboard` as fast as possible.
+Вам не потрібно розблоковувати все, просто спробуйте розблокувати `Unlocks.Leaderboard` якомога швидше.
 
-Remember that you can use `num_unlocked(unlock) > 0` to check if something is unlocked and you can use `get_cost()` on unlocks to see what they cost so you can automatically farm the right items.
+Пам'ятайте, що ви можете використовувати  `num_unlocked(unlock) > 0`, щоб перевірити, чи щось розблоковано, а також `get_cost()`, щоб подивитися вартість відкриття для автоматичного збирання потрібних ресурсів.
 
-Function Call:
+Виклик функції:
+
 `leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
 
-Equivalent Simulation:
+Еквівалентна симуляція:
+
 `unlocks = {}
 items = {}
 globals = {}
-#a negative seed value means a random seed
+#негативне значення сіда означає випадковий сід
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Умова для успіху:
+
 `num_unlocked(Unlocks.Leaderboard) > 0`
 
-## Maze
-Start with everything unlocked and farm `9863168` gold as fast as you can. This is exactly the amount of gold you will earn by reusing one 32x32 maze `300` times.
+## Лабіринт
+Почніть з усіма відкритими можливостями та назбирайте `9863168` золота якнайшвидше. Саме стільки золота ви назбираєте, використовуючи один лабіринт 32x32 `300` разів.
 
-Function Call:
+Виклик функції:
+
 `leaderboard_run(Leaderboards.Maze, filename, speedup)`
 
-Equivalent Simulation:
+Еквівалентна симуляція:
+
 `unlocks = Unlocks
 items = {Items.Weird_Substance : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Умова для успіху:
+
 `num_items(Items.Gold) >= 9863168`
 
-## Dinosaur
-Start with everything unlocked and farm `33488928` bones as fast as you can. This is exactly the number of bones you will get if you fill a 32x32 area with the dinosaur tail.
+## Динозавр
+Почніть з усіма відкритими можливостями та назбирайте `33488928` кісток якнайшвидше. Саме стільки кісток ви отримаєте, якщо заповните область 32x32 хвостом динозавра.
 
-Function Call:
+Виклик функції:
+
 `leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
 
-Equivalent Simulation:
+Еквівалентна симуляція:
+
 `unlocks = Unlocks
 items = {Items.Cactus : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
 simulate(filename, unlocks, items, globals, seed, speedup)`
 
-Success Condition:
+Умова для успіху:
+
 `num_items(Items.Bone) >= 33488928`
 
-## Other Resource Leaderboards
-Each plant has its own leaderboard for farming that particular plant as quickly as possible. You start with all the unlocks, the resources you need to grow the plant, and lots of power. The goal is to farm a set amount of the resource produced by the plant.
+## Таблиці лідерів для інших ресурсів
+Кожна рослина має власну таблицю лідерів. Ви стартуєте з усіма відкритими можливостями, необхідними ресурсами та великою кількістю енергії. Мета — назбирати визначену кількість ресурсу.
 
-As always, you need to make sure that your program terminates when you reach the goal. A run is not finished until the program ends, even if the goal is reached.
+Як завжди, ви повинні завершити програму, коли досягаєте мети. Виконання умов не вважається завершеним, доки програма не завершиться, навіть якщо мету досягнуто.
 
 ### `Leaderboards.Cactus`
+
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
-Success Condition: `num_items(Items.Cactus) >= 33554432`
+
+Умова для успіху: `num_items(Items.Cactus) >= 33554432`
 
 ### `Leaderboards.Sunflowers`
+
 `leaderboard_run(Leaderboards.Sunflowers, filename, speedup)`
-Success Condition: `num_items(Items.Power) >= 100000`
+
+Умова для успіху: `num_items(Items.Power) >= 100000`
 
 ### `Leaderboards.Pumpkins`
+
 `leaderboard_run(Leaderboards.Pumpkins, filename, speedup)`
-Success Condition: `num_items(Items.Pumpkin) >= 200000000`
+
+Умова для успіху: `num_items(Items.Pumpkin) >= 200000000`
 
 ### `Leaderboards.Wood`
+
 `leaderboard_run(Leaderboards.Wood, filename, speedup)`
-Success Condition: `num_items(Items.Wood) >= 10000000000`
+
+Умова для успіху: `num_items(Items.Wood) >= 10000000000`
 
 ### `Leaderboards.Carrots`
+
 `leaderboard_run(Leaderboards.Carrots, filename, speedup)`
-Success Condition: `num_items(Items.Carrot) >= 2000000000`
+
+Умова для успіху: `num_items(Items.Carrot) >= 2000000000`
 
 ### `Leaderboards.Hay`
-`leaderboard_run(Leaderboards.Hay, filename, speedup)`
-Success Condition: `num_items(Items.Hay) >= 2000000000`
 
-## Single Drone Leaderboards
-There are also Leaderboards for farming with a single drone. You only get one drone and an 8x8 farm and have to farm a certain amount of resources as quickly as possible.
+`leaderboard_run(Leaderboards.Hay, filename, speedup)`
+
+Умова для успіху: `num_items(Items.Hay) >= 2000000000`
+
+## Таблиці лідерів для одного дрона
+Також є таблиці лідерів для фермерства з одним дроном. Ви отримуєте лише один дрон та ферму 8x8, і вам потрібно якомога швидше зібрати певну кількість ресурсів.
 
 ### `Leaderboards.Maze_Single`
+
 `leaderboard_run(Leaderboards.Maze_Single, filename, speedup)`
-Success Condition: `num_items(Items.Gold) >= 616448`
+
+Умова для успіху: `num_items(Items.Gold) >= 616448`
 
 ### `Leaderboards.Cactus_Single`
+
 `leaderboard_run(Leaderboards.Cactus_Single, filename, speedup)`
-Success Condition: `num_items(Items.Cactus) >= 131072`
+
+Умова для успіху: `num_items(Items.Cactus) >= 131072`
 
 ### `Leaderboards.Sunflowers_Single`
+
 `leaderboard_run(Leaderboards.Sunflowers_Single, filename, speedup)`
-Success Condition: `num_items(Items.Power) >= 10000`
+
+Умова для успіху: `num_items(Items.Power) >= 10000`
 
 ### `Leaderboards.Pumpkins_Single`
+
 `leaderboard_run(Leaderboards.Pumpkins_Single, filename, speedup)`
-Success Condition: `num_items(Items.Pumpkin) >= 10000000`
+
+Умова для успіху: `num_items(Items.Pumpkin) >= 10000000`
 
 ### `Leaderboards.Wood_Single`
+
 `leaderboard_run(Leaderboards.Wood_Single, filename, speedup)`
-Success Condition: `num_items(Items.Wood) >= 500000000`
+
+Умова для успіху: `num_items(Items.Wood) >= 500000000`
 
 ### `Leaderboards.Carrots_Single`
+
 `leaderboard_run(Leaderboards.Carrots_Single, filename, speedup)`
-Success Condition: `num_items(Items.Carrot) >= 100000000`
+
+Умова для успіху: `num_items(Items.Carrot) >= 100000000`
 
 ### `Leaderboards.Hay_Single`
+
 `leaderboard_run(Leaderboards.Hay_Single, filename, speedup)`
-Success Condition: `num_items(Items.Hay) >= 100000000`
+
+Умова для успіху: `num_items(Items.Hay) >= 100000000`

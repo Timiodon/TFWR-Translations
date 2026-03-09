@@ -1,14 +1,15 @@
-# Watering
-Plants grow faster when they are watered. The ground has a water level ranging from `0` to `1`.
-The function `get_water()` returns the water level of the ground it is over.
+# Полив
+Рослини ростуть швидше, коли їх поливають. Ґрунт має рівень вологості в діапазоні від `0` до `1`.
+Функція `get_water()` поливає ґрунт під об’єктом.
 
-The growth speed of a plant scales linearly from 1x speed at water level 0 to 5x speed at water level 1.
+Швидкість росту рослин масштабується лінійно: від 1× при рівні вологості 0 до 5× при рівні вологості 1.
 
-The ground dries up over time: On average, it loses 1% of its current water per second, but there is some random variance to this. Maintaining a high water level will consume much more water than maintaining a low water level.
+Ґрунт висихає з часом: у середньому він втрачає 1% від поточного рівня вологості за секунду, але з невеликою випадковою варіацією. Підтримання високого рівня вологості витрачає значно більше води, ніж підтримання низького.
 
-You can use water on your plants. One tank of water is automatically added to your inventory every 10 seconds.
-Upgrading `Unlocks.Watering` will double the amount of water you get every 10 seconds.
+Ви можете використовувати воду для поливу рослин.
+Кожні 10 секунд ви отримуєте бак з водою.
+Покращення `Unlocks.Watering` подвоює кількість води, яку ви отримуєте кожні 10 секунд.
 
-A tank holds `0.25` water.
+Один бак містить `0.25` води.
 
-Call `use_item(Items.Water)` over any ground to water the ground.
+Використайте `use_item(Items.Water)` над ґрунтом, щоб полити його.

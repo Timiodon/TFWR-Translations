@@ -1,12 +1,13 @@
-# Comments
-Comments are parts of the code that are ignored during execution.
-Comments can be added using `#`. Anything on the same line after the `#` is a comment and will be ignored.
+# Коментарі
+Коментарі — це частини коду, які ігноруються під час виконання програми.
+Коментарі можна додати за допомогою символу `#`. Усе, що знаходиться в тому ж рядку після `#`, вважається коментарем і не виконується:
 
-`#this is a comment`
+`#це коментар`
 
-This can be useful to add notes to the code, and also to temporarily disable parts of the code without deleting them.
+Коментарі корисні для додавання нотаток до коду, а також для тимчасового вимкнення його частин без видалення.
 
-Any comment on the line before a function definition will be part of the popup information that appears when you mouse over the function name.
-`#This function does nothing.
+Будь-який коментар у рядку перед оголошенням функції стає частиною спливаючої підказки, яка з'являється при наведенні курсора на назву функції:
+
+`#Ця функція нічого не робить.
 def f():
     pass`

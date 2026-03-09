@@ -1,59 +1,62 @@
-# Import
-Putting all your code in a single file quickly becomes unmanageable. 
-`import` statements allow you to import functions and global variables from another file.
-How it works in one screenshot:
+# Імпорт
+Зберігати весь код в одному файлі дуже швидко стає незручно. 
+Оператори `import` дозволяють імпортувати функції та глобальні змінні з іншого файлу.
+Як це працює — на одному знімку екрану:
+
 ![](ImportsInOnePicture400)
 
-Here `import module2` runs the file named `module2` and gives you access to all its globals.
-You can then access variables and functions within the imported module using the `.` operator.
-So in this example, `module2.print_x()` calls `print_x()` in `module2`.
+Тут `import module2` виконує файл з назвою `module2` і надає доступ до всіх глобальних змінних.
+Після цього ви можете звертатися до змінних і функцій імпортованого модуля за допомогою оператора `.`.
+Тож, у цьому прикладі, `module2.print_x()` викликає функцію `print_x()` з модуля `module2`.
 
-### No need to read further
+### Далі читати необов'язково
 
-You can also move the globals from the imported module into the current scope where the import statement is executed using the `from` syntax.
+Ви також можете перенести глобальні змінні з імпортованого модуля в поточну область видимості, використовуючи синтаксис `from`:
 
 `from module2 import print_x
 print_x()`
-Imports only the specified globals from `module2`.
 
-or
+Імпортує лише вказані глобальні об'єкти з `module2`.
+
+або:
 
 `from module2 import *
 print_x()`
-Imports all globals from `module2`.
 
-This also imports the `module2` file, but instead of accessing it through a variable named `module2`, it unpacks globals from `module2` and assigns them directly in the local scope.
+Імпортує всі глобальні об'єкти з `module2`.
 
-This form of import is usually not recommended because it doesn't work well when two files import each other, and you may accidentally overwrite variables in the importing file due to name collisions. It's safer to avoid the `from` syntax if you don't know what you're doing.
+Тут також імпортується файл `module2`, але замість доступу через змінну з ім'ям `module2`, глобальні об'єкти з `module2` розпаковуються та безпосередньо додаються до локальної області видимості.
 
-# How it really works
+Такий спосіб імпорту зазвичай не рекомендується, оскільки він погано працює, коли два файли імпортують один одного, і ви можете випадково перезаписати змінні через конфлікти імен. Краще уникати синтаксису `from`, якщо ви не впевнені, що робите.
 
-## TLDR
-Imports can be quite unintuitive, but most problems can be avoided by sticking to the `import file` syntax instead of `from file import`, and wrapping everything that isn't a global definition in
+# Як це працює
+
+## Надто довго,не читав
+Імпорти можуть бути неінтуїтивними, але більшості проблем можна уникнути, якщо використовувати `import file` замість `from file import` і обгортати весь код, який не є глобальними визначеннями, в
 `if __name__ == "__main__":`
 
-## Import Side Effects
-The first time you import a file, it will execute the entire file and then give you access to all variables that have been defined during the execution.
-If you import the same file again, it will just return the cached module from the first time again.
+## Побічні ефекти імпорту
+Під час першого імпорту файлу він повністю виконується, після чого ви отримуєте доступ до всіх змінних, визначених під час виконання.
+Якщо імпортувати той самий файл повторно, буде повернено закешований модуль з першого імпорту — файл повторно не виконується.
 
-This means that import statements can have side effects. If you import a file that calls `harvest()`, it will actually harvest during the import. But when you import it again, it won't harvest again because the file is only run once.
+Це означає, що імпорт може мати побічні ефекти. Якщо імпортований файл викликає `harvest()`, збір відбудеться під час імпорту. Але при повторному імпорті збір не повториться, так як файл виконується лише один раз.
 
-There is a way to avoid such side effects using the `__name__` variable. This is a variable that is automatically set to `"__main__"` when a file is run directly, and to the name of the file when a file is run through `import`.
-It is considered good practice to put any code that you don't want to run when the file is imported inside of a `if __name__ == "__main__":` block.
+Існує спосіб уникнути таких побічних ефектів за допомогою змінної `__name__`. Це змінна, яка автоматично встановлюється в `"__main__"`, коли файл запускається напряму, і в назву — коли запускається через `import`.
+Вважається хорошою практикою розміщувати код, який не повинен виконуватися при імпорті, всередині блоку `if __name__ == "__main__":`.
 
-A common file structure in Python is to put the code that should be executed when the file is run into a `main()` function. This way you have a clear distinction between local variables (defined inside `main()`) and global variables that can be imported (defined outside `main()`).
+Поширена структура Python-файлу — поміщати код, який має виконуватися при запуску файлу, у функцію `main()`. Таким чином чітко відділяються локальні змінні (визначені в `main()`) від глобальних змінних, які можна імпортувати (визначені поза `main()`).
 
 `a_global_variable = "global"
 
 def main():
     a_local_variable = "local"
-    # do things
+    # щось зробити
 
 if __name__ == "__main__":
     main()`
 
-## Import Cycles
-What happens if file `a` imports file `b` and file `b` imports file `a`?
+## Цикли імпорту
+Що станеться, якщо файл `a` імпортує файл `b`, а файл `b` імпортує файл `a`?
 
 file `a`:
 `import b
@@ -64,18 +67,18 @@ file `b`:
 def f():
     print(a.x)`
 
-This will work fine. Let's say neither of the two files are loaded yet, and someone else executes `import a`.
+Це працюватиме коректно. Припустимо, жоден з файлів ще не завантажений, і хтось виконує `import a`:
 
--`a` runs until the `import b` line.
--`b` runs until the `import a` line.
--The module `a` already exists, but doesn't contain `x` because it has only reached the `import b` line.
--`b` stores a reference to the half-loaded module `a` in a variable called `a`.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-`a` виконується до рядка `import b`;
+-`b` виконується до рядка `import a`;
+- Модуль `a` вже існує, але ще не містить `x`, бо не дійшов до рядка `import b`;
+-`b` зберігає посилання на частково завантажений модуль `a` у змінній `a`;
+-`b` виконує `def` і зберігає функцію `f()`;
+-`a` продовжує виконання та ініціалізує `x`.
 
-When someone calls `b.f()` it will correctly print `0` because the module `a` that `b` has a reference to is now fully loaded.
+Коли хтось викликає `b.f()`, буде коректно виведено `0`, оскільки модуль `a`, на який посилається `b`, уже повністю завантажений.
 
-Now consider the same code using the `from` syntax.
+Тепер розглянемо той самий код з використанням синтаксису `from`:
 
 file `a`:
 `from b import *
@@ -86,11 +89,11 @@ file `b`:
 def f():
     print(x)`
 
--`a` runs until the `from b import *` line.
--`b` runs until the `from a import *` line.
--The module `a` already exists, but hasn't been fully executed yet.
--`b` unpacks everything that is currently in `a` into it's own global scope. At this point, `a` contains nothing because it hasn't reached the `x = 0` line yet, so nothing is imported.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-`a` виконується до рядка `from b import *`;
+-`b` виконується до рядка `from a import *`;
+- модуль `a` вже існує, але ще не виконаний повністю;
+-`b` розпаковує все, що на цей момент є в `a` , у власну глобальну область видимості. На цьому етапі `a` не містить нічого, так як ще не досягнуло рядка `x = 0`, тому нічого не імпортується;
+-`b` виконує `def` і зберігає функцію `f()`;
+-`a` продовжує виконання та ініціалізує `x`.
 
-If someone now calls `b.f()`, they will get an error that `x` doesn't exist in the current scope. This is because this time `b` does not have a reference to the still-loading `a` and does not see definitions that were added after the import.
+Якщо хтось викликає `b.f()`, виникне помилка, що `x` не існує в поточній області видимості. Це відбувається тому, що цього разу `b` не має посилання на ще не завантажений `a` і не бачить визначень, доданих після імпорту.

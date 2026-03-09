@@ -1,8 +1,10 @@
-# Auto Unlocks
-To fully automate the game, you can use the `unlock()` function to automatically unlock features.
-For example, you can use `unlock(Unlocks.Speed)` and `unlock(Unlocks.Expand)` to unlock the speed and expansion features.
+# Автоматичні розблокування
+Щоб повністю автоматизувати гру, ви можете використовувати `unlock()` функцію для автоматичного розблокування можливостей.
+Наприклад, ви можете використати `unlock(Unlocks.Speed)` та `unlock(Unlocks.Expand)` , щоб розблокувати можливості швидкості та розширення.
 
-To determine the cost of an unlock, simply use the `get_cost()` function as you would for a plant or item.
-Example:
+Щоб дізнатися вартість розблокування, просто скористайтеся функцією `get_cost()` так само, як для рослини або предмета.
+Приклад:
+
 `get_cost(Unlocks.Loops)`
-returns `{Items.Hay:5}`
+
+повертає `{Items.Hay:5}`

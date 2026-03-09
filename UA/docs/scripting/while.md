@@ -1,56 +1,56 @@
-# While Loop
-You have unlocked the `while` loop and the values `True` and `False`. The `while` loop keeps executing the loop body as long as the condition is `True`.
+# Цикл while
+Ви розблокували цикл `while` та значення `True` і `False`. Цикл `while` виконує тіло циклу доти, доки умова дорівнює `True`:
 
 `while condition:
-	#loop body`
+	#тіло циклу`
 
-Don't worry about creating infinite loops. The delays in the execution will prevent the program from freezing.
+Не хвилюйтесь щодо створення нескінченних циклів. Затримки виконання запобігають зависанню програми.
 
-## For Beginners
-Perhaps you have already tried to put several `harvest()` calls in a row:
+## Для новачків
+Можливо, ви вже пробували написати кілька викликів `harvest()` підряд:
 
 `harvest()
 harvest()
 harvest()`
 
-This allows you to harvest several times in one program run. 
-However, it would be nice to harvest more than three times, and writing the same code multiple times is bad practice. 
-The solution is a loop. 
-A loop allows you to run the same code multiple times.
+Це дозволяє зібрати врожай кілька разів за один запуск програми. 
+Хоча, якщо потрібно зробити це більше ніж три рази, повторювати одинаковий код — погана практика. 
+Рішенням є цикл. 
+Цикл дозволяє виконувати один і той самий код багато разів.
 
-The while loop takes a condition, which is a logical value that can only be in one of two states: `True` or `False`. 
-Such a value is called a Boolean value.
+Цикл `while` приймає умову — логічне значення, яке може бути лише в одному з двох станів: `True` або `False`. 
+Таке значення називається булевим.
 
-The loop then executes the code inside the loop until the condition is False.
-The while loop looks like this:
+Цикл виконує код всередині циклу, поки умова не прийме значення `False`.
+Цикл `while` виглядає так:
 
 `while condition:
-	#loop body
-	#loop body
+	#тіло циклу
+	#тіло циклу
 	#...`
 	
-Where you have to replace "condition" with a boolean value and `#loop body` with whatever you want to do in the loop.
+Потрібно замінити `condition` на булеве значення або вираз, а `#тіло циклу` — на код, який ви хочете виконувати.
 
-There are two constant boolean values available. Constants are values that never change during the program.
+У вас є два постійні булеві значення (константи). Константи — це значення, які не змінюються під час виконання програми.
 
-To create a constant boolean value that is always `True`, you can simply write `True`. Write `False` as a constant boolean value that will always be `False`.
-So you could either write
+Щоб створити константу, яка завжди дорівнює `True`, можна просто написати `True`. Напишіть `False` для створення константи, яка завжди дорівнює `False`.
+Тож ви можете написати або
 
 
 `while False:
 	do_a_flip()`
 
-or
+або
 
 `while True:
 	do_a_flip()`
 
-The first will never do a flip and the second will do flips forever (an infinite loop). 
+Перший код ніколи не виконає переворот, а другий виконуватиме перевороти бескінечно (нескінченний цикл). 
 
-Normally creating an infinite loop is a bad idea because it will freeze the program, but in this game there are delays between each iteration of the loop, so it will cause the drone to keep doing a flip until you manually stop it by pressing the execute button again.
+Зазвичай нескінченний цикл — це погана ідея, так як через них програма може зависнути, але в цій грі між ітераціями є затримки, тому дрон буде продовжувати виконувати дії, доки ви вручну не зупините виконання (натиснувши кнопку `Execute` повторно).
 
-Notice how the line after the colon is indented. Indentation like this is used to separate blocks of code.
-Just press Tab to add indentation and Shift + Tab (or Backspace) to remove it.
+Зверніть увагу, що рядки після двокрапки мають відступ. Подібні відступи використовуються для позначення блоку коду.
+Натисніть `Tab`, щоб додати відступ і `Shift + Tab` (або `Backspace`), щоб його видалити.
 
-The loop will repeat all indented statements after the colon.
-Statements after the indented block will be executed after the loop has finished.
+Цикл повторить всі рядки з відступом після двокрапки.
+Код після блоку з відступом виконується вже після завершення циклу.

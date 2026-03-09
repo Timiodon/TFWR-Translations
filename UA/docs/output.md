@@ -1,3 +1,3 @@
-For the full output see [output.txt](persistent_data_path/output.txt).
-Truncated Output:
+Повний вивід див. [output.txt](persistent_data_path/output.txt).
+Скорочений вивід:
 {{output}}

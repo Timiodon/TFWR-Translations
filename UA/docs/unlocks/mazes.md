@@ -1,71 +1,72 @@
-# Mazes
-`Items.Weird_Substance`, which is obtained by [fertilizing](docs/unlocks/fertilizer.md) plants, has a strange effect on bushes. If the drone is over a bush and you call `use_item(Items.Weird_Substance, amount)` the bush will grow into a maze of hedges.
-The size of the maze depends on the amount of `Items.Weird_Substance` used (the second argument of the `use_item()` call).
-Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n` maze. Each maze upgrade level doubles the treasure, but it also doubles the amount of `Items.Weird_Substance` needed. 
-So to make a full field maze:
+# Лабіринти
+`Items.Weird_Substance`, який отримується шляхом [внесення добрив](docs/unlocks/fertilizer.md) на рослини, має дивний ефект на кущах. Якщо дрон знаходиться над кущем і ви викликаєте `use_item(Items.Weird_Substance, amount)`, кущ перетвориться на лабіринт з живоплоту.
+Розмір лабіринту залежить від кількості використаного `Items.Weird_Substance` (другий аргумент у виклику `use_item()`).
+Без покращень лабіринту, використання `n` `Items.Weird_Substance` створить лабіринт розміром `n`x`n`.Кожен рівень покращення лабіринту подвоює кількість скарбів, але також подвоює необхідну кількість`Items.Weird_Substance`.
+Отже, щоб створити повноцінний лабіринт:
 
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 
+З якоїсь причини дрон не може літати над живоплотом, навіть якщо він не здається високим.
 
-For some reason the drone can't fly over the hedges, even though they don't look that high.
+Десь у лабіринті ховається скарб. Використайте `harvest()` на скарбі, щоб отримати золото, рівне площі лабіринту (наприклад, лабіринт 5×5 дає 25 золота).
 
-There is a treasure hidden somewhere in the hedge. Use `harvest()` on the treasure to receive gold equal to the area of the maze. (For example, a 5x5 maze will yield 25 gold.)
+Якщо ви використаєте `harvest()` в іншому місці, лабіринт просто зникне.
 
-If you use `harvest()` anywhere else the maze will simply disappear.
+`get_entity_type()` повертає `Entities.Treasure`, якщо дрон знаходиться над скарбом, і `Entities.Hedge` для всіх інших клітин лабіринту.
 
-`get_entity_type()` is equal to `Entities.Treasure` if the drone is over the treasure and `Entities.Hedge` everywhere else in the maze.
+Лабіринти не містять циклів, якщо ви не повторно використовуєте лабіринт (див. нижче, як повторно використовувати лабіринт). Тому дрон не може опинитися в тій самій позиції вдруге, не повертаючись назад.
 
-Mazes do not contain any loops unless you reuse the maze (see below how to reuse a maze). So there is no way for the drone to end up in the same position again without going back.
+Можна перевірити наявність стіни, спробувавши пройти через неї.
+`move()` повертає `True`, якщо вдалось пройти, та `False` якщо ні.
 
-You can check if there is a wall by trying to move through it. 
-`move()` returns `True` if it succeeded and `False` otherwise.
+`can_move()` дозволяє перевірити, чи є стіна, не рухаючись.
 
-`can_move()` can be used to check if there is a wall without moving.
+Якщо ви не знаєте, як дістатися до скарбу, перегляньте підказку 1. Вона показує, як підходити до таких проблем.
 
-If you have no idea how to get to the treasure, take a look at Hint 1. It shows you how to approach a problem like this.
+Використання `measure()` в будь-якому місці лабіринту повертає позицію скарбу:
 
-Using `measure()` anywhere in the maze returns the position of the treasure.
 `x, y = measure()`
 
-For an extra challenge you can also reuse the maze by using the same amount of `Items.Weird_Substance` on the treasure again. 
-This will collect the treasure and spawn a new treasure at a random position in the maze.
+Для додаткового виклику можна повторно використовувати лабіринт, застосувавши ту ж кількість `Items.Weird_Substance` на скарб ще раз.
+Це збирає скарб і створює новий скарб у випадковій позиції в лабіринті.
 
-Each time the treasure is moved, some of the maze's walls may be randomly removed. So reused mazes can contain loops.
+Кожного разу, коли скарб переміщується, деякі стіни лабіринту можуть бути випадково видалені. Тому повторно використані лабіринти можуть містити цикли.
 
-Note that loops in the maze make it much more difficult because it means that you can get to the same location again without moving back.
-Reusing a maze doesn't give you more gold than just harvesting and spawning a new maze.
-This is 100% an extra challenge that you can just skip.
-It's only worth it if the extra information and the shortcuts help you solve the maze faster.
+Зверніть увагу, що цикли у лабіринті ускладнюють задачу, оскільки можна опинитися в тій самій позиції вдруге без повернення назад.
+Повторне використання лабіринту не дає більше золота, ніж просто зібрати скарб і створити новий лабіринт.
+Це 100% додатковий виклик, який можна пропустити.
+Варто робити його лише тоді, якщо додаткова інформація та скорочені шляхи допомагають швидше вирішити лабіринт.
 
-The treasure can be relocated up to 300 times. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
+Скарб можна переміщати до 300 разів. Після цього застосування дивної речовини на скарб більше не збільшить золото і скарб не переміщуватиметься.
 
-<spoiler=show hint 1>Here's a general approach to solving the problem:
+<spoiler=show hint 1>Ось загальний підхід до розв’язання проблеми:
 
-Create a maze and imagine that you are the drone.
+Створіть лабіринт і уявіть, що ви дрон.
 
-Think about how you would try to find the treasure if you were in the maze.
+Подумайте, як би ви шукали скарб, якби опинилися в лабіринті.
 
-Write down your strategy step by step so that someone else could follow it without thinking.
+Запишіть свою стратегію крок за кроком так, щоб інша людина могла слідувати їй без додаткових міркувань.
 
-Now try translating your steps into code.
+Тепер спробуйте перевести свої кроки у код.
 </spoiler>
-<spoiler=show hint 2>As long as there are no loops: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.
-This approach requires very little code and you do not need to keep track of where you have already been. Around 10 lines of code is all you need.</spoiler>
-<spoiler=show hint 3>Instead of moving the drone in absolute directions like east or west it can be very useful to move the drone in relative directions like "turn right" or "turn left". To do this you need to keep track of which way the drone is currently moving. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
-The following index trick is helpful for this:
+<spoiler=show hint 2>Поки немає циклів: усі стіни насправді утворюють одну велику суцільну стіну. Якщо слідувати стіні, вона проведе вас через весь лабіринт.
+Цей підхід потребує дуже мало коду, і не потрібно відстежувати, де ви вже були. Достатньо близько 10 рядків коду.</spoiler>
+<spoiler=show hint 3>Замість того, щоб рухати дрона у абсолютних напрямках, таких як схід або захід, дуже корисно рухати дрона у відносних напрямках, як «повернути праворуч» або «повернути ліворуч». Для цього потрібно відстежувати, куди дрон рухається в даний момент. Дрон фактично не обертається, але в коді можна вести «віртуальне» обертання.
+Наступний прийом з індексами для цього дуже зручний:
 
 `directions = [North, East, South, West]
 index = 0`
 
-Use `% 4` to allow it to rotate "around the circle", so that after `West` it wraps back to `North`.
-`# turn right
+Використайте `% 4`, щоб дрон «обертався по колу», тобто після `West` повертався назад до `North`:
+
+`# повернути праворуч
 index = (index + 1) % 4`
 
-`# turn left
+`# повернути ліворуч
 index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
-<spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-Solving a `1`x`1` maze is trivial.</spoiler>
+<spoiler=show hint 4>Якщо не можете розв’язати задачу, завжди можна спростити собі життя і зробити це менш ефективно.
+Розв’язати лабіринт розміром 1x1 дуже просто.</spoiler>

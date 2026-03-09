@@ -1,20 +1,21 @@
-# Sets
-Sets are like [dictionaries](docs/scripting/dicts.md), but without values. They're just an unordered set of keys. 
+# Множини
+Множини подібні до [словників](docs/scripting/dicts.md), але без значень. Це просто невпорядкований набір ключів. 
 
-They are created like dictionaries, but without values.
+Множини створюються так само, як словники, але без значень:
+
 `set = {North, East, West}`
 
-Use `set()` to create an empty set. Note that `{}` creates an empty dictionary.
+Використовуйте `set()`, щоб створити порожню множину. Зверніть увагу, що `{}` створює порожній словник.
 
-Use `set.add(elem)` to add a new element to the set.
+Використовуйте `set.add(elem)`, щоб додати новий елемент до множини.
 
-Use `set.remove(elem)` to remove an element from a set.
+Використовуйте `set.remove(elem)`, щоб видалити елемент з множини.
 
-Use `if elem in set:` to check if the set contains an element.
+Використовуйте `if elem in set:`, щоб перевірити, чи містить множина певний елемент.
 
-Use `for elem in set:` to iterate all elements in the set.
-For larger sets the `in` operator performs much faster than it would on a list.
+Використовуйте `for elem in set:`, щоб перебрати всі елементи множини.
+Для більших множин оператор `in` виконується набагато швидше, ніж для словників.
 
-Just like dictionaries, sets are unordered, so there are no guarantees about the order in which the elements are iterated.
+Як і словники, множини є невпорядкованими, тому порядок перебирання елементів не гарантується.
 
-Also, elements in sets are unique, so adding an element that is already in the set will not change the set.
+Елементи в множині є унікальними, тож додавання вже існуючого елемента не змінить її.

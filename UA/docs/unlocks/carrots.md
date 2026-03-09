@@ -1,6 +1,6 @@
-# Carrots
-Before you can plant carrots with `plant(Entities.Carrot)`, you have to till the soil. This will change the ground to `Grounds.Soil`. To till the soil, simply call `till()`. Calling `till()` again will change it back to `Grounds.Grassland`.
+# Морква
+Перш ніж ви зможете посадити моркву за допомогою `plant(Entities.Carrot)`, необхідно зорати ґрунт. Це змінить тип землі на `Grounds.Soil`. Щоб зорати землю, просто викличте `till()`. Виклик `till()` знову замінить її назад на `Grounds.Grassland`.
 
-Planting carrots costs wood and hay. These items will be automatically removed when calling `plant(Entities.Carrot)`.
+Посадка моркви коштує деревини та сіна. Ці ресурси будуть автоматично зняті під час виклику `plant(Entities.Carrot)`.
 
-You can see the cost of any plant on its [own page](objects/carrot).
+Ви можете переглянути вартість будь-якої рослини на її сторінці [own page](objects/carrot).

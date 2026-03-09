@@ -1,5 +1,5 @@
-# Stats
+# Статистика
 
-Over the last 60s you farmed: {{itemblock stats_sum}}
+Протягом останніх 60 секунд ви зібрали: {{itemblock stats_sum}}
 
-Your personal best per resource is: {{itemblock stats_best}}
+Ваш особистий рекорд для кожного ресурсу: {{itemblock stats_best}}

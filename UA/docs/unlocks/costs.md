@@ -1,19 +1,22 @@
-# Costs
-Any cost can be represented as a dictionary that maps items to numbers.
+# Вартості
+Будь-яку вартість можна представити у вигляді словника, який зіставляє предмети з числами.
 
-The `get_cost()` function returns such a dictionary. It returns the cost of a plant or an unlock.
+Функція `get_cost()` повертає такий словник. Вона повертає вартість рослини або розблокування:
 
 `get_cost(Entities.Pumpkin)`
-returns `{Items.Carrot:1}`
 
-For unlocks, an optional second argument can be passed for the unlock level you want to get the cost for. By default, it's the current unlock level.
+повертає `{Items.Carrot:1}`
+
+Для розблокувань можна передати необов'язковий другий аргумент — рівень розблокування, для якого треба отримати вартість. За замовчуванням використовується поточний рівень:
 
 `get_cost(Unlocks.Loops, 0)`
-returns `{Items.Hay:5}`
 
-For unlocks that are already at the max level, `get_cost()` will return `None`.
+повертає `{Items.Hay:5}`
 
-It can be used like this:
+Для розблокувань, які мають максимальний рівень, `get_cost()` поверне `None`:
+
+Приклад використання:
+
 `cost = get_cost(something)
 for item in cost:
 	amount_of_this_item_needed = cost[item]`

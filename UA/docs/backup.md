@@ -1,9 +1,9 @@
-# Loading Backups
-Unfortunately, sometimes a save file gets corrupted or you lose some code files. If this happens to you, you can try loading a backup. If it happens regularly, try turning off the Steam Cloud.
+# Завантаження резервних копій
+На жаль, іноді файл збереження пошкоджується або ви втрачаєте деякі файли коду. Якщо це трапляється, ви можете спробувати завантажити резервну копію. Якщо це трапляється регулярно, спробуйте вимкнути Steam Cloud.
 
-A backup is made every time the game is saved, and a small number of backups are kept in case you need to restore something.
-These backups can be found in the [backup directory](persistent_data_path/Backup). They are copies of the saves in the [save directory](persistent_data_path/Saves).
-The easiest way to load a backup is to copy the folder of the specific backup you want to load to the save directory.
+Резервна копія створюється щоразу, коли гра зберігається, а також зберігається невелика кількість резервних копій на випадок, якщо вам потрібно щось відновити.
+Ці резервні копії можна знайти в [директорії з резервними копіями](persistent_data_path/Backup). Вони є копіями збережених даних у [директорії збережень](persistent_data_path/Saves).
+Найпростіший спосіб завантажити резервну копію – це скопіювати папку конкретної резервної копії, яку ви хочете завантажити, до каталогу збереження.
 
-A save is a folder with a `save.json` file and a bunch of `.py` files.
-If you only lost a few code files, or the code files are still there but the `save.json` file is corrupted, you can also replace only the corrupted parts with the corresponding files from the backup.
+Збереження — це папка з файлом `save.json` та купою`.py` файлів.
+Якщо ви втратили лише кілька файлів коду, або файли коду все ще там, але файл `save.json` пошкоджений, ви можете замінити лише пошкоджені частини відповідними файлами з резервної копії.

@@ -1,34 +1,36 @@
-# Timing
-If you really want to optimize your methods you need to understand how time is measured in this game. This unlock is all about that.
+# Час (Timing)
 
-## New Functions
-There are two useful functions to measure how long things take:
+Якщо ви хочете максимально оптимізувати свої методи, потрібно розуміти, як у цій грі вимірюється час. Це покращення саме про це.
 
-`get_time()` returns the time in seconds since the start of the game.
+## Нові функції
 
-`get_tick_count()` returns the number of ticks performed since the start of execution.
+Є дві корисні функції для вимірювання часу:
 
-These two functions as well as `quick_print()`, are completely free. Even the call operation is free for them.
+`get_time()` повертає час у секундах від початку гри. ??
 
-## Runtime Details
+`get_tick_count()` повертає кількість тіків, виконаних з моменту запуску коду. ??
 
-### Heads-Up
-This is not how performance works in the real world. These are just rules made up for this game to have a consistent and understandable timing model.
-You will probably only care about this if you want to hyper-optimize your code.
+Ці дві функції, а також `quick_print()`, є повністю безкоштовними — навіть сам виклик не витрачає тіків. ??
 
+## Деталі виконання
 
-The basic unit of time for code execution is called a "tick". Without speed upgrades and power, the execution proceeds at a rate of `400` ticks per second.
+### Важливо
+Так продуктивність не працює в реальному світі. Це просто правила, створені для гри, щоб модель часу була зрозумілою та послідовною.
+Це стане вам у пригоді лише якщо ви хочете максимально оптимізувати код.
 
-In general, operations that combine two values such as `+, -, *, /, //, %, and, or, ...` take one tick to run.
-Single value `-` and `not` are free.
-An `if` branch also takes one tick to run (in addition to the time it takes to evaluate the condition expression).
-Function calls and variable reads and writes are free but function definitions take 1 tick.
-`import` statements are free.
-Accessing an imported module with the `.` operator is free.
-If a function or module has been passed via arguments or variable assignments, using it will cost 1 tick instead of 0.
-`for` and `while` loops take one tick to start, but the iterations are free (not counting the time to evaluate the condition/sequence expressions).
-`return`, `break` and `continue` are all free.
-`pass` takes one tick so it can be used to create precise delays.
-Indexing into a datastructure takes one tick for the index operator and, in the case of a dictionary or set, additional ticks depending on the size of the key.
+Базова одиниця часу виконання коду називається “тік”. Без покращення швидкості та потужності виконання відбувається зі швидкістю `400` тіків за секунду.
 
-The number of ticks that builtin functions take to execute is documented in the documentation of each function on an individual basis.
+Загалом, операції, які поєднують два значення `+, -, *, /, //, %, and, or, ...` виконуються за 1 тік.
+Унарні `-` та `not` безкоштовні.
+Виконання `if` також коштує 1 тік (плюс час на обчислення умови).
+Виклики функцій, читання та запис змінних — безкоштовні, але оголошення функції коштує 1 тік.
+`import` — безкоштовні.
+Доступ до імпортованого модуля через оператор `.` — безкоштовний.
+Якщо функцію або модуль передано через аргументи чи збережено у змінній, їх виклик коштує 1 тік замість 0.
+Цикли `for` та `while` коштують 1 тік на запуск, але самі ітерації безкоштовні (не рахуючи часу на перевірку умови чи обчислення послідовності).
+`return`, `break` та `continue` безкоштовні.
+`pass` коштує 1 тік, тому його можна викликати для точних затримок.
+Індексування структури даних коштує 1 тік за сам оператор індексації.
+У випадку словників або множин додаються додаткові тіки, залежно від розміру ключа.
+
+Кількість тіків, яку витрачають вбудовані функції, зазначена окремо в документації кожної функції.

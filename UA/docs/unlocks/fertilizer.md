@@ -1,15 +1,18 @@
-# Fertilizer
-At some point, waiting for the plants to grow is just not efficient enough anymore. 
-Similar to water, you will automatically receive 1 fertilizer every 10 seconds, doubling with each upgrade.
+# Добриво
+У певний момент, просто чекати поки рослини виростуть, перестає бути цікавим, тому і є добрива. 
+Як і у випадку з водою, ви автоматично отримуєте 1 добриво кожні 10 секунд.
+З кожним покращенням ця кількість подвоюється.
 
-Fertilizer can make plants grow instantly. `use_item(Items.Fertilizer)` reduces the remaining growing time of the plant under the drone by 2 seconds.
+За допомогою добрив, рослини виростають миттєво. `use_item(Items.Fertilizer)` зменшує час, що залишився до повного росту рослини під дроном, на 2 секунди.
 
-This has some side effects.
-Plants grown with fertilizer will be infected.
+Але є і побічні ефекти.
+Рослини, вирощені за допомогою добрив, будуть заражені.
 
-When a plant is infected, half of its yield is turned into `Items.Weird_Substance` when it is harvested.
-Weird Substance can also be used on plants, which has the effect of toggling the infected status of the plant and all adjacent plants.
+Коли рослина заражена, під час збору половина її врожаю перетворюється на `Items.Weird_Substance`.
+Дивну речовину також можна використовувати на рослинах, при застосуванні вона змінює стан зараження (заражена ↔ не заражена) у рослини під дроном та у всіх сусідніх рослин.
 
-So if you call `use_item(Items.Weird_Substance)` on an infected plant it will cure it, but if you use it on a healthy plant it will infect it.
+Тобто якщо ви викличите `use_item(Items.Weird_Substance)` на зараженій рослині — вона вилікується, а якщо використаєте на здоровій рослині — вона стане зараженою.
 
-If you use it on an infected plant that has healthy neighbors, it will cure the plant but infect the neighbors and vice versa.
+Якщо використати на зараженій рослині, у якої сусіди здорові — вона вилікується, але сусідні рослини заразяться.
+
+І навпаки: якщо застосувати на здоровій рослині із зараженими сусідами — вона заразиться, а сусіди вилікуються.

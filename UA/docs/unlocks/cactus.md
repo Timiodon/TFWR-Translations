@@ -1,41 +1,45 @@
-# Cactus
-Like other plants, [cacti](objects/cactus) can be grown on soil and harvested as usual.
+# Кактус
+Як і інші рослини, [кактуси](objects/cactus) можна вирощувати на ґрунті та збирати.
 
-However, they come in various sizes and have a strange sense of order.
+Проте вони бувають різних розмірів і ростуть свавільно.
 
-If you harvest a fully-grown cactus and all neighboring cacti are in sorted order, it will also harvest all neighboring cacti recursively.
+Якщо ви зберете повністю вирощений кактус, і всі сусідні кактуси ростуть правильно, то також буде зібрано всі сусідні кактуси.
 
-A cactus is considered to be in sorted order if all neighboring cacti to the `North` and `East` are fully grown and larger or equal in size and all neighboring cacti to the `South` and `West` are fully grown and smaller or equal in size.
+Правильний порядок, це -
 
-The harvest will only spread if all adjacent cacti are fully grown and in sorted order.
-This means that if a square of grown cacti is sorted by size and you harvest one cactus, it will harvest the entire square.
+З боку `Півночі` та `Сходу` повинні стояти повністю вирощені кактуси, які більші або такого ж розміру.
+З боку `Півдня` та `Заходу` повинні стояти повністю вирощені кактуси, які менші або такого ж розміру.
 
-A fully grown cactus will appear brown if it is not sorted. Once sorted, it will turn green again.
+Збір сусідніх кактусів буде лише якщо всі сусідні кактуси повністю вирощені та стоять у правильному порядку. Це означає, що якщо квадрат вирощених кактусів росте правильно за розміром, то після збору одного кактуса автоматично збереться весь квадрат.
 
-You will receive cactus equal to the number of harvested cacti squared. So if you harvest `n` cacti simultaneously you will receive `n**2` `Items.Cactus`.
+Повністю вирощений кактус виглядатиме коричневим, якщо він стоїть не у правильному порядку.
+Коли порядок буде правильним — він знову стане зеленим.
 
-The size of a cactus can be measured with `measure()`.
-It is always one of these numbers: `0,1,2,3,4,5,6,7,8,9`.
+В такому випадку ви отримаєте більше кактусів. А саме, якщо ви одночасно зберете `n` кактусів, то отримаєте `n**2` `Items.Cactus`.
 
-You can also pass a direction into `measure(direction)` to measure the neighboring tile in that direction of the drone.
+Розмір кактуса можна визначити за допомогою `measure()`.
+Він завжди буде одним із таких значень: `0,1,2,3,4,5,6,7,8,9`.
 
-You can swap a cactus with its neighbor in any direction using the `swap()` command.
-`swap(direction)` swaps the object under the drone with the object one tile in the `direction` of the drone.
+Ви також можете вказати напрямок у `measure(напрямок)` , щоб оцінити клітинку поруч із дроном у вказаному напрямку.
 
-## Examples
-In each of these grids, all the cacti are in sorted order and the harvest will spread over the entire field:
+Ви можете поміняти місцями кактус із сусіднім у будь-якому напрямку за допомогою функції `swap()`.
+`swap(напрямок)` Міняє місцями об’єкт під дроном з об’єктом, що знаходиться поруч в указаному `напрямку` на відстані 1 клітинки від дрона.
+
+## Приклади:
+У кожній із цих сіток усі кактуси стоять у правильному порядку, тому збирання розповсюджуватиметься на все поле.
 `3 4 5    3 3 3    1 2 3    1 5 9
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-In this grid, only the lower left cactus is in sorted order, which is not enough for it to spread:
+У цій сітці лише кактус в нижньому лівому куті стоїть у правильному порядку, і цього недостатньо, щоб збір поширився.
 `1 5 3
 4 9 7
 3 3 2`
 
 <spoiler=show hint 1>
-If the rows are already sorted, sorting the columns will not unsort the rows.
+Якщо рядки вже впорядковані за розміром, сортування стовпців не зіпсує цей порядок.
 </spoiler>
 <spoiler=show hint 2>
-If you're not familiar with sorting algorithms, you might want to look them up online and think about which ones could be adapted to this problem. Keep in mind that not all of them work because you can only swap neighboring cacti.
+Якщо ви не знайомі з алгоритмами сортування, можна пошукати їх онлайн та подумати, які з них можна адаптувати до цієї задачі.
+Пам’ятайте, що не всі підходять, бо ви можете міняти місцями тільки сусідні кактуси.
 </spoiler>

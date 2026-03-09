@@ -1,27 +1,28 @@
 # Break
-`break` allows stopping a loop early. When the `break` statement is reached it will immediately exit the innermost loop and start running the code after the loop.
+`break` дозволяє достроково зупинити цикл. Коли виконується оператор `break`, програма негайно виходить з найвнутрішнього циклу та починає виконувати код після нього.
 
 `for i in range(10):
 	break
 print(i)`
-This prints `0` because `i` is `0` in the first iteration of the loop and then the break statement ends the loop.
 
-It also works on `while` loops.
+Цей код виведе `0`, оскільки `i` дорівнює `0` в першій ітерації циклу, після чого оператор break завершує цикл.
+
+Також працює в циклі `while`:
 
 `while True:
 	if can_harvest():
 		break`
 
-This code runs the `while` loop until `can_harvest()` is `True`. 
-It has the same effect as
+Цей код виконує цикл `while` доти, доки `can_harvest()` не стане `True`. 
+Він має той же ефект, що й
 
 `while not can_harvest():
 	pass`
 
-In nested loops `break` always exits the innermost loop.
+У вкладених циклах `break` завжди виходить лише з найвнутрішнього циклу:
 
 `for i in range(10):
 	for j in range(10):
 		break
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("це ніколи не буде виведено")
+	print("це буде виведено 10 разів")`

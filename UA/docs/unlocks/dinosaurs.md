@@ -1,46 +1,47 @@
-# Dinosaurs
-Dinosaurs are ancient, majestic creatures that can be farmed for ancient bones.
+# Динозаври
+Динозаври - це давні, величні істоти, з яких можна отримувати стародавні кістки.
 
-Unfortunately dinosaurs have gone extinct a long time ago, so the best we can do now is dressing up as one.
-For this purpose you have received the new dinosaur hat.
+На жаль, динозаври давно вимерли, тож максимум, що ми можемо зробити - це перевдягнутися в одного з них.
+Для цього у вас є новий капелюх динозавра.
 
-The hat can be equipped with
+Його можна одягнути так:
+
 `change_hat(Hats.Dinosaur_Hat)`
 
-Unfortunately it doesn't quite look like on the advertisement...
+На жаль, виглядає він не зовсім так, як у рекламі…
 
-If you equip the dinosaur hat and have enough cactus, an [apple](objects/apple) will automatically be purchased and placed under the drone.
-When the drone is over an apple and moves again, it will eat the apple and grow its tail by one. If you can afford it, a new apple will be purchased and placed in a random location.
-The apple cannot spawn if something else is planted where it wants to be.
+Якщо ви одягнете капелюх динозавра і маєте достатньо кактусів, автоматично буде куплено [яблуко](objects/apple) і розміщено під дроном.
+Коли дрон стоїть над яблуком і знову рухається, він з’їдає яблуко та збільшує свій хвіст на один сегмент. Якщо вистачає ресурсів, нове яблуко з’явиться у випадковому місці.
+Яблуко не може з’явитися, якщо в обраній клітинці вже щось посаджено.
 
-The tail of the dinosaur will be dragged behind the drone filling the previous tiles the drone moved over. If a drone tries to move on top of the tail `move()` will fail and return `False`. 
-The last segment of the tail will move out of the way during the move, so you can move onto it. However, if the snake fills out the whole farm, you will not be able to move anymore. So you can check if the snake is fully grown by checking if you can't move anymore.
-While wearing the dinosaur hat, the drone can't move over the farm border to get to the other side.
+Хвіст динозавра тягнеться за дроном, заповнюючи клітинки, по яких він щойно рухався. Якщо дрон спробує зайти на клітинку з власним хвостом `move()` не спрацює і поверне `False`. 
+Останній сегмент хвоста рухається до голови та звільняє клітинку, тому ви можете стати на нього. Однак якщо змійка заповнить усе поле, ви більше не зможете рухатися. Тобто, якщо ви більше не рухаєтесь, то змійки виросла повністю.
+Коли одягнуто капелюх динозавра, дрон не може переходити через межу ферми, щоб потрапити на інший бік.
 
-Using `measure()` on an apple will return the position of the next apple as a tuple.
+Використання `measure()` на яблуці поверне позицію наступного яблука у вигляді кортежу:
 
 `next_x, next_y = measure()`
 
-When the hat is unequipped again by equipping a different hat, the tail will be harvested.
-You will receive bones equal to the tail length squared. So for a tail of length `n` you will receive `n**2` `Items.Bone`. 
-For Example:
-length 1 => 1 bone
-length 2 => 4 bones
-length 3 => 9 bones
-length 4 => 16 bones
-length 16 => 256 bones
-length 100 => 10000 bones
+Коли капелюх знімається (шляхом одягання іншого капелюха), хвіст зникне.
+Ви отримаєте кістки в кількості, що дорівнює квадрату довжини хвоста. Тобто ви отримаєте `Items.Bone` по формулі `n**2` де `n` довжина хвоста. 
+Приклади:
+Довжина 1 => 1 кістка
+Довжина 2 => 4 кістки
+Довжина 3 => 9 кісток
+Довжина 4 => 16 кісток
+Довжина 16 => 256 кісток
+Довжина 100 => 10000 кісток
 
-The Dinosaur Hat is very heavy, so if you equip it, it will make `move()` take 400 ticks instead of 200. However, each time you pick up an apple, the number of ticks used by `move()` is reduced by 3% (rounded down), because a longer tail can help you move.
+Капелюх динозавра дуже важкий, тому якщо ви його одягнете, то `move()` буде витрачати 400 тіків замість 200. Однак щоразу, коли ви підбираєте яблуко, кількість тіків, які використовує `move()` зменшується на 3% (з округленням вниз), оскільки довший хвіст допомагає вам рухатися.
 
-The following loop prints the number of ticks used by `move()` after any number of apples:
+Наступний цикл виводить кількість тіків, які використовує `move()` будь-якої кількості з’їдених яблук:
 
 `ticks = 400
 for i in range(100):
     print("ticks after ", i, " apples: ", ticks)
     ticks -= ticks * 0.03 // 1`
 
-You only have one dinosaur hat, so only one drone can wear it.
+У вас є тільки одтн капелюх динозавра, тому тільки один дрон може його носити.
 
-<spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time. It's not very efficient, but it works.
-Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_world_size()` to change the size of the farm to something more convenient.</spoiler>
+<spoiler=show hint 1>Якщо постійно рухатися одним і тим самим маршрутом, який покриває все поле, можна легко щоразу отримувати змійку, що заповнює все поле. Це не дуже ефективно, але працює.
+Повний обхід дуже великої ферми може займати багато часу, і вам може бути не потрібно так багато кісток. Ви можете використати `set_world_size()`, щоб змінити розмір ферми на більш зручний.</spoiler>

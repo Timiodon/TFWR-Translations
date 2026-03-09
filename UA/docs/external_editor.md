@@ -1,24 +1,24 @@
-# External Editor
-The in-game text editor is usually sufficient to play this game, but of course it cannot compete with more sophisticated text editors like Visual Studio Code.
+# Зовнішній редактор
+Вбудований в гру текстовий редактор зазвичай достатній для гри, але, звичайно, він не може конкурувати з більш досконалими текстовими редакторами, такими як Visual Studio Code.
 
-The game saves all code files as .py files, so you can edit them with Python editors. 
-Note that this is for convenience only. The in-game language isn't actually Python, but it's close enough that Python IntelliSense works decently on it.
-You can find the files in the [save folder](persistent_data_path/Saves).
+Гра зберігає всі файли коду у форматі `.py`, тому ви можете редагувати їх за допомогою редакторів Python. 
+Зверніть увагу, що це зроблено виключно для зручності. Мова, яка використовується в грі, насправді не є Python, але вона настільки близька до неї, що Python IntelliSense працює на ній досить добре.
+Ви можете знайти файли в [папці збережень](persistent_data_path/Saves).
 
-Each save also contains a `__builtins__.py` file, which contains built-in Python definitions that match the in-game builtins to enable IntelliSense. 
-VS Code is able to detect `__builtins__.py` automatically, but the some editors may only work if you do `from __builtins__ import *`.
+Кожне збереження також містить файл `__builtins__.py` , який містить вбудовані визначення Python, що відповідають внутрішньоігровим built-in’ам, щоб забезпечити роботу `IntelliSense.IntelliSense`. 
+VS Code може автоматично виявляти `__builtins__.py`, тоді як деякі редактори працюватимуть лише за умови використання `from __builtins__ import *`.
 
-To see external changes in-game without having to reload the save, you must enable the "File Watcher" option. If you create or delete files externally, you will still need to reload the save to see them.
+Щоб побачити зовнішні зміни в грі без необхідності перезавантаження збереження, необхідно ввімкнути опцію `Спостерігач файлів`. Якщо ви створюєте або видаляєте файли зовні, вам все одно доведеться перезавантажити збереження, щоб їх побачити.
 
-## Using VS Code
-Visual Studio Code is the recommended code editor to use with The Farmer Was Replaced.
+## Використання VS Code
+Visual Studio Code — це рекомендований редактор коду для використання з The Farmer Was Replaced.
 
-You can install it [here](https://code.visualstudio.com/download).
+Ви можете встановити його [тут](https://code.visualstudio.com/download).
 
-After downloading it, install the Python extension in VS Code.
+Після завантаження встановіть розширення Python у VS Code.
 
-Once you have that, open the [folder](persistent_data_path/Saves) that holds your `.py` files in VS Code. Make sure you open the whole folder, not just the individual files, otherwise the `__builtins__.py` file won't work.
+Після цього відкрийте [теку](persistent_data_path/Saves), що містить ваші`.py` файли у VS Code. Переконайтеся, що ви відкриваєте всю теку, а не окремі файли, інакше файл `__builtins__.py` не працюватиме.
 
-In the game, make sure you have the "File Watcher" option turned on. Now, every time you save in VS Code, the changes will automatically show up in the game.
+У грі переконайтеся, що "Спостерігач файлів" увімкнений. Тепер щоразу, коли ви зберігаєте зміни у VS Code, вони автоматично відображатимуться у грі.
 
-That's it! Now you can write your code in a professional code editor!
+Ось і все! Тепер ви можете писати код у професійному редакторі коду!

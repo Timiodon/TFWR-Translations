@@ -1,9 +1,9 @@
-# Getting Started
-This window contains information about everything in the game.
+# Початок роботи
+Це вікно містить інформацію про все, що є у грі.
 
-You can move windows around by dragging and dropping the gray part of the window.
-You can move around by dragging anywhere outside the windows.
+Ви можете переміщувати вікна, перетягуючи сіру частину вікна.
+Ви можете навколо переміщувати вікна, перетягуючи будь-яке місце за межі вікон.
 
-To get started with programming, go to the [First Program](docs/first_program.md) page by clicking it.
+Щоб розпочати програмування, перейдіть до сторінки [Перша програма](docs/first_program.md), натиснувши на неї.
 
-Be sure to check out the buttons in the top right corner of the screen. Hover over them to see a tooltip explaining what they do. One of them opens the tech tree!
+Обов’язково зверніть увагу на кнопки у верхньому правому куті екрана. Наведіть на них курсор, щоб побачити підказку з поясненням їхньої дії. Одна з них відкриває дерево технологій!

@@ -1,13 +1,13 @@
 # Continue
-continue allows stopping the current iteration of a loop and jumping to the next iteration of the innermost loop.
+Continue дозволяє зупинити поточну ітерацію циклу та одразу перейти до наступної ітерації найвнутрішнього циклу:
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("це не буде виведено")`
 
-This runs all `10` iterations of the loop, but the `print` statement after the `continue` is always skipped.
+Цей код виконує всі `10` ітерацій циклу, але інструкція `print` після `continue` завжди пропускається.
 
-It also works on `while` loops.
+Це також працює з циклами `while`:
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ It also works on `while` loops.
     
     harvest()`
 
-This code only calls `harvest()` when `can_harvest()` is `True`. 
-It has the same effect as
+Цей код викликає `harvest()` лише тоді, коли `can_harvest()` дорівнює `True`. 
+Він має той же ефект, що й
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-In nested loops `continue` always affects the innermost loop.
+У вкладених циклах `continue` завжди впливає лише на найвнутрішній цикл:
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("це буде виведено 100 разів")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("це не буде виведено")
+	print("це буде виведено 10 разів")`

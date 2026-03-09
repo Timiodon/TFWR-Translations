@@ -1,13 +1,13 @@
-# Trees
-[Trees](objects/tree) are a better way to get wood than bushes. They give 5 wood each. Like bushes, they can be planted on grass or soil.
+# Дерева
+[Дерева](objects/tree) — це кращий спосіб отримати деревину, ніж кущі. Кожне дерево дає 5 одиниць деревини. Як і кущі, їх можна садити на траві або ґрунті.
 
-Trees like to have some space and planting them right next to each other will slow down their growth. The growing time is doubled for each tree that is on a tile directly to the north, east, west or south of it. So if you plant trees on every tile, they will take `2*2*2*2 = 16` times longer to grow.
+Дерева люблять мати трохи простору, і якщо садити їх безпосередньо поруч одне з одним, це сповільнить їхній ріст. Час росту подвоюється за кожне дерево, яке знаходиться на клітинці прямо на північ, схід, захід або південь від нього. Тож якщо посадити дерева на кожній клітинці, вони ростимуть у `2*2*2*2 = 16` разів довше.
 
-<spoiler=show> The `%` operator can be useful here. Remember that the `%` operator returns the remainder of the division. Even numbers divided by `2` have a remainder of `0` and odd numbers divided by `2` have a remainder of `1`.
-So you can check if a number is even like this:
+<spoiler=show> Оператор `%` може бути корисним тут. Пам’ятайте, що оператор `%` повертає остачу від ділення. Парні числа при діленні на `2` мають остачу `0` , а непарні числа, поділені на `2` , мають остачу `1`.
+Отже, ви можете перевірити, чи є число парним, ось так:
 
 `def is_even(n):
 	return n % 2 == 0`
 
-This returns `True` if n is even and `False` if it isn't.
+Відповідь `True` , якщо `n` парне, і `False` якщо ні.
 </spoiler>

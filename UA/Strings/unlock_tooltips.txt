@@ -6,11 +6,11 @@
 @unlock_descr_plant = Розблоковує насадження.
 
 `plant(Entities.Bush)`
-@unlock_descr_loops = Розблоковує простий цикл. ??
+@unlock_descr_loops = Розблоковує простий цикл.
 
 `while True:
     harvest()`
-@unlock_descr_hats = Капелюхт для вашого дрона.
+@unlock_descr_hats = Капелюх для вашого дрона.
 
 `change_hat(Hats.Green_Hat)`
 @unlock_descr_the_farmers_remains = ?????????
@@ -94,7 +94,7 @@ set_execution_speed(1)`
 
 `plant(Entities.Cactus)`
 @unlock_descr_dinosaurs = Величні стародавні істоти.
-@unlock_descr_simulation = Тестуйте швидше та у відтворюваних умовах. ??
+@unlock_descr_simulation = Тестуйте швидше та у відтворюваних умовах.
 
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @unlock_descr_timing = Вже час!
@@ -113,7 +113,7 @@ other_file.function()`
 @multi_unlock_descr_pumpkins = Збільшує врожайність і вартість гарбузів.
 @multi_unlock_descr_mazes = Збільшує кількість золота у скринях зі скарбами та кількість дивної речовини, необхідної для створення лабіринту.
 @multi_unlock_descr_sunflowers = Збільшує силу, отриману від соняшників.
-@multi_unlock_descr_cactus = Збільшує врожайність і вартість кактусів..
+@multi_unlock_descr_cactus = Збільшує врожайність і вартість кактусів.
 @multi_unlock_descr_dinosaur = Збільшує врожайність та вартість динозаврів.
 @multi_unlock_descr_polyculture = Збільшує врожайність полікультури.
 @multi_unlock_descr_watering = Отримайте більше води.
@@ -122,13 +122,13 @@ other_file.function()`
 @auto_unlock = Автоматичне розблокування
 @cactus = Кактуси
 @carrots = Моркви
-@costs = Золота
-@debug = Налагодження ??
-@debug_2 = Налагодження_2 ??
+@costs = Вартості
+@debug = Налагодження
+@debug_2 = Налагодження_2
 @dictionaries = Словники
 @dinosaurs = Динозаври
-@expand = Розгорнення ??
-@expand_2 = Розгорнення 2 ??
+@expand = Розширення
+@expand_2 = Розширення 2
 @fertilizer = Добрива
 @functions = Функції
 @grass = Трава
@@ -143,7 +143,7 @@ other_file.function()`
 @plant = Рослина
 @polyculture = Полікультура
 @pumpkins = Гарбузи
-@senses = Відчуття ??
+@senses = Сенсори
 @simulation = Симуляція
 @speed = Швидкість
 @sunflowers = Соняшники
@@ -151,6 +151,6 @@ other_file.function()`
 @trees = Дерева
 @the_farmers_remains = ?
 @top_hat = Циліндр
-@utilities = Утиліти ??
+@utilities = Утиліти
 @variables = Змінні
 @watering = Полив

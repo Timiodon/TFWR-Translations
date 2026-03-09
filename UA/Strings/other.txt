@@ -11,7 +11,7 @@
 @table_of_contents_section_unlocks = Розблоковує
 @table_of_contents_section_builtins = Вбудовані функції
 @table_of_contents_section_items = Ресурси
-@table_of_contents_section_entities = Об'єкти ??
+@table_of_contents_section_entities = Об'єкти
 @table_of_contents_section_grounds = Ділянки
 @new_hat_unlocked = ## Новий капелюх розблоковано
 `change_hat(`{0}`)`

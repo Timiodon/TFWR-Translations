@@ -1,33 +1,35 @@
-# Debug
-Sometimes your code just doesn't work and you need to find out why. There are a couple of tools to help you do that.
+# Налагодження
+Іноді код просто не працює, і потрібно з'ясувати чому. Для цього є кілька корисних інструментів.
 
-The first is to execute the program step by step. 
-You can go into step-by-step mode with the button next to the Execute button or by setting a breakpoint.
+Перший — це покрокове виконання програми. 
+Увійти в покроковий режим можна за допомогою кнопки поруч з кнопкою Виконати або встановивши точку зупинки (breakpoint).
 
-Breakpoints can be added by clicking on the breakpoint panel to the left of the code.
+Точки зупинки додаються кліком у панелі зліва від коду:
+
 ![](Breakpoints227)
-When execution reaches the line where the breakpoint is, it will automatically switch to step-by-step mode.
 
-When you move your mouse over a variable, its current value is displayed.
+Коли виконання досягає рядка з точкою зупинки, воно автоматично переходить в покроковий режим.
 
-The `print()` function can also be very useful. It will write any value passed to it directly into the air.
+Коли ви наводите курсор на змінну, відображається її поточне значення.
 
-Examples:
+Функція `print()` також може бути дуже корисною. Вона виводить будь-яке передане їй значення безпосередньо в повітря.
 
-Print "0.24".
+Приклади:
+
+Вивести "0.24".
 `print(0.24)`
 
-Print "True" or "False".
+Вивести "True" або "False".
 `print(can_harvest())`
 
-Print the current position.
+Вивести поточну позицію.
 `print(get_pos_x(), get_pos_y())`
 
-The print function prints the value directly into the air and to the [Output](docs/output.md) page.
+Функція print виводить значення безпосередньо в повітря та на сторінку [Вивід](docs/output.md).
 
-Writing into the air can sometimes be a bit slow if you want to print a lot of values.
-In this case you can use the `quick_print()` function which prints only to the output window.
+Виведення в повітря іноді може бути повільним, якщо потрібно надрукувати багато значень.
+У такому разі можна скористатися функцією `quick_print()`, яка виводить дані лише у вікно виводу.
 
-The output window also logs warnings and errors, so if something doesn't work as expected it can be useful to check that.
+Вікно виводу також записує в журнал попередження та помилки, тому якщо щось працює не так, як очікується, варто його перевірити.
 
-When the execution stops, the output is also written to the output.txt file in the game folder. [output.txt](persistent_data_path/output.txt).
+Коли виконання зупиняється, весь вивід також записується у файл output.txt в папці гри. [output.txt](persistent_data_path/output.txt).

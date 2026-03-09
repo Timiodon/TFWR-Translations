@@ -1,11 +1,11 @@
-# Plant
-Grass is nice because it grows automatically. All other plants have to be planted with the `plant()` function. The only plant you can plant right now is a bush.
-You can pass the type of plant you want to plant to the function like this:
+# Рослина
+Трава чудова тим, що вона росте автоматично. Усі інші рослини потрібно садити за допомогою `plant()`. Єдина рослина, яку ви можете посадити зараз, це кущ.
+Ви можете передати тип рослини, яку хочете посадити, за допомогою функції:
 
 `plant(Entities.Bush)`
 
-This will plant a bush under the drone.
+Це дозволить посадити кущ під дроном.
 
-Call `clear()` to reset the farm to all grass and reset the drone position.
+Викличте `clear()` щоб скинути налаштування ферми на повністю трав'яний покрив та скинути положення дрона.
 
-It seems that if you grow more than one type of plant on the farm at the same time, you can sometimes get a higher yield. You'll need to research polyculture to learn more.
+Здається, що якщо вирощувати на фермі більше одного виду рослин одночасно, іноді можна отримати вищий врожай. Щоб дізнатися більше, вам потрібно буде дослідити полікультури.

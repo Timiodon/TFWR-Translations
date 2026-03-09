@@ -1,8 +1,9 @@
-# Hats
+# Капелюхи
 
-You have unlocked a few new hat colors for your drone.
+Ви розблокували кілька нових кольорів капелюхів для свого дрона.
 
-Equip them like this:
+Одягніть їх так:
+
 `change_hat(Hats.Gray_Hat)
 do_a_flip()
 change_hat(Hats.Purple_Hat)

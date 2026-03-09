@@ -1,75 +1,75 @@
-# Operators
-arithmetic operators: `+, -, *, /, //, %, **`
-comparison operators: `==, !=, <=, >=, <, >`
-boolean operators: `not, and, or`
+# Оператори
+Арифметичні оператори: `+, -, *, /, //, %, **`
+Оператори порівняння: `==, !=, <=, >=, <, >`
+Логічні оператори: `not, and, or`
 
-Note: All numbers in the game are floating point numbers. So all arithmetic operators are floating point operators.
-`//` is defined to just floor the number after the division.
+Примітка: Всі числа в грі є числами з плаваючою крапкою. Тому всі арифметичні оператори працюють з такими числами.
+Оператор `//` визначений як ділення з округленням результату вниз.
 
-For assignment operators you need to unlock the "Variables" unlock.
+Оператори присвоєння доступні після розблокування "Змінні".
 
-## Introduction
-Operators allow you to compare, modify and combine values. 
-The arithmetic operators `+, -, *, /, //, %, **` are used to perform common mathematical operations on numbers. 
-The comparison operators `==, !=, <=, >=, <, >` are used to compare values. The result is always either `True` or `False`.
-The logic operators (also called boolean operators) `not, and, or` are used to combine truth values.
+## Вступ
+Оператори дозволяють порівнювати, змінювати та комбінувати значення. 
+Арифметичні оператори `+, -, *, /, //, %, **` використовуються для виконання математичних операцій над числами. 
+Оператори порівняння `==, !=, <=, >=, <, >` використовуються для порівняння значень. Результатом завжди є `True` або `False`.
+Логічні оператори (або булеві оператори) `not, and, or` використовуються для комбінування значень істинності.
 
-## Arithmetic Operators
-`+` and `-` are used for addition and subtraction.
+## Арифметичні оператори
+`+` і `-` використовуються для додавання та віднімання.
 
-`2 + 3` evaluates to `5`
-`3 - 2` evaluates to `1`
+`2 + 3` обчислюється як `5`
+`3 - 2` обчислюється як `1`
 
-`*`, `/` and `//` are used for multiplication and division.
+`*`, `/` і `//` використовуються для множення та ділення.
 
-`2 * 3` evaluates to `6`
-`5 / 2` evaluates to `2.5`
+`2 * 3` обчислюється як `6`
+`5 / 2` обчислюється як `2.5`
 
-`//` does the same thing as `/` but the result is floored (rounded down to the next integer).
+`//` працює так само, як `/`, але результат округлюється вниз (до меншого цілого числа).
 
-`5 // 2` evaluates to `2`
+`5 // 2` обчислюється як `2`
 
-`%` is the modulo operator, also known as the remainder operator. It essentially divides the two numbers and then returns the remainder. You can also think of it as repeatedly subtracting the right number from the left number until the remainder is less than the right number.
+`%` це оператор взяття остачі (modulo), також відомий як оператор залишку. Він ділить одне число на інше та повертає остачу. Можна також уявити це як багаторазове віднімання правого числа від лівого, поки результат не стане меншим за праве число.
 
-`4 % 2` evaluates to `0`
-`5 % 2` evaluates to `1`
-`6 % 2` evaluates to `0`
-`2 % 6` evaluates to `2`
-`1.5 % 1` evaluates to `0.5`
+`4 % 2` обчислюється як `0`
+`5 % 2` обчислюється як `1`
+`6 % 2` обчислюється як `0`
+`2 % 6` обчислюється як `2`
+`1.5 % 1` обчислюється як `0.5`
 
-`**` is the power operator.
+`**` — це оператор піднесення до степеня.
 
-`2**2` evaluates to `4`
-`(-5)**3` evaluates to `-125`
+`2**2` обчислюється як `4`
+`(-5)**3` обчислюється як `-125`
 
-## Comparison Operators
-`==` and `!=` are used to check if two values are "equal"(`==`) or "not equal"(`!=`). They can be used on all types of values.
+## Оператори порівняння
+`==` і `!=` перевіряють, чи два значення є "рівними"(`==`) чи "не рівними"(`!=`). Можуть використовуватись з будь-якими типами значень.
 
-`2 == 2` evaluates to `True`
-`Entities.Bush != Entities.Bush` evaluates to `False`
-`3 != 3 + 1` evaluates to `True`
+`2 == 2` обчислюється як `True`
+`Entities.Bush != Entities.Bush` обчислюється як `False`
+`3 != 3 + 1` обчислюється як `True`
 
-`<=, >=, <, >` can only be used on numbers. They check if the left number is "smaller or equal"(`<=`), "bigger or equal"(`>=`), "smaller" (`<`) or "bigger" (`>`) than the right number.
+`<=, >=, <, >` можуть використовуватись лише з числами. Вони перевіряють, чи ліве число "менше або дорівнює"(`<=`), "більше або дорівнює"(`>=`), "менше" (`<`) чи "більше" (`>`), ніж праве число.
 
-`1 <= 1` evaluates to `True`
-`2 >= 3` evaluates to `False`
-`-2 < -1` evaluates to `True`
-`6 > 6` evaluates to `False`
+`1 <= 1` обчислюється як `True`
+`2 >= 3` обчислюється як `False`
+`-2 < -1` обчислюється як `True`
+`6 > 6` обчислюється як `False`
 
-## Logic Operators
-`not` simply inverts the value:
+## Логічні оператори
+`not` просто інвертує значення:
 
-`not False` evaluates to `True`
-`not True` evaluates to `False`
+`not False` обчислюється як `True`
+`not True` обчислюється як `False`
 
-`and` evaluates to `True` only if both values are `True`
+`and` обчислюється як `True` тільки якщо обидва значення є `True`
 
-`True and True` evaluates to `True`
-`True and False` evaluates to `False`
-`False and False` evaluates to `False`
+`True and True` обчислюється як `True`
+`True and False` обчислюється як `False`
+`False and False` обчислюється як `False`
 
-`or` evaluates to `True` if at least one of the values is `True`
+`or` обчислюється як `True`, якщо хоча б одне значення є `True`
 
-`True or True` evaluates to `True`
-`True or False` evaluates to `True`
-`False or False` evaluates to `False`
+`True or True` обчислюється як `True`
+`True or False` обчислюється як `True`
+`False or False` обчислюється як `False`

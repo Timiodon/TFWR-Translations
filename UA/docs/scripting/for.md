@@ -1,27 +1,27 @@
-# For Loop
-The `for` loop works like in Python. (Called a foreach loop in some languages, not to be confused with the C-style for loop, which is a different thing).
+# Цикл for
+Цикл `for` працює як в Python. (У деяких мовах його називають foreach-циклом, не плутати з C-подібним for, який є зовсім іншим типом циклу).
 
 `for i in sequence:
-	#do something with i`
+	#зробити щось з i`
 
-Similar to the `while` loop, the `for` loop also repeatedly calls a block of code. Instead of looping based on a condition, it executes the loop body once for each element in a sequence.
+Подібно до циклу `while`, цикл `for` також багаторазово виконує блок коду. Замість повторення за умовою він виконує тіло циклу один раз для кожного елемента послідовності.
 
-## Syntax
-A for loop looks like this:
+## Синтаксис
+Цикл for виглядає так:
 
 `for variable_name in sequence:
-	#code block`
+	#блок коду`
 
-`variable_name` can be any name you choose. It is a variable that stores the current element in the sequence. `sequence` needs to be some value that can be iterated like a range of numbers. The code block is executed for every element with the loop variable assigned to that element.
+`variable_name` може бути будь-яким ім'ям, яке ви оберете. Це змінна, яка зберігає поточний елемент послідовності. `sequence` має бути значенням, яке можна перебирати, наприклад, діапазоном чисел. Блок коду виконується для кожного елемента, при цьому змінна циклу отримує значення цього елемента.
 
-## Sequences
-[Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+## Послідовності
+[Діапазони](functions/range)      <unlock=lists>[Списки](docs/scripting/lists.md)      </unlock><unlock=functions>[Кортежі](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Словники](docs/scripting/dicts.md)      </unlock><unlock=sets>[Множини](docs/scripting/sets.md)</unlock>
 
-## Example
+## Приклад
 `for i in range(5):
     harvest()`
 
-This loop executes the body a fixed number of times. It is essentially the same as writing
+Цей цикл виконує тіло фіксовану кількість разів. По суті, це те саме, що написати:
 
 `i = 0
 harvest()
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-So it calls `harvest()` 5 times.
+Тобто `harvest()` буде викликано 5 разів.
 
-See also [Break](docs/scripting/break.md) and [Continue](docs/scripting/continue.md)
+Дивіться також [Break](docs/scripting/break.md) і [Continue](docs/scripting/continue.md)

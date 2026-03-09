@@ -1,43 +1,46 @@
-# Credits
+# Титри
 
 ## The Farmer Was Replaced
 
-### Programming, Game Design and Art
+### Програмування, геймдизайн та візуал
 Timon Herzog
 
-### Music and Sound Effects
+### Музика та звукові ефекти
 Floris Demandt
 
-### Published by Metaroot
+### Видано Metaroot
 Andri Weidmann
 Flurin Weidmann
 Nathalie Weidmann
 
-### Key Art
+### Ключовий візуальний образ
 Stephanie Stutz
 
 ### Allcorrect
-Maria Pavlova (Russian Translation)
-Evgeniia Ushakova (Russian Translation)
-Melanie Chen (Chinese Translation)
-Siyoon Ji (Korean Translation)
-Mina Horiba-Maguire (Japanese Translation)
-Danil Belousov (Account Manager)
-Elizaveta Shevchenko (Team Lead)
-Yulia Tregubova (Project Manager)
+Maria Pavlova (Російський переклад)
+Evgeniia Ushakova (Російський переклад)
+Melanie Chen (Китайський переклад)
+Siyoon Ji (Корейський переклад)
+Mina Horiba-Maguire (Японський переклад)
+Danil Belousov (Менеджер по роботі з клієнтами)
+Elizaveta Shevchenko (Керівник команди)
+Yulia Tregubova (Керівник проєкту)
 
-### Community Translation Contributors
+### Учасники спільноти перекладачів
 HoshiyomiLusia
 Liuxun
 Davide Altamura
+Milan Tuma
+Ivan Bondar
+Jimmy Sheep
 
-### Discord Moderators
+### Модератори Discord
 MrBlobfish
 Josh Markey
 danielrab
 Jeff Siebold aka Noon Knight
 
-### Special Thanks
+### Особлива подяка
 Jonas Bornhöft
 ThatMerlinGuy
 Ramón Buchenberger

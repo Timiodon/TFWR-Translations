@@ -1,40 +1,39 @@
-# Expand 2
-Your farm has expanded again! Now the tiles are no longer in a nice row, so you need to find a way to traverse a square grid.
+# Розширення 2
+Ваша ферма знову збільшилась! Тепер плитки більше не розташовані в гарний ряд, тому вам потрібно знайти спосіб пересування по квадратній сітці.
 
-With the `while` loop this is not possible until you unlock senses and operators.
-It is time to introduce the `for` loop.
+За допомогою циклу `while` це неможливо, поки ви не розблокуєте сенсори та оператори. Настав час представити цикл `for` 
 
-You can read all about the `for` loop on the [For Loop](docs/scripting/for.md) page, but for now you will only need it to repeat code a fixed number of times.
+Ви можете прочитати все про цикл `for` на сторінці [Цикл for](docs/scripting/for.md), але зараз вам знадобиться лише повторення коду фіксовану кількість разів.
 
-`#do n flips
+`#зробити n переворотів
 for i in range(5):
 	do_a_flip()`
 
-`range(n)` creates a range of numbers from `0` to `n-1` which has `n` elements in it. The `for` loop runs it's loop body once for every element in the sequence. In this example `do_a_flip()` will be called `5` times.
+`range(n)` створює діапазон чисел від `0` до `n-1` який містить `n` елементів. Цикл `for` виконує один раз для кожного елемента послідовності. У цьому прикладі `do_a_flip()` буде викликано `5` разів.
 
-The function `get_world_size()` is also available now. It returns the side length of your farm. This way you can write code that won't break with the next expand upgrade.
+Функція `get_world_size()` також тепер доступна. Вона повертає довжину сторони вашої ферми. Таким чином, ви можете написати код, який не перерветься з наступним розширенням оновлення:
 
 `for i in range(get_world_size()):
 	harvest()
 	move(North)`
 
-This example harvests one column of the farm for any farm size.
+У цьому прикладі збирається один стовпець ферми для будь-якого її розміру.
 
-If you're stuck on trying to figure out how to move the drone around the farm see the hint below.
-<spoiler=show hint>There are, of course, several ways to move around the farm.
-What we're looking for is a way to traverse it in a systematic way that won't break when the farm grows again.
-A systematic way to get to every place on the farm would be to repeat the following 2 steps forever:
+Якщо ви не знаєте, як переміщати дрон по фермі, дивіться підказку нижче.
+<spoiler=show hint>Звичайно, існує кілька способів пересування по фермі.
+Ми шукаємо спосіб пересування по ній систематичним чином, який не зламається, коли ферма знову виросте.
+Систематичний спосіб дістатися до кожного місця на фермі – це повторювати наступні 2 кроки нескінченно:
 
-1.Move `North` until it wraps back.
-2.Move `East`
+1.Рухатися `North` доки не зробить повне коло.
+2.Рухатися `East`
 
-`for i in range(get_world_size()):` may be helpful to turn this idea into code.
+`for i in range(get_world_size()):` може бути корисним для втілення цієї ідеї в код.
 </spoiler>
-<spoiler=show possible solution> The basic traversal might look like this:
+<spoiler=show possible solution> Базовий перехід може виглядати так:
 
 `for i in range(get_world_size()):
 	for j in range(get_world_size()):
-		#do a flip on every tile
+		#зробити переворот на кожній клітинці
 		do_a_flip()
 		move(North)
 	move(East)`
