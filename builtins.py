@@ -84,13 +84,19 @@ class Entities:
 
 	Cactus: Entity
 	"""
-	Unlock: Cactus!
-	Upgrade: Increases the yield and cost of cactus.
+	Cacti come in 10 different sizes (0-9). When harvested, adjacent cacti that are in sorted order will also be harvested recursively.
+	You receive cactus equal to the number of harvested cacti squared.
+
+	Average seconds to grow: 1
+	Grows on: soil
 	"""
 
 	Carrot: Entity
 	"""
-	Obtained by harvesting carrots.
+	Carrots!
+
+	Average seconds to grow: 6
+	Grows on: soil
 	"""
 
 	Dead_Pumpkin: Entity
@@ -101,12 +107,18 @@ class Entities:
 
 	Dinosaur: Entity
 	"""
-	Farm 33_488_928 bones with multiple drones.
+	A piece of the tail of the dinosaur hat. When wearing the dinosaur hat, the tail is dragged behind the drone filling previously moved tiles.
+
+	Average seconds to grow: 0.2
+	Grows on: grassland or soil
 	"""
 
 	Grass: Entity
 	"""
-	Increases the yield of grass.
+	Grows automatically on grassland. Harvest it to obtain `Items.Hay`.
+
+	Average seconds to grow: 0.5
+	Grows on: grassland or soil
 	"""
 
 	Hedge: Entity
@@ -116,7 +128,11 @@ class Entities:
 
 	Pumpkin: Entity
 	"""
-	Obtained by harvesting pumpkins.
+	Pumpkins grow together when they are next to other fully grown pumpkins. About 1 in 5 pumpkins dies when it grows up.
+	When you harvest a pumpkin you get `Items.Pumpkin` equal to the number of pumpkins in the mega pumpkin cubed.
+
+	Average seconds to grow: 2
+	Grows on: soil
 	"""
 
 	Sunflower: Entity
@@ -321,8 +337,7 @@ class Items:
 
     Cactus: Item
     """
-    Unlock: Cactus!
-    Upgrade: Increases the yield and cost of cactus.
+    Obtained by harvesting sorted cacti.
     """
 
     Carrot: Item
@@ -332,7 +347,7 @@ class Items:
 
     Fertilizer: Item
     """
-    Reduces the remaining growing time of the plant under the drone by 2 seconds.
+    Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.
     """
 
     Gold: Item
@@ -342,7 +357,7 @@ class Items:
 
     Hay: Item
     """
-    Farm 2_000_000_000 hay with multiple drones.
+    Obtained by cutting grass.
     """
 
     Piggy: Item
@@ -372,14 +387,14 @@ class Items:
 
     Wood: Item
     """
-    Farm 10_000_000_000 wood with multiple drones.
+    Obtained from bushes and trees.
     """
 
 
 # -------------------------------------------------------------------------------
 class Leaderboard:
 	"""
-	Join the leaderboard for the fastest reset time.
+	A member of the Leaderboards class
 	"""
 	...
 
@@ -388,8 +403,7 @@ class Leaderboard:
 class Leaderboards:
 	Cactus: Leaderboard
 	"""
-	Unlock: Cactus!
-	Upgrade: Increases the yield and cost of cactus.
+	Farm 33_554_432 cacti with multiple drones.
 	"""
 
 	Cactus_Single: Leaderboard
@@ -399,8 +413,7 @@ class Leaderboards:
 
 	Carrots: Leaderboard
 	"""
-	Unlock: Till the soil and plant carrots.
-	Upgrade: Increases the yield and cost of carrots.
+	Farm 2_000_000_000 carrots with multiple drones.
 	"""
 
 	Carrots_Single: Leaderboard
@@ -440,8 +453,7 @@ class Leaderboards:
 
 	Pumpkins: Leaderboard
 	"""
-	Unlock: Pumpkins!
-	Upgrade: Increases the yield and cost of pumpkins.
+	Farm 200_000_000 pumpkins with multiple drones.
 	"""
 
 	Pumpkins_Single: Leaderboard
@@ -451,8 +463,7 @@ class Leaderboards:
 
 	Sunflowers: Leaderboard
 	"""
-	Unlock: Sunflowers and Power.
-	Upgrade: Increases the power gained from sunflowers.
+	Farm 100_000 power with multiple drones.
 	"""
 
 	Sunflowers_Single: Leaderboard
@@ -557,7 +568,7 @@ class Unlocks:
 
 	Leaderboard: Unlock
 	"""
-	Join the leaderboard for the fastest reset time.
+	Join the leaderboard for the fastest time in farming a specific crop or for the fastest reset of the farm.
 	"""
 
 	Lists: Unlock
@@ -674,7 +685,7 @@ type AnyIterable = (
 )
 
 # --------------------------------------------------
-class dict[key: Any, value: Any](_dict[Any, Any]):
+class dict[key: Any, value: Any](_dict):
 	"""
 	Builds an unordered collection of key-value pairs
 
@@ -741,7 +752,7 @@ class dict[key: Any, value: Any](_dict[Any, Any]):
 
 
 # --------------------------------------------------
-class list[index: Any](_list[Any]):
+class list[index: Any](_list):
 	"""
 	Builds an ordered sequence of values.
 
@@ -857,13 +868,29 @@ class list[index: Any](_list[Any]):
 	def remove(self: Self, object: Any) -> None:
 		"""
 		Remove the element corresponding to the `object` in the list.
+
+		takes `num_comparions + num_shifts` ticks to execute
+
+		example usage:
+
+		```
+		my_list = [1, 2, 3]
+		my_list.remove(1)
+		print(my_list)
+		```
+
+		Output:
+
+		```
+		[2,3]
+		```
 		"""
 		...
 	...
 
 
 # --------------------------------------------------
-class set[key: Any](_set[Any]):
+class set[key: Any](_set):
 	"""
 	Builds an unordered collection of elements
 
@@ -1157,7 +1184,7 @@ def remove(collection: _list[Any] | _set[Any], object: Any):
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 
-	takes `num_comparions - num_shifts` ticks to execute if a list is provided.
+	takes `num_comparions + num_shifts` ticks to execute if a list is provided.
 	takes `1` tick to execute if a set is provided.
 
 	example usage:
@@ -1819,25 +1846,34 @@ def set_world_size(size: _float) -> None:
 
 
 # --------------------------------------------------
+type SimulateUnlocks = _dict[Unlock, _int] | _tuple[_tuple[Unlock, _int]] | _list[_tuple[Unlock, _int]] | _tuple[Unlock] | _list[Unlock] | Unlocks
+
 def simulate(
 		filename: _str,
-		sim_unlocks: dict[Unlocks, _float] | _dict[Unlocks, _float] | Iterable[Unlocks] | Unlocks,
-		sim_items: dict[Item, _float] | _dict[Item, _float],
-		sim_globals: dict[_str, Any] | _dict[_str, Any],
+		sim_unlocks: SimulateUnlocks,
+		sim_items: _dict[Item, _float],
+		sim_globals: _dict[_str, Any],
 		seed: _float, speedup: _float
 	) -> _float:
 	"""
 	Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
 
-	`sim_unlocks`: A sequence containing the starting unlocks.
+	`sim_unlocks`: A sequence containing the starting unlocks. These unlocks can be one of these:
+
+	- `dict[Unlock, int]` - Example: `{Unlocks.Expand: 2, Unlocks.Cactus: 1}`
+	- `tuple[tuple[Unlock, int]]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+	- `list[tuple[Unlock, int]]` - Example: `[(Unlocks.Expand, 2), (Unlocks.Cactus, 1)]`
+	- `tuple[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+	- `list[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `[Unlocks.Expand, Unlocks.Cactus]`
+	- `Unlocks` - Captures all of your current unlock levels from your main farm.
 
 	`sim_items`: A dict mapping items to amounts. The simulation starts with these items.
 
-	`sim_globals`: A dict mapping variable names to values. The simulation starts with these variables in the global scope.
+	`sim_globals`: A dict mapping variable names to values. The simulation starts with these variables in the global scope. Make sure any variables assigned in here are not assigned in the simulation code as that will override the vales from this dict.
 
 	`seed`: The random seed of the simulation. Must be a positive integer.
 
-	`speedup`: The starting speedup.
+	`speedup`: The starting speedup. The simulation may not reach the stated `speedup` value if it cannot properly speedup computation. Common causes for this include use of multiple drones or eating up too many ticks in a loop per iteration (for example a wait loop using pass).
 
 	returns the time it took to run the simulation.
 
