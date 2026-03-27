@@ -39,6 +39,7 @@ Milan Tuma
 Ivan Bondar
 Jimmy Sheep
 Taigo Nakajima
+НУІ
 
 ### Discord Moderátoři
 

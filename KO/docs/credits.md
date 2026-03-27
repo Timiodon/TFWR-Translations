@@ -34,6 +34,7 @@ Milan Tuma
 Ivan Bondar
 Jimmy Sheep
 Taigo Nakajima
+НУІ
 
 ### Discord 관리자
 MrBlobfish
