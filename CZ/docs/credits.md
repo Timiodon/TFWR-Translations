@@ -38,6 +38,7 @@ Davide Altamura
 Milan Tuma
 Ivan Bondar
 Jimmy Sheep
+Taigo Nakajima
 
 ### Discord Moderátoři
 

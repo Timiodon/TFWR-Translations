@@ -33,6 +33,7 @@ Davide Altamura
 Milan Tuma
 Ivan Bondar
 Jimmy Sheep
+Taigo Nakajima
 
 ### Discord 管理员
 MrBlobfish

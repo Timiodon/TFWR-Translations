@@ -33,6 +33,7 @@ Davide Altamura
 Milan Tuma
 Ivan Bondar
 Jimmy Sheep
+Taigo Nakajima
 
 ### Moderadores do Discord
 MrBlobfish
