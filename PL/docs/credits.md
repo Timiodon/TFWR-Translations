@@ -45,5 +45,6 @@ Jeff Siebold aka Noon Knight
 ### Specjalne podziękowania
 Jonas Bornhöft
 ThatMerlinGuy
+Zoroark Zwart
 Ramón Buchenberger
 Swiss Game Hub
