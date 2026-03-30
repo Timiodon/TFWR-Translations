@@ -3,27 +3,722 @@
 
 # Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay and @Zoroark-Zwart on the TFWR Discord server.
 
-from typing import Self, Any as _Any, overload
-from collections.abc import Iterable, Callable
-from builtins import (bool as _bool, int as _int, float as _float, str as _str,
-					  range as _range,
-					  tuple as _tuple, list as _list, set as _set, dict as _dict)
+# Expose some useful types to allow for typing without using a typing import.
+# Typing imports would fail to run in-game as they are not ignored.
 
-type Any = (
-    _bool | _int | _float | _str | _range | # Python builtin    - basic types
+# Notes on aliases because of TFWR functions:
+# - string -> builtins.str
+# - range_class -> builtins.range
 
-	_tuple[Any] | _list[Any] |				# Python builtin    - collection types
-    _set[Any] | _dict[Any, Any] |
+from typing import Self, Literal, Final, overload
+from collections.abc import Callable, Iterable, Sequence, Container
 
-	Direction | Entity | Entities | 		# Game builtins		- enum classes
+from builtins import (
+    bool, int, float, str as string,
+    range as range_class,
+    tuple,
+
+    # If you uncomment the custom classes found below then
+    # comment this line to prevent conflicts
+    list, set, dict
+)
+
+# Used for when the builtin type is desirable over a possible
+# redefinition using the same name
+from builtins import (
+    bool as _bool, int as _int, float as _float,
+    tuple as _tuple, list as _list, set as _set, dict as _dict
+)
+
+from typing import Any as _Any
+
+# -------------------------------------------------------------------------------
+# Basic Types and Collections
+# -------------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------
+type Primitive = _bool | _int | _float | string | None
+"""
+Basic immutable types in TFWR.
+
+included:
+
+- `bool`
+- `int`
+- `float`
+- `string`
+- `None`
+"""
+
+type Enums = (
+	Direction | Entity | Entities |
     Ground | Grounds | Hat | Hats |
     Item | Items | Leaderboard |
-    Leaderboards | Unlock | Unlocks |
-
-	Drone |									# Game builtins		- megafarm classes
-
-    None									# Python builtin	- None
+    Leaderboards | Unlock | Unlocks
 )
+"""
+Type representing all available enums in TFWR.
+
+included:
+
+- `Direction` (`North`, `East`, `South`, `West`)
+- `Hat`, `Entity`, `Item`, `Ground`, `Leaderboard`, `Unlock`
+- `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
+"""
+
+# --------------------------------------------------
+type Hashable = Primitive | Enums | range_class | Drone | tuple[Hashable, ...]
+"""
+Type representing all of the useable types for a dict key or set element in TFWR.
+
+included:
+
+- Primitives: `bool`, `int`, `float`, `string`, `None`
+- `tuple` and tuples of tuples that use a `Hashable`
+- `range_class`, `function` (hinted as `Callable`)
+- `Drone` (from `spawn_drone`)
+- Enums:
+  - `Direction` (`North`, `East`, `South`, `West`)
+  - `Hat`, `Entity`, `Item`, `Ground`, `Leaderboard`, `Unlock`
+  - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
+"""
+
+# --------------------------------------------------
+type Any = (
+    Primitive | 								# Python builtin    - basic types
+
+	range_class | Callable[..., Any] |			# Python builtin    - functions / modules
+
+	_tuple[Any,...] | _list[Any] |				# Python builtin    - collection types
+    _set[Hashable] | _dict[Hashable, Any] |
+
+	Enums | 									# Game builtins		- enum classes
+
+	Drone										# Game builtins		- megafarm classes
+)
+"""
+Type representing all of the useable types in TFWR.
+
+included:
+
+- Primitives: `bool`, `int`, `float`, `string`, `None`
+- `tuple`, `list`, `dict`, `set`
+- `range_class`, `module`, `function` (hinted as `Callable`)
+- `Drone` (from `spawn_drone`)
+- Enums:
+  - `Direction` (`North`, `East`, `South`, `West`)
+  - `Hat`, `Entity`, `Item`, `Ground`, `Leaderboard`, `Unlock`
+  - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
+"""
+
+# --------------------------------------------------
+type AnyIterable = (
+	_dict[Hashable, Any] | _list[Any] | _set[Hashable] | _tuple[Any,...] |
+	string | range_class |
+	Entities | Grounds | Hats | Items | Leaderboard | Unlocks
+)
+"""
+Type representing all of the iterable types in TFWR.
+
+included:
+
+- `tuple`, `list`, `dict`, `set`
+- `string`, `range_class`
+- Enums:
+  - `Direction` (`North`, `East`, `South`, `West`)
+  - `Hat`, `Entity`, `Item`, `Ground`, `Leaderboard`, `Unlock`
+  - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
+"""
+
+# --------------------------------------------------
+# Uncomment this class if you want additional game-specific type hints and docstrings for `dict` methods
+# This class requires the use of of the `dict()` constructor. Assigning `dict` literals (ex. `{'1':1, '1':2, '1':3}`) will cause typing conflicts with the builtin Python type `builtins.dict`
+
+# Comment out the `dict` builtins import above to prevent conflict errors.
+
+# class dict[key: Hashable, value: Any](_dict):
+# 	"""
+# 	Builds an unordered collection of key-value pairs
+
+# 	dict() -> new empty dictionary
+
+# 	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
+
+# 	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
+# 	takes `1` tick to execute if no input is given.
+# 	"""
+
+# 	def __init__(self: Self, input: _dict[Hashable, Any] | Container[Hashable] | None = None) -> None:
+# 		...
+
+# 	def len(self: Self) -> _int:
+# 		"""
+# 		Returns the number of items in the dictionary.
+
+# 		returns the length of the dictionary.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_dict = {"One": 1, "Two": 2, "Three": 3}
+# 		length = len(my_dict)
+# 		print(length)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+
+# 	def pop(self: Self, key: Hashable) -> Any: # type: ignore
+# 		"""
+# 		Remove the key-value pair corresponding to the `key` in the dict
+
+# 		returns the value of the removed key-value pair
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_dict = {"One": 1, "Two": 2, "Three": 3}
+# 		print("Old Value:", my_dict.pop("One"))
+# 		print("Current Dict:", my_dict)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		Old Value: 1
+# 		Current Dict: {"Two":2,"Three":3}
+# 		```
+# 		"""
+# 		...
+# 	...
+
+
+# --------------------------------------------------
+# Uncomment this class if you want additional game-specific type hints and docstrings for `list` methods
+# This class requires the use of of the `list()` constructor. Assigning `list` literals (ex. `[1, 2, 3]`) will cause typing conflicts with the builtin Python type `builtins.list`
+
+# Comment out the `list` builtins import above to prevent conflict errors.
+
+# class list[value: Any](_list):
+# 	"""
+# 	Builds an ordered sequence of values.
+
+# 	list() -> new empty list
+
+# 	list(collection: list | tuple | set | str) -> new list from the values of the provided `collection`
+
+# 	list(collection: set | dict) -> new list from the keys of the given `collection`
+
+# 	list(game_enum) -> new list from the values of an in-game enumm `game_enum`
+
+# 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
+# 	takes `1` tick to execute if no input is given.
+# 	"""
+
+# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
+# 		...
+
+# 	def append(self: Self, object: Any) -> None:
+# 		"""
+# 		Add `object` to the end of a list provided as `given_list`.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.append(4)
+# 		print(my_list)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		[1,2,3,4]
+# 		```
+# 		"""
+# 		...
+
+# 	def insert(self: Self, index: _int, object: Any) -> None: # type: ignore
+# 		"""
+# 		Add a `object` to the specified `index` to a list provided as `given_list`.
+
+# 		takes `1 + len(list) - index` ticks to execute
+
+# 		example usage:
+
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.insert(1, 4)
+# 		print(my_list)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		[1,4,2,3]
+# 		```
+# 		"""
+# 		...
+
+# 	def len(self: Self) -> _int:
+# 		"""
+# 		Returns the number of items in the list.
+
+# 		returns the length of the list.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_list = [1, 2, 3]
+# 		length = len(my_list)
+# 		print(length)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+
+# 	def pop(self: Self, index: _int) -> Any: # type: ignore
+# 		"""
+# 		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
+
+# 		returns the value of the removed element
+
+# 		takes `len(list) - index` ticks to execute if an `index` is provided
+# 		takes `1` tick to execute if no `index` is provided
+
+# 		example usage:
+
+# 		```
+# 		my_list = [1, 2, 3]
+# 		print("Old Value:", my_list.pop(1))
+# 		print("Current List:", my_list)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		Old Value: 2
+# 		Current List: [1,3]
+# 		```
+# 		"""
+# 		...
+
+# 	def remove(self: Self, object: Any) -> None:
+# 		"""
+# 		Remove the element corresponding to the `object` in the list.
+
+# 		takes `num_comparions + num_shifts` ticks to execute
+
+# 		example usage:
+
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.remove(1)
+# 		print(my_list)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		[2,3]
+# 		```
+# 		"""
+# 		...
+# 	...
+
+
+# --------------------------------------------------
+# Uncomment this class if you want additional game-specific type hints and docstrings for `set` methods
+# This class requires the use of of the `set()` constructor. Assigning set literals (ex. `{1, 2, 3}`) will cause typing conflicts with the builtin Python type `builtins.set`
+
+# Comment out the `set` builtins import above to prevent conflict errors.
+
+# class set[value: Hashable](_set):
+# 	"""
+# 	Builds an unordered collection of elements
+
+# 	set() -> new empty set
+
+# 	set(collection: list | tuple | set | str) -> new set from the values of the provided `collection`
+
+# 	set(collection: set | dict) -> new set from the keys of the given `collection`
+
+# 	set(game_enum) -> new set from the values of an in-game enumm `game_enum`
+
+# 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
+# 	takes `1` tick to execute if no input is given.
+# 	"""
+
+# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
+# 		...
+
+# 	def add(self: Self, object: Any) -> None:
+# 		"""
+# 		Add the `object` to a `given_set`.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_set = {1, 2, 3}
+# 		my_set.add(4)
+# 		print(my_set)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		{1,2,3,4}
+# 		```
+# 		"""
+# 		...
+
+# 	def len(self: Self) -> _int:
+# 		"""
+# 		Returns the number of items in the set.
+
+# 		returns the length of the set.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_set = {1, 2, 3}
+# 		length = len(my_set)
+# 		print(length)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+
+# 	def remove(self: Self, object: Any) -> None:
+# 		"""
+# 		Remove the `object` from the set.
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_set = {1, 2, 3}
+# 		my_set.remove(2)
+# 		print(my_set)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		{1,3}
+# 		```
+# 		"""
+# 		...
+# 	...
+
+# -------------------------------------------------------------------------------
+@overload
+def range(stop: _float) -> range_class:  # type: ignore
+	"""
+	Returns a sequence of numbers from `0` (inclusive) to `stop` (exclusive).
+
+	returns a range object.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	for i in range(5):
+	    print(i)
+	```
+
+	Output:
+
+	```
+	0
+	1
+	2
+	3
+	4
+	```
+
+	Note: if you wish to type hint a `range` variable use the alias `range_class` instead
+	"""
+	...
+
+@overload
+def range(start: _float, stop: _float) -> range_class:  # type: ignore
+	"""
+	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive).
+
+	returns a range object.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	for i in range(2, 5):
+	    print(i)
+	```
+
+	Output:
+
+	```
+	2
+	3
+	4
+	```
+
+	Note: if you wish to type hint a `range` variable use the alias `range_class` instead
+	"""
+	...
+
+@overload
+def range(start: _float, stop: _float, step: _float) -> range_class:  # type: ignore
+	"""
+	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive) every `step` interval.
+
+	returns a range object.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	for i in range(2, 5, 2):
+	    print(i)
+	```
+
+	Output:
+
+	```
+	2
+	4
+	```
+
+	Note: if you wish to type hint a `range` variable use the alias `range_class` instead
+	"""
+	...
+
+# --------------------------------------------------
+def remove(collection: _list[Any] | _set[Hashable] | Sequence[Any] | Container[Hashable], object: Any):
+	"""
+	Remove the element corresponding to the `object` in a list or set provided as `collection`.
+
+	takes `num_comparions + num_shifts` ticks to execute if a list is provided.
+	takes `1` tick to execute if a set is provided.
+
+	example usage:
+
+	```
+	my_set = {1, 2, 3}
+	my_set.remove(2)
+	print(my_set)
+	```
+
+	Output:
+
+	```
+	{1,3}
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def str(object: Any) -> string:
+	"""
+	Converts an object to its string representation.
+
+	returns the string representation of the object.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	string = str(1000)
+	print(string)
+	```
+
+	Output:
+
+	```
+	"1000"
+	```
+
+	Note: if you wish to type hint a `str` variable use the alias `string` instead
+	"""
+	...
+
+# --------------------------------------------------
+"""
+The following definitions are functions that mirror the methods that `lists`, `sets`, and `dicts` have. These definitions can be used as both a method and a function in TFWR.
+
+example usage (method):
+
+```
+list_numbers = [1, 2, 3]
+last_number = list_numbers.pop()
+print(last_number)
+```
+
+example usage (function):
+
+```
+list_numbers = [1, 2, 3]
+last_number = pop(list_numbers)
+print(last_number)
+```
+"""
+
+# --------------------------------------------------
+def add(given_set: _set[Hashable] | Container[Hashable], object: Any):
+	"""
+	Add the `object` to a `given_set`.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_set = {1, 2, 3}
+	my_set.add(4)
+	print(my_set)
+	```
+
+	Output:
+
+	```
+	{1,2,3,4}
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def append(given_list: _list[Any] | Sequence[Any], object: Any):
+	"""
+	Add `object` to the end of a list provided as `given_list`.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	my_list.append(4)
+	print(my_list)
+	```
+
+	Output:
+
+	```
+	[1,2,3,4]
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def insert(given_list: _list[Any] | Sequence[Any], index: _int, object: Any):
+	"""
+	Add a `object` to the specified `index` to a list provided as `given_list`.
+
+	takes `1 + len(list) - index` ticks to execute
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	my_list.insert(1, 4)
+	print(my_list)
+	```
+
+	Output:
+
+	```
+	[1,4,2,3]
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def len(object : string | _dict[Hashable, Any] | _list[Any] | _set[Hashable] | _tuple[Any] | Sequence[Any] | Container[Hashable]) -> _int:
+	"""
+	Returns the number of items in the dict, list, set or str provided as `collection`.
+
+	returns the length of the dict, list, set or str.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	length = len(my_list)
+	print(length)
+	```
+
+	Output:
+
+	```
+	3
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def pop(collection: _dict[Hashable, Any] | _list[Any] | Sequence[Any] | Container[Hashable], object: Any):
+	"""
+	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
+
+	returns the value of the removed element
+
+	takes `len(list) - index` ticks to execute if an index is provided
+	takes `1` tick to execute if no `key` is provided, of if a dict is provided
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	print("Old Value:", my_list.pop(1))
+	print("Current List:", my_list)
+	```
+
+	Output:
+
+	```
+	Old Value: 2
+	Current List: [1,3]
+	```
+	"""
+	...
+
+
+
 
 # -------------------------------------------------------------------------------
 # In-Game Enums
@@ -675,562 +1370,6 @@ class Unlocks:
 
 
 # -------------------------------------------------------------------------------
-# Basic Types and Collections
-# -------------------------------------------------------------------------------
-
-# -------------------------------------------------------------------------------
-type AnyIterable = (
-	_dict[_Any, _Any] | _list[_Any] | _set[_Any] | _tuple[_Any] | _str |
-	Entities | Grounds | Hats | Items | Leaderboard | Unlocks
-)
-
-# --------------------------------------------------
-class dict[key: Any, value: Any](_dict):
-	"""
-	Builds an unordered collection of key-value pairs
-
-	dict() -> new empty dictionary
-
-	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
-
-	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
-	takes `1` tick to execute if no input is given.
-	"""
-
-	def __init__(self: Self, input: dict[Any, Any] | None = None) -> None:
-		...
-
-	def len(self: Self) -> _int:
-		"""
-		Returns the number of items in the dictionary.
-
-		returns the length of the dictionary.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_dict = {"One": 1, "Two": 2, "Three": 3}
-		length = len(my_dict)
-		print(length)
-		```
-
-		Output:
-
-		```
-		3
-		```
-		"""
-		...
-
-	def pop(self: Self, key: Any) -> Any: # type: ignore
-		"""
-		Remove the key-value pair corresponding to the `key` in the dict
-
-		returns the value of the removed key-value pair
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_dict = {"One": 1, "Two": 2, "Three": 3}
-		print("Old Value:", my_dict.pop("One"))
-		print("Current Dict:", my_dict)
-		```
-
-		Output:
-
-		```
-		Old Value: 1
-		Current Dict: {"Two":2,"Three":3}
-		```
-		"""
-		...
-	...
-
-
-# --------------------------------------------------
-class list[index: Any](_list):
-	"""
-	Builds an ordered sequence of values.
-
-	list() -> new empty list
-
-	list(collection: list | tuple | set | str) -> new list from the values of the provided `collection`
-
-	list(collection: set | dict) -> new list from the keys of the given `collection`
-
-	list(game_enum) -> new list from the values of an in-game enumm `game_enum`
-
-	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
-	takes `1` tick to execute if no input is given.
-	"""
-
-	def __init__(self: Self, input: AnyIterable | None = None) -> None:
-		...
-
-	def append(self: Self, object: Any) -> None:
-		"""
-		Add `object` to the end of a list provided as `given_list`.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_list = [1, 2, 3]
-		my_list.append(4)
-		print(my_list)
-		```
-
-		Output:
-
-		```
-		[1,2,3,4]
-		```
-		"""
-		...
-
-	def insert(self: Self, index: _int, object: Any) -> None: # type: ignore
-		"""
-		Add a `object` to the specified `index` to a list provided as `given_list`.
-
-		takes `1 + len(list) - index` ticks to execute
-
-		example usage:
-
-		```
-		my_list = [1, 2, 3]
-		my_list.insert(1, 4)
-		print(my_list)
-		```
-
-		Output:
-
-		```
-		[1,4,2,3]
-		```
-		"""
-		...
-
-	def len(self: Self) -> _int:
-		"""
-		Returns the number of items in the list.
-
-		returns the length of the list.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_list = [1, 2, 3]
-		length = len(my_list)
-		print(length)
-		```
-
-		Output:
-
-		```
-		3
-		```
-		"""
-		...
-
-	def pop(self: Self, index: _int) -> Any: # type: ignore
-		"""
-		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
-
-		returns the value of the removed element
-
-		takes `len(list) - index` ticks to execute if an `index` is provided
-		takes `1` tick to execute if no `index` is provided
-
-		example usage:
-
-		```
-		my_list = [1, 2, 3]
-		print("Old Value:", my_list.pop(1))
-		print("Current List:", my_list)
-		```
-
-		Output:
-
-		```
-		Old Value: 2
-		Current List: [1,3]
-		```
-		"""
-		...
-
-	def remove(self: Self, object: Any) -> None:
-		"""
-		Remove the element corresponding to the `object` in the list.
-
-		takes `num_comparions + num_shifts` ticks to execute
-
-		example usage:
-
-		```
-		my_list = [1, 2, 3]
-		my_list.remove(1)
-		print(my_list)
-		```
-
-		Output:
-
-		```
-		[2,3]
-		```
-		"""
-		...
-	...
-
-
-# --------------------------------------------------
-class set[key: Any](_set):
-	"""
-	Builds an unordered collection of elements
-
-	set() -> new empty set
-
-	set(collection: list | tuple | set | str) -> new set from the values of the provided `collection`
-
-	set(collection: set | dict) -> new set from the keys of the given `collection`
-
-	set(game_enum) -> new set from the values of an in-game enumm `game_enum`
-
-	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
-	takes `1` tick to execute if no input is given.
-	"""
-
-	def __init__(self: Self, input: AnyIterable | None = None) -> None:
-		...
-
-	def add(self: Self, object: Any) -> None:
-		"""
-		Add the `object` to a `given_set`.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_set = {1, 2, 3}
-		my_set.add(4)
-		print(my_set)
-		```
-
-		Output:
-
-		```
-		{1,2,3,4}
-		```
-		"""
-		...
-
-	def len(self: Self) -> _int:
-		"""
-		Returns the number of items in the set.
-
-		returns the length of the set.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_set = {1, 2, 3}
-		length = len(my_set)
-		print(length)
-		```
-
-		Output:
-
-		```
-		3
-		```
-		"""
-		...
-
-	def remove(self: Self, object: Any) -> None:
-		"""
-		Remove the `object` from the set.
-
-		takes `1` tick to execute.
-
-		example usage:
-
-		```
-		my_set = {1, 2, 3}
-		my_set.remove(2)
-		print(my_set)
-		```
-
-		Output:
-
-		```
-		{1,3}
-		```
-		"""
-		...
-	...
-
-# -------------------------------------------------------------------------------
-def add(given_set: _set[Any], object: Any):
-	"""
-	Add the `object` to a `given_set`.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_set = {1, 2, 3}
-	my_set.add(4)
-	print(my_set)
-	```
-
-	Output:
-
-	```
-	{1,2,3,4}
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def append(given_list: _list[Any], object: Any):
-	"""
-	Add `object` to the end of a list provided as `given_list`.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	my_list.append(4)
-	print(my_list)
-	```
-
-	Output:
-
-	```
-	[1,2,3,4]
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def insert(given_list: _list[Any], index: _int, object: Any):
-	"""
-	Add a `object` to the specified `index` to a list provided as `given_list`.
-
-	takes `1 + len(list) - index` ticks to execute
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	my_list.insert(1, 4)
-	print(my_list)
-	```
-
-	Output:
-
-	```
-	[1,4,2,3]
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def len(object : _str | _dict[Any, Any] | _list[Any] | _set[Any] | _tuple[Any]) -> _int:
-	"""
-	Returns the number of items in the dict, list, set or str provided as `collection`.
-
-	returns the length of the dict, list, set or str.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	length = len(my_list)
-	print(length)
-	```
-
-	Output:
-
-	```
-	3
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def pop(collection: _dict[Any, Any] | _list[Any], object: Any):
-	"""
-	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
-
-	returns the value of the removed element
-
-	takes `len(list) - index` ticks to execute if an index is provided
-	takes `1` tick to execute if no `key` is provided, of if a dict is provided
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	print("Old Value:", my_list.pop(1))
-	print("Current List:", my_list)
-	```
-
-	Output:
-
-	```
-	Old Value: 2
-	Current List: [1,3]
-	```
-	"""
-	...
-
-# --------------------------------------------------
-@overload
-def range(stop: _float) -> _range:  # type: ignore
-	"""
-	Returns a sequence of numbers from `0` (inclusive) to `stop` (exclusive).
-
-	returns a range object.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	for i in range(5):
-	    print(i)
-	```
-
-	Output:
-
-	```
-	0
-	1
-	2
-	3
-	4
-	```
-	"""
-	...
-
-@overload
-def range(start: _float, stop: _float) -> _range:  # type: ignore
-	"""
-	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive).
-
-	returns a range object.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	for i in range(2, 5):
-	    print(i)
-	```
-
-	Output:
-
-	```
-	2
-	3
-	4
-	```
-	"""
-	...
-
-@overload
-def range(start: _float, stop: _float, step: _float) -> _range:  # type: ignore
-	"""
-	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive) every `step` interval.
-
-	returns a range object.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	for i in range(2, 5, 2):
-	    print(i)
-	```
-
-	Output:
-
-	```
-	2
-	4
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def remove(collection: _list[Any] | _set[Any], object: Any):
-	"""
-	Remove the element corresponding to the `object` in a list or set provided as `collection`.
-
-	takes `num_comparions + num_shifts` ticks to execute if a list is provided.
-	takes `1` tick to execute if a set is provided.
-
-	example usage:
-
-	```
-	my_set = {1, 2, 3}
-	my_set.remove(2)
-	print(my_set)
-	```
-
-	Output:
-
-	```
-	{1,3}
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def str(object: Any) -> _str:
-	"""
-	Converts an object to its string representation.
-
-	returns the string representation of the object.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	string = str(1000)
-	print(string)
-	```
-
-	Output:
-
-	```
-	"1000"
-	```
-	"""
-	...
-
-
-
-
-# -------------------------------------------------------------------------------
 # Crop Management
 # -------------------------------------------------------------------------------
 
@@ -1849,10 +1988,10 @@ def set_world_size(size: _float) -> None:
 type SimulateUnlocks = _dict[Unlock, _int] | _tuple[_tuple[Unlock, _int]] | _list[_tuple[Unlock, _int]] | _tuple[Unlock] | _list[Unlock] | Unlocks
 
 def simulate(
-		filename: _str,
+		filename: string,
 		sim_unlocks: SimulateUnlocks,
 		sim_items: _dict[Item, _float],
-		sim_globals: _dict[_str, Any],
+		sim_globals: _dict[string, Any],
 		seed: _float, speedup: _float
 	) -> _float:
 	"""
@@ -1901,7 +2040,7 @@ def simulate(
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_cost(thing: Entity | Item | Unlock, level: _int | None = None) -> dict[Item, _int] | None:
+def get_cost(thing: Entity | Item | Unlock, level: _int | None = None) -> _dict[Item, _int] | None:
 	"""
 	Gets the cost of a `thing`
 
@@ -2051,7 +2190,7 @@ def abs(x: _float) -> _float:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def print(*something: Any) -> None:
+def print(*something: _Any) -> None:
 	"""
 	Prints `something` into the air above the drone using smoke. This action is not affected by speed upgrades.
 	Multiple values can be printed at once.
@@ -2070,7 +2209,7 @@ def print(*something: Any) -> None:
 
 
 # --------------------------------------------------
-def quick_print(*something: Any) -> None:
+def quick_print(*something: _Any) -> None:
 	"""
 	Prints a value just like `print()` but it doesn't stop to write it into the air so it can only be found on the output page.
 
@@ -2132,7 +2271,7 @@ def pet_the_piggy() -> None:
 
 
 # --------------------------------------------------
-def leaderboard_run(leaderboard: Leaderboard, file_name: _str, speedup: _float) -> None:
+def leaderboard_run(leaderboard: Leaderboard, file_name: string, speedup: _float) -> None:
 	"""
 	Starts a timed run for the `leaderboard` using the specified `file_name` as a starting point.
 	`speedup` sets the starting speedup.
