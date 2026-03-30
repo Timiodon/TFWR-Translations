@@ -10,7 +10,7 @@
 # - string -> builtins.str
 # - range_class -> builtins.range
 
-from typing import Self, Literal, Final, overload
+from typing import Self, TypeVar, Literal, Final, overload
 from collections.abc import Callable, Iterable, Sequence, Container
 
 from builtins import (
@@ -83,6 +83,8 @@ included:
   - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
 """
 
+_Hashable_ = TypeVar("_Hashable_", Hashable, Hashable, covariant = True)
+
 # --------------------------------------------------
 type Any = (
     Primitive | 								# Python builtin    - basic types
@@ -110,6 +112,8 @@ included:
   - `Hat`, `Entity`, `Item`, `Ground`, `Leaderboard`, `Unlock`
   - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
 """
+
+_Any_ = TypeVar("_Any_", Any, Any, covariant = True)
 
 # --------------------------------------------------
 type AnyIterable = (
@@ -526,7 +530,149 @@ def range(start: _float, stop: _float, step: _float) -> range_class:  # type: ig
 	...
 
 # --------------------------------------------------
-def remove(collection: _list[Any] | _set[Hashable] | Sequence[Any] | Container[Hashable], object: Any):
+"""
+The following definitions are functions that mirror the methods that `lists`, `sets`, and `dicts` have. These definitions can be used as both a method and a function in TFWR.
+
+example usage (method):
+
+```
+list_numbers = [1, 2, 3]
+last_number = list_numbers.pop()
+print(last_number)
+```
+
+example usage (function):
+
+```
+list_numbers = [1, 2, 3]
+last_number = pop(list_numbers)
+print(last_number)
+```
+"""
+
+# --------------------------------------------------
+def add(given_set: _set[_Hashable_], object: Any):
+	"""
+	Add the `object` to a `given_set`.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_set = {1, 2, 3}
+	my_set.add(4)
+	print(my_set)
+	```
+
+	Output:
+
+	```
+	{1,2,3,4}
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def append(given_list: _list[_Any_], object: Any):
+	"""
+	Add `object` to the end of a list provided as `given_list`.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	my_list.append(4)
+	print(my_list)
+	```
+
+	Output:
+
+	```
+	[1,2,3,4]
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def insert(given_list: _list[_Any_], index: _int, object: Any):
+	"""
+	Add a `object` to the specified `index` to a list provided as `given_list`.
+
+	takes `1 + len(list) - index` ticks to execute
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	my_list.insert(1, 4)
+	print(my_list)
+	```
+
+	Output:
+
+	```
+	[1,4,2,3]
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashable_] | _tuple[_Any_]) -> _int:
+	"""
+	Returns the number of items in the dict, list, set or str provided as `collection`.
+
+	returns the length of the dict, list, set or str.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	length = len(my_list)
+	print(length)
+	```
+
+	Output:
+
+	```
+	3
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any):
+	"""
+	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
+
+	returns the value of the removed element
+
+	takes `len(list) - index` ticks to execute if an index is provided
+	takes `1` tick to execute if no `key` is provided, of if a dict is provided
+
+	example usage:
+
+	```
+	my_list = [1, 2, 3]
+	print("Old Value:", my_list.pop(1))
+	print("Current List:", my_list)
+	```
+
+	Output:
+
+	```
+	Old Value: 2
+	Current List: [1,3]
+	```
+	"""
+	...
+
+# --------------------------------------------------
+def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any):
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 
@@ -572,148 +718,6 @@ def str(object: Any) -> string:
 	```
 
 	Note: if you wish to type hint a `str` variable use the alias `string` instead
-	"""
-	...
-
-# --------------------------------------------------
-"""
-The following definitions are functions that mirror the methods that `lists`, `sets`, and `dicts` have. These definitions can be used as both a method and a function in TFWR.
-
-example usage (method):
-
-```
-list_numbers = [1, 2, 3]
-last_number = list_numbers.pop()
-print(last_number)
-```
-
-example usage (function):
-
-```
-list_numbers = [1, 2, 3]
-last_number = pop(list_numbers)
-print(last_number)
-```
-"""
-
-# --------------------------------------------------
-def add(given_set: _set[Hashable] | Container[Hashable], object: Any):
-	"""
-	Add the `object` to a `given_set`.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_set = {1, 2, 3}
-	my_set.add(4)
-	print(my_set)
-	```
-
-	Output:
-
-	```
-	{1,2,3,4}
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def append(given_list: _list[Any] | Sequence[Any], object: Any):
-	"""
-	Add `object` to the end of a list provided as `given_list`.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	my_list.append(4)
-	print(my_list)
-	```
-
-	Output:
-
-	```
-	[1,2,3,4]
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def insert(given_list: _list[Any] | Sequence[Any], index: _int, object: Any):
-	"""
-	Add a `object` to the specified `index` to a list provided as `given_list`.
-
-	takes `1 + len(list) - index` ticks to execute
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	my_list.insert(1, 4)
-	print(my_list)
-	```
-
-	Output:
-
-	```
-	[1,4,2,3]
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def len(object : string | _dict[Hashable, Any] | _list[Any] | _set[Hashable] | _tuple[Any] | Sequence[Any] | Container[Hashable]) -> _int:
-	"""
-	Returns the number of items in the dict, list, set or str provided as `collection`.
-
-	returns the length of the dict, list, set or str.
-
-	takes `1` tick to execute.
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	length = len(my_list)
-	print(length)
-	```
-
-	Output:
-
-	```
-	3
-	```
-	"""
-	...
-
-# --------------------------------------------------
-def pop(collection: _dict[Hashable, Any] | _list[Any] | Sequence[Any] | Container[Hashable], object: Any):
-	"""
-	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
-
-	returns the value of the removed element
-
-	takes `len(list) - index` ticks to execute if an index is provided
-	takes `1` tick to execute if no `key` is provided, of if a dict is provided
-
-	example usage:
-
-	```
-	my_list = [1, 2, 3]
-	print("Old Value:", my_list.pop(1))
-	print("Current List:", my_list)
-	```
-
-	Output:
-
-	```
-	Old Value: 2
-	Current List: [1,3]
-	```
 	"""
 	...
 
