@@ -199,7 +199,7 @@ class Hat:
 
 
 # --------------------------------------------------
-class Hats:
+class Hats(_Enum):
     
 	@staticmethod
 	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Hat:
@@ -345,7 +345,7 @@ class Item:
 
 
 # --------------------------------------------------
-class Items:
+class Items(_Enum):
     
 	@staticmethod
 	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Item:
@@ -422,7 +422,7 @@ class Leaderboard:
 
 
 # --------------------------------------------------
-class Leaderboards:
+class Leaderboards(_Enum):
     
 	@staticmethod
 	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Leaderboard:
@@ -518,7 +518,7 @@ class Unlock:
 
 
 # --------------------------------------------------
-class Unlocks:
+class Unlocks(_Enum):
     
 	@staticmethod
 	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Unlock:
