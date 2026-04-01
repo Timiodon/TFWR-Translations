@@ -8,6 +8,7 @@ from collections.abc import Iterable, Callable
 from builtins import (bool as _bool, int as _int, float as _float, str as _str,
 					  range as _range,
 					  tuple as _tuple, list as _list, set as _set, dict as _dict)
+from enum import Enum as _Enum, auto as _auto
 
 type Any = (
     _bool | _int | _float | _str | _range | # Python builtin    - basic types
@@ -68,13 +69,18 @@ class Entity:
 
 
 # --------------------------------------------------
-class Entities:
-	Apple: Entity
+class Entities(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Entity:
+		return Entity()
+    
+	Apple = _auto()
 	"""
 	Dinosaurs love them apparently.
 	"""
 
-	Bush: Entity
+	Bush = _auto()
 	"""
 	A small bush that drops `Items.Wood`.
 
@@ -82,7 +88,7 @@ class Entities:
 	Grows on: grassland or soil
 	"""
 
-	Cactus: Entity
+	Cactus = _auto()
 	"""
 	Cacti come in 10 different sizes (0-9). When harvested, adjacent cacti that are in sorted order will also be harvested recursively.
 	You receive cactus equal to the number of harvested cacti squared.
@@ -91,7 +97,7 @@ class Entities:
 	Grows on: soil
 	"""
 
-	Carrot: Entity
+	Carrot = _auto()
 	"""
 	Carrots!
 
@@ -99,13 +105,13 @@ class Entities:
 	Grows on: soil
 	"""
 
-	Dead_Pumpkin: Entity
+	Dead_Pumpkin = _auto()
 	"""
 	One in five pumpkins dies when it grows up, leaving behind a dead pumpkin. Dead pumpkins are useless and disappear when something new is planted.
 	`can_harvest()` always returns `False` on dead pumpkins.
 	"""
 
-	Dinosaur: Entity
+	Dinosaur = _auto()
 	"""
 	A piece of the tail of the dinosaur hat. When wearing the dinosaur hat, the tail is dragged behind the drone filling previously moved tiles.
 
@@ -113,7 +119,7 @@ class Entities:
 	Grows on: grassland or soil
 	"""
 
-	Grass: Entity
+	Grass = _auto()
 	"""
 	Grows automatically on grassland. Harvest it to obtain `Items.Hay`.
 
@@ -121,12 +127,12 @@ class Entities:
 	Grows on: grassland or soil
 	"""
 
-	Hedge: Entity
+	Hedge = _auto()
 	"""
 	Part of the maze.
 	"""
 
-	Pumpkin: Entity
+	Pumpkin = _auto()
 	"""
 	Pumpkins grow together when they are next to other fully grown pumpkins. About 1 in 5 pumpkins dies when it grows up.
 	When you harvest a pumpkin you get `Items.Pumpkin` equal to the number of pumpkins in the mega pumpkin cubed.
@@ -135,7 +141,7 @@ class Entities:
 	Grows on: soil
 	"""
 
-	Sunflower: Entity
+	Sunflower = _auto()
 	"""
 	Sunflowers collect the power from the sun. Harvesting them will give you `Items.Power`.
 	If you harvest a sunflower with the maximum number of petals (and there are at least 10 sunflowers) you get 5x bonus power.
@@ -144,12 +150,12 @@ class Entities:
 	Grows on: soil
 	"""
 
-	Treasure: Entity
+	Treasure = _auto()
 	"""
 	A treasure that contains gold equal to the side length of the maze in which it is hidden. It can be harvested like a plant.
 	"""
 
-	Tree: Entity
+	Tree = _auto()
 	"""
 	Trees drop more wood than bushes. They take longer to grow if other trees grow next to them.
 
@@ -167,13 +173,18 @@ class Ground:
 
 
 # --------------------------------------------------
-class Grounds:
-	Grassland: Ground
+class Grounds(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Ground:
+		return Ground()
+
+	Grassland = _auto()
 	"""
 	The default ground. Grass will automatically grow on it.
 	"""
 
-	Soil: Ground
+	Soil = _auto()
 	"""
 	Calling `till()` turns the ground into this. Calling `till()` again changes it back to grassland.
 	"""
@@ -188,133 +199,138 @@ class Hat:
 
 
 # --------------------------------------------------
-class Hats:
-	Brown_Hat: Hat
+class Hats(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Hat:
+		return Hat()
+    
+	Brown_Hat = _auto()
 	"""
 	A brown hat.
 	"""
 
-	Cactus_Hat: Hat
+	Cactus_Hat = _auto()
 	"""
 	A hat shaped like a cactus.
 	"""
 
-	Carrot_Hat: Hat
+	Carrot_Hat = _auto()
 	"""
 	A hat shaped like a carrot.
 	"""
 
-	Dinosaur_Hat: Hat
+	Dinosaur_Hat = _auto()
 	"""
 	Equip it to start the dinosaur game.
 	"""
 
-	Gold_Hat: Hat
+	Gold_Hat = _auto()
 	"""
 	A golden hat.
 	"""
 
-	Gold_Trophy_Hat: Hat
+	Gold_Trophy_Hat = _auto()
 	"""
 	A golden trophy hat.
 	"""
 
-	Golden_Cactus_Hat: Hat
+	Golden_Cactus_Hat = _auto()
 	"""
 	A golden hat shaped like a cactus.
 	"""
 
-	Golden_Carrot_Hat: Hat
+	Golden_Carrot_Hat = _auto()
 	"""
 	A golden hat shaped like a carrot.
 	"""
 
-	Golden_Gold_Hat: Hat
+	Golden_Gold_Hat = _auto()
 	"""
 	A golden version of the gold hat.
 	"""
 
-	Golden_Pumpkin_Hat: Hat
+	Golden_Pumpkin_Hat = _auto()
 	"""
 	A golden hat shaped like a pumpkin.
 	"""
 
-	Golden_Sunflower_Hat: Hat
+	Golden_Sunflower_Hat = _auto()
 	"""
 	A golden hat shaped like a sunflower.
 	"""
 
-	Golden_Tree_Hat: Hat
+	Golden_Tree_Hat = _auto()
 	"""
 	A golden hat shaped like a tree.
 	"""
 
-	Gray_Hat: Hat
+	Gray_Hat = _auto()
 	"""
 	A gray hat.
 	"""
 
-	Green_Hat: Hat
+	Green_Hat = _auto()
 	"""
 	A green hat.
 	"""
 
-	Pumpkin_Hat: Hat
+	Pumpkin_Hat = _auto()
 	"""
 	A hat shaped like a pumpkin.
 	"""
 
-	Purple_Hat: Hat
+	Purple_Hat = _auto()
 	"""
 	A purple hat.
 	"""
 
-	Silver_Trophy_Hat: Hat
+	Silver_Trophy_Hat = _auto()
 	"""
 	A silver trophy hat.
 	"""
 
-	Straw_Hat: Hat
+	Straw_Hat = _auto()
 	"""
 	The default hat.
 	"""
 
-	Sunflower_Hat: Hat
+	Sunflower_Hat = _auto()
 	"""
 	A hat shaped like a sunflower.
 	"""
 
-	The_Farmers_Remains: Hat
+	The_Farmers_Remains = _auto()
 	"""
 	Unlocks the special hat 'The Farmers Remains'.
 	"""
 
-	Top_Hat: Hat
+	Top_Hat = _auto()
 	"""
 	Unlocks the fancy Top Hat.
 	"""
 
-	Traffic_Cone: Hat
+	Traffic_Cone = _auto()
 	"""
 	A traffic cone hat.
 	"""
 
-	Traffic_Cone_Stack: Hat
+	Traffic_Cone_Stack = _auto()
 	"""
 	A stack of traffic cones as a hat.
 	"""
 
-	Tree_Hat: Hat
+	Tree_Hat = _auto()
 	"""
 	A hat shaped like a tree.
 	"""
 
-	Wizard_Hat: Hat
+	Wizard_Hat = _auto()
 	"""
 	A magical wizard hat.
 	"""
 
-	Wood_Trophy_Hat: Hat
+	Wood_Trophy_Hat = _auto()
 	"""
 	A wooden trophy hat.
 	"""
@@ -329,66 +345,72 @@ class Item:
 
 
 # --------------------------------------------------
-class Items:
-    Bone: Item
-    """
-    The bones of an ancient creature.
+class Items(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Item:
+		return Item()
+
+# jesus, make up your mind, spaces or tabs
+	Bone = _auto()
+	"""
+	The bones of an ancient creature.
+	"""
+
+	Cactus = _auto()
+	"""
+	Obtained by harvesting sorted cacti.
+	"""
+
+	Carrot = _auto()
+	"""
+	Obtained by harvesting carrots.
+	"""
+
+	Fertilizer = _auto()
+	"""
+	Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.
+	"""
+
+	Gold = _auto()
+	"""
+	Found in treasure chests in mazes.
+	"""
+
+	Hay = _auto()
+	"""
+	Obtained by cutting grass.
     """
 
-    Cactus: Item
-    """
-    Obtained by harvesting sorted cacti.
-    """
+	Piggy = _auto()
+	"""
+	This item has been removed from the game but remains as a nostalgia trophy.
+	"""
 
-    Carrot: Item
-    """
-    Obtained by harvesting carrots.
-    """
+	Power = _auto()
+	"""
+	Obtained by harvesting sunflowers. The drone automatically uses this to move twice as fast.
+	"""
 
-    Fertilizer: Item
-    """
-    Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.
-    """
+	Pumpkin = _auto()
+	"""
+	Obtained by harvesting pumpkins.
+	"""
 
-    Gold: Item
-    """
-    Found in treasure chests in mazes.
-    """
+	Water = _auto()
+	"""
+	Used to water the ground by calling `use_item(Items.Water)`.
+	"""
 
-    Hay: Item
-    """
-    Obtained by cutting grass.
-    """
+	Weird_Substance = _auto()
+	"""
+	Call `use_item(Items.Weird_Substance)` on a bush to grow a maze, or on other plants to toggle their infection status.
+	"""
 
-    Piggy: Item
-    """
-    This item has been removed from the game but remains as a nostalgia trophy.
-    """
-
-    Power: Item
-    """
-    Obtained by harvesting sunflowers. The drone automatically uses this to move twice as fast.
-    """
-
-    Pumpkin: Item
-    """
-    Obtained by harvesting pumpkins.
-    """
-
-    Water: Item
-    """
-    Used to water the ground by calling `use_item(Items.Water)`.
-    """
-
-    Weird_Substance: Item
-    """
-    Call `use_item(Items.Weird_Substance)` on a bush to grow a maze, or on other plants to toggle their infection status.
-    """
-
-    Wood: Item
-    """
-    Obtained from bushes and trees.
-    """
+	Wood = _auto()
+	"""
+	Obtained from bushes and trees.
+	"""
 
 
 # -------------------------------------------------------------------------------
@@ -400,83 +422,88 @@ class Leaderboard:
 
 
 # --------------------------------------------------
-class Leaderboards:
-	Cactus: Leaderboard
+class Leaderboards(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Leaderboard:
+		return Leaderboard()
+    
+	Cactus = _auto()
 	"""
 	Farm 33_554_432 cacti with multiple drones.
 	"""
 
-	Cactus_Single: Leaderboard
+	Cactus_Single = _auto()
 	"""
 	Farm 131_072_cacti with a single drone on an 8x8 farm.
 	"""
 
-	Carrots: Leaderboard
+	Carrots = _auto()
 	"""
 	Farm 2_000_000_000 carrots with multiple drones.
 	"""
 
-	Carrots_Single: Leaderboard
+	Carrots_Single = _auto()
 	"""
 	Farm 100_000_000 carrots with a single drone on an 8x8 farm.
 	"""
 
-	Dinosaur: Leaderboard
+	Dinosaur = _auto()
 	"""
 	Farm 33_488_928 bones with multiple drones.
 	"""
 
-	Fastest_Reset: Leaderboard
+	Fastest_Reset = _auto()
 	"""
 	The most prestigious category. Completely automate the game from a single farm plot to unlocking the leaderboards again.
 	"""
 
-	Hay: Leaderboard
+	Hay = _auto()
 	"""
 	Farm 2_000_000_000 hay with multiple drones.
 	"""
 
-	Hay_Single: Leaderboard
+	Hay_Single = _auto()
 	"""
 	Farm 100_000_000 hay with a single drone on an 8x8 farm.
 	"""
 
-	Maze: Leaderboard
+	Maze = _auto()
 	"""
 	Farm 9_863_168_gold with multiple drones.
 	"""
 
-	Maze_Single: Leaderboard
+	Maze_Single = _auto()
 	"""
 	Farm 616_448 gold with a single drone on an 8x8 farm.
 	"""
 
-	Pumpkins: Leaderboard
+	Pumpkins = _auto()
 	"""
 	Farm 200_000_000 pumpkins with multiple drones.
 	"""
 
-	Pumpkins_Single: Leaderboard
+	Pumpkins_Single = _auto()
 	"""
 	Farm 10_000_000 pumpkins with a single drone on an 8x8 farm.
 	"""
 
-	Sunflowers: Leaderboard
+	Sunflowers = _auto()
 	"""
 	Farm 100_000 power with multiple drones.
 	"""
 
-	Sunflowers_Single: Leaderboard
+	Sunflowers_Single = _auto()
 	"""
 	Farm 10_000 power with a single drone on an 8x8 farm.
 	"""
 
-	Wood: Leaderboard
+	Wood = _auto()
 	"""
 	Farm 10_000_000_000 wood with multiple drones.
 	"""
 
-	Wood_Single: Leaderboard
+	Wood_Single = _auto()
 	"""
 	Farm 500_000_000 wood with a single drone on an 8x8 farm.
 	"""
@@ -491,181 +518,186 @@ class Unlock:
 
 
 # --------------------------------------------------
-class Unlocks:
-	Auto_Unlock: Unlock
+class Unlocks(_Enum):
+    
+	@staticmethod
+	def _generate_next_value_(name: _str, start: _int, count: _int, last_values: _list[_Any]) -> Unlock:
+		return Unlock()
+    
+	Auto_Unlock = _auto()
 	"""
 	Automatically unlock things.
 	"""
 
-	Cactus: Unlock
+	Cactus = _auto()
 	"""
 	Unlock: Cactus!
 	Upgrade: Increases the yield and cost of cactus.
 	"""
 
-	Carrots: Unlock
+	Carrots = _auto()
 	"""
 	Unlock: Till the soil and plant carrots.
 	Upgrade: Increases the yield and cost of carrots.
 	"""
 
-	Costs: Unlock
+	Costs = _auto()
 	"""
 	Allows access to the cost of things.
 	"""
 
-	Debug: Unlock
+	Debug = _auto()
 	"""
 	Tools to help with debugging programs.
 	"""
 
-	Debug_2: Unlock
+	Debug_2 = _auto()
 	"""
 	Functions to temporarily slow down the execution and make the grid smaller.
 	"""
 
-	Dictionaries: Unlock
+	Dictionaries = _auto()
 	"""
 	Get access to dictionaries and sets.
 	"""
 
-	Dinosaurs: Unlock
+	Dinosaurs = _auto()
 	"""
 	Unlock: Majestic ancient creatures.
 	Upgrade: Increases the yield and cost of dinosaurs.
 	"""
 
-	Expand: Unlock
+	Expand = _auto()
 	"""
 	Unlock: Expands the farm land and unlocks movement.
 	Upgrade: Expands the farm. This also clears the farm.
 	"""
 
-	Fertilizer: Unlock
+	Fertilizer = _auto()
 	"""
 	Reduces the remaining growing time of the plant under the drone by 2 seconds.
 	"""
 
-	Functions: Unlock
+	Functions = _auto()
 	"""
 	Define your own functions.
 	"""
 
-	Grass: Unlock
+	Grass = _auto()
 	"""
 	Increases the yield of grass.
 	"""
 
-	Hats: Unlock
+	Hats = _auto()
 	"""
 	Unlocks new hat colors for your drone.
 	"""
 
-	Import: Unlock
+	Import = _auto()
 	"""
 	Import code from other files.
 	"""
 
-	Leaderboard: Unlock
+	Leaderboard = _auto()
 	"""
 	Join the leaderboard for the fastest time in farming a specific crop or for the fastest reset of the farm.
 	"""
 
-	Lists: Unlock
+	Lists = _auto()
 	"""
 	Use lists to store lots of values.
 	"""
 
-	Loops: Unlock
+	Loops = _auto()
 	"""
 	Unlocks a simple while loop.
 	"""
 
-	Mazes: Unlock
+	Mazes = _auto()
 	"""
 	Unlock: A maze with a treasure in the middle.
 	Upgrade: Increases the gold in treasure chests.
 	"""
 
-	Megafarm: Unlock
+	Megafarm = _auto()
 	"""
 	Unlocks multiple drones and drone management functions.
 	"""
 
-	Operators: Unlock
+	Operators = _auto()
 	"""
 	Arithmetic, comparison and logic operators.
 	"""
 
-	Plant: Unlock
+	Plant = _auto()
 	"""
 	Unlocks planting.
 	"""
 
-	Polyculture: Unlock
+	Polyculture = _auto()
 	"""
 	Use companion planting to increase the yield.
 	"""
 
-	Pumpkins: Unlock
+	Pumpkins = _auto()
 	"""
 	Unlock: Pumpkins!
 	Upgrade: Increases the yield and cost of pumpkins.
 	"""
 
-	Senses: Unlock
+	Senses = _auto()
 	"""
 	The drone can see what's under it and where it is.
 	"""
 
-	Simulation: Unlock
+	Simulation = _auto()
 	"""
 	Unlocks simulation functions for testing and optimization.
 	"""
 
-	Speed: Unlock
+	Speed = _auto()
 	"""
 	Increases the speed of the drone.
 	"""
 
-	Sunflowers: Unlock
+	Sunflowers = _auto()
 	"""
 	Unlock: Sunflowers and Power.
 	Upgrade: Increases the power gained from sunflowers.
 	"""
 
-	The_Farmers_Remains: Unlock
+	The_Farmers_Remains = _auto()
 	"""
 	Unlocks the special hat 'The Farmers Remains'.
 	"""
 
-	Timing: Unlock
+	Timing = _auto()
 	"""
 	Functions to help measure performance.
 	"""
 
-	Top_Hat: Unlock
+	Top_Hat = _auto()
 	"""
 	Unlocks the fancy Top Hat.
 	"""
 
-	Trees: Unlock
+	Trees = _auto()
 	"""
 	Unlocks trees.
 	Upgrade: Increases the yield of bushes and trees.
 	"""
 
-	Utilities: Unlock
+	Utilities = _auto()
 	"""
 	Unlocks the `min()`, `max()` and `abs()` functions.
 	"""
 
-	Variables: Unlock
+	Variables = _auto()
 	"""
 	Assign values to variables.
 	"""
 
-	Watering: Unlock
+	Watering = _auto()
 	"""
 	Water the plants to make them grow faster.
 	"""
