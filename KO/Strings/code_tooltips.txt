@@ -420,22 +420,25 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@code_tooltip_spawn_drone = `spawn_drone(function)`
-`spawn_drone(function)` 명령을 실행한 드론과 같은 위치에 새 드론을 생성합니다. 새 드론은 지정된 함수를 실행하기 시작합니다. 끝나면 자동으로 사라집니다.
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+`spawn_drone(function, *args)` 명령을 실행한 드론과 같은 위치에 새 드론을 생성합니다. 새 드론은 지정된 함수를 실행하기 시작합니다. 나머지 인수는 복사되어 지정된 함수로 전달됩니다. 드론이 완료되면 자동으로 사라집니다.
 
 새 드론의 핸들을 반환하거나, 모든 드론이 이미 생성된 경우 `None`을 반환합니다.
 
 드론이 생성되면 `200`틱, 그렇지 않으면 `1`틱이 필요합니다.
 
 예시:
-`def harvest_column():
+`def harvest_column(message):
     for _ in range(get_world_size()):
         harvest()
         move(North)
+    print(message)
 
+i = 0
 while True:
-    if spawn_drone(harvest_column):
-        move(East)`
+    if spawn_drone(harvest_column, i):
+        move(East)
+        i = (i + 1) % 10`
 
 @code_tooltip_wait_for = `wait_for(drone)`
 주어진 `drone`이 종료될 때까지 기다립니다.

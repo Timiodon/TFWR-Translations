@@ -94,6 +94,38 @@ print(x)`
 
 새 드론이 자신만의 전역 `x` 사본을 증가시켰고, 이것이 첫 번째 드론의 `x`에 영향을 주지 않기 때문에 `0`을 출력할 거예요.
 
+## 인수 전달
+
+`spawn_drone`은 호출된 함수로 전달될 추가 선택적 인수를 받아요:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+공유 메모리 없음 조항이 여전히 적용된다는 점에 유의하세요. 즉, 호출된 함수는 인수의 사본에서 작동해요:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # prints ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # prints ['red']`
+
 ## 경쟁 상태
 여러 드론이 동시에 같은 농장 타일과 상호 작용할 수 있어요. 두 드론이 같은 tick 동안 같은 타일과 상호 작용하면, 두 상호 작용 모두 발생하지만 결과는 상호 작용 순서에 따라 달라질 수 있어요.
 

@@ -94,6 +94,38 @@ print(x)`
 
 Esto imprimirá `0` porque el nuevo dron incrementó su propia copia de la `x` global, lo que no afecta a la `x` del primer dron.
 
+## Pasar Argumentos
+
+`spawn_drone` acepta otros argumentos opcionales que se pasarán a la función llamada:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Ten en cuenta que la cláusula de "Sin Memoria Compartida" sigue aplicándose. Esto significa que la función llamada opera sobre una copia de los argumentos:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # imprime ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # imprime ['red']`
+
 ## Condiciones de Carrera
 Múltiples drones pueden interactuar con la misma casilla de la granja al mismo tiempo. Si dos drones interactúan con la misma casilla durante el mismo tick, ambas interacciones ocurrirán, pero los resultados pueden diferir según el orden de las interacciones.
 

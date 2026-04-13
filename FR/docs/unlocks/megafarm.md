@@ -94,6 +94,38 @@ print(x)`
 
 Cela affichera `0` car le nouveau drone a incrémenté sa propre copie de la variable globale `x`, ce qui n'affecte pas le `x` du premier drone.
 
+## Passer des arguments
+
+`spawn_drone` accepte d'autres arguments optionnels qui seront passés à la fonction appelée :
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Note que la clause "Pas de mémoire partagée" s'applique toujours. Cela signifie que la fonction appelée opère sur une copie des arguments :
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # affiche ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # affiche ['red']`
+
 ## Conditions de Course
 Plusieurs drones peuvent interagir avec la même case de la ferme en même temps. Si deux drones interagissent avec la même case pendant le même tick, les deux interactions se produiront, mais les résultats peuvent différer en fonction de l'ordre des interactions.
 

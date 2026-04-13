@@ -94,6 +94,38 @@ print(x)`
 
 Questo stamperà `0` perché il nuovo drone ha incrementato la propria copia della `x` globale, il che non influisce sulla `x` del primo drone.
 
+## Passare Argomenti
+
+`spawn_drone` accetta ulteriori argomenti opzionali che verranno passati alla funzione chiamata:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Nota che la clausola Nessuna Memoria Condivisa si applica ancora. Questo significa che la funzione chiamata opera su una copia degli argomenti:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # stampa ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # stampa ['red']`
+
 ## Race Condition
 Più droni possono interagire con la stessa casella della fattoria contemporaneamente. Se due droni interagiscono con la stessa casella durante lo stesso tick, entrambe le interazioni avverranno, ma i risultati potrebbero differire in base all'ordine delle interazioni.
 

@@ -94,6 +94,38 @@ print(x)`
 
 Dies wird `0` ausgeben, da die neue Drohne ihre eigene Kopie des globalen `x` erhöht hat, was das `x` der ersten Drohne nicht beeinflusst.
 
+## Argumente übergeben
+
+`spawn_drone` akzeptiert weitere optionale Argumente, die an die aufgerufene Funktion übergeben werden:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Beachte, dass die Klausel „Kein gemeinsamer Speicher“ weiterhin gilt. Das bedeutet, dass die aufgerufene Funktion mit einer Kopie der Argumente arbeitet:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # gibt ['red', 'green'] aus
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # gibt ['red'] aus`
+
 ## Race Conditions
 Mehrere Drohnen können gleichzeitig mit demselben Farmfeld interagieren. Wenn zwei Drohnen während desselben Ticks mit demselben Feld interagieren, finden beide Interaktionen statt, aber die Ergebnisse können je nach Reihenfolge der Interaktionen unterschiedlich sein.
 

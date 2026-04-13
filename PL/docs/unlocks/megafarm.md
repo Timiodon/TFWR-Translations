@@ -94,6 +94,38 @@ print(x)`
 
 To wyświetli `0`, ponieważ nowy dron zwiększył swoją własną kopię globalnej zmiennej `x`, co nie wpływa na `x` pierwszego drona.
 
+## Przekazywanie argumentów
+
+`spawn_drone` akceptuje kolejne opcjonalne argumenty, które zostaną przekazane do wywołanej funkcji:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Zauważ, że klauzula dotycząca braku współdzielonej pamięci nadal ma zastosowanie. Oznacza to, że wywołana funkcja operuje na kopii argumentów:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # wyświetla ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # wyświetla ['red']`
+
 ## Warunki wyścigu
 Wiele dronów może oddziaływać na to samo pole farmy w tym samym czasie. Jeśli dwa drony oddziałują na to samo pole w tym samym ticku, obie interakcje wystąpią, ale wyniki mogą się różnić w zależności od kolejności interakcji.
 

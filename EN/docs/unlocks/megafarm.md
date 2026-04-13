@@ -94,6 +94,38 @@ print(x)`
 
 This will print `0` because the new drone incremented its own copy of the global `x`, which does not affect the first drone's `x`.
 
+## Passing Arguments
+
+`spawn_drone` accepts further optional arguments that will be passed to the called function:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+Note that the No Shared Memory-clause still applies. This means that the called function operates on a copy of the arguments:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # prints ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # prints ['red']`
+
 ## Race Conditions
 Multiple drones can interact with the same farm tile at the same time. If two drones interact with the same tile during the same tick, both interactions will occur, but the results may differ based on the order of the interactions.
 

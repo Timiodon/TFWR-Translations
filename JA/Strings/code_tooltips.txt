@@ -420,23 +420,25 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@code_tooltip_spawn_drone = `spawn_drone(function)`
-`spawn_drone(function)` コマンドを実行したドローンと同じ位置に新しいドローンをスポーンします。新しいドローンは指定された関数の実行を開始します。完了後、自動的に消えます。
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+`spawn_drone(function, *args)` コマンドを実行したドローンと同じ位置に新しいドローンをスポーンします。新しいドローンは指定された関数の実行を開始します。残りの引数はコピーされ、指定された関数に渡されます。ドローンが完了すると、自動的に消えます。
 
 新しいドローンのハンドルを返します。すべてのドローンがすでにスポーンされている場合は `None` を返します。
 
 ドローンがスポーンされた場合は `200` ティック、それ以外は `1` ティックかかります。
 
 例:
-`def harvest_column():
+`def harvest_column(message):
     for _ in range(get_world_size()):
         harvest()
         move(North)
+    print(message)
 
+i = 0
 while True:
-    if spawn_drone(harvest_column):
-        move(East)`
-
+    if spawn_drone(harvest_column, i):
+        move(East)
+        i = (i + 1) % 10`
 @code_tooltip_wait_for = `wait_for(drone)`
 指定された `drone` が終了するまで待機します。
 

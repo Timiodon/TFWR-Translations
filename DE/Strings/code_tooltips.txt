@@ -420,22 +420,26 @@ seed = 0
 speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-@code_tooltip_spawn_drone = `spawn_drone(function)`
-Spawnt eine neue Drohne an der gleichen Position wie die Drohne, die den Befehl `spawn_drone(function)` ausgeführt hat. Die neue Drohne beginnt dann mit der Ausführung der angegebenen Funktion. Danach verschwindet sie automatisch.
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+Spawnt eine neue Drohne an derselben Position wie die Drohne, die den Befehl `spawn_drone(function, *args)` ausgeführt hat. Die neue Drohne beginnt dann mit der Ausführung der angegebenen Funktion. Die restlichen Argumente werden kopiert und an die angegebene Funktion übergeben. Nachdem die Drohne fertig ist, verschwindet sie automatisch.
 
 gibt den Handle der neuen Drohne zurück oder `None`, wenn bereits alle Drohnen gespawnt sind.
 
-dauert `200` Ticks, wenn eine Drohne gespawnt wurde, sonst `1`.
+dauert `200` Ticks, wenn eine Drohne gespawnt wurde, sonst `1` Tick.
 
 Beispiel:
-`def harvest_column():
+`def harvest_column(message):
     for _ in range(get_world_size()):
         harvest()
         move(North)
+    print(message)
 
+i = 0
 while True:
-    if spawn_drone(harvest_column):
-        move(East)`
+    if spawn_drone(harvest_column, i):
+        move(East)
+        i = (i + 1) % 10`
+
 @code_tooltip_wait_for = `wait_for(drone)`
 Wartet, bis die angegebene `drone` beendet ist.
 

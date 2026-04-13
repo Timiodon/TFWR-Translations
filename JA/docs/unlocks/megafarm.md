@@ -94,6 +94,38 @@ print(x)`
 
 これは `0` を表示します。なぜなら、新しいドローンは自身のグローバル `x` のコピーをインクリメントし、これは最初のドローンの `x` に影響しないからです。
 
+## 引数の受け渡し
+
+`spawn_drone` は、呼び出された関数に渡される追加のオプション引数を受け入れます:
+
+`def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))`
+
+「共有メモリなし」の節が依然として適用されることに注意してください。つまり、呼び出された関数は引数のコピーに対して動作します:
+
+`def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # prints ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # prints ['red']`
+
 ## 競合状態
 複数のドローンが同時に同じ農場のタイルと対話することがあります。同じティック中に2つのドローンが同じタイルと対話すると、両方の対話が発生しますが、結果は対話の順序によって異なる場合があります。
 
