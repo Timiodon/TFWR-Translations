@@ -3,7 +3,7 @@
 可以這樣建立新的串列：
 
 ```
-list = [2, True, Items.Hay]
+some_list = [2, True, Items.Hay]
 ```
 
 該串列現在包含值 `2`、`True` 和 `Items.Hay`。
@@ -18,16 +18,16 @@ empty_list = []
 種植胡蘿蔔：
 
 ```
-list = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
-plant(list[1])
+entities = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
+plant(entities[1])
 ```
 
 你可以使用 for 迴圈對串列進行迭代。以下範例會將串列中所有元素加總：
 
 ```
-list = [4, 7, 2, 5]
+numbers = [4, 7, 2, 5]
 sum = 0
-for number in list:
+for number in numbers:
 	sum += number
 ```
 
@@ -35,54 +35,54 @@ for number in list:
 
 下列串列方法允許你新增和移除元素：
 
-`list.append(elem)` 在串列末端加入一個元素：
+`elements.append(elem)` 在串列末端加入一個元素：
 
 ```
-list = [2, 6, 12]
-list.append(7)
+numbers = [2, 6, 12]
+numbers.append(7)
 ```
 
-`list` 現在為 `[2, 6, 12, 7]`
+`numbers` 現在為 `[2, 6, 12, 7]`
 
-`list.remove(elem)` 移除串列中第一個出現的指定元素：
-
-```
-list = [1, 2, 4, 2]
-list.remove(2)
-```
-
-`list` 現在為 `[1, 4, 2]`
-
-`list.insert(index, elem)` 在指定索引位置插入一個元素：
+`elements.remove(elem)` 移除串列中第一個出現的指定元素：
 
 ```
-list = [Entities.Tree, Items.Hay]
-list.insert(1, Items.Wood)
+numbers = [1, 2, 4, 2]
+numbers.remove(2)
 ```
 
-`list` 現在為 `[Entities.Tree, Items.Wood, Items.Hay]`
+`numbers` 現在為 `[1, 4, 2]`
 
-`list.pop(index)` 移除指定索引處的元素。
+`elements.insert(index, elem)` 在指定索引位置插入一個元素：
+
+```
+some_list = [Entities.Tree, Items.Hay]
+some_list.insert(1, Items.Wood)
+```
+
+`some_list` 現在為 `[Entities.Tree, Items.Wood, Items.Hay]`
+
+`elements.pop(index)` 移除指定索引處的元素。
 如果沒指定索引，預設移除最後一項。
 
 ```
-list = [3, 5, 8, 25]
-list.pop()
+numbers = [3, 5, 8, 25]
+numbers.pop()
 ```
 
-`list` 現在為 `[3, 5, 8]`
+`numbers` 現在為 `[3, 5, 8]`
 
 ```
-list.pop(1)
+numbers.pop(1)
 ```
 
-`list` 現在為 `[3, 8]`
+`numbers` 現在為 `[3, 8]`
 
 `len()` 函式會回傳串列的長度。
 
 ```
-list = [3, 2, 1]
-x = len(list)
+numbers = [3, 2, 1]
+x = len(numbers)
 ```
 
 此時 `x` 為 `3`
@@ -91,7 +91,7 @@ x = len(list)
 如果兩個變數參考同一個串列，對該串列所做的更動會被兩者看到。
 
 ```
-a = [1,2]
+a = [1, 2]
 b = a
 b.pop()
 ```

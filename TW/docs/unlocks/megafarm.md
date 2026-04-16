@@ -92,7 +92,7 @@ print(wait_for(drone))
 
 你可以使用 `has_finished(drone)` 在不等待的情況下檢查該無人機是否已完成。
 
-## 無共用記憶體
+## 無共享記憶體
 每架無人機有自己的記憶體，無法直接讀寫其他無人機的全域變數。
 
 ```
@@ -107,6 +107,42 @@ print(x)
 ```
 
 上述程式會印出 `0`，因為新無人機只會遞增它自己副本的全域 `x`，並不會影響第一架無人機的 `x`。
+
+## 傳遞引數
+
+`spawn_drone` 函式可以接受額外的選用引數，這些引數將會被傳遞給被呼叫的函式：
+
+```
+def harvest_spiral(radius):
+    for i in range(0, radius, 2):
+        for j in range(i):
+            harvest()
+            move(West)
+        for j in range(i):
+            harvest()
+            move(South)
+        for j in range(i+1):
+            harvest()
+            move(East)
+        for j in range(i+1):
+            harvest()
+            move(North)
+
+wait_for(spawn_drone(harvest_spiral, 6))
+```
+
+請注意，無共享記憶體依然適用。這代表被呼叫的函式是在引數的複本上進行操作：
+
+```
+def modify(list):
+	move(North)
+	list.append('green')
+	print(list) # 印出 ['red', 'green']
+
+l = ['red']
+wait_for(spawn_drone(modify, l))
+print(l) # 印出 ['red']
+```
 
 ## 競態條件
 多架無人機可以同時對同一個農場格子操作。如果兩架無人機在同一個時間刻中互動同一格，兩個互動都會發生，但結果可能會依互動順序而不同。
