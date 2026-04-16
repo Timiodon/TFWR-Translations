@@ -530,8 +530,8 @@ speedup = 64
 
 run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)
 ```
-@code_tooltip_spawn_drone = `spawn_drone(function)`
-在執行 `spawn_drone(function)` 命令的無人機相同位置生成一架新的無人機。新的無人機隨後開始執行指定的函式。完成後，它將自動消失。
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+在執行 `spawn_drone(function, *args)` 命令的無人機相同位置生成一架新的無人機。新的無人機隨後開始執行指定的函式，且剩餘的參數會被傳遞給該函式。完成後，它將自動消失。
 
 回傳新無人機的控制代碼；如果所有無人機都已生成，則回傳 `None`。
 
@@ -540,14 +540,17 @@ run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup
 範例：
 
 ```
-def harvest_column():
+def harvest_column(message):
     for _ in range(get_world_size()):
         harvest()
         move(North)
+    print(message)
 
+i = 0
 while True:
-    if spawn_drone(harvest_column):
+    if spawn_drone(harvest_column, i):
         move(East)
+        i = (i + 1) % 10
 ```
 @code_tooltip_wait_for = `wait_for(drone)`
 等待直到指定的 `drone` 終止。
