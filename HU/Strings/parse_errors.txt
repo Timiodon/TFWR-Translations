@@ -1,0 +1,62 @@
+@error_missing_default_parameter = Minden alapértelmezett argumentum az argumentum lista végén kell legyen.
+@error_invalid_name = {0} nem érvényes név. A nevekbetűvel kell kezdődjenek, és csak betűket, számokat és aláhúzást tartalmazhatnak. Nem lehet fenntartott kulcsszó sem.
+@error_reserved_keyword = {0} egy fenntartott kulcsszó. Nem használhatod névnek.
+@error_invalid_assign_expr = Nem lehet értéket adni ennek a kifejezésnek.
+@error_no_statements = Egy kód blokknak legalább egy utasítást kell tartalmaznia.
+Egy utasítás lehet egy függvény hívás mint `harvest()` vagy egy változó értékadás.
+Ha nem akarsz semmit csinálni a kód blokkban, használj egy `pass` utasítást.
+@error_not_enough_indentation = Nincs elég behúzás itt.
+Több behúzás kell egy `:` után, mint előtte, az új kód blokk elválasztásához.
+Használd a Tab billentyűt a behúzáshoz.
+@error_too_much_indentation = Túl sok behúzás van itt.
+A behúzásnak azonosnak kell lennie az összes utasításnál egy kód blokkon belül.
+@error_not_a_statement = Ez nem érvényes utasítás.
+@error_not_a_statement2 = Ez nem érvényes utasítás. Úgy gondoltad, hogy {0}-t írj?
+@error_invalid_expression = Ez nem érvényes kifejezés.
+@error_new_line_expected = Új sor várható itt.
+@error_unexpected_token = {0} várható itt.
+@error_missing_colon = Kettőspontnak `:` kell lennie minden kód blokk elején.
+@error_unexpected_assign = Nem lehet értéket adni itt. Egyenlőség ellenőrzéséhez használj `==`-t.
+@error_invalid_for_syntax = Ez nem érvényes for ciklus. A for ciklus így néz ki:
+`for n in range(3):`
+A `for` mindig a ciklus változó, egy `in`, majd egy szekvencia követi. Ebben a példában a `n` a változó név, de bármilyen más névvel helyettesíthető.
+@error_unknown_method = Ez a metódus nem létezik.
+@error_bad_backslash = A backslash kifejezések több soron való felosztására használható. De új sort kell hozzáadni utána.
+@error_mixed_indentation = Tab-okat és szóközöket nem szabad keverni.
+@error_expected_close_token = Vesszőt vagy záró zárójelet várt.
+@error_wrong_dict_literal = Veszvíglendő egy `:` a szótár kulcsainak és értékeinek elválasztásához.
+@error_assign_before_global = {0} egy global deklaráció előtt kap értéket.
+@error_wildcard_imports_not_allowed_in_function = A `from x import *` formájú importok nem engedélyezettek függvényeken belül.
+@error_invalid_import = Nem importálhatsz fájlokat nem érvényes azonosítókkal. Az érvényes azonosítók csak betűket, számokat és aláhúzást tartalmazhatnak. Ha a fájlneved más karaktereket tartalmaz, át kell nevezned.
+@error_invalid_number_format = Ez a szám formátum nem érvényes.
+@error_compared_item_with_number = {0} nem szám, hanem item. Számhoz hasonlítani nincs értelme.
+
+Ha meg akarod nézni, mennyi van belőle, használd a `num_items(`{0}`)`-t.
+@error_compared_entity_with_number = {0} nem szám, hanem entity. Számhoz hasonlítani nincs értelme.
+@error_compared_unlock_with_number = {0} nem szám, hanem unlock. Számhoz hasonlítani nincs értelme.
+
+Ha meg akarod nézni, hányszor oldottad fel, használd a `num_unlocked(`{0}`)`-t.
+@error_nonsensical_or = Az `or `{0} használata feltételben nem értelmes, mert {0} egy konstans.
+Figyelj arra, hogy az összehasonlító operátorok az `or` előtt lesznek kiértékelve.
+
+Példa:
+`x == 5 or 6`
+egyenértékű
+`(x == 5) or 6`
+A nem null számok igaznak számítanak, szóval ez egyenértékű
+`(x == 5) or True`
+ami mindig igaz.
+
+Ez elméletben érvényes Python kód, de nincs ok így írni.
+@error_item_condition = {0} egy item és nem boolean. Önmagában feltételként használata nincs értelme.
+Talán azt akartad ellenőrizni, hogy egy érték egyenlő-e azzal az itemmel?
+`some_variable == `{0}
+@error_unlock_condition = {0} egy unlock és nem boolean. Önmagában feltételként használata nincs értelme.
+Így tudod ellenőrizni, hogy az unlock fel van-e oldva:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} egy entity és nem boolean. Önmagában feltételként használata nincs értelme.
+Így tudod ellenőrizni az entity típusát a drone alatt:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} egy talaj típus és nem boolean. Önmagában feltételként használata nincs értelme.
+Így tudod ellenőrizni a talaj típusát a drone alatt:
+`get_ground_type() == `{0}

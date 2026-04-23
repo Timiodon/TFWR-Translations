@@ -1,0 +1,14 @@
+@popup_warning_delete_files = Biztos, hogy véglegesen törlöd a(z) {0}-t? Ez nem vonható vissza.
+@popup_warning_delete_save = Biztos, hogy törlöd a(z) {0}-t?
+@delete = Törlés
+@cancel = Mégse
+@popup_warning_exit_game = Akarsz menteni kilépés előtt?
+@popup_warning_load_game = Akarsz menteni betöltés előtt?
+@save = Mentés
+@don't save = Ne mentsen
+@popup_warning_corrupted_save = Úgy tűnik, probléma volt a(z) {0} betöltésével. Nézd meg a biztonsági mentések részt további információért.
+@popup_warning_failed_read_save = Nem sikerült beolvasni a(z) {0} mentési fájljait. Zárd be az összes többi programot, ami a fájlokat használja, és próbáld újra.
+@popup_warning_failed_write_save = Nem sikerült írni a(z) {0} mentési fájljait. Zárd be az összes többi programot, ami a fájlokat használja, és próbáld újra.
+@ok = ok
+@popup_warning_old_save = Ez a mentés egy régebbi verziójából származik. Mivel a tech fa újra lett dolgozva, minden fejlesztés valamire lett visszaállítva, ami értelmesebb az új haladási rendszerrel.
+@popup_warning_unofficial_language = Ez egy nem hivatalos fordítás, amit a közösség készített, és nem a játék fejlesztői karbantartott. Néhány szöveg hiányozhat vagy pontatlan lehet.
