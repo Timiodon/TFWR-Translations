@@ -1,24 +1,24 @@
-# Speed Upgrade
-The execution speed has been doubled. The problem is that the drone now harvests faster than the grass can grow resulting in no harvest at all. To deal with this [if](docs/scripting/if.md) branches and the [can_harvest](functions/can_harvest) function are now unlocked.
+# Sebességfejlesztés
+A végrehajtási sebesség megduplázódott. A probléma az, hogy a drón most gyorsabban takarít be, mint a fű nőni tud, ami eredményez null harvest at all. Ennek kezelésére az [if](docs/scripting/if.md) ágak és a [can_harvest](functions/can_harvest) függvény most feloldásra kerültek.
 
-## Checking Before Harvesting
-So far we only had `True` and `False` as conditions, which is of course not very useful with `if`. 
+## Betakarítás előtti ellenőrzés
+Ezidáig csak `True` és `False` volt a feltételek, ami persze nem túl hasznos az `if`-fel.
 
-The new function `can_harvest()` provides a better condition. `can_harvest()` returns `True` if the plant under the drone can be harvested and `False` otherwise.
+Az új `can_harvest()` függvény jobb feltételt biztosít. A `can_harvest()` `True`-t ad vissza, ha a drón alatti növény betakarítható, és `False` egyébként.
 
 `if can_harvest():
-	#do something`
+	#csinálj valamit`
 
-The reason you can use this function as a condition like this is because it returns a boolean value.
+Az oka, hogy használhatod ezt a függvényt feltételként, az, hogy boolean értéket ad vissza.
 
-A return value essentially means that after the functionality is executed, the function call expression evaluates to the returned value.
+A visszatérési érték lényegében azt jelenti, hogy a funkció végrehajtása után a függvényhívás kifejezés a visszaadott értékre értékelődik.
 
-What happens when the above code runs:
-	-the `if` runs
-	-`can_harvest()` is called
-	-`can_harvest()` does its thing
-	-`can_harvest()` returns `True` or `False`
-	-the statement is now `if True:` or `if False:`
-	-the code block is only executed if it can harvest
+Mi történik, amikor a fenti kód fut:
+	-az `if` fut
+	-a `can_harvest()` hívva van
+	-a `can_harvest()` csinálja a dolgát
+	-a `can_harvest()` `True` vagy `False`-t ad vissza
+	-az utasítás most `if True:` vagy `if False:`
+	-a kód blokk csak akkor hajtódik végre, ha betakarítható
 
-Now we can use `if` to prevent the drone from harvesting too early.
+Most használhatjuk az `if`-et a drón korai betakarításának megakadályozására.

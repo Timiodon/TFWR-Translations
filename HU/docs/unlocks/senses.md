@@ -1,30 +1,28 @@
-# Senses
-The drone can see now! 
+# Érzékek
+A drón már lát!
+A `get_pos_x()` és `get_pos_y()` függvények a drón aktuális x és y pozícióját adják vissza. A kezdő pozícióban mindkettő `0`. Az x pozíció `1`-el nő minden csempével `East` irányba és az y pozíció `1`-el nő minden csempével `North` irányba.
 
-The functions `get_pos_x()` and `get_pos_y()` return the current x and y position of the drone. At the start position they are both `0`. The x position increases by `1` every tile towards `East` and the y position increases by `1` every tile towards `North`.
+A `num_items(item)` visszaadja, mennyi itemed van.
+Például `num_items(Items.Hay)` visszaadja, mennyi szénád van.
 
-`num_items(item)` returns how many of an item you have.
-For example `num_items(Items.Hay)` returns how much hay you have.
+A `get_entity_type()` és `get_ground_type()` a drón alatti entitás vagy talaj típusát adják vissza.
 
-`get_entity_type()` and `get_ground_type()` return the type of entity or ground that is under the drone.
-
-Do a flip if you are over a bush:
+Szaltót csinál, ha bokor felett vagy:
 `if get_entity_type() == Entities.Bush:
 	do_a_flip()`
 
-The `None` keyword is also unlocked now! `None` is a value that represents that there is no value.
-For example, a function that has no `return` statement will actually return `None`.
+A `None` kulcsszó is feloldásra került most! A `None` egy érték, ami azt jelenti, hogy nincs érték.
+Például egy függvény, aminek nincs `return` utasítása, valójában `None`-t ad vissza.
 
-`get_entity_type()` returns `None` if there is no entity under the drone.
+A `get_entity_type()` `None`-t ad vissza, ha nincs entitás a drón alatt.
 
+Ha ki akarod deríteni, hányszor van feloldva egy particular feloldás, használd a `num_unlocked(unlock)` függvényt.
 
-If you want to find out how many of a particular unlock you have, use the `num_unlocked(unlock)` function.
+Például `num_unlocked(Unlocks.Speed)` visszaadja a sebességfejlesztések számát.
 
-For example, `num_unlocked(Unlocks.Speed)` will return the number of speed upgrades you have.
+`num_unlocked(Unlocks.Senses)` `1`-et ad vissza, ha az érzékek fel vannak oldva és `0`, ha nem.
 
-`num_unlocked(Unlocks.Senses)` will return `1` if senses are unlocked and `0` if they are not.
+Használhatod a `num_unlocked()`-ot Items, Entities vagy Grounds on is. Ez `1`-et ad vissza, ha fel van oldva, különben `0`-t.
 
-You can also use `num_unlocked()` on Items, Entities or Grounds. This will return `1` if it's unlocked otherwise `0`.
-
-Be careful `num_unlocked(Unlocks.Carrots)` will return the number of times it was unlocked/upgraded.
-`num_unlocked(Items.Carrot)` will only return `0` or `1`. (Same for other plants)
+Vigyázz, `num_unlocked(Unlocks.Carrots)` a feloldások/fejlesztések számát adja vissza.
+`num_unlocked(Items.Carrot)` csak `0`-t vagy `1`-et ad vissza. (Ugyanúgy más növényekre is)

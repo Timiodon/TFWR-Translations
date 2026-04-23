@@ -1,9 +1,9 @@
-# Getting Started
-This window contains information about everything in the game.
+# Első lépések
+Ez az ablak a játékban mindenről információkat tartalmaz.
 
-You can move windows around by dragging and dropping the gray part of the window.
-You can move around by dragging anywhere outside the windows.
+Az ablakokat a szürke részük húzásával mozgathatod.
+Az ablakokon kívül bárhova húzással mozoghatsz.
 
-To get started with programming, go to the [First Program](docs/first_program.md) page by clicking it.
+A programozás megkezdéséhez menj a [First Program](docs/first_program.md) oldalra, és kattints rá.
 
-Be sure to check out the buttons in the top right corner of the screen. Hover over them to see a tooltip explaining what they do. One of them opens the tech tree!
+Nézd meg a képernyő jobb felső sarkában lévő gombokat. Hagyd föléjük az egeret, hogy lásd a tooltipeket, amik elmagyarázzák, mit csinálnak. Az egyik megnyitja a tech fát!

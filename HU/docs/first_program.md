@@ -1,41 +1,41 @@
-# First Program
-## Text editor
-All programming is done in code windows. Each code window corresponds to a text file containing code. 
-You can rename the file by clicking on its name at the top of the window.
+# Első program
+## Szövegszerkesztő
+Minden programozás kódablakokban történik. Minden kódablak egy kódfájlnak felel meg.
+A fájlt átnevezheted, ha a neve mellé kattintasz az ablak tetején.
 
-The code can be edited like in any text editor as long as it's not running.
-You can execute the program directly by pressing the green play button in the code window.
+A kód szerkeszthető, mint bármely szövegszerkesztőben, amíg nem fut.
+A programot közvetlenül végrehajthatod a zöld lejátszás gomb megnyomásával a kódablakban.
 ![](PlayButton50)
 
-You can create more code files using the "+" button in the upper right corner of the screen.
-You can dock a window to another window by dragging it onto it.
+Több kódfájlt a képernyő jobb felső sarkában lévő "+" gombbal hozhatsz létre.
+Egy ablakot egy másik ablakhoz dokkolhatsz, ha ráhúzod.
 
-You will notice that once you start typing, a simple code completion window will pop up.
-Press Tab to insert the code completion.
-Use the arrow keys to navigate through the completion options.
+Majd észreveszed, hogy amint elkezdesz gépelni, egy egyszerű kiegészítési ablak jelenik meg.
+A Tab billentyűvel illesztheted be a kiegészítést.
+A nyílbillentyűkkel navigálhatsz a kiegészítési opciók között.
 
-Don't worry if this is your first time programming. The language is unlocked step by step, so you won't be overwhelmed by all the things you can do. 
-The syntax is also similar to that of Python, which is one of the most widely used programming languages in the world, so learning it is not completely wasted.
+Ne aggódj, ha ez az első alkalom, hogy programozol. A nyelv lépésről lépésre oldódik fel, így nem leszel elárasztva az összes lehetőséggel.
+A szintaxis is hasonlít a Pythonéhoz, ami a világ egyik legelterjedtebb programozási nyelve, így nem pazarolt időt a tanulása.
 
-If you already know Python, it's not a problem either, you'll just be able to skip the early game quickly to get to the more interesting stuff.
+Ha már ismered a Pythont, az sem probléma, csak gyorsan átugorhatod a korai játékot, hogy eljuss a még érdekesebb dolgokhoz.
 
-Currently, there are two drone commands available.
+Jelenleg két drón parancs érhető el.
 
 `harvest()`
 
-and 
+és
 
 `do_a_flip()`
 
-These are function calls. You can think of a function as a command that can be executed. You execute it using the `()` parentheses.
+Ezek függvényhívások. Egy függvényt úgy gondolhatsz el, mint egy parancsot, ami végrehajtható. A `()` zárójelekkel hajtod végre.
 
-Try typing these statements in the code window and pressing the execute button.
+Próbáld begépelni ezeket az utasításokat a kódablakba és megnyomni a végrehajtás gombot.
 
-You can think of your code as a sequence of statements. You can run multiple statements in a row like this:
+A kódodat utasítások sorozatának gondolhatod. Több utasítást egymás után így futtathatsz:
 
 `harvest()
 do_a_flip()
 harvest()`
 
-## Unlocks
-Collecting grass will give you hay. Hay can be used to unlock loops in the unlock menu. Open the unlock menu with the button in the top right corner.
+## Feloldások
+A fű gyűjtése szénát ad. A széna a feloldási menüben hurkok (loops) feloldására használható. A feloldási menüt a jobb felső sarokban található gombbal tudod megnyitni.

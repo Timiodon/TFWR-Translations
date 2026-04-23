@@ -1,11 +1,11 @@
-# Plant
-Grass is nice because it grows automatically. All other plants have to be planted with the `plant()` function. The only plant you can plant right now is a bush.
-You can pass the type of plant you want to plant to the function like this:
+# Növény
+A fű azért jó, mert automatikusan nő. Minden más növényt a `plant()` függvénnyel kell elültetni. Jelenleg az egyetlen elültethető növény a bokor.
+A növény típusát, amit ültetni akarsz, így adhatod át a függvénynek:
 
 `plant(Entities.Bush)`
 
-This will plant a bush under the drone.
+Ez ültet egy bokrot a drón alá.
 
-Call `clear()` to reset the farm to all grass and reset the drone position.
+Hívd a `clear()`-t a farm fűre visszaállításához és a drón pozíciójának visszaállításához.
 
-It seems that if you grow more than one type of plant on the farm at the same time, you can sometimes get a higher yield. You'll need to research polyculture to learn more.
+Látszik, hogy ha egynél több típusú növényt termelsz a farmon egyszerre, néha nagyobb hozamot kaphatsz. Meg kell vizsgálnod a polikultúrát, hogy többet tudj meg.

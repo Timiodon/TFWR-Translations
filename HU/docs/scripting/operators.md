@@ -1,75 +1,75 @@
-# Operators
-arithmetic operators: `+, -, *, /, //, %, **`
-comparison operators: `==, !=, <=, >=, <, >`
-boolean operators: `not, and, or`
+# Operátorok
+aritmetikai operátorok: `+, -, *, /, //, %, **`
+összehasonlító operátorok: `==, !=, <=, >=, <, >`
+logikai operátorok: `not, and, or`
 
-Note: All numbers in the game are floating point numbers. So all arithmetic operators are floating point operators.
-`//` is defined to just floor the number after the division.
+Megjegyzés: A játékban minden szám lebegőpontos szám. Így minden aritmetikai operátor lebegőpontos operátor.
+A `//` úgy van definiálva, hogy csak lefelé kerekíti a számot az osztás után.
 
-For assignment operators you need to unlock the "Variables" unlock.
+Az értékadás operátorokhoz fel kell oldani a "Változók" feloldást.
 
-## Introduction
-Operators allow you to compare, modify and combine values. 
-The arithmetic operators `+, -, *, /, //, %, **` are used to perform common mathematical operations on numbers. 
-The comparison operators `==, !=, <=, >=, <, >` are used to compare values. The result is always either `True` or `False`.
-The logic operators (also called boolean operators) `not, and, or` are used to combine truth values.
+## Bevezetés
+Az operátorok lehetővé teszik az értékek összehasonlítását, módosítását és kombinálását.
+Az aritmetikai operátorok `+, -, *, /, //, %, **` a számokon végzett gyakori matematikai műveletekhez használatosak.
+Az összehasonlító operátorok `==, !=, <=, >=, <, >` értékek összehasonlítására használatosak. Az eredmény mindig `True` vagy `False`.
+A logikai operátorok (boolean operátoroknak is hívják) `not, and, or` az igazságértékek kombinálására szolgálnak.
 
-## Arithmetic Operators
-`+` and `-` are used for addition and subtraction.
+## Aritmetikai operátorok
+A `+` és `-` összeadásra és kivonásra használatos.
 
-`2 + 3` evaluates to `5`
-`3 - 2` evaluates to `1`
+`2 + 3` eredménye `5`
+`3 - 2` eredménye `1`
 
-`*`, `/` and `//` are used for multiplication and division.
+A `*`, `/` és `//` szorzásra és osztásra használatos.
 
-`2 * 3` evaluates to `6`
-`5 / 2` evaluates to `2.5`
+`2 * 3` eredménye `6`
+`5 / 2` eredménye `2.5`
 
-`//` does the same thing as `/` but the result is floored (rounded down to the next integer).
+A `//` ugyanazt csinálja, mint a `/`, de az eredményt lefelé kerekíti (a következő egész számra).
 
-`5 // 2` evaluates to `2`
+`5 // 2` eredménye `2`
 
-`%` is the modulo operator, also known as the remainder operator. It essentially divides the two numbers and then returns the remainder. You can also think of it as repeatedly subtracting the right number from the left number until the remainder is less than the right number.
+A `%` a maradék operátor, más néven maradék operátor. Lényegében elosztja a két számot, majd visszaadja a maradékot. Úgy is gondolhatsz rá, mint a jobb oldali szám ismételt kivonására a bal oldali számból, amíg a maradék kisebb nem lesz a jobb oldali számnál.
 
-`4 % 2` evaluates to `0`
-`5 % 2` evaluates to `1`
-`6 % 2` evaluates to `0`
-`2 % 6` evaluates to `2`
-`1.5 % 1` evaluates to `0.5`
+`4 % 2` eredménye `0`
+`5 % 2` eredménye `1`
+`6 % 2` eredménye `0`
+`2 % 6` eredménye `2`
+`1.5 % 1` eredménye `0.5`
 
-`**` is the power operator.
+A `**` a hatványozás operátor.
 
-`2**2` evaluates to `4`
-`(-5)**3` evaluates to `-125`
+`2**2` eredménye `4`
+`(-5)**3` eredménye `-125`
 
-## Comparison Operators
-`==` and `!=` are used to check if two values are "equal"(`==`) or "not equal"(`!=`). They can be used on all types of values.
+## Összehasonlító operátorok
+A `==` és `!=` "egyenlő"(`==`) vagy "nem egyenlő"(`!=`) ellenőrzésére használatos. Minden értéktípuson használható.
 
-`2 == 2` evaluates to `True`
-`Entities.Bush != Entities.Bush` evaluates to `False`
-`3 != 3 + 1` evaluates to `True`
+`2 == 2` eredménye `True`
+`Entities.Bush != Entities.Bush` eredménye `False`
+`3 != 3 + 1` eredménye `True`
 
-`<=, >=, <, >` can only be used on numbers. They check if the left number is "smaller or equal"(`<=`), "bigger or equal"(`>=`), "smaller" (`<`) or "bigger" (`>`) than the right number.
+A `<=, >=, <, >` csak számokon használható. Ellenőrzi, hogy a bal oldali szám "kisebb vagy egyenlő"(`<=`), "nagyobb vagy egyenlő"(`>=`), "kisebb" (`<`) vagy "nagyobb" (`>`) mint a jobb oldali szám.
 
-`1 <= 1` evaluates to `True`
-`2 >= 3` evaluates to `False`
-`-2 < -1` evaluates to `True`
-`6 > 6` evaluates to `False`
+`1 <= 1` eredménye `True`
+`2 >= 3` eredménye `False`
+`-2 < -1` eredménye `True`
+`6 > 6` eredménye `False`
 
-## Logic Operators
-`not` simply inverts the value:
+## Logikai operátorok
+A `not` egyszerűen megfordítja az értéket:
 
-`not False` evaluates to `True`
-`not True` evaluates to `False`
+`not False` eredménye `True`
+`not True` eredménye `False`
 
-`and` evaluates to `True` only if both values are `True`
+Az `and` csak akkor `True`, ha mindkét érték `True`
 
-`True and True` evaluates to `True`
-`True and False` evaluates to `False`
-`False and False` evaluates to `False`
+`True and True` eredménye `True`
+`True and False` eredménye `False`
+`False and False` eredménye `False`
 
-`or` evaluates to `True` if at least one of the values is `True`
+Az `or` `True`, ha legalább az egyik érték `True`
 
-`True or True` evaluates to `True`
-`True or False` evaluates to `True`
-`False or False` evaluates to `False`
+`True or True` eredménye `True`
+`True or False` eredménye `True`
+`False or False` eredménye `False`

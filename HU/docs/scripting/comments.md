@@ -1,12 +1,12 @@
-# Comments
-Comments are parts of the code that are ignored during execution.
-Comments can be added using `#`. Anything on the same line after the `#` is a comment and will be ignored.
+# Kommentek
+A kommentek a kód azon részei, amelyeket a végrehajtás során figyelmen kívül hagynak.
+Kommenteket `#` használatával adhatsz hozzá. A `#` után ugyanazon a soron bármi komment, és figyelmen kívül hagyjuk.
 
-`#this is a comment`
+`#ez egy komment`
 
-This can be useful to add notes to the code, and also to temporarily disable parts of the code without deleting them.
+Ez hasznos lehet kódhoz jegyzetek hozzáadására, és arra is, hogy ideiglenesen kikapcsold a kód egyes részeit törlés nélkül.
 
-Any comment on the line before a function definition will be part of the popup information that appears when you mouse over the function name.
-`#This function does nothing.
+Bármely függvény definíció előtti komment a popup információ részévé válik, ami akkor jelenik meg, amikor a függvény neve fölé viszed az egeret.
+`#Ez a függvény semmit nem csinál.
 def f():
     pass`

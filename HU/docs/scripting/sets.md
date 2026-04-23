@@ -1,20 +1,20 @@
-# Sets
-Sets are like [dictionaries](docs/scripting/dicts.md), but without values. They're just an unordered set of keys. 
+# Set/Halmazok
+A halmazok olyanok, mint a [szótárak](docs/scripting/dicts.md), de értékek nélkül. Egyszerűen rendezetlen kulcsok halmaza.
 
-They are created like dictionaries, but without values.
+Létrehozása úgy történik, mint a szótáraké, de értékek nélkül.
 `set = {North, East, West}`
 
-Use `set()` to create an empty set. Note that `{}` creates an empty dictionary.
+Üres halmaz létrehozásához használd a `set()`-t. Figyelj arra, hogy `{}` üres szótárat hoz létre.
 
-Use `set.add(elem)` to add a new element to the set.
+Új elem hozzáadásához a halmazhoz használd a `set.add(elem)`-t.
 
-Use `set.remove(elem)` to remove an element from a set.
+Elem eltávolításához a halmazból használd a `set.remove(elem)`-t.
 
-Use `if elem in set:` to check if the set contains an element.
+Ellenőrzéshez, hogy a halmaz tartalmaz-e egy elemet, használd az `if elem in set:`-t.
 
-Use `for elem in set:` to iterate all elements in the set.
-For larger sets the `in` operator performs much faster than it would on a list.
+Az összes elem iterálásához a halmazban használd a `for elem in set:`-t.
+Nagyobb halmazoknál a `in` operátor sokkal gyorsabban működik, mint egy listán.
 
-Just like dictionaries, sets are unordered, so there are no guarantees about the order in which the elements are iterated.
+Csakúgy, mint a szótárak, a halmazok is rendezetlenek, így nincs garancia arra, hogy milyen sorrendben iterálódnak az elemek.
 
-Also, elements in sets are unique, so adding an element that is already in the set will not change the set.
+Továbbá a halmaz elemei egyediek, így egy már meglévő elem hozzáadása nem változtatja meg a halmazt.

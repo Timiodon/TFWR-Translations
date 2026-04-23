@@ -1,13 +1,13 @@
-# Trees
-[Trees](objects/tree) are a better way to get wood than bushes. They give 5 wood each. Like bushes, they can be planted on grass or soil.
+# Fák
+A [fák](objects/tree) jobb módja a fa megszerzésének, mint a bokrok. 5 fát adnak darabonként. Mint a bokrok, ültethetők fűre vagy talajra.
 
-Trees like to have some space and planting them right next to each other will slow down their growth. The growing time is doubled for each tree that is on a tile directly to the north, east, west or south of it. So if you plant trees on every tile, they will take `2*2*2*2 = 16` times longer to grow.
+A fák szeretnek némi helyet és ha egymás mellé ülteted őket, lelassítja a növekedésüket. A növekedési idő megduplázódik minden fáért, ami egy csempén van közvetlenül északra, keletre, nyugatra vagy délre tőle. Szóval ha minden csempére fát ültetsz, `2*2*2*2 = 16` annyi ideig fognak nőni.
 
-<spoiler=show> The `%` operator can be useful here. Remember that the `%` operator returns the remainder of the division. Even numbers divided by `2` have a remainder of `0` and odd numbers divided by `2` have a remainder of `1`.
-So you can check if a number is even like this:
+<spoiler=show> A `%` operátor hasznos lehet itt. Emlékezz arra, hogy a `%` operátor az osztás maradékát adja vissza. A `2`-vel osztott páros számok maradéka `0` és a páratlan számok maradéka `1`.
+Szóval ellenőrizheted, hogy egy szám páros-e így:
 
 `def is_even(n):
 	return n % 2 == 0`
 
-This returns `True` if n is even and `False` if it isn't.
+Ez `True`-t ad vissza, ha n páros és `False`, ha nem.
 </spoiler>

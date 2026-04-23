@@ -1,5 +1,5 @@
 # If
-You can use if, elif and else to run code conditionally.
+Az if, elif és else használatával feltételesen futtathatsz kódot.
 
 `if condition1:
 	do_a_flip()
@@ -9,23 +9,23 @@ else:
 	do_a_flip()
 	harvest()`
 
-## Syntax
-`if`s allow you to run code only if some condition is `True`. They are like a `while` loop that doesn't loop.
-The `if` takes a condition just like the `while` loop and executes the if code block if the condition evaluates to `True`:
+## Szintaxis
+Az `if` lehetővé teszi, hogy kódot csak akkor futtass, ha valamilyen feltétel `True`. Úgy működik, mint egy `while` ciklus, csak nem ismétel.
+Az `if` egy feltételt vesz, csakúgy, mint a `while` ciklus, és végrehajtja az if kód blokkját, ha a feltétel `True`-ra értékelődik:
 
-`#do a flip if condition is True
+`#flipet csinál, ha a feltétel True
 if condition:
 	do_a_flip()`
 
-You can also add an `else` after the if that defines code to be executed if the condition evaluates to `False`.
+Hozzáadhatsz egy `else`-t is az if után, ami a feltétel `False`-ra értékelődése esetén végrehajtandó kódot definiál.
 
-Do a flip if `condition` is True, otherwise harvest.
+Flipet csinál, ha `condition` True, különben takaríts be.
 `if condition:
 	do_a_flip()
 else:
 	harvest()`
 
-`elif` is short for else if.
+`elif` az "else if" rövidítése.
 
 `if condition1:
 	#a
@@ -35,7 +35,7 @@ else:
 	else:
 		#c`
 
-can be shortened to:
+Rövidíthető erre:
 
 `if condition1:
 	#a

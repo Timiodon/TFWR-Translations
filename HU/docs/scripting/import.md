@@ -1,96 +1,97 @@
 # Import
-Putting all your code in a single file quickly becomes unmanageable. 
-`import` statements allow you to import functions and global variables from another file.
-How it works in one screenshot:
+Az összes kódot egyetlen fájlba téve gyorsan kezelhetetlenné válik.
+Az `import` utasítások lehetővé teszik függvények és globális változók importálását egy másik fájlból.
+Egy képen így működik:
 ![](ImportsInOnePicture400)
 
-Here `import module2` runs the file named `module2` and gives you access to all its globals.
-You can then access variables and functions within the imported module using the `.` operator.
-So in this example, `module2.print_x()` calls `print_x()` in `module2`.
+Itt az `import module2` lefuttatja a `module2` nevű fájlt és hozzáférést ad az összes globális változójához.
+Ezután a `.` operátorral érheted el az importált modulon belüli változókat és függvényeket.
+Tehát ebben a példában a `module2.print_x()` meghívja a `print_x()`-et a `module2`-ben.
 
-### No need to read further
+### Nem kell tovább olvasni
 
-You can also move the globals from the imported module into the current scope where the import statement is executed using the `from` syntax.
+A `from` szintaxist használva az importált modul globális változóit a jelenlegi hatókörbe is mozgathatod, ahol az import utasítás végrehajtódik.
 
 `from module2 import print_x
 print_x()`
-Imports only the specified globals from `module2`.
+Csak a megadott globális változókat importálja a `module2`-ből.
 
-or
+vagy
 
 `from module2 import *
 print_x()`
-Imports all globals from `module2`.
+Minden globális változót importál a `module2`-ből.
 
-This also imports the `module2` file, but instead of accessing it through a variable named `module2`, it unpacks globals from `module2` and assigns them directly in the local scope.
+Ez szintén importálja a `module2` fájlt, de ahelyett, hogy egy `module2` nevű változón keresztül érnéd el, kicsomagolja a `module2` globális változóit és közvetlenül a lokális hatókörbe rendeli őket.
 
-This form of import is usually not recommended because it doesn't work well when two files import each other, and you may accidentally overwrite variables in the importing file due to name collisions. It's safer to avoid the `from` syntax if you don't know what you're doing.
+Ez az importálási forma általában nem ajánlott, mert nem működik jól, ha két fájl importálja egymást, és véletlenül felülírhatsz változókat az importáló fájlban névütközések miatt. Biztonságosabb elkerülni a `from` szintaxist, ha nem tudod, mit csinálsz.
 
-# How it really works
+# Hogyan működik valójában
 
 ## TLDR
-Imports can be quite unintuitive, but most problems can be avoided by sticking to the `import file` syntax instead of `from file import`, and wrapping everything that isn't a global definition in
+Az importálás elég intuitív lehet, de a legtöbb probléma elkerülhető, ha ragaszkodsz az `import file` szintaxishoz a `from file import` helyett, és mindent, ami nem globális definíció, becsomagolhatsz
 `if __name__ == "__main__":`
+ blokkba.
 
-## Import Side Effects
-The first time you import a file, it will execute the entire file and then give you access to all variables that have been defined during the execution.
-If you import the same file again, it will just return the cached module from the first time again.
+## Import mellékhatások
+Amikor először importálsz egy fájlt, az végrehajtja a teljes fájlt, majd hozzáférést ad az összes változóhoz, ami a végrehajtás során definiálva lett.
+Ha ugyanazt a fájlt újra importálod, csak az első alkalommal létrehozott cached modult adja vissza.
 
-This means that import statements can have side effects. If you import a file that calls `harvest()`, it will actually harvest during the import. But when you import it again, it won't harvest again because the file is only run once.
+Ez azt jelenti, hogy az import utasításoknak mellékhatásaik lehetnek. Ha importálsz egy fájlt, ami meghívja a `harvest()`-t, az ténylegesen be fog takarítani az importálás során. De amikor újra importálod, nem takarít be újra, mert a fájl csak egyszer fut le.
 
-There is a way to avoid such side effects using the `__name__` variable. This is a variable that is automatically set to `"__main__"` when a file is run directly, and to the name of the file when a file is run through `import`.
-It is considered good practice to put any code that you don't want to run when the file is imported inside of a `if __name__ == "__main__":` block.
+Van egy módja az ilyen mellékhatások elkerülésére a `__name__` változó használatával. Ez egy változó, ami automatikusan `"__main__"`-re van állítva, amikor egy fájl közvetlenül fut, és a fájl nevére, amikor egy fájl `import` révén fut.
+Jó gyakorlatnak számít minden kódot, amit nem akarsz futtatni, amikor a fájl importálódik, `if __name__ == "__main__":` blokkba tenni.
 
-A common file structure in Python is to put the code that should be executed when the file is run into a `main()` function. This way you have a clear distinction between local variables (defined inside `main()`) and global variables that can be imported (defined outside `main()`).
+Egy gyakori fájl struktúra Pythonban, hogy a fájlt, amit futtatni kell, egy `main()` függvénybe teszed. Így világos elkülönítés van a lokális változók (a `main()`-en belül definiálva) és a globális változók között, amik importálhatók (a `main()`-en kívül definiálva).
 
 `a_global_variable = "global"
 
 def main():
     a_local_variable = "local"
-    # do things
+    # csinálj valamit
 
 if __name__ == "__main__":
     main()`
 
-## Import Cycles
-What happens if file `a` imports file `b` and file `b` imports file `a`?
+## Import ciklusok
+Mi történik, ha az `a` fájl importálja a `b` fájlt és a `b` fájl importálja az `a` fájlt?
 
-file `a`:
+`a` fájl:
 `import b
 x = 0`
 
-file `b`:
+`b` fájl:
 `import a
 def f():
     print(a.x)`
 
-This will work fine. Let's say neither of the two files are loaded yet, and someone else executes `import a`.
+Ez jól fog működni. Tegyük fel, hogy egyik fájl sincs még betöltve, és valaki végrehajtja az `import a`-t.
 
--`a` runs until the `import b` line.
--`b` runs until the `import a` line.
--The module `a` already exists, but doesn't contain `x` because it has only reached the `import b` line.
--`b` stores a reference to the half-loaded module `a` in a variable called `a`.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-A `a` fut, amíg az `import b` sorig.
+-A `b` fut, amíg az `import a` sorig.
+-A `a` modul már létezik, de nem tartalmazza az `x`-et, mert csak az `import b` sorig jutott.
+-A `b` egy referencia tárol a félig betöltött `a` modulhoz egy `a` nevű változóban.
+-A `b` futtatja a `def` utasítást és eltárolja az `f()` függvényt.
+-A `a` folytatja a futást és inicializálja az `x`-et.
 
-When someone calls `b.f()` it will correctly print `0` because the module `a` that `b` has a reference to is now fully loaded.
+Amikor valaki meghívja a `b.f()`-et, helyesen kiírja a `0`-t, mert a `b`-nek a `a`-ra mutató referenciája most már teljesen betöltött.
 
-Now consider the same code using the `from` syntax.
+Most nézd meg ugyanezt a kódot a `from` szintaxissal.
 
-file `a`:
+`a` fájl:
 `from b import *
 x = 0`
 
-file `b`:
+`b` fájl:
 `from a import *
 def f():
     print(x)`
 
--`a` runs until the `from b import *` line.
--`b` runs until the `from a import *` line.
--The module `a` already exists, but hasn't been fully executed yet.
--`b` unpacks everything that is currently in `a` into its own global scope. At this point, `a` contains nothing because it hasn't reached the `x = 0` line yet, so nothing is imported.
--`b` runs the `def` statement and stores the function `f()`.
--`a` continues to run and initializes `x`.
+-A `a` fut, amíg a `from b import *` sorig.
+-A `b` fut, amíg a `from a import *` sorig.
+-A `a` modul már létezik, de még nincs teljesen végrehajtva.
+-A `b` kicsomagol mindent, ami jelenleg az `a`-ban van, a saját globális hatókörébe. Ebben a pillanatban az `a` nem tartalmaz semmit, mert még nem jutott el az `x = 0` sorig, így semmi sem importálódik.
+-A `b` futtatja a `def` utasítást és eltárolja az `f()` függvényt.
+-A `a` folytatja a futást és inicializálja az `x`-et.
 
-If someone now calls `b.f()`, they will get an error that `x` doesn't exist in the current scope. This is because this time `b` does not have a reference to the still-loading `a` and does not see definitions that were added after the import.
+Ha valaki most meghívja a `b.f()`-et, hibát kap, hogy az `x` nem létezik az aktuális hatókörben. Ez azért van, mert most a `b`-nek nincs referenciája a még betöltődő `a`-hoz, és nem látja az import után hozzáadott definíciókat.

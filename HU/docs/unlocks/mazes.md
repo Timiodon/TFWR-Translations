@@ -1,71 +1,70 @@
-# Mazes
-`Items.Weird_Substance`, which is obtained by [fertilizing](docs/unlocks/fertilizer.md) plants, has a strange effect on bushes. If the drone is over a bush and you call `use_item(Items.Weird_Substance, amount)` the bush will grow into a maze of hedges.
-The size of the maze depends on the amount of `Items.Weird_Substance` used (the second argument of the `use_item()` call).
-Without maze upgrades, using `n` `Items.Weird_Substance` will result in a `n`x`n` maze. Each maze upgrade level doubles the treasure, but it also doubles the amount of `Items.Weird_Substance` needed. 
-So to make a full field maze:
+# Labirintusok
+Az `Items.Weird_Substance`, amit [trágyázással](docs/unlocks/fertilizer.md) növényekből kapsz, furcsa hatással van a bokrokra. Ha a drón egy bokor felett van és hívod a `use_item(Items.Weird_Substance, amount)`-t, a bokor labirintussá nő sövényből.
+A labirintus mérete az `Items.Weird_Substance` mennyiségétől függ (a `use_item()` hívás második argumentuma).
+Labirintus fejlesztések nélkül `n` `Items.Weird_Substance` használata `n`x`n` labirintust eredményez. Minden labirintus fejlesztési szint megduplázza a kincset, de megduplázza a szükséges `Items.Weird_Substance` mennyiségét is.
+Tehát teljes mező labirintus készítéséhez:
 
 `plant(Entities.Bush)
 substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
 use_item(Items.Weird_Substance, substance)`
 
+Valamiért a drón nem tud a sövények felett repülni, annak ellenére, hogy nem néznek ki olyan magasanak.
 
-For some reason the drone can't fly over the hedges, even though they don't look that high.
+Van egy kincs elrejtve valahol a sövényben. Használd a `harvest()`-t a kincsen, hogy a labirintus területével egyenlő aranyat kapj. (Például egy 5x5 labirintus 25 aranyat hoz.)
 
-There is a treasure hidden somewhere in the hedge. Use `harvest()` on the treasure to receive gold equal to the area of the maze. (For example, a 5x5 maze will yield 25 gold.)
+Ha bárhol máshol használod a `harvest()`-t, a labirintus egyszerűen eltűnik.
 
-If you use `harvest()` anywhere else the maze will simply disappear.
+A `get_entity_type()` `Entities.Treasure`-t ad vissza, ha a drón a kincs felett van és `Entities.Hedge` minden máshol a labirintusban.
 
-`get_entity_type()` is equal to `Entities.Treasure` if the drone is over the treasure and `Entities.Hedge` everywhere else in the maze.
+A labirintusok nem tartalmaznak hurkokat, kivéve ha újrafelhasználod a labirintust (lásd lejjebb, hogyan újrafelhasználni a labirintust). Tehát nincs módja a drónnak ugyanabba a pozícióba kerülni visszafelé menés nélkül.
 
-Mazes do not contain any loops unless you reuse the maze (see below how to reuse a maze). So there is no way for the drone to end up in the same position again without going back.
+Ellenőrizheted, hogy van-e fal azáltal, hogy megpróbálsz áthaladni rajta.
+`move()` `True`-t ad vissza, ha sikeres és `False` egyébként.
 
-You can check if there is a wall by trying to move through it. 
-`move()` returns `True` if it succeeded and `False` otherwise.
+A `can_move()` használható annak ellenőrzésére, hogy van-e fal anélkül, hogy mozognál.
 
-`can_move()` can be used to check if there is a wall without moving.
+Ha fogalmad sincs, hogyan juts el a kincsig, nézd meg az 1. tippet. Megmutatja, hogyan közelíts meg egy ilyen problémát.
 
-If you have no idea how to get to the treasure, take a look at Hint 1. It shows you how to approach a problem like this.
-
-Using `measure()` anywhere in the maze returns the position of the treasure.
+A `measure()` használata a labirintus bárhol visszaadja a kincs pozícióját.
 `x, y = measure()`
 
-For an extra challenge you can also reuse the maze by using the same amount of `Items.Weird_Substance` on the treasure again. 
-This will collect the treasure and spawn a new treasure at a random position in the maze.
+Extra kihívásként újrafelhasználhatod a labirintust azonos mennyiségű `Items.Weird_Substance` használatával a kincsen.
+Ez összegyűjti a kincset és új kincset spawnol véletlenszerű pozícióba a labirintusban.
 
-Each time the treasure is moved, some of the maze's walls may be randomly removed. So reused mazes can contain loops.
+Minden alkalommal, amikor a kincs mozog, a labirintus falainak néhány véletlenszerűen eltávolításra kerülhet. Tehát az újrafelhasznált labirintusok hurkokat tartalmazhatnak.
 
-Note that loops in the maze make it much more difficult because it means that you can get to the same location again without moving back.
-Reusing a maze doesn't give you more gold than just harvesting and spawning a new maze.
-This is 100% an extra challenge that you can just skip.
-It's only worth it if the extra information and the shortcuts help you solve the maze faster.
+Figyelj arra, hogy a hurkok a labirintusban sokkal nehezebbé teszik, mert azt jelenti, hogy ugyanabba a helyzetbe juthatsz mozgás nélkül.
+Labirintus újrafelhasználása nem ad több aranyat, mint egyszerűen betakarítani és új labirintust spawnolni.
+Ez 100%-ban extra kihívás, amit egyszerűen kihagyhatsz.
+Csak akkor éri meg, ha az extra információ és a shortcutok segítenek a labirintus gyorsabb megoldásában.
 
-The treasure can be relocated up to 300 times. After that, using weird substance on the treasure won't increase the gold in it anymore and it won't move anymore.
+A kincs legfeljebb 300-szor relokálható. Ezután a kincsen weird substance használata nem növeli többé az aranyat benne és nem mozog többé.
 
-<spoiler=show hint 1>Here's a general approach to solving the problem:
+<spoiler=show hint 1>Íme egy általános megközelítés a probléma megoldásához:
 
-Create a maze and imagine that you are the drone.
+Hozz létre egy labirintust és képzeld el, hogy te vagy a drón.
 
-Think about how you would try to find the treasure if you were in the maze.
+Gondolkodj azon, hogyan próbálnád megtalálni a kincset, ha a labirintusban lennél.
 
-Write down your strategy step by step so that someone else could follow it without thinking.
+Írd le a stratégiádat lépésről lépésre, hogy valaki más követhesse gondolkodás nélkül.
 
-Now try translating your steps into code.
+Most próbáld lefordítani a lépéseidet kódra.
 </spoiler>
-<spoiler=show hint 2>As long as there are no loops: All the walls are really just one large connected wall. If you follow the wall, it will lead you through the whole maze.
-This approach requires very little code and you do not need to keep track of where you have already been. Around 10 lines of code is all you need.</spoiler>
-<spoiler=show hint 3>Instead of moving the drone in absolute directions like east or west it can be very useful to move the drone in relative directions like "turn right" or "turn left". To do this you need to keep track of which way the drone is currently moving. The drone never actually rotates, but you can still keep a "virtual" rotation in code.
-The following index trick is helpful for this:
+<spoiler=show hint 2>Amíg nincsenek hurkok: Az összes fal igazából egy nagy összefüggő fal. Ha követed a falat, az végigvezet az egész labirintuson.
+Ez a megközelítés nagyon kevés kódot igényel és nem kell nyomon követned, hol jártál már. Körülbelül 10 sornyi kódra van szükséged.</spoiler>
+<spoiler=show hint 3>Ahelyett, hogy abszolút irányokban mozgatnád a drónt mint kelet vagy nyugat, nagyon hasznos lehet a drónt relatív irányokban mozgatni mint "fordulj jobbra" vagy "fordulj balra". Ehhez nyomon kell követned, melyik irányba mozog a drón jelenleg. A drón soha nem forog valójában, de tarthatsz egy "virtuális" rotációt a kódban.
+A következő index trükk hasznos ehhez:
 
 `directions = [North, East, South, West]
 index = 0`
 
-Use `% 4` to allow it to rotate "around the circle", so that after `West` it wraps back to `North`.
-`# turn right
+Használd a `% 4`-et, hogy lehetővé tedd a "körbe forgást", így `West` után vissza wrapel `North`-ra.
+`# fordulj jobbra
 index = (index + 1) % 4`
 
-`# turn left
+`# fordulj balra
 index = (index - 1) % 4
 
 move(directions[index])`</spoiler>
-<spoiler=show hint 4>If you can't solve it, you can always make your life easy and do it less efficiently. 
-Solving a `1`x`1` maze is trivial.</spoiler>
+<spoiler=show hint 4>Ha nem tudod megoldani, mindig megkönnyítheted az életed és kevésbé hatékonyan csinálhatod.
+Egy `1`x`1` labirintus megoldása triviális.</spoiler>

@@ -1,32 +1,32 @@
-# Name Scopes
-Scopes determine which variables can be accessed from where. A scope is basically a mapping from names to values.
-They work basically the same as in Python.
+# Név hatókörök
+A hatókörök határozzák meg, hogy mely változók érhetők el honnan. Egy hatókör alapvetően neveket értékekre képez le.
+Lényegében ugyanúgy működnek, mint Pythonban.
 
-There is a global scope, and each function has a local scope.
-When you define a variable, it gets added to the current scope.
-Anything outside of a function definition is considered part of the global scope.
+Van egy globális hatókör, és minden függvénynek saját lokális hatóköre van.
+Amikor definiálsz egy változót, az hozzáadódik az aktuális hatókörhöz.
+Bármi, ami egy függvény definícióján kívül van, a globális hatókör részének számít.
 
 `x = 1`
-Assigns a value of `1` to the name `x` in the global scope.
+A `1` értéket rendeli az `x` névhez a globális hatókörben.
 
-This `def` statement assigns a function to the name `f` in the global scope.
+Ez a `def` utasítás egy függvényt rendel az `f` névhez a globális hatókörben.
 `def f():
-    `Assign a value of `1` to the name `y` in the local scope of `f`.`
+    `A `1` értéket rendeli az `y` névhez az `f` lokális hatókörében.`
     y = 1
 
-    `Assign a function to the name `g` in the local scope of `f`.`
+    `Egy függvényt rendel a `g` névhez az `f` lokális hatókörében.`
     def g():
         pass`
 
 `f()`
-Retrieves the function stored in `f` from the global scope and calls it.
+A `f`-ben tárolt függvényt kéri le a globális hatókörből és meghívja.
 
 `print(y)`
-This print statement in the global scope throws an error because `y` was never declared in the global scope so we can't read it here.
-It only existed in the local scope of `f`.
+Ez a print utasítás a globális hatókörben hibát dob, mert `y` soha nem volt deklarálva a globális hatókörben, így itt nem olvasható.
+Csak az `f` lokális hatókörében létezett.
 
-## The global keyword
-By default all variables in functions bind to the local scope, even if a variable of the same name exists in the global scope.
+## A global kulcsszó
+Alapértelmezetten a függvényeken belüli összes változó a lokális hatókörhöz kötődik, még akkor is, ha ugyanolyan nevű változó létezik a globális hatókörben.
 
 `x = 0
 
@@ -35,9 +35,9 @@ def f():
 f()
 print(x)`
 
-This code prints `0` because the local `x` inside `f` is not the same variable as the global `x`, so the global `x` remains unchanged. This is important because otherwise a function call could accidentally override a global variable that just happens to have the same name as a local variable of that function.
+Ez a kód `0`-t ír ki, mert az `f` függvényen belüli lokális `x` nem ugyanaz a változó, mint a globális `x`, így a globális `x` változatlan marad. Ez azért fontos, mert különben egy függvényhívás véletlenül felülírhatna egy globális változót, amely történetesen ugyanazt a nevet viseli, mint a függvény lokális változója.
 
-If you want to write to a global variable, you must do so explicitly using the `global` keyword.
+Ha globális változóba akarsz írni, azt explicit módon kell megtenned a `global` kulcsszó használatával.
 
 `x = 0
 
@@ -47,14 +47,14 @@ def f():
 f()
 print(x)`
 
-In this example, `global x` binds `x` to the global variable `x` defined above it. This will now print `1`.
-Note that changing global variables is usually the first step towards spaghetti code, where every part of the program affects every other part of the program, so don't overuse it.
+Ebben a példában a `global x` az `x`-et a felette definiált globális `x` változóhoz köti. Ez most kiírja az `1`-et.
+Figyelj arra, hogy a globális változók megváltoztatása általában az első lépés a spagetti kód felé, ahol a program minden része a program minden más részét érinti, szóval ne használd túl sokat.
 
-## Loops and branches
-Loops and branches do not create their own scopes, so anything declared within them can still be used outside.
+## Ciklusok és elágazások
+A ciklusok és elágazások nem hoznak létre saját hatókört, így bármi, ami bennük van deklarálva, kívül is használható.
 
 `for i in range(3):
     pass
 print(i)`
 
-This will print `2` because the last iteration of the `for` loop assigned `2` to `i`.
+Ez kiírja a `2`-t, mert a `for` ciklus utolsó iterációja `2`-t rendelt az `i`-hez.

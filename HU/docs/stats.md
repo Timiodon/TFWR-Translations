@@ -1,5 +1,5 @@
-# Stats
+# Statisztikák
 
-Over the last 60s you farmed: {{itemblock stats_sum}}
+Az elmúlt 60 másodpercben termeltél: {{itemblock stats_sum}}
 
-Your personal best per resource is: {{itemblock stats_best}}
+A személyes rekordod erőforrásonként: {{itemblock stats_best}}

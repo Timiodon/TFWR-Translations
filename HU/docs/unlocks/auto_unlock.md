@@ -1,8 +1,8 @@
-# Auto Unlocks
-To fully automate the game, you can use the `unlock()` function to automatically unlock features.
-For example, you can use `unlock(Unlocks.Speed)` and `unlock(Unlocks.Expand)` to unlock the speed and expansion features.
+# Automatikus feloldások
+A játék teljes automatizálásához használhatod az `unlock()` függvényt funkciók automatikus feloldásához.
+Például használhatod az `unlock(Unlocks.Speed)` és `unlock(Unlocks.Expand)`-et a sebesség és bővítés funkciók feloldásához.
 
-To determine the cost of an unlock, simply use the `get_cost()` function as you would for a plant or item.
-Example:
+A feloldás költségének meghatározásához egyszerűen használd a `get_cost()` függvényt, ahogy növény vagy item esetén tennéd.
+Példa:
 `get_cost(Unlocks.Loops)`
-returns `{Items.Hay:5}`
+visszaadja `{Items.Hay:5}`

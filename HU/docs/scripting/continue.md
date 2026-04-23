@@ -1,13 +1,13 @@
 # Continue
-continue allows stopping the current iteration of a loop and jumping to the next iteration of the innermost loop.
+A continue lehetővé teszi a ciklus aktuális iterációjának leállítását és a következő iterációra ugrást a legbelső ciklusban.
 
 `for i in range(10):
 	continue
-    print("this is never printed")`
+    print("ez soha nem íródik ki")`
 
-This runs all `10` iterations of the loop, but the `print` statement after the `continue` is always skipped.
+Ez a ciklus mind a 10 iterációját lefuttatja, de a `continue` utáni `print` utasítás mindig kimarad.
 
-It also works on `while` loops.
+`while` ciklusokon is működik.
 
 `while True:
 	if not can_harvest():
@@ -15,18 +15,18 @@ It also works on `while` loops.
     
     harvest()`
 
-This code only calls `harvest()` when `can_harvest()` is `True`. 
-It has the same effect as
+Ez a kód csak akkor hívja meg a `harvest()`-t, amikor a `can_harvest()` `True`.
+Ugyanúgy működik, mint
 
 `while True:
 	if can_harvest():
 		harvest()`
 
-In nested loops `continue` always affects the innermost loop.
+Beágyazott ciklusokban a `continue` mindig a legbelső ciklust érinti.
 
 `for i in range(10):
 	for j in range(10):
-	    print("this is printed 100 times")
+	    print("ez 100-szor íródik ki")
 		continue
-		print("this is never printed")
-	print("this is printed 10 times")`
+		print("ez soha nem íródik ki")
+	print("ez 10-szer íródik ki")`

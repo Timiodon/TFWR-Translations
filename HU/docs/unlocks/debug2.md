@@ -1,7 +1,7 @@
 # Debug 2
-When your drone gets too fast and the grid too big it can be hard to see what's going on anymore.
+Amikor a drónod túl gyors lesz és a rács túl nagy, nehéz lehet látni, mi történik.
 
-For this reason there are the `set_execution_speed()` and `set_world_size()` functions.
-They allow you to reduce the execution speed and the farm size. 
+Emiatt vannak a `set_execution_speed()` és `set_world_size()` függvények.
+Lehetővé teszik a végrehajtási sebesség és a farm méretének csökkentését.
 
-The farm size and the execution speed will be reset to the default values at the end of the execution.
+A farm mérete és a végrehajtási sebesség a végrehajtás végén visszaáll az alapértelmezett értékekre.

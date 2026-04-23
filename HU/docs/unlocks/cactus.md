@@ -1,41 +1,41 @@
-# Cactus
-Like other plants, [cacti](objects/cactus) can be grown on soil and harvested as usual.
+# Kaktusz
+Mint más növények, a [kaktuszok](objects/cactus) termeszthetők talajon és betakaríthatók szokásosan.
 
-However, they come in various sizes and have a strange sense of order.
+Azonban különböző méretekben jönnek és furcsa rendezési érzékkel rendelkeznek.
 
-If you harvest a fully-grown cactus and all neighboring cacti are in sorted order, it will also harvest all neighboring cacti recursively.
+Ha betakarítasz egy teljesen megnőtt kaktuszt és az összes szomszédos kaktusz rendezett sorrendben van, az is betakarítja az összes szomszédos kaktuszt rekurzívan.
 
-A cactus is considered to be in sorted order if all neighboring cacti to the `North` and `East` are fully grown and larger or equal in size and all neighboring cacti to the `South` and `West` are fully grown and smaller or equal in size.
+Egy kaktusz rendezett sorrendben lévőnek számít, ha az összes `North` és `East` irányú szomszédos kaktusz teljesen megnőtt és nagyobb vagy egyenlő méretű, és az összes `South` és `West` irányú szomszédos kaktusz teljesen megnőtt és kisebb vagy egyenlő méretű.
 
-The harvest will only spread if all adjacent cacti are fully grown and in sorted order.
-This means that if a square of grown cacti is sorted by size and you harvest one cactus, it will harvest the entire square.
+A betakarítás csak akkor terjed tovább, ha az összes szomszédos kaktusz teljesen megnőtt és rendezett sorrendben van.
+Ez azt jelenti, hogy ha egy megnőtt kaktuszokból álló négyzet méret szerint rendezett és te betakarítasz egy kaktuszt, az egész négyzetet betakarítja.
 
-A fully grown cactus will appear brown if it is not sorted. Once sorted, it will turn green again.
+Egy teljesen megnőtt kaktusz barnának fog látszani, ha nem rendezett. Rendezés után újra zöldre vált.
 
-You will receive cactus equal to the number of harvested cacti squared. So if you harvest `n` cacti simultaneously you will receive `n**2` `Items.Cactus`.
+Olyan kaktuszt kapsz, amennyi a betakarított kaktuszok számának négyzete. Tehát ha `n` kaktuszt betakarítasz egyszerre, `n**2` `Items.Cactus`-t kapsz.
 
-The size of a cactus can be measured with `measure()`.
-It is always one of these numbers: `0,1,2,3,4,5,6,7,8,9`.
+A kaktusz mérete a `measure()`-el mérhető.
+Mindig ezekből a számokból egy: `0,1,2,3,4,5,6,7,8,9`.
 
-You can also pass a direction into `measure(direction)` to measure the neighboring tile in that direction of the drone.
+Átadhatod az irányt is a `measure(direction)`-nak a drón melletti szomszédos csempe méréséhez abban az irányban.
 
-You can swap a cactus with its neighbor in any direction using the `swap()` command.
-`swap(direction)` swaps the object under the drone with the object one tile in the `direction` of the drone.
+Felemelhetsz egy kaktuszt a szomszédjával bármely irányban a `swap()` paranccsal.
+`swap(direction)` felcseréli a drón alatti objektumot a drón `direction` irányában lévő egy csempével lévő objektummal.
 
-## Examples
-In each of these grids, all the cacti are in sorted order and the harvest will spread over the entire field:
+## Példák
+Mindegyik rácsban az összes kaktusz rendezett sorrendben van és a betakarítás az egész mezőre terjed:
 `3 4 5    3 3 3    1 2 3    1 5 9
 2 3 4    2 2 2    1 2 3    1 3 8
 1 2 3    1 1 1    1 2 3    1 3 4`
 
-In this grid, only the lower left cactus is in sorted order, which is not enough for it to spread:
+Ebben a rácsban csak a bal alsó kaktusz van rendezett sorrendben, ami nem elég a terjedéshez:
 `1 5 3
 4 9 7
 3 3 2`
 
 <spoiler=show hint 1>
-If the rows are already sorted, sorting the columns will not unsort the rows.
+Ha a sorok már rendezettek, az oszlopok rendezése nem rendezi szét a sorokat.
 </spoiler>
 <spoiler=show hint 2>
-If you're not familiar with sorting algorithms, you might want to look them up online and think about which ones could be adapted to this problem. Keep in mind that not all of them work because you can only swap neighboring cacti.
+Ha nem vagy ismerős a rendezési algoritmusokban, érdemes lehet online utánuk nézni és elgondolkodni, melyikeket lehetne adaptálni ehhez a problémához. Tartsd észben, hogy nem mindegyik működik, mert csak szomszédos kaktuszokat cserélhetsz.
 </spoiler>

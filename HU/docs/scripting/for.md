@@ -1,27 +1,27 @@
-# For Loop
-The `for` loop works like in Python. (Called a foreach loop in some languages, not to be confused with the C-style for loop, which is a different thing).
+# For ciklus
+A `for` ciklus úgy működik, mint Pythonban. (Néhány nyelvben foreach ciklusnak hívják, nem összekeverendő a C-stílusú for ciklussal, ami egy másik dolog).
 
 `for i in sequence:
-	#do something with i`
+	#csinálj valamit i-vel`
 
-Similar to the `while` loop, the `for` loop also repeatedly calls a block of code. Instead of looping based on a condition, it executes the loop body once for each element in a sequence.
+A `while` ciklushoz hasonlóan a `for` ciklus is ismételten végrehajt egy kód blokkot. Ahelyett, hogy feltétel alapján ciklusokat hajtana végre, a ciklus törzsét minden szekvencia elemnél egyszer hajtja végre.
 
-## Syntax
-A for loop looks like this:
+## Szintaxis
+Egy for ciklus így néz ki:
 
 `for variable_name in sequence:
-	#code block`
+	#kód blokk`
 
-`variable_name` can be any name you choose. It is a variable that stores the current element in the sequence. `sequence` needs to be some value that can be iterated like a range of numbers. The code block is executed for every element with the loop variable assigned to that element.
+A `variable_name` bármilyen tetszőleges név lehet. Ez egy változó, ami az aktuális elemet tárolja a szekvenciában. A `sequence`-nek olyan értéknek kell lennie, amin lehet iterálni, mint például számok tartománya. A kód blokk minden elemhez végrehajtódik, a ciklus változóhoz rendelve azt az elemet.
 
-## Sequences
-[Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+## Szekvenciák
+[Tartományok](functions/range)      <unlock=lists>[Listák](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuple-ök](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Szótárak](docs/scripting/dicts.md)      </unlock><unlock=sets>[Halmazok](docs/scripting/sets.md)</unlock>
 
-## Example
+## Példa
 `for i in range(5):
     harvest()`
 
-This loop executes the body a fixed number of times. It is essentially the same as writing
+Ez a ciklus a törzset fix számú alkalommal hajtja végre. Lényegében ugyanaz, mintha ezt írnád
 
 `i = 0
 harvest()
@@ -34,6 +34,6 @@ harvest()
 i = 4
 harvest()`
 
-So it calls `harvest()` 5 times.
+Tehát 5-ször hívja meg a `harvest()`-t.
 
-See also [Break](docs/scripting/break.md) and [Continue](docs/scripting/continue.md)
+Lásd még: [Break](docs/scripting/break.md) és [Continue](docs/scripting/continue.md)

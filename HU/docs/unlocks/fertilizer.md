@@ -1,15 +1,15 @@
-# Fertilizer
-At some point, waiting for the plants to grow is just not efficient enough anymore. 
-Similar to water, you will automatically receive 1 fertilizer every 10 seconds, doubling with each upgrade.
+# Műtrágya
+Egyszer csak a növények növekedésére várni már nem elég hatékony.
+A vízhez hasonlóan minden 10 másodpercben automatikusan kapsz 1 műtrágyát, fejlesztésenként megduplázódva.
 
-Fertilizer can make plants grow instantly. `use_item(Items.Fertilizer)` reduces the remaining growing time of the plant under the drone by 2 seconds.
+A műtrágya azonnali növekedést eredményezhet a növényeken. A `use_item(Items.Fertilizer)` csökkenti a drón alatti növény megmaradt növekedési idejét 2 másodperccel.
 
-This has some side effects.
-Plants grown with fertilizer will be infected.
+Ennek néhány mellékhatása van.
+Műtrágyával termesztett növények fertőzöttek lesznek.
 
-When a plant is infected, half of its yield is turned into `Items.Weird_Substance` when it is harvested.
-Weird Substance can also be used on plants, which has the effect of toggling the infected status of the plant and all adjacent plants.
+Amikor egy növény fertőzött, a hozam fele `Items.Weird_Substance`-vá alakul betakarításkor.
+A Weird Substance növényeken is használható, aminek az a hatása, hogy toggle-oli a növény és az összes szomszédos növény fertőzési státuszát.
 
-So if you call `use_item(Items.Weird_Substance)` on an infected plant it will cure it, but if you use it on a healthy plant it will infect it.
+Tehát ha a `use_item(Items.Weird_Substance)`-t hívod fertőzött növényen, meggyógyítja, de ha egészséges növényen használod, megfertőzi.
 
-If you use it on an infected plant that has healthy neighbors, it will cure the plant but infect the neighbors and vice versa.
+Ha fertőzött növényen használod, ami egészséges szomszédokkal rendelkezik, meggyógyítja a növényt, de megfertőzi a szomszédokat és fordítva.

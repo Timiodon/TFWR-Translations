@@ -1,24 +1,24 @@
-# External Editor
-The in-game text editor is usually sufficient to play this game, but of course it cannot compete with more sophisticated text editors like Visual Studio Code.
+# Külső szerkesztő
+A játékon belüli szövegszerkesztő általában elegendő a játékhoz, de persze nem versenyezhet komolyabb szövegszerkesztőkkel, mint a Visual Studio Code.
 
-The game saves all code files as .py files, so you can edit them with Python editors. 
-Note that this is for convenience only. The in-game language isn't actually Python, but it's close enough that Python IntelliSense works decently on it.
-You can find the files in the [save folder](persistent_data_path/Saves).
+A játék minden kódfájlt .py fájlként ment, így Python szerkesztőkkel szerkesztheted őket.
+Figyelj arra, hogy ez csak kényelmi célokat szolgál. A játékon belüli nyelv valójában nem Python, de elég közel van ahhoz, hogy a Python IntelliSensedecensen működjön rajta.
+A fájlokat a [mentési mappában](persistent_data_path/Saves) találod.
 
-Each save also contains a `__builtins__.py` file, which contains built-in Python definitions that match the in-game builtins to enable IntelliSense. 
-VS Code is able to detect `__builtins__.py` automatically, but the some editors may only work if you do `from __builtins__ import *`.
+Minden mentés tartalmaz egy `__builtins__.py` fájlt is, ami a beépített Python definíciókat tartalmazza, amelyek megfelelnek a játékon belüli beépítetteknek, hogy az IntelliSense működjön.
+A VS Code képes automatikusan felismerni a `__builtins__.py`-t, de néhány szerkesztő csak akkor működik, ha `from __builtins__ import *`-ot írsz.
 
-To see external changes in-game without having to reload the save, you must enable the "File Watcher" option. If you create or delete files externally, you will still need to reload the save to see them.
+Ahhoz, hogy a külső változtatásokat a játékban lásd újratöltés nélkül, be kell kapcsolnod a "Fájl figyelő" opciót. Ha fájlokat hozol létre vagy törlöl kívülről, még mindig újra kell töltened a mentést, hogy lásd őket.
 
-## Using VS Code
-Visual Studio Code is the recommended code editor to use with The Farmer Was Replaced.
+## VS Code használata
+A Visual Studio Code az ajánlott kódszerkesztő a The Farmer Was Replaced-hez.
 
-You can install it [here](https://code.visualstudio.com/download).
+Telepítheted [itt](https://code.visualstudio.com/download).
 
-After downloading it, install the Python extension in VS Code.
+Letöltés után telepítsd a Python bővítményt a VS Code-ban.
 
-Once you have that, open the [folder](persistent_data_path/Saves) that holds your `.py` files in VS Code. Make sure you open the whole folder, not just the individual files, otherwise the `__builtins__.py` file won't work.
+Ha ez megvan, nyisd meg a `.py` fájljaidat tartalmazó [mappát](persistent_data_path/Saves) a VS Code-ban. Ügyelj arra, hogy a teljes mappát nyisd meg, ne csak az egyes fájlokat, különben a `__builtins__.py` nem fog működni.
 
-In the game, make sure you have the "File Watcher" option turned on. Now, every time you save in VS Code, the changes will automatically show up in the game.
+A játékban győződj meg róla, hogy a "Fájl figyelő" opció be van kapcsolva. Most, minden alkalommal, amikor a VS Code-ban mentessz, a változtatások automatikusan megjelennek a játékban.
 
-That's it! Now you can write your code in a professional code editor!
+Ennyi az egész! Most már professzionális kódszerkesztőben írhatod a kódod!

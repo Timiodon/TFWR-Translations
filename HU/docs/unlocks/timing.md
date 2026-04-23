@@ -1,34 +1,33 @@
-# Timing
-If you really want to optimize your methods you need to understand how time is measured in this game. This unlock is all about that.
+# Időzítés
+Ha igazán optimalizálni akarod a módszereidet, meg kell értened, hogyan mérjük az időt ebben a játékban. Ez a feloldás erről szól.
 
-## New Functions
-There are two useful functions to measure how long things take:
+## Új függvények
+Két hasznos függvény van dolgok időtartamának mérésére:
 
-`get_time()` returns the time in seconds since the start of the game.
+A `get_time()` a játék kezdete óta eltelt időt adja vissza másodpercben.
 
-`get_tick_count()` returns the number of ticks performed since the start of execution.
+A `get_tick_count()` a végrehajtás kezdete óta végrehajtott tickek számát adja vissza.
 
-These two functions as well as `quick_print()`, are completely free. Even the call operation is free for them.
+Ez a két függvény, valamint a `quick_print()` teljesen ingyenesek. Még a hívás művelet is ingyenes ezeknél.
 
-## Runtime Details
+## Futásidegi részletek
 
-### Heads-Up
-This is not how performance works in the real world. These are just rules made up for this game to have a consistent and understandable timing model.
-You will probably only care about this if you want to hyper-optimize your code.
+### Figyelem
+Ez nem így működik a teljesítmény a valóságban. Ezek csak szabályok, amiket ehhez a játékhoz találtak ki, hogy konzisztens és érthető időzítési modellje legyen.
+Valószínűleg csak akkor fog érdekelni, ha hyper-optimalizálni akarod a kódot.
 
+A kód végrehajtás alapegysége "tick". Sebességfejlesztések és erő nélkül a végrehajtás `400` tick per másodperc sebességgel halad.
 
-The basic unit of time for code execution is called a "tick". Without speed upgrades and power, the execution proceeds at a rate of `400` ticks per second.
+Általában a két értéket kombináló műveletek mint `+, -, *, /, //, %, and, or, ...` egy ticket vesznek igénybe.
+Egyetlen értékű `-` és `not` ingyenes.
+Egy `if` ág is egy ticket vesz igénybe (a feltétel kifejezés kiértékelésének idejét is beleszámítva).
+Függvényhívások és változó olvasások és írások ingyenesek, de függvény definíciók 1 ticket vesznek igénybe.
+`import` utasítások ingyenesek.
+Importált modul elérése a `.` operátorral ingyenes.
+Ha egy függvény vagy modul argumentumokon vagy változó értékadásokon keresztül lett átadva, a használata 1 ticket fog költeni 0 helyett.
+`for` és `while` ciklusok egy ticket vesznek igénybe az indításkor, de az iterációk ingyenesek (nem számítva a feltétel/szekvencia kifejezések kiértékelésének idejét).
+`return`, `break` és `continue` mind ingyenes.
+`pass` egy ticket vesz igénybe, így használható precíz késleltetések létrehozására.
+Adatszerkezetbe indexelés egy ticket vesz igénybe az index operátornál, és szótár vagy halmaz esetén további tickek a kulcs méretétől függően.
 
-In general, operations that combine two values such as `+, -, *, /, //, %, and, or, ...` take one tick to run.
-Single value `-` and `not` are free.
-An `if` branch also takes one tick to run (in addition to the time it takes to evaluate the condition expression).
-Function calls and variable reads and writes are free but function definitions take 1 tick.
-`import` statements are free.
-Accessing an imported module with the `.` operator is free.
-If a function or module has been passed via arguments or variable assignments, using it will cost 1 tick instead of 0.
-`for` and `while` loops take one tick to start, but the iterations are free (not counting the time to evaluate the condition/sequence expressions).
-`return`, `break` and `continue` are all free.
-`pass` takes one tick so it can be used to create precise delays.
-Indexing into a datastructure takes one tick for the index operator and, in the case of a dictionary or set, additional ticks depending on the size of the key.
-
-The number of ticks that builtin functions take to execute is documented in the documentation of each function on an individual basis.
+A beépített függvények végrehajtásához szükséges tickek számát az egyes függvények dokumentációjában találod meg.

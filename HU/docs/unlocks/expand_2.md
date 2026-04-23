@@ -1,40 +1,40 @@
-# Expand 2
-Your farm has expanded again! Now the tiles are no longer in a nice row, so you need to find a way to traverse a square grid.
+# Bővítés 2
+A farmod ismét bővült! Most a csempék már nem szépen sorban vannak, szóval találnod kell egy módot, hogyan járd be a négyzetrácsot.
 
-With the `while` loop this is not possible until you unlock senses and operators.
-It is time to introduce the `for` loop.
+A `while` ciklussal ez nem lehetséges, amíg fel nem oldod az érzékeket és az operátorokat.
+Itt az ideje bevezetni a `for` ciklust.
 
-You can read all about the `for` loop on the [For Loop](docs/scripting/for.md) page, but for now you will only need it to repeat code a fixed number of times.
+A `for` ciklusról mindent elolvashatsz a [For ciklus](docs/scripting/for.md) oldalon, de egyelőre csak arra lesz szükséged, hogy a kódot fix számú alkalommal ismételjed.
 
-`#do n flips
+`#n flipet csinál
 for i in range(5):
 	do_a_flip()`
 
-`range(n)` creates a range of numbers from `0` to `n-1` which has `n` elements in it. The `for` loop runs its loop body once for every element in the sequence. In this example `do_a_flip()` will be called `5` times.
+A `range(n)` számok tartományát hozza létre `0`-tól `n-1`-ig, ami `n` elemet tartalmaz. A `for` ciklus a ciklus törzsét minden szekvencia elemhez egyszer futtatja. Ebben a példában a `do_a_flip()` 5-ször kerül meghívásra.
 
-The function `get_world_size()` is also available now. It returns the side length of your farm. This way you can write code that won't break with the next expand upgrade.
+A `get_world_size()` függvény is elérhető most. A farmod oldalhosszát adja vissza. Így írhatsz olyan kódot, ami nem törik el a következő bővítésnél.
 
 `for i in range(get_world_size()):
 	harvest()
 	move(North)`
 
-This example harvests one column of the farm for any farm size.
+Ez a példa a farm egy oszlopát takarítja be bármilyen farm méretre.
 
-If you're stuck on trying to figure out how to move the drone around the farm see the hint below.
-<spoiler=show hint>There are, of course, several ways to move around the farm.
-What we're looking for is a way to traverse it in a systematic way that won't break when the farm grows again.
-A systematic way to get to every place on the farm would be to repeat the following 2 steps forever:
+Ha elakadtál, hogyan mozogjasd a drónt a farm körül, nézd meg az alábbi tippet.
+<spoiler=show hint> Természetesen több módja is van a farm körül mozgásnak.
+Amit keresünk, az egy szisztematikus módja, hogy minden helyre eljuss a farmon, ami nem törik el, amikor a farm ismét nő.
+Egy szisztematikus módja minden hely eléréséhez a farmon az lenne, hogy örökre ismételd a következő 2 lépést:
 
-1.Move `North` until it wraps back.
-2.Move `East`
+1.Mozogj `North` irányba, amíg vissza nem wrapel.
+2.Mozogj `East` irányba
 
-`for i in range(get_world_size()):` may be helpful to turn this idea into code.
+A `for i in range(get_world_size()):` hasznos lehet ötlet kóddá alakításához.
 </spoiler>
-<spoiler=show possible solution> The basic traversal might look like this:
+<spoiler=show possible solution> Az alap traversál így nézhet ki:
 
 `for i in range(get_world_size()):
 	for j in range(get_world_size()):
-		#do a flip on every tile
+		#flipet csinál minden csempén
 		do_a_flip()
 		move(North)
 	move(East)`

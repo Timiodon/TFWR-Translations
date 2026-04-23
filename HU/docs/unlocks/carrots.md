@@ -1,6 +1,6 @@
-# Carrots
-Before you can plant carrots with `plant(Entities.Carrot)`, you have to till the soil. This will change the ground to `Grounds.Soil`. To till the soil, simply call `till()`. Calling `till()` again will change it back to `Grounds.Grassland`.
+# Répák
+Mielőtt répákat ültethetnél a `plant(Entities.Carrot)`-ral, felszántott talajra van szükség. Ez a talajt `Grounds.Soil`-ra változtatja. A talaj felszántásához egyszerűen hívd a `till()`-t. A `till()` újbóli meghívása visszaváltoztatja `Grounds.Grassland`-ra.
 
-Planting carrots costs wood and hay. These items will be automatically removed when calling `plant(Entities.Carrot)`.
+A répák ültetése fát és szénát igényel. Ezek az itemek automatikusan eltávolításra kerülnek a `plant(Entities.Carrot)` hívásakor.
 
-You can see the cost of any plant on its [own page](objects/carrot).
+A bármely növény költségét megtekintheted a [saját oldalán](objects/carrot).

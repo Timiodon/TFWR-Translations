@@ -1,41 +1,41 @@
-# Dictionaries
-Dictionaries are a datastructure that allows you to map keys to values in the same way that a real dictionary maps words to their definitions and you can look them up very quickly.
+# Szótárak
+A szótárak olyan adatszerkezetek, amelyek lehetővé teszik kulcsok értékekre képezését, ahogyan egy valódi szótár a szavakat a definícióikra képezi le, és nagyon gyorsan ki lehet őket keresni.
 
-A dictionary can be created like this:
+Szótárat így lehet létrehozni:
 `right_of = {North:East, East:South, South:West, West:North}`
 
-The expression before the colon is the key and the expression after the colon is the value to which the key maps.
-The above dictionary maps each direction to the direction to its right.
+A kettőspont előtti kifejezés a kulcs, és a kettőspont utáni kifejezés az az érték, amelyre a kulcs képez.
+A fenti szótár minden irányt a tőle jobbra lévő irányra képez.
 
-Here's another one that maps the drone's position to the entity it's over.
+Itt egy újabb, ami a drón pozícióját ahhoz az entitáshoz rendeli, amely fölött éppen van.
 `x, y = get_pos_x(), get_pos_y()
 entity_dict = {(x,y):get_entity_type()}`
 
-Accessing the value mapped to a key is similar to accessing an element in a list:
+A kulcshoz rendelt érték elérése hasonló a lista elemének eléréséhez:
 `value = dict[key]`
 
-Example:
+Példa:
 `orientation = right_of[South]`
-This sets `orientation` to `West`.
+Ez az `orientation`-t `West`-re állítja.
 
-You can add a new key-value pair to a dictionary like this:
+Új kulcs-érték párost így adhatsz hozzá a szótárhoz:
 `dict[key] = value`
 
-Example:
+Példa:
 `entity_dict[(get_pos_x(), get_pos_y())] = get_entity_type()`
-This updates the entity stored for the current position.
+Ez frissíti az aktuális pozícióhoz tárolt entitást.
 
-Keys are unique, so adding a key that already exists in the dictionary will overwrite the previous value.
+A kulcsok egyediek, így egy már létező kulcs hozzáadása felülírja az előző értéket.
 
-Use `dict.pop(key)` to remove a key-value pair from `dict`.
+Használd a `dict.pop(key)`-t kulcs-érték pár eltávolításához a `dict`-ből.
 
-`key in dict` evaluates to `True` if `key` is a key in the `dict` and `False` otherwise.
-So you can use `if key in dict:` to check if `dict` contains the key.
+`key in dict` `True`-ra értékelődik, ha a `key` kulcs a `dict`-ben, és `False` egyébként.
+Tehát használhatod az `if key in dict:`-t annak ellenőrzésére, hogy a `dict` tartalmazza-e a kulcsot.
 
-Putting a dictionary in a for loop allows you to iterate through all keys:
+Szótárat for ciklusban használva végigiterálhatsz az összes kulcson:
 `for key in dict:
 	value = dict[key]`
 
-There are no guarantees about the order in which the keys are iterated.
+Nincs garancia arra, hogy milyen sorrendben iterálódnak a kulcsok.
 
-See also [Sets](docs/scripting/sets.md)
+Lásd még: [Sets](docs/scripting/sets.md)

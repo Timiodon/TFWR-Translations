@@ -1,13 +1,13 @@
-# Polyculture
-You may have already noticed that sometimes plants yield more when planted together.
-Grass, bushes, trees, and carrots yield more when they have the right plant companion. Companion preference is different for each individual plant and cannot be predicted. Fortunately, the companion preference of the plant under the drone can be measured using `get_companion()`. It returns a tuple where the first element is the type of plant it wants as its companion and the second element is the position where it wants its companion.
+# Polikultura
+Lehet, hogy már észrevetted, hogy néha a növények többet teremnek, ha együtt vannak ültetve.
+A fű, a bokrok, a fák és a sárgarépa több termést ad, ha megfelelő „társ-növény” van mellettük. A társ preferencia minden egyes növénynél eltérő, és nem megjósolható. Szerencsére a drón alatt lévő növény társ-preferenciája a `get_companion()` függvénnyel lekérdezhető. A függvény egy tuple-t ad vissza, ahol az első elem a kívánt társ növény típusa, a második pedig az a pozíció, ahol ezt a társat szeretné.
 
 `plant_type, (x, y) = get_companion()`
 
-For example if you plant a bush and then call `get_companion()` it will return something like `(Entities.Carrot, (3, 5))`. This means that this bush would like to have carrots at the position `(3,5)`. So if you plant carrots at `(3,5)` and then harvest the bush, it will yield more wood. The growth stage of the carrot doesn't matter.
+Például, ha elültetsz egy bokrot, majd meghívod a `get_companion()` függvényt, akkor valami ilyesmit kapsz: `(Entities.Carrot, (3, 5))`. Ez azt jelenti, hogy ennek a bokornak sárgarépára van szüksége a `(3,5)` pozícióban. Tehát ha sárgarépát ültetsz a `(3,5)` helyre, majd betakarítod a bokrot, több fa termést fog adni. A sárgarépa növekedési állapota nem számít.
 
-A plant's companion preference can be either `Entities.Grass`, `Entities.Bush`, `Entities.Tree` or `Entities.Carrot`. Each plant chooses this randomly, but it will always choose a different plant than itself. The position can also be any position within 3 moves of the plant except the position of the plant itself.
+Egy növény társ-preferenciája lehet Entities.Grass, Entities.Bush, Entities.Tree vagy Entities.Carrot. Minden növény véletlenszerűen választ, de soha nem saját magát választja társának. A pozíció is bármely hely lehet 3 lépésen belül a növénytől, kivéve magának a növénynek a helyét.
 
-If there is no plant under the drone that has a companion preference `get_companion()` will return `None`.
+Ha a drón alatt nincs olyan növény, amelynek lenne társ-preferenciája, a `get_companion()` `None`-t ad vissza.
 
-Before polyculture is unlocked, the yield multiplier is `5`. It doubles everytime you upgrade it.
+A polikultúra feloldása előtt a hozam szorzó értéke 5. Minden fejlesztésnél megduplázódik.

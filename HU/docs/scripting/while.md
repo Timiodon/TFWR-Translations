@@ -1,56 +1,55 @@
-# While Loop
-You have unlocked the `while` loop and the values `True` and `False`. The `while` loop keeps executing the loop body as long as the condition is `True`.
+# While ciklus
+Felhoztad a `while` ciklust és a `True` és `False` értékeket. A `while` ciklus mindaddig végrehajtja a ciklus törzsét, amíg a feltétel `True`.
 
 `while condition:
-	#loop body`
+	#ciklus törzse`
 
-Don't worry about creating infinite loops. The delays in the execution will prevent the program from freezing.
+Ne aggódj a végtelen ciklusok miatt. A végrehajtás késleltetései megakadályozzák, hogy a program megfagyjon.
 
-## For Beginners
-Perhaps you have already tried to put several `harvest()` calls in a row:
+## Kezdőknek
+Lehet, hogy már kipróbáltad több `harvest()` hívás egymás után rakását:
 
 `harvest()
 harvest()
 harvest()`
 
-This allows you to harvest several times in one program run. 
-However, it would be nice to harvest more than three times, and writing the same code multiple times is bad practice. 
-The solution is a loop. 
-A loop allows you to run the same code multiple times.
+Ez lehetővé teszi, hogy többször takaríts be egy program futás alatt.
+Azonban jó lenne háromnál többször betakarítani, és ugyanazt a kódot többször írni rossz gyakorlat.
+A megoldás a ciklus.
+Egy ciklus lehetővé teszi, hogy ugyanazt a kódot többször futtatsd.
 
-The while loop takes a condition, which is a logical value that can only be in one of two states: `True` or `False`. 
-Such a value is called a Boolean value.
+A while ciklus egy feltételt vesz, ami egy logikai érték, ami csak két állapot egyikében lehet: `True` vagy `False`.
+Ilyen értéket Boolean értéknek nevezünk.
 
-The loop then executes the code inside the loop until the condition is False.
-The while loop looks like this:
+A ciklus aztán végrehajtja a cikluson belüli kódot, amíg a feltétel False.
+A while ciklus így néz ki:
 
 `while condition:
-	#loop body
-	#loop body
+	#ciklus törzse
+	#ciklus törzse
 	#...`
 	
-Where you have to replace "condition" with a boolean value and `#loop body` with whatever you want to do in the loop.
+Ahol a "condition" helyére egy boolean értéket, és a `#ciklus törzse` helyére azt kell írnod, amit a ciklusban akarsz csinálni.
 
-There are two constant boolean values available. Constants are values that never change during the program.
+Két állandó boolean érték érhető el. Az állandók olyan értékek, amelyek soha nem változnak a program futása alatt.
 
-To create a constant boolean value that is always `True`, you can simply write `True`. Write `False` as a constant boolean value that will always be `False`.
-So you could either write
-
+Állandó `True` boolean érték létrehozásához egyszerűen írd le a `True`-t. Írd le a `False`-t állandó boolean értékként, ami mindig `False` lesz.
+Tehát írhatod
 
 `while False:
 	do_a_flip()`
 
-or
+vagy
 
 `while True:
 	do_a_flip()`
 
-The first will never do a flip and the second will do flips forever (an infinite loop). 
+Az első soha nem csinál flipet, a második pedig örökké flipel (végtelen ciklus).
 
-Normally creating an infinite loop is a bad idea because it will freeze the program, but in this game there are delays between each iteration of the loop, so it will cause the drone to keep doing a flip until you manually stop it by pressing the execute button again.
+Általában a végtelen ciklus létrehozása rossz ötlet, mert megfagyasztja a programot, de ebben a játékban késleltetések vannak a ciklus minden iterációja között, így a drón folyamatosan flipelni fog, amíg kézzel le nem állítod a végrehajtás gomb újbóli megnyomásával.
 
-Notice how the line after the colon is indented. Indentation like this is used to separate blocks of code.
-Just press Tab to add indentation and Shift + Tab (or Backspace) to remove it.
+Figyeld meg, hogy a kettőspont utáni sor behúzva van. Az ilyen behúzás a kód blokkok elválasztására szolgál.
+Nyomd meg a Tab-ot a behúzás hozzáadásához és Shift + Tab-et (vagy Backspace-t) az eltávolításához.
 
-The loop will repeat all indented statements after the colon.
-Statements after the indented block will be executed after the loop has finished.
+A ciklus megismétli az összes behúzott utasítást a kettőspont után.
+A behúzott blokk utáni utasítások a ciklus befejezése után kerülnek végrehajtásra.

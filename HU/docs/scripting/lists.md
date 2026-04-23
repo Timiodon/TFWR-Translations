@@ -1,66 +1,66 @@
-# Lists
-Lists are an easy way to store multiple values in a single variable.
-You can create new lists like this:
+# Listák
+A listák egyszerű módja több érték tárolásának egyetlen változóban.
+Így hozhatsz létre új listákat:
 
 `some_list = [2, True, Items.Hay]`
 
-The list now contains the values `2`, `True` and `Items.Hay`.
-A list can also be empty:
+A lista most a `2`, `True` és `Items.Hay` értékeket tartalmazza.
+Egy lista üres is lehet:
 
 `empty_list = []`
 
-You can access an element of a list by its index. The index is `0` for the first element, `1` for the second element, `2` for the third...
+A listaelemeket az indexükön keresztül érheted el. Az index `0` az első elemhez, `1` a másodikhoz, `2` a harmadikhoz...
 
-plants carrots
+répa ültetése
 `entities = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(entities[1])`
 
-You can iterate over a list using a for loop. The following example sums the all elements in the list.
+Egy listán for ciklussal iterálhatsz. A következő példa összeadja a lista összes elemét.
 
 `numbers = [4, 7, 2, 5]
 sum = 0
 for number in numbers:
 	sum += number`
-`sum` is now `18`
+A `sum` most `18`
 
-The following list methods allow you to add and remove elements:
+A következő lista metódusok lehetővé teszik elemek hozzáadását és eltávolítását:
 
-`elements.append(elem)` adds an element to the end of the list:
+`elements.append(elem)` hozzáad egy elemet a lista végéhez:
 
 `numbers = [2, 6, 12]
 numbers.append(7)`
-`numbers` is now `[2, 6, 12, 7]`
+A `numbers` most `[2, 6, 12, 7]`
 
-`elements.remove(elem)` removes the first occurrence of an element from a list:
+`elements.remove(elem)` eltávolítja egy elem első előfordulását a listából:
 
 `numbers = [1, 2, 4, 2]
 numbers.remove(2)`
-`numbers` is now `[1, 4, 2]`
+A `numbers` most `[1, 4, 2]`
 
-`elements.insert(index, elem)` inserts an element at the given index:
+`elements.insert(index, elem)` beszúr egy elemet a megadott indexre:
 
 `some_list = [Entities.Tree, Items.Hay]
 some_list.insert(1, Items.Wood)`
-`some_list` is now `[Entities.Tree, Items.Wood, Items.Hay]`
+A `some_list` most `[Entities.Tree, Items.Wood, Items.Hay]`
 
-`elements.pop(index)` removes the element at the specified index.
-If no index is specified, the last item is removed.
+`elements.pop(index)` eltávolítja az elemet a megadott indexen.
+Ha nincs megadva index, az utolsó elem kerül eltávolításra.
 
 `numbers = [3, 5, 8, 25]
 numbers.pop()`
-`numbers` is now `[3, 5, 8]`
+A `numbers` most `[3, 5, 8]`
 `numbers.pop(1)`
-`numbers` is now `[3, 8]`
+A `numbers` most `[3, 8]`
 
-The `len()` function returns the length of the list.
+A `len()` függvény visszaadja a lista hosszát.
 `numbers = [3, 2, 1]
 x = len(numbers)`
-`x` is now `3`
+Az `x` most `3`
 
-Lists have reference semantics. This means that assigning a list to a variable assigns the same list object to that variable, rather than making a copy of the list.
-If two variables reference the same list, changes to the list will be seen by both.
+A listák referencia szemantikájúak. Ez azt jelenti, hogy ha egy listát hozzárendelsz egy változóhoz, akkor ugyanazt a lista objektumot rendeled hozzá, nem másolatot készítesz.
+Ha két változó ugyanarra a listára mutat, a lista változtatásait mindkettő látni fogja.
 
 `a = [1, 2]
 b = a
 b.pop()`
-`a` and `b` are now both `[1]`
+Az `a` és `b` is most `[1]`

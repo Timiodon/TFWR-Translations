@@ -1,8 +1,8 @@
-# Hats
+# Kalapok
 
-You have unlocked a few new hat colors for your drone.
+Feloldottál néhány új kalapszínt a drónodnak.
 
-Equip them like this:
+Így használd őket:
 `change_hat(Hats.Gray_Hat)
 do_a_flip()
 change_hat(Hats.Purple_Hat)

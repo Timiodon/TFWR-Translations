@@ -1,58 +1,58 @@
-# Simulation
+# Szimuláció
 
-Simulations allow you to quickly test code without changing the state of the real farm.
-The starting state of the simulation can be chosen freely, and when the simulation ends, the real farm will be in the exact state it was in before the simulation started.
+A szimulációk lehetővé teszik a kód gyors tesztelését a valódi farm állapotának megváltoztatása nélkül.
+A szimuláció kezdőállapota szabadon választható, és amikor a szimuláció véget ér, a valódi farm pontosan olyan állapotban lesz, mint a szimuláció megkezdése előtt.
 
-The `simulate()` function is used to start a simulation.
+A `simulate()` függvény szolgál a szimuláció indítására.
 
-the file the execution should start in
+a fájl, amiből a végrehajtás indul
 `filename = "f1"`
 
-start with everything unlocked and fully upgraded
+minden feloldva és teljesen fejlesztve indul
 `sim_unlocks = Unlocks`
 
-start with 10000 carrots and 50 hay
+10000 répával és 50 szénával indul
 `sim_items = {Items.Carrot : 10000, Items.Hay : 50}`
 
-start with a global variable "a" with a value of 13
+egy "a" nevű globális változó 13 értékkel indul
 `sim_globals = {"a" : 13}`
 
-use a fixed random seed
+rögzített random seed használata
 `seed = 0`
 
-speed up the simulation by a factor 64
+a szimuláció 64x gyorsítása
 `speedup = 64`
 
-run the simulation
+a szimuláció futtatása
 `run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 
-The `simulate()` function returns the time, in seconds, that it took to simulate the given start file.
+A `simulate()` függvény másodpercben adja vissza az adott indító fájl szimulálásához szükséges időt.
 
-### File Name
-The first argument of the simulate function is the filename. This is the name that is displayed at the top of the code window. The simulation will run the specified file as if you had clicked the Execute button on it.
+### Fájlnév
+A simulate függvény első argumentuma a fájlnév. Ez a név jelenik meg a kódablak tetején. A szimuláció a megadott fájlt futtatja, mintha rákattintottál volna a Végrehajtás gombra rajta.
 
-### Starting Unlocks
-All programming features such as loops, if statements, lists, dicts,... will always remain unlocked. 
+### Kezdő feloldások
+Minden programozási funkció mint ciklusok, if utasítások, listák, dicts,... mindig feloldva maradnak.
 
-The second argument allows you to specify which unlocks/upgrades the simulation should start with in addition to the programming features. This should be a sequence of unlocks. The simulation will start with all unlocks in the sequence upgraded to their maximum level.
+A második argumentum lehetővé teszi, hogy megadd, mely feloldások/fejlesztések legyenek a szimulációban a programozási funkciókon felül. Ez feloldások szekvenciája kell legyen. A szimuláció az összes feloldást a maximum szintjére fejlesztve kezdi.
 
-If you want to specify an upgrade level other than the maximum, you can pass a dictionary that maps the unlocks to unlock levels. In this case, negative values correspond to the maximum unlock level.
+Ha a maximumtól eltérő fejlesztési szintet akarsz megadni, átadhatsz egy szótárat, ami a feloldásokat fejlesztési szintekre képezi le. Ebben az esetben a negatív értékek a maximum feloldási szintnek felelnek meg.
 
-### Starting Items
-The third argument allows you to pass a dictionary that maps items to numbers. It specifies the items to start the simulation with.
+### Kezdő itemek
+A harmadik argumentum lehetővé teszi, hogy szótárat adj át, ami itemeket számokra képez le. Megadja az itemeket, amikkel a szimuláció indul.
 
-### Starting Globals
-Because the simulation starts a completely new program execution, you can't access variables from the program that starts the simulation.
-However, it is possible to pass values to the simulation using the fourth argument. This is a dict that maps variable names in the form of strings to values. These variables are then added to the global scope of the execution inside the simulation.
+### Kezdő globálisok
+Mivel a szimuláció teljesen új program végrehajtást indít, nem érheted el a szimulációt indító programból a változókat.
+Azonban lehetséges értékeket átadni a szimulációnak a negyedik argumentum használatával. Ez egy dict, ami string formájú változóneveket értékekre képez. Ezek a változók aztán hozzáadásra kerülnek a szimuláción belüli végrehajtás globális hatóköréhez.
 
-Note that this copies all values, so mutating them inside the simulation won't affect the original values outside the simulation. It's not possible to return values from the simulation other than the time it took to run.
+Figyelj arra, hogy ez minden értéket másol, szóval a szimuláción belüli mutálásuk nem fogja érinteni az eredeti értékeket a szimuláción kívül. Nem lehetséges értékeket visszaadni a szimulációból a futási időn kívül.
 
 ### Random Seed
-The fifth argument allows you to specify the random seed used in the simulation. This must be a positive integer. Negative values will cause a random seed to be used.
+Az ötödik argumentum lehetővé teszi a szimulációban használt random seed megadását. Pozitív egésznek kell lennie. A negatív értékek random seed használatát okozzák.
 
-The random seed affects everything from plant growth times to maze layouts to water decay times. If you start the same simulation multiple times with the same random seed and the same starting conditions, the result should always be the same.
+A random seed mindent érint a növény növekedési időktől a labirintus elrendezésekig a víz csökkenési időkig. Ha ugyanazzal a random seeddel és ugyanazokkal a kezdő feltételekkel többször indítod ugyanazt a szimulációt, az eredmény mindig ugyanaz kell legyen.
 
-### Speedup
-The sixth argument is the starting speedup of the simulation. This allows you to test things quickly. If the game is unable to keep up with the set speed it will slow down automatically.
+### Sebesség felét
+A hatodik argumentum a szimuláció kezdő sebesség felét. Ez lehetővé teszi, hogy gyorsan tesztelj dolgokat. Ha a játék nem tud lépést tartani a beállított sebességgel, automatikusan lelassul.
 
-The speedup does not affect the result of the simulation in any way. It exists only to reduce the waiting time.
+A sebesség felét semmilyen módon nem befolyásolja a szimuláció eredményét. Csak a várakozási idő csökkentésére szolgál.

@@ -1,19 +1,19 @@
-# Pumpkins
-[Pumpkins](objects/pumpkin) grow like carrots on tilled soil. Planting them costs carrots.
+# Tökök
+A [tökök](objects/pumpkin) úgy nőnek, mint a répák a felszántott talajon. Ültetésük répába kerül.
 
-When all the pumpkins in a square are fully grown, they will grow together to form a giant pumpkin. Unfortunately, pumpkins have a 20% chance of dying once they are fully grown, so you will need to replant the dead ones if you want them to merge. 
+Amikor egy négyzet összes tökje teljesen megnőtt, együtt nőnek óriási tökké. Sajnos a tököknek 20% esélyük meghalni, amikor teljesen megnőttek, szóval újra kell ültetned a halottakat, ha egyesülni akarsz őket.
 
-When a pumpkin dies, it leaves behind a dead pumpkin that won't drop anything when harvested. Planting a new plant in its place automatically removes the dead pumpkin, so there is no need to harvest it. `can_harvest()` always returns `False` on dead pumpkins.
+Amikor egy tök meghal, maga után hagy egy halott tököt, ami nem dob semmit betakarításkor. Új növény ültetése a helyére automatikusan eltávolítja a halott tököt, szóval nincs szükség betakarítani. A `can_harvest()` mindig `False`-t ad vissza halott tökökön.
 
-The yield of a giant pumpkin depends on the size of the pumpkin.
+Az óriási tök hozama a tök méretétől függ.
 
-A 1x1 pumpkin yields `1*1*1 = 1` pumpkins.
-A 2x2 pumpkin yields `2*2*2 = 8` pumpkins instead of `4`.
-A 3x3 pumpkin yields `3*3*3 = 27` pumpkins instead of `9`.
-A 4x4 pumpkin yields `4*4*4 = 64` pumpkins instead of `16`.
-A 5x5 pumpkin yields `5*5*5 = 125` pumpkins instead of `25`.
-A `n`x`n` pumpkin yields `n*n*6` pumpkins for `n >= 6`.
+Egy 1x1 tök `1*1*1 = 1` tököt hoz.
+Egy 2x2 tök `2*2*2 = 8` tököt hoz `4` helyett.
+Egy 3x3 tök `3*3*3 = 27` tököt hoz `9` helyett.
+Egy 4x4 tök `4*4*4 = 64` tököt hoz `16` helyett.
+Egy 5x5 tök `5*5*5 = 125` tököt hoz `25` helyett.
+Egy `n`x`n` tök `n*n*6` tököt hoz `n >= 6` esetén.
 
-It's a good idea to get at least 6x6 size pumpkins to get the full multiplier. 
+Jó ötlet legalább 6x6 méretű tököket szerezni a teljes szorzó eléréséhez.
 
-This means that even if you plant a pumpkin on every tile in a square, one of the pumpkins may die and prevent the mega pumpkin from growing.
+Ez azt jelenti, hogy még ha tököt ültetsz is minden csempére egy négyzetben, az egyik tök meghalhat és megakadályozhatja az óriási tök növekedését.

@@ -1,46 +1,46 @@
-# Dinosaurs
-Dinosaurs are ancient, majestic creatures that can be farmed for ancient bones.
+# Dinoszauruszok
+A dinoszauruszok ősi, fenséges lények, amik ősi csontokért farmolhatók.
 
-Unfortunately dinosaurs have gone extinct a long time ago, so the best we can do now is dressing up as one.
-For this purpose you have received the new dinosaur hat.
+Sajnos a dinoszauruszok nagyon régen kihaltak, szóval a legjobb, amit tehetünk, az egy öltözködés egyként.
+Ehhez kaptad az új dinoszaurusz kalapot.
 
-The hat can be equipped with
+A kalapot így оборудования:
 `change_hat(Hats.Dinosaur_Hat)`
 
-Unfortunately it doesn't quite look like on the advertisement...
+Sajnos nem úgy néz ki, mint a reklámban...
 
-If you equip the dinosaur hat and have enough cactus, an [apple](objects/apple) will automatically be purchased and placed under the drone.
-When the drone is over an apple and moves again, it will eat the apple and grow its tail by one. If you can afford it, a new apple will be purchased and placed in a random location.
-The apple cannot spawn if something else is planted where it wants to be.
+Ha felveszed a dinoszaurusz kalapot és van elegendő kaktusz, egy [alma](objects/apple) automatikusan megvásárlásra és a drón alá kerül.
+Amikor a drón egy alma felett van és újra mozog, megeszi az almát és a farkát egyel meghosszabbítja. Ha meg tudod fizetni, egy új alma kerül megvásárlásra és véletlenszerű helyre kerül.
+Az alma nem spawnolhat, ha valami más van ültetve oda, ahova szeretné.
 
-The tail of the dinosaur will be dragged behind the drone filling the previous tiles the drone moved over. If a drone tries to move on top of the tail `move()` will fail and return `False`. 
-The last segment of the tail will move out of the way during the move, so you can move onto it. However, if the snake fills out the whole farm, you will not be able to move anymore. So you can check if the snake is fully grown by checking if you can't move anymore.
-While wearing the dinosaur hat, the drone can't move over the farm border to get to the other side.
+A dinoszaurusz farka a drón mögött húzódik, kitöltve az előző csempéket, amin a drón áthaladt. Ha egy drón megpróbál a farok tetejére mozogni, a `move()` sikertelen lesz és `False`-t ad vissza.
+A farok utolsó szegmense elmozdul a mozgás alatt, szóval ráléphetsz. Azonban ha a kígyó az egész farmot kitölti, nem fogsz tudni tovább mozogni. Szóval ellenőrizheted, hogy a kígyó teljesen megnőtt-e azáltal, hogy nem tudsz már mozogni.
+A dinoszaurusz kalap viselése közben a drón nem mozoghat a farm szélén át a másik oldalra.
 
-Using `measure()` on an apple will return the position of the next apple as a tuple.
+A `measure()` alma használata a következő alma pozícióját adja vissza tuple-ként.
 
 `next_x, next_y = measure()`
 
-When the hat is unequipped again by equipping a different hat, the tail will be harvested.
-You will receive bones equal to the tail length squared. So for a tail of length `n` you will receive `n**2` `Items.Bone`. 
-For Example:
-length 1 => 1 bone
-length 2 => 4 bones
-length 3 => 9 bones
-length 4 => 16 bones
-length 16 => 256 bones
-length 100 => 10000 bones
+Amikor a kalap ismét levehető egy másik kalap felvételével, a farok betakarításra kerül.
+Olyan csontokat kapsz, amennyi a farok hosszának négyzete. Tehát `n` hosszú farokhoz `n**2` `Items.Bone`-t kapsz.
+Például:
+hossz 1 => 1 csont
+hossz 2 => 4 csont
+hossz 3 => 9 csont
+hossz 4 => 16 csont
+hossz 16 => 256 csont
+hossz 100 => 10000 csont
 
-The Dinosaur Hat is very heavy, so if you equip it, it will make `move()` take 400 ticks instead of 200. However, each time you pick up an apple, the number of ticks used by `move()` is reduced by 3% (rounded down), because a longer tail can help you move.
+A Dinoszaurusz Kalap nagyon nehéz, szóval ha felveszed, a `move()` 400 ticket fog igénybe venni 200 helyett. Azonban minden alma felvételekor a `move()` által használt tickek száma 3%-kal csökken (lefelé kerekítve), mert egy hosszabb farok segíthet a mozgásban.
 
-The following loop prints the number of ticks used by `move()` after any number of apples:
+A következő ciklus kiírja a `move()` által használt tickek számát bármennyi alma után:
 
 `ticks = 400
 for i in range(100):
-    print("ticks after ", i, " apples: ", ticks)
+    print("tickek ", i, " alma után: ", ticks)
     ticks -= ticks * 0.03 // 1`
 
-You only have one dinosaur hat, so only one drone can wear it.
+Csak egy dinoszaurusz kalapod van, szóval csak egy drón viselheti.
 
-<spoiler=show hint 1>If you keep moving along the same path that covers the whole field, you can easily get a snake that covers the whole field every time. It's not very efficient, but it works.
-Fully traversing a very large farm can take a long time and you might not actually need that many bones. Feel free to use `set_world_size()` to change the size of the farm to something more convenient.</spoiler>
+<spoiler=show hint 1>Ha ugyanazon az úton haladsz, ami a teljes mezőt lefedi, könnyen kaphatsz egy kígyót, ami minden alkalommal lefedi a teljes mezőt. Nem túl hatékony, de működik.
+Egy nagyon nagy farm teljes bejárása hosszú ideig tarthat és valószínűleg nem is kell annyi csont. Nyugodtan használd a `set_world_size()`-t a farm méretének kényelmesebb értékre állításához.</spoiler>

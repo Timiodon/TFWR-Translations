@@ -1,33 +1,33 @@
 # Debug
-Sometimes your code just doesn't work and you need to find out why. There are a couple of tools to help you do that.
+Néha a kód egyszerűen nem működik, és ki kell derítened, miért. Van néhány eszköz, ami segít ebben.
 
-The first is to execute the program step by step. 
-You can go into step-by-step mode with the button next to the Execute button or by setting a breakpoint.
+Az első a program lépésenkénti végrehajtása.
+Beléphetsz lépésenkénti módba a Végrehajtás gomb melletti gombbal vagy breakpoint beállításával.
 
-Breakpoints can be added by clicking on the breakpoint panel to the left of the code.
+Breakpointok hozzáadhatók a kód melletti breakpoint panelre kattintva.
 ![](Breakpoints227)
-When execution reaches the line where the breakpoint is, it will automatically switch to step-by-step mode.
+Amikor a végrehajtás eléri a breakpoint sorát, automatikusan lépésenkénti módba kapcsol.
 
-When you move your mouse over a variable, its current value is displayed.
+Amikor a változó fölé viszed az egeret, megjelenik az aktuális értéke.
 
-The `print()` function can also be very useful. It will write any value passed to it directly into the air.
+A `print()` függvény is nagyon hasznos lehet. Bármely átadott értéket közvetlenül a levegőbe ír.
 
-Examples:
+Példák:
 
-Print "0.24".
+Írja ki a "0.24"-et.
 `print(0.24)`
 
-Print "True" or "False".
+Írja ki a "True" vagy "False"-t.
 `print(can_harvest())`
 
-Print the current position.
+Írja ki az aktuális pozíciót.
 `print(get_pos_x(), get_pos_y())`
 
-The print function prints the value directly into the air and to the [Output](docs/output.md) page.
+A print függvény az értéket közvetlenül a levegőbe és a [Kimenet](docs/output.md) oldalra írja.
 
-Writing into the air can sometimes be a bit slow if you want to print a lot of values.
-In this case you can use the `quick_print()` function which prints only to the output window.
+A levegőbe írás néha egy kicsit lassú lehet, ha sok értéket akarsz kiírni.
+Ebben az esetben használhatod a `quick_print()` függvényt, ami csak a kimeneti ablakba ír.
 
-The output window also logs warnings and errors, so if something doesn't work as expected it can be useful to check that.
+A kimeneti ablak a figyelmeztetéseket és hibákat is naplózza, szóval ha valami nem a várt módon működik, hasznos lehet ellenőrizni.
 
-When the execution stops, the output is also written to the output.txt file in the game folder. [output.txt](persistent_data_path/output.txt).
+Amikor a végrehajtás leáll, a kimenet a game folderben lévő output.txt fájlba is íródik. [output.txt](persistent_data_path/output.txt).
