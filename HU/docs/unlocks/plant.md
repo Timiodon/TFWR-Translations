@@ -1,4 +1,4 @@
-# Növény
+# Ültetés
 A fű azért jó, mert automatikusan nő. Minden más növényt a `plant()` függvénnyel kell elültetni. Jelenleg az egyetlen elültethető növény a bokor.
 A növény típusát, amit ültetni akarsz, így adhatod át a függvénynek:
 
