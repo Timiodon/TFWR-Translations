@@ -5,7 +5,7 @@
 @options = Beállítások
 @join_discord = Discord
 @quit = Kilépés
-@open_folder = Mappa megnyitása
+@open_folder = Mappa helye
 @new_game = Új játék
 @back = Vissza
 @unlocks = Unlocks
