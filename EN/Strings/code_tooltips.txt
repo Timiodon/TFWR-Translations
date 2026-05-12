@@ -1,5 +1,5 @@
 @code_tooltip_harvest = `harvest()`
-Harvests the entity under the drone. 
+Harvests the entity under the drone.
 If you harvest an entity that can't be harvested, it will be destroyed.
 
 returns `True` if an entity was removed, `False` otherwise.
@@ -9,7 +9,7 @@ takes `200` ticks to execute if an entity was removed, `1` tick otherwise.
 example:
 `harvest()`
 @code_tooltip_can_harvest = `can_harvest()`
-Used to find out if plants are fully grown.
+Used to find out if entities are fully grown.
 
 returns `True` if there is an entity under the drone that is ready to be harvested, `False` otherwise.
 
@@ -28,16 +28,16 @@ takes `1` tick to execute.
 
 example:
 `for i in range(10):
-    print(i)
+print(i)
 
 for i in range(2,6):
-    print(i)
+print(i)
 
 for i in range(10, 0, -1):
-    print(i)`
-@code_tooltip_plant = `plant(entity)` 
+print(i)`
+@code_tooltip_plant = `plant(entity)`
 Spends the cost of the specified `entity` and plants it under the drone.
-It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
+It fails if you can't afford to plant the `entity`, the ground type is wrong or there's already an existing entity there.
 
 returns `True` if it succeeded, `False` otherwise.
 
@@ -81,8 +81,8 @@ takes `200` ticks to execute on success, `1` tick otherwise.
 
 example:
 `swap(North)`
-@code_tooltip_till = `till()` 
-Tills the ground under the drone into `Grounds.Soil`. If it's already soil it will change the ground back to `Grounds.Grassland`.
+@code_tooltip_till = `till()`
+Tills the ground under the drone into `Grounds.Soil`. If it's already `Grounds.Soil` it will change the ground back to `Grounds.Grassland`.
 
 returns `None`
 
@@ -90,7 +90,7 @@ takes `200` ticks to execute.
 
 example:
 `till()`
-@code_tooltip_get_pos_x = `get_pos_x()` 
+@code_tooltip_get_pos_x = `get_pos_x()`
 Gets the current x position of the drone.
 The x position starts at `0` in the west and increases in the east direction.
 
@@ -100,7 +100,7 @@ takes `1` tick to execute.
 
 example:
 `x, y = get_pos_x(), get_pos_y()`
-@code_tooltip_get_pos_y = `get_pos_y()` 
+@code_tooltip_get_pos_y = `get_pos_y()`
 Gets the current y position of the drone.
 The y position starts at `0` in the south and increases in the north direction.
 
@@ -110,7 +110,7 @@ takes `1` tick to execute.
 
 example:
 `x, y = get_pos_x(), get_pos_y()`
-@code_tooltip_get_world_size = `get_world_size()` 
+@code_tooltip_get_world_size = `get_world_size()`
 Get the current size of the farm.
 
 returns the side length of the grid in the north to south direction.
@@ -120,27 +120,31 @@ takes `1` tick to execute.
 example:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type()`
 Find out what kind of entity is under the drone.
 
 returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
+
+See the [`Entities`](docs/home.md) category for a list of available `Entities`.
 
 takes `1` tick to execute.
 
 example:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type()`
 Find out what kind of ground is under the drone.
 
 returns the type of the ground under the drone.
+
+See the [`Grounds`](docs/home.md) category for a list of available `Grounds`.
 
 takes `1` tick to execute.
 
 example:
 `if get_ground_type() != Grounds.Soil:
     till()`
-@code_tooltip_get_time = `get_time()` 
+@code_tooltip_get_time = `get_time()`
 Get the current game time.
 
 returns the time in seconds since the start of the game.
@@ -164,16 +168,18 @@ example:
 `do_something()
 
 print(get_tick_count())`
-@code_tooltip_use_item = `use_item(item, n=1)` 
-Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer`.
+@code_tooltip_use_item = `use_item(item, n=1)`
+Attempts to use the specified `item` `n` times. Can only be used with some items including:
+- `Items.Water`
+- `Items.Fertilizer`
 
-returns `True` if an item was used, `False` otherwise.
+returns `True` if an `item` was used, `False` otherwise.
 
 takes `200` ticks to execute if it succeeded, `1` tick otherwise.
 
 example:
 `use_item(Items.Fertilizer)`
-@code_tooltip_get_water = `get_water()` 
+@code_tooltip_get_water = `get_water()`
 Get the current water level under the drone.
 
 returns the water level under the drone as a number between `0` and `1`.
@@ -183,7 +189,7 @@ takes `1` tick to execute.
 example:
 `if get_water() < 0.5:
     use_item(Items.Water)`
-@code_tooltip_do_a_flip = `do_a_flip()` 
+@code_tooltip_do_a_flip = `do_a_flip()`
 Makes the drone do a flip! This action is not affected by speed upgrades.
 
 returns `None`
@@ -193,7 +199,7 @@ takes 1s to execute.
 example:
 `while True:
     do_a_flip()`
-@code_tooltip_pet_the_piggy = `pet_the_piggy()` 
+@code_tooltip_pet_the_piggy = `pet_the_piggy()`
 Pets the piggy! This action is not affected by speed upgrades.
 
 returns `None`
@@ -203,7 +209,7 @@ takes 1s to execute.
 example:
 `while True:
     pet_the_piggy()`
-@code_tooltip_print = `print(*args)` 
+@code_tooltip_print = `print(*args)`
 Prints all `args` into the air above the drone using smoke. This action is not affected by speed upgrades.
 Multiple values can be printed at once.
 
@@ -213,7 +219,7 @@ takes 1s to execute.
 
 example:
 `print("ground:", get_ground_type())`
-@code_tooltip_len = `len(collection)` 
+@code_tooltip_len = `len(collection)`
 Get the number of elements in a list, set, dict or tuple.
 
 returns the length of the `collection`.
@@ -224,7 +230,7 @@ example:
 `for i in range(len(list)):
     list[i] += 1`
 @code_tooltip_list = `list(collection = None)`
-Creates a new list. 
+Creates a new list.
 If `collection` is None, it creates an empty list.
 If `collection` is any sequence, it creates a new list with the element of the sequence.
 
@@ -296,7 +302,7 @@ takes `200` ticks to execute.
 
 example:
 `set_world_size(5)`
-@code_tooltip_num_items = `num_items(item)` 
+@code_tooltip_num_items = `num_items(item)`
 Find out how much of `item` you currently have.
 
 returns the number of `item` currently in your inventory.
@@ -306,7 +312,7 @@ takes `1` tick to execute.
 example:
 `if num_items(Items.Fertilizer) > 0:
     use_item(Items.Fertilizer)`
-@code_tooltip_get_cost = `get_cost(thing)` 
+@code_tooltip_get_cost = `get_cost(thing)`
 Gets the cost of a `thing`
 
 If `thing` is an entity get the cost of planting it.
@@ -322,7 +328,7 @@ example:
 for item in cost:
     if num_items(item) < cost[item]:
         print("not enough items to unlock carrots")`
-@code_tooltip_clear = `clear()` 
+@code_tooltip_clear = `clear()`
 Removes everything from the farm, moves the drone back to position `(0,0)` and changes the hat back to the straw hat.
 
 returns `None`
@@ -331,7 +337,7 @@ takes `200` ticks to execute.
 
 example:
 `clear()`
-@code_tooltip_get_companion = `get_companion()` 
+@code_tooltip_get_companion = `get_companion()`
 Get the preferred companion of the plant under the drone.
 
 returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))`
@@ -343,7 +349,7 @@ example:
 if companion != None:
     plant_type, (x, y) = companion
     print("Companion:", plant_type, "at", x, ",", y)`
-@code_tooltip_unlock = `unlock(unlock)` 
+@code_tooltip_unlock = `unlock(unlock)`
 Has exactly the same effect as clicking the button corresponding to `unlock` in the research tree.
 
 returns `True` if the unlock was successful, `False` otherwise.
@@ -363,7 +369,7 @@ example:
 `plant(Entities.Bush)
 n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, n_substance)`
-@code_tooltip_reset = `reset()` 
+@code_tooltip_reset = `reset()`
 Resets the farm back to a 1x1 square, removes all resources and locks most unlocks.
 It doesn't remove any of your code.
 
@@ -373,16 +379,17 @@ takes `200` ticks to execute.
 
 example:
 `reset()`
-@code_tooltip_measure = `measure(direction = None)` 
+@code_tooltip_measure = `measure(direction = None)`
 Can measure some values on some entities. The effect of this depends on the entity.
 
 If `direction` is not `None` it measures the neighboring entity in the given direction.
 
-returns the number of petals of a sunflower.
-returns the next position for a treasure or apple.
-returns the size of a cactus.
-returns a mysterious number for a pumpkin.
-returns `None` for all other entities.
+returns the number of petals of a `Entities.Sunflower`.
+returns the next treasure position of a `Entities.Hedge` or `Entities.Treasure` in a maze.
+returns the next apple location of a `Entities.Apple` during a dinosaur run.
+returns the size of a `Entities.Cactus`.
+returns a mysterious number of a `Entities.Pumpkin`.
+returns `None` for all other entities or an empty tile.
 
 takes `1` tick to execute.
 
@@ -449,11 +456,11 @@ takes `1` tick to execute if the awaited `drone` is already done.
 
 example:
 `def get_entity_type_in_direction(dir):
-    move(dir)
-    return get_entity_type()
+move(dir)
+return get_entity_type()
 
 def zero_arg_wrapper():
-    return get_entity_type_in_direction(North)
+return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
 
@@ -553,7 +560,7 @@ example:
 `def random_elem(list):
 	index = random() * len(list) // 1
 	return list[index]`
-@code_tooltip_append = `list.append(element)` 
+@code_tooltip_append = `list.append(element)`
 Adds `element` to the end of the `list`.
 
 returns `None`
@@ -563,7 +570,7 @@ takes `1` ticks to execute.
 example:
 `list = []
 list.append(1)`
-@code_tooltip_add = `set.add(element)` 
+@code_tooltip_add = `set.add(element)`
 Adds `element` to the `set`.
 
 returns `None`
@@ -573,7 +580,7 @@ takes `element size` ticks to execute.
 example:
 `set = {0}
 set.add(1)`
-@code_tooltip_remove = `collection.remove(element)` 
+@code_tooltip_remove = `collection.remove(element)`
 Removes the first occurrence of `element` from the `collection`.
 
 returns `None`
@@ -583,7 +590,7 @@ takes `element size` ticks to execute on a set, #comparisions + #shifts ticks on
 example:
 `list = [True, False, None]
 list.remove(False)`
-@code_tooltip_pop = `collection.pop()` 
+@code_tooltip_pop = `collection.pop()`
 Removes the last element from a list or the specified element from a dictionary.
 `list.pop(i)` removes the element at the index `i` from the `list`.
 
@@ -594,7 +601,7 @@ takes `key size` ticks to execute on a dictionary, `len(list) - i + 1` ticks on 
 example:
 `list = [True, False, None]
 list.pop(0)`
-@code_tooltip_insert = `list.insert(i, element)` 
+@code_tooltip_insert = `list.insert(i, element)`
 Inserts `element` into the `list` at index `i`.
 
 returns `None`
