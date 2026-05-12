@@ -72,8 +72,7 @@ example:
     move(North)`
 @code_tooltip_swap = `swap(direction)`
 Swaps the entity under the drone with the entity next to the drone in the specified `direction`.
-Doesn't work on all entities.
-Also works if one (or both) of the entities are `None`.
+Will only work on `Entities.Cactus` or if one (or both) of the entities are `None` (nothing is planted on those tiles).
 
 returns `True` if it succeeded, `False` otherwise.
 
@@ -83,6 +82,7 @@ example:
 `swap(North)`
 @code_tooltip_till = `till()`
 Tills the ground under the drone into `Grounds.Soil`. If it's already `Grounds.Soil` it will change the ground back to `Grounds.Grassland`.
+In a fresh run, or when `clear()` is called, the ground starts off as `Grounds.Grassland`.
 
 returns `None`
 
@@ -125,25 +125,25 @@ Find out what kind of entity is under the drone.
 
 returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
 
-See the [`Entities`](docs/home.md) category for a list of available `Entities`.
-
 takes `1` tick to execute.
 
 example:
 `if get_entity_type() == Entities.Grass:
     harvest()`
+
+See the [`Entities`](docs/home.md) category for a list of available `Entities`.
 @code_tooltip_get_ground_type = `get_ground_type()`
 Find out what kind of ground is under the drone.
 
 returns the type of the ground under the drone.
-
-See the [`Grounds`](docs/home.md) category for a list of available `Grounds`.
 
 takes `1` tick to execute.
 
 example:
 `if get_ground_type() != Grounds.Soil:
     till()`
+
+See the [`Grounds`](docs/home.md) category for a list of available `Grounds`.
 @code_tooltip_get_time = `get_time()`
 Get the current game time.
 
@@ -290,7 +290,7 @@ example:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Limits the size of the farm to better see what's happening.
-Also clears the farm and resets the drone position.
+Also clears the farm, reseting the ground to `Grounds.Grassland` and resets the drone position to (0,0).
 Sets the farm to a `size` x `size` grid.
 The smallest `size` possible is `3`.
 A `size` smaller than `3` will change the grid back to its full size.
@@ -312,6 +312,8 @@ takes `1` tick to execute.
 example:
 `if num_items(Items.Fertilizer) > 0:
     use_item(Items.Fertilizer)`
+
+See the [`Items`](docs/home.md) category for a list of available `Items`.
 @code_tooltip_get_cost = `get_cost(thing)`
 Gets the cost of a `thing`
 
@@ -328,6 +330,8 @@ example:
 for item in cost:
     if num_items(item) < cost[item]:
         print("not enough items to unlock carrots")`
+
+See the [`Unlocks` or `Entities`](docs/home.md) category for a list of available `Unlocks` or `Entities`.
 @code_tooltip_clear = `clear()`
 Removes everything from the farm, moves the drone back to position `(0,0)` and changes the hat back to the straw hat.
 
@@ -338,7 +342,11 @@ takes `200` ticks to execute.
 example:
 `clear()`
 @code_tooltip_get_companion = `get_companion()`
-Get the preferred companion of the plant under the drone.
+Get the preferred companion of the plant under the drone. Companions can only include:
+- `Entities.Grass`
+- `Entities.Bush`
+- `Entities.Tree`
+- `Entities.Carrot`
 
 returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))`
 
@@ -358,6 +366,8 @@ takes `200` ticks to execute if it succeeded, `1` tick otherwise.
 
 example:
 `unlock(Unlocks.Carrots)`
+
+See the [`Unlocks`](docs/home.md) category for a list of available `Unlocks`.
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
 Used to check if an unlock, entity, ground, item or hat is already unlocked.
 
@@ -369,6 +379,8 @@ example:
 `plant(Entities.Bush)
 n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, n_substance)`
+
+See the [`Unlocks`](docs/home.md) category for a list of available `Unlocks`.
 @code_tooltip_reset = `reset()`
 Resets the farm back to a 1x1 square, removes all resources and locks most unlocks.
 It doesn't remove any of your code.
