@@ -131,7 +131,7 @@ example:
 `if get_entity_type() == Entities.Grass:
     harvest()`
 
-See the [`Entities`](docs/home.md) category for a list of available `Entities`.
+See the [`Entities`](docs/home.md) category on the home page for a list of available Entities.
 @code_tooltip_get_ground_type = `get_ground_type()`
 Find out what kind of ground is under the drone.
 
@@ -143,7 +143,7 @@ example:
 `if get_ground_type() != Grounds.Soil:
     till()`
 
-See the [`Grounds`](docs/home.md) category for a list of available `Grounds`.
+See the [`Grounds`](docs/home.md) category on the home page for a list of available Grounds.
 @code_tooltip_get_time = `get_time()`
 Get the current game time.
 
@@ -290,7 +290,7 @@ example:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Limits the size of the farm to better see what's happening.
-Also clears the farm, reseting the ground to `Grounds.Grassland` and resets the drone position to (0,0).
+Also clears the farm, resetting the ground to `Grounds.Grassland` and resets the drone position to (0,0).
 Sets the farm to a `size` x `size` grid.
 The smallest `size` possible is `3`.
 A `size` smaller than `3` will change the grid back to its full size.
@@ -313,7 +313,7 @@ example:
 `if num_items(Items.Fertilizer) > 0:
     use_item(Items.Fertilizer)`
 
-See the [`Items`](docs/home.md) category for a list of available `Items`.
+See the [`Items`](docs/home.md) category on the home page for a list of available Items.
 @code_tooltip_get_cost = `get_cost(thing)`
 Gets the cost of a `thing`
 
@@ -331,7 +331,7 @@ for item in cost:
     if num_items(item) < cost[item]:
         print("not enough items to unlock carrots")`
 
-See the [`Unlocks` or `Entities`](docs/home.md) category for a list of available `Unlocks` or `Entities`.
+See the [`Unlocks`](docs/home.md) and [`Entities`](docs/home.md) category on the home page for a list of available Unlocks and Entities.
 @code_tooltip_clear = `clear()`
 Removes everything from the farm, moves the drone back to position `(0,0)` and changes the hat back to the straw hat.
 
@@ -367,7 +367,7 @@ takes `200` ticks to execute if it succeeded, `1` tick otherwise.
 example:
 `unlock(Unlocks.Carrots)`
 
-See the [`Unlocks`](docs/home.md) category for a list of available `Unlocks`.
+See the [`Unlocks`](docs/home.md) category on the home page for a list of available Unlocks.
 @code_tooltip_num_unlocked = `num_unlocked(thing)`
 Used to check if an unlock, entity, ground, item or hat is already unlocked.
 
@@ -380,7 +380,7 @@ example:
 n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
 use_item(Items.Weird_Substance, n_substance)`
 
-See the [`Unlocks`](docs/home.md) category for a list of available `Unlocks`.
+See the [`Unlocks`](docs/home.md) category on the home page for a list of available Unlocks.
 @code_tooltip_reset = `reset()`
 Resets the farm back to a 1x1 square, removes all resources and locks most unlocks.
 It doesn't remove any of your code.
