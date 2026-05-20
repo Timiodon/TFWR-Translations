@@ -396,11 +396,11 @@ Can measure some values on some entities. The effect of this depends on the enti
 
 If `direction` is not `None` it measures the neighboring entity in the given direction.
 
-returns the number of petals of a `Entities.Sunflower`.
-returns the next treasure position of a `Entities.Hedge` or `Entities.Treasure` in a maze.
-returns the next apple location of a `Entities.Apple` during a dinosaur run.
-returns the size of a `Entities.Cactus`.
-returns a mysterious number of a `Entities.Pumpkin`.
+<unlock=pumpkins>returns a mysterious number of a `Entities.Pumpkin`.</unlock><unlock=sunflowers>
+returns the number of petals of a `Entities.Sunflower`.</unlock><unlock=cactus>
+returns the size of a `Entities.Cactus`.</unlock><unlock=mazes>
+returns the next treasure position of a `Entities.Hedge` or `Entities.Treasure` in a maze.</unlock><unlock=dinosaurs>
+returns the next apple location of a `Entities.Apple` during a dinosaur run.</unlock>
 returns `None` for all other entities or an empty tile.
 
 takes `1` tick to execute.
