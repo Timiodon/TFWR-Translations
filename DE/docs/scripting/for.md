@@ -15,7 +15,7 @@ Eine for-Schleife sieht so aus:
 `variablen_name` kann jeder Name sein, den du wählst. Es ist eine Variable, die das aktuelle Element in der Sequenz speichert. `sequenz` muss ein Wert sein, der durchlaufen werden kann, wie ein Bereich von Zahlen. Der Codeblock wird für jedes Element ausgeführt, wobei die Schleifenvariable diesem Element zugewiesen ist.
 
 ## Sequenzen
-[Ranges](functions/range)      <unlock=lists>[Listen](docs/scripting/lists.md)      </unlock><unlock=functions>[Tupel](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+[Ranges](functions/range)      <unlock=variables>[Tupel](docs/scripting/tuples.md)      </unlock><unlock=lists>[Listen](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Beispiel
 `for i in range(5):

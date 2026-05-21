@@ -15,7 +15,7 @@ Cyklus `for` vypadá takto:
 `variable_name` může být libovolný název. Je to proměnná, která uchovává aktuální prvek sekvence. `sequence` musí být hodnota, přes kterou lze iterovat, například rozsah čísel. Blok kódu se vykoná pro každý prvek s přiřazenou proměnnou cyklu.
 
 ## Sequences
-[Ranges](functions/range)      <unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+[Ranges](functions/range)		<unlock=variables>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Example
 `for i in range(5):

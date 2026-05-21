@@ -15,7 +15,7 @@ Um loop for se parece com isto:
 `variable_name` pode ser qualquer nome que você escolher. É uma variável que armazena o elemento atual na sequência. `sequence` precisa ser algum valor que possa ser iterado, como um range ou números. O bloco de código é executado para cada elemento com a variável do loop atribuída a esse elemento.
 
 ## Sequências
-[Ranges](functions/range)      <unlock=lists>[Listas](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuplas](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dicionários](docs/scripting/dicts.md)      </unlock><unlock=sets>[Conjuntos](docs/scripting/sets.md)</unlock>
+[Ranges](functions/range)      <unlock=variables>[Tuplas](docs/scripting/tuples.md)      </unlock><unlock=lists>[Listas](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dicionários](docs/scripting/dicts.md)      </unlock><unlock=sets>[Conjuntos](docs/scripting/sets.md)</unlock>
 
 ## Exemplo
 `for i in range(5):

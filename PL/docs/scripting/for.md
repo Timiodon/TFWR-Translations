@@ -15,7 +15,7 @@ Pętla for wygląda tak:
 `nazwa_zmiennej` może być dowolną wybraną przez ciebie nazwą. Jest to zmienna, która przechowuje bieżący element w sekwencji. `sekwencja` musi być wartością, po której można iterować, jak zakres liczb. Blok kodu jest wykonywany dla każdego elementu z zmienną pętli przypisaną do tego elementu.
 
 ## Sekwencje
-[Zakresy](functions/range)      <unlock=lists>[Listy](docs/scripting/lists.md)      </unlock><unlock=functions>[Krotki](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Słowniki](docs/scripting/dicts.md)      </unlock><unlock=sets>[Zbiory](docs/scripting/sets.md)</unlock>
+[Zakresy](functions/range)      <unlock=variables>[Krotki](docs/scripting/tuples.md)      </unlock><unlock=lists>[Listy](docs/scripting/lists.md)      </unlock><unlock=dicts>[Słowniki](docs/scripting/dicts.md)      </unlock><unlock=sets>[Zbiory](docs/scripting/sets.md)</unlock>
 
 ## Przykład
 `for i in range(5):

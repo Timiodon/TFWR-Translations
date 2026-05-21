@@ -22,8 +22,8 @@ Or:
 
 `variable_name_or_value` can be any variable you want or any value you want. `sequence` must be one of the things listed below, or a string of characters. An `if` or `while` code block will run if the value is in the provided sequence.
 
-## Sequences
-[Ranges](functions/range)		<unlock=variables>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=lists>[Lists](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dictionaries](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+## シーケンス
+[範囲](functions/range)      <unlock=variables>[タプル](docs/scripting/tuples.md)      </unlock><unlock=lists>[リスト](docs/scripting/lists.md)      </unlock><unlock=dicts>[辞書](docs/scripting/dicts.md)      </unlock><unlock=sets>[セット](docs/scripting/sets.md)</unlock>
 
 ## Example - 2x2 Square of Bushes
 `clear()
