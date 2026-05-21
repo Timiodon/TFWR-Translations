@@ -23,7 +23,7 @@ for number in numbers:
 	sum += number`
 `sum` is now `18`
 
-You can also check if a value exists in a list. The following example checks to see if `6` in is `numbers`:
+You can also check if a value exists in a list. The following example checks to see if `6` is in `numbers`:
 
 `numbers = [8, 6, 1, 10]
 if 6 in numbers:
