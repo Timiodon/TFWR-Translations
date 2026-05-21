@@ -2,7 +2,7 @@
 arithmetic operators: `+, -, *, /, //, %, **`
 comparison operators: `==, !=, <=, >=, <, >`
 boolean operators: `not, and, or`
-existence operator: `in`
+<unlock=variables>existence operator: `in`</unlock>
 
 Note: All numbers in the game are floating point numbers. So all arithmetic operators are floating point operators.
 `//` is defined to just floor the number after the division.
@@ -74,7 +74,7 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 `True or True` evaluates to `True`
 `True or False` evaluates to `True`
 `False or False` evaluates to `False`
-
+<unlock=variables>
 ## Existence Operator
 
 `in` can only be used with sequences and check to see if a value is in that sequence.
@@ -84,4 +84,4 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 `3 not in (1, 2)` evaluates to `True`
 `"Goodbye" in "Hello World"` evaluates to `False`
 `not "Goodbye" in "Hello World"` evaluates to `True`
-`"Goodbye" not in "Hello World"` evaluates to `False`
+`"Goodbye" not in "Hello World"` evaluates to `False`</unlock>
