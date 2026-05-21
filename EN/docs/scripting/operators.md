@@ -77,7 +77,7 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 <unlock=variables>
 ## Existence Operator
 
-`in` can only be used with sequences and check to see if a value is in that sequence.
+`in` can only be used with sequences and checks to see if a value is in that sequence.
 
 `1 in (1, 2)` evaluates to `True`
 `not 3 in (1, 2)` evaluates to `True`
