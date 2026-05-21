@@ -25,7 +25,7 @@ The `in` operator:
 - takes one tick to search a set or dict
 - takes `# comparisons` ticks to search a list or tuple
 - takes `len(string)` to search a string
-- takes `2 * size of range + # comparisons`
+- takes `8` ticks to search a tuple
 An `if` branch also takes one tick to run (in addition to the time it takes to evaluate the condition expression).
 Function calls and variable reads and writes are free but function definitions take 1 tick.
 `import` statements are free.
