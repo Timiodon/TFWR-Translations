@@ -2,6 +2,7 @@
 arithmetic operators: `+, -, *, /, //, %, **`
 comparison operators: `==, !=, <=, >=, <, >`
 boolean operators: `not, and, or`
+existence operator: `in`
 
 Note: All numbers in the game are floating point numbers. So all arithmetic operators are floating point operators.
 `//` is defined to just floor the number after the division.
@@ -9,8 +10,8 @@ Note: All numbers in the game are floating point numbers. So all arithmetic oper
 For assignment operators you need to unlock the "Variables" unlock.
 
 ## Introduction
-Operators allow you to compare, modify and combine values. 
-The arithmetic operators `+, -, *, /, //, %, **` are used to perform common mathematical operations on numbers. 
+Operators allow you to compare, modify and combine values.
+The arithmetic operators `+, -, *, /, //, %, **` are used to perform common mathematical operations on numbers.
 The comparison operators `==, !=, <=, >=, <, >` are used to compare values. The result is always either `True` or `False`.
 The logic operators (also called boolean operators) `not, and, or` are used to combine truth values.
 
@@ -73,3 +74,14 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 `True or True` evaluates to `True`
 `True or False` evaluates to `True`
 `False or False` evaluates to `False`
+
+## Existence Operator
+
+`in` can only be used with sequences and check to see if a value is in that sequence.
+
+`1 in (1, 2)` evaluates to `True`
+`not 3 in (1, 2)` evaluates to `True`
+`3 not in (1, 2)` evaluates to `True`
+`"Goodbye" in "Hello World"` evaluates to `False`
+`not "Goodbye" in "Hello World"` evaluates to `True`
+`"Goodbye" not in "Hello World"` evaluates to `False`
