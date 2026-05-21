@@ -1,6 +1,7 @@
 # In Statement
 You can use an `in` statement to check if a value is available within a `sequence` or a string of characters. A `sequence` needs to be some value that can be iterated over like a range of numbers. If the value is in the `sequence` then then the statement will return `True` and if it is not then it will return `False`.
-
+<unlock=dict>
+You can also use an `in` statement with a dict or set. When used with a dict it will search for a value in the dict's keys.</unlock>
 Note: When used in a `for` loop the `in` keyword functions differently. Please see [For Loop](docs/scripting/for.md) to learn about how to use the `in` keyword for those.
 
 ## Syntax
