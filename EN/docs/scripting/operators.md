@@ -84,4 +84,4 @@ The logic operators (also called boolean operators) `not, and, or` are used to c
 `3 not in (1, 2)` evaluates to `True`
 `"Goodbye" in "Hello World"` evaluates to `False`
 `not "Goodbye" in "Hello World"` evaluates to `True`
-`"Goodbye" not in "Hello World"` evaluates to `False`</unlock>
+`"Goodbye" not in "Hello World"` evaluates to `True`</unlock>
