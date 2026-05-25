@@ -2358,29 +2358,353 @@ def random() -> _float:
 
 
 # --------------------------------------------------
-def min(*args: AnyTFWR) -> AnyTFWR:
+@overload
+def min(sequence: range_class, /) -> _int: # type: ignore
 	"""
-	Gets the minimum of a sequence of elements or several passed arguments.
-	Can be used on numbers and strings.
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
 
-	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
 	`min(sequence)`: Returns the minimum of all values in a sequence.
 
-	returns the minimum value from the arguments.
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(sequence: Iterable[_float], /) -> _float: # type: ignore
+	"""
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`min(sequence)`: Returns the minimum of all values in a sequence.
+
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(sequence: Iterable[string], /) -> string: # type: ignore
+	"""
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`min(sequence)`: Returns the minimum of all values in a sequence.
+
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(*args: range_class) -> range_class: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: _float) -> _float: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: Iterable[_float]) -> Iterable[_float]: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: string) -> string: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: Iterable[string]) -> Iterable[string]: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
 	"""
 	...
 
 
 # --------------------------------------------------
-def max(*args: AnyTFWR) -> AnyTFWR:
+@overload
+def max(sequence: range_class, /) -> _int: # type: ignore
 	"""
-	Gets the maximum of a sequence of elements or several passed arguments.
-	Can be used on numbers and strings.
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
 
-	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
 	`max(sequence)`: Returns the maximum of all values in a sequence.
 
-	returns the maximum value from the arguments.
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(sequence: Iterable[_float], /) -> _float: # type: ignore
+	"""
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`max(sequence)`: Returns the maximum of all values in a sequence.
+
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(sequence: Iterable[string], /) -> string: # type: ignore
+	"""
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`max(sequence)`: Returns the maximum of all values in a sequence.
+
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(*args: range_class) -> range_class: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: _float) -> _float: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: Iterable[_float]) -> Iterable[_float]: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: string) -> string: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: Iterable[string]) -> Iterable[string]: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
 	"""
 	...
 
