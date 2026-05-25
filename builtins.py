@@ -125,6 +125,7 @@ included:
 - Primitives: `bool`, `int`, `float`, `string`, `None`
 - `tuple`, `list`, `dict`, `set`
 - `range_class`, `module`, `function` (hinted as `Callable`)
+- `ModuleType`,
 - `Drone` (from `spawn_drone`)
 - Enums:
   - `Direction` (`North`, `East`, `South`, `West`)
@@ -947,10 +948,6 @@ class Entity:
 
 # --------------------------------------------------
 class Entities(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Entity:
-		return Entity()
-
 	Apple: Entity
 	"""
 	Dinosaurs love them apparently.
@@ -1050,10 +1047,6 @@ class Ground:
 
 # --------------------------------------------------
 class Grounds(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Ground:
-		return Ground()
-
 	Grassland: Ground
 	"""
 	The default ground. Grass will automatically grow on it.
@@ -1075,10 +1068,6 @@ class Hat:
 
 # --------------------------------------------------
 class Hats(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Hat:
-		return Hat()
-
 	Brown_Hat: Hat
 	"""
 	A brown hat.
@@ -1220,10 +1209,6 @@ class Item:
 
 # --------------------------------------------------
 class Items(_Enum):
-    @staticmethod
-    def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Item:
-        return Item()
-
     Bone: Item
     """
     The bones of an ancient creature.
@@ -1295,10 +1280,6 @@ class Leaderboard:
 
 # --------------------------------------------------
 class Leaderboards(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Leaderboard:
-		return Leaderboard()
-
 	Cactus: Leaderboard
 	"""
 	Farm 33_554_432 cacti with multiple drones.
@@ -1390,10 +1371,6 @@ class Unlock:
 
 # --------------------------------------------------
 class Unlocks(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[Any]) -> Unlock:
-		return Unlock()
-
 	Auto_Unlock: Unlock
 	"""
 	Automatically unlock things.
