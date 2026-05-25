@@ -148,16 +148,16 @@ included:
 
 # 	dict() -> new empty dictionary
 
-# 	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
+# 	dict(dictionary[keys, values], /) -> new dictionary initialized from an existing `dictionary`
 
 # 	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
 # 	takes `1` tick to execute if no input is given.
 # 	"""
 
-# 	def __init__(self: Self, input: _dict[_Hashable_, _Any_] | None | Container[Hashable] = None) -> None:
+# 	def __init__(self: Self, input: _dict[_Hashable_, _Any_] | None | Container[Hashable] = None, /, /) -> None:
 # 		...
 
-# 	def len(self: Self) -> _int:
+# 	def len(self: Self, /, /) -> _int:
 # 		"""
 # 		Returns the number of items in the dictionary.
 
@@ -181,7 +181,7 @@ included:
 # 		"""
 # 		...
 
-# 	def pop(self: Self, key: Hashable) -> Any: # type: ignore
+# 	def pop(self: Self, key: Hashable, /, /) -> Any: # type: ignore
 # 		"""
 # 		Remove the key-value pair corresponding to the `key` in the dict
 
@@ -220,20 +220,20 @@ included:
 
 # 	list() -> new empty list
 
-# 	list(collection: list | tuple | set | str) -> new list from the values of the provided `collection`
+# 	list(collection: list | tuple | set | str, /) -> new list from the values of the provided `collection`
 
-# 	list(collection: set | dict) -> new list from the keys of the given `collection`
+# 	list(collection: set | dict, /) -> new list from the keys of the given `collection`
 
-# 	list(game_enum) -> new list from the values of an in-game enumm `game_enum`
+# 	list(game_enum, /) -> new list from the values of an in-game enumm `game_enum`
 
 # 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
 # 	takes `1` tick to execute if no input is given.
 # 	"""
 
-# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
+# 	def __init__(self: Self, input: AnyIterable | None = None, /) -> None:
 # 		...
 
-# 	def append(self: Self, object: Any) -> None:
+# 	def append(self: Self, object: Any, /, /) -> None:
 # 		"""
 # 		Add `object` to the end of a list provided as `given_list`.
 
@@ -255,7 +255,7 @@ included:
 # 		"""
 # 		...
 
-# 	def insert(self: Self, index: _int, object: Any) -> None: # type: ignore
+# 	def insert(self: Self, index: _int, object: Any, /, /) -> None: # type: ignore
 # 		"""
 # 		Add a `object` to the specified `index` to a list provided as `given_list`.
 
@@ -277,7 +277,7 @@ included:
 # 		"""
 # 		...
 
-# 	def len(self: Self) -> _int:
+# 	def len(self: Self, /, /) -> _int:
 # 		"""
 # 		Returns the number of items in the list.
 
@@ -301,7 +301,7 @@ included:
 # 		"""
 # 		...
 
-# 	def pop(self: Self, index: _int) -> Any: # type: ignore
+# 	def pop(self: Self, index: _int, /, /) -> Any: # type: ignore
 # 		"""
 # 		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
 
@@ -327,7 +327,7 @@ included:
 # 		"""
 # 		...
 
-# 	def remove(self: Self, object: Any) -> None:
+# 	def remove(self: Self, object: Any, /, /) -> None:
 # 		"""
 # 		Remove the element corresponding to the `object` in the list.
 
@@ -363,20 +363,20 @@ included:
 
 # 	set() -> new empty set
 
-# 	set(collection: list | tuple | set | str) -> new set from the values of the provided `collection`
+# 	set(collection: list | tuple | set | str, /) -> new set from the values of the provided `collection`
 
-# 	set(collection: set | dict) -> new set from the keys of the given `collection`
+# 	set(collection: set | dict, /) -> new set from the keys of the given `collection`
 
-# 	set(game_enum) -> new set from the values of an in-game enumm `game_enum`
+# 	set(game_enum, /) -> new set from the values of an in-game enumm `game_enum`
 
 # 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
 # 	takes `1` tick to execute if no input is given.
 # 	"""
 
-# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
+# 	def __init__(self: Self, input: AnyIterable | None = None, /, /) -> None:
 # 		...
 
-# 	def add(self: Self, object: Any) -> None:
+# 	def add(self: Self, object: Any, /, /) -> None:
 # 		"""
 # 		Add the `object` to a `given_set`.
 
@@ -398,7 +398,7 @@ included:
 # 		"""
 # 		...
 
-# 	def len(self: Self) -> _int:
+# 	def len(self: Self, /, /) -> _int:
 # 		"""
 # 		Returns the number of items in the set.
 
@@ -422,7 +422,7 @@ included:
 # 		"""
 # 		...
 
-# 	def remove(self: Self, object: Any) -> None:
+# 	def remove(self: Self, object: Any, /, /) -> None:
 # 		"""
 # 		Remove the `object` from the set.
 
@@ -447,7 +447,7 @@ included:
 
 # -------------------------------------------------------------------------------
 @overload
-def range(stop: _float) -> range_class:  # type: ignore
+def range(stop: _float, /, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `0` (inclusive) to `stop` (exclusive).
 
@@ -477,7 +477,7 @@ def range(stop: _float) -> range_class:  # type: ignore
 	...
 
 @overload
-def range(start: _float, stop: _float) -> range_class:  # type: ignore
+def range(start: _float, stop: _float, /, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive).
 
@@ -505,7 +505,7 @@ def range(start: _float, stop: _float) -> range_class:  # type: ignore
 	...
 
 @overload
-def range(start: _float, stop: _float, step: _float) -> range_class:  # type: ignore
+def range(start: _float, stop: _float, step: _float, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive) every `step` interval.
 
@@ -553,7 +553,7 @@ print(last_number)
 """
 
 # --------------------------------------------------
-def add(given_set: _set[_Hashable_], object: Any):
+def add(given_set: _set[_Hashable_], object: Any, /):
 	"""
 	Add the `object` to a `given_set`.
 
@@ -576,7 +576,7 @@ def add(given_set: _set[_Hashable_], object: Any):
 	...
 
 # --------------------------------------------------
-def append(given_list: _list[_Any_], object: Any):
+def append(given_list: _list[_Any_], object: Any, /):
 	"""
 	Add `object` to the end of a list provided as `given_list`.
 
@@ -599,7 +599,7 @@ def append(given_list: _list[_Any_], object: Any):
 	...
 
 # --------------------------------------------------
-def insert(given_list: _list[_Any_], index: _int, object: Any):
+def insert(given_list: _list[_Any_], index: _int, object: Any, /):
 	"""
 	Add a `object` to the specified `index` to a list provided as `given_list`.
 
@@ -622,7 +622,7 @@ def insert(given_list: _list[_Any_], index: _int, object: Any):
 	...
 
 # --------------------------------------------------
-def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashable_] | _tuple[_Any_]) -> _int:
+def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashable_] | _tuple[_Any_], /) -> _int:
 	"""
 	Returns the number of items in the dict, list, set or str provided as `collection`.
 
@@ -647,7 +647,7 @@ def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashab
 	...
 
 # --------------------------------------------------
-def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any):
+def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any, /):
 	"""
 	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
 
@@ -674,7 +674,7 @@ def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any):
 	...
 
 # --------------------------------------------------
-def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any):
+def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any, /):
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 
@@ -698,7 +698,7 @@ def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any):
 	...
 
 # --------------------------------------------------
-def str(object: Any) -> string:
+def str(object: Any, /) -> string:
 	"""
 	Converts an object to its string representation.
 
@@ -1442,7 +1442,7 @@ def can_harvest() -> _bool:
 
 
 # --------------------------------------------------
-def plant(entity: Entity) -> _bool:
+def plant(entity: Entity, /) -> _bool:
 	"""
 	Spends the cost of the specified `entity` and plants it under the drone.
 	It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
@@ -1461,7 +1461,7 @@ def plant(entity: Entity) -> _bool:
 
 
 # --------------------------------------------------
-def swap(direction: Direction) -> _bool:
+def swap(direction: Direction, /) -> _bool:
 	"""
 	Swaps the entity under the drone with the entity next to the drone in the specified `direction`.
 
@@ -1500,7 +1500,7 @@ def till() -> None:
 
 
 # --------------------------------------------------
-def use_item(item: Item, n: _int = 1) -> _bool:
+def use_item(item: Item, n: _int = 1, /) -> _bool:
 	"""
 	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer` and `Items.Weird_Substance`.
 
@@ -1537,7 +1537,7 @@ def clear() -> None:
 
 
 # --------------------------------------------------
-def change_hat(hat: Hat) -> None:
+def change_hat(hat: Hat, /) -> None:
 	"""
 	Changes the hat of the drone to the specified `hat`.
 
@@ -1561,7 +1561,7 @@ def change_hat(hat: Hat) -> None:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def move(direction: Direction) -> _bool:
+def move(direction: Direction, /) -> _bool:
 	"""
 	Moves the drone into the specified `direction` by one tile.
 	If the drone moves over the edge of the farm it wraps back to the other side of the farm.
@@ -1585,7 +1585,7 @@ def move(direction: Direction) -> _bool:
 
 
 # --------------------------------------------------
-def can_move(direction: Direction) -> _bool:
+def can_move(direction: Direction, /) -> _bool:
 	"""
 	Checks if the drone can move in the specified `direction`.
 
@@ -1724,7 +1724,7 @@ def get_water() -> _float:
 
 
 # --------------------------------------------------
-def num_items(item: Item) -> _int | _float:
+def num_items(item: Item, /) -> _int | _float:
 	"""
 	Find out how much of `item` you currently have.
 
@@ -1765,7 +1765,7 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
 
 
 # --------------------------------------------------
-def measure(direction: Direction | None = None) -> _int | _tuple[_int, _int] | None:
+def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] | None:
 	"""
 	Can measure some values on some entities. The effect of this depends on the entity.
 	Will work anynore inside of a maze and only on a `Entities.Apple`
@@ -1807,7 +1807,7 @@ class Drone:
     ...
 
 # -------------------------------------------------------------------------------
-def spawn_drone(task: Callable[[], Any], *args: _Any) -> Drone:
+def spawn_drone(task: Callable[[], Any], /, *args: _Any) -> Drone:
 	"""
 	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the specified `task` function. The rest of the arguments are copied and passed into the specified function. After the drone is done, it will disappear automatically.
 
@@ -1834,7 +1834,7 @@ def spawn_drone(task: Callable[[], Any], *args: _Any) -> Drone:
 
 
 # --------------------------------------------------
-def wait_for(drone: Drone) -> Any:
+def wait_for(drone: Drone, /) -> Any:
 	"""
 	Waits until the given `drone` terminates.
 
@@ -1860,7 +1860,7 @@ def wait_for(drone: Drone) -> Any:
 
 
 # --------------------------------------------------
-def has_finished(drone: Drone) -> _bool:
+def has_finished(drone: Drone, /) -> _bool:
 	"""
 	Checks if the given 1drone1 has finished.
 
@@ -1966,7 +1966,7 @@ def get_tick_count() -> _int:
 
 
 # --------------------------------------------------
-def set_execution_speed(speed: _float) -> None:
+def set_execution_speed(speed: _float, /) -> None:
 	"""
 	Limits the speed at which the program is executed to better see what's happening.
 
@@ -1993,7 +1993,7 @@ def set_execution_speed(speed: _float) -> None:
 
 
 # --------------------------------------------------
-def set_world_size(size: _float) -> None:
+def set_world_size(size: _float, /) -> None:
 	"""
 	Limits the size of the farm to better see what's happening.
 	Also clears the farm and resets the drone position.
@@ -2024,8 +2024,8 @@ def simulate(
 		sim_unlocks: SimulateUnlocks,
 		sim_items: _dict[Item, _float],
 		sim_globals: _dict[string, Any],
-		seed: _float, speedup: _float
-	) -> _float:
+		seed: _float, speedup: _float,
+		/) -> _float:
 	"""
 	Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
 
@@ -2072,7 +2072,7 @@ def simulate(
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: _int | None = None) -> _dict[Item, _int] | None:
+def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: _int | None = None, /) -> _dict[Item, _int] | None:
 	"""
 	Gets the cost of a `thing`
 
@@ -2098,7 +2098,7 @@ def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: 
 
 
 # --------------------------------------------------
-def unlock(unlock: Unlock | Unlocks) -> _bool:
+def unlock(unlock: Unlock | Unlocks, /) -> _bool:
 	"""
 	Has exactly the same effect as clicking the button corresponding to `unlock` in the research tree.
 
@@ -2116,7 +2116,7 @@ def unlock(unlock: Unlock | Unlocks) -> _bool:
 
 
 # --------------------------------------------------
-def num_unlocked(thing: Enums) -> _int:
+def num_unlocked(thing: Enums, /) -> _int:
 	"""
 	Used to check if an unlock, entity, ground, item or hat is already unlocked.
 
@@ -2191,7 +2191,7 @@ def max(*args: Any) -> Any:
 
 
 # --------------------------------------------------
-def abs(x: _float) -> _float:
+def abs(x: _float, /) -> _float:
 	"""
 	Returns the absolute value of a number.
 
@@ -2303,7 +2303,7 @@ def pet_the_piggy() -> None:
 
 
 # --------------------------------------------------
-def leaderboard_run(leaderboard: Leaderboard, file_name: string, speedup: _float) -> None:
+def leaderboard_run(leaderboard: Leaderboard, file_name: string, speedup: _float, /) -> None:
 	"""
 	Starts a timed run for the `leaderboard` using the specified `file_name` as a starting point.
 	`speedup` sets the starting speedup.
