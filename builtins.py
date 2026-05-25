@@ -1912,6 +1912,11 @@ def num_items(item: Item, /) -> _int | _float:
 
 
 # --------------------------------------------------
+type Companion = _tuple[Entity, _tuple[_int, _int]] | None
+"""
+Special type that helps with type hinting the return of the `get_companion` function.
+"""
+
 def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
 	"""
 	Get the companion preference of the plant under the drone.
@@ -1933,6 +1938,11 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
 
 
 # --------------------------------------------------
+type Measure = _int | _tuple[_int, _int] | None
+"""
+Special type that helps with type hinting the return of the `measure` function.
+"""
+
 def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] | None:
 	"""
 	Can measure some values on some entities. The effect of this depends on the entity.
