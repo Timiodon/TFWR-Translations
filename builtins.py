@@ -1,7 +1,7 @@
 # This file gives Python type definitions to TFWR builtins to allow editing code with Python editors.
 # Note that the games language is not Python and these definitions are only an approximation.
 
-# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, and @Zoroark-Zwart on the TFWR Discord server.
+# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, @Zoroark-Zwart, @Rat on the TFWR Discord server.
 # @SCD-3 on GitHub
 
 # Expose some useful types to allow for typing without using a typing import.
