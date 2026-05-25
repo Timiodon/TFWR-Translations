@@ -16,11 +16,11 @@ from collections.abc import Callable, Iterable, Iterator, Sequence, Container
 
 from builtins import (
     bool, int, float, str as string,
-    range as range_class,
     tuple,
 
     # If you uncomment the custom classes found below then
     # comment this line to prevent conflicts
+	range as range_class,
     list, set, dict
 )
 from types import ModuleType
@@ -68,7 +68,12 @@ included:
 """
 
 # --------------------------------------------------
-type Hashable = Primitive | Enums | range_class | Drone | tuple[Hashable, ...]
+type Hashable = (
+    Primitive | range_class |
+	tuple[Hashable, ...] |
+	Enums |
+	Drone[AnyTFWR]
+)
 """
 Type representing all of the useable types for a dict key or set element in TFWR.
 
@@ -101,7 +106,7 @@ type AnyTFWR = (
 
 	Direction | Enums | 					# Game builtins		- enum classes
 
-	Drone									# Game builtins		- megafarm classes
+	Drone[AnyTFWR]									# Game builtins		- megafarm classes
 )
 """
 Type representing all of the useable types in TFWR.
@@ -142,89 +147,89 @@ included:
 
 # Comment out the `dict` builtins import above to prevent conflict errors.
 
-type DictTFWR[K: Any, V: Any] = dict[K, V] | _dict[K, V]
-"""
-This type is used to represent the custom dict type that is specific to the game and the dict type provided by Python's builtins module. It is used to help you manage custom dicts and dict literals such as `{1: "One", 2: "Two", 3: "Three"]`. You cannot assign a dict literal to the custom dict type, however.
+# type DictTFWR[K: Any, V: Any] = dict[K, V] | _dict[K, V]
+# """
+# This type is used to represent the custom dict type that is specific to the game and the dict type provided by Python's builtins module. It is used to help you manage custom dicts and dict literals such as `{1: "One", 2: "Two", 3: "Three"]`. You cannot assign a dict literal to the custom dict type, however.
 
-When using the `dict` custom type below you should type hint your variables using `DictTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+# When using the `dict` custom type below you should type hint your variables using `DictTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
 
-example:
-```
-custom_dict: DictTFWR[int, string] = dict()
-python_dict: DictTFWR[int, string] = {1:"One", 1:"Two", 3:"Three"}
-```
-Makes this possible:
-```
-custom_dict = python_dict
-```
-"""
-class dict[K: Hashable, V: AnyTFWR]():
-	"""
-	Builds an unordered collection of key-value pairs. This custom class is not assignable to `builtins.dict` from Python standard library or dict literals.
+# example:
+# ```
+# custom_dict: DictTFWR[int, string] = dict()
+# python_dict: DictTFWR[int, string] = {1:"One", 1:"Two", 3:"Three"}
+# ```
+# Makes this possible:
+# ```
+# custom_dict = python_dict
+# ```
+# """
+# class dict[K: Hashable, V: AnyTFWR]():
+# 	"""
+# 	Builds an unordered collection of key-value pairs. This custom class is not assignable to `builtins.dict` from Python standard library or dict literals.
 
-	dict() -> new empty dictionary
+# 	dict() -> new empty dictionary
 
-	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
+# 	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
 
-	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
-	takes `1` tick to execute if no input is given.
+# 	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
+# 	takes `1` tick to execute if no input is given.
 
-	Consider using `DictTFWR` to help with type hints involving dicts.
-	"""
-	def __init__(self: Self, input: DictTFWR[K, V] | None = None, /) -> None: ...
-	def __iter__(self: Self, /) -> Iterator[K]: ...
-	def __next__(self: Self, /) -> K: ...
-	def __getitem__(self: Self, key: K, /) -> V: ...
-	def __setitem__(self: Self, key: K, object: V, /) -> None: ...
-	def __contains__(self, compare_object: K, /) -> _bool: ...
-	def len(self: Self, /) -> _int:
-		"""
-		Returns the number of items in the dictionary.
+# 	Consider using `DictTFWR` to help with type hints involving dicts.
+# 	"""
+# 	def __init__(self: Self, input: DictTFWR[K, V] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[K]: ...
+# 	def __next__(self: Self, /) -> K: ...
+# 	def __getitem__(self: Self, key: K, /) -> V: ...
+# 	def __setitem__(self: Self, key: K, object: V, /) -> None: ...
+# 	def __contains__(self, compare_object: K, /) -> _bool: ...
+# 	def len(self: Self, /) -> _int:
+# 		"""
+# 		Returns the number of items in the dictionary.
 
-		returns the length of the dictionary.
+# 		returns the length of the dictionary.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_dict = {"One": 1, "Two": 2, "Three": 3}
-		length = my_dict.len()
-		print(length)
-		```
+# 		```
+# 		my_dict = {"One": 1, "Two": 2, "Three": 3}
+# 		length = my_dict.len()
+# 		print(length)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		3
-		```
-		"""
-		...
-	def pop(self: Self, key: K, /) -> V:
-		"""
-		Remove the key-value pair corresponding to the `key` in the dict
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+# 	def pop(self: Self, key: K, /) -> V:
+# 		"""
+# 		Remove the key-value pair corresponding to the `key` in the dict
 
-		returns the value of the removed key-value pair
+# 		returns the value of the removed key-value pair
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_dict = {"One": 1, "Two": 2, "Three": 3}
-		print("Old Value:", my_dict.pop("One"))
-		print("Current Dict:", my_dict)
-		```
+# 		```
+# 		my_dict = {"One": 1, "Two": 2, "Three": 3}
+# 		print("Old Value:", my_dict.pop("One"))
+# 		print("Current Dict:", my_dict)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		Old Value: 1
-		Current Dict: {"Two":2,"Three":3}
-		```
-		"""
-		...
-	...
+# 		```
+# 		Old Value: 1
+# 		Current Dict: {"Two":2,"Three":3}
+# 		```
+# 		"""
+# 		...
+# 	...
 
 # --------------------------------------------------
 # Uncomment this class if you want additional game-specific type hints and docstrings for `list` methods
@@ -232,163 +237,163 @@ class dict[K: Hashable, V: AnyTFWR]():
 
 # Comment out the `list` builtins import above to prevent conflict errors.
 
-type ListTFWR[V: AnyTFWR] = list[V] | _list[V]
-"""
-This type is used to represent the custom list type that is specific to the game and the list type provided by Python's builtins module. It is used to help you manage custom lists and list literals such as `[1, 2, 3]`. You cannot assign a list literal to the custom list type, however.
+# type ListTFWR[V: AnyTFWR] = list[V] | _list[V]
+# """
+# This type is used to represent the custom list type that is specific to the game and the list type provided by Python's builtins module. It is used to help you manage custom lists and list literals such as `[1, 2, 3]`. You cannot assign a list literal to the custom list type, however.
 
-When using the `list` custom type below you should type hint your variables using `ListTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+# When using the `list` custom type below you should type hint your variables using `ListTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
 
-example:
-```
-custom_list: ListTFWR[int] = list()
-python_list: ListTFWR[int] = [1, 1, 3]
-```
-Makes this possible:
-```
-custom_list = python_list
-```
-"""
-class list[V: AnyTFWR]():
-	"""
-	Builds an ordered sequence of values. This custom class is not assignable to `builtins.list` from Python standard library or list literals.
+# example:
+# ```
+# custom_list: ListTFWR[int] = list()
+# python_list: ListTFWR[int] = [1, 1, 3]
+# ```
+# Makes this possible:
+# ```
+# custom_list = python_list
+# ```
+# """
+# class list[V: AnyTFWR]():
+# 	"""
+# 	Builds an ordered sequence of values. This custom class is not assignable to `builtins.list` from Python standard library or list literals.
 
-	list() -> new empty list
+# 	list() -> new empty list
 
-	list(collection: list | tuple | set | str) -> new list from the values of the provided `collection`
+# 	list(collection: list | tuple | set | str) -> new list from the values of the provided `collection`
 
-	list(collection: set | dict) -> new list from the keys of the given `collection`
+# 	list(collection: set | dict) -> new list from the keys of the given `collection`
 
-	list(game_enum) -> new list from the values of an in-game enum `game_enum`
+# 	list(game_enum) -> new list from the values of an in-game enum `game_enum`
 
-	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
-	takes `1` tick to execute if no input is given.
+# 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
+# 	takes `1` tick to execute if no input is given.
 
-	Consider using `ListTFWR` to help with type hints involving lists.
-	"""
-	def __init__(self: Self, input: Iterable[V] | None = None, /) -> None: ...
-	def __iter__(self: Self, /) -> Iterator[V]: ...
-	def __next__(self: Self, /) -> V: ...
-	def __getitem__(self: Self, index: _float, /) -> V: ...
-	def __setitem__(self: Self, index: _float, object: V, /) -> None: ...
-	def __le__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-	def __lt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-	def __ge__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-	def __gt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-	def __iadd__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
-	def __add__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
-	def __contains__(self, compare_object: V, /) -> _bool: ...
-	def append(self: Self, object: V, /) -> None:
-		"""
-		Add `object` to the end of a list provided as `given_list`.
+# 	Consider using `ListTFWR` to help with type hints involving lists.
+# 	"""
+# 	def __init__(self: Self, input: Iterable[V] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[V]: ...
+# 	def __next__(self: Self, /) -> V: ...
+# 	def __getitem__(self: Self, index: _float, /) -> V: ...
+# 	def __setitem__(self: Self, index: _float, object: V, /) -> None: ...
+# 	def __le__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
+# 	def __lt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
+# 	def __ge__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
+# 	def __gt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
+# 	def __iadd__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
+# 	def __add__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
+# 	def __contains__(self, compare_object: V, /) -> _bool: ...
+# 	def append(self: Self, object: V, /) -> None:
+# 		"""
+# 		Add `object` to the end of a list provided as `given_list`.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_list = [1, 2, 3]
-		my_list.append(4)
-		print(my_list)
-		```
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.append(4)
+# 		print(my_list)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		[1,2,3,4]
-		```
-		"""
-		...
-	def insert(self: Self, index: _float, object: V, /) -> None: # type: ignore
-		"""
-		Add a `object` to the specified `index` to a list provided as `given_list`.
+# 		```
+# 		[1,2,3,4]
+# 		```
+# 		"""
+# 		...
+# 	def insert(self: Self, index: _float, object: V, /) -> None: # type: ignore
+# 		"""
+# 		Add a `object` to the specified `index` to a list provided as `given_list`.
 
-		takes `1 + len(list) - index` ticks to execute
+# 		takes `1 + len(list) - index` ticks to execute
 
-		example usage:
+# 		example usage:
 
-		```
-		my_list = [1, 2, 3]
-		my_list.insert(1, 4)
-		print(my_list)
-		```
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.insert(1, 4)
+# 		print(my_list)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		[1,4,2,3]
-		```
-		"""
-		...
-	def len(self: Self, /) -> _int:
-		"""
-		Returns the number of items in the list.
+# 		```
+# 		[1,4,2,3]
+# 		```
+# 		"""
+# 		...
+# 	def len(self: Self, /) -> _int:
+# 		"""
+# 		Returns the number of items in the list.
 
-		returns the length of the list.
+# 		returns the length of the list.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_list = [1, 2, 3]
-		length = my_list.len()
-		print(length)
-		```
+# 		```
+# 		my_list = [1, 2, 3]
+# 		length = my_list.len()
+# 		print(length)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		3
-		```
-		"""
-		...
-	def pop(self: Self, index: _float = -1, /) -> V: # type: ignore
-		"""
-		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+# 	def pop(self: Self, index: _float = -1, /) -> V: # type: ignore
+# 		"""
+# 		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
 
-		returns the value of the removed element
+# 		returns the value of the removed element
 
-		takes `len(list) - index` ticks to execute if an `index` is provided
-		takes `1` tick to execute if no `index` is provided
+# 		takes `len(list) - index` ticks to execute if an `index` is provided
+# 		takes `1` tick to execute if no `index` is provided
 
-		example usage:
+# 		example usage:
 
-		```
-		my_list = [1, 2, 3]
-		print("Old Value:", my_list.pop(1))
-		print("Current List:", my_list)
-		```
+# 		```
+# 		my_list = [1, 2, 3]
+# 		print("Old Value:", my_list.pop(1))
+# 		print("Current List:", my_list)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		Old Value: 2
-		Current List: [1,3]
-		```
-		"""
-		...
-	def remove(self: Self, object: V, /) -> None:
-		"""
-		Remove the element corresponding to the `object` in the list.
+# 		```
+# 		Old Value: 2
+# 		Current List: [1,3]
+# 		```
+# 		"""
+# 		...
+# 	def remove(self: Self, object: V, /) -> None:
+# 		"""
+# 		Remove the element corresponding to the `object` in the list.
 
-		takes `num_comparisons + num_shifts` ticks to execute
+# 		takes `num_comparisons + num_shifts` ticks to execute
 
-		example usage:
+# 		example usage:
 
-		```
-		my_list = [1, 2, 3]
-		my_list.remove(1)
-		print(my_list)
-		```
+# 		```
+# 		my_list = [1, 2, 3]
+# 		my_list.remove(1)
+# 		print(my_list)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		[2,3]
-		```
-		"""
-		...
-	...
+# 		```
+# 		[2,3]
+# 		```
+# 		"""
+# 		...
+# 	...
 
 
 # --------------------------------------------------
@@ -397,189 +402,189 @@ class list[V: AnyTFWR]():
 
 # Comment out the `set` builtins import above to prevent conflict errors.
 
-type SetTFWR[K: Hashable] = set[K] | _set[K]
-"""
-This type is used to represent the custom set type that is specific to the game and the set type provided by Python's builtins module. It is used to help you manage custom sets and set literals such as `{1, 2, 3}`. You cannot assign a set literal to the custom set type, however.
+# type SetTFWR[K: Hashable] = set[K] | _set[K]
+# """
+# This type is used to represent the custom set type that is specific to the game and the set type provided by Python's builtins module. It is used to help you manage custom sets and set literals such as `{1, 2, 3}`. You cannot assign a set literal to the custom set type, however.
 
-When using the `set` custom type below you should type hint your variables using `SetTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+# When using the `set` custom type below you should type hint your variables using `SetTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
 
-example:
-```
-custom_set: SetTFWR[int] = set()
-python_set: SetTFWR[int] = {1, 1, 3}
-```
-Makes this possible:
-```
-custom_set = python_set
-```
-"""
-class set[K: Hashable]():
-	"""
-	Builds an unordered collection of elements. This custom class is not assignable to `builtins.set` from Python standard library or set literals.
+# example:
+# ```
+# custom_set: SetTFWR[int] = set()
+# python_set: SetTFWR[int] = {1, 1, 3}
+# ```
+# Makes this possible:
+# ```
+# custom_set = python_set
+# ```
+# """
+# class set[K: Hashable]():
+# 	"""
+# 	Builds an unordered collection of elements. This custom class is not assignable to `builtins.set` from Python standard library or set literals.
 
-	set() -> new empty set
+# 	set() -> new empty set
 
-	set(collection: list | tuple | set | str) -> new set from the values of the provided `collection`
+# 	set(collection: list | tuple | set | str) -> new set from the values of the provided `collection`
 
-	set(collection: set | dict) -> new set from the keys of the given `collection`
+# 	set(collection: set | dict) -> new set from the keys of the given `collection`
 
-	set(game_enum) -> new set from the values of an in-game enum `game_enum`
+# 	set(game_enum) -> new set from the values of an in-game enum `game_enum`
 
-	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
-	takes `1` tick to execute if no input is given.
+# 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
+# 	takes `1` tick to execute if no input is given.
 
-	Consider using `SetTFWR` to help with type hints involving sets.
-	"""
-	def __init__(self: Self, input: Iterable[K] | None = None, /) -> None: ...
-	def __iter__(self: Self, /) -> Iterator[K]: ...
-	def __next__(self: Self, /) -> K: ...
-	def __contains__(self, compare_object: K, /) -> _bool: ...
-	def add(self: Self, object: K, /) -> None:
-		"""
-		Add the `object` to a `given_set`.
+# 	Consider using `SetTFWR` to help with type hints involving sets.
+# 	"""
+# 	def __init__(self: Self, input: Iterable[K] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[K]: ...
+# 	def __next__(self: Self, /) -> K: ...
+# 	def __contains__(self, compare_object: K, /) -> _bool: ...
+# 	def add(self: Self, object: K, /) -> None:
+# 		"""
+# 		Add the `object` to a `given_set`.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_set = {1, 2, 3}
-		my_set.add(4)
-		print(my_set)
-		```
+# 		```
+# 		my_set = {1, 2, 3}
+# 		my_set.add(4)
+# 		print(my_set)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		{1,2,3,4}
-		```
-		"""
-		...
-	def len(self: Self, /) -> _int:
-		"""
-		Returns the number of items in the set.
+# 		```
+# 		{1,2,3,4}
+# 		```
+# 		"""
+# 		...
+# 	def len(self: Self, /) -> _int:
+# 		"""
+# 		Returns the number of items in the set.
 
-		returns the length of the set.
+# 		returns the length of the set.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_set = {1, 2, 3}
-		length = my_set.len()
-		print(length)
-		```
+# 		```
+# 		my_set = {1, 2, 3}
+# 		length = my_set.len()
+# 		print(length)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		3
-		```
-		"""
-		...
-	def remove(self: Self, object: K, /) -> None:
-		"""
-		Remove the `object` from the set.
+# 		```
+# 		3
+# 		```
+# 		"""
+# 		...
+# 	def remove(self: Self, object: K, /) -> None:
+# 		"""
+# 		Remove the `object` from the set.
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_set = {1, 2, 3}
-		my_set.remove(2)
-		print(my_set)
-		```
+# 		```
+# 		my_set = {1, 2, 3}
+# 		my_set.remove(2)
+# 		print(my_set)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		{1,3}
-		```
-		"""
-		...
-	...
+# 		```
+# 		{1,3}
+# 		```
+# 		"""
+# 		...
+# 	...
 
 # --------------------------------------------------
 # Uncomment this class if you want additional game-specific type hints and docstrings for `range_class` methods. Should use in conjunction with the `range` function.
 
 # Comment out the `range_class` builtins import above to prevent conflict errors.
 
-type RangeTFWR = range_class | _range
-"""
-This type is used to represent the custom range type that is specific to the game and the range type provided by Python's builtins module. You cannot assign a range literal to the custom range type, however.
+# type RangeTFWR = range_class | _range
+# """
+# This type is used to represent the custom range type that is specific to the game and the range type provided by Python's builtins module. You cannot assign a range literal to the custom range type, however.
 
-The range function will return `range_class` and the builtin `range` is aliased as `range_class` above. So the function version will return whichever has been defined most recently.
+# The range function will return `range_class` and the builtin `range` is aliased as `range_class` above. So the function version will return whichever has been defined most recently.
 
-When using the `range` custom type below you should type hint your variables using `RangeTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+# When using the `range` custom type below you should type hint your variables using `RangeTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
 
-example:
-```
-custom_range: RangeTFWR = range(10)
+# example:
+# ```
+# custom_range: RangeTFWR = range(10)
 
-from builtins import range
-python_range: RangeTFWR = range(10)
-```
-Makes this possible:
-```
-custom_range = python_range
-```
-"""
-class range_class():
-	"""
-	A range of values produced by the `range` function. See the `range` function for further details on ranges. This custom class is not assignable to `builtins.range` from Python standard library.
+# from builtins import range
+# python_range: RangeTFWR = range(10)
+# ```
+# Makes this possible:
+# ```
+# custom_range = python_range
+# ```
+# """
+# class range_class():
+# 	"""
+# 	A range of values produced by the `range` function. See the `range` function for further details on ranges. This custom class is not assignable to `builtins.range` from Python standard library.
 
-	Consider using `RangeTFWR` to help with type hints involving ranges.
-	"""
-	def __iter__(self: Self, /) -> Iterator[_int]: ...
-	def __next__(self: Self, /) -> _int: ...
-	def __getitem__(self: Self, index: _float, /) -> _int: ...
-	def __le__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
-		"""
-		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
-		"""
-		...
-	def __lt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
-		"""
-		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
-		"""
-		...
-	def __ge__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
-		"""
-		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
-		"""
-		...
-	def __gt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
-		"""
-		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
-		"""
-		...
-	def __contains__(self, compare_value: _int, /) -> _bool: ...
-	def len(self: Self, /) -> _int:
-		"""
-		Returns the number of items in the range
+# 	Consider using `RangeTFWR` to help with type hints involving ranges.
+# 	"""
+# 	def __iter__(self: Self, /) -> Iterator[_int]: ...
+# 	def __next__(self: Self, /) -> _int: ...
+# 	def __getitem__(self: Self, index: _float, /) -> _int: ...
+# 	def __le__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __lt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __ge__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __gt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __contains__(self, compare_value: _int, /) -> _bool: ...
+# 	def len(self: Self, /) -> _int:
+# 		"""
+# 		Returns the number of items in the range
 
-		returns the length of the range
+# 		returns the length of the range
 
-		takes `1` tick to execute.
+# 		takes `1` tick to execute.
 
-		example usage:
+# 		example usage:
 
-		```
-		my_range = range(10)
-		length = my_range.len()
-		print(length)
-		```
+# 		```
+# 		my_range = range(10)
+# 		length = my_range.len()
+# 		print(length)
+# 		```
 
-		Output:
+# 		Output:
 
-		```
-		10
-		```
-		"""
-		...
-	...
+# 		```
+# 		10
+# 		```
+# 		"""
+# 		...
+# 	...
 
 # -------------------------------------------------------------------------------
 @overload
@@ -1963,18 +1968,23 @@ def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] 
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-class Drone:
+class Drone[R: Any]:
     """
     A class representing a spawned drone given a task to execute.
     """
     ...
 
 # -------------------------------------------------------------------------------
-def spawn_drone(task: Callable[[], AnyTFWR], /, *args: Any) -> Drone:
+def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R] | None:
 	"""
-	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the specified `task` function. The rest of the arguments are copied and passed into the specified function. After the drone is done, it will disappear automatically.
+	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the specified `task` function. The rest of the arguments are copied and passed into the specified `task` function. After the drone is done, it will disappear automatically.
 
-	returns a `Drone` object for the new drone or `None` if all drones are already spawned.
+	`*P` - list of parameters that your task can can take as arguments. Must match the type of arguments you give to `spawn_drone` with the parameter types you assign of the `task` that you provide.
+	`R` - the return type of your drone. Must must the return type of of the `task` you provide.
+
+	Passes the `*args` to the provided `task` when that drone runs.
+
+	returns a `Drone[R]` object for the new drone or `None` if all drones are already spawned.
 
 	takes `200` ticks to execute if a drone was spawned, `1` otherwise.
 
@@ -1997,7 +2007,7 @@ def spawn_drone(task: Callable[[], AnyTFWR], /, *args: Any) -> Drone:
 
 
 # --------------------------------------------------
-def wait_for(drone: Drone, /) -> AnyTFWR:
+def wait_for[R: AnyTFWR](drone: Drone[R], /) -> R:
 	"""
 	Waits until the given `drone` terminates.
 
@@ -2023,7 +2033,7 @@ def wait_for(drone: Drone, /) -> AnyTFWR:
 
 
 # --------------------------------------------------
-def has_finished(drone: Drone, /) -> _bool:
+def has_finished[R: AnyTFWR](drone: Drone[R], /) -> _bool:
 	"""
 	Checks if the given 1drone1 has finished.
 
