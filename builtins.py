@@ -1596,7 +1596,7 @@ def can_harvest() -> _bool:
 
 
 # --------------------------------------------------
-def plant(entity: Entity, /) -> _bool:
+def plant(entity: Entity | Entities, /) -> _bool:
 	"""
 	Spends the cost of the specified `entity` and plants it under the drone.
 	It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
@@ -1654,7 +1654,7 @@ def till() -> None:
 
 
 # --------------------------------------------------
-def use_item(item: Item, n: _int = 1, /) -> _bool:
+def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	"""
 	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer` and `Items.Weird_Substance`.
 
@@ -1691,7 +1691,7 @@ def clear() -> None:
 
 
 # --------------------------------------------------
-def change_hat(hat: Hat, /) -> None:
+def change_hat(hat: Hat | Hats, /) -> None:
 	"""
 	Changes the hat of the drone to the specified `hat`.
 
@@ -1796,7 +1796,14 @@ def get_pos_y() -> _int:
 
 
 # --------------------------------------------------
-def get_world_size() -> _int:
+type WorldSizes = Literal[
+	3, 4, 5, 6, 7, 8, 9, 10,
+	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+	31, 32,
+]
+
+def get_world_size() -> WorldSizes:
 	"""
 	Get the current size of the farm.
 
@@ -1878,7 +1885,7 @@ def get_water() -> _float:
 
 
 # --------------------------------------------------
-def num_items(item: Item, /) -> _int | _float:
+def num_items(item: Item | Items, /) -> _int | _float:
 	"""
 	Find out how much of `item` you currently have.
 
@@ -2162,13 +2169,6 @@ def set_execution_speed(speed: _float, /) -> None:
 
 
 # --------------------------------------------------
-type WorldSizes = Literal[
-	3, 4, 5, 6, 7, 8, 9, 10,
-	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
-	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
-	31, 32,
-]
-
 def set_world_size(size: WorldSizes, /) -> None:
 	"""
 	Limits the size of the farm to better see what's happening.
