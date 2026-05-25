@@ -11,7 +11,7 @@
 # - string -> builtins.str
 # - range_class -> builtins.range
 
-from typing import Any, Self, TypeVar, Literal, Final, overload
+from typing import Any, Self, TypeVar, Literal, Final, overload, Never
 from collections.abc import Callable, Iterable, Iterator, Sequence, Container
 
 from builtins import (
@@ -2245,7 +2245,12 @@ def simulate(
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: _int | None = None, /) -> _dict[Item, _int] | None:
+type Cost = dict[Item, _int] | _dict[Item, _int] | dict[Never, Never]
+"""
+Special type that helps with type hinting the return of the `get_cost` function.
+"""
+
+def get_cost(thing: Entity | Entities | Unlock | Unlocks, level: _int = 0, /) -> dict[Item, _int] | _dict[Item, _int] | dict[Never, Never]:
 	"""
 	Gets the cost of a `thing`
 
