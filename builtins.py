@@ -39,6 +39,7 @@ from enum import Enum as _Enum
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
+type Primitive = _bool | _int | _float | string | None
 """
 Basic immutable types in TFWR.
 
@@ -50,7 +51,6 @@ included:
 - `string`
 - `None`
 """
-type Primitive = _bool | _int | _float | string | None
 
 # --------------------------------------------------
 type Enums = (
