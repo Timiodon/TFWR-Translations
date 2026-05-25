@@ -2176,7 +2176,14 @@ def set_execution_speed(speed: _float, /) -> None:
 
 
 # --------------------------------------------------
-def set_world_size(size: _float, /) -> None:
+type WorldSizes = Literal[
+	3, 4, 5, 6, 7, 8, 9, 10,
+	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+	31, 32,
+]
+
+def set_world_size(size: WorldSizes, /) -> None:
 	"""
 	Limits the size of the farm to better see what's happening.
 	Also clears the farm and resets the drone position.
