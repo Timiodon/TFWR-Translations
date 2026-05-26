@@ -1,7 +1,7 @@
 # This file gives Python type definitions to TFWR builtins to allow editing code with Python editors.
 # Note that the games language is not Python and these definitions are only an approximation.
 
-# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, @Zoroark-Zwart, @Rat on the TFWR Discord server.
+# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, @Zoroark-Zwart, and @Rat on the TFWR Discord server.
 # @SCD-3 on GitHub
 
 # Expose some useful types to allow for typing without using a typing import.
@@ -13,6 +13,13 @@
 # Notes on aliases because of TFWR functions:
 # - string -> builtins.str
 # - range_class -> builtins.range
+
+# Note: `None` is not type hinted to reduce typing complexity due to lack of type casts when in functions that could return an optional `None`: This affects these functions:
+# - `measure`
+# - `get_companion`
+# - `get_cost`
+# - `spawn_drone`
+# Documentation for `None` return type is available for when running the code in-game
 
 from typing import (
     Any, Literal, Final,
@@ -103,7 +110,7 @@ type _AnyCollection = (
 	dict[Hashable, AnyTFWR] | _dict[Hashable, AnyTFWR] |
 	set[Hashable] | _set[Hashable] |
 	list[AnyTFWR] | _list[AnyTFWR] |
-	_tuple[AnyTFWR]
+	_tuple[AnyTFWR,...]
 )
 
 type AnyTFWR = (
@@ -115,7 +122,7 @@ type AnyTFWR = (
 
 	Direction | Enums | 					# Game builtins		- enum classes
 
-	Drone[AnyTFWR]									# Game builtins		- megafarm classes
+	Drone[AnyTFWR]							# Game builtins		- megafarm classes
 )
 """
 Type representing all of the useable types in TFWR.
@@ -173,7 +180,7 @@ included:
 # custom_dict = python_dict
 # ```
 # """
-# class dict[K: Hashable, V: AnyTFWR]():
+# class dict[K: Hashable, V: Any]():
 # 	"""
 # 	Builds an unordered collection of key-value pairs. This custom class is not assignable to `builtins.dict` from Python standard library or dict literals.
 
@@ -263,7 +270,7 @@ included:
 # custom_list = python_list
 # ```
 # """
-# class list[V: AnyTFWR]():
+# class list[V: Any]():
 # 	"""
 # 	Builds an ordered sequence of values. This custom class is not assignable to `builtins.list` from Python standard library or list literals.
 
@@ -285,10 +292,10 @@ included:
 # 	def __next__(self: Self, /) -> V: ...
 # 	def __getitem__(self: Self, index: _float, /) -> V: ...
 # 	def __setitem__(self: Self, index: _float, object: V, /) -> None: ...
-# 	def __le__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-# 	def __lt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-# 	def __ge__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
-# 	def __gt__(self: Self, compare_list: tuple[V] | ListTFWR[V], /) -> _bool: ...
+# 	def __le__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __lt__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __ge__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __gt__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
 # 	def __iadd__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
 # 	def __add__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
 # 	def __contains__(self, compare_object: V, /) -> _bool: ...
@@ -727,7 +734,7 @@ def add[K: Hashable](given_set: set[K] | _set[K], object: K, /) -> None:
 	...
 
 # --------------------------------------------------
-def append[V: AnyTFWR](given_list: list[V] | _list[V], object: V, /) -> None:
+def append[V: Any](given_list: list[V] | _list[V], object: V, /) -> None:
 	"""
 	Add `object` to the end of a list provided as `given_list`.
 
@@ -750,7 +757,7 @@ def append[V: AnyTFWR](given_list: list[V] | _list[V], object: V, /) -> None:
 	...
 
 # --------------------------------------------------
-def insert[V: AnyTFWR](given_list: list[V] | _list[V], index: _float, object: V, /) -> None:
+def insert[V: Any](given_list: list[V] | _list[V], index: _float, object: V, /) -> None:
 	"""
 	Add a `object` to the specified `index` to a list provided as `given_list`.
 
@@ -773,7 +780,7 @@ def insert[V: AnyTFWR](given_list: list[V] | _list[V], index: _float, object: V,
 	...
 
 # --------------------------------------------------
-def len[K: Hashable, V: AnyTFWR](object : string | dict[K, V] | _dict[K, V] | list[V] | _list[V] | set[K] | _set[K] | tuple[V] | range_class, /) -> _int:
+def len[K: Hashable, V: Any](object : string | dict[K, V] | _dict[K, V] | list[V] | _list[V] | set[K] | _set[K] | tuple[V] | range_class, /) -> _int:
 	"""
 	Returns the number of items in the dict, list, set or str provided as `collection`.
 
@@ -799,7 +806,7 @@ def len[K: Hashable, V: AnyTFWR](object : string | dict[K, V] | _dict[K, V] | li
 
 # --------------------------------------------------
 @overload
-def pop[K: Hashable, V: AnyTFWR](collection: dict[K, V] | _dict[K, V], key: K, /) -> V: # type: ignore
+def pop[K: Hashable, V: Any](collection: dict[K, V] | _dict[K, V], key: K, /) -> V: # type: ignore
 	"""
 	Remove the key-value pair corresponding to the `key` in the dict
 
@@ -825,7 +832,7 @@ def pop[K: Hashable, V: AnyTFWR](collection: dict[K, V] | _dict[K, V], key: K, /
 	...
 
 @overload
-def pop[V: AnyTFWR](collection: list[V] | _list[V], index: _float = -1, /) -> V:  # type: ignore
+def pop[V: Any](collection: list[V] | _list[V], index: _float = -1, /) -> V:  # type: ignore
 	"""
 	Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
 
@@ -852,7 +859,7 @@ def pop[V: AnyTFWR](collection: list[V] | _list[V], index: _float = -1, /) -> V:
 	...
 
 # --------------------------------------------------
-def remove[K: Hashable, V: AnyTFWR](collection: list[V] | _list[V] | set[K] | _set[K], object: V, /) -> None:
+def remove[K: Hashable, V: Any](collection: list[V] | _list[V] | set[K] | _set[K], object: V, /) -> None:
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 
@@ -876,7 +883,7 @@ def remove[K: Hashable, V: AnyTFWR](collection: list[V] | _list[V] | set[K] | _s
 	...
 
 # --------------------------------------------------
-def str(object: AnyTFWR, /) -> string:
+def str(object: Any, /) -> string:
 	"""
 	Converts an object to its string representation.
 
@@ -1828,11 +1835,12 @@ def get_world_size() -> WorldSizes:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_entity_type() -> Entity | None:
+def get_entity_type() -> Entity:
 	"""
 	Find out what kind of entity is under the drone.
 
 	returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Entity`.
 
 	takes `1` tick to execute.
 
@@ -1885,7 +1893,7 @@ def get_water() -> _float:
 
 
 # --------------------------------------------------
-def num_items(item: Item | Items, /) -> _int | _float:
+def num_items(item: Item | Items, /) -> _float:
 	"""
 	Find out how much of `item` you currently have.
 
@@ -1905,12 +1913,12 @@ def num_items(item: Item | Items, /) -> _int | _float:
 
 
 # --------------------------------------------------
-type Companion = _tuple[Entity, _tuple[_int, _int]] | None
+type Companion = _tuple[Entity, _tuple[_int, _int]]
 """
 Special type that helps with type hinting the return of the `get_companion` function.
 """
 
-def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
+def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
 	Get the companion preference of the plant under the drone.
 
@@ -1931,15 +1939,15 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
 
 
 # --------------------------------------------------
-type Measure = _int | _tuple[_int, _int] | None
+type Measure = _int | _tuple[_int, _int]
 """
 Special type that helps with type hinting the return of the `measure` function.
 """
 
-def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] | None:
+def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int]:
 	"""
 	Can measure some values on some entities. The effect of this depends on the entity.
-	Will work anynore inside of a maze and only on a `Entities.Apple`
+	Will work anymore inside of a maze and only on a `Entities.Apple`
 
 	overloads:
 	`measure()`: measures the entity under the drone.
@@ -1950,6 +1958,7 @@ def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] 
 	Cactus: returns the size.
 	Dinosaur: returns the number corresponding to the type.
 	All other entities: returns `None`.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
 	takes `1` tick to execute.
 
@@ -1974,13 +1983,15 @@ def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int] 
 class Drone[R: Any]:
     """
     A class representing a spawned drone given a task to execute.
+
+    `R` - the return type of the `task` you provide the drone when you use `spawn_drone`
     """
     ...
 
 # -------------------------------------------------------------------------------
-def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R] | None:
+def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R]:
 	"""
-	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the specified `task` function. The rest of the arguments are copied and passed into the specified `task` function. After the drone is done, it will disappear automatically.
+	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the provided `task` function. The rest of the arguments are copied and passed into the specified `task` function. After the drone is done, it will disappear automatically.
 
 	`*P` - list of parameters that your task can can take as arguments. Must match the type of arguments you give to `spawn_drone` with the parameter types you assign of the `task` that you provide.
 	`R` - the return type of your drone. Must must the return type of of the `task` you provide.
@@ -1988,33 +1999,33 @@ def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R] |
 	Passes the `*args` to the provided `task` when that drone runs.
 
 	returns a `Drone[R]` object for the new drone or `None` if all drones are already spawned.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Drone`.
 
 	takes `200` ticks to execute if a drone was spawned, `1` otherwise.
 
 	example:
+
 	```
-	def harvest_column(message):
+	def harvest_column():
 		for _ in range(get_world_size()):
 			harvest()
 			move(North)
-		print(message)
 
-	i = 0
 	while True:
-		if spawn_drone(harvest_column, i):
+		if spawn_drone(harvest_column):
 			move(East)
-			i = (i + 1) % 10
 	```
 	"""
 	...
 
 
 # --------------------------------------------------
-def wait_for[R: AnyTFWR](drone: Drone[R], /) -> R:
+def wait_for[R: Any](drone: Drone[R], /) -> R:
 	"""
 	Waits until the given `drone` terminates.
 
 	returns the return value of the function that the `drone` was running.
+	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	takes `1 + remaining task ticks` remaining in the given drone's task function.
 	takes `1` tick to execute if the awaited `drone` is already done.
@@ -2036,9 +2047,11 @@ def wait_for[R: AnyTFWR](drone: Drone[R], /) -> R:
 
 
 # --------------------------------------------------
-def has_finished[R: AnyTFWR](drone: Drone[R], /) -> _bool:
+def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 	"""
-	Checks if the given 1drone1 has finished.
+	Checks if the given `drone` has finished.
+
+	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	returns `True` if the drone has finished, `False` otherwise.
 
@@ -2175,7 +2188,7 @@ def set_world_size(size: WorldSizes, /) -> None:
 	Also clears the farm and resets the drone position.
 
 	- Sets the farm to a `size` x `size` grid.
-	- The smallest `size` possible is `3`.
+	- The smallest `size` possible is `3` and maximum `size` is `32`
 	- A `size` smaller than `3` will change the grid back to its full size.
 	- The effect will also stop when the execution stops.
 
@@ -2201,7 +2214,8 @@ def simulate(
 		sim_items: _dict[Item, _float],
 		sim_globals: _dict[string, AnyTFWR],
 		seed: _float, speedup: _float,
-		/) -> _float:
+		/
+	) -> _float:
 	"""
 	Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
 
@@ -2261,7 +2275,7 @@ def get_cost(thing: Entity | Entities | Unlock | Unlocks, level: _int = 0, /) ->
 	If `thing` is an unlock: get the cost of unlocking it at the specified level.
 
 	- returns a dictionary with items as keys and numbers as values. Each item is mapped to how much of it is needed.
-	- returns `None` for unlocks that are already unlocked (when no level specified).
+	- returns `{}` (empty dict) for unlocks that are already unlocked (when no level specified).
 	- The optional `level` parameter specifies the upgrade level for unlocks.
 
 	takes `1` tick to execute.
@@ -2766,7 +2780,7 @@ def quick_print(*something: Any) -> None:
 
 
 # -------------------------------------------------------------------------------
-# Miscelaneous
+# Miscellaneous
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
