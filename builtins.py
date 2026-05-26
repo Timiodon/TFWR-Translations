@@ -17,7 +17,6 @@
 # Note: `None` is not type hinted in optional return types to reduce typing complexity due to lack of type casts. This affects these functions:
 # - `measure`
 # - `get_companion`
-# - `get_cost`
 # - `spawn_drone`
 # Documentation for `None` return type is available for when running the code in-game
 
@@ -1923,6 +1922,8 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	Get the companion preference of the plant under the drone.
 
 	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
 	takes `1` tick to execute.
 
