@@ -14,7 +14,7 @@
 # - string -> builtins.str
 # - range_class -> builtins.range
 
-# Note: `None` is not type hinted to reduce typing complexity due to lack of type casts when in functions that could return an optional `None`: This affects these functions:
+# Note: `None` is not type hinted in optional return types to reduce typing complexity due to lack of type casts. This affects these functions:
 # - `measure`
 # - `get_companion`
 # - `get_cost`
