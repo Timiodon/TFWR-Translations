@@ -2006,14 +2006,18 @@ def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R]:
 	example:
 
 	```
-	def harvest_column():
+	def harvest_column(row):
+		for _ in range(row):
+			move(East)
+
 		for _ in range(get_world_size()):
 			harvest()
 			move(North)
 
-	while True:
-		if spawn_drone(harvest_column):
-			move(East)
+	for row in range(1, get_world_size()):
+		spawn_drone(harvest_column, row)
+
+	harvest_column(0)
 	```
 	"""
 	...
