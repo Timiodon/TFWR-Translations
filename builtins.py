@@ -2211,13 +2211,49 @@ def set_world_size(size: WorldSizes, /) -> None:
 
 
 # --------------------------------------------------
-type SimulateUnlocks = _dict[Unlock, _int] | _tuple[_tuple[Unlock, _int]] | _list[_tuple[Unlock, _int]] | _tuple[Unlock] | _list[Unlock] | Unlocks
+type _SimulateUnlocksPair = _tuple[Unlock, _int]
+
+type SimulateUnlocks = (
+	dict[Unlock, _int] | _dict[Unlock, _int] |					# (Unlock, int) pairings
+	list[_SimulateUnlocksPair] | _list[_SimulateUnlocksPair] |
+	_tuple[_SimulateUnlocksPair,...] |
+
+	_tuple[Unlock,...] |										# Sequence of unlocks
+	_list[Unlock] |
+
+	Unlocks														# All unlocks
+)
+"""
+A sequence containing the starting unlocks. These unlocks can be one of these:
+
+- `dict[Unlock, int]` - Example: `{Unlocks.Expand: 2, Unlocks.Cactus: 1}`
+
+- `tuple[tuple[Unlock, int],...]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
+- `list[tuple[Unlock, int]]` - Example: `[(Unlocks.Expand, 2), (Unlocks.Cactus, 1)]`
+
+- `tuple[Unlock,...]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
+- `list[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `[Unlocks.Expand, Unlocks.Cactus]`
+
+- `Unlocks` - Captures all of your current unlock levels from your main farm.
+"""
+
+type SimulateItems = dict[Item, _float] | _dict[Item, _float]
+"""
+Special type that helps with type hinting the `sim_items` parameter of the `simulate` function.
+"""
+
+type SimulateGlobals = dict[string, AnyTFWR] | _dict[string, AnyTFWR]
+"""
+Special type that helps with type hinting the `sim_globals` parameter of the `simulate` function.
+"""
 
 def simulate(
 		filename: string,
 		sim_unlocks: SimulateUnlocks,
-		sim_items: _dict[Item, _float],
-		sim_globals: _dict[string, AnyTFWR],
+		sim_items: dict[Item, _float] | _dict[Item, _float],
+		sim_globals: dict[string, AnyTFWR] | _dict[string, AnyTFWR],
 		seed: _float, speedup: _float,
 		/
 	) -> _float:
@@ -2227,10 +2263,15 @@ def simulate(
 	`sim_unlocks`: A sequence containing the starting unlocks. These unlocks can be one of these:
 
 	- `dict[Unlock, int]` - Example: `{Unlocks.Expand: 2, Unlocks.Cactus: 1}`
-	- `tuple[tuple[Unlock, int]]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
+	- `tuple[tuple[Unlock, int],...]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
 	- `list[tuple[Unlock, int]]` - Example: `[(Unlocks.Expand, 2), (Unlocks.Cactus, 1)]`
-	- `tuple[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
+	- `tuple[Unlock,...]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
 	- `list[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `[Unlocks.Expand, Unlocks.Cactus]`
+
 	- `Unlocks` - Captures all of your current unlock levels from your main farm.
 
 	`sim_items`: A dict mapping items to amounts. The simulation starts with these items.
@@ -2267,12 +2308,12 @@ def simulate(
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-type Cost = dict[Item, _int] | _dict[Item, _int] | dict[Never, Never]
+type Cost = dict[Item, _int] | _dict[Item, _int]
 """
 Special type that helps with type hinting the return of the `get_cost` function.
 """
 
-def get_cost(thing: Entity | Entities | Unlock | Unlocks, level: _int = 0, /) -> dict[Item, _int] | _dict[Item, _int] | dict[Never, Never]:
+def get_cost(thing: Entity | Entities | Unlock | Unlocks, level: _int = 0, /) -> dict[Item, _int] | _dict[Item, _int]:
 	"""
 	Gets the cost of a `thing`
 
