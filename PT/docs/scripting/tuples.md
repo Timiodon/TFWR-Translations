@@ -23,7 +23,7 @@ Diferente das listas, tuplas podem ser usadas como chaves em dicionários.
 `d = {(1,2):(4,5)}
 
 print(d[(1,2)])`
-`imprime` (4,5)</unlock>
+imprime `(4,5)`</unlock>
 
 Elas também podem ser úteis para retornar múltiplos valores em uma função.
 
