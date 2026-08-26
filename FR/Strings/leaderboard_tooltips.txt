@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Cultiver 100000 puissance.
 @lb_descr_sunflowers_single = Cultiver 10000 puissance.
 @lb_descr_pumpkins = Cultiver 200M citrouilles.
-@lb_descr_pumpkins_single = Cultiver 20M citrouilles.
+@lb_descr_pumpkins_single = Cultiver 10M citrouilles.
 @lb_descr_hay = Cultiver 2B foin.
-@lb_descr_hay_single = Cultiver 200M foin.
+@lb_descr_hay_single = Cultiver 100M foin.
 @lb_descr_wood = Cultiver 10B bois.
-@lb_descr_wood_single = Cultiver 1B bois.
+@lb_descr_wood_single = Cultiver 500M bois.
 @lb_descr_carrots = Cultiver 2B carottes.
-@lb_descr_carrots_single = Cultiver 200M carottes.
+@lb_descr_carrots_single = Cultiver 100M carottes.

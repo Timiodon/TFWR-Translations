@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Здобудьте 100000 сили.
 @lb_descr_sunflowers_single = Здобудьте 10000 сили.
 @lb_descr_pumpkins = Здобудьте 200М гарбузів.
-@lb_descr_pumpkins_single = Здобудьте 20М гарбузів.
+@lb_descr_pumpkins_single = Здобудьте 10М гарбузів.
 @lb_descr_hay = Здобудьте 2млрд сіна.
-@lb_descr_hay_single = Здобудьте 200М сіна.
+@lb_descr_hay_single = Здобудьте 100М сіна.
 @lb_descr_wood = Здобудьте 10млрд деревини.
-@lb_descr_wood_single = Здобудьте 1млрд деревини.
+@lb_descr_wood_single = Здобудьте 500М деревини.
 @lb_descr_carrots = Здобудьте 2млрд моркви.
-@lb_descr_carrots_single = Здобудьте 200М моркви.
+@lb_descr_carrots_single = Здобудьте 100М моркви.

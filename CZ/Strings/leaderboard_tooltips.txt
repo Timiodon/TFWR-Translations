@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Nasbírej 100 000 energie.
 @lb_descr_sunflowers_single = Nasbírej 10 000 energie.
 @lb_descr_pumpkins = Nasbírej 200 mil. dýní.
-@lb_descr_pumpkins_single = Nasbírej 20 mil. dýní.
+@lb_descr_pumpkins_single = Nasbírej 10 mil. dýní.
 @lb_descr_hay = Nasbírej 2 mld. sena.
-@lb_descr_hay_single = Nasbírej 200 mil. sena.
+@lb_descr_hay_single = Nasbírej 100 mil. sena.
 @lb_descr_wood = Nasbírej 10 mld. dřeva.
-@lb_descr_wood_single = Nasbírej 1 mld. dřeva.
+@lb_descr_wood_single = Nasbírej 500 mil. dřeva.
 @lb_descr_carrots = Nasbírej 2 mld. mrkví.
-@lb_descr_carrots_single = Nasbírej 200 mil. mrkví.
+@lb_descr_carrots_single = Nasbírej 100 mil. mrkví.

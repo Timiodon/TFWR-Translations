@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = 100000パワーを獲得する。
 @lb_descr_sunflowers_single = 10000パワーを獲得する。
 @lb_descr_pumpkins = 2億個のカボチャを獲得する。
-@lb_descr_pumpkins_single = 2000万個のカボチャを獲得する。
+@lb_descr_pumpkins_single = 1000万個のカボチャを獲得する。
 @lb_descr_hay = 20億個の干し草を獲得する。
-@lb_descr_hay_single = 2億個の干し草を獲得する。
+@lb_descr_hay_single = 1億個の干し草を獲得する。
 @lb_descr_wood = 100億個の木材を獲得する。
-@lb_descr_wood_single = 10億個の木材を獲得する。
+@lb_descr_wood_single = 5億個の木材を獲得する。
 @lb_descr_carrots = 20億個のニンジンを獲得する。
-@lb_descr_carrots_single = 2億個のニンジンを獲得する。
+@lb_descr_carrots_single = 1億個のニンジンを獲得する。

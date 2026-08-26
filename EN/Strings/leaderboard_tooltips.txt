@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Farm 100000 power.
 @lb_descr_sunflowers_single = Farm 10000 power.
 @lb_descr_pumpkins = Farm 200M pumpkins.
-@lb_descr_pumpkins_single = Farm 20M pumpkins.
+@lb_descr_pumpkins_single = Farm 10M pumpkins.
 @lb_descr_hay = Farm 2B hay.
-@lb_descr_hay_single = Farm 200M hay.
+@lb_descr_hay_single = Farm 100M hay.
 @lb_descr_wood = Farm 10B wood.
-@lb_descr_wood_single = Farm 1B wood.
+@lb_descr_wood_single = Farm 500M wood.
 @lb_descr_carrots = Farm 2B carrots.
-@lb_descr_carrots_single = Farm 200M carrots.
+@lb_descr_carrots_single = Farm 100M carrots.

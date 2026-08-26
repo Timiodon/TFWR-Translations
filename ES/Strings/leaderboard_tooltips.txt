@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Consigue 100000 de energía.
 @lb_descr_sunflowers_single = Consigue 10 000 de energía.
 @lb_descr_pumpkins = Consigue 200 millones de calabazas.
-@lb_descr_pumpkins_single = Consigue 20 millones de calabazas.
+@lb_descr_pumpkins_single = Consigue 10 millones de calabazas.
 @lb_descr_hay = Consigue 2000 millones de heno.
-@lb_descr_hay_single = Consigue 200 millones de heno.
+@lb_descr_hay_single = Consigue 100 millones de heno.
 @lb_descr_wood = Consigue 10 000 millones de madera.
-@lb_descr_wood_single = Consigue 1000 millones de madera.
+@lb_descr_wood_single = Consigue 500 millones de madera.
 @lb_descr_carrots = Consigue 2000 millones de zanahorias.
-@lb_descr_carrots_single = Consigue 200 millones de zanahorias.
+@lb_descr_carrots_single = Consigue 100 millones de zanahorias.

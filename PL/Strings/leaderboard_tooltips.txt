@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Zbierz 100000 mocy.
 @lb_descr_sunflowers_single = Zbierz 10000 energii.
 @lb_descr_pumpkins = Zbierz 200M dyń.
-@lb_descr_pumpkins_single = Zbierz 20M dyń.
+@lb_descr_pumpkins_single = Zbierz 10M dyń.
 @lb_descr_hay = Zbierz 2B siana.
-@lb_descr_hay_single = Zbierz 200M siana.
+@lb_descr_hay_single = Zbierz 100M siana.
 @lb_descr_wood = Zbierz 10B drewna.
-@lb_descr_wood_single = Zbierz 1B drewna.
+@lb_descr_wood_single = Zbierz 500M drewna.
 @lb_descr_carrots = Zbierz 2B marchewek.
-@lb_descr_carrots_single = Zbierz 200M marchewek.
+@lb_descr_carrots_single = Zbierz 100M marchewek.

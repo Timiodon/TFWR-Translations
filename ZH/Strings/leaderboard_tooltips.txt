@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = 收获 100000 能量。
 @lb_descr_sunflowers_single = 收获 10000 能量。
 @lb_descr_pumpkins = 收获 200M 南瓜。
-@lb_descr_pumpkins_single = 收获 20M 南瓜。
+@lb_descr_pumpkins_single = 收获 10M 南瓜。
 @lb_descr_hay = 收获 2B 干草。
-@lb_descr_hay_single = 收获 200M 干草。
+@lb_descr_hay_single = 收获 100M 干草。
 @lb_descr_wood = 收获 10B 木材。
-@lb_descr_wood_single = 收获 1B 木材。
+@lb_descr_wood_single = 收获 500M 木材。
 @lb_descr_carrots = 收获 2B 胡萝卜。
-@lb_descr_carrots_single = 收获 200M 胡萝卜。
+@lb_descr_carrots_single = 收获 100M 胡萝卜。

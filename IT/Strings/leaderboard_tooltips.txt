@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = Coltiva 100000 energia.
 @lb_descr_sunflowers_single = Coltiva 10000 energia.
 @lb_descr_pumpkins = Coltiva 200M zucche.
-@lb_descr_pumpkins_single = Coltiva 20M zucche.
+@lb_descr_pumpkins_single = Coltiva 10M zucche.
 @lb_descr_hay = Coltiva 2B fieno.
-@lb_descr_hay_single = Coltiva 200M fieno.
+@lb_descr_hay_single = Coltiva 100M fieno.
 @lb_descr_wood = Coltiva 10B legno.
-@lb_descr_wood_single = Coltiva 1B legno.
+@lb_descr_wood_single = Coltiva 500M legno.
 @lb_descr_carrots = Coltiva 2B carote.
-@lb_descr_carrots_single = Coltiva 200M carote.
+@lb_descr_carrots_single = Coltiva 100M carote.

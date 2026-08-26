@@ -7,10 +7,10 @@
 @lb_descr_sunflowers = 파워 100,000개를 모으세요.
 @lb_descr_sunflowers_single = 파워 10000개 모으세요.
 @lb_descr_pumpkins = 호박 2억 개 모으세요.
-@lb_descr_pumpkins_single = 호박 2천만 개 모으세요.
+@lb_descr_pumpkins_single = 호박 1천만 개 모으세요.
 @lb_descr_hay = 건초 20억 개 모으세요.
-@lb_descr_hay_single = 건초 2억 개 모으세요.
+@lb_descr_hay_single = 건초 1억 개 모으세요.
 @lb_descr_wood = 나무 100억 개 모으세요.
-@lb_descr_wood_single = 나무 10억 개 모으세요.
+@lb_descr_wood_single = 나무 5억 개 모으세요.
 @lb_descr_carrots = 당근 20억 개 모으세요.
-@lb_descr_carrots_single = 당근 2억 개 모으세요.
+@lb_descr_carrots_single = 당근 1억 개 모으세요.
