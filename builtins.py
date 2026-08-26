@@ -1,37 +1,51 @@
 # This file gives Python type definitions to TFWR builtins to allow editing code with Python editors.
 # Note that the games language is not Python and these definitions are only an approximation.
 
-# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, and @Zoroark-Zwart on the TFWR Discord server.
+# Contributed by @Noon, @KlingonDragon, @dieckie, @Flekay, @Zoroark-Zwart, and @Rat on the TFWR Discord server.
 # @SCD-3 on GitHub
 
 # Expose some useful types to allow for typing without using a typing import.
 # Typing imports would fail to run in-game as they are not ignored.
+# Ignore any type warnings as needed by your environment.
+# Some types are provided as private to the let file have control
+# over the regular defaults and are not commonly useful for typing most code
 
 # Notes on aliases because of TFWR functions:
 # - string -> builtins.str
 # - range_class -> builtins.range
 
-from typing import Self, TypeVar, Literal, Final, overload
-from collections.abc import Callable, Iterable, Sequence, Container
+# Note: `None` is not type hinted in optional return types to reduce typing complexity due to lack of type casts. This affects these functions:
+# - `measure`
+# - `get_companion`
+# - `spawn_drone`
+# Documentation for `None` return type is available for when running the code in-game
+
+from typing import (
+    Any, Literal, Final,
+    overload, Self, Never
+)
+from collections.abc import (
+    Callable, Iterator, Iterable,
+    Sequence, Container, Collection
+)
+from types import ModuleType
 
 from builtins import (
     bool, int, float, str as string,
-    range as range_class,
     tuple,
 
     # If you uncomment the custom classes found below then
     # comment this line to prevent conflicts
+    range as range_class,
     list, set, dict
 )
 
 # Used for when the builtin type is desirable over a possible
 # redefinition using the same name
 from builtins import (
-    bool as _bool, int as _int, float as _float,
+    bool as _bool, int as _int, float as _float, range as _range,
     tuple as _tuple, list as _list, set as _set, dict as _dict
 )
-
-from typing import Any as _Any
 from enum import Enum as _Enum
 
 # -------------------------------------------------------------------------------
@@ -39,6 +53,7 @@ from enum import Enum as _Enum
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
+type Primitive = _bool | _int | _float | string | None
 """
 Basic immutable types in TFWR.
 
@@ -50,7 +65,6 @@ included:
 - `string`
 - `None`
 """
-type Primitive = _bool | _int | _float | string | None
 
 # --------------------------------------------------
 type Enums = (
@@ -69,7 +83,12 @@ included:
 """
 
 # --------------------------------------------------
-type Hashable = Primitive | Enums | range_class | Drone | tuple[Hashable, ...]
+type Hashable = (
+    Primitive | range_class |
+	tuple[Hashable, ...] |
+	Enums |
+	Drone[AnyTFWR]
+)
 """
 Type representing all of the useable types for a dict key or set element in TFWR.
 
@@ -85,20 +104,24 @@ included:
   - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
 """
 
-_Hashable_ = TypeVar("_Hashable_", Hashable, Hashable, covariant = True)
-
 # --------------------------------------------------
-type Any = (
-    Primitive | 								# Python builtin    - basic types
+type _AnyCollection = (
+	dict[Hashable, AnyTFWR] | _dict[Hashable, AnyTFWR] |
+	set[Hashable] | _set[Hashable] |
+	list[AnyTFWR] | _list[AnyTFWR] |
+	_tuple[AnyTFWR,...]
+)
 
-	range_class | Callable[..., Any] |			# Python builtin    - functions / modules
+type AnyTFWR = (
+    Primitive |	range_class | _range |		# Python builtin    - basic types
 
-	_tuple[Any,...] | _list[Any] |				# Python builtin    - collection types
-    _set[Hashable] | _dict[Hashable, Any] |
+	Callable[..., AnyTFWR] | ModuleType |	# Python builtin    - functions / modules
 
-	Direction | Enums | 						# Game builtins		- enum classes
+	_AnyCollection |						# Both builtins     - collection types
 
-	Drone										# Game builtins		- megafarm classes
+	Direction | Enums | 					# Game builtins		- enum classes
+
+	Drone[AnyTFWR]							# Game builtins		- megafarm classes
 )
 """
 Type representing all of the useable types in TFWR.
@@ -108,6 +131,7 @@ included:
 - Primitives: `bool`, `int`, `float`, `string`, `None`
 - `tuple`, `list`, `dict`, `set`
 - `range_class`, `module`, `function` (hinted as `Callable`)
+- `ModuleType`,
 - `Drone` (from `spawn_drone`)
 - Enums:
   - `Direction` (`North`, `East`, `South`, `West`)
@@ -115,13 +139,10 @@ included:
   - `Hats`, `Entities`, `Items`, `Grounds`, `Leaderboards`, `Unlocks`
 """
 
-_Any_ = TypeVar("_Any_", Any, Any, covariant = True)
-
 # --------------------------------------------------
 type AnyIterable = (
-	_dict[Hashable, Any] | _list[Any] | _set[Hashable] | _tuple[Any,...] |
-	string | range_class |
-	Entities | Grounds | Hats | Items | Leaderboard | Unlocks
+	string | range_class | _range | _AnyCollection |
+	Entities | Grounds | Hats | Items | Leaderboards | Unlocks
 )
 """
 Type representing all of the iterable types in TFWR.
@@ -142,9 +163,25 @@ included:
 
 # Comment out the `dict` builtins import above to prevent conflict errors.
 
-# class dict[key: Hashable, value: Any](_dict):
+# type DictTFWR[K: Any, V: Any] = dict[K, V] | _dict[K, V]
+# """
+# This type is used to represent the custom dict type that is specific to the game and the dict type provided by Python's builtins module. It is used to help you manage custom dicts and dict literals such as `{1: "One", 2: "Two", 3: "Three"]`. You cannot assign a dict literal to the custom dict type, however.
+
+# When using the `dict` custom type below you should type hint your variables using `DictTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+
+# example:
+# ```
+# custom_dict: DictTFWR[int, string] = dict()
+# python_dict: DictTFWR[int, string] = {1:"One", 1:"Two", 3:"Three"}
+# ```
+# Makes this possible:
+# ```
+# custom_dict = python_dict
+# ```
+# """
+# class dict[K: Hashable, V: Any]():
 # 	"""
-# 	Builds an unordered collection of key-value pairs
+# 	Builds an unordered collection of key-value pairs. This custom class is not assignable to `builtins.dict` from Python standard library or dict literals.
 
 # 	dict() -> new empty dictionary
 
@@ -152,12 +189,16 @@ included:
 
 # 	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
 # 	takes `1` tick to execute if no input is given.
+
+# 	Consider using `DictTFWR` to help with type hints involving dicts.
 # 	"""
-
-# 	def __init__(self: Self, input: _dict[_Hashable_, _Any_] | None | Container[Hashable] = None) -> None:
-# 		...
-
-# 	def len(self: Self) -> _int:
+# 	def __init__(self: Self, input: DictTFWR[K, V] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[K]: ...
+# 	def __next__(self: Self, /) -> K: ...
+# 	def __getitem__(self: Self, key: K, /) -> V: ...
+# 	def __setitem__(self: Self, key: K, object: V, /) -> None: ...
+# 	def __contains__(self, compare_object: K, /) -> _bool: ...
+# 	def len(self: Self, /) -> _int:
 # 		"""
 # 		Returns the number of items in the dictionary.
 
@@ -169,7 +210,7 @@ included:
 
 # 		```
 # 		my_dict = {"One": 1, "Two": 2, "Three": 3}
-# 		length = len(my_dict)
+# 		length = my_dict.len()
 # 		print(length)
 # 		```
 
@@ -180,8 +221,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def pop(self: Self, key: Hashable) -> Any: # type: ignore
+# 	def pop(self: Self, key: K, /) -> V:
 # 		"""
 # 		Remove the key-value pair corresponding to the `key` in the dict
 
@@ -207,16 +247,31 @@ included:
 # 		...
 # 	...
 
-
 # --------------------------------------------------
 # Uncomment this class if you want additional game-specific type hints and docstrings for `list` methods
 # This class requires the use of of the `list()` constructor. Assigning `list` literals (ex. `[1, 2, 3]`) will cause typing conflicts with the builtin Python type `builtins.list`
 
 # Comment out the `list` builtins import above to prevent conflict errors.
 
-# class list[value: Any](_list):
+# type ListTFWR[V: AnyTFWR] = list[V] | _list[V]
+# """
+# This type is used to represent the custom list type that is specific to the game and the list type provided by Python's builtins module. It is used to help you manage custom lists and list literals such as `[1, 2, 3]`. You cannot assign a list literal to the custom list type, however.
+
+# When using the `list` custom type below you should type hint your variables using `ListTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+
+# example:
+# ```
+# custom_list: ListTFWR[int] = list()
+# python_list: ListTFWR[int] = [1, 1, 3]
+# ```
+# Makes this possible:
+# ```
+# custom_list = python_list
+# ```
+# """
+# class list[V: Any]():
 # 	"""
-# 	Builds an ordered sequence of values.
+# 	Builds an ordered sequence of values. This custom class is not assignable to `builtins.list` from Python standard library or list literals.
 
 # 	list() -> new empty list
 
@@ -224,16 +279,26 @@ included:
 
 # 	list(collection: set | dict) -> new list from the keys of the given `collection`
 
-# 	list(game_enum) -> new list from the values of an in-game enumm `game_enum`
+# 	list(game_enum) -> new list from the values of an in-game enum `game_enum`
 
 # 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
 # 	takes `1` tick to execute if no input is given.
+
+# 	Consider using `ListTFWR` to help with type hints involving lists.
 # 	"""
-
-# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
-# 		...
-
-# 	def append(self: Self, object: Any) -> None:
+# 	def __init__(self: Self, input: Iterable[V] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[V]: ...
+# 	def __next__(self: Self, /) -> V: ...
+# 	def __getitem__(self: Self, index: _float, /) -> V: ...
+# 	def __setitem__(self: Self, index: _float, object: V, /) -> None: ...
+# 	def __le__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __lt__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __ge__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __gt__(self: Self, compare_list: tuple[V,...] | ListTFWR[V], /) -> _bool: ...
+# 	def __iadd__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
+# 	def __add__(self: Self, compare_list: ListTFWR[V], /) -> list[V]: ...
+# 	def __contains__(self, compare_object: V, /) -> _bool: ...
+# 	def append(self: Self, object: V, /) -> None:
 # 		"""
 # 		Add `object` to the end of a list provided as `given_list`.
 
@@ -254,8 +319,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def insert(self: Self, index: _int, object: Any) -> None: # type: ignore
+# 	def insert(self: Self, index: _float, object: V, /) -> None: # type: ignore
 # 		"""
 # 		Add a `object` to the specified `index` to a list provided as `given_list`.
 
@@ -276,8 +340,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def len(self: Self) -> _int:
+# 	def len(self: Self, /) -> _int:
 # 		"""
 # 		Returns the number of items in the list.
 
@@ -289,7 +352,7 @@ included:
 
 # 		```
 # 		my_list = [1, 2, 3]
-# 		length = len(my_list)
+# 		length = my_list.len()
 # 		print(length)
 # 		```
 
@@ -300,8 +363,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def pop(self: Self, index: _int) -> Any: # type: ignore
+# 	def pop(self: Self, index: _float = -1, /) -> V: # type: ignore
 # 		"""
 # 		Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
 
@@ -326,12 +388,11 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def remove(self: Self, object: Any) -> None:
+# 	def remove(self: Self, object: V, /) -> None:
 # 		"""
 # 		Remove the element corresponding to the `object` in the list.
 
-# 		takes `num_comparions + num_shifts` ticks to execute
+# 		takes `num_comparisons + num_shifts` ticks to execute
 
 # 		example usage:
 
@@ -357,9 +418,25 @@ included:
 
 # Comment out the `set` builtins import above to prevent conflict errors.
 
-# class set[value: Hashable](_set):
+# type SetTFWR[K: Hashable] = set[K] | _set[K]
+# """
+# This type is used to represent the custom set type that is specific to the game and the set type provided by Python's builtins module. It is used to help you manage custom sets and set literals such as `{1, 2, 3}`. You cannot assign a set literal to the custom set type, however.
+
+# When using the `set` custom type below you should type hint your variables using `SetTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+
+# example:
+# ```
+# custom_set: SetTFWR[int] = set()
+# python_set: SetTFWR[int] = {1, 1, 3}
+# ```
+# Makes this possible:
+# ```
+# custom_set = python_set
+# ```
+# """
+# class set[K: Hashable]():
 # 	"""
-# 	Builds an unordered collection of elements
+# 	Builds an unordered collection of elements. This custom class is not assignable to `builtins.set` from Python standard library or set literals.
 
 # 	set() -> new empty set
 
@@ -367,16 +444,18 @@ included:
 
 # 	set(collection: set | dict) -> new set from the keys of the given `collection`
 
-# 	set(game_enum) -> new set from the values of an in-game enumm `game_enum`
+# 	set(game_enum) -> new set from the values of an in-game enum `game_enum`
 
 # 	takes `1 + len(collection)` where `collection` is one of the above if an input is given.
 # 	takes `1` tick to execute if no input is given.
+
+# 	Consider using `SetTFWR` to help with type hints involving sets.
 # 	"""
-
-# 	def __init__(self: Self, input: AnyIterable | None = None) -> None:
-# 		...
-
-# 	def add(self: Self, object: Any) -> None:
+# 	def __init__(self: Self, input: Iterable[K] | None = None, /) -> None: ...
+# 	def __iter__(self: Self, /) -> Iterator[K]: ...
+# 	def __next__(self: Self, /) -> K: ...
+# 	def __contains__(self, compare_object: K, /) -> _bool: ...
+# 	def add(self: Self, object: K, /) -> None:
 # 		"""
 # 		Add the `object` to a `given_set`.
 
@@ -397,8 +476,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def len(self: Self) -> _int:
+# 	def len(self: Self, /) -> _int:
 # 		"""
 # 		Returns the number of items in the set.
 
@@ -410,7 +488,7 @@ included:
 
 # 		```
 # 		my_set = {1, 2, 3}
-# 		length = len(my_set)
+# 		length = my_set.len()
 # 		print(length)
 # 		```
 
@@ -421,8 +499,7 @@ included:
 # 		```
 # 		"""
 # 		...
-
-# 	def remove(self: Self, object: Any) -> None:
+# 	def remove(self: Self, object: K, /) -> None:
 # 		"""
 # 		Remove the `object` from the set.
 
@@ -445,9 +522,89 @@ included:
 # 		...
 # 	...
 
+# --------------------------------------------------
+# Uncomment this class if you want additional game-specific type hints and docstrings for `range_class` methods. Should use in conjunction with the `range` function.
+
+# Comment out the `range_class` builtins import above to prevent conflict errors.
+
+# type RangeTFWR = range_class | _range
+# """
+# This type is used to represent the custom range type that is specific to the game and the range type provided by Python's builtins module. You cannot assign a range literal to the custom range type, however.
+
+# The range function will return `range_class` and the builtin `range` is aliased as `range_class` above. So the function version will return whichever has been defined most recently.
+
+# When using the `range` custom type below you should type hint your variables using `RangeTFWR` as this will let you catch both this custom type and Python builtin type while also staying compatible with TFWR.
+
+# example:
+# ```
+# custom_range: RangeTFWR = range(10)
+
+# from builtins import range
+# python_range: RangeTFWR = range(10)
+# ```
+# Makes this possible:
+# ```
+# custom_range = python_range
+# ```
+# """
+# class range_class():
+# 	"""
+# 	A range of values produced by the `range` function. See the `range` function for further details on ranges. This custom class is not assignable to `builtins.range` from Python standard library.
+
+# 	Consider using `RangeTFWR` to help with type hints involving ranges.
+# 	"""
+# 	def __iter__(self: Self, /) -> Iterator[_int]: ...
+# 	def __next__(self: Self, /) -> _int: ...
+# 	def __getitem__(self: Self, index: _float, /) -> _int: ...
+# 	def __le__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __lt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __ge__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __gt__(self: Self, compare: range_class | list[_int] | _list[_int] | tuple[_int], /) -> _bool:
+# 		"""
+# 		Ranges can only be compared to a `range`, `list`, or `tuple`. Elements of lists and tuples should all be `int` and have the same starting, ending, and step size.
+# 		"""
+# 		...
+# 	def __contains__(self, compare_value: _int, /) -> _bool: ...
+# 	def len(self: Self, /) -> _int:
+# 		"""
+# 		Returns the number of items in the range
+
+# 		returns the length of the range
+
+# 		takes `1` tick to execute.
+
+# 		example usage:
+
+# 		```
+# 		my_range = range(10)
+# 		length = my_range.len()
+# 		print(length)
+# 		```
+
+# 		Output:
+
+# 		```
+# 		10
+# 		```
+# 		"""
+# 		...
+# 	...
+
 # -------------------------------------------------------------------------------
 @overload
-def range(stop: _float) -> range_class:  # type: ignore
+def range(stop: _float, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `0` (inclusive) to `stop` (exclusive).
 
@@ -477,7 +634,7 @@ def range(stop: _float) -> range_class:  # type: ignore
 	...
 
 @overload
-def range(start: _float, stop: _float) -> range_class:  # type: ignore
+def range(start: _float, stop: _float, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive).
 
@@ -505,7 +662,7 @@ def range(start: _float, stop: _float) -> range_class:  # type: ignore
 	...
 
 @overload
-def range(start: _float, stop: _float, step: _float) -> range_class:  # type: ignore
+def range(start: _float, stop: _float, step: _float, /) -> range_class:  # type: ignore
 	"""
 	Returns a sequence of numbers from `start` (inclusive) to `stop` (exclusive) every `step` interval.
 
@@ -553,7 +710,7 @@ print(last_number)
 """
 
 # --------------------------------------------------
-def add(given_set: _set[_Hashable_], object: Any):
+def add[K: Hashable](given_set: set[K] | _set[K], object: K, /) -> None:
 	"""
 	Add the `object` to a `given_set`.
 
@@ -576,7 +733,7 @@ def add(given_set: _set[_Hashable_], object: Any):
 	...
 
 # --------------------------------------------------
-def append(given_list: _list[_Any_], object: Any):
+def append[V: Any](given_list: list[V] | _list[V], object: V, /) -> None:
 	"""
 	Add `object` to the end of a list provided as `given_list`.
 
@@ -599,7 +756,7 @@ def append(given_list: _list[_Any_], object: Any):
 	...
 
 # --------------------------------------------------
-def insert(given_list: _list[_Any_], index: _int, object: Any):
+def insert[V: Any](given_list: list[V] | _list[V], index: _float, object: V, /) -> None:
 	"""
 	Add a `object` to the specified `index` to a list provided as `given_list`.
 
@@ -622,7 +779,7 @@ def insert(given_list: _list[_Any_], index: _int, object: Any):
 	...
 
 # --------------------------------------------------
-def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashable_] | _tuple[_Any_]) -> _int:
+def len[K: Hashable, V: Any](object : string | dict[K, V] | _dict[K, V] | list[V] | _list[V] | set[K] | _set[K] | tuple[V] | range_class, /) -> _int:
 	"""
 	Returns the number of items in the dict, list, set or str provided as `collection`.
 
@@ -647,14 +804,41 @@ def len(object : string | _dict[_Hashable_, _Any_] | _list[_Any_] | _set[_Hashab
 	...
 
 # --------------------------------------------------
-def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any):
+@overload
+def pop[K: Hashable, V: Any](collection: dict[K, V] | _dict[K, V], key: K, /) -> V: # type: ignore
 	"""
-	Remove the element corresponding to the `key` in a dict or list provided as `collection`. If it is a list and no `key` is specified removes the last element in the list.
+	Remove the key-value pair corresponding to the `key` in the dict
+
+	returns the value of the removed key-value pair
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	my_dict = {"One": 1, "Two": 2, "Three": 3}
+	print("Old Value:", my_dict.pop("One"))
+	print("Current Dict:", my_dict)
+	```
+
+	Output:
+
+	```
+	Old Value: 1
+	Current Dict: {"Two":2,"Three":3}
+	```
+	"""
+	...
+
+@overload
+def pop[V: Any](collection: list[V] | _list[V], index: _float = -1, /) -> V:  # type: ignore
+	"""
+	Remove the element corresponding to the `index` in the list. If no index is specified removes the last element in the list.
 
 	returns the value of the removed element
 
-	takes `len(list) - index` ticks to execute if an index is provided
-	takes `1` tick to execute if no `key` is provided, of if a dict is provided
+	takes `len(list) - index` ticks to execute if an `index` is provided
+	takes `1` tick to execute if no `index` is provided
 
 	example usage:
 
@@ -674,11 +858,11 @@ def pop(collection: _dict[_Hashable_, _Any_] | _list[_Any_], object: Any):
 	...
 
 # --------------------------------------------------
-def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any):
+def remove[K: Hashable, V: Any](collection: list[V] | _list[V] | set[K] | _set[K], object: V, /) -> None:
 	"""
 	Remove the element corresponding to the `object` in a list or set provided as `collection`.
 
-	takes `num_comparions + num_shifts` ticks to execute if a list is provided.
+	takes `num_comparison + num_shifts` ticks to execute if a list is provided.
 	takes `1` tick to execute if a set is provided.
 
 	example usage:
@@ -698,7 +882,7 @@ def remove(collection: _list[_Any_] | _set[_Hashable_], object: Any):
 	...
 
 # --------------------------------------------------
-def str(object: Any) -> string:
+def str(object: Any, /) -> string:
 	"""
 	Converts an object to its string representation.
 
@@ -770,10 +954,6 @@ class Entity:
 
 # --------------------------------------------------
 class Entities(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Entity:
-		return Entity()
-
 	Apple: Entity
 	"""
 	Dinosaurs love them apparently.
@@ -873,10 +1053,6 @@ class Ground:
 
 # --------------------------------------------------
 class Grounds(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Ground:
-		return Ground()
-
 	Grassland: Ground
 	"""
 	The default ground. Grass will automatically grow on it.
@@ -898,10 +1074,6 @@ class Hat:
 
 # --------------------------------------------------
 class Hats(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Hat:
-		return Hat()
-
 	Brown_Hat: Hat
 	"""
 	A brown hat.
@@ -1043,10 +1215,6 @@ class Item:
 
 # --------------------------------------------------
 class Items(_Enum):
-    @staticmethod
-    def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Item:
-        return Item()
-
     Bone: Item
     """
     The bones of an ancient creature.
@@ -1118,10 +1286,6 @@ class Leaderboard:
 
 # --------------------------------------------------
 class Leaderboards(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Leaderboard:
-		return Leaderboard()
-
 	Cactus: Leaderboard
 	"""
 	Farm 33_554_432 cacti with multiple drones.
@@ -1213,10 +1377,6 @@ class Unlock:
 
 # --------------------------------------------------
 class Unlocks(_Enum):
-	@staticmethod
-	def _generate_next_value_(name: string, start: _int, count: _int, last_values: _list[_Any]) -> Unlock:
-		return Unlock()
-
 	Auto_Unlock: Unlock
 	"""
 	Automatically unlock things.
@@ -1442,7 +1602,7 @@ def can_harvest() -> _bool:
 
 
 # --------------------------------------------------
-def plant(entity: Entity) -> _bool:
+def plant(entity: Entity | Entities, /) -> _bool:
 	"""
 	Spends the cost of the specified `entity` and plants it under the drone.
 	It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
@@ -1461,7 +1621,7 @@ def plant(entity: Entity) -> _bool:
 
 
 # --------------------------------------------------
-def swap(direction: Direction) -> _bool:
+def swap(direction: Direction, /) -> _bool:
 	"""
 	Swaps the entity under the drone with the entity next to the drone in the specified `direction`.
 
@@ -1500,7 +1660,7 @@ def till() -> None:
 
 
 # --------------------------------------------------
-def use_item(item: Item, n: _int = 1) -> _bool:
+def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	"""
 	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer` and `Items.Weird_Substance`.
 
@@ -1537,7 +1697,7 @@ def clear() -> None:
 
 
 # --------------------------------------------------
-def change_hat(hat: Hat) -> None:
+def change_hat(hat: Hat | Hats, /) -> None:
 	"""
 	Changes the hat of the drone to the specified `hat`.
 
@@ -1561,7 +1721,7 @@ def change_hat(hat: Hat) -> None:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def move(direction: Direction) -> _bool:
+def move(direction: Direction, /) -> _bool:
 	"""
 	Moves the drone into the specified `direction` by one tile.
 	If the drone moves over the edge of the farm it wraps back to the other side of the farm.
@@ -1585,7 +1745,7 @@ def move(direction: Direction) -> _bool:
 
 
 # --------------------------------------------------
-def can_move(direction: Direction) -> _bool:
+def can_move(direction: Direction, /) -> _bool:
 	"""
 	Checks if the drone can move in the specified `direction`.
 
@@ -1642,7 +1802,14 @@ def get_pos_y() -> _int:
 
 
 # --------------------------------------------------
-def get_world_size() -> _int:
+type WorldSizes = Literal[
+	3, 4, 5, 6, 7, 8, 9, 10,
+	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+	21, 22, 23, 24, 25, 26, 27, 28, 29, 30,
+	31, 32,
+]
+
+def get_world_size() -> WorldSizes:
 	"""
 	Get the current size of the farm.
 
@@ -1667,11 +1834,12 @@ def get_world_size() -> _int:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_entity_type() -> Entity | None:
+def get_entity_type() -> Entity:
 	"""
 	Find out what kind of entity is under the drone.
 
 	returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Entity`.
 
 	takes `1` tick to execute.
 
@@ -1724,7 +1892,7 @@ def get_water() -> _float:
 
 
 # --------------------------------------------------
-def num_items(item: Item) -> _int | _float:
+def num_items(item: Item | Items, /) -> _float:
 	"""
 	Find out how much of `item` you currently have.
 
@@ -1744,11 +1912,18 @@ def num_items(item: Item) -> _int | _float:
 
 
 # --------------------------------------------------
-def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
+type Companion = _tuple[Entity, _tuple[_int, _int]]
+"""
+Special type that helps with type hinting the return of the `get_companion` function.
+"""
+
+def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
 	Get the companion preference of the plant under the drone.
 
 	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
 	takes `1` tick to execute.
 
@@ -1765,10 +1940,15 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]] | None:
 
 
 # --------------------------------------------------
-def measure(direction: Direction | None = None) -> _int | _tuple[_int, _int] | None:
+type Measure = _int | _tuple[_int, _int]
+"""
+Special type that helps with type hinting the return of the `measure` function.
+"""
+
+def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int]:
 	"""
 	Can measure some values on some entities. The effect of this depends on the entity.
-	Will work anynore inside of a maze and only on a `Entities.Apple`
+	Will work anymore inside of a maze and only on a `Entities.Apple`
 
 	overloads:
 	`measure()`: measures the entity under the drone.
@@ -1779,6 +1959,7 @@ def measure(direction: Direction | None = None) -> _int | _tuple[_int, _int] | N
 	Cactus: returns the size.
 	Dinosaur: returns the number corresponding to the type.
 	All other entities: returns `None`.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
 	takes `1` tick to execute.
 
@@ -1800,45 +1981,56 @@ def measure(direction: Direction | None = None) -> _int | _tuple[_int, _int] | N
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-class Drone:
+class Drone[R: Any]:
     """
     A class representing a spawned drone given a task to execute.
+
+    `R` - the return type of the `task` you provide the drone when you use `spawn_drone`
     """
     ...
 
 # -------------------------------------------------------------------------------
-def spawn_drone(task: Callable[[], Any], *args: _Any) -> Drone:
+def spawn_drone[*P, R: Any](task: Callable[[*P], R], /, *args: *P) -> Drone[R]:
 	"""
-	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the specified `task` function. The rest of the arguments are copied and passed into the specified function. After the drone is done, it will disappear automatically.
+	Spawns a new drone in the same position as the drone that ran `spawn_drone(task, *args)`. The new drone then begins executing the provided `task` function. The rest of the arguments are copied and passed into the specified `task` function. After the drone is done, it will disappear automatically.
 
-	returns a `Drone` object for the new drone or `None` if all drones are already spawned.
+	`*P` - list of parameters that your task can can take as arguments. Must match the type of arguments you give to `spawn_drone` with the parameter types you assign of the `task` that you provide.
+	`R` - the return type of your drone. Must must the return type of of the `task` you provide.
+
+	Passes the `*args` to the provided `task` when that drone runs.
+
+	returns a `Drone[R]` object for the new drone or `None` if all drones are already spawned.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Drone`.
 
 	takes `200` ticks to execute if a drone was spawned, `1` otherwise.
 
 	example:
+
 	```
-	def harvest_column(message):
+	def harvest_column(row):
+		for _ in range(row):
+			move(East)
+
 		for _ in range(get_world_size()):
 			harvest()
 			move(North)
-		print(message)
 
-	i = 0
-	while True:
-		if spawn_drone(harvest_column, i):
-			move(East)
-			i = (i + 1) % 10
+	for row in range(1, get_world_size()):
+		spawn_drone(harvest_column, row)
+
+	harvest_column(0)
 	```
 	"""
 	...
 
 
 # --------------------------------------------------
-def wait_for(drone: Drone) -> Any:
+def wait_for[R: Any](drone: Drone[R], /) -> R:
 	"""
 	Waits until the given `drone` terminates.
 
 	returns the return value of the function that the `drone` was running.
+	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	takes `1 + remaining task ticks` remaining in the given drone's task function.
 	takes `1` tick to execute if the awaited `drone` is already done.
@@ -1860,9 +2052,11 @@ def wait_for(drone: Drone) -> Any:
 
 
 # --------------------------------------------------
-def has_finished(drone: Drone) -> _bool:
+def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 	"""
-	Checks if the given 1drone1 has finished.
+	Checks if the given `drone` has finished.
+
+	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	returns `True` if the drone has finished, `False` otherwise.
 
@@ -1966,7 +2160,7 @@ def get_tick_count() -> _int:
 
 
 # --------------------------------------------------
-def set_execution_speed(speed: _float) -> None:
+def set_execution_speed(speed: _float, /) -> None:
 	"""
 	Limits the speed at which the program is executed to better see what's happening.
 
@@ -1993,13 +2187,13 @@ def set_execution_speed(speed: _float) -> None:
 
 
 # --------------------------------------------------
-def set_world_size(size: _float) -> None:
+def set_world_size(size: WorldSizes, /) -> None:
 	"""
 	Limits the size of the farm to better see what's happening.
 	Also clears the farm and resets the drone position.
 
 	- Sets the farm to a `size` x `size` grid.
-	- The smallest `size` possible is `3`.
+	- The smallest `size` possible is `3` and maximum `size` is `32`
 	- A `size` smaller than `3` will change the grid back to its full size.
 	- The effect will also stop when the execution stops.
 
@@ -2017,14 +2211,51 @@ def set_world_size(size: _float) -> None:
 
 
 # --------------------------------------------------
-type SimulateUnlocks = _dict[Unlock, _int] | _tuple[_tuple[Unlock, _int]] | _list[_tuple[Unlock, _int]] | _tuple[Unlock] | _list[Unlock] | Unlocks
+type _SimulateUnlocksPair = _tuple[Unlock, _int]
+
+type SimulateUnlocks = (
+	dict[Unlock, _int] | _dict[Unlock, _int] |					# (Unlock, int) pairings
+	list[_SimulateUnlocksPair] | _list[_SimulateUnlocksPair] |
+	_tuple[_SimulateUnlocksPair,...] |
+
+	_tuple[Unlock,...] |										# Sequence of unlocks
+	_list[Unlock] |
+
+	Unlocks														# All unlocks
+)
+"""
+A sequence containing the starting unlocks. These unlocks can be one of these:
+
+- `dict[Unlock, int]` - Example: `{Unlocks.Expand: 2, Unlocks.Cactus: 1}`
+
+- `tuple[tuple[Unlock, int],...]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
+- `list[tuple[Unlock, int]]` - Example: `[(Unlocks.Expand, 2), (Unlocks.Cactus, 1)]`
+
+- `tuple[Unlock,...]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
+- `list[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `[Unlocks.Expand, Unlocks.Cactus]`
+
+- `Unlocks` - Captures all of your current unlock levels from your main farm.
+"""
+
+type SimulateItems = dict[Item, _float] | _dict[Item, _float]
+"""
+Special type that helps with type hinting the `sim_items` parameter of the `simulate` function.
+"""
+
+type SimulateGlobals = dict[string, AnyTFWR] | _dict[string, AnyTFWR]
+"""
+Special type that helps with type hinting the `sim_globals` parameter of the `simulate` function.
+"""
 
 def simulate(
 		filename: string,
 		sim_unlocks: SimulateUnlocks,
-		sim_items: _dict[Item, _float],
-		sim_globals: _dict[string, Any],
-		seed: _float, speedup: _float
+		sim_items: dict[Item, _float] | _dict[Item, _float],
+		sim_globals: dict[string, AnyTFWR] | _dict[string, AnyTFWR],
+		seed: _float, speedup: _float,
+		/
 	) -> _float:
 	"""
 	Starts a simulation for the leaderboard using the specified `file_name` as a starting point.
@@ -2032,10 +2263,15 @@ def simulate(
 	`sim_unlocks`: A sequence containing the starting unlocks. These unlocks can be one of these:
 
 	- `dict[Unlock, int]` - Example: `{Unlocks.Expand: 2, Unlocks.Cactus: 1}`
-	- `tuple[tuple[Unlock, int]]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
+	- `tuple[tuple[Unlock, int],...]` - Example: `((Unlocks.Expand, 2), (Unlocks.Cactus, 1))`
+
 	- `list[tuple[Unlock, int]]` - Example: `[(Unlocks.Expand, 2), (Unlocks.Cactus, 1)]`
-	- `tuple[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
+	- `tuple[Unlock,...]` - Captures your current unlock level of specific unlocks from your main farm. Example: `(Unlocks.Expand, Unlocks.Cactus)`
+
 	- `list[Unlock]` - Captures your current unlock level of specific unlocks from your main farm. Example: `[Unlocks.Expand, Unlocks.Cactus]`
+
 	- `Unlocks` - Captures all of your current unlock levels from your main farm.
 
 	`sim_items`: A dict mapping items to amounts. The simulation starts with these items.
@@ -2072,7 +2308,12 @@ def simulate(
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: _int | None = None) -> _dict[Item, _int] | None:
+type Cost = dict[Item, _int] | _dict[Item, _int]
+"""
+Special type that helps with type hinting the return of the `get_cost` function.
+"""
+
+def get_cost(thing: Entity | Entities | Unlock | Unlocks, level: _int = 0, /) -> dict[Item, _int] | _dict[Item, _int]:
 	"""
 	Gets the cost of a `thing`
 
@@ -2080,7 +2321,7 @@ def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: 
 	If `thing` is an unlock: get the cost of unlocking it at the specified level.
 
 	- returns a dictionary with items as keys and numbers as values. Each item is mapped to how much of it is needed.
-	- returns `None` for unlocks that are already unlocked (when no level specified).
+	- returns `{}` (empty dict) for unlocks that are already unlocked (when no level specified).
 	- The optional `level` parameter specifies the upgrade level for unlocks.
 
 	takes `1` tick to execute.
@@ -2098,7 +2339,7 @@ def get_cost(thing: Entity | Entities | Item | Items | Unlock | Unlocks, level: 
 
 
 # --------------------------------------------------
-def unlock(unlock: Unlock | Unlocks) -> _bool:
+def unlock(unlock: Unlock | Unlocks, /) -> _bool:
 	"""
 	Has exactly the same effect as clicking the button corresponding to `unlock` in the research tree.
 
@@ -2116,7 +2357,7 @@ def unlock(unlock: Unlock | Unlocks) -> _bool:
 
 
 # --------------------------------------------------
-def num_unlocked(thing: Enums) -> _int:
+def num_unlocked(thing: Enums, /) -> _int:
 	"""
 	Used to check if an unlock, entity, ground, item or hat is already unlocked.
 
@@ -2163,35 +2404,359 @@ def random() -> _float:
 
 
 # --------------------------------------------------
-def min(*args: Any) -> Any:
+@overload
+def min(sequence: range_class, /) -> _int: # type: ignore
 	"""
-	Gets the minimum of a sequence of elements or several passed arguments.
-	Can be used on numbers and strings.
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
 
-	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
 	`min(sequence)`: Returns the minimum of all values in a sequence.
 
-	returns the minimum value from the arguments.
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(sequence: Iterable[_float], /) -> _float: # type: ignore
+	"""
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`min(sequence)`: Returns the minimum of all values in a sequence.
+
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(sequence: Iterable[string], /) -> string: # type: ignore
+	"""
+	Gets the minimum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`min(sequence)`: Returns the minimum of all values in a sequence.
+
+	returns the minimum from the arguments:
+	- If `tuple`, `list` or `range` is given will return minimum value
+	- If `dict` or `set` is given will return the minimum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = min([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def min(*args: range_class) -> range_class: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: _float) -> _float: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: Iterable[_float]) -> Iterable[_float]: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: string) -> string: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def min(*args: Iterable[string]) -> Iterable[string]: # type: ignore
+	"""
+	Gets the minimum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`min(a,b,c)`: Returns the minimum of `a`, `b` and `c`.
+
+	returns the collection that has the minimum total:
+	- If `tuple`, `list` or `range` is given will return minimum argument based on value
+	- If `dict` or `set` is given will return the minimum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = min(1, 5, 3, 2)
+	```
 	"""
 	...
 
 
 # --------------------------------------------------
-def max(*args: Any) -> Any:
+@overload
+def max(sequence: range_class, /) -> _int: # type: ignore
 	"""
-	Gets the maximum of a sequence of elements or several passed arguments.
-	Can be used on numbers and strings.
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
 
-	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
 	`max(sequence)`: Returns the maximum of all values in a sequence.
 
-	returns the maximum value from the arguments.
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(sequence: Iterable[_float], /) -> _float: # type: ignore
+	"""
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`max(sequence)`: Returns the maximum of all values in a sequence.
+
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(sequence: Iterable[string], /) -> string: # type: ignore
+	"""
+	Gets the maximum of a sequence of elements. Elements can be `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`sequence`: Any `tuple`, `list`, `range`, `dict`, or `set`
+
+	`max(sequence)`: Returns the maximum of all values in a sequence.
+
+	returns the maximum from the arguments:
+	- If `tuple`, `list` or `range` is given will return maximum value
+	- If `dict` or `set` is given will return the maximum key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest_from_list = max([3, 6, 34, 16])
+	```
+	"""
+	...
+
+@overload
+def max(*args: range_class) -> range_class: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: _float) -> _float: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: Iterable[_float]) -> Iterable[_float]: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: string) -> string: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
+	"""
+	...
+
+@overload
+def max(*args: Iterable[string]) -> Iterable[string]: # type: ignore
+	"""
+	Gets the maximum of several passed arguments. Can be used on `float` or `str` unless a `range` is given then elements will be `int`.
+
+	`max(a,b,c)`: Returns the maximum of `a`, `b` and `c`.
+
+	returns the collection that has the maximum total:
+	- If `tuple`, `list` or `range` is given will return maximum argument based on value
+	- If `dict` or `set` is given will return the maximum argument based on key.
+
+	takes `num_comparison` ticks to execute.
+
+	example usage:
+
+	```
+	smallest = max(1, 5, 3, 2)
+	```
 	"""
 	...
 
 
 # --------------------------------------------------
-def abs(x: _float) -> _float:
+def abs(x: _float, /) -> _float:
 	"""
 	Returns the absolute value of a number.
 
@@ -2222,7 +2787,7 @@ def abs(x: _float) -> _float:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def print(*something: _Any) -> None:
+def print(*something: Any) -> None:
 	"""
 	Prints `something` into the air above the drone using smoke. This action is not affected by speed upgrades.
 	Multiple values can be printed at once.
@@ -2241,7 +2806,7 @@ def print(*something: _Any) -> None:
 
 
 # --------------------------------------------------
-def quick_print(*something: _Any) -> None:
+def quick_print(*something: Any) -> None:
 	"""
 	Prints a value just like `print()` but it doesn't stop to write it into the air so it can only be found on the output page.
 
@@ -2261,7 +2826,7 @@ def quick_print(*something: _Any) -> None:
 
 
 # -------------------------------------------------------------------------------
-# Miscelaneous
+# Miscellaneous
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
@@ -2303,7 +2868,7 @@ def pet_the_piggy() -> None:
 
 
 # --------------------------------------------------
-def leaderboard_run(leaderboard: Leaderboard, file_name: string, speedup: _float) -> None:
+def leaderboard_run(leaderboard: Leaderboard, file_name: string, speedup: _float, /) -> None:
 	"""
 	Starts a timed run for the `leaderboard` using the specified `file_name` as a starting point.
 	`speedup` sets the starting speedup.
