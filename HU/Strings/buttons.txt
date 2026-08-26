@@ -1,0 +1,17 @@
+@save = Mentés
+@saved = Mentve
+@play = Indítás
+@load = Betöltés
+@options = Beállítások
+@join_discord = Discord
+@quit = Kilépés
+@open_folder = Mappa helye
+@new_game = Új játék
+@back = Vissza
+@unlocks = Unlocks
+@farm = Farm
+@unlocked = Feloldva
+@upgrade = Fejlesztés
+@max_level = Max szint
+@unlock = Feloldás
+@locked = Zárolt

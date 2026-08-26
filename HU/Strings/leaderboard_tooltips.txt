@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = Teljesen automatizáld a teljes játékot.
+@lb_descr_maze = Termessz 9863168 aranyat.
+@lb_descr_maze_single = Termessz 616448 aranyat.
+@lb_descr_dinosaur = Termessz 33488928 csontot.
+@lb_descr_cactus = Termessz 33554432 kaktuszt.
+@lb_descr_cactus_single = Termessz 131072 kaktuszt.
+@lb_descr_sunflowers = Termessz 100000 erőt.
+@lb_descr_sunflowers_single = Termessz 10000 erőt.
+@lb_descr_pumpkins = Termessz 200M tököt.
+@lb_descr_pumpkins_single = Termessz 20M tököt.
+@lb_descr_hay = Termessz 2B szénát.
+@lb_descr_hay_single = Termessz 200M szénát.
+@lb_descr_wood = Termessz 10B fát.
+@lb_descr_wood_single = Termessz 1B fát.
+@lb_descr_carrots = Termessz 2B répát.
+@lb_descr_carrots_single = Termessz 200M répát.

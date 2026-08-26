@@ -1,0 +1,18 @@
+@word_number = szám
+@word_direction = irány
+@run_cancelled = Futtatás sikertelen
+@average_text = {0} Futtatás befejezve ({2:F1}%)
+{1}
+@average_text2 = {0} Futtatás befejezve
+{1}
+@unlocked_in = További kapcsolódó információkért lásd: [{0}]({1})
+@table_of_contents_section_general_info = Általános info
+@table_of_contents_section_programming = Programozás
+@table_of_contents_section_unlocks = Feloldások
+@table_of_contents_section_builtins = Beépített függvények
+@table_of_contents_section_items = Itemek
+@table_of_contents_section_entities = Entitások
+@table_of_contents_section_grounds = Talajok
+@new_hat_unlocked = ## Új kalap feloldva
+`change_hat(`{0}`)`
+@right_click_for_more_info = -- jobb klikk további infoért --
