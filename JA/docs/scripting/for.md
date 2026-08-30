@@ -15,7 +15,7 @@ forループは次のようになります：
 `variable_name` は自由に選べる名前です。これはシーケンス内の現在の要素を格納する変数です。`sequence` は、数値の範囲のような反復可能な値である必要があります。コードブロックは、ループ変数がその要素に割り当てられた状態で、すべての要素に対して実行されます。
 
 ## シーケンス
-[範囲](functions/range)      <unlock=lists>[リスト](docs/scripting/lists.md)      </unlock><unlock=functions>[タプル](docs/scripting/tuples.md)      </unlock><unlock=dicts>[辞書](docs/scripting/dicts.md)      </unlock><unlock=sets>[セット](docs/scripting/sets.md)</unlock>
+[範囲](functions/range)      <unlock=variables>[タプル](docs/scripting/tuples.md)      </unlock><unlock=lists>[リスト](docs/scripting/lists.md)      </unlock><unlock=dicts>[辞書](docs/scripting/dicts.md)      </unlock><unlock=sets>[セット](docs/scripting/sets.md)</unlock>
 
 ## 例
 `for i in range(5):

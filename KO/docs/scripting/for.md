@@ -15,7 +15,7 @@ for 루프는 다음과 같아요:
 `variable_name`은 여러분이 선택한 어떤 이름이든 될 수 있어요. 이것은 시퀀스의 현재 요소를 저장하는 변수예요. `sequence`는 숫자 범위처럼 반복할 수 있는 값이어야 해요. 코드 블록은 루프 변수가 해당 요소에 할당된 상태로 모든 요소에 대해 실행돼요.
 
 ## 시퀀스
-[범위](functions/range)      <unlock=lists>[리스트](docs/scripting/lists.md)      </unlock><unlock=functions>[튜플](docs/scripting/tuples.md)      </unlock><unlock=dicts>[딕셔너리](docs/scripting/dicts.md)      </unlock><unlock=sets>[세트](docs/scripting/sets.md)</unlock>
+[범위](functions/range)      <unlock=variables>[튜플](docs/scripting/tuples.md)      </unlock><unlock=lists>[리스트](docs/scripting/lists.md)      </unlock><unlock=dicts>[딕셔너리](docs/scripting/dicts.md)      </unlock><unlock=sets>[세트](docs/scripting/sets.md)</unlock>
 
 ## 예시
 `for i in range(5):
