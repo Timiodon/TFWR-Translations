@@ -959,6 +959,12 @@ class Entities(_Enum):
 	Dinosaurs love them apparently.
 	"""
 
+	Bamboo: Entity
+	"""
+	Bamboo can grow quite tall, but flowers at one specific height. Harvesting it
+	at that height gives the largest yield.
+	"""
+
 	Bush: Entity
 	"""
 	A small bush that drops `Items.Wood`.
@@ -998,6 +1004,12 @@ class Entities(_Enum):
 	Grows on: grassland or soil
 	"""
 
+	Dynamite: Entity
+	"""
+	Explodes when dug into. Planting and harvesting it always costs or yields one
+	`Items.Dynamite`.
+	"""
+
 	Grass: Entity
 	"""
 	Grows automatically on grassland. Harvest it to obtain `Items.Hay`.
@@ -1018,6 +1030,11 @@ class Entities(_Enum):
 
 	Average seconds to grow: 2
 	Grows on: soil
+	"""
+
+	Rice: Entity
+	"""
+	Rice can be planted on clay found underground.
 	"""
 
 	Sunflower: Entity
@@ -1042,6 +1059,11 @@ class Entities(_Enum):
 	Grows on: grassland or soil
 	"""
 
+	Underground_Treasure: Entity
+	"""
+	The treasure found at the end of a treasure-map path.
+	"""
+
 
 # -------------------------------------------------------------------------------
 class Ground:
@@ -1053,14 +1075,137 @@ class Ground:
 
 # --------------------------------------------------
 class Grounds(_Enum):
+	Basalt: Ground
+	"""
+	Soft rock formed by cooling lava. Something might have been preserved below.
+	"""
+
+	Bedrock: Ground
+	"""
+	Indestructible ground.
+	"""
+
+	Blue_Block: Ground
+	"""
+	A blue block that can be placed manually.
+	"""
+
+	Clay: Ground
+	"""
+	Fertile ground for rice. Mature rice turns the clay below it back into dirt.
+	"""
+
+	Coal: Ground
+	"""
+	A block rich in sedimentary coal.
+	"""
+
+	Dirt: Ground
+	"""
+	Ordinary dirt that can be dug and placed.
+	"""
+
+	Dry_Rice_Terrace: Ground
+	"""
+	A dry rice terrace.
+	"""
+
+	Dynamite: Ground
+	"""
+	Can drop dynamite on the block below when dug. The dropped dynamite can be
+	harvested or dug into to make it explode.
+	"""
+
 	Grassland: Ground
 	"""
 	The default ground. Grass will automatically grow on it.
 	"""
 
+	Green_Block: Ground
+	"""
+	A green block that can be placed manually.
+	"""
+
+	Iron: Ground
+	"""
+	A block containing raw magnetite.
+	"""
+
+	Limestone: Ground
+	"""
+	Whitish limestone that forms the foundation of ancient pyramids.
+	"""
+
+	Loam: Ground
+	"""
+	Rich loam. Sunflowers and carrots planted here give double yield.
+	"""
+
+	Mushroom: Ground
+	"""
+	Underground mushrooms. Use `measure()` to determine the mushroom type.
+	"""
+
+	Perlite: Ground
+	"""
+	Dirt with high perlite content. Bushes, cacti, bamboo, and trees planted here
+	give double yield.
+	"""
+
+	Petrified_Pumpkin: Ground
+	"""
+	A petrified pumpkin. Still good to eat.
+	"""
+
+	Quartz: Ground
+	"""
+	A block encasing crystalline quartz.
+	"""
+
+	Red_Block: Ground
+	"""
+	A red block that can be placed manually.
+	"""
+
+	Rice_Terrace: Ground
+	"""
+	A flooded rice terrace.
+	"""
+
+	Rock: Ground
+	"""
+	A hard rock that can be dug and placed.
+	"""
+
+	Sand: Ground
+	"""
+	A sand block from an ancient pyramid.
+	"""
+
 	Soil: Ground
 	"""
 	Calling `till()` turns the ground into this. Calling `till()` again changes it back to grassland.
+	"""
+
+	Soot: Ground
+	"""
+	Calling `measure()` on this ground counts the live dynamite in the stratum
+	above. Dynamite that falls onto soot explodes immediately.
+	"""
+
+	Treasure_Goal: Ground
+	"""
+	The goal at the end of a treasure-map path.
+	"""
+
+	Treasure_Map: Ground
+	"""
+	A treasure map hidden underground.
+	"""
+
+	Treasure_Path: Ground
+	"""
+	A block on the path from a treasure map to its goal.
 	"""
 
 
@@ -1092,6 +1237,12 @@ class Hats(_Enum):
 	Dinosaur_Hat: Hat
 	"""
 	Equip it to start the dinosaur game.
+	"""
+
+	Dynamite_Hat: Hat
+	"""
+	The chief blaster's hat. Every dig explodes and costs one dynamite. Only one
+	drone can be the chief blaster at a time.
 	"""
 
 	Gold_Hat: Hat
@@ -1142,6 +1293,11 @@ class Hats(_Enum):
 	Green_Hat: Hat
 	"""
 	A green hat.
+	"""
+
+	Mining_Hat: Hat
+	"""
+	A mining hat for a drone equipped with a drill.
 	"""
 
 	Pumpkin_Hat: Hat
@@ -1215,6 +1371,16 @@ class Item:
 
 # --------------------------------------------------
 class Items(_Enum):
+    Bamboo: Item
+    """
+    Obtained by harvesting bamboo.
+    """
+
+    Block: Item
+    """
+    Obtained by digging. One block is consumed by a successful `place()` call.
+    """
+
     Bone: Item
     """
     The bones of an ancient creature.
@@ -1228,6 +1394,17 @@ class Items(_Enum):
     Carrot: Item
     """
     Obtained by harvesting carrots.
+    """
+
+    Coal: Item
+    """
+    Obtained by digging up underground coal deposits. `prospect_iron()` consumes
+    one coal.
+    """
+
+    Dynamite: Item
+    """
+    Obtained from dynamite ground. Use it with `use_item(Items.Dynamite)`.
     """
 
     Fertilizer: Item
@@ -1245,6 +1422,17 @@ class Items(_Enum):
     Obtained by cutting grass.
     """
 
+    Iron: Item
+    """
+    Obtained by digging up iron underground. `prospect_quartz()` consumes one
+    iron.
+    """
+
+    Mushroom: Item
+    """
+    Obtained by stacking matching mushroom ground blocks.
+    """
+
     Piggy: Item
     """
     This item has been removed from the game but remains as a nostalgia trophy.
@@ -1258,6 +1446,16 @@ class Items(_Enum):
     Pumpkin: Item
     """
     Obtained by harvesting pumpkins.
+    """
+
+    Quartz: Item
+    """
+    Obtained by digging up quartz veins.
+    """
+
+    Rice: Item
+    """
+    Obtained by harvesting rice.
     """
 
     Water: Item
@@ -1382,6 +1580,11 @@ class Unlocks(_Enum):
 	Automatically unlock things.
 	"""
 
+	Bamboo: Unlock
+	"""
+	Plant bamboo and watch it grow.
+	"""
+
 	Cactus: Unlock
 	"""
 	Unlock: Cactus!
@@ -1392,6 +1595,11 @@ class Unlocks(_Enum):
 	"""
 	Unlock: Till the soil and plant carrots.
 	Upgrade: Increases the yield and cost of carrots.
+	"""
+
+	Coal: Unlock
+	"""
+	Coal deposits spawn underground.
 	"""
 
 	Costs: Unlock
@@ -1409,6 +1617,11 @@ class Unlocks(_Enum):
 	Functions to temporarily slow down the execution and make the grid smaller.
 	"""
 
+	Debug_Place: Unlock
+	"""
+	Place colorful blocks.
+	"""
+
 	Dictionaries: Unlock
 	"""
 	Get access to dictionaries and sets.
@@ -1418,6 +1631,11 @@ class Unlocks(_Enum):
 	"""
 	Unlock: Majestic ancient creatures.
 	Upgrade: Increases the yield and cost of dinosaurs.
+	"""
+
+	Dynamite: Unlock
+	"""
+	Find and use dynamite to blow things up.
 	"""
 
 	Expand: Unlock
@@ -1451,6 +1669,16 @@ class Unlocks(_Enum):
 	Import code from other files.
 	"""
 
+	Iron: Unlock
+	"""
+	Iron ore veins spawn underground.
+	"""
+
+	Jump: Unlock
+	"""
+	Allows the drone to jump downward to selected underground features.
+	"""
+
 	Leaderboard: Unlock
 	"""
 	Join the leaderboard for the fastest time in farming a specific crop or for the fastest reset of the farm.
@@ -1477,9 +1705,29 @@ class Unlocks(_Enum):
 	Unlocks multiple drones and drone management functions.
 	"""
 
+	Mining: Unlock
+	"""
+	Gives the drone a drill and a mining hat.
+	"""
+
+	Mushrooms: Unlock
+	"""
+	Find and harvest underground mushrooms by matching their type.
+	"""
+
+	Ore_Boost: Unlock
+	"""
+	Doubles coal yield and doubles the size of iron and quartz veins.
+	"""
+
 	Operators: Unlock
 	"""
 	Arithmetic, comparison and logic operators.
+	"""
+
+	Petrified_Pumpkins: Unlock
+	"""
+	Petrified pumpkins spawn underground.
 	"""
 
 	Plant: Unlock
@@ -1492,10 +1740,30 @@ class Unlocks(_Enum):
 	Use companion planting to increase the yield.
 	"""
 
+	Prospecting: Unlock
+	"""
+	Use coal to look for iron.
+	"""
+
 	Pumpkins: Unlock
 	"""
 	Unlock: Pumpkins!
 	Upgrade: Increases the yield and cost of pumpkins.
+	"""
+
+	Pyramid: Unlock
+	"""
+	Ancient sandstone structures spawn underground.
+	"""
+
+	Quartz: Unlock
+	"""
+	Quartz needles spawn underground.
+	"""
+
+	Rice: Unlock
+	"""
+	Unlocks rice that can be grown on underground clay.
 	"""
 
 	Senses: Unlock
@@ -1506,6 +1774,11 @@ class Unlocks(_Enum):
 	Simulation: Unlock
 	"""
 	Unlocks simulation functions for testing and optimization.
+	"""
+
+	Special_Soils: Unlock
+	"""
+	Discover loam and perlite layers that boost plant yield.
 	"""
 
 	Speed: Unlock
@@ -1534,10 +1807,20 @@ class Unlocks(_Enum):
 	Unlocks the fancy Top Hat.
 	"""
 
+	Treasure_Map: Unlock
+	"""
+	Hunt for treasure hidden deep underground.
+	"""
+
 	Trees: Unlock
 	"""
 	Unlocks trees.
 	Upgrade: Increases the yield of bushes and trees.
+	"""
+
+	Underground_Senses: Unlock
+	"""
+	Adds sensors for interacting with underground blocks.
 	"""
 
 	Utilities: Unlock
@@ -1662,7 +1945,7 @@ def till() -> None:
 # --------------------------------------------------
 def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	"""
-	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer` and `Items.Weird_Substance`.
+	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer`, `Items.Weird_Substance`, and `Items.Dynamite`.
 
 	returns `True` if an item was used, `False` if the item can't be used or you don't have enough.
 
@@ -1673,6 +1956,26 @@ def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	```
 	if use_item(Items.Fertilizer):
 		print("Fertilizer used successfully")
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def place(ground: Ground | Grounds, /) -> _bool:
+	"""
+	Places a block of the specified `ground` below the drone and consumes one
+	`Items.Block`. Only manually placeable blocks can be used.
+
+	returns `True` if the block was placed, `False` if it cannot be placed or no
+	block item is available.
+
+	takes `200` ticks to execute if it succeeded, `1` tick otherwise.
+
+	example usage:
+
+	```
+	place(Grounds.Rock)
 	```
 	"""
 	...
@@ -1802,6 +2105,26 @@ def get_pos_y() -> _int:
 
 
 # --------------------------------------------------
+def get_pos_z(direction: Direction | None = None, /) -> _int:
+	"""
+	Gets the current z position of the drone, or the z position of the neighboring
+	tile in `direction`. The z position starts at `0` and decreases while digging
+	downward.
+
+	returns the z coordinate as an integer.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	x, y, z = get_pos_x(), get_pos_y(), get_pos_z()
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
 type WorldSizes = Literal[
 	3, 4, 5, 6, 7, 8, 9, 10,
 	11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
@@ -1834,9 +2157,10 @@ def get_world_size() -> WorldSizes:
 # -------------------------------------------------------------------------------
 
 # -------------------------------------------------------------------------------
-def get_entity_type() -> Entity:
+def get_entity_type(direction: Direction | None = None, /) -> Entity:
 	"""
-	Find out what kind of entity is under the drone.
+	Find out what kind of entity is under the drone, or on the neighboring tile in
+	`direction`.
 
 	returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Entity`.
@@ -1854,9 +2178,10 @@ def get_entity_type() -> Entity:
 
 
 # --------------------------------------------------
-def get_ground_type() -> Ground:
+def get_ground_type(direction: Direction | None = None, /) -> Ground:
 	"""
-	Find out what kind of ground is under the drone.
+	Find out what kind of ground is under the drone, or on the neighboring tile in
+	`direction`.
 
 	returns the type of the ground under the drone.
 
@@ -1940,15 +2265,15 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 
 
 # --------------------------------------------------
-type Measure = _int | _tuple[_int, _int]
+type Measure = _int | _tuple[_int, _int] | string
 """
 Special type that helps with type hinting the return of the `measure` function.
 """
 
-def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int]:
+def measure(direction: Direction | None = None, /) -> Measure:
 	"""
-	Can measure some values on some entities. The effect of this depends on the entity.
-	Will work anymore inside of a maze and only on a `Entities.Apple`
+	Measures certain entities and underground ground types. The result depends on
+	what is being measured.
 
 	overloads:
 	`measure()`: measures the entity under the drone.
@@ -1958,7 +2283,11 @@ def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int]:
 	Maze: returns the position of the current treasure from anywhere in the maze.
 	Cactus: returns the size.
 	Dinosaur: returns the number corresponding to the type.
-	All other entities: returns `None`.
+	Mushroom: returns the mushroom type as a number.
+	Basalt: returns the `(x, y)` position of the treasure map below.
+	Treasure map: returns a string of direction letters describing the path.
+	Soot: returns the number of live dynamite blocks in the stratum above.
+	All other entities and ground types: returns `None`.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
 	takes `1` tick to execute.
@@ -1972,6 +2301,163 @@ def measure(direction: Direction | None = None, /) -> _int | _tuple[_int, _int]:
 	"""
 	...
 
+
+
+
+
+# -------------------------------------------------------------------------------
+# Mining
+# -------------------------------------------------------------------------------
+
+# -------------------------------------------------------------------------------
+def dig() -> _bool:
+	"""
+	Digs one tile downward. Whether the block is destroyed depends on its hardness
+	and the drone's drill strength.
+
+	returns `True` if the block was destroyed, `False` otherwise.
+
+	takes 0.5 seconds to execute.
+
+	example usage:
+
+	```
+	dig()
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def get_hardness(direction: Direction | None = None, /) -> _float | None:
+	"""
+	Gets the hardness of the ground below the drone, or of the neighboring ground
+	in `direction`. Harder blocks take longer to dig.
+
+	returns the ground hardness, or `None` if the requested tile is outside the
+	world.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	if get_hardness() < 5:
+	    dig()
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def get_stability(direction: Direction | None = None, /) -> _float | None:
+	"""
+	Gets the stability of the ground below the drone, or of the neighboring ground
+	in `direction`. Stability controls how much height difference a block can
+	withstand before it caves in.
+
+	returns the ground stability, or `None` if the requested tile is outside the
+	world.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	if get_stability() > 3:
+	    dig()
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def prospect_iron() -> Direction | None:
+	"""
+	Uses one `Items.Coal` to look for nearby iron.
+
+	returns the direction toward the nearest iron ore, or `None` if the drone is
+	already above it, no iron is in range, or there is not enough coal.
+
+	example usage:
+
+	```
+	direction = prospect_iron()
+	if direction != None:
+	    move(direction)
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def prospect_quartz() -> _float | None:
+	"""
+	Uses one `Items.Iron` to look for nearby quartz.
+
+	returns the Euclidean 3D distance to the nearest quartz block, or `None` if no
+	quartz is in range or there is not enough iron.
+
+	example usage:
+
+	```
+	print(prospect_quartz())
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def push(direction: Direction, /) -> _bool:
+	"""
+	Pushes the mushroom block below the drone in `direction`. Blocks cannot be
+	pushed upward.
+
+	returns `True` if the block was pushed, `False` otherwise.
+
+	example usage:
+
+	```
+	push(North)
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def can_push(direction: Direction, /) -> _bool:
+	"""
+	Checks whether the block below the drone can be pushed in `direction` and
+	whether anything blocks it.
+
+	returns `True` if the block can be pushed, `False` otherwise.
+
+	example usage:
+
+	```
+	if can_push(North):
+	    push(North)
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def jump(unlock: Unlock | Unlocks, /) -> None:
+	"""
+	Jumps to an underground feature associated with `unlock`.
+
+	You can only execute `jump` once per script.
+
+	returns `None`.
+
+	example usage:
+
+	```
+	jump(Unlocks.Iron)
+	```
+	"""
+	...
 
 
 
