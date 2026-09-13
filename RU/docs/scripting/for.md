@@ -15,7 +15,7 @@
 Для `variable_name` можно задать любое имя. Это переменная, которая хранит текущий элемент в последовательности. `sequence` должно быть некоторым значением, которое можно перебирать, например, диапазоном или числами. Блок кода выполняется для каждого элемента, при этом переменная цикла присваивается этому элементу.
 
 ## Последовательности
-[Диапазоны](functions/range)      <unlock=lists>[Списки](docs/scripting/lists.md)      </unlock><unlock=functions>[Кортежи](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Словари](docs/scripting/dicts.md)      </unlock><unlock=sets>[Множества](docs/scripting/sets.md)</unlock>
+[Диапазоны](functions/range)      <unlock=variables>[Кортежи](docs/scripting/tuples.md)      </unlock><unlock=lists>[Списки](docs/scripting/lists.md)      </unlock><unlock=dicts>[Словари](docs/scripting/dicts.md)      </unlock><unlock=sets>[Множества](docs/scripting/sets.md)</unlock>
 
 ## Пример
 `for i in range(5):

@@ -15,7 +15,7 @@ Un ciclo for si presenta così:
 `nome_variabile` può essere qualsiasi nome tu scelga. È una variabile che memorizza l'elemento corrente nella sequenza. `sequenza` deve essere un valore che può essere iterato come un range o numeri. Il blocco di codice viene eseguito per ogni elemento con la variabile del ciclo assegnata a quell'elemento.
 
 ## Sequenze
-[Range](functions/range)      <unlock=lists>[Liste](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuple](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dizionari](docs/scripting/dicts.md)      </unlock><unlock=sets>[Set](docs/scripting/sets.md)</unlock>
+[Range](functions/range)      <unlock=variables>[Tuple](docs/scripting/tuples.md)      </unlock><unlock=lists>[Liste](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dizionari](docs/scripting/dicts.md)      </unlock><unlock=sets>[Set](docs/scripting/sets.md)</unlock>
 
 ## Esempio
 `for i in range(5):

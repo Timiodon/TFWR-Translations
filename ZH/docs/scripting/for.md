@@ -15,7 +15,7 @@ for 循环语句的格式如下：
 `variable_name` 是你自定义变量的名称，它是存储序列中的某个元素。`sequence` 是存储序列，存放多个元素，比如一个数字范围。每当 1 个元素被存储序列遍历 1 次，循环体就会运行 1 次。
 
 ## 存储序列
-[范围](functions/range)      <unlock=lists>[列表](docs/scripting/lists.md)      </unlock><unlock=functions>[元组](docs/scripting/tuples.md)      </unlock><unlock=dicts>[字典](docs/scripting/dicts.md)      </unlock><unlock=sets>[集合](docs/scripting/sets.md)</unlock>
+[范围](functions/range)      <unlock=variables>[元组](docs/scripting/tuples.md)      </unlock><unlock=lists>[列表](docs/scripting/lists.md)      </unlock><unlock=dicts>[字典](docs/scripting/dicts.md)      </unlock><unlock=sets>[集合](docs/scripting/sets.md)</unlock>
 
 ## 示例
 `for i in range(5):

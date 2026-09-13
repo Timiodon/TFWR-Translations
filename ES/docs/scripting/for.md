@@ -15,7 +15,7 @@ Un bucle for se ve así:
 `variable_name` puede ser cualquier nombre que elijas. Es una variable que almacena el elemento actual en la secuencia. `sequence` necesita ser algún valor que se pueda iterar, como un rango de números. El bloque de código se ejecuta para cada elemento con la variable del bucle asignada a ese elemento.
 
 ## Secuencias
-[Rangos](functions/range)      <unlock=lists>[Listas](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuplas](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Diccionarios](docs/scripting/dicts.md)      </unlock><unlock=sets>[Conjuntos](docs/scripting/sets.md)</unlock>
+[Rangos](functions/range)      <unlock=variables>[Tuplas](docs/scripting/tuples.md)      </unlock><unlock=lists>[Listas](docs/scripting/lists.md)      </unlock><unlock=dicts>[Diccionarios](docs/scripting/dicts.md)      </unlock><unlock=sets>[Conjuntos](docs/scripting/sets.md)</unlock>
 
 ## Ejemplo
 `for i in range(5):

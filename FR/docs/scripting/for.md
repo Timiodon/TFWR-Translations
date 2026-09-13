@@ -15,7 +15,7 @@ Une boucle for ressemble à ceci :
 `variable_name` peut être n'importe quel nom que tu choisis. C'est une variable qui stocke l'élément actuel dans la séquence. `sequence` doit être une valeur qui peut être itérée comme un range de nombres. Le bloc de code est exécuté pour chaque élément avec la variable de boucle assignée à cet élément.
 
 ## Séquences
-[Ranges](functions/range)      <unlock=lists>[Listes](docs/scripting/lists.md)      </unlock><unlock=functions>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=dicts>[Dictionnaires](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
+[Ranges](functions/range)      <unlock=variables>[Tuples](docs/scripting/tuples.md)      </unlock><unlock=lists>[Listes](docs/scripting/lists.md)      </unlock><unlock=dicts>[Dictionnaires](docs/scripting/dicts.md)      </unlock><unlock=sets>[Sets](docs/scripting/sets.md)</unlock>
 
 ## Exemple
 `for i in range(5):

@@ -19,7 +19,7 @@ for variable_name in sequence:
 `variable_name` 可以是你選擇的任意名稱。它是一個，用來儲存序列中目前元素的變數。`sequence` 必須是可被迭代的值，例如數字範圍。程式碼區塊會對序列中的每一個元素執行一次，且迴圈變數在每次執行時會被指派為該元素。
 
 ## 序列
-[範圍](functions/range)      <unlock=lists>[串列](docs/scripting/lists.md)      </unlock><unlock=functions>[元組](docs/scripting/tuples.md)      </unlock><unlock=dicts>[字典](docs/scripting/dicts.md)      </unlock><unlock=sets>[集合](docs/scripting/sets.md)</unlock>
+[範圍](functions/range)      <unlock=variables>[元組](docs/scripting/tuples.md)      </unlock><unlock=lists>[串列](docs/scripting/lists.md)      </unlock><unlock=dicts>[字典](docs/scripting/dicts.md)      </unlock><unlock=sets>[集合](docs/scripting/sets.md)</unlock>
 
 ## 範例
 
