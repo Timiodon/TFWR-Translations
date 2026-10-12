@@ -22,7 +22,7 @@ Você pode criar novas listas assim:
     "seed": 0,
     "exclude_unlocks": ["watering", "fertilizer"],
     "starting_chunk": 0,
-    "dlc_enabled": false,
+    "dlc_enabled": false
 }
 #SETUP
 #CODE
