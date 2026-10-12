@@ -4,11 +4,11 @@
 ---
 # 벼
 
-지표 아래에서 얇은 점토층을 발견했을 거예요. 이 비옥한 땅은 벼 모를 심기에 안성맞춤이에요.
+지표 아래에 얇은 점토층이 있음을 발견하셨을 겁니다. 이 비옥한 땅은 벼 모를 심기에 안성맞춤이죠.
 
-벼는 심은 점토를 말려 버려요. 각 점토 블록은 한 번만 사용할 수 있어요. 다행히 점토층은 몇 블록 두께예요. 물론 언제든 `clear()`로 세계를 초기화해 점토층을 다시 생성할 수도 있어요.
+벼는 점토를 말리므로, 각 점토 블록은 한 번만 사용할 수 있습니다. 다행히 점토층은 몇 블록 두께입니다. 물론 언제든 `clear()`로 세계를 초기화해 점토층을 다시 생성할 수도 있습니다.
 
-점토를 찾을 때까지 아래로 파는 데 다음 코드가 유용할 거예요.
+점토를 찾을 때까지 굴착하는 데는 다음 코드가 유용합니다.
 
 {{codeexample 
 {
@@ -41,6 +41,6 @@ do_a_flip()
 
 ---
 
-[통계](docs/stats.md)      [채광](docs/unlocks/mining.md)      [지하 감각](docs/unlocks/underground_senses.md)      [If문](docs/scripting/if.md)      [for 루프](docs/scripting/for.md)
+[통계](docs/stats.md)      [채광](docs/unlocks/mining.md)      [지하 감지](docs/unlocks/underground_senses.md)      [If문](docs/scripting/if.md)      [for 루프](docs/scripting/for.md)
 
 [harvest()](functions/harvest)      [plant()](functions/plant)      [move()](functions/move)      [dig()](functions/dig)      [get_ground_type()](functions/get_ground_type)

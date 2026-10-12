@@ -1,14 +1,14 @@
-[<- Горное дело](docs/unlocks/mining.md) <right>[Бамбук ->](docs/unlocks/bamboo.md)
+[<- Добыча](docs/unlocks/mining.md) <right>[Бамбук ->](docs/unlocks/bamboo.md)
 <right>[Окаменевшие тыквы ->](docs/unlocks/petrified_pumpkins.md)
 <right>[Перлит и суглинок ->](docs/unlocks/special_soils.md)
 ---
 # Рис
 
-Под поверхностью обнаружился тонкий пласт глины. Оказывается, этот плодородный грунт идеально подходит для посадки риса.
+Под поверхностью обнаружился тонкий пласт глины. Оказывается, эта плодородная земля идеально подходит для посадки риса.
 
-Рис высушивает глину, на которой посажен, поэтому каждый блок глины можно использовать только один раз. К счастью, пласт имеет толщину в несколько блоков. И конечно, всегда можно вызвать `clear()`, чтобы восстановить глиняный пласт.
+Рис высушивает глину, на которой посажен, поэтому каждый блок глины можно использовать только один раз. К счастью, этот пласт толщиной в несколько блоков. И конечно, всегда можно вызвать `clear()`, чтобы восстановить глиняный пласт.
 
-Следующий код может пригодиться, чтобы бурить вниз, пока не найдется глина.
+Следующий код может пригодиться, чтобы копать вниз, пока не найдется глина.
 
 {{codeexample 
 {
@@ -41,6 +41,6 @@ do_a_flip()
 
 ---
 
-[Статистика](docs/stats.md)      [Горное дело](docs/unlocks/mining.md)      [Подземные датчики](docs/unlocks/underground_senses.md)      [If](docs/scripting/if.md)      [Цикл for](docs/scripting/for.md)
+[Статистика](docs/stats.md)      [Добыча](docs/unlocks/mining.md)      [Подземные датчики](docs/unlocks/underground_senses.md)      [If](docs/scripting/if.md)      [Цикл For](docs/scripting/for.md)
 
 [harvest()](functions/harvest)      [plant()](functions/plant)      [move()](functions/move)      [dig()](functions/dig)      [get_ground_type()](functions/get_ground_type)

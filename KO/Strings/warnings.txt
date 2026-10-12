@@ -2,10 +2,10 @@
 @warning_no_space_to_plant = 이미 무언가가 있는 자리에 {0}을(를) 심으려 했습니다.
 @warning_cant_plant_on_ground = {1}에 {0}을(를) 심을 수 없습니다.
 @warning_missing_seed = {0} 심기에 필요한 아이템이 없었습니다.
-@warning_not_enough_coal = 철을 탐사할 석탄이 부족했습니다.
-@warning_not_enough_iron = 수정을 탐사할 철이 부족했습니다.
+@warning_not_enough_coal = 철을 탐사하는 데 필요한 석탄이 부족했습니다.
+@warning_not_enough_iron = 석영을 탐사하는 데 필요한 철이 부족했습니다.
 @warning_no_item_to_use = {0}을(를) 사용하려 했지만 수가 부족했습니다.
-@warning_cannot_place_ground = {0}은(는) 특수 블록이므로 배치할 수 없습니다.
+@warning_cannot_place_ground = {0} 블록은 특수 블록이므로 배치할 수 없습니다.
 @warning_failed_swap_wrap = 농장 경계를 넘어 교환하려고 했습니다. 이는 허용되지 않습니다.
 @warning_failed_swap_unswappable = 교환할 수 없는 {0} 항목을 교환하려 했습니다.
 @warning_weird_substance_not_divisible = 기묘한 물질을 미로 생성에 필요한 개수만큼 사용하지 않았습니다. 미로를 업그레이드할수록 필요한 기묘한 물질의 양이 증가한다는 점을 기억하세요.

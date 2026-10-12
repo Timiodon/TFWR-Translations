@@ -13,10 +13,10 @@
 @item_descr_cactus = 정렬된 선인장을 수확해 획득합니다.
 @item_descr_cactus_seed = 이 아이템은 게임에서 제거되었습니다.
 @item_descr_bone = 고대 생물의 뼈입니다.
-@item_descr_block = 땅을 파서 획득하는 블록입니다.
-@item_descr_coal = 지하의 석탄을 캐서 획득합니다. 석탄 매장층은 넓고 평평하게 생성됩니다.
-@item_descr_iron = 지하의 철광석을 캐서 획득합니다.
-@item_descr_quartz = 수정 광맥을 캐서 획득합니다. 바늘 같은 구조로 생성됩니다.
-@item_descr_dynamite = 다이너마이트 땅을 파서 획득합니다.
+@item_descr_block = 굴착해 획득하는 블록입니다.
+@item_descr_coal = 지하의 석탄을 굴착해 획득합니다. 석탄 매장층은 평평한 층 형태로 생성됩니다.
+@item_descr_iron = 지하의 철광석을 굴착해 획득합니다.
+@item_descr_quartz = 석영 광맥을 굴착해 획득합니다. 바늘 모양 구조로 생성됩니다.
+@item_descr_dynamite = 다이너마이트 땅을 굴착해 획득합니다.
 @item_descr_bamboo = 대나무를 수확해 획득합니다.
 @item_descr_mushroom = 버섯 땅 블록을 쌓아 획득합니다.

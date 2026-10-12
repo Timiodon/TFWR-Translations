@@ -47,7 +47,7 @@ do_two_flips()`
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_rice = 就像小麦一样，只不过长在黏土上。
+@unlock_descr_rice = 就像长在黏土上的小麦。
 
 `if get_ground_type() == Grounds.Clay:
     plant(Entities.Rice)`
@@ -113,15 +113,15 @@ other_file.function()`
 @unlock_descr_megafarm = 更多无人机，更大农场！
 
 `spawn_drone(task)`
-@unlock_descr_mining = 给无人机配备钻头。还有一顶矿工帽。
+@unlock_descr_mining = 给无人机配备钻头，还有一顶矿工帽。
 
 `dig()`
-@unlock_descr_coal = 地下会生成煤层。
+@unlock_descr_coal = 地下会生成煤炭矿床。
 @unlock_descr_iron = 地下会生成铁矿脉。
 @unlock_descr_pyramid = 地下会生成古代砂岩建筑。
 @unlock_descr_quartz = 地下会生成针状石英矿脉。
-@unlock_descr_ore_boost = 煤炭产量翻倍。铁矿脉和石英矿脉的规模翻倍。
-@unlock_descr_jump = 让无人机向下跳转。
+@unlock_descr_ore_boost = 煤炭产量翻倍。铁矿和石英矿脉的规模翻倍。
+@unlock_descr_jump = 允许无人机向下跳转。
 @unlock_descr_prospecting = 消耗煤炭探查铁矿！
 
 `prospect_iron()`
@@ -138,7 +138,7 @@ other_file.function()`
         move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = 地下会生成石化南瓜。
-@unlock_descr_special_soils = 发现壤土和珍珠岩层，提高植物产量。
+@unlock_descr_special_soils = 发现壤土和珍珠岩层，提高植株产量。
 @unlock_descr_bamboo = 种植竹子，看着它长大。
 
 `plant(Entities.Bamboo)`
@@ -147,7 +147,7 @@ other_file.function()`
 @unlock_descr_mushrooms = 匹配蘑菇类型，寻找并收获地下蘑菇。
 @multi_unlock_descr_expand = 扩大农场，同时还会清空农场。
 @multi_unlock_descr_carrots = 增加胡萝卜的产量和成本。
-@multi_unlock_descr_rice = 提高水稻的产量和种植成本。
+@multi_unlock_descr_rice = 提高水稻植株的产量和消耗。
 @multi_unlock_descr_trees = 增加灌木和树的产量。
 @multi_unlock_descr_pumpkins = 增加南瓜的产量和成本。
 @multi_unlock_descr_mazes = 增加宝箱中的金币和生成迷宫所需的奇异物质数量。
@@ -159,16 +159,16 @@ other_file.function()`
 @multi_unlock_descr_fertilizer = 获得更多肥料。
 @multi_unlock_descr_megafarm = 进一步增加农场大小和无人机数量。
 @multi_unlock_descr_drill = 提高钻头速度。
-@multi_unlock_descr_coal = 地下会生成更多煤层。
-@multi_unlock_descr_iron = 提高铁矿产量。
+@multi_unlock_descr_coal = 地下会生成更多煤炭层。
+@multi_unlock_descr_iron = 提高铁矿石产量。
 @multi_unlock_descr_pyramid = 提高修复金字塔时获得的能量。
-@multi_unlock_descr_quartz = 提高石英矿产量。
+@multi_unlock_descr_quartz = 提高石英矿石产量。
 @multi_unlock_descr_petrified_pumpkins = 提高石化南瓜的产量。
 @multi_unlock_descr_dynamite = 提高炸药产量和爆炸能量。
-@multi_unlock_descr_treasure_map = 延长藏宝路线的深度，从而增加宝藏中的金币数量。
+@multi_unlock_descr_treasure_map = 延长宝藏路径的深度，从而增加宝藏中的黄金数量。
 @multi_unlock_descr_ore_boost = 进一步提高煤炭产量，并扩大铁矿脉和石英矿脉的规模。
-@multi_unlock_descr_bamboo = 提高竹子的产量和种植成本。
-@multi_unlock_descr_mushrooms = 提高匹配蘑菇地块时的产量。
+@multi_unlock_descr_bamboo = 提高竹子的产量和消耗。
+@multi_unlock_descr_mushrooms = 提高匹配蘑菇地块的产量。
 @auto_unlock = 自动解锁
 @cactus = 仙人掌
 @carrots = 胡萝卜

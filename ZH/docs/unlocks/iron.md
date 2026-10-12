@@ -1,12 +1,12 @@
-[<- 煤炭](docs/unlocks/coal.md) <right>[石英 ->](docs/unlocks/quartz.md)
-<right>[铁矿探查 ->](docs/unlocks/prospecting.md)
-<right>[藏宝图 ->](docs/unlocks/treasure_map.md)
+[<-煤炭](docs/unlocks/coal.md) <right>[石英->](docs/unlocks/quartz.md)
+<right>[铁矿探查->](docs/unlocks/prospecting.md)
+<right>[藏宝图->](docs/unlocks/treasure_map.md)
 ---
 # 铁矿
 
-你在黏土下方的岩层中发现了铁矿脉。
+你在黏土下方的岩石层中发现了铁矿脉。
 
-铁矿脉一开始很小，找到它们还需要一点运气。随着此解锁项等级提高，矿脉的最大规模也会增大。想更稳定地找到铁矿，还可以看看铁矿探查解锁项。
+铁矿脉的矿头很小，要找到还需要一点运气。随着此解锁项等级提高，矿脉的最大规模也会增大。想更稳定地找到铁矿，还可以看看矿石探查解锁项。
 
 铁矿脉始终连成一片，不会斜着跨越地块。如果找到一块铁矿，就检查它的下方及相邻地块，确保采完整条矿脉。
 

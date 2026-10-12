@@ -9,7 +9,7 @@
 @new_hat_unlocked = ## 新しい帽子がアンロックされました
 `change_hat(`{0}`)`
 @right_click_for_more_info = -- 詳細については右クリック --
-@missing_unlock_page = このページを見るには、[アンロックツリー](tech_tree)で {0} をアンロックする必要があります。
+@missing_unlock_page = このページを見るには、[技術ツリー](tech_tree)で {0}をアンロックする必要があります。
 
 ---
 

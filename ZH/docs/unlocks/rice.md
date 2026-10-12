@@ -1,12 +1,12 @@
-[<- 采矿](docs/unlocks/mining.md) <right>[竹子 ->](docs/unlocks/bamboo.md)
-<right>[石化南瓜 ->](docs/unlocks/petrified_pumpkins.md)
-<right>[珍珠岩与壤土 ->](docs/unlocks/special_soils.md)
+[<-采矿](docs/unlocks/mining.md) <right>[竹子->](docs/unlocks/bamboo.md)
+<right>[石化南瓜->](docs/unlocks/petrified_pumpkins.md)
+<right>[珍珠岩与壤土->](docs/unlocks/special_soils.md)
 ---
 # 水稻
 
-你注意到地表下方有一层薄薄的黏土。原来，这种肥沃的土壤非常适合种植水稻幼苗。
+你注意到地表下方有一层薄薄的黏土。这种肥沃的地块非常适合种植水稻幼苗。
 
-水稻会让种植它的黏土变干。每块黏土只能使用一次。好在这层黏土有好几个地块厚。当然，你也随时可以使用 `clear()` 重置世界，让黏土层重新出现。
+种植水稻后，黏土会变干。每块黏土只能使用一次。好在这层黏土有好几个地块厚。当然，你也随时可以使用 `clear()` 重置世界，让黏土层重新出现。
 
 下面的代码可以帮助你向下挖掘，直到找到黏土。
 

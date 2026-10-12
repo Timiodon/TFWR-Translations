@@ -18,8 +18,8 @@
 @hat_descr_gold_trophy_hat = 最高の農家だけに与えられます。
 @hat_descr_silver_trophy_hat = 2番目に優れた農家に与えられます。
 @hat_descr_wood_trophy_hat = 3番目に優れた農家に与えられます。
-@hat_descr_dynamite_hat = 発破責任者の帽子。掘るたびに爆発し、ダイナマイトを1個消費します。発破責任者のドローンは1機しか存在できません。
+@hat_descr_dynamite_hat = チーフブラスターの帽子。掘るたびに爆発し、ダイナマイトを1個消費します。チーフブラスターのドローンは1機しか存在できません。
 @hat_descr_golden_cactus_hat = サボテンの帽子の金色バージョン。
 @hat_descr_golden_pumpkin_hat = カボチャの帽子の金色バージョン。
 @hat_descr_golden_sunflower_hat = ヒマワリの帽子の金色バージョン。
-@hat_descr_the_farmers_remains = 何があったのでしょう？
+@hat_descr_the_farmers_remains = 何が起きたのでしょうか？

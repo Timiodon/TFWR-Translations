@@ -47,7 +47,7 @@ do_two_flips()`
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_rice = Почти как пшеница, только растет на глине.
+@unlock_descr_rice = Точь-в-точь как пшеница, если бы она росла на глине.
 
 `if get_ground_type() == Grounds.Clay:
     plant(Entities.Rice)`
@@ -113,7 +113,7 @@ other_file.function()`
 @unlock_descr_megafarm = Больше дронов!
 
 `spawn_drone(task)`
-@unlock_descr_mining = Дает дрону бур. И шахтерскую каску.
+@unlock_descr_mining = Оснащает дрон буром. И дает ему шахтерскую каску.
 
 `dig()`
 @unlock_descr_coal = Под землей появляются залежи угля.
@@ -121,7 +121,7 @@ other_file.function()`
 @unlock_descr_pyramid = Под землей появляются древние сооружения из песчаника.
 @unlock_descr_quartz = Под землей появляются кварцевые иглы.
 @unlock_descr_ore_boost = Удваивает добычу угля. Удваивает размер железных и кварцевых жил.
-@unlock_descr_jump = Позволяет дрону перемещаться вниз.
+@unlock_descr_jump = Позволяет дрону прыгать вниз.
 @unlock_descr_prospecting = Используй уголь для поиска железа!
 
 `prospect_iron()`
@@ -138,12 +138,12 @@ other_file.function()`
         move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Под землей появляются окаменевшие тыквы.
-@unlock_descr_special_soils = Находи пласты суглинка и перлита, чтобы повысить урожай растений.
+@unlock_descr_special_soils = Открой слои суглинка и перлита, чтобы повысить урожай растений.
 @unlock_descr_bamboo = Посади бамбук и наблюдай, как он растет.
 
 `plant(Entities.Bamboo)`
 @unlock_descr_dynamite = Находи и используй динамит, чтобы все взрывать.
-@unlock_descr_treasure_map = Отыщи сокровище, спрятанное глубоко под землей.
+@unlock_descr_treasure_map = Ищи клад, спрятанный глубоко под землёй.
 @unlock_descr_mushrooms = Находи и собирай подземные грибы, сопоставляя блоки одного типа.
 @multi_unlock_descr_expand = Расширяет ферму, а также очищает ее.
 @multi_unlock_descr_carrots = Повышает урожай и стоимость моркови.
@@ -164,11 +164,11 @@ other_file.function()`
 @multi_unlock_descr_pyramid = Повышает количество энергии, получаемой за восстановление пирамид.
 @multi_unlock_descr_quartz = Повышает добычу кварцевой руды.
 @multi_unlock_descr_petrified_pumpkins = Повышает урожай окаменевших тыкв.
-@multi_unlock_descr_dynamite = Повышает добычу динамита и энергию взрывов.
-@multi_unlock_descr_treasure_map = Увеличивает глубину пути к сокровищу и тем самым количество получаемого из него золота.
+@multi_unlock_descr_dynamite = Повышает производство динамита и энергию взрывов.
+@multi_unlock_descr_treasure_map = Увеличивает глубину пути к кладу и тем самым количество получаемого за него золота.
 @multi_unlock_descr_ore_boost = Еще сильнее повышает добычу угля и размер железных и кварцевых жил.
 @multi_unlock_descr_bamboo = Повышает урожай и стоимость бамбука.
-@multi_unlock_descr_mushrooms = Повышает добычу при совмещении грибных блоков.
+@multi_unlock_descr_mushrooms = Повышает урожай при совмещении блоков грибов.
 @auto_unlock = Авторазблокировка
 @cactus = Кактус
 @carrots = Морковь
@@ -211,8 +211,8 @@ other_file.function()`
 @pyramid = Пирамиды
 @ore_boost = Обогащение руды
 @petrified_pumpkins = Окаменевшие тыквы
-@special_soils = Особые грунты
-@mining = Горное дело
+@special_soils = Особые грядки
+@mining = Добыча
 @coal = Уголь
 @drill = Бур
 @quartz = Кварц
@@ -220,5 +220,5 @@ other_file.function()`
 @dynamite = Динамит
 @bamboo = Бамбук
 @treasure_map = Карта сокровищ
-@mushrooms = Грибы
+@mushrooms = Гриб
 @jump = Прыжок

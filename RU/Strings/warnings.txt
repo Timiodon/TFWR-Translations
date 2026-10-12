@@ -2,10 +2,10 @@
 @warning_no_space_to_plant = {0}: попытка посадить на занятой клетке.
 @warning_cant_plant_on_ground = Нельзя сажать {0} на земле типа {1}.
 @warning_missing_seed = Не хватило необходимых предметов для посадки {0}.
-@warning_not_enough_coal = Не хватило угля для поиска железа.
-@warning_not_enough_iron = Не хватило железа для поиска кварца.
+@warning_not_enough_coal = Недостаточно угля для поиска железа.
+@warning_not_enough_iron = Недостаточно железа для поиска кварца.
 @warning_no_item_to_use = {0}: не удалось использовать, так как недостаточно.
-@warning_cannot_place_ground = Нельзя установить {0}: это особый блок.
+@warning_cannot_place_ground = Нельзя установить {0} — это особый блок.
 @warning_failed_swap_wrap = Попытка обмена за границами фермы. Это запрещено.
 @warning_failed_swap_unswappable = {0}: не удалось обменять, так как это запрещено.
 @warning_weird_substance_not_divisible = Количество использованного странного вещества не соответствует значению, необходимому для создания лабиринта. Не забывай, что оно растет по мере улучшения лабиринта.

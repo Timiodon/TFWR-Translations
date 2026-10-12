@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = 최고의 농부만을 위한 모자입니다.
 @hat_descr_silver_trophy_hat = 두 번째로 뛰어난 농부를 위한 모자입니다.
 @hat_descr_wood_trophy_hat = 세 번째로 뛰어난 농부를 위한 모자입니다.
-@hat_descr_dynamite_hat = 발파 책임자의 모자입니다. 땅을 파는 동작마다 폭발이 일어나며 다이너마이트 하나를 소모합니다. 발파 책임자 드론은 하나만 있을 수 있습니다.
+@hat_descr_dynamite_hat = 폭파 책임자의 모자입니다. 굴착할 때마다 폭발이 일어나며 다이너마이트 하나를 소모합니다. 폭파 책임자 드론은 하나만 있을 수 있습니다.
 @hat_descr_golden_cactus_hat = 선인장 모자의 황금빛 버전입니다.
 @hat_descr_golden_pumpkin_hat = 호박 모자의 황금빛 버전입니다.
 @hat_descr_golden_sunflower_hat = 해바라기 모자의 황금빛 버전입니다.

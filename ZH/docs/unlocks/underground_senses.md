@@ -1,4 +1,4 @@
-[<- 采矿](docs/unlocks/mining.md)
+[<-采矿](docs/unlocks/mining.md)
 ---
 # 地下感官
 
@@ -61,11 +61,12 @@ if get_ground_type() == Grounds.Dirt:
     do_a_flip()
 }}
 
-`get_hardness()` 返回无人机下方地块的硬度。你也可以传入方向参数，例如 `get_hardness(North)`。地块越硬，挖掘所需时间越长。
+
+`get_hardness()` 返回无人机下方地块的硬度。你也可以传入方向参数，例如 `get_hardness(North)`。地块硬度越高，挖掘所需时间越长。
 
 `get_stability()` 返回无人机下方地块的稳定度。你也可以传入方向参数，例如 `get_stability(North)`。稳定度为 1 表示地块在塌方前能承受 1 格的高度差。
 
-注意：无人机向下挖掘时，紧邻它的四个地块会被移除，无论它们的稳定度如何；具有特殊功能的地块除外。例如，黏土、铁矿和石英不会因此被移除。不过，稳定度不足时，它们仍可能塌方。
+注意：无人机向下挖掘时，紧邻它的四个地块会被移除，无论其稳定度如何；具有特殊功能的地块除外。例如，黏土、铁矿和石英不会因此被移除。不过，稳定度不足时，它们仍可能塌方。
 ---
 
 [采矿](docs/unlocks/mining.md)      [感官](docs/unlocks/senses.md)

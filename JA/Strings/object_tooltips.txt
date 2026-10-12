@@ -20,14 +20,14 @@
 @object_descr_dinosaur = 恐竜の帽子の尻尾の一部。
 @object_descr_grassland = デフォルトの地面。草が自動的に生えてきます。
 @object_descr_soil = `till()`を呼び出すと地面が土に変わります。もう一度`till()`を呼び出すと、草原に戻ります。
-@object_descr_dirt = ただの土です。
+@object_descr_dirt = これは土です。
 @object_descr_rock = 硬い岩です。
-@object_descr_clay = 粘土のブロック。肥沃で、稲を育てるのに最適です。稲が成熟すると、その下の粘土は土に戻ります。
+@object_descr_clay = 粘土のブロック。肥沃な地面で、稲を育てるのに最適です。稲が成熟すると、その下の粘土は土に戻ります。
 @object_descr_blue_block = 青いブロック。
 @object_descr_red_block = 赤いブロック。
 @object_descr_green_block = 緑のブロック。
 @object_descr_coal = 堆積した石炭を多く含むブロック。
-@object_descr_iron = 磁鉄鉱の原石を含むブロック。
+@object_descr_iron = 天然の磁鉄鉱を含むブロック。
 @object_descr_quartz = 結晶質の石英を包み込んだブロック。
 @object_descr_limestone = 白っぽい石灰岩。古代のピラミッドの土台を構成しています。
 @object_descr_sand = 砂のブロック。古代のピラミッドの一部です。
@@ -39,19 +39,19 @@
 {{itemblock tooltip}}
 @runtime_ground_tooltip = 採掘すると入手できるもの：
 {{itemblock tooltip_ground}}
-@runtime_mushroom_tooltip = 同じ種類のキノコのブロックを2つ積み重ねると入手できるもの：
+@runtime_mushroom_tooltip = 同じ種類のキノコのブロックを2つ積み重ねることで入手できます：
 {{itemblock tooltip_ground}}
 @runtime_growable_tooltip = 合計成長時間：{0}秒
 成長率 {1}%
 @runtime_ground_hardness_tooltip = 硬さ：{0}
 @runtime_ground_stability_tooltip = 安定性：{0}
 @runtime_ground_water_tooltip = 水分量：{0}
-@object_descr_dynamite = 掘ると爆発します。植えるときは必ずダイナマイトを1個使い、収穫すると必ず1個得られます。
+@object_descr_dynamite = 掘ると爆発します。植えるときと収穫するときは、必ずダイナマイトを1個使い、必ず1個の収穫量が得られます。
 @object_descr_dynamite_ground = 掘ると下のブロックにダイナマイトが落ちることがあります。そのダイナマイトは収穫できますが、掘ると爆発します。
-@object_descr_soot = 謎のすす。`measure()` を呼ぶと、1つ上の地層にある爆発可能なダイナマイトの数がわかります。上にダイナマイトが落ちてくると即座に爆発させます。
-@object_descr_basalt = 溶岩が冷えてできた柔らかい岩。下に何かが保存されているかも？
-@object_descr_treasure_map_ground = 宝の地図！どこにつながっているのでしょう？
-@object_descr_treasure_path_ground = 宝の地図からゴールへ続く道の上です。
-@object_descr_treasure_goal_ground = 宝の地図が示す道の終点。ここには何が隠されているのでしょう？
-@object_descr_underground_treasure = 宝の地図の道の果てで見つかる、幻の宝物。
-@object_descr_mushroom = 地下に生えるキノコ。`measure()` で種類を調べられます。
+@object_descr_soot = 謎のすす。`measure()`を呼ぶと、1つ上の地層にある爆発するダイナマイトの数がわかります。上にダイナマイトが落ちてくると即座に爆発させます。
+@object_descr_basalt = 溶岩が冷えてできた柔らかい岩。下に何かが保存されているかもしれません。
+@object_descr_treasure_map_ground = 宝物の地図！どこにつながっているのでしょうか？
+@object_descr_treasure_path_ground = 宝物の地図からゴールへ続く道の上です。
+@object_descr_treasure_goal_ground = 宝物の地図が示す道の終点。ここには何が隠されているのでしょうか？
+@object_descr_underground_treasure = 宝物の地図の道の果てで見つかる、幻の宝物。
+@object_descr_mushroom = 地下に生えるキノコ。`measure()`でキノコの種類を調べられます。

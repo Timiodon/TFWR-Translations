@@ -1,6 +1,6 @@
 @unlock_tooltip_template_cost = ### アンロックコスト {{{{itemblock cost unlock {0}}}}}
 @unlock_tooltip_template_additional_requirement = ### アンロック条件
-{0} のアンロックレベルが {1} 以上である必要があります。
+{0}のアンロックレベルが{1}以上である必要があります。
 @unlock_descr_trees = 木をアンロックします。
 
 `plant(Entities.Trees)`
@@ -47,7 +47,7 @@ do_two_flips()`
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_rice = 小麦のようなものです。もし小麦が粘土で育つなら。
+@unlock_descr_rice = 小麦のようなものです。もし小麦が粘土で育つならですが...
 
 `if get_ground_type() == Grounds.Clay:
     plant(Entities.Rice)`
@@ -113,23 +113,23 @@ other_file.function()`
 @unlock_descr_megafarm = もっとドローンを！
 
 `spawn_drone(task)`
-@unlock_descr_mining = ドローンにドリルを装備します。それから採掘用の帽子も。
+@unlock_descr_mining = ドローンにドリルを装備します。採掘用の帽子もついてきます。
 
 `dig()`
 @unlock_descr_coal = 地下に石炭の鉱床が生成されます。
 @unlock_descr_iron = 地下に鉄鉱石の鉱脈が生成されます。
 @unlock_descr_pyramid = 地下に古代の砂岩の建造物が生成されます。
 @unlock_descr_quartz = 地下に針状の石英が生成されます。
-@unlock_descr_ore_boost = 石炭の収穫量が2倍になります。鉄と石英の鉱脈の大きさも2倍になります。
-@unlock_descr_jump = ドローンが下方向へジャンプできるようになります。
-@unlock_descr_prospecting = 石炭を使って鉄を探そう！
+@unlock_descr_ore_boost = 石炭の収穫量が2倍になります。鉄と石英の鉱脈のサイズも2倍になります。
+@unlock_descr_jump = ドローンが下方向にジャンプできるようになります。
+@unlock_descr_prospecting = 石炭を使って鉄を探しましょう！
 
 `prospect_iron()`
 @unlock_descr_drill = ドリルの強さを高めます。
-@unlock_descr_debug_place = 色とりどりのブロックを配置します。
+@unlock_descr_debug_place = カラフルなブロックを配置します。
 
 `place(Grounds.Red_Block)`
-@unlock_descr_underground_senses = 地下のタイルを調べたり操作したりするためのドローンセンサー。
+@unlock_descr_underground_senses = 地下のタイルを調べたり操作したりするためのドローンセンサーです。
 
 `while get_pos_z() < 100:
     while get_hardness() > 5:
@@ -137,14 +137,14 @@ other_file.function()`
             dig(North)
         move(North)
     dig()`
-@unlock_descr_petrified_pumpkins = 地下に化石化したカボチャが生成されます。
-@unlock_descr_special_soils = 壌土とパーライトの層を見つけて植物の収穫量を増やします。
-@unlock_descr_bamboo = 竹を植えて、育つ様子を見ましょう。
+@unlock_descr_petrified_pumpkins = 地下に石化したカボチャが生成されます。
+@unlock_descr_special_soils = 壌土とパーライトの層を見つけて植物の収穫量をブーストします。
+@unlock_descr_bamboo = 竹を植えて、育つ様子を見ます。
 
 `plant(Entities.Bamboo)`
 @unlock_descr_dynamite = ダイナマイトを見つけて、いろいろなものを吹き飛ばしましょう。
 @unlock_descr_treasure_map = 地中深くに隠された宝物を探しましょう。
-@unlock_descr_mushrooms = 同じ種類のキノコをそろえて、地下のキノコを見つけて収穫します。
+@unlock_descr_mushrooms = 地下のキノコを見つけて、同じ種類のキノコをそろえて収穫します。
 @multi_unlock_descr_expand = 農場を拡大します。これにより農場もクリアされます。
 @multi_unlock_descr_carrots = ニンジンの収穫量とコストを増やします。
 @multi_unlock_descr_rice = 稲の収穫量とコストを増やします。
@@ -164,11 +164,11 @@ other_file.function()`
 @multi_unlock_descr_pyramid = ピラミッドの修復で得られるパワーを増やします。
 @multi_unlock_descr_quartz = 石英鉱石の収穫量を増やします。
 @multi_unlock_descr_petrified_pumpkins = 石化したカボチャの収穫量を増やします。
-@multi_unlock_descr_dynamite = ダイナマイトの収穫量と爆発の威力を増やします。
-@multi_unlock_descr_treasure_map = 宝の道がより深くまで伸び、宝物から得られるゴールドが増えます。
-@multi_unlock_descr_ore_boost = 石炭の収穫量と、鉄と石英の鉱脈の大きさをさらに増やします。
+@multi_unlock_descr_dynamite = ダイナマイトの収穫量と爆発のエネルギーを増やします。
+@multi_unlock_descr_treasure_map = 宝物の道がより深くまで伸び、宝物から得られるゴールドが増えます。
+@multi_unlock_descr_ore_boost = 石炭の収穫量と、鉄と石英の鉱脈のサイズをさらに増やします。
 @multi_unlock_descr_bamboo = 竹の収穫量とコストを増やします。
-@multi_unlock_descr_mushrooms = 同じ種類をそろえたキノコのブロックから得られる量を増やします。
+@multi_unlock_descr_mushrooms = 同じ種類をそろえたキノコのブロックから得られる収穫量を増やします。
 @auto_unlock = 自動アンロック
 @cactus = サボテン
 @carrots = ニンジン
@@ -219,6 +219,6 @@ other_file.function()`
 @prospecting = 鉄の探査
 @dynamite = ダイナマイト
 @bamboo = 竹
-@treasure_map = 宝の地図
+@treasure_map = 宝物の地図
 @mushrooms = キノコ
 @jump = ジャンプ

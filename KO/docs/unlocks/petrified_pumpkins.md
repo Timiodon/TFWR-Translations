@@ -2,9 +2,9 @@
 ---
 # 화석화된 호박
 
-어쩐지 지하에서 호박을 찾을 수 있다는군요. 단단하게 굳어 화석화되었지만, 우리가 쓰기에는 아직 충분해요.
+어쩐지 지하에서 호박을 찾을 수 있는 모양입니다. 단단하게 굳어 화석화되었지만, 우리가 쓰기에는 아직 충분하죠.
 
-화석화된 호박은 지하에 3x3x3 또는 5x5x5 크기의 블록 뭉치로 나타나요. 확실하게 찾는 방법은 없으니 드론이 운 좋게 하나를 파내기를 바라야 해요. 화석화된 호박은 돌과 철층 아래의 단단한 흙에, 수정이 나오는 것과 대략 같은 높이에 생성돼요(수정을 해금했다면요).
+화석화된 호박은 지하에 3x3x3 또는 5x5x5 크기의 블록 뭉치로 나타납니다. 확실하게 찾는 방법은 없으니 드론이 운 좋게 하나 굴착해내길 바랄 수밖에 없죠. 화석화된 호박은 암석과 철층 아래의 단단한 흙에, 석영이 출현하는 곳과 대략 같은 높이에 생성됩니다(석영을 해금한 경우).
 
 {{codeexample 
 {
@@ -45,6 +45,6 @@ for i in range(get_world_size()):
 
 ---
 
-[통계](docs/stats.md)      [채광](docs/unlocks/mining.md)      [지하 감각](docs/unlocks/underground_senses.md)
+[통계](docs/stats.md)      [채광](docs/unlocks/mining.md)      [지하 감지](docs/unlocks/underground_senses.md)
 
 [move()](functions/move)      [dig()](functions/dig)      [get_ground_type()](functions/get_ground_type)

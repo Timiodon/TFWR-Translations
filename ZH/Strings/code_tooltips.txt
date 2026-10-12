@@ -110,7 +110,7 @@ y 坐标从南边的 `0` 开始，向北递增。
 
 示例：
 `x, y = get_pos_x(), get_pos_y()`
-@code_tooltip_get_pos_z = `get_pos_z()` 
+@code_tooltip_get_pos_z = `get_pos_z()`
 获取无人机当前的 z 坐标。
 z 坐标从 `0` 开始，向下挖掘时递减。
 
@@ -150,7 +150,7 @@ z 坐标从 `0` 开始，向下挖掘时递减。
 示例：
 `if get_ground_type() != Grounds.Soil:
     till()`
-@code_tooltip_get_hardness = `get_hardness()` 
+@code_tooltip_get_hardness = `get_hardness()`
 获取无人机下方地块的硬度。
 
 返回无人机下方地块的硬度。
@@ -160,7 +160,7 @@ z 坐标从 `0` 开始，向下挖掘时递减。
 示例：
 `if get_hardness() < 5:
     dig()`
-@code_tooltip_get_stability = `get_stability()` 
+@code_tooltip_get_stability = `get_stability()`
 获取无人机下方地块的稳定度。
 
 返回无人机下方地块的稳定度。
@@ -672,7 +672,7 @@ list.insert(0, 0)`
 @code_tooltip_prospect_iron = `prospect_iron()`
 消耗煤炭探查铁矿。
 
-如果附近有铁矿，返回前往最近铁矿的方向（`North`、`East`、`South` 或 `West`）。如果附近没有铁矿、煤炭不足，或者无人机已在铁矿正上方，则返回 `None`。
+如果附近有铁矿石，返回前往最近铁矿的方向（`North`、`East`、`South` 或 `West`）。如果附近没有铁矿、煤炭不足，或者无人机已在铁矿上方，则返回 `None`。
 
 执行需消耗 1 份煤炭。
 
@@ -711,10 +711,10 @@ list.insert(0, 0)`
 
 示例：
 `can_push(North)`
-@code_tooltip_jump = `jump(unlock)` 
+@code_tooltip_jump = `jump(unlock)`
 跳转到与 `unlock` 关联的地下地点。
 
-每次运行程序只能执行一次 `jump`。
+每次运行脚本只能执行一次 `jump`。
 
 示例：
 `jump(Unlocks.Iron)`

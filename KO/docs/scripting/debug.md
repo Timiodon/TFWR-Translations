@@ -94,6 +94,6 @@ print(get_pos_x(), get_pos_y())
 
 ---
 
-[출력](docs/output.md)      [주석](docs/scripting/comments.md)      [디버그 2](docs/unlocks/debug2.md)      [알록달록한 블록](docs/unlocks/debug_place.md)      [시뮬레이션](docs/unlocks/simulation.md)
+[출력](docs/output.md)      [주석](docs/scripting/comments.md)      [디버그 2](docs/unlocks/debug2.md)      [알록달록 블록](docs/unlocks/debug_place.md)      [시뮬레이션](docs/unlocks/simulation.md)
 
 [print()](functions/print)      [quick_print()](functions/quick_print)

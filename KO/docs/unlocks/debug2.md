@@ -10,6 +10,6 @@
 
 ---
 
-[디버그](docs/scripting/debug.md)      [출력](docs/output.md)      [알록달록한 블록](docs/unlocks/debug_place.md)      [타이밍](docs/unlocks/timing.md)      [시뮬레이션](docs/unlocks/simulation.md)
+[디버그](docs/scripting/debug.md)      [출력](docs/output.md)      [알록달록 블록](docs/unlocks/debug_place.md)      [타이밍](docs/unlocks/timing.md)      [시뮬레이션](docs/unlocks/simulation.md)
 
 [set_execution_speed()](functions/set_execution_speed)      [set_world_size()](functions/set_world_size)

@@ -1,11 +1,11 @@
-[<- 水稻](docs/unlocks/rice.md) <right>[彩色地块 ->](docs/unlocks/debug_place.md)
-<right>[金字塔 ->](docs/unlocks/pyramid.md)
+[<-水稻](docs/unlocks/rice.md) <right>[彩色地块->](docs/unlocks/debug_place.md)
+<right>[金字塔->](docs/unlocks/pyramid.md)
 ---
 # 竹子
 
 竹子是一种最高可长到 6 个地块的植物。如果上方有无人机，它就不会生长。因此，使用 `plant(Entities.Bamboo)` 后，记得用 `move` 移开无人机。种植竹子需要消耗水稻。
 
-竹子长到随机选定的高度时会开花。使用 `measure()` 查看开花高度。`measure()` 从 0 开始计数，因此竹子在第二个地块开花时，`measure()` 会返回 1：
+竹子长到随机高度时会开花。使用 `measure()` 查看开花高度。`measure()` 从 0 开始计数，因此竹子在第二个地块开花时，`measure()` 会返回 1：
 
 {{codeexample 
 {
@@ -35,8 +35,8 @@ print(measure())
 move(East)
 }}
 
-当无人机正好位于竹花上方时调用 `harvest()`，竹子的产量最高。每偏离一格，产量就会变成原来的八分之一。
-例如，如果开花高度为 3，而你在高出两格的位置收获，产量就会变成原来的六十四分之一。
+当无人机正好位于竹花上方时调用 `harvest()`，竹子的产量最高。每偏离一个地块，产量就会变成原来的八分之一。
+例如，如果开花高度为 3，而你在其上方两个地块的位置收获，产量就会变成原来的六十四分之一。
 
 要收获更高处的竹花，先让无人机升到所需高度，再从侧面飞入竹子。新解锁的 `place()` 命令能帮上忙。
 
@@ -44,7 +44,7 @@ move(East)
 
 `place(Grounds.Dirt)` 会消耗 1 个地块！你也可以放置 `Grounds.Rock` 等其他地块，但不能放置 `Grounds.Clay` 这样的特殊地块。
 
-竹子每秒恰好长高 1 个地块。
+竹子每秒长高 1 个地块。
 
 {{codeexample 
 {

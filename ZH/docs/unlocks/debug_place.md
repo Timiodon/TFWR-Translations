@@ -1,4 +1,4 @@
-[<- 竹子](docs/unlocks/bamboo.md)
+[<-竹子](docs/unlocks/bamboo.md)
 ---
 # 彩色地块
 

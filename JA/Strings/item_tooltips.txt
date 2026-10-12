@@ -1,6 +1,6 @@
 @item_tooltip_template_amount = {0}個あります
 @item_descr_carrot = ニンジンを収穫することで入手できます。
-@item_descr_rice = 稲を収穫すると入手できます。
+@item_descr_rice = 稲を収穫することで入手できます。
 @item_descr_fertilizer = `use_item(Items.Fertilizer)` を呼び出すと、植物の残りの成長時間から2秒を即座に短縮できます。
 @item_descr_weird_substance = `use_item(Items.Weird_Substance)` を茂みに使用すると迷路を成長させ、他の植物に使用すると感染状態を切り替えます。感染した植物から入手できます。植物に肥料を与えると感染します。
 @item_descr_gold = 迷路の宝箱で見つかります。
@@ -14,9 +14,9 @@
 @item_descr_cactus_seed = このアイテムはゲームから削除されました。
 @item_descr_bone = 古代の生き物の骨。
 @item_descr_block = 掘ることで入手できるブロック。
-@item_descr_coal = 地下で石炭を掘ると入手できます。石炭の鉱床は平たい層状に広がっています。
-@item_descr_iron = 地下で鉄を掘ると入手できます。
-@item_descr_quartz = 石英の鉱脈を掘ると入手できます。針のような形で伸びています。
-@item_descr_dynamite = ダイナマイトの地面を掘ると入手できます。
-@item_descr_bamboo = 竹を収穫すると入手できます。
-@item_descr_mushroom = キノコの地面のブロックを積み重ねると入手できます。
+@item_descr_coal = 地下で石炭を掘ることで入手できます。石炭の鉱床は平たい層状に広がっています。
+@item_descr_iron = 地下で鉄を掘ることで入手できます。
+@item_descr_quartz = 石英の鉱脈を掘ることで入手できます。針のような形で伸びています。
+@item_descr_dynamite = ダイナマイトの地面を掘ることで入手できます。
+@item_descr_bamboo = 竹を収穫することで入手できます。
+@item_descr_mushroom = キノコの地面のブロックを積み重ねることで入手できます。

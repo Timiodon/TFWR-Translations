@@ -110,15 +110,15 @@ y座標は南端の `0` から始まり、北に向かって増加します。
 
 例:
 `x, y = get_pos_x(), get_pos_y()`
-@code_tooltip_get_pos_z = `get_pos_z()` 
-ドローンの現在のz座標を取得します。
-z座標は `0` から始まり、下に掘ると減少します。
+@code_tooltip_get_pos_z = `get_pos_z()`
+ドローンの現在のz位置を取得します。
+z位置は`0`から始まり、下に掘ると減少します。
 
 ドローンの現在のz座標を表す数値を返します。
 
-実行に `1` ティックかかります。
+実行に`1`ティックかかります。
 
-例:
+例：
 `x, y, z = get_pos_x(), get_pos_y(), get_pos_z()`
 @code_tooltip_get_world_size = `get_world_size()` 
 現在の農場のサイズを取得します。
@@ -150,24 +150,24 @@ z座標は `0` から始まり、下に掘ると減少します。
 例:
 `if get_ground_type() != Grounds.Soil:
     till()`
-@code_tooltip_get_hardness = `get_hardness()` 
+@code_tooltip_get_hardness = `get_hardness()`
 ドローンの下の地面の硬さを調べます。
 
 ドローンの下の地面の硬さを返します。
 
-実行に `1` ティックかかります。
+実行に`1`ティックかかります。
 
-例:
+例：
 `if get_hardness() < 5:
     dig()`
-@code_tooltip_get_stability = `get_stability()` 
+@code_tooltip_get_stability = `get_stability()`
 ドローンの下の地面の安定性を調べます。
 
 ドローンの下の地面の安定性を返します。
 
-実行に `1` ティックかかります。
+実行に`1`ティックかかります。
 
-例:
+例：
 `if get_stability() > 3:
     dig()`
 @code_tooltip_get_time = `get_time()` 
@@ -664,56 +664,56 @@ list.insert(0, 0)`
 @code_tooltip_dig = `dig()`
 下方向に1タイル掘ります。
 
-掘る速さはブロックの硬さとドローンのドリルの強さによって決まります。
+掘る速度はブロックの硬さとドローンのドリルの強さによって決まります。
 
-例:
+例：
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
 石炭を使って鉄を探します。
 
-近くに鉄鉱石があれば、最も近い鉱石の方向（`North`、`East`、`South`、`West`）を返します。近くに鉄がない場合、石炭が足りない場合、またはドローンがすでに鉄の真上にいる場合は `None` を返します。
+近くに鉄鉱石があれば、最も近い鉱石の方角（`North`、`East`、`South`、`West`）を返します。近くに鉄がない場合、石炭が足りない場合、またはドローンがすでに鉄の真上にいる場合は`None`を返します。
 
 実行時に石炭を1個消費します。
 
-例:
+例：
 `while prospect_iron() != None:
     move(prospect_iron())`
 @code_tooltip_prospect_quartz = `prospect_quartz()`
 鉄を使って石英を探します。
 
-ドローンから次の石英ブロックまでのユークリッド距離（3次元の距離）を返します。近くに石英がない場合は `None` を返します。
+ドローンから次の石英ブロックまでのユークリッド距離（3次元の距離）を返します。近くに石英がない場合は`None`を返します。
 
 実行時に鉄を1個消費します。
 
-例:
+例：
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 ブロックを配置します。
 
-配置するブロックを指定できます。配置できるのは特殊な機能のないブロックだけです。たとえば `place(Grounds.Rock)` は使えますが、`place(Grounds.Clay)` は使えません。
+配置するブロックは指定できます。配置できるのは特殊な機能のないブロックだけです。たとえば `place(Grounds.Rock)`は使えますが、`place(Grounds.Clay)`は使えません。
 
-例:
+例：
 `place(Grounds.Rock)`
 @code_tooltip_push = `push(direction)`
 ドローンの下にあるキノコのブロックを押します。
 
 ブロックを上方向に押すことはできません。
 
-押せた場合は `True`、それ以外の場合は `False` を返します。
+押せた場合は`True`、それ以外の場合は`False`を返します。
 
-例:
+例：
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 ドローンの下のブロックを押せるか調べます。
 
-ドローンの下のブロックを押せる場合は `True`、それ以外の場合は `False` を返します。
+ドローンの下のブロックを押せる場合は`True`、それ以外の場合は`False`を返します。
 
-例:
+例：
 `can_push(North)`
-@code_tooltip_jump = `jump(unlock)` 
-`unlock` に対応する地下の要素へジャンプします。
+@code_tooltip_jump = `jump(unlock)`
+`unlock`に対応する地下の要素へジャンプします。
 
-1つのスクリプトで `jump` を実行できるのは1回だけです。
+1つのスクリプトで`jump`を実行できるのは1回だけです。
 
-例:
+例：
 `jump(Unlocks.Iron)`

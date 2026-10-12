@@ -1,5 +1,5 @@
 @unlock_tooltip_template_cost = ### 해금 비용 {{{{itemblock cost unlock {0}}}}}
-@unlock_tooltip_template_additional_requirement = ### 해금 요구 조건
+@unlock_tooltip_template_additional_requirement = ### 해금 요건
 {0} 해금 항목이 {1}레벨 이상이어야 합니다.
 @unlock_descr_trees = 나무를 해금합니다.
 
@@ -47,7 +47,7 @@ do_two_flips()`
 
 `till()
 plant(Entities.Carrot)`
-@unlock_descr_rice = 밀과 비슷하지만, 밀이 점토에서 자란다면 말이죠.
+@unlock_descr_rice = 밀과 비슷합니다. 밀이 점토에서 자란다면 말이죠.
 
 `if get_ground_type() == Grounds.Clay:
     plant(Entities.Rice)`
@@ -113,23 +113,23 @@ other_file.function()`
 @unlock_descr_megafarm = 더 많은 드론!
 
 `spawn_drone(task)`
-@unlock_descr_mining = 드론에게 드릴과 광부 모자를 줍니다.
+@unlock_descr_mining = 드론에게 드릴과 채광 모자를 줍니다.
 
 `dig()`
 @unlock_descr_coal = 지하에 석탄 매장층이 생성됩니다.
 @unlock_descr_iron = 지하에 철광석 광맥이 생성됩니다.
 @unlock_descr_pyramid = 지하에 고대 사암 구조물이 생성됩니다.
-@unlock_descr_quartz = 지하에 바늘 모양의 수정 광맥이 생성됩니다.
-@unlock_descr_ore_boost = 석탄 수확량이 두 배가 됩니다. 철과 수정 광맥의 크기가 두 배가 됩니다.
-@unlock_descr_jump = 드론이 아래쪽으로 점프할 수 있게 합니다.
+@unlock_descr_quartz = 지하에 석영 바늘이 생성됩니다.
+@unlock_descr_ore_boost = 석탄 수확량이 두 배가 됩니다. 철과 석영 광맥의 크기가 두 배가 됩니다.
+@unlock_descr_jump = 드론이 아래쪽으로 점프할 수 있게 됩니다.
 @unlock_descr_prospecting = 석탄을 사용해 철을 찾으세요!
 
 `prospect_iron()`
 @unlock_descr_drill = 드릴 강도를 높입니다.
-@unlock_descr_debug_place = 알록달록한 블록을 배치합니다.
+@unlock_descr_debug_place = 알록달록 블록을 배치합니다.
 
 `place(Grounds.Red_Block)`
-@unlock_descr_underground_senses = 지하 타일과 상호작용하기 위한 드론 센서입니다.
+@unlock_descr_underground_senses = 지하 타일과 상호작용하는 드론 센서입니다.
 
 `while get_pos_z() < 100:
     while get_hardness() > 5:
@@ -138,12 +138,12 @@ other_file.function()`
         move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = 지하에 화석화된 호박이 생성됩니다.
-@unlock_descr_special_soils = 양토층과 진주암층을 발견해 식물 수확량을 늘리세요.
+@unlock_descr_special_soils = 양토 및 진주암 층을 발견해 식물 수확량을 늘리세요.
 @unlock_descr_bamboo = 대나무를 심고 자라는 모습을 지켜보세요.
 
 `plant(Entities.Bamboo)`
-@unlock_descr_dynamite = 다이너마이트를 찾아 여러 가지를 폭파하세요.
-@unlock_descr_treasure_map = 깊은 지하에 숨겨진 보물을 찾으세요.
+@unlock_descr_dynamite = 다이너마이트를 찾은 다음 사용해 폭파합니다.
+@unlock_descr_treasure_map = 깊은 지하에 숨겨진 보물을 찾습니다.
 @unlock_descr_mushrooms = 같은 종류의 버섯을 맞춰 지하 버섯을 찾고 수확하세요.
 @multi_unlock_descr_expand = 농장을 확장합니다. 이 작업은 농장을 비웁니다.
 @multi_unlock_descr_carrots = 당근의 수확량과 비용이 증가합니다.
@@ -158,15 +158,15 @@ other_file.function()`
 @multi_unlock_descr_watering = 더 많은 물을 받습니다.
 @multi_unlock_descr_fertilizer = 더 많은 비료를 받습니다.
 @multi_unlock_descr_megafarm = 드론 수를 더 늘립니다.
-@multi_unlock_descr_drill = 드릴 속도가 높아집니다.
+@multi_unlock_descr_drill = 드릴 속도가 빨라집니다.
 @multi_unlock_descr_coal = 지하에 더 많은 석탄 매장층이 생성됩니다.
 @multi_unlock_descr_iron = 철광석의 수확량이 증가합니다.
 @multi_unlock_descr_pyramid = 피라미드를 복원해 얻는 파워가 증가합니다.
-@multi_unlock_descr_quartz = 수정 광석의 수확량이 증가합니다.
+@multi_unlock_descr_quartz = 석영 광석의 수확량이 증가합니다.
 @multi_unlock_descr_petrified_pumpkins = 화석화된 호박의 수확량이 증가합니다.
 @multi_unlock_descr_dynamite = 다이너마이트 수확량과 폭발 에너지가 증가합니다.
-@multi_unlock_descr_treasure_map = 보물 길의 깊이가 늘어나고, 따라서 보물에서 얻는 황금의 양도 증가합니다.
-@multi_unlock_descr_ore_boost = 석탄 수확량이 더 증가합니다. 철과 수정 광맥의 크기가 더 커집니다.
+@multi_unlock_descr_treasure_map = 보물 길의 깊이가 증가하고, 그만큼 보물에서 얻는 황금의 양도 증가합니다.
+@multi_unlock_descr_ore_boost = 석탄 수확량이 더욱 증가합니다. 철과 석영 광맥의 크기가 더 커집니다.
 @multi_unlock_descr_bamboo = 대나무의 수확량과 비용이 증가합니다.
 @multi_unlock_descr_mushrooms = 종류가 일치하는 버섯 블록의 수확량이 증가합니다.
 @auto_unlock = 자동 해금
@@ -195,8 +195,8 @@ other_file.function()`
 @polyculture = 혼합 재배
 @pumpkins = 호박
 @senses = 감각
-@underground_senses = 지하 감각
-@debug_place = 알록달록한 블록
+@underground_senses = 지하 감지
+@debug_place = 알록달록 블록
 @simulation = 시뮬레이션
 @speed = 속도
 @sunflowers = 해바라기
@@ -209,13 +209,13 @@ other_file.function()`
 @watering = 물주기
 @iron = 철
 @pyramid = 피라미드
-@ore_boost = 광석 강화
+@ore_boost = 광석 부스트
 @petrified_pumpkins = 화석화된 호박
 @special_soils = 특수 토양
 @mining = 채광
 @coal = 석탄
 @drill = 드릴
-@quartz = 수정
+@quartz = 석영
 @prospecting = 철 탐사
 @dynamite = 다이너마이트
 @bamboo = 대나무

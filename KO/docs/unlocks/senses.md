@@ -113,6 +113,6 @@ if get_ground_type() != Grounds.Soil:
 
 ---
 
-[If문](docs/scripting/if.md)      [연산자](docs/scripting/operators.md)      [변수](docs/scripting/variables.md)      [튜플](docs/scripting/tuples.md)      [딕셔너리](docs/scripting/dicts.md)      [지하 감각](docs/unlocks/underground_senses.md)
+[If문](docs/scripting/if.md)      [연산자](docs/scripting/operators.md)      [변수](docs/scripting/variables.md)      [튜플](docs/scripting/tuples.md)      [딕셔너리](docs/scripting/dicts.md)      [지하 감지](docs/unlocks/underground_senses.md)
 
 [get_pos_x()](functions/get_pos_x)      [get_pos_y()](functions/get_pos_y)      [get_entity_type()](functions/get_entity_type)      [get_ground_type()](functions/get_ground_type)      [num_items()](functions/num_items)      [num_unlocked()](functions/num_unlocked)

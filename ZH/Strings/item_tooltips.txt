@@ -13,8 +13,8 @@
 @item_descr_cactus = 通过收获已排序的仙人掌获得。
 @item_descr_cactus_seed = 此物品已从游戏中移除。
 @item_descr_bone = 一种远古生物的骨头。
-@item_descr_block = 通过挖掘获得的地块。
-@item_descr_coal = 通过在地下挖掘煤矿获得。煤层呈水平薄片状分布。
+@item_descr_block = 地块，通过挖掘获得。
+@item_descr_coal = 通过在地下挖掘煤炭获得。煤炭矿床呈水平层状分布。
 @item_descr_iron = 通过在地下挖掘铁矿获得。
 @item_descr_quartz = 通过挖掘石英矿脉获得。石英矿脉呈针状生长。
 @item_descr_dynamite = 通过挖掘炸药地块获得。
