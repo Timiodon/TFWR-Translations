@@ -1,104 +1,81 @@
+[<- 模擬](docs/unlocks/simulation.md)
+---
 # 排行榜
-如果你能走到這裡，表示已克服許多挑戰。但你是否以最高效率解決這些挑戰？
-你可以參加各種排行榜，與其他玩家競爭最有效率的農耕方法。
+如果你走到了這一步，說明已經克服了許多挑戰。但你的解決方法是否高效？
+你可以在各種排行榜上與其他玩家競爭，看看誰的耕作方法效率最高。
 
-你可以呼叫 `leaderboard_run(leaderboard, filename, speedup)` 開始一個排行榜挑戰。
-這會啟動一個類似 `simulate()` 的[模擬](docs/unlocks/simulation.md)，但起始條件固定。每個排行榜類別有不同的起始與成功條件。
+呼叫 `leaderboard_run(leaderboard, filename, speedup)` 即可開始一次排行榜挑戰。
+這段程式碼會啟動一次類似於 `simulate()` 的[模擬](docs/unlocks/simulation.md)，只不過起始條件是固定的。每個排行榜類別都有不同的開始和成功條件。
 
-當模擬結束時，如果成功條件為 `True`，則該次排行榜挑戰算作成功。
+如果模擬結束時成功條件為 `True`，則排行榜挑戰成功。
 
-模擬不會在達成目標時自動結束。你必須確保程式會正確終止。
-如果該次執行成功，你的時間會被登錄到排行榜。
+當目標達成時，模擬不會自動結束。你必須確保程式終止。
+如果挑戰成功，你的時間紀錄將被新增到排行榜。
 
-為了降低差異性，所有挑戰執行時間必須至少累計 2 小時（你可以加速模擬，因此實際耗時不必那麼長）。如果某次執行提早完成，系統會重複執行直到累計達到 2 小時為止。上傳的分數為所有執行的平均值。上傳的分數為所有執行的平均值。
+為了減少變異數，所有挑戰都要求執行至少 2 小時（你可以加速，所以實際不會花那麼長時間）。如果挑戰提前完成，則會重複執行，直到總時間達到 2 小時。隨後，將所有執行過程的平均值作為你的分數上傳。
 
-下面是一個可讓你上到乾草排行榜的範例設定。
-![](LeaderboardSetup400)
+以下是範例設定，可以讓你登上乾草排行榜。
+![|x400](LeaderboardSetup)
 
-## 最快重置
-最快重置是最具聲望的類別。從單一農地自動化到再次解鎖排行榜，盡可能快速完成。
+## 最快重設
+最快重設是最有聲望的類別。從一塊農田開始，實現遊戲完全自動化，直到再次解鎖排行榜。
 
-你不必解鎖所有東西，只要盡快解鎖 `Unlocks.Leaderboard` 即可。
+不必解鎖全部內容，只需盡快解鎖 `Unlocks.Leaderboard`。
 
-記住你可以用 `num_unlocked(unlock) > 0` 檢查某項是否已解鎖，也可以對解鎖項目使用 `get_cost()` 查詢其花費，以便自動取得所需資源。
+請記住，你可以使用 `num_unlocked(unlock) > 0` 來檢查某項是否已解鎖，也可以對解鎖項使用 `get_cost()` 來檢視其成本，以便自動耕種正確的物品。
+
+`unlock()` 不受科技樹中的前置解鎖條件限制。例如，可以先解鎖 `Unlocks.Fertilizer`，再解鎖 `Unlocks.Water`。
 
 函式呼叫：
-
-```
-leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)
-```
+`leaderboard_run(Leaderboards.Fastest_Reset, filename, speedup)`
 
 等效模擬：
-
-```
-unlocks = {}
+`unlocks = {}
 items = {}
 globals = {}
-# 負的亂數種子表示隨機種子
+#負數種子值表示隨機種子
 seed = -1
-simulate(filename, unlocks, items, globals, seed, speedup)
-```
+simulate(filename, unlocks, items, globals, seed, speedup)`
 
 成功條件：
-
-```
-num_unlocked(Unlocks.Leaderboard) > 0
-```
+`num_unlocked(Unlocks.Leaderboard) > 0`
 
 ## 迷宮
-從全部解鎖開始，盡快農出 `9863168` 個黃金。這正好是重複使用一個 32x32 迷宮 `300` 次所能獲得的黃金數量。
+從解鎖全部內容開始，盡快收穫 `9863168` 份金幣。這正好是重複使用一個 32x32 的迷宮 `300` 次所能獲得的金幣數量。
 
 函式呼叫：
-
-```
-leaderboard_run(Leaderboards.Maze, filename, speedup)
-```
+`leaderboard_run(Leaderboards.Maze, filename, speedup)`
 
 等效模擬：
-
-```
-unlocks = Unlocks
+`unlocks = Unlocks
 items = {Items.Weird_Substance : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
-simulate(filename, unlocks, items, globals, seed, speedup)
-```
+simulate(filename, unlocks, items, globals, seed, speedup)`
 
 成功條件：
-
-```
-num_items(Items.Gold) >= 9863168
-```
+`num_items(Items.Gold) >= 9863168`
 
 ## 恐龍
-從解鎖全部內容開始，盡快農出 `33488928` 個骨頭。這正好是將 32x32 區域填滿恐龍尾巴所能獲得的骨頭數量。
+從解鎖全部內容開始，盡快收穫 `33488928` 根骨頭。這正好是用恐龍尾巴填滿一片 32x32 區域所能獲得的骨頭數量。
 
 函式呼叫：
-
-```
-leaderboard_run(Leaderboards.Dinosaur, filename, speedup)
-```
+`leaderboard_run(Leaderboards.Dinosaur, filename, speedup)`
 
 等效模擬：
-
-```
-unlocks = Unlocks
+`unlocks = Unlocks
 items = {Items.Cactus : 1000000000, Items.Power: 1000000000}
 globals = {}
 seed = -1
-simulate(filename, unlocks, items, globals, seed, speedup)
-```
+simulate(filename, unlocks, items, globals, seed, speedup)`
 
 成功條件：
-
-```
-num_items(Items.Bone) >= 33488928
-```
+`num_items(Items.Bone) >= 33488928`
 
 ## 其他資源排行榜
-每種植物都有針對該植物的排行榜，目標是以最短時間生產指定數量的該資源。你從解鎖全部內容、擁有種植該植物所需的資源和大量能量開始。目標是快速農出該植物產出的指定數量資源。
+每種植物都有自己的排行榜，標準是盡快收穫該特定植物。開局獲得所有解鎖項、種植該植物所需的資源，以及大量的能量。目標是收穫該植物產出的特定數量的資源。
 
-一如既往，當你達成目標時必須確保程式會終止。程式結束前即便已達標，該次執行也不算完成。
+與之前一樣，你需要確保程式在達到目標時終止。即使目標已達成，只要程式沒有結束，挑戰就不會完成。
 
 ### `Leaderboards.Cactus`
 `leaderboard_run(Leaderboards.Cactus, filename, speedup)`
@@ -124,8 +101,8 @@ num_items(Items.Bone) >= 33488928
 `leaderboard_run(Leaderboards.Hay, filename, speedup)`
 成功條件：`num_items(Items.Hay) >= 2000000000`
 
-## 單一無人機排行榜
-也有僅使用一台無人機的排行榜。你只會有一架無人機和 8x8 的農場，必須在最短時間內農出指定數量的資源。
+## 單無人機排行榜
+也有單無人機耕作的排行榜。你只有一架無人機和一個 8x8 的農場，並且必須盡快收穫特定數量的資源。
 
 ### `Leaderboards.Maze_Single`
 `leaderboard_run(Leaderboards.Maze_Single, filename, speedup)`
@@ -154,3 +131,9 @@ num_items(Items.Bone) >= 33488928
 ### `Leaderboards.Hay_Single`
 `leaderboard_run(Leaderboards.Hay_Single, filename, speedup)`
 成功條件：`num_items(Items.Hay) >= 100000000`
+
+---
+
+[模擬](docs/unlocks/simulation.md)      [計時](docs/unlocks/timing.md)      [自動解鎖](docs/unlocks/auto_unlock.md)      [成本](docs/unlocks/costs.md)      [統計資料](docs/stats.md)
+
+[get_cost()](functions/get_cost)      [num_unlocked()](functions/num_unlocked)      [leaderboard_run()](functions/leaderboard_run)

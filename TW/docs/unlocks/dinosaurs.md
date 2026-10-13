@@ -1,50 +1,106 @@
+[<- 仙人掌](docs/unlocks/cactus.md)
+---
 # 恐龍
-恐龍是壯麗的遠古生物，可以飼養以取得遠古骨頭。
+恐龍是古老而威風的生物，可以養殖以取得遠古骨頭。
 
-不幸的是，恐龍很久以前就滅絕了，所以我們現在能做的最好的事情就是裝扮成恐龍。
-為此，你獲得了一頂新的恐龍帽。
+不幸的是，恐龍很久以前就滅絕了，所以我們現在最多只能打扮成恐龍。
+為此，你收到了新的恐龍帽。
 
-可以用以下函式裝備該帽子：
+帽子可以用以下方式裝備：
 `change_hat(Hats.Dinosaur_Hat)`
 
 很可惜，它看起來和廣告上的不太一樣……
 
-如果你裝備恐龍帽且擁有足夠的仙人掌，則會自動購買一顆[蘋果](objects/apple)並放置在無人機下方。
-當無人機位於蘋果上並再次移動時，便會吃掉該蘋果，同時尾巴長度增加一格。如果你有足夠資源，系統會再購買一顆蘋果並隨機放置於某處。
-如果想放置的位置已有其他植物，則無法生成蘋果。
+如果裝備了恐龍帽且有足夠的仙人掌，則會自動購買一顆[蘋果](objects/apple)並將其放置在無人機下方。
+當無人機在蘋果上方並再次移動時，便會吃掉蘋果，同時尾巴增長一節。如果你還有足夠的仙人掌，一顆新的蘋果將被購買並放置在一個隨機位置。
+如果蘋果想產生的位置已經種植了其他東西，則無法產生。
 
-恐恐龍的尾巴會被拖在無人機後方，填滿無人機先前走過的格子。如果無人機嘗試移動到尾巴所在位置，`move()` 會失敗並回傳 `False`。
-尾巴的最後一節會在移動時移開，因此你可以移到那個位置。然而，如果尾巴填滿整個農場，則無人機將無法再移動。因此你可以透過檢查是否無法移動來判斷尾巴是否已長滿整個農場。
-穿戴恐龍帽時，無人機無法穿越農場邊界到達另一側。
+恐龍的尾巴會拖在無人機後面，填滿無人機之前移動過的地塊。如果無人機試圖移動到尾巴上方，`move()` 將會失敗並回傳 `False`。
+在移動過程中，尾巴的最後一節會移開，所以你可以移動到它原來的位置上。但是，如果尾巴填滿了整個農場，你將無法再移動。所以你可以透過檢查是否無法移動來判斷尾巴是否已經長到最大。
+戴著恐龍帽時，無人機無法越過農場邊界到達另一邊。
 
-對蘋果使用 `measure()` 會回傳下一顆蘋果的位置，形式為元組。
+在蘋果上使用 `measure()` 將回傳下一個蘋果的位置，形式為一個元組。
 
-```
-next_x, next_y = measure()
-```
+`next_x, next_y = measure()`
 
-當再次裝備另一頂帽子而卸下這頂恐龍帽時，尾巴就會被採收。
-你會獲得的骨頭數量等於尾巴長度的平方。因此，如果尾巴長度為 `n`，你會獲得 `n ** 2` 個 `Items.Bone`。
+{{codeexample 
+{
+    "camera_position": {"x": -1, "y": 2.4, "z": 5},
+    "show_image": true,
+    "image_size": {"x": 800, "y": 300},
+    "show_code": true,
+    "show_inventory": true,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "items": [{"item": "cactus", "n": 10000}],
+    "world_size": {"x": 4, "y": 4},
+    "execution_speed": 2,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 1,
+    "seed": 5,
+    "exclude_unlocks": ["watering"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
+change_hat(Hats.Dinosaur_Hat)
+while True:
+    next_x, next_y = measure()
+    while get_pos_x() != next_x:
+        move(East)
+    while get_pos_y() != next_y:
+        move(North)
+}}
+
+當透過裝備不同的帽子再次卸下這頂帽子時，便會收穫尾巴。
+你將獲得等於尾巴長度平方數量的骨頭。因此，若尾巴長度為 `n`，則將獲得 `n**2` 根 `Items.Bone`。
 例如：
-長度 1 => 1 個骨頭
-長度 2 => 4 個骨頭
-長度 3 => 9 個骨頭
-長度 4 => 16 個骨頭
-長度 16 => 256 個骨頭
-長度 100 => 10000 個骨頭
+長度 1 => 1 根骨頭
+長度 2 => 4 根骨頭
+長度 3 => 9 根骨頭
+長度 4 => 16 根骨頭
+長度 16 => 256 根骨頭
+長度 100 => 10000 根骨頭
 
-恐龍帽非常重，如果裝備它 `move()` 會消耗 400 時間刻而不是 200。不過每當你吃到一顆蘋果後，`move()` 所用的時間刻會減少 3%（向下取整），因為較長的尾巴可以幫助你移動。
+恐龍帽非常重，所以裝備後會使 `move()` 消耗 400 ticks 而不是 200。然而，每當你撿起一顆蘋果，`move()` 使用的 ticks 數量便會減少 3%（無條件捨去），因為尾巴變長可以幫助移動。
 
-下列迴圈會印出在任意顆蘋果數量後 `move()` 使用的時間刻：
+以下迴圈列印出吃掉任意數量蘋果後 `move()` 使用的 ticks 數量：
 
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 1,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 ticks = 400
 for i in range(100):
-    print("吃掉 ", i, " 顆蘋果後的時間刻：", ticks)
+    quick_print("吃掉 ", i, " 顆蘋果後的 ticks: ", ticks)
     ticks -= ticks * 0.03 // 1
-```
+}}
 
-你只有一頂恐龍帽，因此同一時間只能有一架無人機戴上它。
+你只有一頂恐龍帽，所以只有一架無人機可以佩戴它。
 
-<spoiler=顯示提示 1>如果你沿著能覆蓋整個區域的固定路徑持續移動，你可以很輕易地每次都讓尾巴覆蓋整個農場。雖然這種方法效率不高，但可行。
-完全遍歷非常大的農場可能需要很長時間，而且你可能並不需要那麼多骨頭。可以使用 `set_world_size()` 將農場大小調整為更方便的尺寸。</spoiler>
+<spoiler=顯示提示 1>如果始終沿著覆蓋整個場地的同一路徑移動，那麼每次都能輕鬆地得到一條覆蓋整個場地的尾巴蛇。雖然效率不高，但確實可行。
+完全走訪一個非常大的農場可能需要很長時間，而且你實際上可能並不需要那麼多骨頭。不妨使用 `set_world_size()` 將農場改為更方便覆蓋的大小。</spoiler>
+
+---
+
+[統計資料](docs/stats.md)      [元組](docs/scripting/tuples.md)      [串列](docs/scripting/lists.md)
+
+[change_hat()](functions/change_hat)      [move()](functions/move)      [measure()](functions/measure)

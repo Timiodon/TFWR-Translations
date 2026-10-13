@@ -5,10 +5,10 @@
 @options = 選項
 @join_discord = Discord
 @quit = 退出
-@open_folder = 打開資料夾
+@open_folder = 開啟資料夾
 @new_game = 新遊戲
 @back = 返回
-@unlocks = 解鎖項
+@unlocks = 解鎖
 @farm = 農場
 @unlocked = 已解鎖
 @upgrade = 升級

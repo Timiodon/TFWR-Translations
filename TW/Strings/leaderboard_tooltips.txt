@@ -1,6 +1,6 @@
-@lb_descr_fastest_reset = 完全自動化整個遊戲。
-@lb_descr_maze = 收穫 9863168 黃金。
-@lb_descr_maze_single = 收穫 616448 黃金。
+@lb_descr_fastest_reset = 使整個遊戲完全自動化。
+@lb_descr_maze = 收穫 9863168 金幣。
+@lb_descr_maze_single = 收穫 616448 金幣。
 @lb_descr_dinosaur = 收穫 33488928 骨頭。
 @lb_descr_cactus = 收穫 33554432 仙人掌。
 @lb_descr_cactus_single = 收穫 131072 仙人掌。

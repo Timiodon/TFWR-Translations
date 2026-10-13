@@ -1,54 +1,96 @@
+[<- 運算子](docs/scripting/operators.md) <right>[串列 ->](docs/scripting/lists.md)
+<right>[函式 ->](docs/scripting/functions.md)
+---
 # 變數
-變數可視為可以儲存值的命名容器。
-`=` 運算子用來宣告變數並將值儲存其中。
+變數是用於存放 1 個值的容器，並且可以自訂變數的名字
+`=` 運算子用於宣告 1 個變數並為其儲存 1 個值（指派）。
 
-```
-variable_name = value
-```
+`variable_name = value`
 
-運算子的左側為變數名稱，你可以給它任何你想要的名稱。
-右側為一個表達式，其計算結果會被儲存到該變數中。
+運算子的左邊是變數名稱，你可以對變數名稱進行自訂。
+右邊是一個運算式，其結果值將被儲存在變數中。
 
-宣告一個名為 `a` 的的變數並將值 `5` 存入其中：
+宣告 1 個名為 `a` 的變數，並在其中儲存值 `5`：
+`a = 5`
+宣告 1 個名為 `b` 的變數，並在其中儲存 `can_harvest()` 的回傳值：
+`b = can_harvest()`
 
-```
-a = 5
-```
+不要把 `=` 運算子和 `==` 運算子搞混了。
+`==` 運算子是判斷兩個值是否相等，並回傳 `True` 或 `False`。
+`=` 運算子將右邊的值賦給左邊的名稱。
 
-宣告一個名為 `b` 的變數並將 `can_harvest()` 的回傳值儲存其中：
+給變數指派後，就可在程式碼中使用這個變數來代替它包含的值。
 
-```
-b = can_harvest()
-```
-
-不要將 `=` 運算子與 `==` 運算子混淆。
-`==` 運算子用來檢查兩個值是否相等，並回傳 `True` 或 `False`。
-`=` 運算子則是將右側的值指派給左側的名稱。
-
-變數被指派後，可以在程式中使用該變數以取得其所包含的值：
-
-```
+{{codeexample 
+{
+    "camera_position": {"x": 0, "y": 1.5, "z": 4},
+    "show_image": true,
+    "image_size": {"x": 800, "y": 300},
+    "show_code": true,
+    "show_inventory": true,
+    "show_output": false,
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
+    "world_size": {"x": 1, "y": 1},
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 a = 5
 for i in range(a):
 	do_a_flip()
-```
+}}
 
-上述迴圈會執行 5 次，因為 `a` 的值為 `5`。
-`for` 迴圈中的 `i` 也是一個變數，每次迭代會自動被指派為序列目前的值。（它並非一定要命名為 `i`，可以使用任何有效的變數名稱。）
+上面的迴圈執行了 5 次，因為 `a` 被設定為了 `5`。
+`for` 迴圈中的 `i` 也是一個變數，它在迴圈的每次迭代中被自動賦為序列的目前值。（它不一定非要叫 `i`，你可以給它取任何有效的變數名稱。）
 
-變數也可用於 `while` 迴圈達成相同效果：
+變數也讓你能用 while 迴圈做同樣的事情：
 
-```
+{{codeexample 
+{
+    "camera_position": {"x": 0, "y": 1.5, "z": 4},
+    "show_image": true,
+    "image_size": {"x": 800, "y": 300},
+    "show_code": true,
+    "show_inventory": true,
+    "show_output": false,
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
+    "world_size": {"x": 1, "y": 1},
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 a = 5
 i = 0
 while i < a:
 	do_a_flip()
 	i = i + 1
-```
+}}
 
-這與上方的 `for` 迴圈效果相同，只是必須手動遞增 `i`。
-注意，為了遞增 i，我們把它設為自身的值加上 `1`。根據先前的值改變變數的做法很常見。
-可使用下列運算子簡化：`+=, -=, *=, /=, %=`
+這和上面的 `for` 迴圈做的是同樣的事情。我們只需要手動遞增 `i`。
+注意，要遞增 `i`，我們把它設為它自己的值加上 `1`。根據變數的舊值來改變它的值是十分常見的操作。
+這些運算子可以用來簡化過程：`+=, -=, *=, /=, %=`
 
-`i = i + 1` 等同於 `i += 1`
-`a = a / 3` 等同於 `a /= 3`
+`i = i + 1` 和 `i += 1` 是一樣的
+`a = a / 3` 和 `a /= 3` 是一樣的
+
+---
+
+[運算子](docs/scripting/operators.md)      [While 迴圈](docs/scripting/while.md)      [For 迴圈](docs/scripting/for.md)      [函式](docs/scripting/functions.md)      [名稱作用域](docs/scripting/scopes.md)

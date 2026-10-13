@@ -1,98 +1,280 @@
+[<- 變數](docs/scripting/variables.md) <right>[字典 ->](docs/scripting/dicts.md)
+---
 # 串列
-串列是將多個值儲存在單一變數中的簡易方式。
-可以這樣建立新的串列：
+串列可以透過 1 個變數儲存多個值。
+新串列的建立方式如下：
 
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 some_list = [2, True, Items.Hay]
-```
+print(some_list)
+}}
 
-該串列現在包含值 `2`、`True` 和 `Items.Hay`。
-串列也可以為空：
+這個串列現在包含了 `2`、`True` 和 `Items.Hay` 這些值。
+串列也可以是空的：
 
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 empty_list = []
-```
+print(empty_list)
+}}
 
-你可以透過索引存取串列的元素。第一個元素的索引為 `0`，第二個為 `1`，第三個為 `2`，以此類推。
+你可以透過索引存取串列中的元素。第一個元素的索引是 `0`，第二個是 `1`，第三個是 `2`……
 
-種植胡蘿蔔：
-
-```
+{{codeexample 
+{
+    "camera_position": {"x": 0, "y": 1.5, "z": 4},
+    "show_image": true,
+    "image_size": {"x": 800, "y": 300},
+    "show_code": true,
+    "show_inventory": true,
+    "show_output": false,
+    "collapsing": true,
+    "autoplay": false,
+    "items": [{"item": "hay", "n": 1}, {"item": "wood", "n": 1}],
+    "world_size": {"x": 1, "y": 1},
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+till()
+#CODE
 entities = [Entities.Tree, Entities.Carrot, Entities.Pumpkin]
 plant(entities[1])
-```
+}}
 
-你可以使用 for 迴圈對串列進行迭代。以下範例會將串列中所有元素加總：
+你可以使用 `for` 迴圈迭代串列。下面的例子計算了串列中所有元素的和。
 
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 numbers = [4, 7, 2, 5]
 sum = 0
 for number in numbers:
 	sum += number
-```
+print(sum)
+}}
 
-`sum` 現在為 `18`
+使用以下串列方法可新增和刪除元素：
 
-下列串列方法允許你新增和移除元素：
+`elements.append(elem)` 在串列末尾新增 1 個元素：
 
-`elements.append(elem)` 在串列末端加入一個元素：
-
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 numbers = [2, 6, 12]
 numbers.append(7)
-```
+print(numbers)
+}}
 
-`numbers` 現在為 `[2, 6, 12, 7]`
+`elements.remove(elem)` 從串列中移除某個元素第一次出現的項：
 
-`elements.remove(elem)` 移除串列中第一個出現的指定元素：
-
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 numbers = [1, 2, 4, 2]
 numbers.remove(2)
-```
+print(numbers)
+}}
 
-`numbers` 現在為 `[1, 4, 2]`
+`elements.insert(index, elem)` 在給定索引處插入 1 個元素：
 
-`elements.insert(index, elem)` 在指定索引位置插入一個元素：
-
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 some_list = [Entities.Tree, Items.Hay]
 some_list.insert(1, Items.Wood)
-```
-
-`some_list` 現在為 `[Entities.Tree, Items.Wood, Items.Hay]`
+print(some_list)
+}}
 
 `elements.pop(index)` 移除指定索引處的元素。
-如果沒指定索引，預設移除最後一項。
+如果未指定索引，則移除最後一項。
 
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 numbers = [3, 5, 8, 25]
 numbers.pop()
-```
-
-`numbers` 現在為 `[3, 5, 8]`
-
-```
+print(numbers)
 numbers.pop(1)
-```
+print(numbers)
+}}
 
-`numbers` 現在為 `[3, 8]`
+`len()` 函式回傳串列的長度。
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
+numbers = [3, 5, 8, 25]
+print(len(numbers))
+}}
 
-`len()` 函式會回傳串列的長度。
+串列具有引用語義。也就是說，將 1 個串列賦給 1 個變數，會將相應的串列物件賦給該變數，而不是建立串列的副本。
+如果多個變數引用同一個串列，更改串列會同時影響這些變數。
 
-```
-numbers = [3, 2, 1]
-x = len(numbers)
-```
-
-此時 `x` 為 `3`
-
-串列具有參考語意。這表示將某個串列指派給變數，會將相同的串列物件指派給該變數，而不是複製串列。
-如果兩個變數參考同一個串列，對該串列所做的更動會被兩者看到。
-
-```
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 0,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
 a = [1, 2]
 b = a
 b.pop()
-```
-此時 `a` 和 `b` 都是 `[1]`
+print(a)
+print(b)
+}}
+
+---
+
+[變數](docs/scripting/variables.md)      [For 迴圈](docs/scripting/for.md)      [元組](docs/scripting/tuples.md)      [字典](docs/scripting/dicts.md)      [集合](docs/scripting/sets.md)
+
+[len()](functions/len)

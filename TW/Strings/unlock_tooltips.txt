@@ -1,193 +1,189 @@
 @unlock_tooltip_template_cost = ### 解鎖成本 {{{{itemblock cost unlock {0}}}}}
-@unlock_descr_trees = 解鎖樹木。
+@unlock_tooltip_template_additional_requirement = ### 解鎖條件
+{0} 解鎖項必須達到 {1} 級或更高。
+@unlock_descr_trees = 解鎖樹。
 
-```
-plant(Entities.Trees)
-```
-@unlock_descr_speed = 提升無人機與程式執行的速度。
+`plant(Entities.Trees)`
+@unlock_descr_speed = 提高無人機和程式碼執行的速度。
 @unlock_descr_plant = 解鎖種植功能。
 
-```
-plant(Entities.Bush)
-```
-@unlock_descr_loops = 解鎖基本的 while 迴圈。
+`plant(Entities.Bush)`
+@unlock_descr_loops = 解鎖簡單的 while 迴圈。
 
-```
-while True:
-    harvest()
-```
-@unlock_descr_hats = 給無人機戴帽子。
+`while True:
+    harvest()`
+@unlock_descr_hats = 給無人機戴的帽子。
 
-```
-change_hat(Hats.Green_Hat)
-```
-@unlock_descr_the_farmers_remains = ？？？？？？？？？
-@unlock_descr_top_hat = 一頂只有最優秀的無人機才能戴的高級帽子。
-@unlock_descr_senses = 無人機可以看見自己下方的事物與所在位置。
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
+@unlock_descr_top_hat = 一頂非常時髦的帽子，只有最棒的無人機才能戴。
+@unlock_descr_senses = 無人機可以看到下方有什麼以及自己所在的位置。
 
-```
-if get_pos_x() < 5 and num_items(Items.Wood) < 200:
-    plant(Entities.Bush)
-```
-@unlock_descr_expand = 擴張農場並解鎖移動功能。
-@unlock_descr_operators = 算樹、比較和邏輯運算子。
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
+@unlock_descr_expand = 擴大農田並解鎖移動功能。
+@unlock_descr_operators = 算術、比較和邏輯運算子。
 
-```
-if not can_harvest() and (1 + 1 == 4 / 2):
-    do_a_flip()
-```
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
 @unlock_descr_pumpkin = 南瓜！
 
-```
-plant(Entities.Pumpkin)
-```
-@unlock_descr_variables = 為變數賦值。
+`plant(Entities.Pumpkin)`
+@unlock_descr_variables = 給變數指派。
 
-```
-next_plant = Entities.Bush
-plant(next_plant)
-```
+`next_plant = Entities.Bush
+plant(next_plant)`
 @unlock_descr_functions = 定義你自己的函式。
 
-```
-def do_two_flips():
+`def do_two_flips():
     do_a_flip()
     do_a_flip()
 
-do_two_flips()
-```
-@unlock_descr_watering = 澆水讓植物生長得更快。
+do_two_flips()`
+@unlock_descr_watering = 給植物澆水，加快其生長速度。
 
-```
-use_item(Items.Water)
-```
+`use_item(Items.Water)`
 @unlock_descr_carrots = 耕地並種植胡蘿蔔。
 
-```
-till()
-plant(Entities.Carrot)
-```
-@unlock_descr_lists = 使用串列儲存大量的值。
+`till()
+plant(Entities.Carrot)`
+@unlock_descr_rice = 就像長在黏土上的小麥。
 
-```
-plants = [Entities.Grass, Entities.Bush, Entities.Tree]
+`if get_ground_type() == Grounds.Clay:
+    plant(Entities.Rice)`
+@unlock_descr_lists = 使用串列來儲存大量的值。
+
+`plants = [Entities.Grass, Entities.Bush, Entities.Tree]
 
 for p in plants:
     plant(p)
-    move(North)
-```
+    move(North)`
 @unlock_descr_costs = 允許存取物品的成本。
 
-```
-cost = get_cost(Entities.Carrot)
+`cost = get_cost(Entities.Carrot)
 for item in cost:
-	amount_needed = cost[item]
-```
-@unlock_descr_fertilizer = 讓植物立即成長。
+	amount_needed = cost[item]`
+@unlock_descr_fertilizer = 讓植物立即生長。
 
-```
-use_item(Items.Fertilizer)
-```
-@unlock_descr_mazes = 有寶藏在中央的迷宮。
+`use_item(Items.Fertilizer)`
+@unlock_descr_mazes = 中間有寶藏的迷宮。
 
-```
-if get_entity_type() == Entities.Treasure:
-    harvest()
-```
-@unlock_descr_debug = 協助偵錯程式的工具。
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
+@unlock_descr_debug = 幫助偵錯程式的工具。
 
-```
-print("嗨")
-```
-@unlock_descr_debug2 = 用於暫時降低執行速度和縮小農場的函式。
+`print("嗨")`
+@unlock_descr_debug2 = 用於暫時減慢執行速度和縮小農場的函式。
 
-```
-set_world_size(3)
-set_execution_speed(1)
-```
-@unlock_descr_grass = 提升牧草的產量。
+`set_world_size(3)
+set_execution_speed(1)`
+@unlock_descr_grass = 增加草的產量。
 @unlock_descr_auto_unlock = 自動解鎖物品。
 
-```
-unlock(Unlocks.Megafarm)
-```
-@unlock_descr_polyculture = 使用混合種植提升產量。
+`unlock(Unlocks.Megafarm)`
+@unlock_descr_polyculture = 使用伴生種植來增加產量。
 
-```
-plant_type, (x, y) = get_companion()
-```
+`plant_type, (x, y) = get_companion()`
 @unlock_descr_sunflowers = 向日葵和能量。
 
-```
-plant(Entities.Sunflowers)
-```
-@unlock_descr_leaderboard = 加入排行榜，挑戰最快完成時間。
+`plant(Entities.Sunflowers)`
+@unlock_descr_leaderboard = 加入排行榜，爭奪最快時間。
 
-```
-leaderboard_run(Leaderboards.Hay, "hay_file", speedup)
-```
+`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
 @unlock_descr_dicts = 存取字典和集合。
 
-```
-right_of = {North: East, East: South, South: West, West: North}
-```
+`right_of = {North:East, East:South, South:West, West:North}`
 @unlock_descr_utilities = 解鎖 `min()`、`max()`、`abs()` 和 `random()` 函式。
 
-```
-random_index = random() * len(list) // 1
-```
+`random_index = random() * len(list) // 1`
 @unlock_descr_cactus = 仙人掌！
 
-```
-plant(Entities.Cactus)
-```
-@unlock_descr_dinosaurs = 壯麗的遠古生物。
-@unlock_descr_simulation = 在可重現的條件下快速進行測試。
+`plant(Entities.Cactus)`
+@unlock_descr_dinosaurs = 威風的遠古生物。
+@unlock_descr_simulation = 在更快和可復現的條件下進行測試。
 
-```
-run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)
-```
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
 @unlock_descr_timing = 是時候了！
 
-```
-passed_time = get_time()
-```
+`passed_time = get_time()`
 @unlock_descr_import = 從其他檔案匯入內容。
 
-```
-import other_file
-other_file.function()
-```
-@unlock_descr_megafarm = 更多無人機！
+`import other_file
+other_file.function()`
+@unlock_descr_megafarm = 更多無人機，更大農場！
 
-```
-spawn_drone(task)
-```
-@multi_unlock_descr_expand = 擴張農場。這同時會清空農場。
-@multi_unlock_descr_carrots = 提升胡蘿蔔的產量和成本。
-@multi_unlock_descr_trees = 提升灌木和樹木的產量。
-@multi_unlock_descr_pumpkins = 提升南瓜的產量和成本。
-@multi_unlock_descr_mazes = 提升寶箱中的金碧樹量，以及生成迷宮所需的奇異物質數量。
-@multi_unlock_descr_sunflowers = 提升從向日葵中獲得的能量。
-@multi_unlock_descr_cactus = 提升仙人掌的產量和成本。
-@multi_unlock_descr_dinosaur = 提升恐龍的產量和成本。
-@multi_unlock_descr_polyculture = 提升混合種植的產量倍數。
+`spawn_drone(task)`
+@unlock_descr_mining = 給無人機配備鑽頭，還有一頂礦工帽。
+
+`dig()`
+@unlock_descr_coal = 地下會產生煤炭礦床。
+@unlock_descr_iron = 地下會產生鐵礦脈。
+@unlock_descr_pyramid = 地下會產生古代砂岩建築。
+@unlock_descr_quartz = 地下會產生針狀石英礦脈。
+@unlock_descr_ore_boost = 煤炭產量翻倍。鐵礦和石英礦脈的規模翻倍。
+@unlock_descr_jump = 允許無人機向下跳轉。
+@unlock_descr_prospecting = 消耗煤炭探查鐵礦！
+
+`prospect_iron()`
+@unlock_descr_drill = 提高鑽頭強度。
+@unlock_descr_debug_place = 放置彩色地塊。
+
+`place(Grounds.Red_Block)`
+@unlock_descr_underground_senses = 用於探索地下地塊的無人機感測器。
+
+`while get_pos_z() < 100:
+    while get_hardness() > 5:
+        while get_hardness(North):
+            dig(North)
+        move(North)
+    dig()`
+@unlock_descr_petrified_pumpkins = 地下會產生石化南瓜。
+@unlock_descr_special_soils = 發現壤土和珍珠岩層，提高植株產量。
+@unlock_descr_bamboo = 種植竹子，看著它長大。
+
+`plant(Entities.Bamboo)`
+@unlock_descr_dynamite = 尋找並使用炸藥，把東西炸個粉碎。
+@unlock_descr_treasure_map = 尋找深埋地下的寶藏。
+@unlock_descr_mushrooms = 比對蘑菇類型，尋找並收穫地下蘑菇。
+@multi_unlock_descr_expand = 擴大農場，同時還會清空農場。
+@multi_unlock_descr_carrots = 增加胡蘿蔔的產量和成本。
+@multi_unlock_descr_rice = 提高水稻植株的產量和消耗。
+@multi_unlock_descr_trees = 增加灌木和樹的產量。
+@multi_unlock_descr_pumpkins = 增加南瓜的產量和成本。
+@multi_unlock_descr_mazes = 增加寶箱中的金幣和產生迷宮所需的奇異物質數量。
+@multi_unlock_descr_sunflowers = 增加從向日葵中獲得的能量。
+@multi_unlock_descr_cactus = 增加仙人掌的產量和成本。
+@multi_unlock_descr_dinosaur = 增加恐龍的產量和成本。
+@multi_unlock_descr_polyculture = 增加混合種植的產量乘數。
 @multi_unlock_descr_watering = 獲得更多水。
 @multi_unlock_descr_fertilizer = 獲得更多肥料。
-@multi_unlock_descr_megafarm = 進一步提升無人機數量。
+@multi_unlock_descr_megafarm = 進一步增加農場大小和無人機數量。
+@multi_unlock_descr_drill = 提高鑽頭速度。
+@multi_unlock_descr_coal = 地下會產生更多煤炭層。
+@multi_unlock_descr_iron = 提高鐵礦石產量。
+@multi_unlock_descr_pyramid = 提高修復金字塔時獲得的能量。
+@multi_unlock_descr_quartz = 提高石英礦石產量。
+@multi_unlock_descr_petrified_pumpkins = 提高石化南瓜的產量。
+@multi_unlock_descr_dynamite = 提高炸藥產量和爆炸能量。
+@unlock_descr_explosive_drill = 威力最強大的鑽頭。
+@multi_unlock_descr_treasure_map = 延長寶藏路徑的深度，從而增加寶藏中的黃金數量。
+@multi_unlock_descr_ore_boost = 進一步提高煤炭產量，並擴大鐵礦脈和石英礦脈的規模。
+@multi_unlock_descr_bamboo = 提高竹子的產量和消耗。
+@multi_unlock_descr_mushrooms = 提高比對蘑菇地塊的產量。
 @auto_unlock = 自動解鎖
 @cactus = 仙人掌
 @carrots = 胡蘿蔔
+@rice = 水稻
 @costs = 成本
 @debug = 偵錯
-@debug_2 = 偵錯 2
+@debug_2 = 偵錯_2
 @dictionaries = 字典
 @dinosaurs = 恐龍
 @expand = 擴張
 @expand_2 = 擴張 2
 @fertilizer = 肥料
 @functions = 函式
-@grass = 牧草
+@grass = 草
 @hats = 帽子
 @import = 匯入
 @leaderboard = 排行榜
@@ -199,14 +195,32 @@ spawn_drone(task)
 @plant = 種植
 @polyculture = 混合種植
 @pumpkins = 南瓜
-@senses = 感測
+@senses = 感官
+@underground_senses = 地下感官
+@debug_place = 彩色地塊
 @simulation = 模擬
 @speed = 速度
 @sunflowers = 向日葵
 @timing = 計時
-@trees = 樹木
-@the_farmers_remains = ？？？
+@trees = 樹
+@the_farmers_remains = ?
 @top_hat = 高頂禮帽
 @utilities = 實用工具
 @variables = 變數
 @watering = 澆水
+@iron = 鐵礦
+@pyramid = 金字塔
+@ore_boost = 礦石增產
+@petrified_pumpkins = 石化南瓜
+@special_soils = 特殊土壤
+@mining = 採礦
+@coal = 煤炭
+@drill = 鑽頭
+@quartz = 石英
+@prospecting = 鐵礦探查
+@dynamite = 炸藥
+@explosive_drill = 爆破鑽頭
+@bamboo = 竹子
+@treasure_map = 藏寶圖
+@mushrooms = 蘑菇
+@jump = 跳轉

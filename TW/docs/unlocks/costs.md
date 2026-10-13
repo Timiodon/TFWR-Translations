@@ -1,21 +1,86 @@
+[<- 字典](docs/scripting/dicts.md) <right>[自動解鎖 ->](docs/unlocks/auto_unlock.md)
+---
 # 成本
-任何成本皆可表示為一個將物品映射到數量的字典。
+所有成本都可以用一個將物品對應到數量的字典表示。
 
-`get_cost()` 函式會回傳此類字典。它會回傳植物或解鎖項目的成本。
+`get_cost()` 函式回傳的值就是這樣的一個字典：某種植物或某個科技樹項目的耗材。
 
-`get_cost(Entities.Pumpkin)`
-會回傳 `{Items.Carrot:1}`
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
+print(get_cost(Entities.Pumpkin))
+}}
 
-對於解鎖項目，你可以傳入第二個可選引數來指定想查詢的解鎖等級。預設為目前的解鎖等級。
+向科技樹中的各種項目新增第二個可選參數，就可以取得你想要的解鎖等級對應的耗材數量。預設情況下為目前的解鎖等級。
 
-`get_cost(Unlocks.Loops, 0)`
-會回傳 `{Items.Hay:5}`
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
+print(get_cost(Unlocks.Loops, 0))
+print(get_cost(Unlocks.Loops, 1))
+}}
 
-對於已達最高等級的解鎖， `get_cost()` 會回傳 `None`。
+如果科技樹中的某些項目已經到達最高等級，呼叫 `get_cost()` 函式則回傳一個空字典。
 
-用法範例：
-```
-cost = get_cost(something)
+{{codeexample 
+{
+    "show_image": false,
+    "show_code": true,
+    "show_inventory": false,
+    "show_output": true,
+    "collapsing": true,
+    "autoplay": false,
+    "execution_speed": 1,
+    "digging_speed": 1,
+    "action_ticks": 200,
+    "operation_ticks": 100,
+    "seed": 1,
+    "exclude_unlocks": ["watering", "fertilizer"],
+    "starting_chunk": 0,
+    "dlc_enabled": false
+}
+#SETUP
+#CODE
+cost = get_cost(Entities.Carrot)
 for item in cost:
-	amount_of_this_item_needed = cost[item]
-```
+	if num_items(item) < cost[item]:
+		print("缺少", cost[item] - num_items(item), item)
+}}
+
+---
+
+[字典](docs/scripting/dicts.md)      [自動解鎖](docs/unlocks/auto_unlock.md)      [排行榜](docs/unlocks/leaderboard.md)
+
+[get_cost()](functions/get_cost)

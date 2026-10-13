@@ -1,3 +1,3 @@
-完整輸出請查看 [output.txt](persistent_data_path/output.txt)。
-截斷輸出：
+按一下 [output.txt](persistent_data_path/output.txt) 即可檢視程式的完整輸出。
+截斷後的輸出：
 {{output}}
