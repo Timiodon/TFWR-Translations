@@ -1,0 +1,14 @@
+@item_tooltip_template_amount = Nálad van {0}
+@item_descr_carrot = Répa betakarításával szerzed meg.
+@item_descr_fertilizer = Hívd meg a `use_item(Items.Fertilizer)`-t a növények megmaradt növekedési idejének azonnali 2 másodperces csökkentéséhez.
+@item_descr_weird_substance = Hívd meg a `use_item(Items.Weird_Substance)`-t bokoron, hogy labirintus nöjön, vagy más növényekre, hogy fertőzési állapotuk változzon. Fertőzött növényekből szerzed meg. A növények trágyázása megfertőzi őket.
+@item_descr_gold = Kincses ládákban található a labirintusokban.
+@item_descr_hay = Fű vágásával szerzed meg.
+@item_descr_piggy = Ez az item ki lett véve a játékból.
+@item_descr_power = Napraforgó betakarításával szerzed meg. A drón ezt automatikusan használja, hogy kétszer olyan gyorsan mozogjon.
+@item_descr_pumpkin = Tök betakarításával szerzed meg.
+@item_descr_water = A `use_item(Items.Water)` meghívásával öntözöd a talajt.
+@item_descr_wood = Bokrokból és fákból szerzed meg.
+@item_descr_cactus = Szortált kaktuszok betakarításával szerzed meg.
+@item_descr_cactus_seed = Ez az item ki lett véve a játékból.
+@item_descr_bone = Egy ősi lény csontjai.
