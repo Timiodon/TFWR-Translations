@@ -43,8 +43,8 @@ Wenn du sie importiert hast, hast du wahrscheinlich einen Importzyklus (siehe di
 @error_max_stack_size_reached = Die maximale Aufrufstapelgröße wurde erreicht. Dies liegt höchstwahrscheinlich an zu vielen rekursiven Funktionsaufrufen.
 @error_max_comparison_depth = Die maximale Vergleichstiefe wurde erreicht. Dies kann zum Beispiel passieren, wenn du Listen vergleichst, die sich selbst enthalten.
 @error_assign_type_mismatch = Die linke Seite der Zuweisung stimmte nicht mit der rechten Seite überein.
-@error_too_many_values_to_unpack = Die rechte Seite enthält nicht genügend Werte zum Entpacken.
-@error_not_enough_values = Die rechte Seite enthält zu viele Werte, um sie auf der linken Seite zu entpacken.
+@error_too_many_values_to_unpack = Die rechte Seite enthält zu viele Werte, um sie auf der linken Seite zu entpacken.
+@error_not_enough_values = Die rechte Seite enthält nicht genügend Werte zum Entpacken.
 @error_empty_print = `print()` benötigt mindestens ein Argument.
 @error_in_string = Kann nicht prüfen, ob {0} in einem String enthalten ist.
 @error_collection_changed_size_during_iteration = Die Größe dieser Sammlung kann nicht innerhalb einer for-Schleife geändert werden, die darüber iteriert. Das liegt daran, dass eine Größenänderung der Sammlung das Iterator-Objekt ungültig machen würde, das die for-Schleife verwendet.

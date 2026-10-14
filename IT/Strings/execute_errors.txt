@@ -43,8 +43,8 @@ Se l'hai importato, probabilmente hai un ciclo di importazione (Vedi la pagina d
 @error_max_stack_size_reached = È stata raggiunta la dimensione massima della call stack. Probabilmente ciò è dovuto a troppe chiamate ricorsive di funzione.
 @error_max_comparison_depth = È stata raggiunta la profondità massima di confronto. Questo può accadere, ad esempio, se stai confrontando liste che contengono se stesse.
 @error_assign_type_mismatch = Il lato sinistro dell'assegnazione non corrispondeva al lato destro.
-@error_too_many_values_to_unpack = Il lato destro non contiene abbastanza valori da decomprimere.
-@error_not_enough_values = Il lato destro contiene troppi valori per essere spacchettati nel lato sinistro.
+@error_too_many_values_to_unpack = Il lato destro contiene troppi valori per essere spacchettati nel lato sinistro.
+@error_not_enough_values = Il lato destro non contiene abbastanza valori da decomprimere.
 @error_empty_print = `print()` richiede almeno un argomento.
 @error_in_string = Impossibile verificare se {0} è in una stringa.
 @error_collection_changed_size_during_iteration = La dimensione di questa collezione non può essere modificata all'interno di un ciclo for che la scorre. Questo perché cambiare la dimensione della collezione invaliderebbe l'oggetto iteratore che il ciclo for sta utilizzando.

@@ -43,8 +43,8 @@
 @error_max_stack_size_reached = 呼叫堆疊大小已達上限。這很可能是由於遞迴函式呼叫過多。
 @error_max_comparison_depth = 比較深度已達上限。這可能是因為你正在比較包含自身的串列。
 @error_assign_type_mismatch = 指派的左側與右側不相符。
-@error_too_many_values_to_unpack = 右側沒有足夠的值來進行解包。
-@error_not_enough_values = 右側包含的值太多，無法解包到左側。
+@error_too_many_values_to_unpack = 右側包含的值太多，無法解包到左側。
+@error_not_enough_values = 右側沒有足夠的值來進行解包。
 @error_empty_print = `print()` 至少需要一個參數。
 @error_in_string = 無法檢查 {0} 是否在字串中。
 @error_collection_changed_size_during_iteration = 不能在迭代集合的 for 迴圈中更改集合大小。這是因為更改其大小會使 for 迴圈正在使用的迭代器物件失效。

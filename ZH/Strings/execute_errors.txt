@@ -43,8 +43,8 @@
 @error_max_stack_size_reached = 调用栈大小已达上限。这很可能是由于递归函数调用过多。
 @error_max_comparison_depth = 比较深度已达上限。这可能是因为你正在比较包含自身的列表。
 @error_assign_type_mismatch = 赋值的左侧与右侧不匹配。
-@error_too_many_values_to_unpack = 右侧没有足够的值来进行解包。
-@error_not_enough_values = 右侧包含的值太多，无法解包到左侧。
+@error_too_many_values_to_unpack = 右侧包含的值太多，无法解包到左侧。
+@error_not_enough_values = 右侧没有足够的值来进行解包。
 @error_empty_print = `print()` 至少需要一个参数。
 @error_in_string = 无法检查 {0} 是否在字符串中。
 @error_collection_changed_size_during_iteration = 不能在迭代集合的 for 循环中更改集合大小。这是因为更改其大小会使 for 循环正在使用的迭代器对象失效。

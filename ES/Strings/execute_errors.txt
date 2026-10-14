@@ -43,8 +43,8 @@ Si lo has importado, probablemente tengas un ciclo de importación (Consulta la 
 @error_max_stack_size_reached = Se ha alcanzado el tamaño máximo de la pila de llamadas. Esto se debe probablemente a demasiadas llamadas a funciones recursivas.
 @error_max_comparison_depth = Se ha alcanzado la profundidad máxima de comparación. Esto podría suceder, por ejemplo, si estás comparando listas que se contienen a sí mismas.
 @error_assign_type_mismatch = El lado izquierdo de la asignación no coincidía con el lado derecho.
-@error_too_many_values_to_unpack = El lado derecho no contiene suficientes valores para desempaquetar.
-@error_not_enough_values = El lado derecho contiene demasiados valores para ser desempaquetados en el lado izquierdo.
+@error_too_many_values_to_unpack = El lado derecho contiene demasiados valores para ser desempaquetados en el lado izquierdo.
+@error_not_enough_values = El lado derecho no contiene suficientes valores para desempaquetar.
 @error_empty_print = `print()` requiere al menos un argumento.
 @error_in_string = No se puede comprobar si {0} está en un string.
 @error_collection_changed_size_during_iteration = El tamaño de esta colección no se puede cambiar dentro de un bucle for que itera sobre ella. Esto se debe a que cambiar el tamaño de la colección invalidaría el objeto iterador que está usando el bucle for.

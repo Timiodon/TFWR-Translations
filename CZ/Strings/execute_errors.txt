@@ -43,8 +43,8 @@ Pokud už jsi ho importoval, pravděpodobně máš cyklický import (viz stránk
 @error_max_stack_size_reached = Byla dosažena maximální hloubka zásobníku volání. Pravděpodobně jsi vytvořil příliš mnoho rekurzivních volání funkcí.
 @error_max_comparison_depth = Byla dosažena maximální hloubka porovnávání. To se může stát například při porovnávání seznamů, které obsahují samy sebe.
 @error_assign_type_mismatch = Levá strana přiřazení neodpovídá pravé straně.
-@error_too_many_values_to_unpack = Pravá strana neobsahuje dostatek hodnot k rozbalení.
-@error_not_enough_values = Pravá strana obsahuje příliš mnoho hodnot pro rozbalení do levé strany.
+@error_too_many_values_to_unpack = Pravá strana obsahuje příliš mnoho hodnot pro rozbalení do levé strany.
+@error_not_enough_values = Pravá strana neobsahuje dostatek hodnot k rozbalení.
 @error_empty_print = `print()` vyžaduje alespoň jeden argument.
 @error_in_string = Nelze zkontrolovat, zda {0} je uvnitř řetězce.
 @error_collection_changed_size_during_iteration = Velikost této kolekce nelze měnit uvnitř smyčky for, která ji právě prochází. Změna velikosti by zneplatnila iterátor, který smyčka používá.

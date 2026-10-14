@@ -43,8 +43,8 @@
 @error_max_stack_size_reached = コールスタックが最大値に達しました。ほとんどの場合、再帰関数の呼び出しが多すぎることが原因です。
 @error_max_comparison_depth = 最大比較深度に達しました。例えば、自身を含むリストを比較している場合に発生する可能性があります。
 @error_assign_type_mismatch = 代入の左辺が右辺と一致しませんでした。
-@error_too_many_values_to_unpack = 右辺にはアンパックするのに十分な値が含まれていません。
-@error_not_enough_values = 右辺には左辺にアンパックするのに多すぎる値が含まれています。
+@error_too_many_values_to_unpack = 右辺には左辺にアンパックするのに多すぎる値が含まれています。
+@error_not_enough_values = 右辺にはアンパックするのに十分な値が含まれていません。
 @error_empty_print = `print()` には少なくとも1つの引数が必要です。
 @error_in_string = 文字列内に {0} があるかどうか確認できません。
 @error_collection_changed_size_during_iteration = このコレクションのサイズは、それを反復処理するforループ内で変更することはできません。これは、コレクションのサイズを変更すると、forループが使用しているイテレータオブジェクトが無効になるためです。

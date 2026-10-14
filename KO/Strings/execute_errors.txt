@@ -43,8 +43,8 @@ import했다면, 아마 import 순환 참조가 있을 겁니다(import 문서 �
 @error_max_stack_size_reached = 최대 호출 스택 크기에 도달했습니다. 재귀 함수 호출이 너무 많아서일 가능성이 큽니다.
 @error_max_comparison_depth = 최대 비교 깊이에 도달했습니다. 자기 자신을 포함하는 리스트를 비교하는 경우와 같은 예시에서 이런 일이 발생할 수 있습니다.
 @error_assign_type_mismatch = 할당의 왼쪽 피연산자가 오른쪽 피연산자와 일치하지 않았습니다.
-@error_too_many_values_to_unpack = 오른쪽 피연산자에 언패킹할 값이 충분하지 않습니다.
-@error_not_enough_values = 오른쪽 피연산자에 왼쪽 피연산자로 언패킹하기에는 값이 너무 많습니다.
+@error_too_many_values_to_unpack = 오른쪽 피연산자에 왼쪽 피연산자로 언패킹하기에는 값이 너무 많습니다.
+@error_not_enough_values = 오른쪽 피연산자에 언패킹할 값이 충분하지 않습니다.
 @error_empty_print = `print()`는 적어도 하나의 인수가 필요합니다.
 @error_in_string = 문자열에 {0}이(가) 있는지 확인할 수 없습니다.
 @error_collection_changed_size_during_iteration = 이 컬렉션을 반복하는 for 루프 안에서는 이 컬렉션의 크기를 변경할 수 없습니다. 컬렉션의 크기를 변경하면 for 루프가 사용하는 이터레이터 객체가 무효화되기 때문입니다.

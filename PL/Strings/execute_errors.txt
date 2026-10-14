@@ -43,8 +43,8 @@ Jeśli go zaimportowałeś, prawdopodobnie masz cykl importu (zobacz stronę dok
 @error_max_stack_size_reached = Osiągnięto maksymalny rozmiar stosu wywołań. Jest to najprawdopodobniej spowodowane zbyt dużą liczbą rekurencyjnych wywołań funkcji.
 @error_max_comparison_depth = Osiągnięto maksymalną głębokość porównania. Może się to zdarzyć na przykład, jeśli porównujesz listy, które zawierają same siebie.
 @error_assign_type_mismatch = Lewa strona przypisania nie pasuje do prawej strony.
-@error_too_many_values_to_unpack = Prawa strona nie zawiera wystarczającej liczby wartości do rozpakowania.
-@error_not_enough_values = Prawa strona zawiera zbyt wiele wartości, aby można je było rozpakować do lewej strony.
+@error_too_many_values_to_unpack = Prawa strona zawiera zbyt wiele wartości, aby można je było rozpakować do lewej strony.
+@error_not_enough_values = Prawa strona nie zawiera wystarczającej liczby wartości do rozpakowania.
 @error_empty_print = `print()` wymaga co najmniej jednego argumentu.
 @error_in_string = Nie można sprawdzić, czy {0} znajduje się w ciągu znaków.
 @error_collection_changed_size_during_iteration = Rozmiar tej kolekcji nie może być zmieniany w pętli for, która po niej iteruje. Dzieje się tak, ponieważ zmiana rozmiaru kolekcji unieważniłaby obiekt iteratora, którego używa pętla for.
