@@ -1,6 +1,8 @@
 @word_number = 数値
 @word_direction = 方向
 @run_cancelled = 実行失敗
+@run_completed = 実行完了
+@leaderboard_time_limit = タイムがランキングの制限を超えています
 @average_text = {0} 完了 ({2:F1}%)
 {1}
 @average_text2 = {0} 完了

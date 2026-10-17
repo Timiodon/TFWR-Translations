@@ -1,4 +1,4 @@
-[<- 버섯](docs/unlocks/mushroom.md)
+[<- 버섯](docs/unlocks/mushroom.md) <right>[폭발 드릴 ->](docs/unlocks/explosive_drill.md)
 ---
 # 다이너마이트
 

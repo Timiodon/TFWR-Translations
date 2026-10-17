@@ -6,6 +6,8 @@ Anscheinend kann man unter der Erde Kürbisse finden. Sie sind hart und verstein
 
 Versteinerte Kürbisse kommen unterirdisch in Blöcken der Größe 3x3x3 oder 5x5x5 vor. Es gibt keine zuverlässige Methode, sie zu finden, daher musst du darauf hoffen, dass deine Drohne beim Graben auf einen solchen Block stößt. Sie kommen jedoch in der harten Erde unterhalb der Stein- und Eisenschicht vor, ungefähr auf der Höhe, auf der auch Quarz zu finden ist (wenn du ihn freigeschaltet hast).
 
+So kannst du Kürbisse erhalten, ohne sie an der Oberfläche anzubauen. Wenn du lieber Landwirtschaft betreibst, kannst du versteinerte Kürbisse getrost ignorieren.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

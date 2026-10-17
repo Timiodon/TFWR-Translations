@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = 最高の農家だけに与えられます。
 @hat_descr_silver_trophy_hat = 2番目に優れた農家に与えられます。
 @hat_descr_wood_trophy_hat = 3番目に優れた農家に与えられます。
-@hat_descr_dynamite_hat = チーフブラスターの帽子。掘るたびに爆発し、ダイナマイトを1個消費します。チーフブラスターのドローンは1機しか存在できません。
+@hat_descr_explosive_drill = 掘るたびにダイナマイトを1個消費し、通常の爆発を起こします。爆発で直接破壊されたブロックからは、採掘したときと同じようにアイテムを獲得できます。爆発ドリルを装備できるドローンは1台だけです。
 @hat_descr_golden_cactus_hat = サボテンの帽子の金色バージョン。
 @hat_descr_golden_pumpkin_hat = カボチャの帽子の金色バージョン。
 @hat_descr_golden_sunflower_hat = ヒマワリの帽子の金色バージョン。

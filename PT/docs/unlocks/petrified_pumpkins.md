@@ -6,6 +6,8 @@ Aparentemente, é possível encontrar abóboras no subsolo. Elas endureceram e f
 
 Abóboras petrificadas aparecem no subsolo em blocos de 3x3x3 ou 5x5x5. Não há uma forma garantida de encontrá-las; é preciso torcer para o drone atingir uma. Elas aparecem na terra dura abaixo da camada de pedra e ferro, aproximadamente na mesma altura do quartzo (se estiver desbloqueado).
 
+Essa é uma alternativa para obter abóboras sem cultivá-las na superfície. Se preferir cultivá-las, você pode ignorar completamente as abóboras petrificadas.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

@@ -2,8 +2,12 @@
 @button_tooltip_save = 게임을 저장합니다.
 @button_tooltip_options = 옵션 메뉴를 엽니다.
 @button_tooltip_discord = Discord에 참여해서 다른 플레이어나 개발자와 대화하고, 버그를 신고하거나 도움을 받으세요.
-@button_tooltip_execute = 이 창에 있는 코드의 실행을 시작하거나 중지합니다.
-@button_tooltip_step_by_step = 코드를 한 단계 실행합니다.
+@button_tooltip_execute = 이 창에 있는 코드의 실행을 시작합니다.
+@button_tooltip_step_by_step = 이 창에 있는 코드를 단계별로 실행하기 시작합니다.
+@button_tooltip_stop_execution = 실행을 중지합니다.
+@button_tooltip_pause_execution = 실행을 일시 중지합니다.
+@button_tooltip_resume_execution = 실행을 재개합니다.
+@button_tooltip_next_step = 다음 단계를 실행합니다.
 @button_tooltip_new_function = 새 코드 파일을 만듭니다.
 @button_tooltip_new_info_window = 새 정보 창을 엽니다.
 @button_tooltip_minimize = 이 창을 최소화합니다.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = 검색어의 이전 일치 항목으로 이동합니다.
 @button_tooltip_close_search = 검색 메뉴를 닫습니다.
 @button_tooltip_open_unlock_menu = 해금 트리를 엽니다.
+@button_tooltip_open_farm = 농장으로 돌아갑니다.
 @warning_icon_tooltip = 코드가 경고를 발동했습니다. 아이콘을 클릭해서 출력 창에서 자세한 내용을 확인하세요.
 @option_tooltip_graphics = 그림자, 앰비언트 오클루전, 블룸 같은 다양한 렌더 파이프라인 설정에 영향을 줍니다.
 @option_tooltip_vfx_limit = 초당 재생할 수 있는 시각 효과의 수를 제한합니다.

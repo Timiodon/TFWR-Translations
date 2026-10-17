@@ -1,6 +1,8 @@
 @word_number = 숫자
 @word_direction = 방향
 @run_cancelled = 실행 실패
+@run_completed = 실행 완료
+@leaderboard_time_limit = 시간이 리더보드 제한을 초과합니다
 @average_text = {0} 완료({2:F1}%)
 {1}
 @average_text2 = {0} 완료

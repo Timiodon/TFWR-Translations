@@ -1,6 +1,8 @@
 @word_number = Zahl
 @word_direction = Richtung
 @run_cancelled = Lauf fehlgeschlagen
+@run_completed = Lauf abgeschlossen
+@leaderboard_time_limit = Zeit überschreitet das Limit der Bestenliste
 @average_text = {0} abgeschlossen ({2:F1}%)
 {1}
 @average_text2 = {0} abgeschlossen

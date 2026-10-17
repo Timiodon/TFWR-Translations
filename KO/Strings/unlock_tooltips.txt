@@ -72,7 +72,7 @@ for item in cost:
     harvest()`
 @unlock_descr_debug = 프로그램 디버깅을 돕는 도구입니다.
 
-`print("hi")`
+`print("안녕")`
 @unlock_descr_debug2 = 실행을 일시적으로 늦추고 농장을 더 작게 만드는 함수입니다.
 
 `set_world_size(3)
@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = 석영 광석의 수확량이 증가합니다.
 @multi_unlock_descr_petrified_pumpkins = 화석화된 호박의 수확량이 증가합니다.
 @multi_unlock_descr_dynamite = 다이너마이트 수확량과 폭발 에너지가 증가합니다.
+@unlock_descr_explosive_drill = 가장 강력한 드릴입니다.
 @multi_unlock_descr_treasure_map = 보물 길의 깊이가 증가하고, 그만큼 보물에서 얻는 황금의 양도 증가합니다.
 @multi_unlock_descr_ore_boost = 석탄 수확량이 더욱 증가합니다. 철과 석영 광맥의 크기가 더 커집니다.
 @multi_unlock_descr_bamboo = 대나무의 수확량과 비용이 증가합니다.
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = 석영
 @prospecting = 철 탐사
 @dynamite = 다이너마이트
+@explosive_drill = 폭발 드릴
 @bamboo = 대나무
 @treasure_map = 보물지도
 @mushrooms = 버섯

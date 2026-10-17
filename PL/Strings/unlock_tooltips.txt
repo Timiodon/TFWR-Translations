@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Zwiększa plon rudy kwarcu.
 @multi_unlock_descr_petrified_pumpkins = Zwiększa plon skamieniałych dyń.
 @multi_unlock_descr_dynamite = Zwiększa plon dynamitu i energię eksplozji.
+@unlock_descr_explosive_drill = Najpotężniejsze wiertło.
 @multi_unlock_descr_treasure_map = Zwiększa głębokość ścieżki skarbów, a tym samym ilość złota otrzymywanego ze skarbu.
 @multi_unlock_descr_ore_boost = Dodatkowo zwiększa plon węgla. Dodatkowo zwiększa rozmiar żył żelaza i kwarcu.
 @multi_unlock_descr_bamboo = Zwiększa plon i koszt bambusa.
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = Kwarc
 @prospecting = Poszukiwanie żelaza
 @dynamite = Dynamit
+@explosive_drill = Wiertło wybuchowe
 @bamboo = Bambus
 @treasure_map = Mapa skarbów
 @mushrooms = Grzyby

@@ -5,7 +5,7 @@
 [Premier Programme](docs/first_program.md)
 [Pour commencer](docs/getting_started.md)
 [Chargement des Sauvegardes](docs/backup.md)
-<unlock=debug>[Output](docs/output.md)
+<unlock=debug>[Sortie](docs/output.md)
 </unlock><unlock=debug>[Statistiques](docs/stats.md)
 </unlock>
 </columns>
@@ -125,6 +125,7 @@
 <columns>
 <unlock=can_push>[can_push()](functions/can_push)
 </unlock><unlock=dig>[dig()](functions/dig)
+</unlock><unlock=hover>[hover()](functions/hover)
 </unlock><unlock=place>[place()](functions/place)
 </unlock><unlock=prospect_iron>[prospect_iron()](functions/prospect_iron)
 </unlock><unlock=prospect_quartz>[prospect_quartz()](functions/prospect_quartz)
@@ -137,6 +138,7 @@
 </unlock><unlock=get_entity_type>[get_entity_type()](functions/get_entity_type)
 </unlock><unlock=get_ground_type>[get_ground_type()](functions/get_ground_type)
 </unlock><dlc><unlock=get_hardness>[get_hardness()](functions/get_hardness)
+</unlock><unlock=get_hover>[get_hover()](functions/get_hover)
 </unlock></dlc><unlock=get_pos_x>[get_pos_x()](functions/get_pos_x)
 </unlock><unlock=get_pos_y>[get_pos_y()](functions/get_pos_y)
 </unlock><dlc><unlock=get_pos_z>[get_pos_z()](functions/get_pos_z)
@@ -188,93 +190,93 @@
 ## Objets
 **Agriculture**
 <columns>
-<unlock=bone>[Bone](items/bone)
+<unlock=bone>[Os](items/bone)
 </unlock><unlock=cactus>[Cactus](items/cactus)
-</unlock><unlock=carrot>[Carrot](items/carrot)
-</unlock><unlock=fertilizer>[Fertilizer](items/fertilizer)
-</unlock><unlock=gold>[Gold](items/gold)
-</unlock><unlock=hay>[Hay](items/hay)
-</unlock><unlock=power>[Power](items/power)
-</unlock><unlock=pumpkin>[Pumpkin](items/pumpkin)
-</unlock><unlock=water>[Water](items/water)
-</unlock><unlock=weird_substance>[Weird_Substance](items/weird_substance)
-</unlock><unlock=wood>[Wood](items/wood)
+</unlock><unlock=carrot>[Carotte](items/carrot)
+</unlock><unlock=fertilizer>[Engrais](items/fertilizer)
+</unlock><unlock=gold>[Or](items/gold)
+</unlock><unlock=hay>[Foin](items/hay)
+</unlock><unlock=power>[Puissance](items/power)
+</unlock><unlock=pumpkin>[Citrouille](items/pumpkin)
+</unlock><unlock=water>[Eau](items/water)
+</unlock><unlock=weird_substance>[Substance étrange](items/weird_substance)
+</unlock><unlock=wood>[Bois](items/wood)
 </unlock>
 </columns>
 **Exploitation minière**
 <columns>
-<unlock=bamboo>[Bamboo](items/bamboo)
-</unlock><unlock=block>[Block](items/block)
-</unlock><unlock=coal>[Coal](items/coal)
+<unlock=bamboo>[Bambou](items/bamboo)
+</unlock><unlock=block>[Bloc](items/block)
+</unlock><unlock=coal>[Charbon](items/coal)
 </unlock><unlock=dynamite>[Dynamite](items/dynamite)
-</unlock><unlock=iron>[Iron](items/iron)
-</unlock><unlock=mushroom>[Mushroom](items/mushroom)
+</unlock><unlock=iron>[Fer](items/iron)
+</unlock><unlock=mushroom>[Champignon](items/mushroom)
 </unlock><unlock=quartz>[Quartz](items/quartz)
-</unlock><unlock=rice>[Rice](items/rice)
+</unlock><unlock=rice>[Riz](items/rice)
 </unlock>
 </columns>
 
 ## Entités
 **Agriculture**
 <columns>
-<unlock=apple>[Apple](objects/apple)
-</unlock><unlock=bush>[Bush](objects/bush)
+<unlock=apple>[Pomme](objects/apple)
+</unlock><unlock=bush>[Buisson](objects/bush)
 </unlock><unlock=cactus>[Cactus](objects/cactus)
-</unlock><unlock=carrot>[Carrot](objects/carrot)
-</unlock><unlock=dead_pumpkin>[Dead_Pumpkin](objects/dead_pumpkin)
-</unlock><unlock=dinosaur>[Dinosaur](objects/dinosaur)
-</unlock><unlock=grass>[Grass](objects/grass)
-</unlock><unlock=hedge>[Hedge](objects/hedge)
-</unlock><unlock=pumpkin>[Pumpkin](objects/pumpkin)
-</unlock><unlock=sunflower>[Sunflower](objects/sunflower)
-</unlock><unlock=treasure>[Treasure](objects/treasure)
-</unlock><unlock=tree>[Tree](objects/tree)
+</unlock><unlock=carrot>[Carotte](objects/carrot)
+</unlock><unlock=dead_pumpkin>[Citrouille morte](objects/dead_pumpkin)
+</unlock><unlock=dinosaur>[Dinosaure](objects/dinosaur)
+</unlock><unlock=grass>[Herbe](objects/grass)
+</unlock><unlock=hedge>[Haie](objects/hedge)
+</unlock><unlock=pumpkin>[Citrouille](objects/pumpkin)
+</unlock><unlock=sunflower>[Tournesol](objects/sunflower)
+</unlock><unlock=treasure>[Trésor](objects/treasure)
+</unlock><unlock=tree>[Arbre](objects/tree)
 </unlock>
 </columns>
 **Exploitation minière**
 <columns>
-<unlock=bamboo>[Bamboo](objects/bamboo)
+<unlock=bamboo>[Bambou](objects/bamboo)
 </unlock><unlock=dynamite>[Dynamite](objects/dynamite)
-</unlock><unlock=rice>[Rice](objects/rice)
-</unlock><unlock=underground_treasure>[Underground_Treasure](objects/underground_treasure)
+</unlock><unlock=rice>[Riz](objects/rice)
+</unlock><unlock=underground_treasure>[Trésor souterrain](objects/underground_treasure)
 </unlock>
 </columns>
 
 ## Sols
 **Agriculture**
 <columns>
-<unlock=grassland>[Grassland](grounds/grassland)
-</unlock><unlock=soil>[Soil](grounds/soil)
+<unlock=grassland>[Prairie](grounds/grassland)
+</unlock><unlock=soil>[Terre](grounds/soil)
 </unlock>
 </columns>
 <dlc>**Exploitation minière**
 <columns>
-<unlock=basalt>[Basalt](grounds/basalt)
-</unlock><unlock=clay>[Clay](grounds/clay)
-</unlock><unlock=coal>[Coal](grounds/coal)
-</unlock><unlock=dirt>[Dirt](grounds/dirt)
-</unlock><unlock=dry_rice_terrace>[Dry_Rice_Terrace](grounds/dry_rice_terrace)
+<unlock=basalt>[Basalte](grounds/basalt)
+</unlock><unlock=clay>[Argile](grounds/clay)
+</unlock><unlock=coal>[Charbon](grounds/coal)
+</unlock><unlock=dirt>[Terre dure](grounds/dirt)
+</unlock><unlock=dry_rice_terrace>[Rizière asséchée](grounds/dry_rice_terrace)
 </unlock><unlock=dynamite>[Dynamite](grounds/dynamite)
-</unlock><unlock=iron>[Iron](grounds/iron)
-</unlock><unlock=limestone>[Limestone](grounds/limestone)
-</unlock><unlock=loam>[Loam](grounds/loam)
-</unlock><unlock=mushroom>[Mushroom](grounds/mushroom)
+</unlock><unlock=iron>[Fer](grounds/iron)
+</unlock><unlock=limestone>[Calcaire](grounds/limestone)
+</unlock><unlock=loam>[Terreau](grounds/loam)
+</unlock><unlock=mushroom>[Champignon](grounds/mushroom)
 </unlock><unlock=perlite>[Perlite](grounds/perlite)
-</unlock><unlock=petrified_pumpkin>[Petrified_Pumpkin](grounds/petrified_pumpkin)
+</unlock><unlock=petrified_pumpkin>[Citrouille pétrifiée](grounds/petrified_pumpkin)
 </unlock><unlock=quartz>[Quartz](grounds/quartz)
-</unlock><unlock=rice_terrace>[Rice_Terrace](grounds/rice_terrace)
-</unlock><unlock=rock>[Rock](grounds/rock)
-</unlock><unlock=sand>[Sand](grounds/sand)
-</unlock><unlock=soot>[Soot](grounds/soot)
-</unlock><unlock=treasure_goal>[Treasure_Goal](grounds/treasure_goal)
-</unlock><unlock=treasure_map>[Treasure_Map](grounds/treasure_map)
-</unlock><unlock=treasure_path>[Treasure_Path](grounds/treasure_path)
+</unlock><unlock=rice_terrace>[Rizière](grounds/rice_terrace)
+</unlock><unlock=rock>[Pierre](grounds/rock)
+</unlock><unlock=sand>[Sable](grounds/sand)
+</unlock><unlock=soot>[Suie](grounds/soot)
+</unlock><unlock=treasure_goal>[Arrivée du trésor](grounds/treasure_goal)
+</unlock><unlock=treasure_map>[Carte au trésor](grounds/treasure_map)
+</unlock><unlock=treasure_path>[Chemin du trésor](grounds/treasure_path)
 </unlock>
 </columns></dlc>
 <unlock=debug_place>**Couleurs**
 <columns>
-[Blue_Block](grounds/blue_block)
-[Green_Block](grounds/green_block)
-[Red_Block](grounds/red_block)
+[Bloc bleu](grounds/blue_block)
+[Bloc vert](grounds/green_block)
+[Bloc rouge](grounds/red_block)
 </columns>
 </unlock>

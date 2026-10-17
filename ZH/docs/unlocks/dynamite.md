@@ -1,4 +1,4 @@
-[<-蘑菇](docs/unlocks/mushroom.md)
+[<-蘑菇](docs/unlocks/mushroom.md) <right>[爆破钻头 ->](docs/unlocks/explosive_drill.md)
 ---
 # 炸药
 

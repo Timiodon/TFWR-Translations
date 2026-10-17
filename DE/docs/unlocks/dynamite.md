@@ -1,4 +1,4 @@
-[<- Pilze](docs/unlocks/mushroom.md)
+[<- Pilze](docs/unlocks/mushroom.md) <right>[Sprengbohrer ->](docs/unlocks/explosive_drill.md)
 ---
 # Dynamit
 

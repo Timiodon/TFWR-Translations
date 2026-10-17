@@ -6,6 +6,8 @@ Najwyraźniej pod ziemią można znaleźć dynie. Stwardniały i skamieniały, a
 
 Skamieniałe dynie występują pod ziemią w skupiskach 3x3x3 lub 5x5x5. Nie ma niezawodnego sposobu na ich znalezienie, więc trzeba liczyć, że dron na nie trafi. Występują w twardej ziemi pod warstwą skał i żelaza, mniej więcej na wysokości kwarcu (jeśli jest odblokowany).
 
+To alternatywny sposób na zdobywanie dyń bez uprawiania ich na powierzchni. Jeśli wolisz uprawę, możesz całkowicie zignorować skamieniałe dynie.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

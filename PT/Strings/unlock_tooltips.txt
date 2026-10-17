@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Aumenta a produção dos minérios de quartzo.
 @multi_unlock_descr_petrified_pumpkins = Aumenta a produção de abóboras petrificadas.
 @multi_unlock_descr_dynamite = Aumenta a produção de dinamite e a energia das explosões.
+@unlock_descr_explosive_drill = A broca mais potente.
 @multi_unlock_descr_treasure_map = Aumenta a profundidade do caminho do tesouro e, portanto, a quantidade de ouro obtida do tesouro.
 @multi_unlock_descr_ore_boost = Aumenta ainda mais a produção de carvão. Aumenta ainda mais o tamanho dos veios de ferro e quartzo.
 @multi_unlock_descr_bamboo = Aumenta a produção e o custo do bambu.
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = Quartzo
 @prospecting = Prospecção de Ferro
 @dynamite = Dinamite
+@explosive_drill = Broca Explosiva
 @bamboo = Bambu
 @treasure_map = Mapa do Tesouro
 @mushrooms = Cogumelo

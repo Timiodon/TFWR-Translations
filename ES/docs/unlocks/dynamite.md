@@ -1,4 +1,4 @@
-[<- Hongo](docs/unlocks/mushroom.md)
+[<- Hongo](docs/unlocks/mushroom.md) <right>[Taladro explosivo ->](docs/unlocks/explosive_drill.md)
 ---
 # Dinamita
 

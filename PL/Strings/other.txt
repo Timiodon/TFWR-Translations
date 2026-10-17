@@ -1,6 +1,8 @@
 @word_number = liczba
 @word_direction = kierunek
 @run_cancelled = Uruchomienie nieudane
+@run_completed = Uruchomienie ukończone
+@leaderboard_time_limit = Czas przekracza limit tabeli wyników
 @average_text = {0} Ukończono ({2:F1}%)
 {1}
 @average_text2 = {0} Ukończono

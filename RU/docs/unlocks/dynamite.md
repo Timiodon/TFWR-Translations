@@ -1,4 +1,4 @@
-[<- Грибы](docs/unlocks/mushroom.md)
+[<- Грибы](docs/unlocks/mushroom.md) <right>[Взрывной бур ->](docs/unlocks/explosive_drill.md)
 ---
 # Динамит
 

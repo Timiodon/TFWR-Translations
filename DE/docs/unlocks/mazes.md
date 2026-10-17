@@ -104,7 +104,7 @@ Ein Labyrinth wiederzuverwenden bringt nicht mehr Gold, als es einfach zu ernten
 Dies ist zu 100% eine zusätzliche Herausforderung, die du einfach überspringen kannst.
 Es lohnt sich nur, wenn die zusätzlichen Informationen und die Abkürzungen dir helfen, das Labyrinth schneller zu lösen.
 
-Der Schatz kann bis zu 300 Mal verschoben werden. Danach erhöht die Verwendung von seltsamer Substanz auf dem Schatz das Gold darin nicht mehr und er wird sich nicht mehr bewegen.
+Der Schatz kann bis zu 300 Mal verschoben werden. Danach erhältst du durch die Verwendung von seltsamer Substanz auf dem Schatz kein Gold mehr und der Schatz wird nicht mehr verschoben.
 
 <spoiler=zeige Hinweis 1>
 Hier ist ein allgemeiner Ansatz zur Lösung des Problems:

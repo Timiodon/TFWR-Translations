@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = Nur für den besten Farmer.
 @hat_descr_silver_trophy_hat = Für den zweitbesten Farmer.
 @hat_descr_wood_trophy_hat = Für den drittbesten Farmer.
-@hat_descr_dynamite_hat = Hut für den Sprengmeister. Bei jedem Graben kommt es zu einer Explosion, die ein Dynamit kostet. Es kann nur eine Sprengmeister-Drohne geben.
+@hat_descr_explosive_drill = Jedes Graben verbraucht ein Dynamit und löst eine normale Explosion aus. Direkt durch die Explosion zerstörte Blöcke liefern Items, als wären sie abgebaut worden. Nur eine Drohne kann mit dem Sprengbohrer ausgerüstet werden.
 @hat_descr_golden_cactus_hat = Eine goldene Version des Kaktushuts.
 @hat_descr_golden_pumpkin_hat = Eine goldene Version des Kürbishuts.
 @hat_descr_golden_sunflower_hat = Eine goldene Version des Sonnenblumenhuts.

@@ -2,8 +2,12 @@
 @button_tooltip_save = Sauvegarde le jeu.
 @button_tooltip_options = Ouvre le menu des options.
 @button_tooltip_discord = Rejoins le discord pour discuter avec d'autres joueurs et le développeur, signaler des bugs ou obtenir de l'aide.
-@button_tooltip_execute = Démarre ou arrête l'exécution du code dans cette fenêtre.
-@button_tooltip_step_by_step = Exécute une seule étape du code.
+@button_tooltip_execute = Démarre l'exécution du code dans cette fenêtre.
+@button_tooltip_step_by_step = Démarre l'exécution du code dans cette fenêtre pas à pas.
+@button_tooltip_stop_execution = Arrête l'exécution.
+@button_tooltip_pause_execution = Met l'exécution en pause.
+@button_tooltip_resume_execution = Reprend l'exécution.
+@button_tooltip_next_step = Exécute l'étape suivante.
 @button_tooltip_new_function = Crée un nouveau fichier de code.
 @button_tooltip_new_info_window = Ouvre une nouvelle fenêtre d'information.
 @button_tooltip_minimize = Réduit cette fenêtre.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = Va à l'occurrence précédente du terme recherché.
 @button_tooltip_close_search = Ferme le menu de recherche.
 @button_tooltip_open_unlock_menu = Ouvre l'arbre des déblocages.
+@button_tooltip_open_farm = Retourne à la ferme.
 @warning_icon_tooltip = Ton code a déclenché un avertissement. Clique sur l'icône pour voir les détails dans la fenêtre de sortie.
 @option_tooltip_graphics = Affecte divers paramètres du pipeline de rendu comme les ombres, l'occlusion ambiante et le bloom.
 @option_tooltip_vfx_limit = Limite le nombre d'effets visuels pouvant être joués par seconde.

@@ -1,4 +1,4 @@
-[<- キノコ](docs/unlocks/mushroom.md)
+[<- キノコ](docs/unlocks/mushroom.md) <right>[爆発ドリル ->](docs/unlocks/explosive_drill.md)
 ---
 # ダイナマイト
 

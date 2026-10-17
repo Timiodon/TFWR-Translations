@@ -1,4 +1,4 @@
-[<- Funghi](docs/unlocks/mushroom.md)
+[<- Funghi](docs/unlocks/mushroom.md) <right>[Trivella Esplosiva ->](docs/unlocks/explosive_drill.md)
 ---
 # Dinamite
 

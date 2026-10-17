@@ -1,6 +1,8 @@
 @word_number = numero
 @word_direction = direzione
 @run_cancelled = Run fallita
+@run_completed = Run completata
+@leaderboard_time_limit = Il tempo supera il limite della classifica
 @average_text = {0} Partite Completate ({2:F1}%)
 {1}
 @average_text2 = {0} Partite Completate

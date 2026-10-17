@@ -6,6 +6,8 @@ Apparemment, on peut trouver des citrouilles sous terre. Elles se sont solidifi�
 
 Les citrouilles pétrifiées apparaissent sous terre dans des blocs de 3x3x3 ou de 5x5x5. Il n’existe aucun moyen infaillible de les trouver : il faut simplement espérer que ton drone tombe dessus en creusant. Elles se trouvent cependant dans la terre dure sous la couche de pierre et de fer, à peu près à la même profondeur que le quartz (si tu l’as débloqué).
 
+Cela offre un autre moyen d’obtenir des citrouilles sans les cultiver en surface. Si tu préfères les cultiver, tu peux tout simplement ignorer les citrouilles pétrifiées.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

@@ -1,6 +1,8 @@
 @word_number = число
 @word_direction = направление
 @run_cancelled = Не удалось запустить
+@run_completed = Запуск завершен
+@leaderboard_time_limit = Время превышает лимит рейтинга
 @average_text = Завершено: {0} ({2:F1}%)
 {1}
 @average_text2 = Завершено: {0}

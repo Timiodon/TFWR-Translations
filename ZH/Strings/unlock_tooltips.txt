@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = 提高石英矿石产量。
 @multi_unlock_descr_petrified_pumpkins = 提高石化南瓜的产量。
 @multi_unlock_descr_dynamite = 提高炸药产量和爆炸能量。
+@unlock_descr_explosive_drill = 最强大的钻头。
 @multi_unlock_descr_treasure_map = 延长宝藏路径的深度，从而增加宝藏中的黄金数量。
 @multi_unlock_descr_ore_boost = 进一步提高煤炭产量，并扩大铁矿脉和石英矿脉的规模。
 @multi_unlock_descr_bamboo = 提高竹子的产量和消耗。
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = 石英
 @prospecting = 铁矿探查
 @dynamite = 炸药
+@explosive_drill = 爆破钻头
 @bamboo = 竹子
 @treasure_map = 藏宝图
 @mushrooms = 蘑菇

@@ -271,7 +271,7 @@ print(get_tick_count())`
 
 辞書を返します。
 
-実行に `1 + len(dictionary)` ティックかかります。
+実行に `1 + 2*len(dictionary)` ティックかかります。
 
 例:
 `new_dict = dict()`
@@ -314,11 +314,11 @@ print(get_tick_count())`
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 何が起こっているかをよりよく見るために、農場のサイズを制限します。
-また、農場をクリアし、ドローンの位置をリセットします。
 農場を `size` x `size` のグリッドに設定します。
 可能な最小の `size` は `3` です。
 `size` が `3` 未満の場合、グリッドは元のフルサイズに戻ります。
 この効果は実行が停止すると終了します。
+また、実際にサイズが変わった場合にのみ、農場をクリアし、ドローンの位置をリセットします。
 
 `None` を返します。
 
@@ -717,3 +717,15 @@ list.insert(0, 0)`
 
 例：
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+ドローンが地面から浮いている高さを変更します。
+
+デフォルトの高さは `1` です。ドローンのほとんどのアクションで、高さはデフォルトに戻ります。
+
+例:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+ドローンが現在地面から浮いている高さを取得します。
+
+例:
+`height = get_hover()`

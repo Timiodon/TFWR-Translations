@@ -271,7 +271,7 @@ Si `dictionary` es un diccionario, crea una copia de él.
 
 devuelve un diccionario.
 
-tarda `1 + len(dictionary)` ticks en ejecutarse.
+tarda `1 + 2*len(dictionary)` ticks en ejecutarse.
 
 ejemplo:
 `new_dict = dict()`
@@ -314,11 +314,11 @@ ejemplo:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Limita el tamaño de la granja para ver mejor lo que está sucediendo.
-También limpia la granja y restablece la posición del dron.
 Establece la granja a una cuadrícula de `size` x `size`.
 El `size` más pequeño posible es `3`.
 Un `size` menor que `3` cambiará la cuadrícula de nuevo a su tamaño completo.
 El efecto también se detendrá cuando la ejecución se detenga.
+También limpia la granja y restablece la posición del dron, pero solo si el tamaño ha cambiado.
 
 devuelve `None`
 
@@ -712,3 +712,15 @@ Solo puedes ejecutar `jump` una vez por script.
 
 ejemplo:
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+Cambia la altura a la que el dron flota sobre el suelo.
+
+La altura predeterminada es `1` y la mayoría de las acciones del dron restablecen esta altura.
+
+ejemplo:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+Obtiene la altura actual a la que el dron flota sobre el suelo.
+
+ejemplo:
+`height = get_hover()`

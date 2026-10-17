@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = 只属于最棒的农民。
 @hat_descr_silver_trophy_hat = 属于第二棒的农民。
 @hat_descr_wood_trophy_hat = 属于第三棒的农民。
-@hat_descr_dynamite_hat = 首席爆破手的帽子。每次挖掘都会引发爆炸，并消耗 1 份炸药。只能有一架首席爆破手无人机。
+@hat_descr_explosive_drill = 每次挖掘都会消耗 1 份炸药，并引发一次普通爆炸。被爆炸直接摧毁的地块会像正常开采一样产出物品。只能有一架无人机装备爆破钻头。
 @hat_descr_golden_cactus_hat = 金色版仙人掌帽。
 @hat_descr_golden_pumpkin_hat = 金色版南瓜帽。
 @hat_descr_golden_sunflower_hat = 金色版向日葵帽。

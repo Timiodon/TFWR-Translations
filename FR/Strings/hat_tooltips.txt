@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = Seulement pour le meilleur fermier.
 @hat_descr_silver_trophy_hat = Pour le deuxième meilleur fermier.
 @hat_descr_wood_trophy_hat = Pour le troisième meilleur fermier.
-@hat_descr_dynamite_hat = Le chapeau du chef dynamiteur. Chaque forage provoque une explosion et coûte une dynamite. Il ne peut y avoir qu’un seul drone chef dynamiteur.
+@hat_descr_explosive_drill = Chaque forage consomme une dynamite et provoque une explosion normale. Les blocs directement détruits par l’explosion rapportent des objets comme s’ils avaient été extraits. Un seul drone peut s’équiper de la foreuse explosive.
 @hat_descr_golden_cactus_hat = Une version dorée du chapeau cactus.
 @hat_descr_golden_pumpkin_hat = Une version dorée du chapeau citrouille.
 @hat_descr_golden_sunflower_hat = Une version dorée du chapeau tournesol.

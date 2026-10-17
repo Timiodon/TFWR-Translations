@@ -2,8 +2,12 @@
 @button_tooltip_save = 保存游戏。
 @button_tooltip_options = 打开选项菜单。
 @button_tooltip_discord = 加入 Discord 与其他玩家和开发者交流、报告 bug 或寻求帮助。
-@button_tooltip_execute = 开始或停止执行此窗口中的代码。
-@button_tooltip_step_by_step = 执行单步代码。
+@button_tooltip_execute = 开始执行此窗口中的代码。
+@button_tooltip_step_by_step = 开始逐步执行此窗口中的代码。
+@button_tooltip_stop_execution = 停止执行。
+@button_tooltip_pause_execution = 暂停执行。
+@button_tooltip_resume_execution = 恢复执行。
+@button_tooltip_next_step = 执行下一步。
 @button_tooltip_new_function = 创建新的代码文件。
 @button_tooltip_new_info_window = 打开新的信息窗口。
 @button_tooltip_minimize = 最小化此窗口。
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = 前往上一个匹配的搜索词。
 @button_tooltip_close_search = 关闭搜索菜单。
 @button_tooltip_open_unlock_menu = 打开科技树。
+@button_tooltip_open_farm = 返回农场。
 @warning_icon_tooltip = 你的代码触发了警告。点击图标在输出窗口中查看详情。
 @option_tooltip_graphics = 影响各种渲染管线设置，如阴影、环境光遮蔽和泛光。
 @option_tooltip_vfx_limit = 限制每秒可播放的视觉效果数量。

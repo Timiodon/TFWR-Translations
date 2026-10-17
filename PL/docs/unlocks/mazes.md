@@ -104,7 +104,7 @@ Ponowne użycie labiryntu nie daje więcej złota niż zebranie i stworzenie now
 To jest w 100% dodatkowe wyzwanie, które możesz po prostu pominąć.
 Opłaca się to tylko wtedy, gdy dodatkowe informacje i skróty pomagają szybciej rozwiązać labirynt.
 
-Skarb można przenieść do 300 razy. Późniejsze użycie na nim Dziwnej Substancji nie zwiększy już zawartości złota ani go nie przeniesie.
+Skarb można przenieść do 300 razy. Późniejsze użycie na nim Dziwnej Substancji nie da ci już złota ani nie przeniesie skarbu.
 
 <spoiler=pokaż podpowiedź 1>
 Oto ogólne podejście do rozwiązania problemu:

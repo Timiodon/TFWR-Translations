@@ -1,4 +1,4 @@
-[<- Champignon](docs/unlocks/mushroom.md)
+[<- Champignon](docs/unlocks/mushroom.md) <right>[Foreuse explosive ->](docs/unlocks/explosive_drill.md)
 ---
 # Dynamite
 

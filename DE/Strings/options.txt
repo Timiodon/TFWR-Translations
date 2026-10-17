@@ -26,6 +26,7 @@
 @enabled = Aktiviert
 @disabled = Deaktiviert
 @language = Sprache
+@unofficial_translations_separator = ---- Inoffiziell ----
 @frames = Frames
 @full vsync = Voller Vsync
 @half vsync = Halber Vsync

@@ -271,7 +271,7 @@ Wenn `dictionary` ein Dictionary ist, wird eine Kopie davon erstellt.
 
 gibt ein Dictionary zurück.
 
-dauert `1 + len(dictionary)` Ticks.
+dauert `1 + 2*len(dictionary)` Ticks.
 
 Beispiel:
 `new_dict = dict()`
@@ -314,11 +314,11 @@ Beispiel:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Begrenzt die Größe der Farm, um besser zu sehen, was passiert.
-Leert auch die Farm und setzt die Drohnenposition zurück.
 Setzt die Farm auf ein `size` x `size` Gitter.
 Die kleinstmögliche `size` ist `3`.
 Eine `size` kleiner als `3` setzt das Gitter auf seine volle Größe zurück.
 Der Effekt endet auch, wenn die Ausführung stoppt.
+Leert auch die Farm und setzt die Drohnenposition zurück, aber nur, wenn sich die Größe tatsächlich geändert hat.
 
 gibt `None` zurück
 
@@ -712,3 +712,15 @@ Du kannst `jump` nur einmal pro Skript ausführen.
 
 Beispiel:
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+Ändert die Höhe, in der die Drohne über dem Boden schwebt.
+
+Die Standardhöhe ist `1` und die meisten Drohnenaktionen setzen die Schwebehöhe auf den Standardwert zurück.
+
+Beispiel:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+Gibt die aktuelle Höhe zurück, in der die Drohne über dem Boden schwebt.
+
+Beispiel:
+`height = get_hover()`

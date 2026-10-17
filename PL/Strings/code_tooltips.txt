@@ -271,7 +271,7 @@ Jeśli `dictionary` to słownik, tworzy jego kopię.
 
 zwraca słownik.
 
-zajmuje `1 + len(dictionary)` ticków.
+zajmuje `1 + 2*len(dictionary)` ticków.
 
 przykład:
 `new_dict = dict()`
@@ -314,11 +314,11 @@ przykład:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Ogranicza rozmiar farmy, aby lepiej widzieć, co się dzieje.
-Czyści również farmę i resetuje pozycję drona.
 Ustawia farmę na siatkę `size` x `size`.
 Najmniejszy możliwy `size` to `3`.
 `size` mniejszy niż `3` przywróci siatkę do pełnego rozmiaru.
 Efekt ustaje również po zakończeniu wykonywania kodu.
+Czyści również farmę i resetuje pozycję drona, ale tylko wtedy, gdy rozmiar faktycznie się zmienił.
 
 zwraca `None`
 
@@ -712,3 +712,15 @@ Możesz wykonać `jump` tylko raz w skrypcie.
 
 przykład:
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+Zmienia wysokość, na której dron unosi się nad ziemią.
+
+Domyślna wysokość to `1`, a większość działań drona przywraca domyślną wysokość unoszenia się.
+
+przykład:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+Pobiera bieżącą wysokość, na której dron unosi się nad ziemią.
+
+przykład:
+`height = get_hover()`

@@ -6,6 +6,8 @@ Al parecer, puedes encontrar calabazas bajo tierra. Se han endurecido y petrific
 
 Las calabazas petrificadas aparecen bajo tierra en bloques de 3x3x3 o 5x5x5. No hay una forma infalible de encontrarlas, así que tendrás que confiar en que tu dron se tope con una al excavar. Aparecen en la tierra dura que hay debajo de la capa de roca y hierro, más o menos a la misma altura que el cuarzo (si lo has desbloqueado).
 
+Esto ofrece otra forma de obtener calabazas sin cultivarlas en la superficie. Si prefieres cultivarlas, puedes ignorar por completo las calabazas petrificadas.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

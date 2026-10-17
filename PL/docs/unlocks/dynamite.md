@@ -1,4 +1,4 @@
-[<- Grzyby](docs/unlocks/mushroom.md)
+[<- Grzyby](docs/unlocks/mushroom.md) <right>[Wiertło wybuchowe ->](docs/unlocks/explosive_drill.md)
 ---
 # Dynamit
 

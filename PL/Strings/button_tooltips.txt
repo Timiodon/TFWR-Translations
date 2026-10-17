@@ -2,8 +2,12 @@
 @button_tooltip_save = Zapisuje grę.
 @button_tooltip_options = Otwiera menu opcji.
 @button_tooltip_discord = Dołącz na Discorda, aby rozmawiać z innymi graczami i twórcą, zgłaszać błędy lub uzyskać pomoc.
-@button_tooltip_execute = Uruchamia lub zatrzymuje wykonywanie kodu w tym oknie.
-@button_tooltip_step_by_step = Wykonuje jeden krok kodu.
+@button_tooltip_execute = Uruchamia wykonywanie kodu w tym oknie.
+@button_tooltip_step_by_step = Uruchamia wykonywanie kodu w tym oknie krok po kroku.
+@button_tooltip_stop_execution = Zatrzymuje wykonywanie.
+@button_tooltip_pause_execution = Wstrzymuje wykonywanie.
+@button_tooltip_resume_execution = Wznawia wykonywanie.
+@button_tooltip_next_step = Wykonuje następny krok.
 @button_tooltip_new_function = Stwórz nowy plik z kodem.
 @button_tooltip_new_info_window = Otwórz nowe okno informacyjne.
 @button_tooltip_minimize = Minimalizuje to okno.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = Przejdź do poprzedniego wyniku wyszukiwania.
 @button_tooltip_close_search = Zamknij menu wyszukiwania.
 @button_tooltip_open_unlock_menu = Otwórz drzewko odblokowań.
+@button_tooltip_open_farm = Wraca na farmę.
 @warning_icon_tooltip = Twój kod wywołał ostrzeżenie. Kliknij ikonę, aby zobaczyć szczegóły w oknie wyjściowym.
 @option_tooltip_graphics = Wpływa na różne ustawienia potoku renderowania, takie jak cienie, okluzja otoczenia i bloom.
 @option_tooltip_vfx_limit = Ogranicza liczbę efektów wizualnych, które mogą być odtwarzane na sekundę.

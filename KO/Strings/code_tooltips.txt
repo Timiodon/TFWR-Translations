@@ -271,7 +271,7 @@ print(get_tick_count())`
 
 딕셔너리를 반환합니다.
 
-실행하는 데 `1 + len(dictionary)`틱이 필요합니다.
+실행하는 데 `1 + 2*len(dictionary)`틱이 필요합니다.
 
 예시:
 `new_dict = dict()`
@@ -314,11 +314,11 @@ print(get_tick_count())`
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 무슨 일이 일어나는지 더 잘 볼 수 있도록 농장 크기를 제한합니다.
-또한 농장을 비우고 드론 위치를 초기화합니다.
 농장을 `size` x `size` 그리드로 설정합니다.
 가능한 가장 작은 `size`는 `3`입니다.
 `size`가 `3`보다 작으면 그리드가 다시 원래 크기로 돌아갑니다.
 이 효과는 실행이 멈추면 사라집니다.
+또한 크기가 실제로 변경된 경우에만 농장을 비우고 드론 위치를 초기화합니다.
 
 `None`을 반환합니다.
 
@@ -548,7 +548,7 @@ result = wait_for(drone)`
 `max(a,b,c)`: `a`, `b`, `c`의 최댓값을 반환합니다.
 `max(sequence)`: 시퀀스의 모든 값 중 최댓값을 반환합니다.
 
-실행하는 데 #comparisons 만큼의 틱이 필요합니다.
+실행하는 데 비교 횟수 만큼의 틱이 필요합니다.
 
 예시:
 `max([3,6,34,16])`
@@ -559,7 +559,7 @@ result = wait_for(drone)`
 `min(a,b,c)`: `a`, `b`, `c`의 최솟값을 반환합니다.
 `min(sequence)`: 시퀀스의 모든 값 중 최솟값을 반환합니다.
 
-실행하는 데 #comparisons 만큼의 틱이 필요합니다.
+실행하는 데 비교 횟수 만큼의 틱이 필요합니다.
 
 예시:
 `min([3,6,34,16])`
@@ -598,7 +598,7 @@ list.append(1)`
 
 `None`을 반환합니다.
 
-실행하는 데 `element size`틱이 필요합니다.
+실행하는 데 `요소 크기`틱이 필요합니다.
 
 예시:
 `set = {0}
@@ -608,7 +608,7 @@ set.add(1)`
 
 `None`을 반환합니다.
 
-세트에서는 `element size`틱, 리스트에서는 #comparisons + #shifts 만큼의 틱이 필요합니다.
+세트에서는 `요소 크기`틱, 리스트에서는 비교 횟수 + 이동 횟수 만큼의 틱이 필요합니다.
 
 예시:
 `list = [True, False, None]
@@ -619,7 +619,7 @@ list.remove(False)`
 
 제거된 요소를 반환합니다.
 
-딕셔너리에서는 `key size`틱, 리스트에서는 `len(list) - i + 1`틱이 필요합니다.
+딕셔너리에서는 `키 크기`틱, 리스트에서는 `len(list) - i + 1`틱이 필요합니다.
 
 예시:
 `list = [True, False, None]
@@ -718,3 +718,15 @@ list.insert(0, 0)`
 
 예시:
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+드론이 지면 위에 떠 있는 높이를 변경합니다.
+
+기본 높이는 `1`이며, 대부분의 드론 동작은 떠 있는 높이를 기본값으로 되돌립니다.
+
+예시:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+드론이 현재 지면 위에 떠 있는 높이를 가져옵니다.
+
+예시:
+`height = get_hover()`

@@ -26,6 +26,7 @@
 @enabled = Включено
 @disabled = Выключено
 @language = Язык
+@unofficial_translations_separator = ---- Неофиц. переводы ----
 @frames = Частота кадров
 @full vsync = Полноценная VSync
 @half vsync = Половинная VSync

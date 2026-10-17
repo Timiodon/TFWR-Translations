@@ -2,8 +2,12 @@
 @button_tooltip_save = ゲームをセーブします。
 @button_tooltip_options = 設定メニューを開きます。
 @button_tooltip_discord = Discordに参加して、他のプレイヤーや開発者とチャットしたり、バグを報告したり、助けを求めたりできます。
-@button_tooltip_execute = このウィンドウのコードの実行を開始または停止します。
-@button_tooltip_step_by_step = コードを1ステップ実行します。
+@button_tooltip_execute = このウィンドウのコードの実行を開始します。
+@button_tooltip_step_by_step = このウィンドウのコードのステップ実行を開始します。
+@button_tooltip_stop_execution = 実行を停止します。
+@button_tooltip_pause_execution = 実行を一時停止します。
+@button_tooltip_resume_execution = 実行を再開します。
+@button_tooltip_next_step = 次のステップを実行します。
 @button_tooltip_new_function = 新しいコードファイルを作成します。
 @button_tooltip_new_info_window = 新しい情報ウィンドウを開きます。
 @button_tooltip_minimize = このウィンドウを最小化します。
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = 前の一致項目に移動します。
 @button_tooltip_close_search = 検索メニューを閉じます。
 @button_tooltip_open_unlock_menu = アンロックツリーを開きます。
+@button_tooltip_open_farm = 農場に戻ります。
 @warning_icon_tooltip = あなたのコードで警告が発生しました。アイコンをクリックして、出力ウィンドウで詳細を確認してください。
 @option_tooltip_graphics = 影、アンビエントオクルージョン、ブルームなど、様々なレンダーパイプライン設定に影響します。
 @option_tooltip_vfx_limit = 1秒あたりに再生できるビジュアルエフェクトの数を制限します。

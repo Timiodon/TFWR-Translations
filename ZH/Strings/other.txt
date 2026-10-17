@@ -1,6 +1,8 @@
 @word_number = 数字
 @word_direction = 方向
 @run_cancelled = 运行失败
+@run_completed = 运行完成
+@leaderboard_time_limit = 用时超出排行榜限制
 @average_text = 已完成 {0} 次 ({2:F1}%)
 {1}
 @average_text2 = 已完成 {0} 次

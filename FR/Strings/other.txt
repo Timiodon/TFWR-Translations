@@ -1,6 +1,8 @@
 @word_number = nombre
 @word_direction = direction
 @run_cancelled = Échec de l'exécution
+@run_completed = Exécution terminée
+@leaderboard_time_limit = Le temps dépasse la limite du classement
 @average_text = {0} exécutions terminées ({2:F1}%)
 {1}
 @average_text2 = {0} exécutions terminées

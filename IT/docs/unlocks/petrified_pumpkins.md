@@ -6,6 +6,8 @@ A quanto pare si possono trovare zucche nel sottosuolo. Si sono indurite e pietr
 
 Le zucche pietrificate si trovano nel sottosuolo in blocchi di 3x3x3 o 5x5x5. Non esiste un modo sicuro per trovarle: devi sperare che il drone ne incontri una scavando. Si trovano però nella terra dura sotto lo strato di roccia e ferro, più o meno all'altezza del quarzo (se lo hai sbloccato).
 
+Questo offre un modo alternativo per ottenere zucche senza coltivarle in superficie. Se preferisci coltivarle, puoi tranquillamente ignorare le zucche pietrificate.
+
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},

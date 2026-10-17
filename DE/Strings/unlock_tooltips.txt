@@ -72,7 +72,7 @@ for item in cost:
     harvest()`
 @unlock_descr_debug = Werkzeuge, die beim Debuggen von Programmen helfen.
 
-`print("hi")`
+`print("Hallo")`
 @unlock_descr_debug2 = Funktionen, um die Ausführung vorübergehend zu verlangsamen und die Farm zu verkleinern.
 
 `set_world_size(3)
@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Erhöht den Ertrag von Quarzerz.
 @multi_unlock_descr_petrified_pumpkins = Erhöht den Ertrag versteinerter Kürbisse.
 @multi_unlock_descr_dynamite = Erhöht den Dynamitertrag und die Energie von Explosionen.
+@unlock_descr_explosive_drill = Der stärkste Bohrer.
 @multi_unlock_descr_treasure_map = Erhöht die Tiefe des Schatzpfads und damit die Goldmenge, die du aus dem Schatz erhältst.
 @multi_unlock_descr_ore_boost = Erhöht den Kohleertrag weiter. Vergrößert Eisen- und Quarzadern zusätzlich.
 @multi_unlock_descr_bamboo = Erhöht Ertrag und Kosten von Bambus.
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = Quarz
 @prospecting = Eisensuche
 @dynamite = Dynamit
+@explosive_drill = Sprengbohrer
 @bamboo = Bambus
 @treasure_map = Schatzkarte
 @mushrooms = Pilze

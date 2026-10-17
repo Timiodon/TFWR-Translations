@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = Tylko dla najlepszego rolnika.
 @hat_descr_silver_trophy_hat = Dla drugiego najlepszego rolnika.
 @hat_descr_wood_trophy_hat = Dla trzeciego najlepszego rolnika.
-@hat_descr_dynamite_hat = Kapelusz dla głównego dynamiciarza. Każde kopanie wywołuje eksplozję i kosztuje jeden dynamit. Głównym dynamiciarzem może być tylko jeden dron.
+@hat_descr_explosive_drill = Każde kopanie zużywa jeden dynamit i wywołuje zwykłą eksplozję. Bloki zniszczone bezpośrednio przez eksplozję dają przedmioty tak, jakby zostały wydobyte. Tylko jeden dron może używać wiertła wybuchowego.
 @hat_descr_golden_cactus_hat = Złota wersja kapelusza-kaktusa.
 @hat_descr_golden_pumpkin_hat = Złota wersja kapelusza-dyni.
 @hat_descr_golden_sunflower_hat = Złota wersja kapelusza-słonecznika.

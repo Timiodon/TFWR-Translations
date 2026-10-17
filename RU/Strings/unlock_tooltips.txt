@@ -165,6 +165,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Повышает добычу кварцевой руды.
 @multi_unlock_descr_petrified_pumpkins = Повышает урожай окаменевших тыкв.
 @multi_unlock_descr_dynamite = Повышает производство динамита и энергию взрывов.
+@unlock_descr_explosive_drill = Самый мощный бур.
 @multi_unlock_descr_treasure_map = Увеличивает глубину пути к кладу и тем самым количество получаемого за него золота.
 @multi_unlock_descr_ore_boost = Еще сильнее повышает добычу угля и размер железных и кварцевых жил.
 @multi_unlock_descr_bamboo = Повышает урожай и стоимость бамбука.
@@ -218,6 +219,7 @@ other_file.function()`
 @quartz = Кварц
 @prospecting = Поиск железа
 @dynamite = Динамит
+@explosive_drill = Взрывной бур
 @bamboo = Бамбук
 @treasure_map = Карта сокровищ
 @mushrooms = Гриб

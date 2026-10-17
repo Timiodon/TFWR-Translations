@@ -1,6 +1,8 @@
 @word_number = número
 @word_direction = direção
 @run_cancelled = Falha na Execução
+@run_completed = Execução Concluída
+@leaderboard_time_limit = O tempo excede o limite do placar de líderes
 @average_text = {0} Corridas Concluídas ({2:F1}%)
 {1}
 @average_text2 = {0} Corridas Concluídas

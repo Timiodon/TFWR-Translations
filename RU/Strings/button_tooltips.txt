@@ -2,8 +2,12 @@
 @button_tooltip_save = Сохранить игру.
 @button_tooltip_options = Открыть меню настроек.
 @button_tooltip_discord = В Discord можно общаться с другими игроками и разработчиком, сообщать об ошибках и получать помощь.
-@button_tooltip_execute = Запустить или остановить выполнение кода в этом окне.
-@button_tooltip_step_by_step = Выполнить один шаг кода.
+@button_tooltip_execute = Запустить выполнение кода в этом окне.
+@button_tooltip_step_by_step = Запустить пошаговое выполнение кода в этом окне.
+@button_tooltip_stop_execution = Остановить выполнение.
+@button_tooltip_pause_execution = Приостановить выполнение.
+@button_tooltip_resume_execution = Возобновить выполнение.
+@button_tooltip_next_step = Выполнить следующий шаг.
 @button_tooltip_new_function = Создать новый файл с кодом.
 @button_tooltip_new_info_window = Открыть новое справочное окно.
 @button_tooltip_minimize = Свернуть это окно.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = Перейти к предыдущему совпадению поискового запроса.
 @button_tooltip_close_search = Закрыть меню поиска.
 @button_tooltip_open_unlock_menu = Открыть дерево технологий.
+@button_tooltip_open_farm = Вернуться на ферму.
 @warning_icon_tooltip = Код вызвал предупреждение. Нажми на значок, чтобы просмотреть подробности в окне вывода.
 @option_tooltip_graphics = Влияет на различные настройки рендеринга, такие как тени, объемное освещение и свечение.
 @option_tooltip_vfx_limit = Ограничить количество визуальных эффектов, которые могут воспроизводиться в секунду.

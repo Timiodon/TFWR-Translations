@@ -271,7 +271,7 @@ print(get_tick_count())`
 
 返回一个字典。
 
-需要 `1 + len(dictionary)` ticks 执行。
+需要 `1 + 2*len(dictionary)` ticks 执行。
 
 示例：
 `new_dict = dict()`
@@ -314,11 +314,11 @@ print(get_tick_count())`
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 限制农场的大小，以便更好地观察农场情况。
-同时会清空农场并重置无人机位置。
 将农场设置为 `size` x `size` 的网格。
 可能的最小 `size` 是 `3`。
 当 `size` 小于 `3` 时，会将网格恢复到其完整大小。
 当执行停止时，效果也会停止。
+同时会清空农场并重置无人机位置，但仅在大小实际发生变化时才会如此。
 
 返回 `None`。
 
@@ -718,3 +718,15 @@ list.insert(0, 0)`
 
 示例：
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+更改无人机在地面上方悬停的高度。
+
+默认高度为 `1`，大多数无人机操作都会将悬停高度重置为默认值。
+
+示例：
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+获取无人机当前在地面上方悬停的高度。
+
+示例：
+`height = get_hover()`

@@ -1,4 +1,4 @@
-[<- Cogumelo](docs/unlocks/mushroom.md)
+[<- Cogumelo](docs/unlocks/mushroom.md) <right>[Broca Explosiva ->](docs/unlocks/explosive_drill.md)
 ---
 # Dinamite
 

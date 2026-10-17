@@ -18,7 +18,7 @@
 @hat_descr_gold_trophy_hat = Apenas para o melhor fazendeiro.
 @hat_descr_silver_trophy_hat = Para o segundo melhor fazendeiro.
 @hat_descr_wood_trophy_hat = Para o terceiro melhor fazendeiro.
-@hat_descr_dynamite_hat = Chapéu do chefe das explosões. Cada escavação explode e custa uma dinamite. Só pode haver um drone chefe das explosões.
+@hat_descr_explosive_drill = Cada escavação consome uma dinamite e causa uma explosão normal. Os blocos destruídos diretamente pela explosão rendem itens como se fossem escavados. Apenas um drone pode equipar a Broca Explosiva.
 @hat_descr_golden_cactus_hat = Uma versão dourada do chapéu de cacto.
 @hat_descr_golden_pumpkin_hat = Uma versão dourada do chapéu de abóbora.
 @hat_descr_golden_sunflower_hat = Uma versão dourada do chapéu de girassol.

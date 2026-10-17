@@ -26,6 +26,7 @@
 @enabled = Abilitato
 @disabled = Disabilitato
 @language = Lingua
+@unofficial_translations_separator = ---- Lingue non ufficiali ----
 @frames = FPS
 @full vsync = Vsync Completo
 @half vsync = Mezzo Vsync

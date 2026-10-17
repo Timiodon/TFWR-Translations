@@ -26,6 +26,7 @@
 @enabled = 有効
 @disabled = 無効
 @language = 言語
+@unofficial_translations_separator = ---- 非公式翻訳 ----
 @frames = フレーム
 @full vsync = フル Vsync
 @half vsync = ハーフ Vsync

@@ -5,7 +5,7 @@
 [첫 번째 프로그램](docs/first_program.md)
 [시작하기](docs/getting_started.md)
 [백업 불러오기](docs/backup.md)
-<unlock=debug>[Output](docs/output.md)
+<unlock=debug>[출력](docs/output.md)
 </unlock><unlock=debug>[통계](docs/stats.md)
 </unlock>
 </columns>
@@ -125,6 +125,7 @@
 <columns>
 <unlock=can_push>[can_push()](functions/can_push)
 </unlock><unlock=dig>[dig()](functions/dig)
+</unlock><unlock=hover>[hover()](functions/hover)
 </unlock><unlock=place>[place()](functions/place)
 </unlock><unlock=prospect_iron>[prospect_iron()](functions/prospect_iron)
 </unlock><unlock=prospect_quartz>[prospect_quartz()](functions/prospect_quartz)
@@ -137,6 +138,7 @@
 </unlock><unlock=get_entity_type>[get_entity_type()](functions/get_entity_type)
 </unlock><unlock=get_ground_type>[get_ground_type()](functions/get_ground_type)
 </unlock><dlc><unlock=get_hardness>[get_hardness()](functions/get_hardness)
+</unlock><unlock=get_hover>[get_hover()](functions/get_hover)
 </unlock></dlc><unlock=get_pos_x>[get_pos_x()](functions/get_pos_x)
 </unlock><unlock=get_pos_y>[get_pos_y()](functions/get_pos_y)
 </unlock><dlc><unlock=get_pos_z>[get_pos_z()](functions/get_pos_z)
@@ -188,93 +190,93 @@
 ## 아이템
 **농업**
 <columns>
-<unlock=bone>[Bone](items/bone)
-</unlock><unlock=cactus>[Cactus](items/cactus)
-</unlock><unlock=carrot>[Carrot](items/carrot)
-</unlock><unlock=fertilizer>[Fertilizer](items/fertilizer)
-</unlock><unlock=gold>[Gold](items/gold)
-</unlock><unlock=hay>[Hay](items/hay)
-</unlock><unlock=power>[Power](items/power)
-</unlock><unlock=pumpkin>[Pumpkin](items/pumpkin)
-</unlock><unlock=water>[Water](items/water)
-</unlock><unlock=weird_substance>[Weird_Substance](items/weird_substance)
-</unlock><unlock=wood>[Wood](items/wood)
+<unlock=bone>[뼈](items/bone)
+</unlock><unlock=cactus>[선인장](items/cactus)
+</unlock><unlock=carrot>[당근](items/carrot)
+</unlock><unlock=fertilizer>[비료](items/fertilizer)
+</unlock><unlock=gold>[금](items/gold)
+</unlock><unlock=hay>[건초](items/hay)
+</unlock><unlock=power>[파워](items/power)
+</unlock><unlock=pumpkin>[호박](items/pumpkin)
+</unlock><unlock=water>[물](items/water)
+</unlock><unlock=weird_substance>[기묘한 물질](items/weird_substance)
+</unlock><unlock=wood>[목재](items/wood)
 </unlock>
 </columns>
 **채광**
 <columns>
-<unlock=bamboo>[Bamboo](items/bamboo)
-</unlock><unlock=block>[Block](items/block)
-</unlock><unlock=coal>[Coal](items/coal)
-</unlock><unlock=dynamite>[Dynamite](items/dynamite)
-</unlock><unlock=iron>[Iron](items/iron)
-</unlock><unlock=mushroom>[Mushroom](items/mushroom)
-</unlock><unlock=quartz>[Quartz](items/quartz)
-</unlock><unlock=rice>[Rice](items/rice)
+<unlock=bamboo>[대나무](items/bamboo)
+</unlock><unlock=block>[블록](items/block)
+</unlock><unlock=coal>[석탄](items/coal)
+</unlock><unlock=dynamite>[다이너마이트](items/dynamite)
+</unlock><unlock=iron>[철](items/iron)
+</unlock><unlock=mushroom>[버섯](items/mushroom)
+</unlock><unlock=quartz>[석영](items/quartz)
+</unlock><unlock=rice>[벼](items/rice)
 </unlock>
 </columns>
 
 ## 개체
 **농업**
 <columns>
-<unlock=apple>[Apple](objects/apple)
-</unlock><unlock=bush>[Bush](objects/bush)
-</unlock><unlock=cactus>[Cactus](objects/cactus)
-</unlock><unlock=carrot>[Carrot](objects/carrot)
-</unlock><unlock=dead_pumpkin>[Dead_Pumpkin](objects/dead_pumpkin)
-</unlock><unlock=dinosaur>[Dinosaur](objects/dinosaur)
-</unlock><unlock=grass>[Grass](objects/grass)
-</unlock><unlock=hedge>[Hedge](objects/hedge)
-</unlock><unlock=pumpkin>[Pumpkin](objects/pumpkin)
-</unlock><unlock=sunflower>[Sunflower](objects/sunflower)
-</unlock><unlock=treasure>[Treasure](objects/treasure)
-</unlock><unlock=tree>[Tree](objects/tree)
+<unlock=apple>[사과](objects/apple)
+</unlock><unlock=bush>[덤불](objects/bush)
+</unlock><unlock=cactus>[선인장](objects/cactus)
+</unlock><unlock=carrot>[당근](objects/carrot)
+</unlock><unlock=dead_pumpkin>[죽은 호박](objects/dead_pumpkin)
+</unlock><unlock=dinosaur>[공룡](objects/dinosaur)
+</unlock><unlock=grass>[풀](objects/grass)
+</unlock><unlock=hedge>[울타리](objects/hedge)
+</unlock><unlock=pumpkin>[호박](objects/pumpkin)
+</unlock><unlock=sunflower>[해바라기](objects/sunflower)
+</unlock><unlock=treasure>[보물](objects/treasure)
+</unlock><unlock=tree>[나무](objects/tree)
 </unlock>
 </columns>
 **채광**
 <columns>
-<unlock=bamboo>[Bamboo](objects/bamboo)
-</unlock><unlock=dynamite>[Dynamite](objects/dynamite)
-</unlock><unlock=rice>[Rice](objects/rice)
-</unlock><unlock=underground_treasure>[Underground_Treasure](objects/underground_treasure)
+<unlock=bamboo>[대나무](objects/bamboo)
+</unlock><unlock=dynamite>[다이너마이트](objects/dynamite)
+</unlock><unlock=rice>[벼](objects/rice)
+</unlock><unlock=underground_treasure>[지하 보물](objects/underground_treasure)
 </unlock>
 </columns>
 
 ## 땅
 **농업**
 <columns>
-<unlock=grassland>[Grassland](grounds/grassland)
-</unlock><unlock=soil>[Soil](grounds/soil)
+<unlock=grassland>[초원](grounds/grassland)
+</unlock><unlock=soil>[토양](grounds/soil)
 </unlock>
 </columns>
 <dlc>**채광**
 <columns>
-<unlock=basalt>[Basalt](grounds/basalt)
-</unlock><unlock=clay>[Clay](grounds/clay)
-</unlock><unlock=coal>[Coal](grounds/coal)
-</unlock><unlock=dirt>[Dirt](grounds/dirt)
-</unlock><unlock=dry_rice_terrace>[Dry_Rice_Terrace](grounds/dry_rice_terrace)
-</unlock><unlock=dynamite>[Dynamite](grounds/dynamite)
-</unlock><unlock=iron>[Iron](grounds/iron)
-</unlock><unlock=limestone>[Limestone](grounds/limestone)
-</unlock><unlock=loam>[Loam](grounds/loam)
-</unlock><unlock=mushroom>[Mushroom](grounds/mushroom)
-</unlock><unlock=perlite>[Perlite](grounds/perlite)
-</unlock><unlock=petrified_pumpkin>[Petrified_Pumpkin](grounds/petrified_pumpkin)
-</unlock><unlock=quartz>[Quartz](grounds/quartz)
-</unlock><unlock=rice_terrace>[Rice_Terrace](grounds/rice_terrace)
-</unlock><unlock=rock>[Rock](grounds/rock)
-</unlock><unlock=sand>[Sand](grounds/sand)
-</unlock><unlock=soot>[Soot](grounds/soot)
-</unlock><unlock=treasure_goal>[Treasure_Goal](grounds/treasure_goal)
-</unlock><unlock=treasure_map>[Treasure_Map](grounds/treasure_map)
-</unlock><unlock=treasure_path>[Treasure_Path](grounds/treasure_path)
+<unlock=basalt>[현무암](grounds/basalt)
+</unlock><unlock=clay>[점토](grounds/clay)
+</unlock><unlock=coal>[석탄](grounds/coal)
+</unlock><unlock=dirt>[단단한 흙](grounds/dirt)
+</unlock><unlock=dry_rice_terrace>[마른 계단식 논](grounds/dry_rice_terrace)
+</unlock><unlock=dynamite>[다이너마이트](grounds/dynamite)
+</unlock><unlock=iron>[철](grounds/iron)
+</unlock><unlock=limestone>[석회암](grounds/limestone)
+</unlock><unlock=loam>[양토](grounds/loam)
+</unlock><unlock=mushroom>[버섯](grounds/mushroom)
+</unlock><unlock=perlite>[진주암](grounds/perlite)
+</unlock><unlock=petrified_pumpkin>[화석화된 호박](grounds/petrified_pumpkin)
+</unlock><unlock=quartz>[석영](grounds/quartz)
+</unlock><unlock=rice_terrace>[계단식 논](grounds/rice_terrace)
+</unlock><unlock=rock>[암석](grounds/rock)
+</unlock><unlock=sand>[모래](grounds/sand)
+</unlock><unlock=soot>[그을음](grounds/soot)
+</unlock><unlock=treasure_goal>[보물 도착점](grounds/treasure_goal)
+</unlock><unlock=treasure_map>[보물지도](grounds/treasure_map)
+</unlock><unlock=treasure_path>[보물 길](grounds/treasure_path)
 </unlock>
 </columns></dlc>
 <unlock=debug_place>**색상**
 <columns>
-[Blue_Block](grounds/blue_block)
-[Green_Block](grounds/green_block)
-[Red_Block](grounds/red_block)
+[파란 블록](grounds/blue_block)
+[초록 블록](grounds/green_block)
+[빨간 블록](grounds/red_block)
 </columns>
 </unlock>

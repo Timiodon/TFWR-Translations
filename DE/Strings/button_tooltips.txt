@@ -2,8 +2,12 @@
 @button_tooltip_save = Speichert das Spiel.
 @button_tooltip_options = Öffnet das Optionsmenü.
 @button_tooltip_discord = Tritt dem Discord bei, um mit anderen Spielern und dem Entwickler zu chatten, Fehler zu melden oder Hilfe zu erhalten.
-@button_tooltip_execute = Startet oder stoppt die Ausführung des Codes in diesem Fenster.
-@button_tooltip_step_by_step = Führt einen einzelnen Schritt des Codes aus.
+@button_tooltip_execute = Startet die Ausführung des Codes in diesem Fenster.
+@button_tooltip_step_by_step = Startet die schrittweise Ausführung des Codes in diesem Fenster.
+@button_tooltip_stop_execution = Stoppt die Ausführung.
+@button_tooltip_pause_execution = Pausiert die Ausführung.
+@button_tooltip_resume_execution = Setzt die Ausführung fort.
+@button_tooltip_next_step = Führt den nächsten Schritt aus.
 @button_tooltip_new_function = Erstellt eine neue Codedatei.
 @button_tooltip_new_info_window = Öffnet ein neues Infofenster.
 @button_tooltip_minimize = Minimiert dieses Fenster.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = Geht zum vorherigen Treffer des Suchbegriffs.
 @button_tooltip_close_search = Schließt das Suchmenü.
 @button_tooltip_open_unlock_menu = Öffnet den Forschungsbaum.
+@button_tooltip_open_farm = Kehrt zur Farm zurück.
 @warning_icon_tooltip = Dein Code hat eine Warnung ausgelöst. Klicke auf das Symbol, um Details im Ausgabefenster anzuzeigen.
 @option_tooltip_graphics = Beeinflusst verschiedene Einstellungen der Render-Pipeline wie Schatten, Umgebungsverdeckung und Bloom.
 @option_tooltip_vfx_limit = Begrenzt die Anzahl der visuellen Effekte, die pro Sekunde abgespielt werden können.

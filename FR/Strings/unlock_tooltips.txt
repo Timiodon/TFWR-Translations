@@ -163,6 +163,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Augmente le rendement des minerais de quartz.
 @multi_unlock_descr_petrified_pumpkins = Augmente le rendement des citrouilles pétrifiées.
 @multi_unlock_descr_dynamite = Augmente le rendement de la dynamite et l’énergie des explosions.
+@unlock_descr_explosive_drill = La foreuse la plus puissante.
 @multi_unlock_descr_treasure_map = Augmente la profondeur du chemin au trésor et donc la quantité d’or obtenue dans le trésor.
 @multi_unlock_descr_ore_boost = Augmente encore le rendement du charbon. Augmente encore la taille des filons de fer et de quartz.
 @multi_unlock_descr_bamboo = Augmente le rendement et le coût du bambou.
@@ -216,6 +217,7 @@ other_file.function()`
 @quartz = Quartz
 @prospecting = Prospection du fer
 @dynamite = Dynamite
+@explosive_drill = Foreuse explosive
 @bamboo = Bambou
 @treasure_map = Carte au trésor
 @mushrooms = Champignon
