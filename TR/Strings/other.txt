@@ -1,0 +1,17 @@
+@word_number = sayı
+@word_direction = yön
+@run_cancelled = Koşu Başarısız
+@average_text = {0} Koşu Tamamlandı (%{2:F1})
+{1}
+@average_text2 = {0} Koşu Tamamlandı
+{1}
+@unlocked_in = İlgili daha fazla bilgi için bkz.: [{0}]({1})
+@new_hat_unlocked = ## Yeni Şapka Açıldı
+`change_hat(`{0}`)`
+@right_click_for_more_info = -- daha fazla bilgi için sağ tıkla --
+@missing_unlock_page = Bu sayfayı görebilmek için önce [teknoloji ağacında](tech_tree) {0} kilidini açman gerekiyor.
+
+---
+
+{1}
+@latest_news = Son Haberler

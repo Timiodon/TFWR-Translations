@@ -1,0 +1,57 @@
+@plant_tooltip_template = {0}
+
+Temel büyüme süresi {1} ile {2} saniye arasındadır.
+Büyüyebileceği zemin: {3}.
+@object_tooltip_template_cost = ### Ekim Bedeli {{{{itemblock cost object {0}}}}}
+@object_descr_apple = Görünüşe göre dinozorlar bunlara bayılıyor.
+@object_descr_grass = Çayırda kendiliğinden büyür. `Items.Hay` elde etmek için hasat et.
+@object_descr_bush = `Items.Wood` düşüren küçük bir çalı.
+@object_descr_tree = Ağaçlar çalılardan daha fazla odun düşürür. Yanlarında başka ağaçlar büyüyorsa daha geç büyürler.
+@object_descr_carrot = Havuçlar!
+@object_descr_rice = Pirinç, yeraltında bulduğun kil tabakasına ekilebilir.
+@object_descr_bamboo = Bambu epey uzayabilir ama belirli bir boya ulaşınca çiçek açar. Tam çiçek açtığı boyda hasat edersen en yüksek verimi alırsın.
+@object_descr_pumpkin = Balkabakları, tamamen büyümüş başka balkabaklarının yanındaysa birleşerek birlikte büyür. Balkabaklarının yaklaşık 5'te 1'i büyüdüğünde ölür.
+@object_descr_dead_pumpkin = Balkabaklarının 5'te 1'i büyüdüğünde ölür ve geride ölü bir balkabağı bırakır. Ölü balkabakları işe yaramaz ve yerine yeni bir şey ekildiğinde yok olur.
+@object_descr_sunflower = Ayçiçekleri güneşten güç toplar. Onları hasat etmek sana `Items.Power` verir.
+Taç yaprağı sayısı en fazla olan bir ayçiçeğini hasat edersen bonus güç kazanırsın.
+@object_descr_cactus = Kaktüslerin 10 farklı boyu vardır. Bir kaktüs hasat edildiğinde, ona komşu olan ve "sıralı" durumdaki kaktüsler de hasat edilir.
+@object_descr_hedge = Labirentin bir parçası.
+@object_descr_treasure = İçinde, saklandığı labirentin alanı kadar altın bulunan bir hazine. Bir bitki gibi hasat edilebilir.
+@object_descr_dinosaur = Dinozor şapkasının kuyruğundan bir parça.
+@object_descr_grassland = Varsayılan zemin. Üzerinde kendiliğinden çim büyür.
+@object_descr_soil = `till()` çağrıldığında zemin toprağa dönüşür. `till()` tekrar çağrıldığında yeniden çayıra döner.
+@object_descr_dirt = Bildiğin toprak.
+@object_descr_rock = Sert bir kaya.
+@object_descr_clay = Bir kil bloğu. Verimli bir zemin, pirinç için birebir. Bir pirinç bitkisi olgunlaştığında altındaki kili yeniden toprağa çevirir.
+@object_descr_blue_block = Mavi bir blok.
+@object_descr_red_block = Kırmızı bir blok.
+@object_descr_green_block = Yeşil bir blok.
+@object_descr_coal = Tortul kömür bakımından zengin bir blok.
+@object_descr_iron = Ham manyetit içeren bir blok.
+@object_descr_quartz = İçinde kristal kuvars barındıran bir blok.
+@object_descr_limestone = Beyazımsı kireçtaşı. Kadim piramitlerin temelini oluşturur.
+@object_descr_sand = Bir kum bloğu. Kadim bir piramidin parçası.
+@object_descr_bedrock = Yok edilemez.
+@object_descr_petrified_pumpkin = Taşlaşmış bir balkabağı. Hâlâ yenir.
+@object_descr_loam = Bazı bitkileri yetiştirmek için ideal, bereketli tınlı toprak. Buraya ekilen ayçiçekleri ve havuçlar iki kat verim verir.
+@object_descr_perlite = Perlit oranı yüksek, bazı bitkileri yetiştirmek için ideal toprak. Buraya ekilen çalılar, kaktüsler, bambular ve ağaçlar iki kat verim verir.
+@runtime_entity_tooltip = Hasat edildiğinde şunları verir:
+{{itemblock tooltip}}
+@runtime_ground_tooltip = Kazıldığında şunları verir:
+{{itemblock tooltip_ground}}
+@runtime_mushroom_tooltip = Aynı türden iki mantar bloğu üst üste konduğunda şunları verir:
+{{itemblock tooltip_ground}}
+@runtime_growable_tooltip = Toplam büyüme süresi: {0} saniye
+Büyüme: %{1}
+@runtime_ground_hardness_tooltip = Sertlik: {0}
+@runtime_ground_stability_tooltip = Sağlamlık: {0}
+@runtime_ground_water_tooltip = Su seviyesi: {0}
+@object_descr_dynamite = Kazıldığında patlar. Ekmek her zaman 1 dinamit harcar, hasat etmek de her zaman 1 dinamit verir.
+@object_descr_dynamite_ground = Kazıldığında altındaki bloğun üzerine biraz dinamit düşürebilir. Bu dinamit hasat edilebilir ya da kazılarak patlatılabilir.
+@object_descr_soot = `measure()` çağrıldığında üstündeki katmanda bulunan aktif dinamitlerin sayısını sayan gizemli bir is. Üstüne düşen her dinamiti anında patlatır.
+@object_descr_basalt = Soğuyan lavdan oluşmuş yumuşak bir kaya. Altında korunmuş bir şey olabilir mi?
+@object_descr_treasure_map_ground = Bir hazine haritası! Acaba nereye götürüyor?
+@object_descr_treasure_path_ground = Hazine haritasından hedefe giden yolun üzerinde.
+@object_descr_treasure_goal_ground = Hazine haritası izinin sonundaki hedef. Burada ne saklı olabilir?
+@object_descr_underground_treasure = Hazine haritası yolunun sonunda bulunan, ele geçmesi zor hazine.
+@object_descr_mushroom = Yeraltında büyüyen mantarlar. Mantarın hangi türden olduğunu anlamak için `measure()` kullan.

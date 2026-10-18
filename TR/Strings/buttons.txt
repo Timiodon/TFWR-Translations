@@ -1,0 +1,17 @@
+@save = Kaydet
+@saved = Kaydedildi
+@play = Başla
+@load = Yükle
+@options = Seçenekler
+@join_discord = Discord
+@quit = Çık
+@open_folder = Klasörü Aç
+@new_game = Yeni Oyun
+@back = Geri
+@unlocks = Kilit Açmalar
+@farm = Çiftlik
+@unlocked = Açıldı
+@upgrade = Yükselt
+@max_level = Maks. Seviye
+@unlock = Kilidi Aç
+@locked = Kilitli

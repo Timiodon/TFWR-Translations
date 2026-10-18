@@ -1,0 +1,224 @@
+@unlock_tooltip_template_cost = ### Kilit Açma Bedeli {{{{itemblock cost unlock {0}}}}}
+@unlock_tooltip_template_additional_requirement = ### Kilit Açma Gereksinimleri
+{0} kilit açmasının seviyesi en az {1} olmalı.
+@unlock_descr_trees = Ağaçların kilidini açar.
+
+`plant(Entities.Trees)`
+@unlock_descr_speed = Hem dronun hem de kod yürütmenin hızını artırır.
+@unlock_descr_plant = Ekim yapmanın kilidini açar.
+
+`plant(Entities.Bush)`
+@unlock_descr_loops = Basit bir while döngüsünün kilidini açar.
+
+`while True:
+    harvest()`
+@unlock_descr_hats = Dronun için şapkalar.
+
+`change_hat(Hats.Green_Hat)`
+@unlock_descr_the_farmers_remains = ?????????
+@unlock_descr_top_hat = Yalnızca en iyi dronların takabildiği, son derece şık bir şapka.
+@unlock_descr_senses = Dron altında ne olduğunu ve nerede bulunduğunu görebilir.
+
+`if get_pos_x() < 5 and num_items(Items.Wood) < 200:
+    plant(Entities.Bush)`
+@unlock_descr_expand = Çiftlik arazisini genişletir ve hareket etmenin kilidini açar.
+@unlock_descr_operators = Aritmetik, karşılaştırma ve mantık operatörleri.
+
+`if not can_harvest() and (1 + 1 == 4 / 2):
+    do_a_flip()`
+@unlock_descr_pumpkin = Balkabakları!
+
+`plant(Entities.Pumpkin)`
+@unlock_descr_variables = Değişkenlere değer ata.
+
+`next_plant = Entities.Bush
+plant(next_plant)`
+@unlock_descr_functions = Kendi fonksiyonlarını tanımla.
+
+`def do_two_flips():
+    do_a_flip()
+    do_a_flip()
+
+do_two_flips()`
+@unlock_descr_watering = Bitkileri sulayarak daha hızlı büyümelerini sağla.
+
+`use_item(Items.Water)`
+@unlock_descr_carrots = Toprağı sür ve havuç ek.
+
+`till()
+plant(Entities.Carrot)`
+@unlock_descr_rice = Tıpkı buğday gibi; tabii buğday kilde yetişseydi.
+
+`if get_ground_type() == Grounds.Clay:
+    plant(Entities.Rice)`
+@unlock_descr_lists = Çok sayıda değeri saklamak için listeleri kullan.
+
+`plants = [Entities.Grass, Entities.Bush, Entities.Tree]
+
+for p in plants:
+    plant(p)
+    move(North)`
+@unlock_descr_costs = Bir şeyin maliyetini öğrenebilmeni sağlar.
+
+`cost = get_cost(Entities.Carrot)
+for item in cost:
+	amount_needed = cost[item]`
+@unlock_descr_fertilizer = Bitkileri anında büyüt.
+
+`use_item(Items.Fertilizer)`
+@unlock_descr_mazes = Ortasında bir hazine bulunan labirent.
+
+`if get_entity_type() == Entities.Treasure:
+    harvest()`
+@unlock_descr_debug = Programlardaki hataları ayıklamana yardımcı olan araçlar.
+
+`print("hi")`
+@unlock_descr_debug2 = Yürütmeyi geçici olarak yavaşlatan ve çiftliği küçülten fonksiyonlar.
+
+`set_world_size(3)
+set_execution_speed(1)`
+@unlock_descr_grass = Çimin verimini artırır.
+@unlock_descr_auto_unlock = Kilitleri otomatik olarak aç.
+
+`unlock(Unlocks.Megafarm)`
+@unlock_descr_polyculture = Yoldaş bitki ekerek verimi artır.
+
+`plant_type, (x, y) = get_companion()`
+@unlock_descr_sunflowers = Ayçiçekleri ve Güç.
+
+`plant(Entities.Sunflowers)`
+@unlock_descr_leaderboard = En hızlı süreler için sıralama tablosunda yarış.
+
+`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_dicts = Dictionary'lere ve set'lere erişim sağlar.
+
+`right_of = {North:East, East:South, South:West, West:North}`
+@unlock_descr_utilities = `min()`, `max()`, `abs()` ve `random()` fonksiyonlarının kilidini açar.
+
+`random_index = random() * len(list) // 1`
+@unlock_descr_cactus = Kaktüs!
+
+`plant(Entities.Cactus)`
+@unlock_descr_dinosaurs = Görkemli kadim yaratıklar.
+@unlock_descr_simulation = Daha hızlı ve tekrarlanabilir koşullarda test et.
+
+`run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@unlock_descr_timing = Tam zamanı!
+
+`passed_time = get_time()`
+@unlock_descr_import = Başka dosyalardaki şeyleri içe aktar.
+
+`import other_file
+other_file.function()`
+@unlock_descr_megafarm = Daha fazla dron!
+
+`spawn_drone(task)`
+@unlock_descr_mining = Drona bir matkap verir. Bir de madenci şapkası.
+
+`dig()`
+@unlock_descr_coal = Yeraltında kömür yatakları oluşur.
+@unlock_descr_iron = Yeraltında demir cevheri damarları oluşur.
+@unlock_descr_pyramid = Yeraltında kadim kumtaşı yapılar oluşur.
+@unlock_descr_quartz = Yeraltında kuvars iğneleri oluşur.
+@unlock_descr_ore_boost = Kömür verimini ikiye katlar. Demir ve kuvars damarlarının boyutunu ikiye katlar.
+@unlock_descr_jump = Dronunun aşağı doğru zıplamasını sağlar.
+@unlock_descr_prospecting = Demir aramak için kömür kullan!
+
+`prospect_iron()`
+@unlock_descr_drill = Matkap gücünü artırır.
+@unlock_descr_debug_place = Renkli bloklar yerleştir.
+
+`place(Grounds.Red_Block)`
+@unlock_descr_underground_senses = Yeraltı kareleriyle etkileşim kurmanı sağlayan dron sensörleri
+
+`while get_pos_z() < 100:
+    while get_hardness() > 5:
+        while get_hardness(North):
+            dig(North)
+        move(North)
+    dig()`
+@unlock_descr_petrified_pumpkins = Yeraltında fosilleşmiş balkabakları oluşur.
+@unlock_descr_special_soils = Bitki verimini artırmak için tınlı toprak ve perlit katmanları keşfet.
+@unlock_descr_bamboo = Bambu ek ve büyümesini izle.
+
+`plant(Entities.Bamboo)`
+@unlock_descr_dynamite = Dinamit bul ve ortalığı havaya uçurmak için kullan.
+@unlock_descr_treasure_map = Derinlerde saklı hazinenin peşine düş.
+@unlock_descr_mushrooms = Mantar türlerini eşleştirerek yeraltı mantarlarını bul ve hasat et.
+@multi_unlock_descr_expand = Çiftliği genişletir. Bu işlem çiftliği de temizler.
+@multi_unlock_descr_carrots = Havuçların verimini ve maliyetini artırır.
+@multi_unlock_descr_rice = Pirinç bitkilerinin verimini ve maliyetini artırır.
+@multi_unlock_descr_trees = Çalıların ve ağaçların verimini artırır.
+@multi_unlock_descr_pumpkins = Balkabaklarının verimini ve maliyetini artırır.
+@multi_unlock_descr_mazes = Hazine sandıklarındaki altını ve bir labirent oluşturmak için gereken tuhaf madde miktarını artırır.
+@multi_unlock_descr_sunflowers = Ayçiçeklerinden elde edilen gücü artırır.
+@multi_unlock_descr_cactus = Kaktüsün verimini ve maliyetini artırır.
+@multi_unlock_descr_dinosaur = Dinozorların verimini ve maliyetini artırır.
+@multi_unlock_descr_polyculture = Karışık ekimin verim çarpanını artırır.
+@multi_unlock_descr_watering = Daha fazla su elde et.
+@multi_unlock_descr_fertilizer = Daha fazla gübre elde et.
+@multi_unlock_descr_megafarm = Dron sayısını daha da artır.
+@multi_unlock_descr_drill = Matkap hızını artırır.
+@multi_unlock_descr_coal = Yeraltında daha fazla kömür tabakası oluşur.
+@multi_unlock_descr_iron = Demir cevherlerinin verimini artırır.
+@multi_unlock_descr_pyramid = Piramitleri onararak kazanılan gücü artırır.
+@multi_unlock_descr_quartz = Kuvars cevherlerinin verimini artırır.
+@multi_unlock_descr_petrified_pumpkins = Taşlaşmış balkabaklarının verimini artırır.
+@multi_unlock_descr_dynamite = Dinamitin verimini ve patlamaların enerjisini artırır.
+@multi_unlock_descr_treasure_map = Hazine yolunun derinliğini, dolayısıyla hazineden elde ettiğin altın miktarını artırır.
+@multi_unlock_descr_ore_boost = Kömür verimini daha da artırır. Demir ve kuvars damarlarının boyutunu daha da büyütür.
+@multi_unlock_descr_bamboo = Bambunun verimini ve maliyetini artırır.
+@multi_unlock_descr_mushrooms = Eşleşen mantar bloklarının verimini artırır.
+@auto_unlock = Otomatik Kilit Açma
+@cactus = Kaktüs
+@carrots = Havuçlar
+@rice = Pirinç
+@costs = Maliyetler
+@debug = Hata Ayıklama
+@debug_2 = Hata Ayıklama 2
+@dictionaries = Dictionary'ler
+@dinosaurs = Dinozorlar
+@expand = Genişletme
+@expand_2 = Genişletme 2
+@fertilizer = Gübre
+@functions = Fonksiyonlar
+@grass = Çim
+@hats = Şapkalar
+@import = Import
+@leaderboard = Sıralama Tablosu
+@lists = Listeler
+@loops = Döngüler
+@mazes = Labirentler
+@megafarm = Mega Çiftlik
+@operators = Operatörler
+@plant = Ekim
+@polyculture = Karışık Ekim
+@pumpkins = Balkabakları
+@senses = Duyular
+@underground_senses = Yeraltı Duyuları
+@debug_place = Renkli Bloklar
+@simulation = Simülasyon
+@speed = Hız
+@sunflowers = Ayçiçekleri
+@timing = Zamanlama
+@trees = Ağaçlar
+@the_farmers_remains = ?
+@top_hat = Silindir Şapka
+@utilities = Yardımcı Araçlar
+@variables = Değişkenler
+@watering = Sulama
+@iron = Demir
+@pyramid = Piramitler
+@ore_boost = Cevher Artışı
+@petrified_pumpkins = Taşlaşmış Balkabakları
+@special_soils = Özel Topraklar
+@mining = Madencilik
+@coal = Kömür
+@drill = Matkap
+@quartz = Kuvars
+@prospecting = Demir Arama
+@dynamite = Dinamit
+@bamboo = Bambu
+@treasure_map = Hazine Haritası
+@mushrooms = Mantar
+@jump = Zıplama

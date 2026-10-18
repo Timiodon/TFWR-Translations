@@ -1,0 +1,16 @@
+@lb_descr_fastest_reset = Oyunun tamamını baştan sona otomatikleştir.
+@lb_descr_maze = 9863168 altın topla.
+@lb_descr_maze_single = 616448 altın topla.
+@lb_descr_dinosaur = 33488928 kemik topla.
+@lb_descr_cactus = 33554432 kaktüs topla.
+@lb_descr_cactus_single = 131072 kaktüs topla.
+@lb_descr_sunflowers = 100000 güç topla.
+@lb_descr_sunflowers_single = 10000 güç topla.
+@lb_descr_pumpkins = 200M balkabağı topla.
+@lb_descr_pumpkins_single = 10M balkabağı topla.
+@lb_descr_hay = 2B saman topla.
+@lb_descr_hay_single = 100M saman topla.
+@lb_descr_wood = 10B odun topla.
+@lb_descr_wood_single = 500M odun topla.
+@lb_descr_carrots = 2B havuç topla.
+@lb_descr_carrots_single = 100M havuç topla.

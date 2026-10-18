@@ -1,0 +1,17 @@
+@warning_not_enough_items_to_trade = {0} satın alınmaya çalışıldı ama gerekli kaynaklar yoktu.
+@warning_no_space_to_plant = {0} ekilmeye çalışıldı ama orada zaten bir şey vardı.
+@warning_cant_plant_on_ground = {0}, {1} üzerine ekilemez.
+@warning_missing_seed = {0} ekmek için gerekli eşyalar yoktu.
+@warning_not_enough_coal = Demir aramak için yeterince kömür yoktu.
+@warning_not_enough_iron = Kuvars aramak için yeterince demir yoktu.
+@warning_no_item_to_use = {0} kullanılmaya çalışıldı ama yeterince yoktu.
+@warning_cannot_place_ground = {0} yerleştirilemez, çünkü özel bir blok.
+@warning_failed_swap_wrap = Çiftlik sınırlarının ötesine bir takas (swap) yapılmaya çalışıldı. Buna izin verilmez.
+@warning_failed_swap_unswappable = {0} takas edilmeye çalışıldı ama bu takas edilemez.
+@warning_weird_substance_not_divisible = Labirenti oluşturmak için gereken miktarla tam olarak aynı olmayan bir miktarda Tuhaf Madde kullandın. Labirenti yükselttikçe gereken Tuhaf Madde miktarının da arttığını unutma.
+
+Tam boyutlu bir labirent oluşturmak için:
+`plant(Entities.Bush)
+substance = get_world_size() * 2**(num_unlocked(Unlocks.Mazes) - 1)
+use_item(Items.Weird_Substance, substance)`
+@warning_recursive_simulation = Simülasyonlar ve sıralama tablosu koşuları, başka simülasyonların ya da sıralama tablosu koşularının içinden başlatılamaz.

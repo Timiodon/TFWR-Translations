@@ -1,0 +1,62 @@
+@error_missing_default_parameter = Varsayılan değerli tüm argümanlar argüman listesinin sonunda olmalıdır.
+@error_invalid_name = {0} geçerli bir ad değil. Adlar bir harfle başlamalı ve yalnızca harf, rakam ve alt çizgi içerebilir. Ayrıca ayrılmış bir anahtar kelime de olamaz.
+@error_reserved_keyword = {0} ayrılmış bir anahtar kelimedir. Onu ad olarak kullanamazsın.
+@error_invalid_assign_expr = Bu ifadeye değer atanamaz.
+@error_no_statements = Bir kod bloğu en az bir komut içermelidir.
+Komut, `harvest()` gibi bir fonksiyon çağrısı ya da bir değişken ataması olabilir.
+Kod bloğunda hiçbir şey yapmak istemiyorsan bir `pass` komutu kullan.
+@error_not_enough_indentation = Burada yeterli girinti yok.
+Yeni kod bloğunu ayırmak için : işaretinden sonraki girinti, öncekinden fazla olmalıdır.
+Kodu girintilemek için Tab tuşunu kullan.
+@error_too_much_indentation = Burada girinti fazla.
+Bir kod bloğundaki tüm komutların girintisi aynı olmalıdır.
+@error_not_a_statement = Bu geçerli bir komut değil.
+@error_not_a_statement2 = Bu geçerli bir komut değil. {0} yazmak mı istedin?
+@error_invalid_expression = Bu geçerli bir ifade değil.
+@error_new_line_expected = Burada yeni bir satır bekleniyor.
+@error_unexpected_token = Burada {0} bekleniyor.
+@error_missing_colon = Her kod bloğunun başında iki nokta `:` olmalıdır.
+@error_unexpected_assign = Burada atama yapamazsın. Eşitliği kontrol etmek için bunun yerine `==` kullan.
+@error_invalid_for_syntax = Bu geçerli bir for döngüsü değil. Bir for döngüsü şöyle görünür:
+`for n in range(3):`
+`for` kelimesinden sonra her zaman döngü değişkeni, bir `in` ve ardından bir dizi gelir. Bu örnekte değişkenin adı `n`, ama yerine istediğin başka bir ad kullanabilirsin.
+@error_unknown_method = Bu metot mevcut değil.
+@error_bad_backslash = Ters eğik çizgi, ifadeleri birden fazla satıra bölmek için kullanılabilir. Ama ardından yeni bir satıra geçmen gerekir.
+@error_mixed_indentation = Tab'lar ve boşluklar karıştırılmamalıdır.
+@error_expected_close_token = Virgül ya da kapanış parantezi bekleniyordu.
+@error_wrong_dict_literal = Bir dictionary'nin anahtarlarını ve değerlerini ayırmak için : bekleniyordu.
+@error_assign_before_global = {0}, global bildiriminden önce atanmış.
+@error_wildcard_imports_not_allowed_in_function = `from x import *` biçimindeki içe aktarmalara fonksiyonların içinde izin verilmez.
+@error_invalid_import = Adı geçerli bir tanımlayıcı olmayan dosyaları içe aktaramazsın. Geçerli tanımlayıcılar yalnızca harf, rakam ve alt çizgi içerebilir. Dosya adın başka karakterler içeriyorsa onu yeniden adlandırmalısın.
+@error_invalid_number_format = Bu sayı biçimi geçerli değil.
+@error_compared_item_with_number = {0} bir sayı değil, bir eşya. Onu bir sayıyla karşılaştırmak anlamsız.
+
+O eşyadan ne kadar olduğunu öğrenmek istiyorsan bunun yerine `num_items(`{0}`)` kullan.
+@error_compared_entity_with_number = {0} bir sayı değil, bir varlık. Onu bir sayıyla karşılaştırmak anlamsız.
+@error_compared_unlock_with_number = {0} bir sayı değil, bir kilit açma. Onu bir sayıyla karşılaştırmak anlamsız.
+
+Kilidini kaç kez açtığını öğrenmek istiyorsan bunun yerine `num_unlocked(`{0}`)` kullan.
+@error_nonsensical_or = Bir koşulda `or `{0} kullanmak anlamsız, çünkü {0} bir sabit.
+Karşılaştırma operatörlerinin `or` işleminden önce değerlendirildiğini unutma.
+
+Örnek:
+`x == 5 or 6`
+şuna eşdeğerdir:
+`(x == 5) or 6`
+Sıfır olmayan sayılar doğru kabul edilir, yani bu şuna eşdeğerdir:
+`(x == 5) or True`
+ve bu da her zaman doğrudur.
+
+Bu teorik olarak geçerli bir Python kodu, ama bunu bu şekilde yazmak için hiçbir neden yok.
+@error_item_condition = {0} bir eşya, boolean değil. Onu tek başına koşul olarak kullanmak anlamsız.
+Belki bir değerin o eşyaya eşit olup olmadığını kontrol etmek istedin?
+`some_variable == `{0}
+@error_unlock_condition = {0} bir kilit açma, boolean değil. Onu tek başına koşul olarak kullanmak anlamsız.
+Kilidin açılıp açılmadığını şöyle kontrol edebilirsin:
+`num_unlocked(`{0}`) > 0`
+@error_entity_condition = {0} bir varlık, boolean değil. Onu tek başına koşul olarak kullanmak anlamsız.
+Dronun altındaki varlığın türünü şöyle kontrol edebilirsin:
+`get_entity_type() == `{0}
+@error_ground_condition = {0} bir zemin türü, boolean değil. Onu tek başına koşul olarak kullanmak anlamsız.
+Dronun altındaki zeminin türünü şöyle kontrol edebilirsin:
+`get_ground_type() == `{0}
