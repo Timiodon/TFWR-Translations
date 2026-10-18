@@ -1,0 +1,720 @@
+@code_tooltip_harvest = `harvest()`
+Dronun altındaki varlığı hasat eder.
+Hasat edilemeyen bir varlığı hasat edersen o varlık yok olur.
+
+Bir varlık kaldırıldıysa `True`, aksi halde `False` döndürür.
+
+Bir varlık kaldırıldıysa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`harvest()`
+@code_tooltip_can_harvest = `can_harvest()`
+Bitkilerin tamamen büyüyüp büyümediğini öğrenmek için kullanılır.
+
+Dronun altında hasada hazır bir varlık varsa `True`, aksi halde `False` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if can_harvest():
+    harvest()`
+@code_tooltip_range = `range(start = 0, end, step = 1)`
+`start` değerinden başlayıp `end` değerine ulaşmadan hemen önce biten (yani `end` dahil değildir), `step` büyüklüğünde adımlarla ilerleyen bir sayı dizisi üretir.
+
+start değerinin varsayılan olarak `0` olduğunu ve yalnızca tek bir argüman verilirse bu argümanın `end` parametresine atandığını unutma. Normalde bu mümkün değildir.
+Python'da `range`, bu tuhaf davranışa izin veren bir sınıf yapıcısıdır.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`for i in range(10):
+    print(i)
+
+for i in range(2,6):
+    print(i)
+
+for i in range(10, 0, -1):
+    print(i)`
+@code_tooltip_plant = `plant(entity)`
+Belirtilen `entity` için gereken bedeli öder ve onu dronun altına eker.
+Bitkinin bedelini karşılayamıyorsan, zemin türü uygun değilse ya da orada zaten bir bitki varsa başarısız olur.
+
+Başarılı olursa `True`, aksi halde `False` döndürür.
+
+Başarılı olursa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`plant(Entities.Bush)`
+@code_tooltip_move = `move(direction)`
+Dronu belirtilen `direction` yönünde bir kare hareket ettirir.
+Dron çiftliğin kenarından çıkarsa çiftliğin diğer tarafından geri gelir.
+
+`East `  =  sağ
+`West `  =  sol
+`North`  =  yukarı
+`South`  =  aşağı
+
+Dron hareket ettiyse `True`, aksi halde `False` döndürür.
+
+Dron hareket ettiyse çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`move(North)`
+@code_tooltip_can_move = `can_move(direction)`
+Dronun belirtilen `direction` yönünde hareket edip edemeyeceğini kontrol eder.
+
+Dron hareket edebiliyorsa `True`, aksi halde `False` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if can_move(North):
+    move(North)`
+@code_tooltip_swap = `swap(direction)`
+Dronun altındaki varlığı, dronun belirtilen `direction` yönündeki komşu varlıkla yer değiştirir.
+Her varlıkta çalışmaz.
+Varlıklardan biri (ya da ikisi de) `None` olsa bile çalışır.
+
+Başarılı olursa `True`, aksi halde `False` döndürür.
+
+Başarılı olursa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`swap(North)`
+@code_tooltip_till = `till()`
+Dronun altındaki zemini sürerek `Grounds.Soil` hâline getirir. Zemin zaten toprak ise onu tekrar `Grounds.Grassland` hâline döndürür.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`till()`
+@code_tooltip_get_pos_x = `get_pos_x()`
+Dronun mevcut x konumunu verir.
+x konumu batıda `0` değerinden başlar ve doğuya doğru artar.
+
+Dronun mevcut x koordinatını gösteren bir sayı döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_y = `get_pos_y()`
+Dronun mevcut y konumunu verir.
+y konumu güneyde `0` değerinden başlar ve kuzeye doğru artar.
+
+Dronun mevcut y koordinatını gösteren bir sayı döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_z = `get_pos_z()`
+Dronun mevcut z konumunu verir.
+z konumu `0` değerinden başlar ve aşağı doğru kazdıkça azalır.
+
+Dronun mevcut z koordinatını gösteren bir sayı döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`x, y, z = get_pos_x(), get_pos_y(), get_pos_z()`
+@code_tooltip_get_world_size = `get_world_size()`
+Çiftliğin mevcut boyutunu verir.
+
+Izgaranın kuzey-güney yönündeki kenar uzunluğunu döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`for i in range(get_world_size()):
+    move(North)`
+@code_tooltip_get_entity_type = `get_entity_type()`
+Dronun altında ne tür bir varlık olduğunu öğrenmeni sağlar.
+
+Kare boşsa `None`, değilse dronun altındaki varlığın türünü döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if get_entity_type() == Entities.Grass:
+    harvest()`
+@code_tooltip_get_ground_type = `get_ground_type()`
+Dronun altında ne tür bir zemin olduğunu öğrenmeni sağlar.
+
+Dronun altındaki zeminin türünü döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if get_ground_type() != Grounds.Soil:
+    till()`
+@code_tooltip_get_hardness = `get_hardness()`
+Dronun altındaki zeminin ne kadar sert olduğunu öğrenmeni sağlar.
+
+Dronun altındaki zeminin sertliğini döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if get_hardness() < 5:
+    dig()`
+@code_tooltip_get_stability = `get_stability()`
+Dronun altındaki zeminin ne kadar sağlam olduğunu öğrenmeni sağlar.
+
+Dronun altındaki zeminin sağlamlığını döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if get_stability() > 3:
+    dig()`
+@code_tooltip_get_time = `get_time()`
+Mevcut oyun zamanını verir.
+
+Oyunun başından bu yana geçen süreyi saniye cinsinden döndürür.
+
+Çalışması `0` tik sürer.
+
+örnek:
+`start = get_time()
+
+do_something()
+
+time_passed = get_time() - start`
+@code_tooltip_get_tick_count = `get_tick_count()`
+Gerçekleştirilen tik sayısını ölçmek için kullanılır.
+
+Yürütmenin başından bu yana gerçekleştirilen tik sayısını döndürür.
+
+Çalışması `0` tik sürer.
+
+örnek:
+`do_something()
+
+print(get_tick_count())`
+@code_tooltip_use_item = `use_item(item, n=1)`
+Belirtilen `item` eşyasını `n` kez kullanmayı dener. Yalnızca `Items.Water` ve `Items.Fertilizer` gibi bazı eşyalarla kullanılabilir.
+
+Bir eşya kullanıldıysa `True`, aksi halde `False` döndürür.
+
+Başarılı olursa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`use_item(Items.Fertilizer)`
+@code_tooltip_get_water = `get_water()`
+Dronun altındaki mevcut su seviyesini verir.
+
+Dronun altındaki su seviyesini `0` ile `1` arasında bir sayı olarak döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if get_water() < 0.5:
+    use_item(Items.Water)`
+@code_tooltip_do_a_flip = `do_a_flip()`
+Drona takla attırır! Bu eylem hız yükseltmelerinden etkilenmez.
+
+`None` döndürür
+
+Çalışması 1s sürer.
+
+örnek:
+`while True:
+    do_a_flip()`
+@code_tooltip_pet_the_piggy = `pet_the_piggy()`
+Domuzcuğu sever! Bu eylem hız yükseltmelerinden etkilenmez.
+
+`None` döndürür
+
+Çalışması 1s sürer.
+
+örnek:
+`while True:
+    pet_the_piggy()`
+@code_tooltip_print = `print(*args)`
+Tüm `args` değerlerini dumanla dronun üstündeki havaya yazar. Bu eylem hız yükseltmelerinden etkilenmez.
+Aynı anda birden fazla değer yazdırılabilir.
+
+`None` döndürür
+
+Çalışması 1s sürer.
+
+örnek:
+`print("ground:", get_ground_type())`
+@code_tooltip_len = `len(collection)`
+Bir list, set, dict veya tuple içindeki eleman sayısını verir.
+
+`collection` uzunluğunu döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`for i in range(len(list)):
+    list[i] += 1`
+@code_tooltip_list = `list(collection = None)`
+Yeni bir list (liste) oluşturur.
+`collection` None ise boş bir list oluşturur.
+`collection` herhangi bir diziyse, o dizinin elemanlarını içeren yeni bir list oluşturur.
+
+Bir list döndürür.
+
+Çalışması `1 + len(collection)` tik sürer.
+
+örnek:
+`new_list = list((1,2,3))`
+@code_tooltip_dict = `dict(dictionary = None)`
+Yeni bir dictionary (sözlük) oluşturur.
+`dictionary` None ise boş bir dictionary oluşturur.
+`dictionary` bir dictionary ise onun bir kopyasını oluşturur.
+
+Bir dictionary döndürür.
+
+Çalışması `1 + len(dictionary)` tik sürer.
+
+örnek:
+`new_dict = dict()`
+@code_tooltip_set = `set(collection = None)`
+Yeni bir set (küme) oluşturur.
+`collection` None ise boş bir set oluşturur.
+`collection` bir değerler koleksiyonuysa, bu değerleri içeren yeni bir set oluşturur.
+
+Bir set döndürür.
+
+Çalışması `1 + len(collection)` tik sürer.
+
+örnek:
+`new_set = set((1,2,3))`
+@code_tooltip_str = `str(object)`
+
+`object` değerinin metin (string) karşılığını döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`string = str(1000)`
+@code_tooltip_set_execution_speed = `set_execution_speed(speed)`
+Neler olup bittiğini daha iyi görebilmen için programın çalışma hızını sınırlar.
+
+`1` değerindeki bir `speed`, dronun hiç hız yükseltmesi olmadan sahip olduğu hızdır.
+`8` değerindeki bir `speed`, kodun `8` kat daha hızlı çalışmasını sağlar ve dronun `3` hız yükseltmesinden sonraki hızına karşılık gelir.
+`0.5` değerindeki bir `speed`, kodun hız yükseltmesiz hızın yarısında çalışmasını sağlar. Bu, kodun ne yaptığını görmek için faydalı olabilir.
+
+`speed`, yürütmenin o anda ulaşabileceği hızdan yüksekse, yürütme yalnızca en yüksek hızda devam eder.
+
+`speed` `0` veya negatifse hız tekrar en yüksek hıza döner.
+Bu etki, yürütme durduğunda da sona erer.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`set_execution_speed(1)`
+@code_tooltip_set_world_size = `set_world_size(size)`
+Neler olup bittiğini daha iyi görebilmen için çiftliğin boyutunu sınırlar.
+Ayrıca çiftliği temizler ve dronun konumunu sıfırlar.
+Çiftliği `size` x `size` boyutunda bir ızgaraya dönüştürür.
+Mümkün olan en küçük `size` değeri `3`'tür.
+`3`'ten küçük bir `size`, ızgarayı tekrar tam boyutuna döndürür.
+Bu etki, yürütme durduğunda da sona erer.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`set_world_size(5)`
+@code_tooltip_num_items = `num_items(item)`
+Şu anda elinde ne kadar `item` olduğunu öğrenmeni sağlar.
+
+Envanterinde şu anda bulunan `item` miktarını döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`if num_items(Items.Fertilizer) > 0:
+    use_item(Items.Fertilizer)`
+@code_tooltip_get_cost = `get_cost(thing)`
+Bir `thing` öğesinin maliyetini verir.
+
+`thing` bir varlıksa, onu ekmenin maliyetini verir.
+`thing` bir kilit açmaysa, onun kilidini açmanın maliyetini verir.
+
+Anahtarları eşyalar, değerleri sayılar olan bir dictionary döndürür. Her eşya, ondan ne kadar gerektiğiyle eşleştirilir.
+Zaten en yüksek seviyede olan yükseltilebilir bir kilit açma için kullanıldığında `{}` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`cost = get_cost(Unlocks.Carrots)
+for item in cost:
+    if num_items(item) < cost[item]:
+        print("not enough items to unlock carrots")`
+@code_tooltip_clear = `clear()`
+Çiftlikteki her şeyi kaldırır, dronu `(0,0)` konumuna geri götürür ve şapkayı tekrar hasır şapkaya çevirir.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`clear()`
+@code_tooltip_get_companion = `get_companion()`
+Dronun altındaki bitkinin tercih ettiği yoldaşı verir.
+
+`(companion_type, (companion_x_position, companion_y_position))` biçiminde bir tuple döndürür
+
+Çalışması `1` tik sürer.
+
+örnek:
+`companion = get_companion()
+if companion != None:
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
+@code_tooltip_unlock = `unlock(unlock)`
+Araştırma ağacında `unlock` öğesine karşılık gelen düğmeye tıklamakla tamamen aynı etkiye sahiptir.
+
+Kilit açma başarılı olduysa `True`, aksi halde `False` döndürür.
+
+Başarılı olursa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`unlock(Unlocks.Carrots)`
+@code_tooltip_num_unlocked = `num_unlocked(thing)`
+Bir kilit açmanın, varlığın, zeminin, eşyanın veya şapkanın kilidinin zaten açılıp açılmadığını kontrol etmek için kullanılır.
+
+`thing` yükseltilebiliyorsa, `1` artı `thing` öğesinin kaç kez yükseltildiğini döndürür. Değilse `thing` açıksa `1`, aksi halde `0` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)`
+@code_tooltip_reset = `reset()`
+Çiftliği tekrar 1x1 boyutunda bir kareye döndürür, tüm kaynakları siler ve kilit açmaların çoğunu yeniden kilitler.
+Kodlarının hiçbirini silmez.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`reset()`
+@code_tooltip_measure = `measure(direction = None)`
+Bazı varlıklarda bazı değerleri ölçebilir. Etkisi varlığa göre değişir.
+
+`direction` `None` değilse, verilen yöndeki komşu varlığı ölçer.
+
+Ayçiçeği için taç yaprağı sayısını döndürür.
+Hazine veya elma için bir sonraki konumu döndürür.
+Kaktüs için boyutunu döndürür.
+Balkabağı için gizemli bir sayı döndürür.
+Diğer tüm varlıklar için `None` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`num_petals = measure()`
+@code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`
+Belirtilen `file_name` dosyasını başlangıç noktası olarak kullanıp `leaderboard` için zamanlı bir simülasyon başlatır.
+`speedup` başlangıç hızlandırmasını belirler.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+Belirtilen `filename` dosyasını başlangıç noktası olarak kullanıp sıralama tablosu için bir simülasyon başlatır.
+
+`sim_unlocks`: Başlangıçtaki kilit açmaları içeren bir dizi.
+`sim_items`: Eşyaları miktarlarla eşleştiren bir dict. Simülasyon bu eşyalarla başlar.
+`sim_globals`: Değişken adlarını değerlerle eşleştiren bir dict. Simülasyon bu değişkenler global kapsamdayken başlar.
+`seed`: Simülasyonun rastgelelik tohumu (seed). Pozitif bir tam sayı olmalıdır.
+`speedup`: Başlangıç hızlandırması.
+
+Simülasyonun çalışmasının ne kadar sürdüğünü döndürür.
+
+Çalışması `200` tik sürer.
+
+örnek:
+`filename = "f1"
+sim_unlocks = Unlocks
+sim_items = {Items.Carrot : 10000, Items.Hay : 50}
+sim_globals = {"a" : 13}
+seed = 0
+speedup = 64
+
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+`spawn_drone(function, *args)` komutunu çalıştıran dronla aynı konumda yeni bir dron oluşturur. Yeni dron ardından belirtilen fonksiyonu çalıştırmaya başlar. Geri kalan argümanlar kopyalanır ve belirtilen fonksiyona aktarılır. Dron işini bitirince kendiliğinden kaybolur.
+
+Yeni dronun tanıtıcısını (handle) ya da tüm dronlar zaten oluşturulmuşsa `None` döndürür.
+
+Bir dron oluşturulduysa çalışması `200` tik, aksi halde `1` tik sürer.
+
+örnek:
+`def harvest_column(message):
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
+    print(message)
+
+i = 0
+while True:
+    if spawn_drone(harvest_column, i):
+        move(East)
+        i = (i + 1) % 10`
+
+@code_tooltip_wait_for = `wait_for(drone)`
+Verilen `drone` sonlanana kadar bekler.
+
+`drone` tarafından çalıştırılan fonksiyonun dönüş değerini döndürür.
+
+Beklenen `drone` zaten bitmişse çalışması `1` tik sürer.
+
+örnek:
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
+
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+handle = spawn_drone(zero_arg_wrapper)
+print(wait_for(handle))`
+
+@code_tooltip_has_finished = `has_finished(drone)`
+Verilen `drone` işini bitirip bitirmediğini kontrol eder.
+
+`drone` işini bitirdiyse `True`, aksi halde `False` döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
+
+@code_tooltip_max_drones = `max_drones()`
+
+Çiftlikte sahip olabileceğin en fazla dron sayısını döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`while num_drones() < max_drones():
+    spawn_drone(task)
+    move(East)`
+
+@code_tooltip_num_drones = `num_drones()`
+
+Şu anda çiftlikte bulunan dron sayısını döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`while num_drones() < max_drones():
+    spawn_drone(task)
+    move(East)`
+
+@code_tooltip_quick_print = `quick_print(*args)`
+Bir değeri tıpkı `print(*args)` gibi yazdırır, ancak havaya yazmak için durmaz; bu yüzden yazılan değer yalnızca çıktı sayfasında görülebilir.
+
+`None` döndürür
+
+Çalışması `0` tik sürer.
+
+örnek:
+`quick_print("hi mom")`
+@code_tooltip_change_hat = `change_hat(hat)`
+Dronun şapkasını `hat` ile değiştirir.
+
+`None` döndürür
+
+Çalışması `200` tik sürer.
+
+örnek:
+`change_hat(Hats.Dinosaur_Hat)`
+
+@code_tooltip_max = `max(*args)`
+Bir dizi elemanın veya verilen birkaç argümanın en büyüğünü verir.
+Sayılar ve metinler (string) üzerinde kullanılabilir.
+
+`max(a,b,c)`: `a`, `b` ve `c` değerlerinin en büyüğünü döndürür.
+`max(sequence)`: Bir dizideki tüm değerlerin en büyüğünü döndürür.
+
+Çalışması, yapılan karşılaştırma sayısı kadar tik sürer.
+
+örnek:
+`max([3,6,34,16])`
+@code_tooltip_min = `min(*args)`
+Bir dizi elemanın veya verilen birkaç argümanın en küçüğünü verir.
+Sayılar ve metinler (string) üzerinde kullanılabilir.
+
+`min(a,b,c)`: `a`, `b` ve `c` değerlerinin en küçüğünü döndürür.
+`min(sequence)`: Bir dizideki tüm değerlerin en küçüğünü döndürür.
+
+Çalışması, yapılan karşılaştırma sayısı kadar tik sürer.
+
+örnek:
+`min([3,6,34,16])`
+@code_tooltip_abs = `abs(number)`
+Bir sayının mutlak değerini hesaplar.
+
+`number` pozitifse `number`, aksi halde `-number` döndürür.
+
+Çalışması 1 tik sürer.
+
+örnek:
+`abs(-69)`
+@code_tooltip_random = `random()`
+0 (dahil) ile 1 (hariç) arasında rastgele bir sayı üretir.
+
+Üretilen rastgele sayıyı döndürür.
+
+Çalışması `1` tik sürer.
+
+örnek:
+`def random_elem(list):
+	index = random() * len(list) // 1
+	return list[index]`
+@code_tooltip_append = `list.append(element)`
+`element` öğesini `list` sonuna ekler.
+
+`None` döndürür
+
+Çalışması `1` tik sürer.
+
+örnek:
+`list = []
+list.append(1)`
+@code_tooltip_add = `set.add(element)`
+`element` öğesini `set` içine ekler.
+
+`None` döndürür
+
+Çalışması `element size` tik sürer.
+
+örnek:
+`set = {0}
+set.add(1)`
+@code_tooltip_remove = `collection.remove(element)`
+`element` öğesinin `collection` içindeki ilk örneğini kaldırır.
+
+`None` döndürür
+
+Bir set üzerinde çalışması `element size` tik, bir list üzerinde ise karşılaştırma sayısı + kaydırma sayısı kadar tik sürer.
+
+örnek:
+`list = [True, False, None]
+list.remove(False)`
+@code_tooltip_pop = `collection.pop()`
+Bir list'ten son elemanı ya da bir dictionary'den belirtilen elemanı kaldırır.
+`list.pop(i)`, `list` içindeki `i` indisinde bulunan elemanı kaldırır.
+
+Kaldırılan elemanı döndürür
+
+Bir dictionary üzerinde çalışması `key size` tik, bir list üzerinde ise `len(list) - i + 1` tik sürer.
+
+örnek:
+`list = [True, False, None]
+list.pop(0)`
+@code_tooltip_insert = `list.insert(i, element)`
+`element` öğesini `list` içinde `i` indisine ekler.
+
+`None` döndürür
+
+`len(list) - i + 1` tik sürer.
+
+örnek:
+`list = [1,2]
+list.insert(0, 0)`
+@code_tooltip_Items = Envanterde bulunabilecek tüm eşyaları içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_Entities = Tüm bitki türlerini içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_Grounds = Olası tüm zemin türlerini içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_Unlocks = Araştırma menüsündeki tüm kilit açmaları ve yükseltmeleri içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_Hats = Tüm şapka türlerini içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_Leaderboards = Tüm sıralama tablosu kategorilerini içerir. Bir `for` döngüsüyle üzerinde gezinilebilir.
+@code_tooltip_for = Bir dizinin tüm elemanları üzerinde sırayla dolaşan bir döngü. Bazı programlama dillerinde buna "foreach" döngüsü denir.
+@code_tooltip_while = Koşul yanlış olana kadar döngüyü sürdürür.
+@code_tooltip_def = Bir fonksiyon tanımlar.
+@code_tooltip_True = Her zaman doğru olan bir boolean değer.
+@code_tooltip_False = Her zaman yanlış olan bir boolean değer.
+@code_tooltip_if = Koşul `True` ise kodu çalıştırır.
+@code_tooltip_else = Önceki `if` koşulu `False` ise kodu çalıştırır.
+@code_tooltip_elif = Şununla aynı işi yapar:
+`else:
+    if condition:`
+@code_tooltip_None = Hiçbir değer olmadığını temsil eden bir değer.
+@code_tooltip_continue = Hemen döngünün bir sonraki adımına geçer. İç içe döngüler varsa, her zaman en içteki döngüyü etkiler.
+@code_tooltip_break = Döngüden çıkar ve döngüden sonraki komutları çalıştırmaya devam eder. İç içe döngüler varsa, her zaman en içteki döngüyü etkiler.
+@code_tooltip_North = Ekrandaki yukarı yön. Tabii ekranını ters çevirmediysen.
+@code_tooltip_East = Ekrandaki sağ yön. Tabii ekranını ters çevirmediysen.
+@code_tooltip_South = Ekrandaki aşağı yön. Tabii ekranını ters çevirmediysen.
+@code_tooltip_West = Ekrandaki sol yön. Tabii ekranını ters çevirmediysen.
+@code_tooltip_not = `not True` ifadesi `False`, `not False` ifadesi ise `True` olur.
+@code_tooltip_and = İlk işleneni değerlendirir. Bu değer falsy ise (`False`, `0` ve boş koleksiyonlar), değeri hemen döndürür (değerlendirmeyi kısa devre yapar); değilse ikinci işleneni değerlendirip onu döndürür.
+@code_tooltip_or = İlk işleneni değerlendirir. Bu değer truthy ise (`False`, `0` ve boş koleksiyonlar dışındaki her şey), değeri hemen döndürür (değerlendirmeyi kısa devre yapar); değilse ikinci işleneni değerlendirip onu döndürür.
+@code_tooltip_return = Bir fonksiyondan değer döndürmek için kullanılır.
+@code_tooltip_pass = Hiçbir şey yapmaz. Boş kod bloklarına izin verilmediği için işe yarayabilir.
+@code_tooltip_dig = `dig()`
+Aşağı doğru bir kare kazar.
+
+Kazma hızı, bloğun sertliğine ve dronun matkap gücüne bağlıdır.
+
+örnek:
+`dig()`
+@code_tooltip_prospect_iron = `prospect_iron()`
+Demir aramak için kömür kullanır.
+
+Yakınlarda demir cevheri varsa en yakın demir cevherinin yönünü (`North`, `East`, `South` veya `West`) döndürür. Yakınlarda demir yoksa, yeterince kömürün yoksa ya da dron zaten bir demir parçasının üzerindeyse `None` döndürür.
+
+Çalıştırmak 1 kömür harcar.
+
+örnek:
+`while prospect_iron() != None:
+    move(prospect_iron())`
+@code_tooltip_prospect_quartz = `prospect_quartz()`
+Kuvars aramak için demir kullanır.
+
+Dronla bir sonraki kuvars bloğu arasındaki öklid uzaklığını (3B uzaklık) döndürür. Yakınlarda kuvars yoksa `None` döndürür.
+
+Çalıştırmak 1 demir harcar.
+
+örnek:
+`print(prospect_quartz())`
+@code_tooltip_place = `place(ground)`
+Blok yerleştirir.
+
+Yerleştirilecek bloğu belirtebilirsin. Yalnızca özel bir işlevi olmayan bloklar yerleştirilebilir. Örneğin `place(Grounds.Rock)` yapabilirsin ama `place(Grounds.Clay)` yapamazsın.
+
+örnek:
+`place(Grounds.Rock)`
+@code_tooltip_push = `push(direction)`
+Dronun altındaki mantar bloğunu belirtilen yöne iter.
+
+Blokları yukarı doğru itemezsin.
+
+Blok itildiyse `True`, aksi halde `False` döndürür.
+
+örnek:
+`push(North)`
+@code_tooltip_can_push = `can_push(direction)`
+Dronun altındaki bloğun itilip itilemeyeceğini kontrol eder.
+
+Dronun altındaki blok itilebiliyorsa `True`, aksi halde `False` döndürür.
+
+örnek:
+`can_push(North)`
+@code_tooltip_jump = `jump(unlock)`
+`unlock` ile ilişkili bir yeraltı oluşumuna zıplar.
+
+`jump` komutunu her programda yalnızca bir kez çalıştırabilirsin.
+
+örnek:
+`jump(Unlocks.Iron)`

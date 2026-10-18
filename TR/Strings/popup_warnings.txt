@@ -1,0 +1,13 @@
+@popup_warning_delete_files = {0} kalıcı olarak silinsin mi? Bu işlem geri alınamaz.
+@popup_warning_delete_save = {0} silinsin mi? Emin misin?
+@delete = Sil
+@cancel = İptal
+@popup_warning_exit_game = Çıkmadan önce kaydetmek istiyor musun?
+@popup_warning_load_game = Yüklemeden önce kaydetmek istiyor musun?
+@don't save = Kaydetme
+@popup_warning_corrupted_save = {0} yüklenirken bir sorun oluşmuş gibi görünüyor. Daha fazla bilgi için yedeklemeler bölümüne göz at.
+@popup_warning_failed_read_save = {0} kaydının dosyaları okunamadı. Bu dosyalara erişen diğer tüm programları kapattığından emin ol ve tekrar dene.
+@popup_warning_failed_write_save = {0} kaydının dosyalarına yazılamadı. Bu dosyalara erişen diğer tüm programları kapattığından emin ol ve tekrar dene.
+@ok = tamam
+@popup_warning_old_save = Bu kayıt dosyası oyunun eski bir sürümüne ait. Teknoloji ağacı yeniden düzenlendiği için tüm yükseltmeler, yeni ilerleme sistemiyle daha uyumlu bir duruma sıfırlandı.
+@popup_warning_unofficial_language = Bu, topluluk tarafından hazırlanmış ve oyunun geliştiricileri tarafından bakımı yapılmayan, resmi olmayan bir çeviridir. Bazı metinler eksik ya da hatalı olabilir.
