@@ -1,0 +1,80 @@
+@error_code_after_block = Itt nem lehet kódnak lennie. Próbáld meg eltávolítani vagy új sorba tenni.
+@error_wrong_number_args = {0} {1} argumentumot vesz igénybe. Ezekkel az argumentumokkal hívtad meg: {2}.
+@error_expected_no_args = {0} nem vesz igénybe argumentumot.
+@error_wrong_args = A(z) {0}. argumentuma a(z) {1}-nek {2}. Ez nem érvényes argumentum.
+@error_syntax_error_in_import = A importált modul szintaktikai hibát tartalmaz.
+@error_module_not_found = Module ezzel a névvel nem létezik. A névnek meg kell egyeznie egy fájl névvel. Ez a név jelenik meg az ablak tetején.
+@error_list_element_not_found = {0} nem eleme a listának.
+@error_set_element_not_found = {0} nem eleme a halmaznak.
+@error_index_out_of_bounds = A(z) {0}	index kívül volt a(z) {1} lista határain.
+@error_index_out_of_bounds2 = Az index kívül volt a lista határain.
+@error_arith_assign_not_used_on_number = {0} csak számokon használható.
+@error_bool_op_not_used_on_bool = A logikai operátor csak olyan boolean kifejezéseken használható, amelyek `True` vagy `False` értékre értékelődnek.
+@error_bad_bin_operator = A(z) {0} operátor nem használható a(z) {1} és {2} operandusokkal.
+@error_bad_unary_operator = A(z) {0} operátor nem használható a(z) {1}-en.
+@error_index = {0} nem használható indexként a(z) {1}-en.
+@error_index_on_non_indexable = Nem lehet indexelni a(z) {0}-ba.
+@error_zero_step = A lépés mérete nem lehet nulla.
+@error_index_on_tuple = Nem lehet tuple elemnek értéket adni, mert a tuple-ök megváltoztathatatlanok.
+@error_bad_key = {0} nem használható kulcsként.
+@error_slice_dict = Nem lehet szeletelni a szótárakat.
+@error_key = {0} nem kulcs a szótárban.
+@error_condition_not_bool = {0} nem érvényes feltétel. A feltétel boolean érték kell legyen. Ez azt jelenti, hogy olyan kifejezés kell legyen, ami mindig vagy `True` vagy `False`.
+@error_for_requires_iterable = {0} nem iterálható for ciklusban. A for ciklusnak meg kell adni egy szekvenciát, amin iterál. Példa:
+
+`for i in range(5):`
+Itt a range(5) a(z) `0,1,2,3,4` szekvenciát adja vissza.
+@error_no_loop_to_break = A `break` csak cikluson belül használható.
+@error_no_loop_to_continue = A `continue` csak cikluson belül használható.
+@error_no_function_to_return_from = A `return` csak függvényen belül használható.
+@error_missing_unlock = Ezt fel kell oldani mielőtt használhatnád.
+@error_missing_x_unlock = {0}-t fel kell oldani mielőtt ezt használhatnád.
+@error_name_not_defined = {0} soha nem volt definiálva. Értéket kell adni egy változónak mielőtt használod.
+@error_missing_import = {0} soha nem volt definiálva. Úgy tűnik, a(z) {1} fájlban van definiálva. Elfelejtetted importálni?
+
+Ha importáltad, valószínűleg import ciklusod van (Lásd az import doc oldalt).
+@error_missing_import_before_unlock = {0} soha nem volt definiálva. Úgy tűnik, a(z) {1} fájlban van definiálva. Fel kell oldani az importokat, hogy más fájlokból importálhass.
+@error_missing_module_access = {0} soha nem volt definiálva. Úgy tűnik, a(z) {1} fájlban van definiálva, ami importálva van, de nem használod. A modul nevén keresztül kell elérned így:
+
+{1}`.`{0}
+@error_call_before_def = {0} nincs definiálva. úgy tűnik, definiálva van ebben a fájlban, de a definíció még nem lett végrehajtva. Függvények csak a `def` utasítás után hívhatók.
+@error_not_a_function = Olyasmit próbáltál hívni, ami nem függvény. Gyakori hiba, ami ezt okozza, ha egy változó ugyanolyan névvel rendelkezik, mint a függvény.
+@error_invalid_const = {0} nem létezik.
+@error_invalid_const2 = Ez nem létezik.
+@error_max_stack_size_reached = Elérted a maximális hívási verem (call stack) méretét. Valószínűleg túl sok rekurzív függvényhívás okozza.
+@error_max_comparison_depth = A maximális összehasonlítási mélység el lett érve. Ez megtörténhet például, ha olyan listákat hasonlítasz össze, amelyek önmagukat tartalmazzák.
+@error_assign_type_mismatch = Az assignment bal oldala nem egyezett meg a jobb oldallal.
+@error_too_many_values_to_unpack = A jobb oldalon nincs elegendő érték kicsomagolásra.
+@error_not_enough_values = A jobb oldal túl sok értéket tartalmaz a bal oldalra történő kicsomagoláshoz.
+@error_empty_print = A `print()`-nek legalább egy argumentumra van szüksége.
+@error_in_string = Nem lehet ellenőrizni, hogy {0} egy stringben van-e.
+@error_collection_changed_size_during_iteration = Ennek a kollekciónak a méretét nem lehet megváltoztatni egy for ciklusban, amely felett iterálsz. Ez azért van, mert a kollekció méretének megváltoztatása érvénytelenítené a for ciklus által használt iterator objektumot.
+@error_wrong_use_of_max = Nem lehet kiszámítani a(z) {0} maximumát.
+@error_wrong_use_of_min = Nem lehet kiszámítani a(z) {0} minimumát.
+@error_function_as_condition = Próbálod ellenőrizni, hogy a(z) {0} függvény `True`-e. Ez maga a függvény objektum, nem a függvény visszatérési értéke. Úgy meanted, hogy meghívod a függvényt a hívás operátorral `()`?
+
+A Pythonban a függvény objektumok truthy-k, ami azt jelenti, hogy ha feltételként használod őket, úgy működnek mint a `True`, szóval Python nem adná ezt a hibaüzenetet.
+
+Ez egy biztonsági hibaüzenet, ki tudod kapcsolni a beállításokban, ha az utadban van.
+@error_function_in_operator = Próbálod használni a(z) {1}-t a(z) {0} függvényen. Ez maga a függvény objektum, nem a függvény visszatérési értéke. Úgy meanted, hogy meghívod a függvényt a hívás operátorral `()`?
+
+Ez egy biztonsági hibaüzenet, ki tudod kapcsolni a beállításokban, ha az utadban van.
+@error_zero_step_size = A lépés mérete nem lehet 0.
+@error_sequence_too_large = A szekvencia túl nagy volt a másoláshoz.
+@error_invalid_sim_unlocks = A kezdő feloldások érvénytelenek. Szekvenciának kell lennie feloldásokból vagy a(z) `(Unlock.Carrots, 3)` formájú tuple-ökből.
+@error_invalid_sim_items = A kezdő itemek érvénytelenek. Szótárnak kell lennie, ami itemeket számokra képez le, mint a `{Items.Hay : 100}`.
+@error_invalid_sim_globals = A kezdő globálisok érvénytelenek. Szótárnak kell lennie, ami változóneveket értékekre képez le, mint a `{"x" : 42}`.
+@error_division_by_zero = Oh Nem! Nullával osztottál. Épp hogy túlélted.
+@error_negative_use_item = Az item mennyiségének legalább `1`-nek kell lennie. Az volt: {0}.
+@error_use_before_assign = Megpróbáltad olvasni a(z) {0} változót, mielőtt értéket adtál volna neki.
+Ha globális változót akarsz módosítani, a `global` kulcsszót kell használnod a globális hatókörbe történő íráshoz.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = Nem lehet attribútumot hozzárendelni a(z) {0}-hoz.
+@error_file_not_found = A(z) {0} fájl nem létezik.
+@error_max_drones_reached = A drone limit túllépésre került.
+@error_dino_hat_already_used = Csak egy dinoszaurusz kalap van, és már használatban van. Nem használhatod egy második dronen.
+@error_invalid_drone_id = Nincs drone a(z) {0} ID-vel.
+@error_invalid_handle = {0} már nem létezik.
+@error_spawn_drone_builtin = Nem használhatod a `spawn_drone()`-t beépített függvényekkel közvetlen. Saját függvényt kell definiálnod.

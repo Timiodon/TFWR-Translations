@@ -1,0 +1,25 @@
+@plant_tooltip_template = {0}
+
+Alap növekedési idő {1} és {2} másodperc között.
+Nőhet ezen: {3}.
+@object_tooltip_template_cost = ### Növény költség {{{{itemblock cost object {0}}}}}
+@object_descr_apple = A dinók láthatóan imádják őket.
+@object_descr_grass = Automatikusan nő a legelőn. Betakarításával `Items.Hay`-t kapsz.
+@object_descr_bush = Egy kis bokor, ami `Items.Wood`-ot dob.
+@object_descr_tree = A fák több fát dobnak, mint a bokrok. Tovább tart a növekedésük, ha más fák nőnek mellettük.
+@object_descr_carrot = Répa!
+@object_descr_pumpkin = A tökök együtt nőnek, amikor teljesen érett tökök mellett vannak. Körülbelül 1 a 5 tök közül meghal, amikor megnő.
+@object_descr_dead_pumpkin = Egy a öt tök közül meghal, amikor megnő, hátrahagyva egy halott tököt. A halott tökökHaszontalanok és eltűnnek, amikor újat ültetünk.
+@object_descr_sunflower = A napraforgók a napból gyűjtik az erőt. Betakarításukkal `Items.Power`-t kapsz.
+Ha teljesen kinyílt szirmú napraforgót takarítasz be, bónusz erőt kapsz.
+@object_descr_cactus = A kaktuszok 10 különböző méretben jönnek. Betakarításkor a mellettük lévő "szortált" kaktuszok is betakarításra kerülnek.
+@object_descr_hedge = A labirintus része.
+@object_descr_treasure = Egy kincs, ami annyi aranyat tartalmaz, amennyi a labirintus oldalhossza, amiben el van rejtve. Betakarítható, mint egy növény.
+@object_descr_dinosaur = A dínó kalap farkának egy darabja.
+@object_descr_grassland = Az alapértelmezett talaj. A fűAutomatikusan nő rajta.
+@object_descr_soil = A `till()` meghívása talajjá alakítja a földet. A `till()` újbóli meghívása visszaváltoztatja legelővé.
+@runtime_entity_tooltip = Betakarításkor ad:
+{{itemblock tooltip}}
+@runtime_growable_tooltip = Összes növekedési idő: {0} másodperc
+Nőtt {1}%
+@runtime_ground_tooltip = Vízszint: {0}

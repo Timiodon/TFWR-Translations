@@ -1,0 +1,634 @@
+@code_tooltip_harvest = `harvest()`
+Betakarítja a drone alatt lévő entitást.
+Ha olyan entitást takarítasz be, amely nem betakarítható, az megsemmisül.
+
+`True` értéket ad vissza, ha egy entitás eltávolításra került, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe betakarítás esetén, ellenkező esetben `1` ticket.
+
+példa:
+`harvest()`
+@code_tooltip_can_harvest = `can_harvest()`
+A növények teljes érettségének megállapítására szolgál.
+
+`True` értéket ad vissza, ha a drone alatt van egy betakarításra érett entitás, ellenkező esetben `False` értéket.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if can_harvest():
+    harvest()`
+@code_tooltip_range = `range(start = 0, end, step = 1)`
+Számsorozatot generál a `start` értéktől kezdve, az `end` előtt véget érve (tehát `end` kizárva) `step` méretű lépésekkel.
+
+Figyelj arra, hogy a start alapértelmezetten 0, és ha csak egy argumentumot adsz meg, az a `end`-hez fog kötődni. Ez általában nem lehetséges.
+Pythonban a `range` egy osztály konstruktor, ami lehetővé teszi ezt a különös viselkedést.
+
+`1` ticket vesz igénybe.
+
+példa:
+`for i in range(10):
+    print(i)
+
+for i in range(2,6):
+    print(i)
+
+for i in range(10, 0, -1):
+    print(i)`
+@code_tooltip_plant = `plant(entity)`
+Elkölti a megadott `entity` költségét és elveti a drone alatt.
+Sikertelen, ha nem tudod megfizetni a növényt, rossz a talaj típusa, vagy már van ott egy növény.
+
+`True` értéket ad vissza, ha sikeres, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe sikeres művelet esetén, ellenkező esetben `1` ticket.
+
+példa:
+`plant(Entities.Bush)`
+@code_tooltip_move = `move(direction)`
+A drone mozgatása a megadott `direction` irányába egy csempe távolságra.
+Ha a drone a farm szélén túl mozog, a farm másik oldalára wrapel.
+
+`East `  =  jobbra
+`West `  =  balra
+`North`  =  fel
+`South`  =  le
+
+`True` értéket ad vissza, ha a drón mozgott, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe mozgás esetén, ellenkező esetben `1` ticket.
+
+példa:
+`move(North)`
+@code_tooltip_can_move = `can_move(direction)`
+Ellenőrzi, hogy a drone képes-e a megadott `direction` irányába mozogni.
+
+`True` értéket ad vissza, ha a drone képes mozogni, ellenkező esetben `False` értéket.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if can_move(North):
+    move(North)`
+@code_tooltip_swap = `swap(direction)`
+Felcseréli a drone alatt lévő entitást a megadott `direction` irányában lévő entitással.
+Nem működik minden entitáson.
+Akkor is működik, ha az egyik (vagy mindkettő) entitás `None`.
+
+`True` értéket ad vissza, ha sikeres, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe sikeres művelet esetén, ellenkező esetben `1` ticket.
+
+példa:
+`swap(North)`
+@code_tooltip_till = `till()`
+Felszántja a drone alatti talajt `Grounds.Soil`-ra. Ha már talaj, visszaváltoztatja `Grounds.Grassland`-ra.
+
+`None` értéket ad vissza.
+
+`200` ticket vesz igénybe.
+
+példa:
+`till()`
+@code_tooltip_get_pos_x = `get_pos_x()`
+A drone jelenlegi x pozíciójának lekérése.
+Az x pozíció `0`-nál kezdődik nyugaton és keleti irányban növekszik.
+
+A drone jelenlegi x koordinátáját képviselő számot ad vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_pos_y = `get_pos_y()`
+A drone jelenlegi y pozíciójának lekérése.
+Az y pozíció `0`-nál kezdődik délben és északi irányban növekszik.
+
+A drone jelenlegi y koordinátáját képviselő számot ad vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`x, y = get_pos_x(), get_pos_y()`
+@code_tooltip_get_world_size = `get_world_size()`
+A farm jelenlegi méretének lekérése.
+
+A rács oldalhosszát adja vissza északi-déli irányban.
+
+`1` ticket vesz igénybe.
+
+példa:
+`for i in range(get_world_size()):
+    move(North)`
+@code_tooltip_get_entity_type = `get_entity_type()`
+Kideríti, milyen entitás van a drone alatt.
+
+`None` értéket ad vissza, ha üres a csempe, különben a drone alatt lévő entitás típusát adja vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if get_entity_type() == Entities.Grass:
+    harvest()`
+@code_tooltip_get_ground_type = `get_ground_type()`
+Kideríti, milyen talaj van a drone alatt.
+
+A drone alatt lévő talaj típusát adja vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if get_ground_type() != Grounds.Soil:
+    till()`
+@code_tooltip_get_time = `get_time()`
+A jelenlegi játékidő lekérése.
+
+A játék kezdete óta eltelt időt adja vissza másodpercben.
+
+`0` ticket vesz igénybe.
+
+példa:
+`start = get_time()
+
+do_something()
+
+time_passed = get_time() - start`
+@code_tooltip_get_tick_count = `get_tick_count()`
+A végrehajtott tickek számának mérésére szolgál.
+
+A végrehajtás kezdete óta végrehajtott tickek számát adja vissza.
+
+`0` ticket vesz igénybe.
+
+példa:
+`do_something()
+
+print(get_tick_count())`
+@code_tooltip_use_item = `use_item(item, n=1)`
+A megadott `item` `n` alkalommal történő használatára törekszik. Csak néhány itemmel használható, beleértve az `Items.Water`, `Items.Fertilizer`-t.
+
+`True` értéket ad vissza, ha egy itemet használtak, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe sikeres művelet esetén, ellenkező esetben `1` ticket.
+
+példa:
+`use_item(Items.Fertilizer)`
+@code_tooltip_get_water = `get_water()`
+A drone alatti vízszint lekérése.
+
+A drone alatti vízszintet adja vissza 0 és 1 közötti számként.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if get_water() < 0.5:
+    use_item(Items.Water)`
+@code_tooltip_do_a_flip = `do_a_flip()`
+A drone egy backflip-et csinál! Ez a művelet nem érintett a sebességfejlesztésekben.
+
+`None` értéket ad vissza.
+
+`1` másodpercig tart a végrehajtás.
+
+példa:
+`while True:
+    do_a_flip()`
+@code_tooltip_pet_the_piggy = `pet_the_piggy()`
+Megsimogatja a malacot! Ez a művelet nem érintett a sebességfejlesztésekben.
+
+`None` értéket ad vissza.
+
+`1` másodpercig tart a végrehajtás.
+
+példa:
+`while True:
+    pet_the_piggy()`
+@code_tooltip_print = `print(*args)`
+Az összes `args`-t a drone felett a levegőbe füstölve írja ki. Ez a művelet nem érintett a sebességfejlesztésekben.
+Több érték is egyszerre kiírható.
+
+`None` értéket ad vissza.
+
+`1` másodpercig tart a végrehajtás.
+
+példa:
+`print("ground:", get_ground_type())`
+@code_tooltip_len = `len(collection)`
+Egy lista, halmaz, dict vagy tuple elemeinek számának lekérése.
+
+A `collection` hosszát adja vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`for i in range(len(list)):
+    list[i] += 1`
+@code_tooltip_list = `list(collection = None)`
+Új lista létrehozása.
+Ha `collection` None, üres listát hoz létre.
+Ha `collection` bármilyen szekvencia, új listát hoz létre a szekvencia elemeivel.
+
+Listát ad vissza.
+
+`1 + len(collection)` ticket vesz igénybe.
+
+példa:
+`new_list = list((1,2,3))`
+@code_tooltip_dict = `dict(dictionary = None)`
+Új szótár létrehozása.
+Ha `dictionary` None, üres szótárat hoz létre.
+Ha `dictionary` egy szótár, másolatot készít róla.
+
+Szótárat ad vissza.
+
+`1 + len(dictionary)` ticket vesz igénybe.
+
+példa:
+`new_dict = dict()`
+@code_tooltip_set = `set(collection = None)`
+Új halmaz létrehozása.
+Ha `collection` None, üres halmazt hoz létre.
+Ha `collection` értékek gyűjteménye, új halmazt hoz létre ezekkel az értékekkel.
+
+Halmazt ad vissza.
+
+`1 + len(collection)` ticketvesz igénybe.
+
+példa:
+`new_set = set((1,2,3))`
+@code_tooltip_str = `str(object)`
+
+`object` string reprezentációját adja vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`string = str(1000)`
+@code_tooltip_set_execution_speed = `set_execution_speed(speed)`
+Korlátozza a program végrehajtási sebességét, hogy jobban lásd, mi történik.
+
+Az `1` sebesség a drone sebessége sebességfejlesztések nélkül.
+A `8` sebesség a kódot 8-szor gyorsabban futtatja, és megfelel a drone sebességének 3 sebességfejlesztés után.
+A `0.5` sebesség a kódot a sebességfejlesztések nélküli sebesség felével futtatja. Ez hasznos lehet a kód működésének megtekintésére.
+
+Ha a `speed` gyorsabb, mint a jelenlegi max sebesség, akkor max sebességen fog futni.
+
+Ha a `speed` `0` vagy negatív, a sebesség visszaváltozik max sebességre.
+A hatás megszűnik, amikor a végrehajtás leáll.
+
+`None` értéket ad vissza.
+
+`200` ticket vesz igénybe.
+
+példa:
+`set_execution_speed(1)`
+@code_tooltip_set_world_size = `set_world_size(size)`
+Korlátozza a farm méretét, hogy jobban lásd, mi történik.
+A farmot is törli és a drone pozícióját visszaállítja.
+A farmot egy `size` x `size` rácsra állítja.
+A lehetséges legkisebb `size` a `3`.
+A 3-nál kisebb `size` visszaállítja a farmot teljes méretre.
+A hatás megszűnik, amikor a végrehajtás leáll.
+
+`None` értéket ad vissza.
+
+`200` ticket vesz igénybe.
+
+példa:
+`set_world_size(5)`
+@code_tooltip_num_items = `num_items(item)`
+Kideríti, mennyi `item` van nálad.
+
+A jelenlegi inventoryban lévő `item` számát adja vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`if num_items(Items.Fertilizer) > 0:
+    use_item(Items.Fertilizer)`
+@code_tooltip_get_cost = `get_cost(thing)`
+Egy `thing` költségének lekérése
+
+Ha `thing` entitás, a elültetésének költségét adja vissza.
+Ha `thing` unlock, a feloldás költségét adja vissza.
+
+Szótárat ad vissza, ahol kulcsok az itemek és értékek a számok. Minden item arra van leképezve, mennyi kell belőle.
+`{}` értéket ad vissza, ha már a max szinten lévő, fejleszthető unlockra használod.
+
+`1` ticket vesz igénybe.
+
+példa:
+`cost = get_cost(Unlocks.Carrots)
+for item in cost:
+    if num_items(item) < cost[item]:
+        print("not enough items to unlock carrots")`
+@code_tooltip_clear = `clear()`
+Eltávolít mindent a farmról, a drone-t visszaviszi a (0,0) pozícióra és a kalapot visszaváltja a szalma kalapra.
+
+`None` értéket ad vissza.
+
+`200` ticket vesz igénybe.
+
+példa:
+`clear()`
+@code_tooltip_get_companion = `get_companion()`
+A drone alatti növény preferált társának lekérése.
+
+`(companion_type, (companion_x_position, companion_y_position))` formájú tuple-t ad vissza.
+
+`1` ticket vesz igénybe.
+
+példa:
+`companion = get_companion()
+if companion != None:
+    plant_type, (x, y) = companion
+    print("Companion:", plant_type, "at", x, ",", y)`
+@code_tooltip_unlock = `unlock(unlock)`
+Pontosan ugyanúgy működik, mint a `unlock`-nak megfelelő gomb megnyomása a kutatási fában.
+
+`True` értéket ad vissza, ha a feloldás sikeres, ellenkező esetben `False` értéket.
+
+`200` ticket vesz igénybe sikeres művelet esetén, ellenkező esetben `1` ticket.
+
+példa:
+`unlock(Unlocks.Carrots)`
+@code_tooltip_num_unlocked = `num_unlocked(thing)`
+A feloldás, entitás, talaj, item vagy kalap ellenőrzésére szolgál, hogy már fel van-e oldva.
+
+`1` plusz a `thing` fejlesztéseinek számát adja vissza, ha `thing` fejleszthető. Különben `1`-et ad vissza, ha a `thing` fel van oldva, különben `0`-t.
+
+`1` ticket vesz igénybe.
+
+példa:
+`plant(Entities.Bush)
+n_substance = get_world_size() * num_unlocked(Unlocks.Mazes)
+use_item(Items.Weird_Substance, n_substance)`
+@code_tooltip_reset = `reset()`
+Visszaállítja a farmot 1x1-es négyzetre, eltávolítja az erőforrásokat és zárolja a legtöbb feloldást.
+Nem távolítja el a kódod.
+
+`None` értéket ad vissza.
+
+`200` ticketvesz igénybe.
+
+példa:
+`reset()`
+@code_tooltip_measure = `measure(direction = None)`
+Néhány értéket mér néhány entitáson. Ennek hatása az entitástól függ.
+
+Ha a `direction` nem `None`, a megadott irányban lévő szomszédos entitást méri.
+
+A napraforgó szirmainak számát adja vissza.
+A kincs vagy alma következő pozícióját adja vissza.
+A kaktusz méretét adja vissza.
+A tökféle titokzatos számát adja vissza.
+`None` értéket ad vissza minden más entitásra.
+
+`1` ticket vesz igénybe.
+
+példa:
+`num_petals = measure()`
+@code_tooltip_leaderboard_run = `leaderboard_run(leaderboard, file_name, speedup)`
+Időzített szimulációt indít a `leaderboard`-nak a megadott `file_name` kiindulási pontként.
+`speedup` a kezdő sebesség felét határozza meg.
+
+`None` értéket ad vissza.
+
+`200` ticketvesz igénybe.
+
+példa:
+`leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
+@code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+Szimulációt indít a leaderboardnak a megadott `filename` kiindulási pontként.
+
+`sim_unlocks`: A kezdő feloldásokat tartalmazó szekvencia.
+`sim_items`: Item-gyeket összegekre leképező dict. A szimuláció ezekkel az itemekkel indul.
+`sim_globals`: Változóneveket értékekre leképező dict. A szimuláció ezekkel a változókkal indul a globális hatókörben.
+`seed`: A szimuláció random seedje. Pozitív egésznek kell lennie.
+`speedup`: A kezdő sebesség felét.
+
+A szimuláció futásához szükséges időt adja vissza.
+
+`200` ticket vesz igénybe.
+
+példa:
+`filename = "f1"
+sim_unlocks = Unlocks
+sim_items = {Items.Carrot : 10000, Items.Hay : 50}
+sim_globals = {"a" : 13}
+seed = 0
+speedup = 64
+
+run_time = simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
+@code_tooltip_spawn_drone = `spawn_drone(function, *args)`
+Új dronet hoz létre ugyanazon a pozíciójon, mint amelyik a `spawn_drone(function, *args)` parancsot futtatta. Az új drone aztán a megadott függvényt futtatja. A többi argumentumot másolja és átadja a megadott függvénynek. Miután a drone végzett, automatikusan eltűnik.
+
+Az új drone handle-jét adja vissza, vagy `None`-t, ha már minden dronet létrehoztál.
+
+`200` ticket vesz igénybe, ha egy drone létrejött, különben `1` ticket.
+
+példa:
+`def harvest_column(message):
+    for _ in range(get_world_size()):
+        harvest()
+        move(North)
+    print(message)
+
+i = 0
+while True:
+    if spawn_drone(harvest_column, i):
+        move(East)
+        i = (i + 1) % 10`
+
+@code_tooltip_wait_for = `wait_for(drone)`
+Megvárja, amíg a megadott `drone` befejeződik.
+
+A `drone` által futtatott függvény visszatérési értékét adja vissza.
+
+`1` ticket vesz igénybe, ha a várt `drone` már kész.
+
+példa:
+`def get_entity_type_in_direction(dir):
+    move(dir)
+    return get_entity_type()
+
+def zero_arg_wrapper():
+    return get_entity_type_in_direction(North)
+handle = spawn_drone(zero_arg_wrapper)
+print(wait_for(handle))`
+
+@code_tooltip_has_finished = `has_finished(drone)`
+Ellenőrzi, hogy a megadott `drone` befejeződött-e.
+
+`True` értéket ad vissza, ha a `drone` befejeződött, ellenkező esetben `False` értéket.
+
+`1` ticket vesz igénybe.
+
+példa:
+`drone = spawn_drone(function)
+while not has_finished(drone):
+    do_something_else()
+result = wait_for(drone)`
+
+@code_tooltip_max_drones = `max_drones()`
+
+A maximális dron számát adja vissza, amennyi a farmon lehet.
+
+`1` ticket vesz igénybe.
+
+példa:
+`while num_drones() < max_drones():
+    spawn_drone(task)
+    move(East)`
+
+@code_tooltip_num_drones = `num_drones()`
+
+A jelenlegi dronok számát adja vissza a farmon.
+
+`1` ticketvesz igénybe.
+
+példa:
+`while num_drones() < max_drones():
+    spawn_drone(task)
+    move(East)`
+
+@code_tooltip_quick_print = `quick_print(*args)`
+Úgy ír ki értéket, mint a `print(*args)`, de nem áll meg, hogy a levegőbe írja, így csak a kimeneti oldalon található meg.
+
+`None` értéket ad vissza.
+
+`0` ticketvesz igénybe.
+
+példa:
+`quick_print("hi mom")`
+@code_tooltip_change_hat = `change_hat(hat)`
+A drone kalapját `hat`-ra változtatja.
+
+`None` értéket ad vissza.
+
+`200` ticketvesz igénybe.
+
+példa:
+`change_hat(Hats.Dinosaur_Hat)`
+
+@code_tooltip_max = `max(*args)`
+Egy szekvencia vagy több átadott argumentum maximumát kapja meg.
+Számokon és stringeken is használható.
+
+`max(a,b,c)`: `a`, `b` és `c` maximumát adja vissza.
+`max(sequence)`: A szekvenciában lévő összes érték maximumát adja vissza.
+
+#comparisons ticket vesz igénybe.
+
+példa:
+`max([3,6,34,16])`
+@code_tooltip_min = `min(*args)`
+Egy szekvencia vagy több átadott argumentum minimumát kapja meg.
+Számokon és stringeken is használható.
+
+`min(a,b,c)`: `a`, `b` és `c` minimumát adja vissza.
+`min(sequence)`: A szekvenciában lévő összes érték minimumát adja vissza.
+
+#comparisons ticketvesz igénybe.
+
+példa:
+`min([3,6,34,16])`
+@code_tooltip_abs = `abs(number)`
+Egy szám abszolút értékét számítja ki.
+
+A `number` értékét adja vissza, ha az pozitív, különben `-number`-t.
+
+`1` ticket vesz igénybe.
+
+példa:
+`abs(-69)`
+@code_tooltip_random = `random()`
+Random számot mintavételez 0 (inkluzív) és 1 (exkluzív) között.
+
+A random számot adja vissza.
+
+`1` ticketvesz igénybe.
+
+példa:
+`def random_elem(list):
+	index = random() * len(list) // 1
+	return list[index]`
+@code_tooltip_append = `list.append(element)`
+Hozzáadja az `element`-et a `list` végéhez.
+
+`None` értéket ad vissza.
+
+`1` ticketvesz igénybe.
+
+példa:
+`list = []
+list.append(1)`
+@code_tooltip_add = `set.add(element)`
+Hozzáadja az `element`-et a `set`-hez.
+
+`None` értéket ad vissza.
+
+`element size` ticketvesz igénybe.
+
+példa:
+`set = {0}
+set.add(1)`
+@code_tooltip_remove = `collection.remove(element)`
+Eltávolítja az `element` első előfordulását a `collection`-ből.
+
+`None` értéket ad vissza.
+
+`element size` ticketvesz igénybe halmazon, #comparisions + #shifts ticket listán.
+
+példa:
+`list = [True, False, None]
+list.remove(False)`
+@code_tooltip_pop = `collection.pop()`
+Eltávolítja az utolsó elemet egy listából vagy a megadott elemet egy szótárból.
+`list.pop(i)` eltávolítja az `i` indexű elemet a `list`-ből.
+
+Az eltávolított elemet adja vissza.
+
+`key size` ticketvesz igénybe szótáron, `len(list) - i + 1` ticket listán.
+
+példa:
+`list = [True, False, None]
+list.pop(0)`
+@code_tooltip_insert = `list.insert(i, element)`
+Beszúrja az `element`-et a `list`-be i indexre.
+
+`None` értéket ad vissza.
+
+`len(list) - i + 1` ticketvesz igénybe.
+
+példa:
+`list = [1,2]
+list.insert(0, 0)`
+@code_tooltip_Items = Az összes inventoryban lévő itemet tartalmazza. `for` ciklussal iterálható.
+@code_tooltip_Entities = Az összes növénytípust tartalmazza. `for` ciklussal iterálható.
+@code_tooltip_Grounds = Az összes lehetséges talajtípust tartalmazza. `for` ciklussal iterálható.
+@code_tooltip_Unlocks = Az összes feloldást és fejlesztést tartalmazza a kutatási menüben. `for` ciklussal iterálható.
+@code_tooltip_Hats = Az összes kalaptípust tartalmazza. `for` ciklussal iterálható.
+@code_tooltip_Leaderboards = Az összes leaderboard kategóriát tartalmazza. `for` ciklussal iterálható.
+@code_tooltip_for = Egy ciklus, ami egy szekvencia összes elemén iterál. Néhány programnyelven ezt "foreach" ciklusnak hívják.
+@code_tooltip_while = Addig ismétel, amíg a feltétel hamis.
+@code_tooltip_def = Függvényt definiál.
+@code_tooltip_True = Egy érték, ami mindig igaz.
+@code_tooltip_False = Egy érték, ami mindig hamis.
+@code_tooltip_if = Végrehajt kódot, ha a feltétel `True`.
+@code_tooltip_else = Végrehajt kódot, ha az előző `if` feltétel `False` volt.
+@code_tooltip_elif = Ugyanazt csinálja, mint:
+`else:
+    if condition:`
+@code_tooltip_None = Egy érték, ami azt jelenti, hogy nincs érték.
+@code_tooltip_continue = Azonnal a következő ciklus iterációval folytatja. Ha egymásba ágyazott ciklusok vannak, mindig a legbelső ciklust érinti.
+@code_tooltip_break = Kilép a ciklusból és a ciklus utáni utasításokkal folytatja. Ha egymásba ágyazott ciklusok vannak, mindig a legbelső ciklust érinti.
+@code_tooltip_North = A fel irány a képernyőn. Hacsak nem forgatod el a képernyőt.
+@code_tooltip_East = A jobb irány a képernyőn. Hacsak nem forgatod el a képernyőt.
+@code_tooltip_South = A le irány a képernyőn. Hacsak nem forgatod el a képernyőt.
+@code_tooltip_West = A bal irány a képernyőn. Hacsak nem forgatod el a képernyőt.
+@code_tooltip_not = `not True` az `False` és `not False` az `True`.
+@code_tooltip_and = Kiértékeli az első operandust. Ha hamis (`False`, `0` és üres kollekciók), azonnal visszaadja azt az értéket (short-circuiting az értékelést), különben kiértékeli és visszaadja a második operandust.
+@code_tooltip_or = Kiértékeli az első operandust. Ha igaz (bármi más, mint `False`, `0` és üres kollekciók), azonnal visszaadja azt az értéket (short-circuiting az értékelést), különben kiértékeli és visszaadja a második operandust.
+@code_tooltip_return = Függvényből való érték visszaadására szolgál.
+@code_tooltip_pass = Nem csinál semmit. Hasznos lehet, mert üres kódblokkok nem megengedettek.
