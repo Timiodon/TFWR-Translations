@@ -2282,7 +2282,8 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	Sunflower: returns the number of petals.
 	Maze: returns the position of the current treasure from anywhere in the maze.
 	Cactus: returns the size.
-	Dinosaur: returns the number corresponding to the type.
+	Dinosaur: returns the position of the next apple (must be used on current apple).
+	Bamboo: return the height of the flower.
 	Mushroom: returns the mushroom type as a number.
 	Basalt: returns the `(x, y)` position of the treasure map below.
 	Treasure map: returns a string of direction letters describing the path.
@@ -2296,7 +2297,14 @@ def measure(direction: Direction | None = None, /) -> Measure:
 
 	```
 	num_petals = measure()
-	treasure_pos = measure()
+	treasure_pos_x, treasure_pos_y = measure()
+	cactus_size = measure()
+	next_apple_x, next_apple_y = measure()
+	bamboo_height = measure()
+	mushroom_type = measure()
+	treasure_map_coordinates_x, treasure_map_coordinates_y = measure() # On `Grounds.Basalt`
+	treasure_map_directions = measure() # On `Grounds.Treasure_Map`
+	dynamite_number = measure()
 	```
 	"""
 	...
