@@ -1891,8 +1891,8 @@ def plant(entity: Entity | Entities, /) -> _bool:
 	It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
 
 	Notes:
-	- A maze will not expand across different z levels.
-	- Pumpkins will not merge across different z levels.
+	- A maze will not expand across different z positions.
+	- Pumpkins will not merge across different z positions.
 
 	returns `True` if it succeeded, `False` otherwise.
 
@@ -1916,7 +1916,7 @@ def swap(direction: Direction, /) -> _bool:
 	Notes:
 	- Only works with `Entities.Cactus`
 	- Also works if one (or both) of the entities are `None`.
-	- Entities will not swap across different z levels.
+	- Entities will not swap across different z positions.
 
 	- `East ` = right
 	- `West ` = left
@@ -1962,7 +1962,7 @@ def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	`Items.Weird_Substance` the weirdness will not wrap across the border.
 
 	Notes:
-	- A maze will not expand across different z levels.
+	- A maze will not expand across different z positions.
 
 	returns `True` if an item was used, `False` if the item can't be used or you don't have enough.
 
@@ -2144,7 +2144,7 @@ def get_pos_z(direction: Direction | None = None, /) -> _int:
 
 	A direction that points into the world border will evaluate the tile on the other side of the world.
 
-	returns the z coordinate as an integer.
+	returns the z position as an integer.
 
 	takes `1` tick to execute.
 
