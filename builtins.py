@@ -2653,9 +2653,9 @@ def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 # --------------------------------------------------
 def max_drones() -> _int:
 	"""
-	Gets the maximum number of drones available on the farm.
+	Gets the maximum number of drones available for use.
 
-	returns the maximum number of drones that you can have in the farm.
+	returns the maximum number of drones that you can utilize.
 
 	takes `1` tick to execute.
 
@@ -2673,9 +2673,9 @@ def max_drones() -> _int:
 # --------------------------------------------------
 def num_drones() -> _int:
 	"""
-	Gets the current number of drones running a task on the farm.
+	Gets the current number of drones currently running a task.
 
-	returns the number of drones currently in the farm.
+	returns the number of drones currently running a task.
 
 	takes `1` tick to execute.
 
