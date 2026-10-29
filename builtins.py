@@ -2167,7 +2167,7 @@ type WorldSizes = Literal[
 
 def get_world_size() -> WorldSizes:
 	"""
-	Get the current size of the farm.
+	Get the current size of the world.
 
 	returns the side length of the grid in the north to south direction.
 
