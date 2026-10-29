@@ -2202,7 +2202,8 @@ def get_water() -> _float:
 	"""
 	Get the current water level under the drone.
 
-	returns the water level under the drone as a number between `0` and `1`.
+	returns the water level under the drone as a number between `0` and `1`. The water
+	level will not be `0` or `1` due to how water decay functions.
 
 	takes `1` tick to execute.
 
