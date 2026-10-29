@@ -2048,8 +2048,8 @@ def change_hat(hat: Hat | Hats, /) -> None:
 def move(direction: Direction, /) -> _bool:
 	"""
 	Moves the drone into the specified `direction` by one tile. A `direction` can point into a
-	world border. If the drone moves over the edge of the farm it wraps back to the other side
-	of the farm.
+	world border. If the drone moves over the edge of the world it wraps back to the other side
+	of the world.
 
 	Note: If the drone is wearing `Hats.Dinosaur_Hat` it cannot move across the world border.
 	It will also not be able to move to a different z position.
@@ -2765,10 +2765,10 @@ def set_execution_speed(speed: _float, /) -> None:
 # --------------------------------------------------
 def set_world_size(size: WorldSizes, /) -> None:
 	"""
-	Limits the size of the farm to better see what's happening.
-	Also clears the farm and resets the drone position.
+	Limits the size of the world to better see what's happening.
+	Also clears the world and resets the drone position.
 
-	- Sets the farm to a `size` x `size` grid.
+	- Sets the world to a `size` x `size` grid.
 	- The smallest `size` possible is `3` and maximum `size` is `32`
 	- A `size` smaller than `3` will change the grid back to its full size.
 	- The effect will also stop when the execution stops.
