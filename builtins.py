@@ -2389,18 +2389,19 @@ def dig() -> _bool:
 # --------------------------------------------------
 def get_hardness(direction: Direction | None = None, /) -> _float | None:
 	"""
-	Gets the hardness of the ground below the drone, or of the neighboring ground
+	Gets the hardness of the block below the drone, or of the neighboring block
 	in `direction`. Harder blocks take longer to dig.
 
-	A `direction` that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the block on
+	the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
 	- `North` = up
 	- `South` = down
 
-	returns the ground hardness, or `None` if the requested tile is outside the
-	world.
+	returns the block hardness, or `None` if the requested block is is on the
+	other side of the world.
 
 	takes `1` tick to execute.
 
@@ -2417,18 +2418,19 @@ def get_hardness(direction: Direction | None = None, /) -> _float | None:
 # --------------------------------------------------
 def get_stability(direction: Direction | None = None, /) -> _float | None:
 	"""
-	Gets the stability of the ground below the drone, or of the neighboring ground
+	Gets the stability of the block below the drone, or of the neighboring block
 	in `direction`. Stability controls how much height difference a block can
 	withstand before it caves in.
 
-	A `direction` that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the block on
+	the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
 	- `North` = up
 	- `South` = down
 
-	returns the ground stability, or `None` if the requested tile is outside the
+	returns the block stability, or `None` if the requested block is outside the
 	world.
 
 	takes `1` tick to execute.
@@ -2510,7 +2512,7 @@ def can_push(direction: Direction, /) -> _bool:
 	Checks whether the block below the drone can be pushed in `direction` and
 	whether anything blocks it.
 
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A direction that points into the world border will evaluate the block on the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
