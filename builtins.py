@@ -2634,6 +2634,7 @@ def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	returns `True` if the drone has finished, `False` otherwise.
+	Note: If a `drone` was destroyed because of a call to `clear` will also return `False`
 
 	takes `1` tick to execute.
 
