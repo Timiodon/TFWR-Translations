@@ -2370,7 +2370,7 @@ def measure(direction: Direction | None = None, /) -> Measure:
 # -------------------------------------------------------------------------------
 def dig() -> _bool:
 	"""
-	Digs `1` tile downward. Whether the block is destroyed depends on its hardness
+	Digs `1` block downward. Whether the block is destroyed depends on its hardness
 	and the drone's drill strength.
 
 	returns `True` if the block was destroyed, `False` otherwise.
@@ -2450,8 +2450,8 @@ def prospect_iron() -> Direction | None:
 	"""
 	Uses `1` `Items.Coal` to look for nearby iron.
 
-	returns the direction toward the nearest iron ore, or `None` if the drone is
-	already above it, no `Items.Iron` is in range, or there is not enough `Items.Coal``.
+	returns the direction toward the nearest `Ground.Iron` ore, or `None` if the drone is
+	already above it, no iron is in range, or there is not enough `Items.Coal``.
 
 	example usage:
 
@@ -2469,7 +2469,7 @@ def prospect_quartz() -> _float | None:
 	"""
 	Uses `1` `Items.Iron` to look for nearby quartz.
 
-	returns the Euclidean 3D distance to the nearest `Items.Quartz` block, or `None` if no
+	returns the Euclidean 3D distance to the nearest `Grounds.Quartz` block, or `None` if no
 	quartz is in range, or there is not enough iron.
 
 	example usage:
@@ -2488,7 +2488,7 @@ def push(direction: Direction, /) -> _bool:
 	pushed upward.
 
 	A `direction` can point into a world border. If the drone pushes a mushroom block over
-	the edge of the farm it will be pushed to the other side of the farm.
+	the edge of the world it will be pushed to the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
@@ -2512,7 +2512,7 @@ def can_push(direction: Direction, /) -> _bool:
 	Checks whether the block below the drone can be pushed in `direction` and
 	whether anything blocks it.
 
-	A direction that points into the world border will evaluate the block on the other side of the world.
+	A `direction` that points into the world border will evaluate the block on the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
