@@ -2699,7 +2699,7 @@ def num_drones() -> _int:
 # -------------------------------------------------------------------------------
 def get_time() -> _float:
 	"""
-	Get the current game time.
+	Get the current game time. Time is shared across all drones.
 
 	returns the time in seconds since the start of the game.
 
@@ -2719,7 +2719,7 @@ def get_time() -> _float:
 # --------------------------------------------------
 def get_tick_count() -> _int:
 	"""
-	Used to measure the number of ticks performed.
+	Used to measure the number of ticks performed. Each drone has its own tick count.
 
 	returns the number of ticks performed since the start of execution.
 
