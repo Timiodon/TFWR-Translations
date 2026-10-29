@@ -2103,7 +2103,7 @@ def get_pos_x() -> _int:
 	Gets the current x position of the drone.
 	The x position starts at `0` in the `West` and increases in the `East` direction.
 
-	returns a number representing the current x coordinate of the drone.
+	returns a number representing the current x position of the drone.
 
 	takes `1` tick to execute.
 
@@ -2122,7 +2122,7 @@ def get_pos_y() -> _int:
 	Gets the current y position of the drone.
 	The y position starts at `0` in the `South` and increases in the `North` direction.
 
-	returns a number representing the current y coordinate of the drone.
+	returns a number representing the current y position of the drone.
 
 	takes `1` tick to execute.
 
@@ -2352,7 +2352,7 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	next_apple_x, next_apple_y = measure()
 	bamboo_height = measure()
 	mushroom_type = measure()
-	treasure_map_coordinates_x, treasure_map_coordinates_y = measure() # On `Grounds.Basalt`
+	treasure_map_pos_x, treasure_map_pos_y = measure() # On `Grounds.Basalt`
 	treasure_map_directions = measure() # On `Grounds.Treasure_Map`
 	dynamite_number = measure()
 	```
