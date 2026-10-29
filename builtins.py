@@ -2001,7 +2001,11 @@ def place(ground: Ground | Grounds, /) -> _bool:
 # --------------------------------------------------
 def clear() -> None:
 	"""
-	Removes everything from the farm, moves the drone back to position `(0,0)` and changes the hat back to the default.
+	Removes everything from the farm, destroys all drones (`has_finished` will return `False`),
+	moves the drone back to position `(0,0)` and changes the hat back to the default.
+
+	Notes:
+	- Water levels will retain their previous water level before a call to `clear`.
 
 	returns `None`
 
@@ -2262,6 +2266,9 @@ def get_water() -> _float:
 def num_items(item: Item | Items, /) -> _float:
 	"""
 	Find out how much of `item` you currently have.
+
+	Notes:
+	- When using water a tile cannot have a water level above `1`
 
 	returns the number of `item` currently in your inventory.
 	`Items.Power` may return a number as float
