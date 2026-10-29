@@ -2372,6 +2372,56 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 
 
 # --------------------------------------------------
+def hover(distance: _int, /) -> _bool:
+	"""
+	Hovers a certain `distance` amount above the lowest z position that the drone is
+	currently positioned over. For example, if the drone is at a z level of -5 and the
+	`distance` is 4 the drone will hover similar to a z position of -1.
+
+	Hovering allows you to move over certain entities without disturbing them.
+
+	Digging using `dig` will set your hover `distance` to 1. Moving using `move` will not
+	reset your hover `distance
+
+	Note: `get_pos_z` will report the lowest ground level. If you wish to get the drone's
+	current cover `distance` use `get_hover`
+
+	returns True if the drone was able to hover and False otherwise.
+
+	example usage (hover a `distance` of 4 above the current lowest z position):
+
+	```
+	for i in range(4):
+		place(Items.Dirt)
+	hover(4)
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def get_hover() -> _int:
+	"""
+	Get the current hover `distance` above the lowest z position of the ground.
+	The amount of hover `distance` is independent of the current lowest z position.
+
+	An appropriate hover `distance` allows you to move over certain entities without disturbing them.
+
+	returns the amount of hover `distance` the drone is currently at
+
+	example usage (hover a `distance` of 4 above the current lowest z position):
+
+	```
+	for i in range(4):
+		place(Items.Dirt)
+	hover(4)
+	print(get_hover())
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
 def prospect_iron() -> Direction | None:
 	"""
 	Uses one `Items.Coal` to look for nearby iron.
