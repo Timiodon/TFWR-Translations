@@ -2142,7 +2142,7 @@ def get_pos_z(direction: Direction | None = None, /) -> _int:
 	tile in `direction`. The z position starts at `0` and decreases while digging
 	downward.
 
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	returns the z position as an integer.
 
@@ -2193,7 +2193,7 @@ def get_world_size() -> WorldSizes:
 def get_entity_type(direction: Direction | None = None, /) -> Entity:
 	"""
 	Find out what kind of entity is under the drone, or on the neighboring tile in
-	`direction`. A direction that points into the world border will evaluate the tile on
+	`direction`. A `direction` that points into the world border will evaluate the tile on
 	the other side of the world.
 
 	- `East ` = right
@@ -2220,7 +2220,7 @@ def get_entity_type(direction: Direction | None = None, /) -> Entity:
 def get_ground_type(direction: Direction | None = None, /) -> Ground:
 	"""
 	Find out what kind of ground is under the drone, or on the neighboring tile in
-	`direction`. A direction that points into the world border will evaluate the tile on
+	`direction`. A `direction` that points into the world border will evaluate the tile on
 	the other side of the world.
 
 	- `East ` = right
@@ -2295,7 +2295,7 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
 	Get the companion preference of the plant under the drone. Companions can wrap across the world.
 
-	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
+	returns a tuple of the form `(companion_type, (companion_pos_x, companion_pos_y))` or `None` if there is no companion.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
@@ -2335,9 +2335,9 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	Dinosaur: returns the position of the next apple (must be used on current apple).
 	Bamboo: return the height of the flower.
 	Mushroom: returns the mushroom type as a number.
-	Basalt: returns the `(x, y)` position of the treasure map below.
-	Treasure map: returns a string of direction letters describing the path.
-	Soot: returns the number of live dynamite blocks in the stratum above.
+	Basalt: returns the `(x, y)` position of the `Entities.Treasure_Map` below.
+	Treasure_Map: returns a string of `direction` or `dig` letters describing the path (`N` = `North, `E` = `East`, `S` = `South`, `W` = `West`, `D` = `dig()`).
+	Soot: returns the number of live `Grounds.Dynamite` blocks in the stratum above.
 	All other entities and ground types: returns `None`.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
@@ -2370,12 +2370,12 @@ def measure(direction: Direction | None = None, /) -> Measure:
 # -------------------------------------------------------------------------------
 def dig() -> _bool:
 	"""
-	Digs one tile downward. Whether the block is destroyed depends on its hardness
+	Digs `1` tile downward. Whether the block is destroyed depends on its hardness
 	and the drone's drill strength.
 
 	returns `True` if the block was destroyed, `False` otherwise.
 
-	takes 0.5 seconds to execute.
+	takes `0.5` seconds to execute.
 
 	example usage:
 
@@ -2392,7 +2392,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float | None:
 	Gets the hardness of the ground below the drone, or of the neighboring ground
 	in `direction`. Harder blocks take longer to dig.
 
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
@@ -2421,7 +2421,7 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 	in `direction`. Stability controls how much height difference a block can
 	withstand before it caves in.
 
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	- `East ` = right
 	- `West ` = left
@@ -2446,10 +2446,10 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 # --------------------------------------------------
 def prospect_iron() -> Direction | None:
 	"""
-	Uses one `Items.Coal` to look for nearby iron.
+	Uses `1` `Items.Coal` to look for nearby iron.
 
 	returns the direction toward the nearest iron ore, or `None` if the drone is
-	already above it, no iron is in range, or there is not enough coal.
+	already above it, no `Items.Iron` is in range, or there is not enough `Items.Coal``.
 
 	example usage:
 
@@ -2465,10 +2465,10 @@ def prospect_iron() -> Direction | None:
 # --------------------------------------------------
 def prospect_quartz() -> _float | None:
 	"""
-	Uses one `Items.Iron` to look for nearby quartz.
+	Uses `1` `Items.Iron` to look for nearby quartz.
 
-	returns the Euclidean 3D distance to the nearest quartz block, or `None` if no
-	quartz is in range or there is not enough iron.
+	returns the Euclidean 3D distance to the nearest `Items.Quartz` block, or `None` if no
+	quartz is in range, or there is not enough iron.
 
 	example usage:
 
