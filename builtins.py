@@ -1890,6 +1890,10 @@ def plant(entity: Entity | Entities, /) -> _bool:
 	Spends the cost of the specified `entity` and plants it under the drone.
 	It fails if you can't afford the plant, the ground type is wrong or there's already a plant there.
 
+	Notes:
+	- A maze will not expand across different z levels.
+	- Pumpkins will not merge across different z levels.
+
 	returns `True` if it succeeded, `False` otherwise.
 
 	takes `200` ticks to execute if it succeeded, `1` tick otherwise.
@@ -1909,8 +1913,10 @@ def swap(direction: Direction, /) -> _bool:
 	Swaps the entity under the drone with the entity next to the drone in the specified `direction`.
 	Entities cannot be swapped across the world border.
 
-	- Doesn't work on all entities.
+	Notes:
+	- Only works with `Entities.Cactus`
 	- Also works if one (or both) of the entities are `None`.
+	- Entities will not swap across different z levels.
 
 	- `East ` = right
 	- `West ` = left
@@ -1954,6 +1960,9 @@ def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	Attempts to use the specified `item` `n` times. Can only be used with some items including
 	`Items.Water`, `Items.Fertilizer`, `Items.Weird_Substance`, and `Items.Dynamite`. When using
 	`Items.Weird_Substance` the weirdness will not wrap across the border.
+
+	Notes:
+	- A maze will not expand across different z levels.
 
 	returns `True` if an item was used, `False` if the item can't be used or you don't have enough.
 
@@ -2039,6 +2048,7 @@ def move(direction: Direction, /) -> _bool:
 	of the farm.
 
 	Note: If the drone is wearing `Hats.Dinosaur_Hat` it cannot move across the world border.
+	It will also not be able to move to a different z position.
 
 	- `East ` = right
 	- `West ` = left
