@@ -3,7 +3,7 @@
 
 `for i in range(10):
 	continue
-    print("tohle se nikdy nevypíše")`
+	print("tohle se nikdy nevypíše")`
 
 Tento kód provede všech `10` iterací cyklu, ale příkaz `print` za `continue` se vždy přeskočí.
 
@@ -12,8 +12,8 @@ Funguje to i u cyklů `while`.
 `while True:
 	if not can_harvest():
 		continue
-    
-    harvest()`
+
+	harvest()`
 
 Tento kód volá `harvest()` pouze tehdy, když je `can_harvest()` rovno `True`.  
 Má stejný efekt jako:
@@ -26,7 +26,7 @@ U vnořených cyklů příkaz `continue` vždy ovlivňuje pouze ten nejvnitřně
 
 `for i in range(10):
 	for j in range(10):
-	    print("tohle se vypíše 100×")
+		print("tohle se vypíše 100×")
 		continue
 		print("tohle se nikdy nevypíše")
 	print("tohle se vypíše 10×")`

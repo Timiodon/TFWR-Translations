@@ -25,7 +25,7 @@
 for i in range(10):
 	print("to dzieje się za każdym razem")
 	continue
-    print("to nigdy nie zostanie wyświetlone")
+	print("to nigdy nie zostanie wyświetlone")
 }}
 
 To wykonuje wszystkie `10` iteracji pętli, ale instrukcja `print` po `continue` jest zawsze pomijana.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Ten kod wywołuje `harvest()` tylko wtedy, gdy `can_harvest()` zwróci `True`.
@@ -118,7 +118,7 @@ W zagnieżdżonych pętlach `continue` zawsze dotyczy najbardziej wewnętrznej p
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("to zostanie wyświetlone 4 razy")
+		print("to zostanie wyświetlone 4 razy")
 		continue
 		print("to nigdy nie zostanie wyświetlone")
 	print("to zostanie wyświetlone 2 razy")

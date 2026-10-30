@@ -28,7 +28,7 @@ Smyčka while vypadá takto:
 	#loop body
 	#loop body
 	#...`
-	
+
 Na místě slova condition musíš uvést booleovskou (logickou) podmínku, a na místě `#loop body` pak napsat příkazy, které se mají ve smyčce provádět.
 
 Existují dvě konstantní booleovské hodnoty. Konstanty jsou hodnoty, které se během běhu programu nemění.

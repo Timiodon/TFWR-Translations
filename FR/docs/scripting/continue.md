@@ -25,7 +25,7 @@
 for i in range(10):
 	print("ceci se produit à chaque fois")
 	continue
-    print("ceci n'est jamais affiché")
+	print("ceci n'est jamais affiché")
 }}
 
 Ceci exécute les `10` itérations de la boucle, mais l'instruction `print` après le `continue` est toujours ignorée.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Ce code n'appelle `harvest()` que lorsque `can_harvest()` est `True`.
@@ -118,7 +118,7 @@ Dans les boucles imbriquées, `continue` affecte toujours la boucle la plus inte
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("ceci est affiché 4 fois")
+		print("ceci est affiché 4 fois")
 		continue
 		print("ceci n'est jamais affiché")
 	print("ceci est affiché 2 fois")

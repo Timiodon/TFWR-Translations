@@ -25,7 +25,7 @@
 for i in range(10):
 	print("esto sucede cada vez")
 	continue
-    print("esto nunca se imprime")
+	print("esto nunca se imprime")
 }}
 
 Esto ejecuta las `10` iteraciones del bucle, pero la instrucción `print` después de `continue` siempre se salta.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Este código solo llama a `harvest()` cuando `can_harvest()` es `True`.
@@ -118,7 +118,7 @@ En bucles anidados, `continue` siempre afecta al bucle más interno.
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("esto se imprime 4 veces")
+		print("esto se imprime 4 veces")
 		continue
 		print("esto nunca se imprime")
 	print("esto se imprime 2 veces")

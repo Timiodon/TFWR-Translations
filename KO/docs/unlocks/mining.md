@@ -52,10 +52,10 @@ clear()
 `get_hardness()`로 아래 블록의 경도를 확인할 수 있습니다. 유난히 단단한 블록들을 만난다면 빙 돌아가는 것이 더 빠르게 전진하는 방법일지도 모릅니다.
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 물론 아래로 내려갈수록 블록은 점점 더 단단해지기 때문에, 이 전략이 도움은 되지만 한계가 있습니다.
 

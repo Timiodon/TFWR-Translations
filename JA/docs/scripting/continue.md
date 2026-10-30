@@ -25,7 +25,7 @@
 for i in range(10):
 	print("これは毎回表示されます")
 	continue
-    print("これは決して表示されません")
+	print("これは決して表示されません")
 }}
 
 これはループの全 `10` 回の反復を実行しますが、`continue` の後の `print` ステートメントは常にスキップされます。
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 このコードは `can_harvest()` が `True` の場合にのみ `harvest()` を呼び出します。
@@ -118,7 +118,7 @@ while True:
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("これは4回表示されます")
+		print("これは4回表示されます")
 		continue
 		print("これは決して表示されません")
 	print("これは2回表示されます")

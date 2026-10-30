@@ -25,7 +25,7 @@
 for i in range(10):
 	print("это происходит каждый раз")
 	continue
-    print("это никогда не будет напечатано")
+	print("это никогда не будет напечатано")
 }}
 
 Этот код выполняет все `10` итераций цикла, но инструкция `print` после `continue` всегда пропускается.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Код вызывает `harvest()` только тогда, когда `can_harvest()` равно `True`.
@@ -118,7 +118,7 @@ while True:
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("это напечатается 4 раза")
+		print("это напечатается 4 раза")
 		continue
 		print("это никогда не будет напечатано")
 	print("это напечатается 2 раза")
