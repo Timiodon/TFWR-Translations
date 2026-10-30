@@ -1,0 +1,83 @@
+@error_code_after_block = Burada hiç kod olmamalı. Kaldırmayı ya da yeni bir satıra taşımayı dene.
+@error_wrong_number_args = {0}, {1} argüman alır. Onu şu argümanlarla çağırdın: {2}.
+@error_expected_no_args = {0} hiç argüman almaz.
+@error_wrong_args = {1} çağrısındaki {0}. argüman şuydu: {2}. Bu geçerli bir argüman değil.
+@error_syntax_error_in_import = İçe aktarılan modülde bir sözdizimi hatası var.
+@error_module_not_found = Bu ada sahip bir modül yok. Ad, bir dosya adıyla eşleşmelidir. Bu, pencerenin üst kısmında görünen addır.
+@error_list_element_not_found = {0}, listenin bir elemanı değil.
+@error_set_element_not_found = {0}, bu set'in bir elemanı değil.
+@error_index_out_of_bounds = {0} indeksi, {1} listesinin sınırlarının dışında kaldı.
+@error_index_out_of_bounds2 = İndeks, listenin sınırlarının dışında kaldı.
+@error_arith_assign_not_used_on_number = {0} yalnızca sayılarla kullanılabilir.
+@error_bool_op_not_used_on_bool = Mantıksal bir operatör yalnızca sonucu `True` ya da `False` olan boolean ifadelerle kullanılabilir.
+@error_bad_bin_operator = {0} operatörü, {1} ve {2} işlenenleriyle kullanılamaz.
+@error_bad_unary_operator = {0} operatörü, {1} üzerinde kullanılamaz.
+@error_index = {0}, {1} üzerinde indeks olarak kullanılamaz.
+@error_index_on_non_indexable = {0} indekslenemez.
+@error_zero_step = Adım büyüklüğü sıfır olamaz.
+@error_index_on_tuple = Tuple'lar değiştirilemez (immutable) olduğu için bir tuple elemanına değer atayamazsın.
+@error_bad_key = {0} anahtar olarak kullanılamaz.
+@error_slice_dict = Dictionary'ler dilimlenemez.
+@error_key = {0}, dictionary'de bir anahtar değil.
+@error_condition_not_bool = {0} geçerli bir koşul değil. Koşul bir boolean değer olmalıdır. Yani her zaman ya `True` ya da `False` olan bir ifade olmalıdır.
+@error_for_requires_iterable = {0}, bir for döngüsünde gezilemez. for döngüsüne, üzerinden geçeceği bir dizi verilmelidir. Örnek:
+
+`for i in range(5):`
+Burada range(5), `0,1,2,3,4` dizisini döndürür.
+@error_no_loop_to_break = `break` yalnızca bir döngünün içinde kullanılabilir.
+@error_no_loop_to_continue = `continue` yalnızca bir döngünün içinde kullanılabilir.
+@error_no_function_to_return_from = `return` yalnızca bir fonksiyonun içinde kullanılabilir.
+@error_missing_unlock = Bunu kullanabilmek için önce kilidini açmalısın.
+@error_missing_x_unlock = Bunu kullanabilmek için önce şunun kilidini açmalısın: {0}.
+@error_name_not_defined = {0} hiç tanımlanmadı. Bir değişkeni kullanmadan önce ona bir değer atamalısın.
+@error_missing_import = {0} hiç tanımlanmadı. Ama {1} dosyasında tanımlanmış gibi görünüyor. Onu içe aktarmayı (import) unuttun mu?
+İçe aktardıysan, muhtemelen bir içe aktarma döngün (import cycle) var (import doküman sayfasına bak).
+@error_missing_import_before_unlock = {0} hiç tanımlanmadı. Ama {1} dosyasında tanımlanmış gibi görünüyor. Başka dosyalardan bir şeyler içe aktarabilmek için içe aktarmanın (import) kilidini açman gerekir.
+@error_missing_module_access = {0} hiç tanımlanmadı. Ama {1} dosyasında tanımlanmış gibi görünüyor; bu dosya içe aktarılmış görünüyor ama onu kullanmıyorsun. Ona modül adı üzerinden şöyle erişmelisin:
+
+{1}`.`{0}
+@error_call_before_def = {0} tanımlı değil. Bu dosyanın bir yerinde tanımlanmış gibi görünüyor ama tanım henüz çalıştırılmadı. Fonksiyonlar ancak `def` ifadesinden sonra çağrılabilir.
+@error_not_a_function = Fonksiyon olmayan bir şeyi çağırmaya çalıştın. Buna sık yol açan bir hata, fonksiyonla aynı ada sahip bir değişkenin olmasıdır.
+@error_invalid_const = {0} mevcut değil.
+@error_invalid_const2 = Bu mevcut değil.
+@error_max_stack_size_reached = Maksimum çağrı yığını boyutuna ulaşıldı. Bunun nedeni büyük olasılıkla çok fazla özyinelemeli (recursive) fonksiyon çağrısıdır.
+@error_max_comparison_depth = Maksimum karşılaştırma derinliğine ulaşıldı. Bu, örneğin kendilerini içeren listeleri karşılaştırdığında olabilir.
+@error_assign_type_mismatch = Atamanın sol tarafı sağ tarafıyla eşleşmedi.
+@error_too_many_values_to_unpack = Sağ tarafta, sol tarafa açılabilecek (unpack) olandan daha fazla değer var.
+@error_not_enough_values = Sağ tarafta açılacak (unpack) yeterince değer yok.
+@error_empty_print = `print()` en az bir argüman gerektirir.
+@error_in_string = {0} bir string içinde aranamaz.
+@error_collection_changed_size_during_iteration = Bu koleksiyonun boyutu, onun üzerinden geçen bir for döngüsünün içinde değiştirilemez. Çünkü koleksiyonun boyutunu değiştirmek, for döngüsünün kullandığı yineleyici (iterator) nesnesini geçersiz kılar.
+@error_wrong_use_of_max = {0} için maksimum hesaplanamaz.
+@error_wrong_use_of_min = {0} için minimum hesaplanamaz.
+@error_function_as_condition = {0} fonksiyonunun `True` olup olmadığı kontrol edilmeye çalışılıyor. Bu, fonksiyonun dönüş değeri değil, fonksiyon nesnesinin kendisi. Fonksiyonu çağrı operatörü `()` ile çağırmak mı istedin?
+
+Python'da fonksiyon nesneleri "truthy"dir; yani onları koşul olarak kullanırsan `True` gibi davranırlar. Bu yüzden Python sana bu hata mesajını vermezdi.
+
+Bu bir güvenlik amaçlı hata mesajıdır; işine engel olursa seçeneklerden kapatabilirsin.
+@error_function_in_operator = {0} fonksiyonu üzerinde {1} kullanılmaya çalışılıyor. Bu, fonksiyonun dönüş değeri değil, fonksiyon nesnesinin kendisi. Fonksiyonu çağrı operatörü `()` ile çağırmak mı istedin?
+
+Bu bir güvenlik amaçlı hata mesajıdır; işine engel olursa seçeneklerden kapatabilirsin.
+@error_zero_step_size = Adım büyüklüğü 0 olamaz.
+@error_sequence_too_large = Dizi kopyalanamayacak kadar büyüktü.
+@error_invalid_sim_unlocks = Başlangıç kilit açmaları geçersizdi. Kilit açmalardan ya da `(Unlock.Carrots, 3)` biçimindeki tuple'lardan oluşan bir dizi olmalıdır.
+@error_invalid_sim_items = Başlangıç eşyaları geçersizdi. Eşyaları sayılarla eşleyen, `{Items.Hay : 100}` gibi bir dict olmalıdır.
+@error_invalid_sim_globals = Başlangıç global değişkenleri geçersizdi. Değişken adlarını değerlerle eşleyen, `{"x" : 42}` gibi bir dict olmalıdır.
+@error_division_by_zero = Eyvah! `0` ile böldün. Kıl payı kurtuldun.
+@error_negative_use_item = Kullanılacak eşya miktarı en az `1` olmalıdır. Verilen değer: {0}.
+@error_use_before_assign = {0} değişkenine bir değer atanmadan önce okunmaya çalışıldı.
+Bir global değişkeni değiştirmek istiyorsan, global kapsama yazabilmek için global anahtar kelimesini kullanmalısın.
+
+`global x
+x += 1`
+@error_attribute_on_non_module = {0} üzerine bir öznitelik (attribute) atayamazsın.
+@error_file_not_found = {0} dosyası mevcut değil.
+@error_max_drones_reached = Dron sınırı aşıldı.
+@error_dino_hat_already_used = Yalnızca bir dinozor şapkası var ve o şu anda kullanımda. Onu ikinci bir dronda kullanamazsın.
+@error_dynamite_hat_already_used = Yalnızca bir tane dinamit şapkası var ve o zaten kullanımda. Onu ikinci bir dronda kullanamazsın.
+@error_invalid_drone_id = ID'si {0} olan bir dron yok.
+@error_invalid_handle = {0} artık mevcut değil.
+@error_spawn_drone_builtin = `spawn_drone()` fonksiyonunu yerleşik fonksiyonlarla doğrudan kullanamazsın. Kendi fonksiyonunu tanımlaman gerekir.
+@error_non_jumpable_unlock = Bu kilit açmaya zıplanamaz.
+@error_only_first_drone_can_jump = `jump()` komutunu yalnızca ilk dron çalıştırabilir.
+@error_can_only_jump_once = `jump()` komutunu her programda yalnızca bir kez çalıştırabilirsin.
