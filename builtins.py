@@ -2373,13 +2373,14 @@ def dig() -> _bool:
 
 
 # --------------------------------------------------
-def get_hardness(direction: Direction | None = None, /) -> _float | None:
+def get_hardness(direction: Direction | None = None, /) -> _float:
 	"""
 	Gets the hardness of the ground below the drone, or of the neighboring ground
 	in `direction`. Harder blocks take longer to dig.
 
 	returns the ground hardness, or `None` if the requested tile is outside the
 	world.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
 
@@ -2394,7 +2395,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float | None:
 
 
 # --------------------------------------------------
-def get_stability(direction: Direction | None = None, /) -> _float | None:
+def get_stability(direction: Direction | None = None, /) -> _float:
 	"""
 	Gets the stability of the ground below the drone, or of the neighboring ground
 	in `direction`. Stability controls how much height difference a block can
@@ -2402,6 +2403,7 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 
 	returns the ground stability, or `None` if the requested tile is outside the
 	world.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
 
@@ -2416,12 +2418,13 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 
 
 # --------------------------------------------------
-def prospect_iron() -> Direction | None:
+def prospect_iron() -> Direction:
 	"""
 	Uses one `Items.Coal` to look for nearby iron.
 
 	returns the direction toward the nearest iron ore, or `None` if the drone is
 	already above it, no iron is in range, or there is not enough coal.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Direction`.
 
 	takes `1` tick to execute.
 
@@ -2437,12 +2440,13 @@ def prospect_iron() -> Direction | None:
 
 
 # --------------------------------------------------
-def prospect_quartz() -> _float | None:
+def prospect_quartz() -> _float:
 	"""
 	Uses one `Items.Iron` to look for nearby quartz.
 
 	returns the Euclidean 3D distance to the nearest quartz block, or `None` if no
 	quartz is in range or there is not enough iron.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
 
