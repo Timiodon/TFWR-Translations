@@ -13,7 +13,7 @@ Pokud je běh úspěšný, tvůj čas se přidá do žebříčku.
 Aby se snížila náhodnost, všechny běhy musí běžet alespoň 2 hodiny (můžeš je zrychlit, takže to reálně netrvá tak dlouho). Pokud je běh dokončen dřív, opakuje se, dokud součet časů nedosáhne 2 hodin. Do žebříčku se pak nahraje průměr všech běhů jako tvé skóre.
 
 Tady je ukázkové nastavení, které tě dostane do žebříčku sena.  
-![](LeaderboardSetup400)
+![|x400](LeaderboardSetup)
 
 ## Fastest Reset
 „Fastest Reset“ je nejprestižnější kategorie. Úplně zautomatizuj hru od jediné dlaždice farmy až po opětovné odemknutí žebříčků.

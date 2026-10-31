@@ -5,7 +5,7 @@ Prvním z nich je krokové provádění programu.
 Do režimu krokování se přepneš tlačítkem vedle tlačítka Spustit nebo nastavením breakpointu.
 
 Breakpointy lze přidat kliknutím do panelu vlevo od kódu.  
-![](Breakpoints227)  
+![|x227](Breakpoints)  
 Když běh programu dosáhne řádku s breakpointem, automaticky se přepne do režimu krokování.
 
 Když najedeš myší na proměnnou, zobrazí se její aktuální hodnota.
