@@ -20,6 +20,7 @@
 @UI volume = UI 音量
 @ambience volume = 环境音量
 @drone volume = 无人机音量
+@mute in background = 后台静音
 @fps limit = 最大帧率
 @autosave = 自动保存代码
 @autosave progress = 自动存档
@@ -63,3 +64,7 @@
 @Light = 浅色
 @Lunar New Year = 农历新年
 @Custom = 自定义
+@automatic autocomplete = 自动代码补全
+@focus errors = 显示错误位置
+@window docking = 窗口吸附
+@autocomplete = 代码补全

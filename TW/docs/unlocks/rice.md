@@ -3,13 +3,9 @@
 <right>[珍珠岩與壤土->](docs/unlocks/special_soils.md)
 ---
 # 水稻
+地表和 `Grounds.Dirt` 層下方有一層薄薄的 `Grounds.Clay`。這片肥沃且浸滿水的地面非常適合種植水稻。
 
-你注意到地表下方有一層薄薄的黏土。這種肥沃的地塊非常適合種植水稻幼苗。
-
-種植水稻後，黏土會變乾。每塊黏土只能使用一次。好在這層黏土有好幾個地塊厚。當然，你也隨時可以使用 `clear()` 重設世界，讓黏土層重新出現。
-
-下面的程式碼可以幫助你向下挖掘，直到找到黏土。
-
+以下程式碼可以幫你挖到黏土並種下水稻：
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+只要無人機位於 `Grounds.Clay` 上方，就能用 `plant(Entities.Rice)` 種下水稻，再用 `can_harvest()` 檢查是否成熟，最後用 `harvest()` 收穫。
+
+## 梯田
+種下水稻後，地面會變成 `Grounds.Rice_Terrace`，為水稻成熟提供理想環境。水稻完全成熟後，地面會乾燥並變成 `Grounds.Dry_Rice_Terrace`，無法再次種植水稻。幸好薄層有幾格厚，因此可以用 `dig()` 挖掉地塊，在下方的 `Grounds.Clay` 上再種水稻。如果整層都用完了，隨時可以用 `clear()` 重設世界，再挖到新的黏土層。
 
 ---
 

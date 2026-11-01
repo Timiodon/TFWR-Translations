@@ -81,3 +81,6 @@ x += 1`
 @error_non_jumpable_unlock = Zu dieser Freischaltung kann nicht gesprungen werden.
 @error_only_first_drone_can_jump = Nur die erste Drohne kann `jump()` ausführen.
 @error_can_only_jump_once = Du kannst `jump()` nur einmal pro Programm ausführen.
+@error_dig_not_allowed = Die Verwendung von `dig()` ist in dieser Bestenliste nicht erlaubt.
+@error_plant_not_allowed = Die Verwendung von `plant()` ist in dieser Bestenliste nicht erlaubt.
+@error_jump_not_allowed = Die Verwendung von `jump()` ist in Bestenlisten nicht erlaubt.

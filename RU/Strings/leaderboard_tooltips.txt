@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Собери 500 млн древесины.
 @lb_descr_carrots = Собери 2 млрд моркови.
 @lb_descr_carrots_single = Собери 100 млн моркови.
+@lb_descr_fastest_underground_reset = Полностью автоматизируй подземелье.
+@lb_descr_rice = Собери 2 млн риса.
+@lb_descr_rice_single = Собери 100000 риса.
+@lb_descr_ores = Собери 20000 кварца.
+@lb_descr_ores_single = Собери 200 кварца.
+@lb_descr_bamboo = Собери 500 млн бамбука.
+@lb_descr_bamboo_single = Собери 25 млн бамбука.
+@lb_descr_dynamite = Собери 10 млн динамита.
+@lb_descr_dynamite_single = Собери 100000 динамита.
+@lb_descr_mushrooms = Собери 240000 грибов.
+@lb_descr_mushrooms_single = Собери 30000 грибов.
+@lb_descr_pyramids = Собери 150000 энергии.
+@lb_descr_pyramids_single = Собери 30000 энергии.
+@lb_descr_treasure_map = Собери 115000 золота.

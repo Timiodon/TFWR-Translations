@@ -130,20 +130,24 @@ zajmuje `1` tick.
 przykład:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Sprawdza, jaki rodzaj obiektu znajduje się pod dronem.
 
-zwraca `None`, jeśli pole jest puste, w przeciwnym razie zwraca typ obiektu pod dronem.
+Jeśli `direction` nie jest `None`, sprawdza zamiast tego sąsiednie pole we wskazanym kierunku.
+
+zwraca `None`, jeśli sprawdzane pole jest puste, a w przeciwnym razie typ obiektu na tym polu.
 
 zajmuje `1` tick.
 
 przykład:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Sprawdza, jaki rodzaj podłoża znajduje się pod dronem.
 
-zwraca typ podłoża pod dronem.
+Jeśli `direction` nie jest `None`, sprawdza zamiast tego sąsiednie pole we wskazanym kierunku.
+
+zwraca rodzaj podłoża na sprawdzanym polu.
 
 zajmuje `1` tick.
 
@@ -661,6 +665,8 @@ Kopie pole w dół.
 
 Prędkość kopania zależy od twardości bloku i siły wiertła drona.
 
+wykopanie bloku zajmuje `hardness / drill strength` sekund. Ulepszenia szybkości nie wpływają na czas kopania.
+
 przykład:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -669,6 +675,8 @@ Zużywa węgiel do poszukiwania żelaza.
 zwraca kierunek do najbliższej rudy żelaza (`North`, `East`, `South` lub `West`), jeśli znajduje się ona w pobliżu. Zwraca `None`, jeśli w pobliżu nie ma żelaza, nie masz wystarczająco dużo węgla albo dron znajduje się już nad kawałkiem żelaza.
 
 wykonanie kosztuje 1 węgiel.
+
+zajmuje `1` tick.
 
 przykład:
 `while prospect_iron() != None:
@@ -680,12 +688,18 @@ zwraca odległość euklidesową (odległość 3D) od drona do najbliższego blo
 
 wykonanie kosztuje 1 żelazo.
 
+zajmuje `1` tick.
+
 przykład:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Umieszcza bloki.
 
 Możesz określić blok, który ma zostać umieszczony. Można umieszczać tylko bloki bez specjalnej funkcji. Możesz na przykład użyć `place(Grounds.Rock)`, ale nie `place(Grounds.Clay)`.
+
+zwraca `True`, jeśli blok został postawiony, w przeciwnym razie `False`.
+
+zajmuje `200` ticków, jeśli operacja się powiodła, w przeciwnym razie `1` tick.
 
 przykład:
 `place(Grounds.Rock)`
@@ -696,12 +710,16 @@ Nie można popychać bloków w górę.
 
 zwraca `True`, jeśli blok został popchnięty, w przeciwnym razie `False`.
 
+zajmuje `200` ticków, jeśli blok został przesunięty, w przeciwnym razie `1` tick.
+
 przykład:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Sprawdza, czy można popchnąć blok pod dronem.
 
 zwraca `True`, jeśli można popchnąć blok pod dronem, w przeciwnym razie `False`.
+
+zajmuje `1` tick.
 
 przykład:
 `can_push(North)`
@@ -710,6 +728,8 @@ Przenosi drona do podziemnego obiektu związanego z `unlock`.
 
 Możesz wykonać `jump` tylko raz w skrypcie.
 
+zajmuje `200` ticków.
+
 przykład:
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -717,10 +737,14 @@ Zmienia wysokość, na której dron unosi się nad ziemią.
 
 Domyślna wysokość to `1`, a większość działań drona przywraca domyślną wysokość unoszenia się.
 
+zajmuje `200` ticków, jeśli operacja się powiodła, w przeciwnym razie `1` tick.
+
 przykład:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 Pobiera bieżącą wysokość, na której dron unosi się nad ziemią.
+
+zajmuje `1` tick.
 
 przykład:
 `height = get_hover()`

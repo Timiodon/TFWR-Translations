@@ -3,7 +3,6 @@
 <right>[Kohle ->](docs/unlocks/coal.md)
 ---
 # Bergbau
-
 Deine Drohne hat Zugriff auf einen einfachen Bohrer erhalten, mit dem sie unterirdisch nach Schätzen suchen kann.
 
 Mit dem Befehl `dig()` kannst du in den Block unter dir graben.
@@ -46,21 +45,21 @@ Wenn du zur Oberfläche zurückkehren möchtest, kannst du jederzeit `clear()` v
 Wenn du den Mauszeiger über einen Block bewegst, werden sein Name, seine Stabilität und seine Härte angezeigt.
 
 # Bohrer
-
 Je tiefer du gräbst, desto härter werden die Blöcke und desto länger dauert das Graben. Gut, dass wir unseren Bohrer verbessern können!
 
-Mit `get_hardness()` kannst du die Härte des Blocks unter dir prüfen. Wenn du auf einen Bereich mit besonders harten Blöcken stößt, kann es sinnvoll sein, sie zu umgehen, um schneller voranzukommen:
+Damit sich deine Drohne unter der Erde zurechtfindet, solltest du bald [Unterirdische Sinne](docs/unlocks/underground_senses.md) freischalten. Damit kann sie ihre z-Position sowie den Bodentyp, die Härte und die Stabilität unter sich prüfen.
+
+Mit [Unterirdischen Sinnen](docs/unlocks/underground_senses.md) kannst du beispielsweise `get_hardness()` verwenden, um die Härte des Blocks unter dir zu prüfen. Wenn du auf einen Bereich mit besonders harten Blöcken stößt, kann es sinnvoll sein, sie zu umgehen, um schneller voranzukommen:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 Natürlich werden die Blöcke nach unten hin immer härter. Diese Strategie hilft also nur bis zu einem gewissen Punkt.
 
 ## Einstürze
-
 Wenn du nach unten gräbst, stürzen umliegende Blöcke ein. Die vier Blöcke neben der Drohne werden immer zerstört. Anschließend breitet sich der Einsturz abhängig von der Stabilität des Bodens aus. Ein Block mit Stabilität 1, etwa Grasland, verträgt einen Höhenunterschied von 1. Hat das Grasland also einen senkrechten oder waagerechten Nachbarn, dessen z-Koordinate mindestens 2 Blöcke tiefer liegt, wird es zerstört.
 
 Die Stabilität eines Blocks wird in seinem Tooltip angezeigt.

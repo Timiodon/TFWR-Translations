@@ -1,18 +1,14 @@
 [<- Primeiro Programa](docs/first_program.md) <right>[Melhoria de Velocidade ->](docs/unlocks/speed.md)
-
 ---
-
 # Loop While
-
 Você desbloqueou o loop `while` e os valores `True` e `False`. O loop `while` continua executando o corpo do loop enquanto a condição for `True`.
 
 `while condition:
 	#corpo do loop`
 
-Não se preocupe em criar loops infinitos. Os atrasos na execução impedirão que o programa congele.
+Não se preocupe em criar loops infinitos. O drone pode ficar preso, mas o jogo inteiro não vai travar: basta parar o programa e tentar novamente.
 
 ## Para Iniciantes
-
 Talvez você já tenha tentado colocar várias chamadas `harvest()` em sequência:
 
 {{codeexample 
@@ -43,9 +39,8 @@ harvest()
 harvest()
 harvest()
 }}
-
 Isso permite que você colha várias vezes em uma única execução do programa. 
-No entanto, seria bom colher mais de três vezes, e escrever o mesmo código várias vezes é uma má prática. 
+No entanto, seria bom colher mais de três vezes, e escrever o mesmo código várias vezes rapidamente deixa o programa uma bagunça.
 A solução é um loop. 
 Um loop permite que você execute o mesmo código várias vezes.
 
@@ -59,7 +54,7 @@ O loop while se parece com isto:
 	#corpo do loop
 	#corpo do loop
 	#...`
-
+	
 Onde você tem que substituir "condition" por um valor booleano e `#corpo do loop` com o que você quiser fazer no loop.
 
 Existem dois valores booleanos constantes disponíveis. Constantes são valores que nunca mudam durante o programa.
@@ -93,7 +88,6 @@ Então você pode escrever
 while False:
 	do_a_flip()
 }}
-
 ou
 
 {{codeexample 
@@ -122,7 +116,6 @@ ou
 while True:
 	do_a_flip()
 }}
-
 O primeiro nunca dará uma cambalhota, e o segundo dará cambalhotas para sempre (um loop infinito).
 
 Normalmente, criar um loop infinito é uma má ideia porque ele trava o programa. Neste jogo, porém, há pausas entre as iterações, então o drone continuará dando cambalhotas até você interrompê-lo manualmente pressionando o botão Executar outra vez.
@@ -133,7 +126,6 @@ Basta pressionar Tab para adicionar indentação e Shift + Tab (ou Backspace) pa
 Observação: se você estiver jogando pela Steam, pressionar Shift + Tab abrirá a sobreposição da Steam. Você pode redefinir o atalho para remover a indentação nas opções do jogo ou o atalho da sobreposição nas opções da Steam.
 
 Aqui, `do_a_flip()` e `pet_the_piggy()` são chamados repetidamente porque estão dentro do bloco `while` indentado. Porém, `harvest()` nunca é executado porque vem depois desse bloco.
-
 {{codeexample 
 {
     "camera_position": {"x": 0, "y": 1.5, "z": 4},

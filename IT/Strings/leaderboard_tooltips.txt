@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Coltiva 500M legno.
 @lb_descr_carrots = Coltiva 2B carote.
 @lb_descr_carrots_single = Coltiva 100M carote.
+@lb_descr_fastest_underground_reset = Automatizza completamente il sottosuolo.
+@lb_descr_rice = Produci 2 milioni di riso.
+@lb_descr_rice_single = Produci 100000 di riso.
+@lb_descr_ores = Produci 20000 di quarzo.
+@lb_descr_ores_single = Produci 200 di quarzo.
+@lb_descr_bamboo = Produci 500 milioni di bambù.
+@lb_descr_bamboo_single = Produci 25 milioni di bambù.
+@lb_descr_dynamite = Produci 10 milioni di dinamite.
+@lb_descr_dynamite_single = Produci 100000 di dinamite.
+@lb_descr_mushrooms = Produci 240000 funghi.
+@lb_descr_mushrooms_single = Produci 30000 funghi.
+@lb_descr_pyramids = Produci 150000 di energia.
+@lb_descr_pyramids_single = Produci 30000 di energia.
+@lb_descr_treasure_map = Produci 115000 di oro.

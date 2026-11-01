@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = 加入排行榜，爭奪最快時間。
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = 進入地下排行榜，爭奪最快紀錄。
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = 存取字典和集合。
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = 提高鑽頭強度。
 @unlock_descr_debug_place = 放置彩色地塊。
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = 用於探索地下地塊的無人機感測器。
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = 帽子
 @import = 匯入
 @leaderboard = 排行榜
+@underground_leaderboard = 地下排行榜
 @lists = 串列
 @loops = 迴圈
 @mazes = 迷宮

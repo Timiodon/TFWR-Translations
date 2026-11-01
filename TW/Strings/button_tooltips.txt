@@ -4,6 +4,10 @@
 @button_tooltip_discord = 加入 Discord 與其他玩家和開發者交流、報告 bug 或尋求幫助。
 @button_tooltip_execute = 開始或停止執行此視窗中的程式碼。
 @button_tooltip_step_by_step = 執行單步程式碼。
+@button_tooltip_stop_execution = 停止執行。
+@button_tooltip_pause_execution = 暫停執行。
+@button_tooltip_resume_execution = 繼續執行。
+@button_tooltip_next_step = 執行下一步。
 @button_tooltip_new_function = 建立新的程式碼檔案。
 @button_tooltip_new_info_window = 開啟新的資訊視窗。
 @button_tooltip_minimize = 最小化此視窗。
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = 前往上一個相符的搜尋詞。
 @button_tooltip_close_search = 關閉搜尋選單。
 @button_tooltip_open_unlock_menu = 開啟科技樹。
+@button_tooltip_open_farm = 返回農場。
 @warning_icon_tooltip = 你的程式碼觸發了警告。按一下圖示在輸出視窗中檢視詳情。
 @option_tooltip_graphics = 影響各種渲染管線設定，如陰影、環境光遮蔽和泛光。
 @option_tooltip_vfx_limit = 限制每秒可播放的視覺效果數量。
@@ -29,6 +34,7 @@
 @option_tooltip_drone_volume = 調整無人機嗡嗡聲的音量。
 @option_tooltip_SFX_volume = 調整農場音效的音量。
 @option_tooltip_UI_volume = 調整按下按鈕等 UI 音效的音量。
+@option_tooltip_mute_in_background = 遊戲視窗未啟用時，將所有遊戲音效靜音。
 @option_tooltip_ambience_volume = 調整風聲和鳥鳴等環境音的音量。
 @option_tooltip_volume_damping = 每個同時播放的音效的音量都會乘以這個系數，這樣在無人機高速執行時你的耳朵就不會爆炸了。
 @option_tooltip_sfx_limit = 限制每秒可播放的聲音數量。
@@ -64,3 +70,7 @@
 @keybind_tooltip_next_step = 如果執行已暫停，則執行單步操作。
 @keybind_tooltip_pause_execution = 暫停執行。
 @keybind_tooltip_hide_UI = 隱藏或顯示 HUD。
+@option_tooltip_automatic_autocomplete = 輸入時自動顯示程式碼自動完成建議。關閉此選項後，自動完成快捷鍵仍可使用。
+@option_tooltip_focus_errors = 將鏡頭移向畫面外的錯誤，以免錯過。
+@option_tooltip_window_docking = 將視窗拖到一起時，允許彼此貼齊。
+@keybind_tooltip_autocomplete = 開啟程式碼自動完成視窗。

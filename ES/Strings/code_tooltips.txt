@@ -130,20 +130,24 @@ tarda `1` tick en ejecutarse.
 ejemplo:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Averigua qué tipo de entidad hay debajo del dron.
 
-devuelve `None` si la casilla está vacía, de lo contrario devuelve el tipo de la entidad debajo del dron.
+Si `direction` no es `None`, comprueba la casilla vecina en la dirección indicada.
+
+devuelve `None` si la casilla comprobada está vacía; de lo contrario, devuelve el tipo de entidad que hay en ella.
 
 tarda `1` tick en ejecutarse.
 
 ejemplo:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Averigua qué tipo de terreno hay debajo del dron.
 
-devuelve el tipo del terreno debajo del dron.
+Si `direction` no es `None`, comprueba la casilla vecina en la dirección indicada.
+
+devuelve el tipo de terreno de la casilla comprobada.
 
 tarda `1` tick en ejecutarse.
 
@@ -661,6 +665,8 @@ Excava una casilla hacia abajo.
 
 La velocidad de excavación depende de la dureza del bloque y de la potencia del taladro del dron.
 
+tarda `hardness / drill strength` segundos en excavar un bloque. Las mejoras de velocidad no afectan al tiempo de excavación.
+
 ejemplo:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -669,6 +675,8 @@ Usa carbón para buscar hierro.
 devuelve la dirección hacia el mineral de hierro más cercano (`North`, `East`, `South` o `West`) si hay alguno cerca. Devuelve `None` si no hay hierro cerca, si no tienes suficiente carbón o si el dron ya está sobre un bloque de hierro.
 
 cuesta 1 carbón ejecutarlo.
+
+tarda `1` tick en ejecutarse.
 
 ejemplo:
 `while prospect_iron() != None:
@@ -680,12 +688,18 @@ devuelve la distancia euclídea (distancia 3D) desde el dron hasta el siguiente 
 
 cuesta 1 hierro ejecutarlo.
 
+tarda `1` tick en ejecutarse.
+
 ejemplo:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Coloca bloques.
 
 Puedes especificar el bloque que quieres colocar. Solo se pueden colocar bloques sin una función especial. Por ejemplo, puedes usar `place(Grounds.Rock)`, pero no `place(Grounds.Clay)`.
+
+devuelve `True` si se colocó el bloque, `False` en caso contrario.
+
+tarda `200` ticks en ejecutarse si tuvo éxito, `1` tick en caso contrario.
 
 ejemplo:
 `place(Grounds.Rock)`
@@ -696,12 +710,16 @@ No puedes empujar bloques hacia arriba.
 
 devuelve `True` si se empujó el bloque, `False` en caso contrario.
 
+tarda `200` ticks si se empujó el bloque, `1` tick en caso contrario.
+
 ejemplo:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Comprueba si se puede empujar el bloque que hay debajo del dron.
 
 devuelve `True` si se puede empujar el bloque que hay debajo del dron, `False` en caso contrario.
+
+tarda `1` tick en ejecutarse.
 
 ejemplo:
 `can_push(North)`
@@ -710,6 +728,8 @@ Salta a una característica subterránea asociada a `unlock`.
 
 Solo puedes ejecutar `jump` una vez por script.
 
+tarda `200` ticks en ejecutarse.
+
 ejemplo:
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -717,10 +737,14 @@ Cambia la altura a la que el dron flota sobre el suelo.
 
 La altura predeterminada es `1` y la mayoría de las acciones del dron restablecen esta altura.
 
+tarda `200` ticks en ejecutarse si tuvo éxito, `1` tick en caso contrario.
+
 ejemplo:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 Obtiene la altura actual a la que el dron flota sobre el suelo.
+
+tarda `1` tick en ejecutarse.
 
 ejemplo:
 `height = get_hover()`

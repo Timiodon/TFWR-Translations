@@ -1,4 +1,5 @@
 @item_tooltip_template_amount = {0} 보유 중
+@item_tooltip_template_rate = {0}개/분 (최고: {1})
 @item_descr_carrot = 당근을 수확해 획득합니다.
 @item_descr_rice = 벼를 수확해 획득합니다.
 @item_descr_fertilizer = `use_item(Items.Fertilizer)`를 호출해 식물의 남은 성장 시간에서 즉시 2초를 제거합니다.

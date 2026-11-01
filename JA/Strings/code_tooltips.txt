@@ -130,20 +130,24 @@ z位置は`0`から始まり、下に掘ると減少します。
 例:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 ドローンの下にどんな種類のエンティティがあるかを調べます。
 
-タイルが空の場合は `None` を返し、それ以外の場合はドローンの下のエンティティの種類を返します。
+`direction`が`None`でない場合、代わりに指定方向の隣のタイルを調べます。
+
+調べたタイルが空なら`None`を返し、そうでなければそのタイル上のエンティティの種類を返します。
 
 実行に `1` ティックかかります。
 
 例:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 ドローンの下がどんな種類の地面かを調べます。
 
-ドローンの下の地面の種類を返します。
+`direction`が`None`でない場合、代わりに指定方向の隣のタイルを調べます。
+
+調べたタイルの地面の種類を返します。
 
 実行に `1` ティックかかります。
 
@@ -666,6 +670,8 @@ list.insert(0, 0)`
 
 掘る速度はブロックの硬さとドローンのドリルの強さによって決まります。
 
+ブロックを掘るのに`hardness / drill strength`秒かかります。掘削時間は速度アップグレードの影響を受けません。
+
 例：
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -674,6 +680,8 @@ list.insert(0, 0)`
 近くに鉄鉱石があれば、最も近い鉱石の方角（`North`、`East`、`South`、`West`）を返します。近くに鉄がない場合、石炭が足りない場合、またはドローンがすでに鉄の真上にいる場合は`None`を返します。
 
 実行時に石炭を1個消費します。
+
+実行に `1` tickかかります。
 
 例：
 `while prospect_iron() != None:
@@ -685,12 +693,18 @@ list.insert(0, 0)`
 
 実行時に鉄を1個消費します。
 
+実行に `1` tickかかります。
+
 例：
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 ブロックを配置します。
 
 配置するブロックは指定できます。配置できるのは特殊な機能のないブロックだけです。たとえば `place(Grounds.Rock)`は使えますが、`place(Grounds.Clay)`は使えません。
+
+ブロックを配置できたら`True`、そうでなければ`False`を返します。
+
+成功した場合は `200` tick、それ以外の場合は `1` tickかかります。
 
 例：
 `place(Grounds.Rock)`
@@ -701,12 +715,16 @@ list.insert(0, 0)`
 
 押せた場合は`True`、それ以外の場合は`False`を返します。
 
+ブロックを押せた場合は`200`tick、そうでなければ`1`tickかかります。
+
 例：
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 ドローンの下のブロックを押せるか調べます。
 
 ドローンの下のブロックを押せる場合は`True`、それ以外の場合は`False`を返します。
+
+実行に `1` tickかかります。
 
 例：
 `can_push(North)`
@@ -715,6 +733,8 @@ list.insert(0, 0)`
 
 1つのスクリプトで`jump`を実行できるのは1回だけです。
 
+実行に `200` tickかかります。
+
 例：
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -722,10 +742,14 @@ list.insert(0, 0)`
 
 デフォルトの高さは `1` です。ドローンのほとんどのアクションで、高さはデフォルトに戻ります。
 
+成功した場合は `200` tick、それ以外の場合は `1` tickかかります。
+
 例:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 ドローンが現在地面から浮いている高さを取得します。
+
+実行に `1` tickかかります。
 
 例:
 `height = get_hover()`

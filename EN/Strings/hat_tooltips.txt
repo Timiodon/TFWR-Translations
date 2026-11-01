@@ -18,8 +18,16 @@
 @hat_descr_gold_trophy_hat = Only for the best farmer.
 @hat_descr_silver_trophy_hat = For the second best farmer.
 @hat_descr_wood_trophy_hat = For the third best farmer.
-@hat_descr_dynamite_hat = Hat for the chief blaster. Every dig explodes and costs one dynamite. There can only be one chief blaster drone.
+@hat_descr_explosive_drill = Every dig consumes one dynamite and causes a normal explosion. Blocks destroyed directly by the explosion yield items as if mined. Only one drone can equip the Explosive Drill.
 @hat_descr_golden_cactus_hat = A golden version of the cactus hat.
 @hat_descr_golden_pumpkin_hat = A golden version of the pumpkin hat.
 @hat_descr_golden_sunflower_hat = A golden version of the sunflower hat.
 @hat_descr_the_farmers_remains = What happened?
+@hat_descr_bucket = An iron bucket for your head.
+@hat_descr_coal_hat = A hat shaped like coal. A little sooty.
+@hat_descr_rice_hat = A hat shaped like rice.
+@hat_descr_quartz_hat = A sparkling quartz hat.
+@hat_descr_bamboo_hat = A classic bamboo hat.
+@hat_descr_dynamite_hat = An explosive look.
+@hat_descr_mushroom_hat = A cute mushroom cap.
+@hat_descr_mining_hat = A hard hat that will protect the drone from falling rocks.

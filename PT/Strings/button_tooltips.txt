@@ -34,6 +34,7 @@
 @option_tooltip_drone_volume = Ajuste o volume do zumbido dos drones.
 @option_tooltip_SFX_volume = Ajuste o volume dos efeitos sonoros da fazenda.
 @option_tooltip_UI_volume = Ajuste o volume dos sons da UI, como cliques de botão.
+@option_tooltip_mute_in_background = Silencia todo o áudio do jogo enquanto a janela não está em foco.
 @option_tooltip_ambience_volume = Ajuste o volume dos sons ambientes, como vento e pássaros.
 @option_tooltip_volume_damping = O volume é multiplicado por este fator para cada efeito sonoro tocando simultaneamente para que seus ouvidos não explodam em altas velocidades do drone.
 @option_tooltip_sfx_limit = Limita o número de sons que podem ser reproduzidos por segundo.
@@ -69,3 +70,7 @@
 @keybind_tooltip_next_step = Executa um passo se a execução estiver pausada.
 @keybind_tooltip_pause_execution = Pausa a execução.
 @keybind_tooltip_hide_UI = Oculta ou reexibe o HUD.
+@option_tooltip_automatic_autocomplete = Mostra sugestões de autocompletar automaticamente durante a digitação. O atalho de autocompletar continua funcionando com a opção desativada.
+@option_tooltip_focus_errors = Move a câmera até erros fora da tela para você não perdê-los.
+@option_tooltip_window_docking = Permite encaixar janelas umas nas outras ao arrastá-las para perto.
+@keybind_tooltip_autocomplete = Abre a janela de autocompletar código.

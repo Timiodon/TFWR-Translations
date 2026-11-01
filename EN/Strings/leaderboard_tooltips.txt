@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Farm 500M wood.
 @lb_descr_carrots = Farm 2B carrots.
 @lb_descr_carrots_single = Farm 100M carrots.
+@lb_descr_fastest_underground_reset = Fully automate the underground.
+@lb_descr_rice = Farm 2M rice.
+@lb_descr_rice_single = Farm 100000 rice.
+@lb_descr_ores = Farm 20000 quartz.
+@lb_descr_ores_single = Farm 200 quartz.
+@lb_descr_bamboo = Farm 500M bamboo.
+@lb_descr_bamboo_single = Farm 25M bamboo.
+@lb_descr_dynamite = Farm 10M dynamite.
+@lb_descr_dynamite_single = Farm 100000 dynamite.
+@lb_descr_mushrooms = Farm 240000 mushrooms.
+@lb_descr_mushrooms_single = Farm 30000 mushrooms.
+@lb_descr_pyramids = Farm 150000 power.
+@lb_descr_pyramids_single = Farm 30000 power.
+@lb_descr_treasure_map = Farm 115000 gold.

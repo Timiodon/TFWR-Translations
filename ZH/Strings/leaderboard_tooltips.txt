@@ -14,3 +14,17 @@
 @lb_descr_wood_single = 收获 500M 木材。
 @lb_descr_carrots = 收获 2B 胡萝卜。
 @lb_descr_carrots_single = 收获 100M 胡萝卜。
+@lb_descr_fastest_underground_reset = 完全自动化地下生产。
+@lb_descr_rice = 收集 200 万水稻。
+@lb_descr_rice_single = 收集 100000 水稻。
+@lb_descr_ores = 收集 20000 石英。
+@lb_descr_ores_single = 收集 200 石英。
+@lb_descr_bamboo = 收集 5 亿竹子。
+@lb_descr_bamboo_single = 收集 2500 万竹子。
+@lb_descr_dynamite = 收集 1000 万炸药。
+@lb_descr_dynamite_single = 收集 100000 炸药。
+@lb_descr_mushrooms = 收集 240000 蘑菇。
+@lb_descr_mushrooms_single = 收集 30000 蘑菇。
+@lb_descr_pyramids = 收集 150000 能量。
+@lb_descr_pyramids_single = 收集 30000 能量。
+@lb_descr_treasure_map = 收集 115000 金币。

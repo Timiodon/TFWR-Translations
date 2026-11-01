@@ -23,9 +23,9 @@ Se você colher um girassol com o número máximo de pétalas, você ganha energ
 @object_descr_dirt = É terra.
 @object_descr_rock = É uma rocha dura.
 @object_descr_clay = Um bloco de argila. Solo fértil e perfeito para arroz. Quando uma planta de arroz amadurece, ela transforma a argila abaixo dela novamente em terra.
-@object_descr_blue_block = Um bloco azul.
-@object_descr_red_block = Um bloco vermelho.
-@object_descr_green_block = Um bloco verde.
+@object_descr_block_blue = Um bloco azul.
+@object_descr_block_red = Um bloco vermelho.
+@object_descr_block_green = Um bloco verde.
 @object_descr_coal = Um bloco rico em carvão sedimentar.
 @object_descr_iron = Um bloco contendo magnetita bruta.
 @object_descr_quartz = Um bloco que contém quartzo cristalino.

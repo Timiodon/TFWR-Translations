@@ -88,6 +88,9 @@ set_execution_speed(1)`
 
 `plant(Entities.Sunflowers)`
 @unlock_descr_leaderboard = Rejoins le classement pour les temps les plus rapides.\n\n`leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Participe au classement souterrain des meilleurs temps.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Accède aux dictionnaires et aux sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -126,7 +129,7 @@ other_file.function()`
 @unlock_descr_drill = Améliore la puissance de la foreuse.
 @unlock_descr_debug_place = Place des blocs colorés.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Des capteurs permettant au drone d’interagir avec les cases souterraines
 
 `while get_pos_z() < 100:
@@ -185,6 +188,7 @@ other_file.function()`
 @hats = Chapeaux
 @import = Importer
 @leaderboard = Classement
+@underground_leaderboard = Classement souterrain
 @lists = Listes
 @loops = Boucles
 @mazes = Labyrinthes

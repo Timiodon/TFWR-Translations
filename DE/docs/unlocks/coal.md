@@ -2,13 +2,11 @@
 <right>[Springen ->](docs/unlocks/jump.md)
 ---
 # Kohle
+Unterirdisch sind verschiedene Erze verborgen, die darauf warten, von dir gefunden und abgebaut zu werden. Wenn du durch die Oberfläche in `Grounds.Dirt` gräbst, ist das erste Erz, das du findest, Kohle.
 
-Es stellt sich heraus, dass der Boden direkt unter der Oberfläche ein guter Ort ist, um Kohlevorkommen zu finden.
+Um Kohle abzubauen, musst du nichts Besonderes tun: Führe einfach `dig()` aus, während sich die Drohne direkt über einem `Grounds.Coal`-Block befindet. Mit `get_ground_type()` prüfst du den Boden unter der Drohne und mit `get_ground_type(direction)` die vier benachbarten Blöcke.
 
-Kohle entsteht zufällig in horizontalen Schichten, die 1 Block dick sind. Die Größe der Schichten wächst proportional zu deiner Weltgröße. Es kann sich also lohnen, sie zu erhöhen, um mehr Kohle zu finden!
-
-Das folgende Programm ist ein guter Ausgangspunkt für die Kohlesuche. Es gräbt nach unten, bis es eine Kohleschicht findet, und gräbt dann östlich und westlich davon weiter, um hoffentlich noch mehr Kohle zu entdecken.
-
+Das folgende Programm ist ein guter Ausgangspunkt für die Kohlesuche. Es gräbt nach unten und sucht nach einer Kohleschicht.
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -17,30 +15,42 @@ Das folgende Programm ist ein guter Ausgangspunkt für die Kohlesuche. Es gräbt
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 4,
     "digging_speed": 2,
     "action_ticks": 200,
     "operation_ticks": 200,
-    "seed": 2
+    "seed": 2,
+    "exclude_unlocks": ["watering", "fertilizer"]
 }
 #SETUP
 move(North)
 move(East)
 move(East)
 #CODE
+# Graben, bis ein Kohleblock erscheint
 while get_ground_type() != Grounds.Coal:
     dig()
-dig()
-move(East)
-dig()
-move(West)
-move(West)
+
+# Kohle abbauen
 dig()
 }}
+
+## Hinweis zu Einstürzen
+Beachte, dass du nur Kohle für direkt abgebaute Kohleblöcke erhältst, nicht für Blöcke, die um die Drohne herum einstürzen. Berücksichtige das bei deiner Abbaustrategie, damit du möglichst viele Kohleblöcke selbst abbaust und möglichst wenige durch Einstürze verlierst.
+
+## Aufbau der Adern
+Die Adern bilden waagerechte, einen Block dicke Schichten, auf die du beim Graben durch Erde zufällig stoßen musst. Die Kohleblöcke einer Schicht liegen meist direkt nebeneinander, manche sind aber nur diagonal verbunden.
+
+Die Kohlevorkommen wachsen proportional zur Farmgröße. Erforsche also [Erweitern](unlocks/expand) weiter, um mehr Kohle abbauen zu können.
+
+## Strategie
+<spoiler=zeige Hinweis> 
+Eine einfache Strategie, besonders auf kleinen Farmen, ist es, alle Blöcke auf der Höhe abzubauen, auf der du Kohle gefunden hast. Für mehr Effizienz kannst du mit `get_ground_type(direction)` verfolgen, wo du Kohle gesehen hast, und vermeiden, Zeit mit Bewegungen über Erde zu verlieren. Achte besonders auf diagonale Verbindungen, die dir entgehen, wenn du dich ausschließlich über Kohleblöcken bewegst.
+</spoiler>
 
 ---
 

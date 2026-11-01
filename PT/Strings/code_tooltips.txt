@@ -130,20 +130,24 @@ leva `1` tick para executar.
 exemplo:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Descobre que tipo de entidade está sob o drone.
 
-retorna `None` se o ladrilho estiver vazio, caso contrário, retorna o tipo da entidade sob o drone.
+Se `direction` não for `None`, verifica a casa vizinha na direção indicada.
+
+retorna `None` se a casa verificada estiver vazia; caso contrário, retorna o tipo da entidade nessa casa.
 
 leva `1` tick para executar.
 
 exemplo:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Descobre que tipo de solo está sob o drone.
 
-retorna o tipo do solo sob o drone.
+Se `direction` não for `None`, verifica a casa vizinha na direção indicada.
+
+retorna o tipo de solo da casa verificada.
 
 leva `1` tick para executar.
 
@@ -429,7 +433,7 @@ leva `200` ticks para executar.
 exemplo:
 `leaderboard_run(Leaderboards.Fastest_Reset, "full_run", 256)`
 @code_tooltip_simulate = `simulate(filename, sim_unlocks, sim_items, sim_globals, seed, speedup)`
-Inicia uma simulação para o leaderboard usando o `filename` especificado como ponto de partida.
+Inicia uma simulação para o placar de líderes usando o `filename` especificado como ponto de partida.
 
 `sim_unlocks`: Uma sequência contendo os desbloqueios iniciais.
 `sim_items`: Um dicionário mapeando itens para quantidades. A simulação começa com esses itens.
@@ -663,6 +667,8 @@ Escava um bloco para baixo.
 
 A velocidade de escavação depende da dureza do bloco e da força da broca do drone.
 
+leva `hardness / drill strength` segundos para escavar um bloco. Melhorias de velocidade não afetam o tempo de escavação.
+
 exemplo:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -671,6 +677,8 @@ Usa carvão para procurar ferro.
 retorna a direção até o minério de ferro mais próximo (`North`, `East`, `South` ou `West`) se houver um por perto. Retorna `None` se não houver ferro próximo, se você não tiver carvão suficiente ou se o drone já estiver sobre um pedaço de ferro.
 
 custa 1 carvão para executar.
+
+leva `1` tick para executar.
 
 exemplo:
 `while prospect_iron() != None:
@@ -682,12 +690,18 @@ retorna a distância euclidiana (distância 3D) do drone até o próximo bloco d
 
 custa 1 ferro para executar.
 
+leva `1` tick para executar.
+
 exemplo:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Coloca blocos.
 
 Você pode especificar o bloco a ser colocado. Só é possível colocar blocos sem função especial. Por exemplo, você pode usar `place(Grounds.Rock)`, mas não `place(Grounds.Clay)`.
+
+retorna `True` se o bloco foi colocado, ou `False` caso contrário.
+
+leva `200` ticks para executar se bem-sucedido, `1` tick caso contrário.
 
 exemplo:
 `place(Grounds.Rock)`
@@ -698,12 +712,16 @@ Não é possível empurrar blocos para cima.
 
 retorna `True` se o bloco foi empurrado, caso contrário, `False`.
 
+leva `200` ticks se o bloco foi empurrado, ou `1` tick caso contrário.
+
 exemplo:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Verifica se o bloco sob o drone pode ser empurrado.
 
 retorna `True` se o bloco sob o drone puder ser empurrado, caso contrário, `False`.
+
+leva `1` tick para executar.
 
 exemplo:
 `can_push(North)`
@@ -712,6 +730,8 @@ Salta para um recurso subterrâneo associado a `unlock`.
 
 Você só pode executar `jump` uma vez por script.
 
+leva `200` ticks para executar.
+
 exemplo:
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -719,10 +739,14 @@ Altera a altura em que o drone paira acima do solo.
 
 A altura padrão é `1` e a maioria das ações do drone restaura a altura padrão.
 
+leva `200` ticks para executar se bem-sucedido, `1` tick caso contrário.
+
 exemplo:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 Obtém a altura atual em que o drone paira acima do solo.
+
+leva `1` tick para executar.
 
 exemplo:
 `height = get_hover()`

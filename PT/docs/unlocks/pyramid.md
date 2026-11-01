@@ -1,11 +1,11 @@
 [<- Bambu](docs/unlocks/bamboo.md)
 ---
 # Pirâmides
+O subsolo agora contém antigas estruturas piramidais das quais você pode colher energia para acelerar o drone!
 
-O subsolo agora contém antigas estruturas piramidais das quais você pode colher energia!
+As pirâmides são feitas de blocos de areia (`Grounds.Sand`). Abaixo da pirâmide há uma camada de fundação de calcário (`Grounds.Limestone`). Como são antigas e erodidas, você as encontra parcialmente destruídas. A fundação está sempre presente, mas haverá buracos na areia.
 
-As pirâmides são feitas de blocos de areia (`Grounds.Sand`). Abaixo da pirâmide há uma camada de fundação de calcário (`Grounds.Limestone`). Como são antigas e erodidas, você as encontra parcialmente destruídas. A fundação está sempre presente, mas haverá buracos na areia. Veja como uma pirâmide fica ao ser escavada:
-
+Veja como ficam as ruínas de uma pirâmide ao serem desenterradas:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -29,10 +29,13 @@ As pirâmides são feitas de blocos de areia (`Grounds.Sand`). Abaixo da pirâmi
 jump(Unlocks.Pyramid)
 move(North)
 #CODE
+# Escave até encontrar a base de uma pirâmide
 while get_ground_type() != Grounds.Limestone:
     dig()
-do_a_flip()
-z = get_pos_z()
+
+z = get_pos_z() # Lembre a profundidade da base
+
+# Escave tudo que não faz parte da pirâmide
 for i in range(6):
     for j in range(6):
         while (get_ground_type() != Grounds.Limestone
@@ -43,9 +46,8 @@ for i in range(6):
     move(East)
 }}
 
-Os blocos acima da pirâmide são sempre terra. Você pode usar esse fato para escavar uma pirâmide de forma mais eficiente que no código acima.
-
-Como pode ver, há vários buracos na areia que precisam ser preenchidos. Ao restaurar a pirâmide, ela se destrói e você recebe energia como recompensa.
+## Restaurando a Pirâmide
+Como pode ver, há vários buracos na areia que precisam ser preenchidos. Ao preencher os buracos e restaurar a pirâmide, ela se destrói e um grande girassol surge no centro da base de calcário. Colha-o para receber `Items.Power`. Quanto maior a pirâmide, mais energia você recebe.
 
 Você pode restaurar uma pirâmide colocando blocos com `place(Grounds.Sand)`. A areia é um bloco especial que desmorona imediatamente sem apoio adequado. Cada bloco de areia deve ser colocado diretamente sobre calcário ou sobre uma área 3x3 de blocos de areia. Veja uma pequena pirâmide construída à mão. Construí-la você mesmo não rende energia:
 
@@ -69,30 +71,45 @@ Você pode restaurar uma pirâmide colocando blocos com `place(Grounds.Sand)`. A
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
 }
 #CODE
+# Precisamos de uma base de calcário para pôr areia
 for i in range(3):
     for j in range(3):
         place(Grounds.Limestone)
         move(North)
     move(East)
-    
+
+# Coloque uma camada de areia 3x3 sobre o calcário
 for i in range(3):
     for j in range(3):
         place(Grounds.Sand)
         move(North)
     move(East)
-    
-move(North)
-move(East)
-place(Grounds.Sand)
+
+# Tente colocar outra camada 3x3
+# Só o bloco central tem apoio e permanece
+for i in range(3):
+    for j in range(3):
+        place(Grounds.Sand)
+        move(North)
+    move(East)
 }}
 
 Uma pirâmide restaurada corretamente tem uma fundação quadrada de calcário com lados de comprimento ímpar, por exemplo 5x5. Acima há uma camada de areia do mesmo tamanho (5x5), seguida de camadas progressivamente menores: 3x3 e depois 1x1.
 
-Quando a pirâmide é concluída, ela desmorona e um grande girassol surge no centro. Colha-o para receber energia. Quanto maior a pirâmide, mais energia você recebe.
+Os blocos acima da pirâmide são sempre terra. Você pode usar esse fato para escavar uma pirâmide de forma eficiente.
+
+## Energia
+Enquanto você tiver energia, o drone a usará para funcionar duas vezes mais rápido.
+Ele consome 1 de energia a cada 30 ações, como movimentos, colheitas ou plantios.
+Executar outras instruções de código também pode consumir energia, mas muito menos do que as ações do drone.
+
+Em geral, tudo que é acelerado por melhorias de velocidade também é acelerado por energia.
+Qualquer coisa acelerada por energia também usa energia proporcional ao tempo que leva para executá-la, ignorando as melhorias de velocidade.
+
+A energia não afeta `dig()`.
 
 ---
 
 [Estatísticas](docs/stats.md)      [Sentidos Subterrâneos](docs/unlocks/underground_senses.md)
 
 [move()](functions/move)      [dig()](functions/dig)      [use_item()](functions/use_item)      [place()](functions/place)
-

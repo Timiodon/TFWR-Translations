@@ -3,13 +3,9 @@
 <right>[진주암과 양토 ->](docs/unlocks/special_soils.md)
 ---
 # 벼
+지표와 `Grounds.Dirt`층 아래에는 얇은 `Grounds.Clay`층이 있습니다. 이 비옥하고 물기 많은 땅은 벼를 심기에 딱 좋습니다.
 
-지표 아래에 얇은 점토층이 있음을 발견하셨을 겁니다. 이 비옥한 땅은 벼 모를 심기에 안성맞춤이죠.
-
-벼는 점토를 말리므로, 각 점토 블록은 한 번만 사용할 수 있습니다. 다행히 점토층은 몇 블록 두께입니다. 물론 언제든 `clear()`로 세계를 초기화해 점토층을 다시 생성할 수도 있습니다.
-
-점토를 찾을 때까지 굴착하는 데는 다음 코드가 유용합니다.
-
+점토를 찾을 때까지 굴착하고 벼를 심는 데는 다음 코드가 유용합니다:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+드론이 `Grounds.Clay` 위에 있으면 `plant(Entities.Rice)`로 벼를 심고, `can_harvest()`로 다 자랐는지 확인한 뒤 `harvest()`로 수확할 수 있습니다.
+
+## 계단식 논
+벼를 심으면 땅이 `Grounds.Rice_Terrace`로 바뀌어 벼가 자라기 좋은 환경이 됩니다. 벼가 다 자라면 땅이 말라 `Grounds.Dry_Rice_Terrace`가 되며 더는 벼를 심을 수 없습니다. 다행히 층이 몇 블록 두께이므로 `dig()`로 블록을 없애고 아래의 `Grounds.Clay`에 다시 벼를 심을 수 있습니다. 층을 다 쓰면 언제든 `clear()`로 세계를 복원하고 새 층까지 파면 됩니다.
 
 ---
 

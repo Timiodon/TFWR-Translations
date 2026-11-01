@@ -23,9 +23,9 @@
 @object_descr_dirt = 这是泥土。
 @object_descr_rock = 坚硬的岩石。
 @object_descr_clay = 黏土地块。土壤肥沃，非常适合种植水稻。水稻植株成熟后，下方的黏土会变回泥土。
-@object_descr_blue_block = 蓝色地块。
-@object_descr_red_block = 红色地块。
-@object_descr_green_block = 绿色地块。
+@object_descr_block_blue = 蓝色地块。
+@object_descr_block_red = 红色地块。
+@object_descr_block_green = 绿色地块。
 @object_descr_coal = 富含沉积煤炭的地块。
 @object_descr_iron = 含有天然磁铁矿的地块。
 @object_descr_quartz = 包裹着结晶石英的地块。

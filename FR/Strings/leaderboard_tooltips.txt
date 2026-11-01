@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Cultiver 500M bois.
 @lb_descr_carrots = Cultiver 2B carottes.
 @lb_descr_carrots_single = Cultiver 100M carottes.
+@lb_descr_fastest_underground_reset = Automatise entièrement le sous-sol.
+@lb_descr_rice = Produis 2 millions de riz.
+@lb_descr_rice_single = Produis 100000 de riz.
+@lb_descr_ores = Produis 20000 de quartz.
+@lb_descr_ores_single = Produis 200 de quartz.
+@lb_descr_bamboo = Produis 500 millions de bambou.
+@lb_descr_bamboo_single = Produis 25 millions de bambou.
+@lb_descr_dynamite = Produis 10 millions de dynamite.
+@lb_descr_dynamite_single = Produis 100000 de dynamite.
+@lb_descr_mushrooms = Produis 240000 champignons.
+@lb_descr_mushrooms_single = Produis 30000 champignons.
+@lb_descr_pyramids = Produis 150000 de puissance.
+@lb_descr_pyramids_single = Produis 30000 de puissance.
+@lb_descr_treasure_map = Produis 115000 d’or.

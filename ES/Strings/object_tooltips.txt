@@ -23,9 +23,9 @@ Si cosechas un girasol con el número máximo de pétalos, obtienes energía ext
 @object_descr_dirt = Es tierra.
 @object_descr_rock = Es una roca dura.
 @object_descr_clay = Un bloque de arcilla. Es un terreno fértil y perfecto para el arroz. Cuando una planta de arroz madura, vuelve a convertir la arcilla que tiene debajo en tierra.
-@object_descr_blue_block = Un bloque azul.
-@object_descr_red_block = Un bloque rojo.
-@object_descr_green_block = Un bloque verde.
+@object_descr_block_blue = Un bloque azul.
+@object_descr_block_red = Un bloque rojo.
+@object_descr_block_green = Un bloque verde.
 @object_descr_coal = Un bloque rico en carbón sedimentario.
 @object_descr_iron = Un bloque que contiene magnetita en bruto.
 @object_descr_quartz = Un bloque que encierra cuarzo cristalino.

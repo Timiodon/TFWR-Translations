@@ -20,6 +20,7 @@
 @UI volume = UI 音量
 @ambience volume = 環境音量
 @drone volume = 無人機音量
+@mute in background = 背景靜音
 @fps limit = 最高影格率
 @autosave = 自動儲存程式碼
 @autosave progress = 自動存檔
@@ -63,3 +64,7 @@
 @Light = 淺色
 @Lunar New Year = 農曆新年
 @Custom = 自訂
+@automatic autocomplete = 自動顯示自動完成
+@focus errors = 顯示錯誤位置
+@window docking = 視窗貼齊
+@autocomplete = 自動完成

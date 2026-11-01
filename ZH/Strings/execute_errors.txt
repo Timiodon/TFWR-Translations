@@ -81,3 +81,6 @@ x += 1`
 @error_non_jumpable_unlock = 无法跳转到此解锁项。
 @error_only_first_drone_can_jump = 只有第一架无人机可以执行 `jump()`。
 @error_can_only_jump_once = 每次运行程序只能执行一次 `jump()`。
+@error_dig_not_allowed = 此排行榜中不允许使用 `dig()`。
+@error_plant_not_allowed = 此排行榜中不允许使用 `plant()`。
+@error_jump_not_allowed = 排行榜中不允许使用 `jump()`。

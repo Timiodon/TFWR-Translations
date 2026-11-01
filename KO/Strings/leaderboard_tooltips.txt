@@ -14,3 +14,17 @@
 @lb_descr_wood_single = 나무 5억 개 모으세요.
 @lb_descr_carrots = 당근 20억 개 모으세요.
 @lb_descr_carrots_single = 당근 1억 개 모으세요.
+@lb_descr_fastest_underground_reset = 지하를 완전히 자동화하세요.
+@lb_descr_rice = 벼 200만 개를 모으세요.
+@lb_descr_rice_single = 벼 100000개를 모으세요.
+@lb_descr_ores = 석영 20000개를 모으세요.
+@lb_descr_ores_single = 석영 200개를 모으세요.
+@lb_descr_bamboo = 대나무 5억 개를 모으세요.
+@lb_descr_bamboo_single = 대나무 2500만 개를 모으세요.
+@lb_descr_dynamite = 다이너마이트 1000만 개를 모으세요.
+@lb_descr_dynamite_single = 다이너마이트 100000개를 모으세요.
+@lb_descr_mushrooms = 버섯 240000개를 모으세요.
+@lb_descr_mushrooms_single = 버섯 30000개를 모으세요.
+@lb_descr_pyramids = 파워 150000개를 모으세요.
+@lb_descr_pyramids_single = 파워 30000개를 모으세요.
+@lb_descr_treasure_map = 골드 115000개를 모으세요.

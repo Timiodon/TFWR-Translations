@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Разблокирует рейтинг лучших результатов по времени.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Соревнуйся за лучшее время в подземном рейтинге.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Возможность пользоваться словарями и множествами.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Повышает мощность бура.
 @unlock_descr_debug_place = Устанавливай цветные блоки.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Датчики дрона для взаимодействия с подземными клетками
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = Шляпы
 @import = Импорт
 @leaderboard = Рейтинг
+@underground_leaderboard = Подземный рейтинг
 @lists = Списки
 @loops = Циклы
 @mazes = Лабиринты

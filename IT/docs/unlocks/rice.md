@@ -3,13 +3,9 @@
 <right>[Perlite e Terriccio ->](docs/unlocks/special_soils.md)
 ---
 # Riso
+Sotto la superficie e lo strato di `Grounds.Dirt` trovi un sottile strato di `Grounds.Clay`. Questo terreno fertile e intriso d'acqua è perfetto per piantare riso.
 
-Sotto la superficie hai notato un sottile strato di argilla. A quanto pare, questo terreno fertile è perfetto per piantare le piantine di riso.
-
-Il riso prosciuga l'argilla su cui è piantato. Puoi usare ogni blocco d'argilla una sola volta. Per fortuna, lo strato è spesso alcuni blocchi. E naturalmente puoi sempre usare `clear()` per ripristinare lo strato d'argilla.
-
-Il codice seguente potrebbe esserti utile per scavare verso il basso finché non trovi l'argilla.
-
+Il codice seguente può aiutarti a scavare fino all'argilla e piantare riso:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@ Il codice seguente potrebbe esserti utile per scavare verso il basso finché non
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+Quando il drone è sopra un blocco di `Grounds.Clay`, puoi usare `plant(Entities.Rice)` per piantare riso, `can_harvest()` per verificare se è maturo e infine `harvest()` per raccoglierlo.
+
+## Terrazze
+Quando pianti riso, il terreno diventa `Grounds.Rice_Terrace` per offrirgli l'ambiente ideale per maturare. Quando il riso è maturo, il terreno si asciuga e diventa `Grounds.Dry_Rice_Terrace`, dove non puoi piantare altro riso. Per fortuna, lo strato è spesso alcuni blocchi: puoi rimuovere il blocco con `dig()` e piantare altro riso sulla `Grounds.Clay` sottostante. Se lo strato si esaurisce, puoi sempre usare `clear()` per ripristinare il mondo e scavare fino a uno nuovo.
 
 ---
 

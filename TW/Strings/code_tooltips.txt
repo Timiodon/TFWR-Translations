@@ -130,20 +130,24 @@ z 座標從 `0` 開始，向下挖掘時遞減。
 範例：
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 判斷無人機下方實體的類型。
 
-如果地塊為空，則回傳 `None`，否則回傳無人機下方實體的類型。
+如果 `direction` 不是 `None`，則改為檢查指定方向的相鄰地塊。
+
+若檢查的地塊為空，傳回 `None`；否則傳回該地塊上的實體類型。
 
 需要 `1` tick 執行。
 
 範例：
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 判斷無人機下方地塊的類型。
 
-回傳無人機下方地塊的類型。
+如果 `direction` 不是 `None`，則改為檢查指定方向的相鄰地塊。
+
+傳回所檢查地塊的地面類型。
 
 需要 `1` tick 執行。
 
@@ -271,7 +275,7 @@ print(get_tick_count())`
 
 回傳一個字典。
 
-需要 `1 + len(dictionary)` ticks 執行。
+需要 `1 + 2*len(dictionary)` ticks 執行。
 
 範例：
 `new_dict = dict()`
@@ -667,6 +671,8 @@ list.insert(0, 0)`
 
 挖掘速度取決於地塊的硬度和無人機的鑽頭強度。
 
+挖掘一個地塊需要 `hardness / drill strength` 秒。速度升級不會影響挖掘時間。
+
 範例：
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -675,6 +681,8 @@ list.insert(0, 0)`
 如果附近有鐵礦石，回傳前往最近鐵礦的方向（`North`、`East`、`South` 或 `West`）。如果附近沒有鐵礦、煤炭不足，或者無人機已在鐵礦上方，則回傳 `None`。
 
 執行需消耗 1 份煤炭。
+
+需要 `1` tick 執行。
 
 範例：
 `while prospect_iron() != None:
@@ -686,12 +694,18 @@ list.insert(0, 0)`
 
 執行需消耗 1 份鐵礦。
 
+需要 `1` tick 執行。
+
 範例：
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 放置地塊。
 
 你可以指定要放置的地塊，但只能放置沒有特殊功能的地塊。例如，你可以使用 `place(Grounds.Rock)`，卻不能使用 `place(Grounds.Clay)`。
+
+成功放置地塊時傳回 `True`，否則傳回 `False`。
+
+如果成功，需要 `200` ticks 執行，否則需要 `1` tick。
 
 範例：
 `place(Grounds.Rock)`
@@ -702,12 +716,16 @@ list.insert(0, 0)`
 
 如果成功推動地塊，則回傳 `True`，否則回傳 `False`。
 
+成功推動地塊需要 `200` tick，否則需要 `1` tick。
+
 範例：
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 檢查無人機下方的地塊能否被推動。
 
 如果可以推動，則回傳 `True`，否則回傳 `False`。
+
+需要 `1` tick 執行。
 
 範例：
 `can_push(North)`
@@ -716,5 +734,23 @@ list.insert(0, 0)`
 
 每次執行腳本只能執行一次 `jump`。
 
+需要 `200` ticks 執行。
+
 範例：
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+變更無人機懸停於地面上方的高度。
+
+預設高度為 `1`，大多數無人機動作都會將懸停高度重設為預設值。
+
+如果成功，需要 `200` ticks 執行，否則需要 `1` tick。
+
+範例：
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+取得無人機目前懸停於地面上方的高度。
+
+需要 `1` tick 執行。
+
+範例：
+`height = get_hover()`

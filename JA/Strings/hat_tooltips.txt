@@ -23,3 +23,11 @@
 @hat_descr_golden_pumpkin_hat = カボチャの帽子の金色バージョン。
 @hat_descr_golden_sunflower_hat = ヒマワリの帽子の金色バージョン。
 @hat_descr_the_farmers_remains = 何が起きたのでしょうか？
+@hat_descr_bucket = 頭にかぶる鉄のバケツ。
+@hat_descr_coal_hat = 石炭の形の帽子。少しすすっぽい。
+@hat_descr_rice_hat = 稲の形の帽子。
+@hat_descr_quartz_hat = きらめく石英の帽子。
+@hat_descr_bamboo_hat = 昔ながらの竹の帽子。
+@hat_descr_dynamite_hat = 爆発的な装い。
+@hat_descr_mushroom_hat = かわいいキノコの帽子。
+@hat_descr_mining_hat = 落石からドローンを守るヘルメット。

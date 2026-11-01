@@ -130,20 +130,24 @@ prend `1` tick pour s'exécuter.
 exemple :
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Détermine quel type d'entité se trouve sous le drone.
 
-renvoie `None` si la case est vide, sinon renvoie le type de l'entité sous le drone.
+Si `direction` n’est pas `None`, examine plutôt la case voisine dans la direction indiquée.
+
+renvoie `None` si la case examinée est vide, sinon le type de l’entité sur cette case.
 
 prend `1` tick pour s'exécuter.
 
 exemple :
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Détermine quel type de sol se trouve sous le drone.
 
-renvoie le type du sol sous le drone.
+Si `direction` n’est pas `None`, examine plutôt la case voisine dans la direction indiquée.
+
+renvoie le type de sol de la case examinée.
 
 prend `1` tick pour s'exécuter.
 
@@ -662,6 +666,8 @@ Fore une case vers le bas.
 
 La vitesse de forage dépend de la dureté du bloc et de la puissance de la foreuse du drone.
 
+creuser un bloc prend `hardness / drill strength` secondes. Les améliorations de vitesse n’affectent pas la durée du creusement.
+
 exemple :
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -670,6 +676,8 @@ Utilise du charbon pour rechercher du fer.
 renvoie la direction du minerai de fer le plus proche (`North`, `East`, `South` ou `West`) s’il y en a un à proximité. Renvoie `None` s’il n’y a pas de fer à proximité, si tu n’as pas assez de charbon ou si le drone se trouve déjà au-dessus d’un morceau de fer.
 
 coûte 1 charbon à exécuter.
+
+prend `1` tick pour s’exécuter.
 
 exemple :
 `while prospect_iron() != None:
@@ -681,12 +689,18 @@ renvoie la distance euclidienne (distance en 3D) entre le drone et le prochain b
 
 coûte 1 fer à exécuter.
 
+prend `1` tick pour s’exécuter.
+
 exemple :
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Place des blocs.
 
 Tu peux préciser le bloc à placer. Seuls les blocs sans fonction spéciale peuvent être placés. Par exemple, tu peux utiliser `place(Grounds.Rock)`, mais pas `place(Grounds.Clay)`.
+
+renvoie `True` si le bloc a été placé, sinon `False`.
+
+prend `200` ticks pour s'exécuter en cas de succès, `1` tick sinon.
 
 exemple :
 `place(Grounds.Rock)`
@@ -697,12 +711,16 @@ Tu ne peux pas pousser de blocs vers le haut.
 
 renvoie `True` si le bloc a été poussé, sinon `False`.
 
+prend `200` ticks si le bloc a été poussé, sinon `1` tick.
+
 exemple :
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Vérifie si le bloc sous le drone peut être poussé.
 
 renvoie `True` si le bloc sous le drone peut être poussé, sinon `False`.
+
+prend `1` tick pour s’exécuter.
 
 exemple :
 `can_push(North)`
@@ -711,6 +729,8 @@ Saute jusqu’à une fonctionnalité souterraine associée à `unlock`.
 
 Tu ne peux exécuter `jump` qu’une seule fois par script.
 
+prend `200` ticks pour s'exécuter.
+
 exemple :
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -718,10 +738,14 @@ Modifie la hauteur à laquelle le drone vole au-dessus du sol.
 
 La hauteur par défaut est `1` et la plupart des actions du drone rétablissent cette hauteur par défaut.
 
+prend `200` ticks pour s'exécuter en cas de succès, `1` tick sinon.
+
 exemple :
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 Obtient la hauteur actuelle à laquelle le drone vole au-dessus du sol.
+
+prend `1` tick pour s’exécuter.
 
 exemple :
 `height = get_hover()`

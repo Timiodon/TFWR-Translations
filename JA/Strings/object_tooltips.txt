@@ -23,9 +23,9 @@
 @object_descr_dirt = これは土です。
 @object_descr_rock = 硬い岩です。
 @object_descr_clay = 粘土のブロック。肥沃な地面で、稲を育てるのに最適です。稲が成熟すると、その下の粘土は土に戻ります。
-@object_descr_blue_block = 青いブロック。
-@object_descr_red_block = 赤いブロック。
-@object_descr_green_block = 緑のブロック。
+@object_descr_block_blue = 青いブロック。
+@object_descr_block_red = 赤いブロック。
+@object_descr_block_green = 緑のブロック。
 @object_descr_coal = 堆積した石炭を多く含むブロック。
 @object_descr_iron = 天然の磁鉄鉱を含むブロック。
 @object_descr_quartz = 結晶質の石英を包み込んだブロック。

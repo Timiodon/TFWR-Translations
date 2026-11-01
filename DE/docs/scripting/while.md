@@ -6,7 +6,7 @@ Du hast die `while`-Schleife und die Werte `True` und `False` freigeschaltet. Di
 `while condition:
 	#Schleifenkörper`
 
-Mach dir keine Sorgen über Endlosschleifen. Die Verzögerungen in der Ausführung verhindern, dass das Programm einfriert.
+Mach dir keine Sorgen über Endlosschleifen. Die Drohne kann zwar stecken bleiben, aber nicht das ganze Spiel zum Stillstand bringen. Du kannst das laufende Programm einfach stoppen und es erneut versuchen.
 
 ## Für Anfänger
 Vielleicht hast du schon versucht, mehrere `harvest()`-Aufrufe hintereinander zu setzen:
@@ -40,7 +40,7 @@ harvest()
 harvest()
 }}
 Dies ermöglicht es dir, mehrmals in einem Programmlauf zu ernten.
-Es wäre jedoch schön, mehr als dreimal zu ernten, und denselben Code mehrmals zu schreiben, ist schlechte Praxis.
+Allerdings wäre es schön, mehr als dreimal zu ernten, und derselbe Code wird bei mehrfachem Wiederholen schnell unübersichtlich.
 Die Lösung ist eine Schleife.
 Eine Schleife ermöglicht es dir, denselben Code mehrmals auszuführen.
 

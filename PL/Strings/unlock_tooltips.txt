@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Dołącz do tabeli wyników, aby rywalizować o najlepsze czasy.
 
 `leaderboard_run(Leaderboards.Hay, "plik_siano", speedup)`
+@unlock_descr_underground_leaderboard = Rywalizuj o najlepsze czasy w rankingu podziemnym.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Uzyskaj dostęp do słowników i zbiorów.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Zwiększa siłę wiertła.
 @unlock_descr_debug_place = Umieszczaj kolorowe bloki.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Czujniki drona do interakcji z podziemnymi polami.
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = Kapelusze
 @import = Import
 @leaderboard = Tabela wyników
+@underground_leaderboard = Ranking podziemny
 @lists = Listy
 @loops = Pętle
 @mazes = Labirynty

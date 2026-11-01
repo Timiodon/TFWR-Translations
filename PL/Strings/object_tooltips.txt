@@ -23,9 +23,9 @@ Jeśli zbierzesz słonecznik z maksymalną liczbą płatków, otrzymasz dodatkow
 @object_descr_dirt = To ziemia.
 @object_descr_rock = To twarda skała.
 @object_descr_clay = Blok gliny. Żyzne podłoże, idealne dla ryżu. Gdy ryż dojrzeje, zamienia glinę pod sobą z powrotem w ziemię.
-@object_descr_blue_block = Niebieski blok.
-@object_descr_red_block = Czerwony blok.
-@object_descr_green_block = Zielony blok.
+@object_descr_block_blue = Niebieski blok.
+@object_descr_block_red = Czerwony blok.
+@object_descr_block_green = Zielony blok.
 @object_descr_coal = Blok bogaty w węgiel osadowy.
 @object_descr_iron = Blok zawierający surowy magnetyt.
 @object_descr_quartz = Blok otaczający krystaliczny kwarc.

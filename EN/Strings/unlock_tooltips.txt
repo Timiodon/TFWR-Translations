@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Enter the leaderboard for the fastest times.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Enter the underground leaderboard for the fastest times.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Get access to dictionaries and sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Improves drill strength.
 @unlock_descr_debug_place = Place colorful blocks.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Drone sensors to interact with underground tiles
 
 `while get_pos_z() < 100:
@@ -165,6 +168,7 @@ other_file.function()`
 @multi_unlock_descr_quartz = Increases the yield of quartz ores.
 @multi_unlock_descr_petrified_pumpkins = Increases the yield of petrified pumpkins.
 @multi_unlock_descr_dynamite = Increase the yield of dynamite and the energy of explosions.
+@unlock_descr_explosive_drill = The most powerful drill.
 @multi_unlock_descr_treasure_map = Increases the depth of the treasure path and therefore the amount of gold you get from the treasure.
 @multi_unlock_descr_ore_boost = Further increases coal yield. Further increases iron and quartz vein size.
 @multi_unlock_descr_bamboo = Increases the yield and cost of bamboo.
@@ -186,6 +190,7 @@ other_file.function()`
 @hats = Hats
 @import = Import
 @leaderboard = Leaderboard
+@underground_leaderboard = Underground Leaderboard
 @lists = Lists
 @loops = Loops
 @mazes = Mazes
@@ -218,6 +223,7 @@ other_file.function()`
 @quartz = Quartz
 @prospecting = Iron Prospecting
 @dynamite = Dynamite
+@explosive_drill = Explosive Drill
 @bamboo = Bamboo
 @treasure_map = Treasure Map
 @mushrooms = Mushroom

@@ -23,9 +23,9 @@ If you harvest a sunflower with the maximum number of petals you get bonus power
 @object_descr_dirt = It's dirt.
 @object_descr_rock = It's a hard rock.
 @object_descr_clay = A clay block. Fertile ground and perfect for rice. When a rice plant matures, it turns the clay below it back to dirt.
-@object_descr_blue_block = A blue block.
-@object_descr_red_block = A red block.
-@object_descr_green_block = A green block.
+@object_descr_block_blue = A blue block.
+@object_descr_block_red = A red block.
+@object_descr_block_green = A green block.
 @object_descr_coal = A block rich in sedimentary coal.
 @object_descr_iron = A block containing raw magnetite.
 @object_descr_quartz = A block encasing crystalline quartz.

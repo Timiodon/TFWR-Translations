@@ -81,3 +81,6 @@ x += 1`
 @error_non_jumpable_unlock = 이 해금 항목으로는 점프할 수 없습니다.
 @error_only_first_drone_can_jump = 첫 번째 드론만 `jump()`를 실행할 수 있습니다.
 @error_can_only_jump_once = 프로그램당 `jump()`는 한 번만 실행할 수 있습니다.
+@error_dig_not_allowed = 이 리더보드에서는 `dig()`를 사용할 수 없습니다.
+@error_plant_not_allowed = 이 리더보드에서는 `plant()`를 사용할 수 없습니다.
+@error_jump_not_allowed = 리더보드에서는 `jump()`를 사용할 수 없습니다.

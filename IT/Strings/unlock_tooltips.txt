@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Unisciti alla leaderboard per i tempi più veloci.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Entra nella classifica sotterranea per i tempi migliori.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Ottieni accesso a dizionari e set.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Migliora la potenza della trivella.
 @unlock_descr_debug_place = Posiziona blocchi colorati.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Sensori del drone per interagire con le caselle sotterranee
 
 `while get_pos_z() < 100:
@@ -186,7 +189,8 @@ other_file.function()`
 @grass = Erba
 @hats = Cappelli
 @import = Import
-@leaderboard = Leaderboard
+@leaderboard = Classifica
+@underground_leaderboard = Classifica Sotterranea
 @lists = Liste
 @loops = Cicli
 @mazes = Labirinti

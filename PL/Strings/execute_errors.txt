@@ -81,3 +81,6 @@ x += 1`
 @error_non_jumpable_unlock = Nie można przenieść się do tego odblokowania.
 @error_only_first_drone_can_jump = Tylko pierwszy dron może wykonać `jump()`.
 @error_can_only_jump_once = Możesz wykonać `jump()` tylko raz w programie.
+@error_dig_not_allowed = W tym rankingu nie wolno używać `dig()`.
+@error_plant_not_allowed = W tym rankingu nie wolno używać `plant()`.
+@error_jump_not_allowed = W rankingach nie wolno używać `jump()`.

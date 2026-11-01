@@ -1,4 +1,5 @@
 @item_tooltip_template_amount = Você tem {0}
+@item_tooltip_template_rate = {0} itens/min (máximo: {1})
 @item_descr_carrot = Obtido ao colher cenouras.
 @item_descr_rice = Obtido ao colher arroz.
 @item_descr_fertilizer = Chame `use_item(Items.Fertilizer)` para remover instantaneamente 2s do tempo de crescimento restante da planta.

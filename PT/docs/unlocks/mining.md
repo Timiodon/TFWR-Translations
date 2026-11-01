@@ -3,7 +3,6 @@
 <right>[Carvão ->](docs/unlocks/coal.md)
 ---
 # Mineração
-
 Seu drone ganhou acesso a uma broca primitiva, que permite procurar tesouros no subsolo.
 
 Você pode usar o comando `dig()` para escavar o bloco abaixo.
@@ -46,21 +45,21 @@ Se quiser voltar à superfície, você pode usar `clear()` a qualquer momento. I
 Passe o mouse sobre um bloco para ver seu nome, estabilidade e dureza.
 
 # Broca
-
 À medida que escava mais fundo, você perceberá que os blocos ficam mais duros, fazendo a escavação levar mais tempo. Ainda bem que podemos melhorar a broca!
 
-Você pode usar `get_hardness()` para verificar a dureza do bloco abaixo. Se encontrar uma área de blocos especialmente duros, pode ser melhor contorná-los para avançar mais rápido:
+Para ajudar seu drone a entender o subsolo, desbloqueie logo os [Sentidos Subterrâneos](docs/unlocks/underground_senses.md). Assim ele poderá verificar sua posição z e o tipo, a dureza e a estabilidade do solo abaixo.
+
+Por exemplo, com os [Sentidos Subterrâneos](docs/unlocks/underground_senses.md), você pode usar `get_hardness()` para verificar a dureza do bloco abaixo. Se encontrar uma área de blocos especialmente duros, pode ser melhor contorná-los para avançar mais rápido:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 É claro que os blocos ficam cada vez mais resistentes conforme você desce. Essa estratégia ajuda, mas tem seus limites.
 
 ## Desmoronamentos
-
 Escavar para baixo faz os blocos ao redor desmoronarem. Os quatro blocos ao lado do drone são sempre destruídos. Depois disso, o desmoronamento se propaga conforme a estabilidade do solo. Um bloco com estabilidade 1, como a pastagem, suporta uma diferença de altura de 1. Em outras palavras, se a pastagem tiver um vizinho vertical ou horizontal cuja coordenada z esteja 2 ou mais blocos abaixo, ela será destruída.
 
 A estabilidade de um bloco aparece na dica exibida ao passar o mouse.

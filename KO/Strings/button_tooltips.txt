@@ -34,6 +34,7 @@
 @option_tooltip_drone_volume = 드론 소리 볼륨을 조절합니다.
 @option_tooltip_SFX_volume = 농장에서 나는 효과음 볼륨을 조절합니다.
 @option_tooltip_UI_volume = 버튼 클릭 같은 UI 소리 볼륨을 조절합니다.
+@option_tooltip_mute_in_background = 게임 창이 비활성 상태일 때 게임의 모든 소리를 끕니다.
 @option_tooltip_ambience_volume = 바람이나 새소리 같은 주변 환경음 볼륨을 조절합니다.
 @option_tooltip_volume_damping = 드론 속도가 빠를 때 너무 큰 소리에 괴롭지 않도록, 동시에 재생되는 음향 효과마다 볼륨에 이 계수를 곱합니다.
 @option_tooltip_sfx_limit = 초당 재생할 수 있는 소리의 수를 제한합니다.
@@ -69,3 +70,7 @@
 @keybind_tooltip_next_step = 실행이 일시 중지된 경우 한 단계 실행합니다.
 @keybind_tooltip_pause_execution = 실행을 일시 중지합니다.
 @keybind_tooltip_hide_UI = HUD를 숨기거나 다시 표시합니다.
+@option_tooltip_automatic_autocomplete = 입력 중 자동 완성 제안을 자동으로 표시합니다. 이 옵션을 꺼도 자동 완성 단축키는 사용할 수 있습니다.
+@option_tooltip_focus_errors = 화면 밖의 오류를 놓치지 않도록 카메라를 이동합니다.
+@option_tooltip_window_docking = 창을 서로 가까이 끌면 붙일 수 있도록 합니다.
+@keybind_tooltip_autocomplete = 코드 자동 완성 창을 엽니다.

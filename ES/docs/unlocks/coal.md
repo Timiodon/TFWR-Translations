@@ -2,13 +2,11 @@
 <right>[Saltar ->](docs/unlocks/jump.md)
 ---
 # Carbón
+Bajo tierra hay distintos minerales esperando a que los encuentres y los extraigas. Si atraviesas la superficie y excavas en `Grounds.Dirt`, el primer mineral que encontrarás es carbón.
 
-Resulta que el terreno situado justo debajo de la superficie es un buen lugar para encontrar depósitos de carbón.
+No hace falta nada especial para extraer carbón: ejecuta `dig()` cuando el dron esté justo encima de un bloque de `Grounds.Coal`. Usa `get_ground_type()` para comprobar qué hay debajo del dron y `get_ground_type(direction)` para comprobar los cuatro bloques adyacentes.
 
-El carbón aparece al azar en capas horizontales de 1 bloque de grosor. El tamaño de la capa crecerá en proporción al tamaño de tu mundo, así que puede que te convenga aumentarlo para encontrar más carbón.
-
-El siguiente programa es un buen punto de partida para encontrar carbón. Excava hacia abajo en busca de una capa de carbón y luego excava hacia el este y el oeste con la esperanza de hallar más.
-
+El siguiente programa es un buen punto de partida para encontrar carbón. Excava hacia abajo en busca de una capa de carbón.
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -17,30 +15,42 @@ El siguiente programa es un buen punto de partida para encontrar carbón. Excava
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 4,
     "digging_speed": 2,
     "action_ticks": 200,
     "operation_ticks": 200,
-    "seed": 2
+    "seed": 2,
+    "exclude_unlocks": ["watering", "fertilizer"]
 }
 #SETUP
 move(North)
 move(East)
 move(East)
 #CODE
+# Excava hasta que aparezca un bloque de carbón
 while get_ground_type() != Grounds.Coal:
     dig()
-dig()
-move(East)
-dig()
-move(West)
-move(West)
+
+# Extrae el carbón
 dig()
 }}
+
+## Nota sobre los derrumbes
+Solo obtienes carbón de los bloques que excavas directamente, no de los que se derrumban alrededor del dron. Tenlo en cuenta al planificar la extracción para excavar el máximo de carbón y perder el mínimo por derrumbes.
+
+## Estructura de las vetas
+Sus vetas forman capas horizontales de 1 bloque de grosor que debes encontrar por casualidad al excavar tierra. Los bloques de carbón de una capa suelen estar pegados unos a otros, pero algunos solo se conectan en diagonal.
+
+Los depósitos de carbón crecen en proporción al tamaño de la granja; sigue mejorando [Expandir](unlocks/expand) para poder extraer más carbón.
+
+## Estrategia
+<spoiler=mostrar pista> 
+Una estrategia sencilla, sobre todo en granjas pequeñas, es excavar todos los bloques a la profundidad donde encontraste carbón. Para mejorar la eficiencia, puedes registrar dónde has visto carbón con `get_ground_type(direction)` y evitar perder tiempo pasando sobre tierra. Ten cuidado de no pasar por alto las conexiones diagonales, que perderás si solo te mueves sobre bloques de carbón.
+</spoiler>
 
 ---
 

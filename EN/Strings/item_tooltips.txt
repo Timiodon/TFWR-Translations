@@ -1,4 +1,5 @@
 @item_tooltip_template_amount = You have {0}
+@item_tooltip_template_rate = {0} items/min (highest: {1})
 @item_descr_carrot = Obtained by harvesting carrots.
 @item_descr_rice = Obtained by harvesting rice.
 @item_descr_fertilizer = Call `use_item(Items.Fertilizer)` to instantly remove 2s from the plants remaining grow time.

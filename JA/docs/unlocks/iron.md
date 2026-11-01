@@ -3,12 +3,11 @@
 <right>[宝物の地図 ->](docs/unlocks/treasure_map.md)
 ---
 # 鉄
+`Grounds.Dirt`で石炭を見つけたら、さらに下の`Grounds.Clay`層を通り抜け、`Grounds.Rock`を掘ると鉄が見つかります。
 
-粘土の下にある石の層で、鉄の鉱脈を発見しました。
+石炭の鉱脈と違い、鉄の鉱脈は縦方向にも伸びます。ただし鉱脈の鉄ブロックはすべて直接隣接しており、斜めにしかつながっていないことはありません。
 
-鉄の鉱脈は初めは小さく、見つけるには運も必要です。このアンロックのレベルを上げると、鉱石の鉱脈の最大サイズが大きくなります。もっと確実に鉄を見つけたいなら、鉄の探査のアンロックも試してみましょう。
-
-鉄の鉱脈は必ずつながっており、斜めに飛び飛びにはなりません。鉄を1つ見つけたら、その下や隣を探して、鉱脈全体を採掘しましょう。
+鉄の鉱脈は初めは小さく、見つけるには運も必要です。鉄をさらにアンロックすると鉱脈の最大サイズが増し、偶然見つけやすくなります。確実に見つけたいなら、[鉱石探査](docs/unlocks/prospecting.md)をアンロックしましょう。
 
 {{codeexample 
 {
@@ -18,23 +17,25 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
+    "collapsing": true,
+    "autoplay": false,
     "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
     "world_size": {"x": 5, "y": 5},
     "execution_speed": 1,
-    "digging_speed": 4,
+    "digging_speed": 10,
     "action_ticks": 200,
-    "operation_ticks": 200,
-    "seed": 9,
-    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
+    "operation_ticks": 50,
+    "seed": 5,
+    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "quartz"]
 }
 #SETUP
-jump(Unlocks.Iron)
 #CODE
-for i in range(4):
+# 鉄のブロックが現れるまで掘る
+while get_ground_type() != Grounds.Iron:
     dig()
-do_a_flip()
+
+# 鉄を掘る
+dig()
 }}
 
 ---

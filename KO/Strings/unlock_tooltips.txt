@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = 가장 빠른 시간 기록을 위한 리더보드에 참가합니다.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = 지하 리더보드에서 가장 빠른 기록에 도전하세요.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = 딕셔너리와 세트에 접근할 수 있게 됩니다.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = 드릴 강도를 높입니다.
 @unlock_descr_debug_place = 알록달록 블록을 배치합니다.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = 지하 타일과 상호작용하는 드론 센서입니다.
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = 모자
 @import = 가져오기
 @leaderboard = 리더보드
+@underground_leaderboard = 지하 리더보드
 @lists = 리스트
 @loops = 루프
 @mazes = 미로

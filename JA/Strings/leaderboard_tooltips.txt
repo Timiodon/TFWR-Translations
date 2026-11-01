@@ -14,3 +14,17 @@
 @lb_descr_wood_single = 5億個の木材を獲得する。
 @lb_descr_carrots = 20億個のニンジンを獲得する。
 @lb_descr_carrots_single = 1億個のニンジンを獲得する。
+@lb_descr_fastest_underground_reset = 地下を完全に自動化する。
+@lb_descr_rice = 200万個の稲を獲得する。
+@lb_descr_rice_single = 100000個の稲を獲得する。
+@lb_descr_ores = 20000個の石英を獲得する。
+@lb_descr_ores_single = 200個の石英を獲得する。
+@lb_descr_bamboo = 5億個の竹を獲得する。
+@lb_descr_bamboo_single = 2500万個の竹を獲得する。
+@lb_descr_dynamite = 1000万個のダイナマイトを獲得する。
+@lb_descr_dynamite_single = 100000個のダイナマイトを獲得する。
+@lb_descr_mushrooms = 240000個のキノコを獲得する。
+@lb_descr_mushrooms_single = 30000個のキノコを獲得する。
+@lb_descr_pyramids = 150000パワーを獲得する。
+@lb_descr_pyramids_single = 30000パワーを獲得する。
+@lb_descr_treasure_map = 115000ゴールドを獲得する。

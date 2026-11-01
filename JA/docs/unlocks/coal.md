@@ -2,13 +2,11 @@
 <right>[ジャンプ ->](docs/unlocks/jump.md)
 ---
 # 石炭
+地下にはさまざまな鉱石が隠され、見つけて掘り出されるのを待っています。地表を通り抜けて`Grounds.Dirt`を掘ると、最初に見つかる鉱石は石炭です。
 
-地表のすぐ下の地面は、石炭の鉱床を見つけるのに適しているようです。
+石炭の採掘に特別な操作は必要ありません。ドローンが`Grounds.Coal`ブロックの真上にいるときに`dig()`を実行するだけです。`get_ground_type()`でドローンの下を、`get_ground_type(direction)`で隣接する4ブロックを調べられます。
 
-石炭は厚さ1ブロックの水平な層としてランダムに生成されます。層のサイズはプレイヤーのワールドサイズに比例して広がるので、石炭をもっと見つけたいならワールドを大きくしましょう！
-
-次のプログラムは石炭探しの出発点にぴったりです。石炭の層を探して下に掘り、見つけたら東西にも掘ってさらに石炭を探します。
-
+次のプログラムは石炭探しの出発点にぴったりです。石炭の層を探して下に掘り進めます。
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -17,30 +15,42 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 4,
     "digging_speed": 2,
     "action_ticks": 200,
     "operation_ticks": 200,
-    "seed": 2
+    "seed": 2,
+    "exclude_unlocks": ["watering", "fertilizer"]
 }
 #SETUP
 move(North)
 move(East)
 move(East)
 #CODE
+# 石炭が現れるまで掘る
 while get_ground_type() != Grounds.Coal:
     dig()
-dig()
-move(East)
-dig()
-move(West)
-move(West)
+
+# 石炭を掘る
 dig()
 }}
+
+## 崩落について
+石炭が手に入るのは直接掘った石炭ブロックだけで、ドローンの周りで崩れたブロックからは得られません。崩落で失う石炭を減らし、直接掘る石炭を増やせるよう、採掘方法を工夫しましょう。
+
+## 鉱脈の構造
+鉱脈は厚さ1ブロックの水平な層を作り、土を掘る途中で偶然見つける必要があります。層の石炭ブロックは主に直接隣り合っていますが、斜めにしかつながっていないものもあります。
+
+石炭の鉱床は農場の大きさに比例して広がるので、[拡張](unlocks/expand)をさらにアンロックすれば、より多くの石炭を掘れます。
+
+## 戦略
+<spoiler=ヒントを表示> 
+特に小さな農場では、石炭を見つけた深さのブロックをすべて掘るのが簡単な方法です。効率を上げるには、`get_ground_type(direction)`で石炭を見つけた場所を記録し、土の上を移動する時間を減らせます。石炭の上だけを移動すると見逃す、斜めのつながりにも注意してください。
+</spoiler>
 
 ---
 

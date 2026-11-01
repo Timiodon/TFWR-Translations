@@ -1,11 +1,11 @@
 [<- Bamboo](docs/unlocks/bamboo.md)
 ---
 # Pyramids
+The underground now contains ancient pyramidal structures from which you can harvest power to speed up your drone!
 
-The underground now contains ancient pyramidal structures from which you can harvest energy!
+Pyramids are made from sand blocks (`Grounds.Sand`). Below the pyramid itself is a foundation layer of limestone (`Grounds.Limestone`). Because they are old and eroded, you will find them only in a partially destroyed state. The foundation layer is always present, but there will be holes in the sand.
 
-Pyramids are made from sand blocks (`Grounds.Sand`). Below the pyramid itself is a foundation layer of limestone (`Grounds.Limestone`). Because they are old and eroded, you will find them only in a partially destroyed state. The foundation layer is always present, but there will be holes in the sand. Here's how a pyramid looks when you dig it up:
-
+Here's what a pyramid ruin looks like when you dig it up:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -29,10 +29,13 @@ Pyramids are made from sand blocks (`Grounds.Sand`). Below the pyramid itself is
 jump(Unlocks.Pyramid)
 move(North)
 #CODE
+# Dig down to find a pyramid foundation
 while get_ground_type() != Grounds.Limestone:
     dig()
-do_a_flip()
-z = get_pos_z()
+
+z = get_pos_z() # Remember the depth of the foundation
+
+# Dig away everything that's not part of the pyramid
 for i in range(6):
     for j in range(6):
         while (get_ground_type() != Grounds.Limestone
@@ -43,9 +46,8 @@ for i in range(6):
     move(East)
 }}
 
-The blocks above the pyramid are always dirt. If you want to dig up a pyramid more efficiently than the above code, you can use that fact.
-
-As you can see, there are several holes in the sand which will need to be filled. When you fill these holes and restore the pyramid to its previous state, it destroys itself and you receive power as a reward.
+## Restoring the Pyramid
+As you can see, there are several holes in the sand which will need to be filled. When you fill these holes and restore the pyramid to its previous state, it destroys itself and a large sunflower spawns in the middle of the limestone base. Harvest it to receive `Items.Power`. The larger the pyramid you completed, the more power you receive.
 
 You can restore a pyramid by placing blocks with the command `place(Grounds.Sand)`. Sand is a special block that will cave in immediately when it is not supported properly. Whenever you place a sand block, it must either be placed directly on limestone, or on a 3x3 of sand blocks. Here's a small hand-built pyramid to demonstrate. Of course, building it yourself won't give you any power:
 
@@ -69,26 +71,42 @@ You can restore a pyramid by placing blocks with the command `place(Grounds.Sand
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
 }
 #CODE
+# We need a limestone foundation to put sand on
 for i in range(3):
     for j in range(3):
         place(Grounds.Limestone)
         move(North)
     move(East)
-    
+
+# Put a 3x3 layer of sand on the limestone
 for i in range(3):
     for j in range(3):
         place(Grounds.Sand)
         move(North)
     move(East)
-    
-move(North)
-move(East)
-place(Grounds.Sand)
+
+# Try to put another 3x3 layer
+# Note that only the middle block is supported and remains
+for i in range(3):
+    for j in range(3):
+        place(Grounds.Sand)
+        move(North)
+    move(East)
 }}
 
 A correctly restored pyramid consists of a square limestone foundation with odd-numbered side lengths, for example 5x5. Above it is a layer of sand blocks of the same size (5x5), followed by progressively smaller layers: 3x3, then 1x1.
 
-When a pyramid is completed, it crumbles away and a large sunflower is spawned in the middle. You can harvest it to receive power. The larger the pyramid you completed, the more power you receive.
+The blocks above the pyramid are always dirt. If you want to dig up a pyramid efficiently, you can use that fact.
+
+## Power
+As long as you have power, the drone will use it to run twice as fast.
+It consumes 1 power every 30 actions, such as moves, harvests, or planting actions.
+Executing other code statements can also use power, but much less than drone actions.
+
+In general, everything that is sped up by speed upgrades is also sped up by power.
+Anything sped up by power also uses power proportional to the time it takes to execute it, ignoring speed upgrades.
+
+Power does not affect `dig()`.
 
 ---
 

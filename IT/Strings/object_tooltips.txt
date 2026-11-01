@@ -23,9 +23,9 @@ Se raccogli un girasole con il numero massimo di petali, ottieni un bonus di ene
 @object_descr_dirt = È terra.
 @object_descr_rock = È una roccia dura.
 @object_descr_clay = Un blocco d'argilla. Terreno fertile e perfetto per il riso. Quando una pianta di riso matura, trasforma nuovamente in terra l'argilla sottostante.
-@object_descr_blue_block = Un blocco blu.
-@object_descr_red_block = Un blocco rosso.
-@object_descr_green_block = Un blocco verde.
+@object_descr_block_blue = Un blocco blu.
+@object_descr_block_red = Un blocco rosso.
+@object_descr_block_green = Un blocco verde.
 @object_descr_coal = Un blocco ricco di carbone sedimentario.
 @object_descr_iron = Un blocco contenente magnetite grezza.
 @object_descr_quartz = Un blocco che racchiude quarzo cristallino.

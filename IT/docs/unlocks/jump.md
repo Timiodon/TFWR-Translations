@@ -1,13 +1,13 @@
 [<- Carbone](docs/unlocks/coal.md)
 ---
 # Salto
+Il tuo drone ha sbloccato il comando `jump()`. Per usarlo, passa uno sblocco come argomento, per esempio `Unlocks.Iron`.
 
-Il tuo drone ha sbloccato il comando `jump()`.
+Questo comando permette di puntare a determinate risorse nascoste nel terreno e saltare istantaneamente fino a esse. È particolarmente utile per il debug o per raggiungere una vena che hai appena mancato.
 
-Questo comando permette di scegliere determinati sblocchi come bersaglio e saltare direttamente verso di essi. È particolarmente utile per il debug o per tornare a una vena mineraria che hai appena mancato. Per usarlo, passa uno sblocco come argomento, per esempio `Unlocks.Iron`.
+Dopo il salto, la risorsa cercata dovrebbe trovarsi entro 3 blocchi dalla superficie superiore. `jump()` può essere usato una sola volta per esecuzione del programma; ulteriori tentativi causano un errore.
 
-`jump()` funziona solo con gli sblocchi presenti nel sottosuolo, come `jump(Unlocks.Rice)` o `jump(Unlocks.Iron)`.
-
+L'esempio seguente salta fino al [riso](docs/unlocks/rice.md), trova l'argilla e pianta una fila di terrazze di riso:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,27 +18,43 @@ Questo comando permette di scegliere determinati sblocchi come bersaglio e salta
     "show_output": false,
     "collapsing": true,
     "autoplay": false,
-    "items": [],
+    "items": [{"item": "hay", "n": 10}],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 1,
-    "digging_speed": 3,
+    "digging_speed": 4,
     "action_ticks": 200,
-    "operation_ticks": 200,
+    "operation_ticks": 20,
     "seed": 1,
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms"],
     "starting_chunk": 0
 }
 #CODE
-dig()
-dig()
-dig()
-jump(Unlocks.Iron)
-do_a_flip()
+# Salta vicino al riso
+jump(Unlocks.Rice)
+
+# Pianta una fila di terrazze di riso
+for i in range(get_world_size()):
+    # Il salto non è preciso: scava gli ultimi blocchi
+    while get_ground_type() != Grounds.Clay:
+        dig()
+
+    plant(Entities.Rice)
+
+    move(East)
 }}
 
-Non è garantito che il salto ti porti direttamente allo sblocco bersaglio, quindi potresti dover cercare un po' nei dintorni, ma il bersaglio sarà sicuramente nelle vicinanze.
-
-`jump()` può essere usato una sola volta per esecuzione del programma.
+## Sblocchi Compatibili
+`jump()` funziona solo con i seguenti sblocchi minerari:
+- Carbone
+- Ferro
+- Quarzo
+- Riso
+- Zucche Pietrificate
+- Terreni Speciali
+- Piramide
+- Mappa del Tesoro
+- Funghi
+- Dinamite
 
 ---
 

@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Zbierz 500M drewna.
 @lb_descr_carrots = Zbierz 2B marchewek.
 @lb_descr_carrots_single = Zbierz 100M marchewek.
+@lb_descr_fastest_underground_reset = W pełni zautomatyzuj podziemia.
+@lb_descr_rice = Zbierz 2M ryżu.
+@lb_descr_rice_single = Zbierz 100000 ryżu.
+@lb_descr_ores = Zbierz 20000 kwarcu.
+@lb_descr_ores_single = Zbierz 200 kwarcu.
+@lb_descr_bamboo = Zbierz 500M bambusa.
+@lb_descr_bamboo_single = Zbierz 25M bambusa.
+@lb_descr_dynamite = Zbierz 10M dynamitu.
+@lb_descr_dynamite_single = Zbierz 100000 dynamitu.
+@lb_descr_mushrooms = Zbierz 240000 grzybów.
+@lb_descr_mushrooms_single = Zbierz 30000 grzybów.
+@lb_descr_pyramids = Zbierz 150000 energii.
+@lb_descr_pyramids_single = Zbierz 30000 energii.
+@lb_descr_treasure_map = Zbierz 115000 złota.

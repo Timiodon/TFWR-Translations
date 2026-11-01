@@ -6,7 +6,7 @@ Tu as débloqué la boucle `while` et les valeurs `True` et `False`. La boucle `
 `while condition:
 	#corps de la boucle`
 
-Ne t'inquiète pas de créer des boucles infinies. Les délais dans l'exécution empêcheront le programme de se figer.
+Ne t'inquiète pas de créer des boucles infinies. Le drone peut rester bloqué, mais le jeu entier ne se figera pas : il suffit d’arrêter le programme et de réessayer.
 
 ## Pour les Débutants
 Peut-être as-tu déjà essayé de mettre plusieurs appels `harvest()` à la suite :
@@ -39,9 +39,8 @@ harvest()
 harvest()
 harvest()
 }}
-
 Cela te permet de récolter plusieurs fois en une seule exécution du programme.
-Cependant, ce serait bien de récolter plus de trois fois, et écrire le même code plusieurs fois est une mauvaise pratique.
+Mais ce serait bien de récolter plus de trois fois, et répéter le même code rend vite le programme brouillon.
 La solution est une boucle.
 Une boucle te permet d'exécuter le même code plusieurs fois.
 
@@ -89,7 +88,6 @@ Donc tu pourrais soit écrire
 while False:
 	do_a_flip()
 }}
-
 ou
 
 {{codeexample 
@@ -118,7 +116,6 @@ ou
 while True:
 	do_a_flip()
 }}
-
 Le premier ne fera jamais de looping et le second en fera pour toujours (une boucle infinie).
 
 Normalement, créer une boucle infinie est une mauvaise idée car cela figera le programme, mais dans ce jeu, il y a des délais entre chaque itération de la boucle, donc cela fera que le drone continuera à faire des loopings jusqu'à ce que tu l'arrêtes manuellement en appuyant à nouveau sur le bouton d'exécution.

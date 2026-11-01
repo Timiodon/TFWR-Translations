@@ -23,9 +23,9 @@ Wenn du eine Sonnenblume mit der maximalen Anzahl an Blütenblättern erntest, b
 @object_descr_dirt = Das ist Erde.
 @object_descr_rock = Das ist ein harter Felsblock.
 @object_descr_clay = Ein Tonblock. Fruchtbarer Boden und perfekt für Reis. Wenn eine Reispflanze reif wird, verwandelt sie den Ton darunter wieder in Erde.
-@object_descr_blue_block = Ein blauer Block.
-@object_descr_red_block = Ein roter Block.
-@object_descr_green_block = Ein grüner Block.
+@object_descr_block_blue = Ein blauer Block.
+@object_descr_block_red = Ein roter Block.
+@object_descr_block_green = Ein grüner Block.
 @object_descr_coal = Ein Block, der reich an sedimentärer Kohle ist.
 @object_descr_iron = Ein Block, der rohen Magnetit enthält.
 @object_descr_quartz = Ein Block, der kristallinen Quarz einschließt.

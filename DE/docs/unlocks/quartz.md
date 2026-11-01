@@ -1,17 +1,9 @@
 [<- Eisen](docs/unlocks/iron.md) <right>[Pilze ->](docs/unlocks/mushroom.md)
 ---
 # Quarz
+Ausgehend von den Eisenadern in `Grounds.Rock` findest du Quarz im unteren Teil der Gesteinsschicht und in der harten `Grounds.Dirt` darunter (prüfe die Härte mit `get_hardness()` aus der Freischaltung [Unterirdische Sinne](docs/unlocks/underground_senses.md)).
 
-Quarz wächst in nadelförmigen Adern nahe dem unteren Ende der Steinschicht und in der harten Erde darunter. Die Adern bilden senkrechte Säulen, wodurch sie durch bloßes Ausprobieren nur schwer zu finden sind.
-
-Zum Glück können wir unser Eisen zu etwas verbiegen, das einer Wünschelrute ähnelt und mit dem wir diese Quarzadern leichter aufspüren können. Der entsprechende Befehl lautet `prospect_quartz()`.
-
-`prospect_quartz()` funktioniert anders als `prospect_iron()`. Statt die Richtung zum nächstgelegenen Quarzerz zurückzugeben, liefert der Befehl die euklidische Entfernung (3D-Entfernung) zum nächstgelegenen Quarz. Die Ausführung von `prospect_quartz()` kostet 1 Eisen, daher solltest du den Befehl sparsam einsetzen.
-
-Wenn `prospect_quartz()` keinen Quarz in der Nähe findet oder du nicht genug Eisen für die Suche hast, gibt der Befehl `None` zurück.
-
-Mit dem folgenden Code gräbt sich deine Drohne durch die Erde und tief in die Steinschicht. Mit etwas Glück befindet sich dort eine Quarzader in der Nähe. In diesem Fall gibt deine Drohne die Entfernung zu ihr aus.
-
+Der folgende Code gräbt durch die Erde in die Gesteinsschicht. Dort sucht er beim Graben fortlaufend nach Quarz, bis die Entfernung kleiner als 2 ist. Zum Schluss gibt er die erreichte Entfernung zur Ader aus.
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -22,7 +14,7 @@ Mit dem folgenden Code gräbt sich deine Drohne durch die Erde und tief in die S
     "show_output": false,
     "collapsing": true,
     "autoplay": false,
-    "items": [{"item": "hay", "n": 100}, {"item": "iron", "n": 100}],
+    "items": [{"item": "block", "n": 1}, {"item": "iron", "n": 100}],
     "world_size": {"x": 3, "y": 3},
     "execution_speed": 8,
     "digging_speed": 16,
@@ -31,18 +23,43 @@ Mit dem folgenden Code gräbt sich deine Drohne durch die Erde und tief in die S
     "seed": 9,
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "dynamite"]
 }
-
-#CODE
+#SETUP
 move(East)
 move(North)
+#CODE
+# Bis zur Gesteinsschicht graben
 while get_ground_type() != Grounds.Rock:
     dig()
-for i in range(30):
-    dig()
-do_a_flip()
-do_a_flip()
+
+# Weitergraben, bis eine Quarzader nahe ist
+while prospect_quartz() == None or prospect_quartz() >= 2:
+    for i in range(10):
+        dig()
+
+# Die endgültige Entfernung zur Ader ausgeben
 print(prospect_quartz())
 }}
+
+## Aufbau der Adern
+Quarz wächst in nadelförmigen Adern, die senkrechte Säulen bilden. Das macht es recht schwierig, sie durch bloßes Ausprobieren zu finden.
+
+## Quarz suchen
+Zum Glück können wir unser Eisen zu etwas verbiegen, das einer Wünschelrute ähnelt und mit dem wir diese Quarzadern leichter aufspüren können. Der entsprechende Befehl lautet `prospect_quartz()`.
+
+`prospect_quartz()` funktioniert anders als `prospect_iron()`. Statt der Richtung, in die sich die Drohne zum nächsten Eisenerz bewegen müsste, gibt es die genaue 3D-Entfernung zwischen dem nächsten Quarzblock und der Drohne zurück (euklidische Entfernung).
+
+Die Ausführung von `prospect_quartz()` kostet 1 Eisen, daher solltest du den Befehl sparsam einsetzen.
+
+Wenn `prospect_quartz()` keinen Quarz in der Nähe findet oder du nicht genug Eisen für die Suche hast, gibt der Befehl `None` zurück.
+
+## Strategie
+<spoiler=Hinweis anzeigen>Du kannst wiederholt nach Erz suchen und dich bewegen, um zu sehen, wie sich die Entfernung ändert. Auf einer ebenen Fläche kannst du durch Minimieren der Entfernung über eine Quarzader gelangen. Mit einer Strategie ähnlich der binären Suche kannst du die Zahl der `prospect_quartz()`-Aufrufe und ihren Eisenverbrauch minimieren.
+
+Fortgeschrittenere Strategien können mit 2D-Geometrie die Schnittpunkte von zwei oder mehr Kreisen bestimmen. Oder du wählst den anspruchsvollen Weg einer vollständigen Trilateration: Bestimme den Schnittpunkt dreier Kugeln, um die genaue 3D-Position der Ader zu finden.
+
+Für eine Quadratwurzel kannst du den Potenzoperator verwenden. Die Quadratwurzel von 16 erhältst du zum Beispiel mit `16**0.5`. Es gibt keine eingebauten Mathematikfunktionen für Trigonometrie oder Vektoren. Diese musst du selbst implementieren.
+
+Beachte außerdem, dass sich mehrere Adern in der Nähe befinden können. Mehrere benachbarte Messungen müssen daher nicht auf dieselbe Ader zeigen.</spoiler>
 
 ---
 

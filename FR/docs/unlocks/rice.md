@@ -3,13 +3,9 @@
 <right>[Perlite et terreau ->](docs/unlocks/special_soils.md)
 ---
 # Riz
+Sous la surface et la couche de `Grounds.Dirt`, tu trouveras une fine couche de `Grounds.Clay`. Ce sol fertile et détrempé est idéal pour planter du riz.
 
-Sous la surface, tu as remarqué une fine couche d’argile. Il s’avère que ce sol fertile est idéal pour planter des pousses de riz.
-
-Le riz assèche l’argile sur laquelle il est planté. Chaque bloc d’argile ne peut être utilisé qu’une seule fois. Heureusement, la couche fait plusieurs blocs d’épaisseur. Et bien sûr, tu peux toujours utiliser `clear()` pour recréer la couche d’argile.
-
-Le code suivant peut t’aider à creuser jusqu’à trouver de l’argile.
-
+Le code suivant peut t’aider à creuser jusqu’à l’argile et à planter du riz :
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@ Le code suivant peut t’aider à creuser jusqu’à trouver de l’argile.
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+Tant que le drone est au-dessus d’un bloc de `Grounds.Clay`, tu peux utiliser `plant(Entities.Rice)` pour y planter du riz, `can_harvest()` pour vérifier s’il est mûr et enfin `harvest()` pour le récolter.
+
+## Terrasses
+Lorsque tu plantes du riz, le sol devient `Grounds.Rice_Terrace` pour lui offrir les conditions idéales pour mûrir. Quand le riz est mûr, le sol sèche et devient `Grounds.Dry_Rice_Terrace`, où tu ne peux plus planter de riz. Heureusement, la couche fait plusieurs blocs d’épaisseur : tu peux retirer le bloc avec `dig()` et replanter sur la `Grounds.Clay` située dessous. Si la couche est épuisée, utilise `clear()` pour réinitialiser le monde et creuse jusqu’à une nouvelle couche.
 
 ---
 

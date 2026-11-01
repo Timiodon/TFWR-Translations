@@ -6,7 +6,7 @@ Hai sbloccato il ciclo `while` e i valori `True` e `False`. Il ciclo `while` con
 `while condition:
 	#corpo del ciclo`
 
-Non preoccuparti di creare cicli infiniti. I ritardi nell'esecuzione impediranno al programma di bloccarsi.
+Non preoccuparti di creare cicli infiniti. Il drone potrebbe bloccarsi, ma non bloccherà l'intero gioco: puoi semplicemente fermare il programma e riprovare.
 
 ## Per Principianti
 Forse hai già provato a mettere diverse chiamate `harvest()` di seguito:
@@ -40,7 +40,7 @@ harvest()
 harvest()
 }}
 Questo ti permette di raccogliere più volte durante una singola esecuzione del programma.
-Sarebbe però utile raccogliere più di tre volte, e ripetere lo stesso codice non è una buona pratica.
+Sarebbe però utile raccogliere più di tre volte, e ripetere lo stesso codice rende presto il programma un pasticcio.
 La soluzione è un ciclo.
 Un ciclo ti permette di eseguire lo stesso codice più volte.
 

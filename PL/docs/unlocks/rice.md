@@ -3,13 +3,9 @@
 <right>[Perlit i gleba próchnicza ->](docs/unlocks/special_soils.md)
 ---
 # Ryż
+Pod powierzchnią i warstwą `Grounds.Dirt` znajdziesz cienką warstwę `Grounds.Clay`. Okazuje się, że to żyzne, nasiąknięte wodą podłoże idealnie nadaje się do sadzenia ryżu.
 
-Pod powierzchnią zauważasz cienką warstwę gliny. Okazuje się, że to żyzne podłoże idealnie nadaje się do sadzenia ryżu.
-
-Ryż wysusza glinę, na której został posadzony. Każdego bloku gliny możesz użyć tylko raz. Na szczęście warstwa ma grubość kilku bloków. Oczywiście zawsze możesz użyć `clear()`, aby odtworzyć warstwę gliny.
-
-Poniższy kod może pomóc ci kopać w dół, aż znajdziesz glinę.
-
+Poniższy kod może pomóc ci kopać w dół, aż znajdziesz glinę, a następnie posadzić ryż:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@ Poniższy kod może pomóc ci kopać w dół, aż znajdziesz glinę.
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+Gdy dron jest nad blokiem `Grounds.Clay`, użyj `plant(Entities.Rice)`, aby posadzić ryż, `can_harvest()`, aby sprawdzić dojrzałość, a następnie `harvest()`, aby go zebrać.
+
+## Tarasy
+Po zasadzeniu ryżu podłoże zmienia się w `Grounds.Rice_Terrace`, zapewniając idealne warunki dojrzewania. Gdy ryż dojrzeje, podłoże wysycha i zmienia się w `Grounds.Dry_Rice_Terrace`, na którym nie można sadzić kolejnego ryżu. Na szczęście warstwa ma kilka bloków grubości: usuń blok przez `dig()` i posadź ryż na `Grounds.Clay` poniżej. Gdy warstwa się skończy, zawsze możesz odtworzyć świat przez `clear()` i dokopać się do nowej.
 
 ---
 

@@ -3,12 +3,11 @@
 <right>[Schatzkarte ->](docs/unlocks/treasure_map.md)
 ---
 # Eisen
+Nachdem du Kohle in `Grounds.Dirt` gefunden hast, kannst du tiefer durch die `Grounds.Clay`-Schicht in `Grounds.Rock` graben, um Eisen zu finden.
 
-Du hast Eisenadern in der Gesteinsschicht unter dem Ton entdeckt.
+Im Gegensatz zu Kohleadern erstrecken sich Eisenadern auch senkrecht. Alle Eisenblöcke einer Ader grenzen jedoch immer direkt aneinander und sind nie nur diagonal verbunden.
 
-Eisenadern sind anfangs klein, und du brauchst etwas Glück, um sie zu finden. Mit höheren Stufen dieser Freischaltung steigt die maximale Größe einer Erzader. Wenn du Eisen zuverlässiger finden möchtest, solltest du dir auch die Freischaltung zur Erzsuche ansehen.
-
-Eine Eisenader ist immer zusammenhängend und weist keine diagonalen Sprünge auf. Wenn du einen Eisenblock findest, suche darunter und daneben nach weiteren, damit du die gesamte Ader abbaust.
+Eisenadern sind anfangs klein, und du brauchst etwas Glück, um sie zu finden. Weitere Eisen-Upgrades erhöhen die maximale Größe der Adern, sodass du etwas leichter zufällig auf sie stößt. Um sie zuverlässig zu finden, solltest du aber [Erzsuche](docs/unlocks/prospecting.md) freischalten.
 
 {{codeexample 
 {
@@ -18,23 +17,25 @@ Eine Eisenader ist immer zusammenhängend und weist keine diagonalen Sprünge au
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
+    "collapsing": true,
+    "autoplay": false,
     "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
     "world_size": {"x": 5, "y": 5},
     "execution_speed": 1,
-    "digging_speed": 4,
+    "digging_speed": 10,
     "action_ticks": 200,
-    "operation_ticks": 200,
-    "seed": 9,
-    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
+    "operation_ticks": 50,
+    "seed": 5,
+    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "quartz"]
 }
 #SETUP
-jump(Unlocks.Iron)
 #CODE
-for i in range(4):
+# Graben, bis ein Eisenblock erscheint
+while get_ground_type() != Grounds.Iron:
     dig()
-do_a_flip()
+
+# Eisen abbauen
+dig()
 }}
 
 ---

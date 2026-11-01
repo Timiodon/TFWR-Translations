@@ -3,13 +3,9 @@
 <right>[Perlita y suelo franco ->](docs/unlocks/special_soils.md)
 ---
 # Arroz
+Bajo la superficie y la capa de `Grounds.Dirt` encontrarás una fina capa de `Grounds.Clay`. Resulta que este terreno fértil y empapado es perfecto para plantar brotes de arroz.
 
-Debajo de la superficie has observado una fina capa de arcilla. Resulta que este terreno fértil es perfecto para plantar brotes de arroz.
-
-El arroz secará la arcilla en la que lo plantes. Solo puedes usar cada bloque de arcilla una vez. Por suerte, la capa tiene varios bloques de grosor. Y, por supuesto, siempre puedes usar `clear()` para restaurar la capa de arcilla del mundo.
-
-El siguiente código puede resultarte útil para excavar hacia abajo hasta encontrar arcilla.
-
+El siguiente código puede resultarte útil para excavar hacia abajo hasta encontrar arcilla y plantar arroz:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@ El siguiente código puede resultarte útil para excavar hacia abajo hasta encon
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+Mientras el dron esté sobre un bloque de `Grounds.Clay`, puedes usar `plant(Entities.Rice)` para plantar arroz, `can_harvest()` para comprobar si ha terminado de crecer y, por último, `harvest()` para cosecharlo.
+
+## Terrazas
+Al plantar arroz, el terreno se convierte en `Grounds.Rice_Terrace` para ofrecerle el entorno ideal para madurar. Cuando el arroz termina de crecer, el terreno se seca y se convierte en `Grounds.Dry_Rice_Terrace`, donde no se puede plantar más arroz. Por suerte, la capa tiene varios bloques de grosor: puedes retirar el bloque con `dig()` y plantar arroz en la `Grounds.Clay` inferior. Si se agota la capa, siempre puedes usar `clear()` para reiniciar el mundo y excavar hasta otra nueva.
 
 ---
 

@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Tritt der Bestenliste für die schnellsten Zeiten bei.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Tritt der unterirdischen Bestenliste für die schnellsten Zeiten bei.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Erhalte Zugriff auf Dictionaries und Sets.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Verbessert die Stärke des Bohrers.
 @unlock_descr_debug_place = Platziere farbige Blöcke.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Drohnensensoren zur Interaktion mit unterirdischen Feldern
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = Hüte
 @import = Import
 @leaderboard = Bestenliste
+@underground_leaderboard = Unterirdische Bestenliste
 @lists = Listen
 @loops = Schleifen
 @mazes = Labyrinthe

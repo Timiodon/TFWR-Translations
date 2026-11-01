@@ -3,13 +3,9 @@
 <right>[パーライトと壌土 ->](docs/unlocks/special_soils.md)
 ---
 # 稲
+地表と`Grounds.Dirt`の層の下には、薄い`Grounds.Clay`の層があります。この肥沃で水をたっぷり含む地面は、稲を植えるのに最適です。
 
-地表の下に薄い粘土の層があることに気づいたことでしょう。この肥沃な地面は、稲の苗を植えるのにぴったりです。
-
-稲は植えた場所の粘土を乾燥させるため、各粘土ブロックは1回しか使えません。幸い、粘土の層は数ブロックの厚みがあります。もちろん、`clear()`でワールドを元に戻せば、粘土の層も復活します。
-
-粘土が見つかるまで下へ掘るには、次のコードが役立つでしょう。
-
+粘土まで掘って稲を植えるには、次のコードが役立ちます：
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+ドローンが`Grounds.Clay`の上にいれば、`plant(Entities.Rice)`で稲を植え、`can_harvest()`で成長を確認し、最後に`harvest()`で収穫できます。
+
+## 段々畑
+稲を植えると、地面が`Grounds.Rice_Terrace`に変わり、稲の成長に最適な環境になります。稲が育ちきると地面が乾いて`Grounds.Dry_Rice_Terrace`になり、もう稲を植えられません。幸い、層は数ブロックの厚さがあるので、`dig()`でブロックを取り除き、下の`Grounds.Clay`に新しい稲を植えられます。層を使い切ったら、いつでも`clear()`で世界を復元し、新しい層まで掘れます。
 
 ---
 

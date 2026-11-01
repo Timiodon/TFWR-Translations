@@ -6,7 +6,7 @@ Odblokowałeś pętlę `while` oraz wartości `True` i `False`. Pętla `while` w
 `while warunek:
 	#ciało pętli`
 
-Nie martw się o tworzenie pętli nieskończonych. Opóźnienia w wykonywaniu programu zapobiegną jego zawieszeniu.
+Nie martw się o tworzenie pętli nieskończonych. Dron może utknąć, ale cała gra się nie zawiesi. Możesz po prostu zatrzymać program i spróbować ponownie.
 
 ## Dla początkujących
 Być może próbowałeś już umieścić kilka wywołań `harvest()` pod rząd:
@@ -40,7 +40,7 @@ harvest()
 harvest()
 }}
 Pozwala to na zebranie plonów kilka razy w jednym uruchomieniu programu. 
-Jednakże, dobrze byłoby zebrać więcej niż trzy razy, a pisanie tego samego kodu wielokrotnie jest złą praktyką. 
+Jednakże, dobrze byłoby zebrać więcej niż trzy razy, a pisanie tego samego kodu wielokrotnie szybko robi w programie bałagan.
 Rozwiązaniem jest pętla. 
 Pętla pozwala na wielokrotne uruchamianie tego samego kodu.
 

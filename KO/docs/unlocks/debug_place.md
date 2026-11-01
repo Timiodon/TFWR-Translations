@@ -1,14 +1,14 @@
 [<- 대나무](docs/unlocks/bamboo.md)
 ---
 # 알록달록 블록
+이미 알고 있을 수도 있지만, `place()`를 사용하면 드론에게 블록을 배치하도록 할 수 있습니다. 이 해금 항목은 주변과 눈에 띄게 구별되는 세 색깔 블록인 `Grounds.Block_Red`, `Grounds.Block_Green`, `Grounds.Block_Blue`를 추가합니다.
 
-이미 알고 있듯이 `place()`를 사용하면 드론에게 블록을 배치하도록 할 수 있습니다. 이 해금 항목으로 주변과 시각적으로 구분되는 색상 블록을 추가할 수 있습니다.
+색깔 블록으로 위치를 표시하거나 예쁜 무늬를 만들 수 있습니다.
 
 새 블록을 배치하려면
-
 {{codeexample 
 {
-    "camera_position": {"x": -1, "y": 0, "z": 8},
+    "camera_position": {"x": -1, "y": 0, "z": 10},
     "show_image": true,
     "image_size": {"x": 800, "y": 300},
     "show_code": true,
@@ -16,9 +16,9 @@
     "show_output": false,
     "collapsing": false,
     "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
-    "world_size": {"x": 4, "y": 4},
-    "execution_speed": 1,
+    "items": [{"item": "block", "n": 100}],
+    "world_size": {"x": 5, "y": 5},
+    "execution_speed": 5,
     "digging_speed": 4,
     "action_ticks": 200,
     "operation_ticks": 200,
@@ -29,13 +29,35 @@
 #SETUP
 move(East)
 move(North)
-dig()
-dig()
-dig()
 #CODE
-place(Grounds.Red_Block)
-place(Grounds.Green_Block)
-place(Grounds.Blue_Block)
+place(Grounds.Block_Green)
+move(East)
+
+place(Grounds.Block_Blue)
+move(East)
+
+place(Grounds.Block_Green)
+move(North)
+
+place(Grounds.Block_Blue)
+move(North)
+
+place(Grounds.Block_Green)
+move(West)
+
+place(Grounds.Block_Blue)
+move(West)
+
+place(Grounds.Block_Green)
+move(South)
+
+place(Grounds.Block_Blue)
+move(East)
+
+place(Grounds.Block_Red)
+place(Grounds.Block_Red)
+
+do_a_flip()
 }}
 ---
 

@@ -20,6 +20,7 @@
 @UI volume = Громкость интерфейса
 @ambience volume = Громкость окружения
 @drone volume = Громкость дрона
+@mute in background = Без звука в фоне
 @fps limit = Макс. частота кадров
 @autosave = Автосохранение кода
 @autosave progress = Автосохранение прогресса
@@ -63,3 +64,7 @@
 @Light = Светлая
 @Lunar New Year = Лунный Новый год
 @Custom = Своя
+@automatic autocomplete = Автоматическое автодополнение
+@focus errors = Показывать ошибки
+@window docking = Стыковка окон
+@autocomplete = Автодополнение

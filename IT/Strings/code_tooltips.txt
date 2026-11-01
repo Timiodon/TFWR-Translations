@@ -130,20 +130,24 @@ richiede `1` tick per essere eseguita.
 esempio:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Scopri che tipo di entità si trova sotto il drone.
 
-restituisce `None` se la casella è vuota, altrimenti restituisce il tipo di entità sotto il drone.
+Se `direction` non è `None`, controlla invece la casella adiacente nella direzione indicata.
+
+restituisce `None` se la casella controllata è vuota, altrimenti il tipo di entità presente su di essa.
 
 richiede `1` tick per essere eseguita.
 
 esempio:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Scopri che tipo di terreno si trova sotto il drone.
 
-restituisce il tipo di terreno sotto il drone.
+Se `direction` non è `None`, controlla invece la casella adiacente nella direzione indicata.
+
+restituisce il tipo di terreno della casella controllata.
 
 richiede `1` tick per essere eseguita.
 
@@ -667,6 +671,8 @@ Scava una casella verso il basso.
 
 La velocità di scavo dipende dalla durezza del blocco e dalla potenza della trivella del drone.
 
+scavare un blocco richiede `hardness / drill strength` secondi. I potenziamenti della velocità non influiscono sui tempi di scavo.
+
 esempio:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -675,6 +681,8 @@ Usa il carbone per cercare il ferro.
 restituisce la direzione del minerale di ferro più vicino (`North`, `East`, `South` o `West`) se ce n'è uno nelle vicinanze. Restituisce `None` se non c'è ferro nelle vicinanze, se non hai abbastanza carbone o se il drone si trova già sopra un blocco di ferro.
 
 costa 1 carbone per essere eseguita.
+
+richiede `1` tick per essere eseguita.
 
 esempio:
 `while prospect_iron() != None:
@@ -686,12 +694,18 @@ restituisce la distanza euclidea (distanza 3D) dal drone al blocco di quarzo pi�
 
 costa 1 ferro per essere eseguita.
 
+richiede `1` tick per essere eseguita.
+
 esempio:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Posiziona blocchi.
 
 Puoi specificare il blocco da posizionare. Puoi posizionare solo i blocchi senza una funzione speciale. Per esempio, puoi usare `place(Grounds.Rock)`, ma non `place(Grounds.Clay)`.
+
+restituisce `True` se il blocco è stato posizionato, altrimenti `False`.
+
+richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altrimenti.
 
 esempio:
 `place(Grounds.Rock)`
@@ -702,12 +716,16 @@ Non puoi spingere i blocchi verso l'alto.
 
 restituisce `True` se il blocco è stato spinto, `False` altrimenti.
 
+richiede `200` tick se il blocco è stato spinto, altrimenti `1` tick.
+
 esempio:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Controlla se il blocco sotto il drone può essere spinto.
 
 restituisce `True` se il blocco sotto il drone può essere spinto, `False` altrimenti.
+
+richiede `1` tick per essere eseguita.
 
 esempio:
 `can_push(North)`
@@ -716,6 +734,8 @@ Salta a una funzionalità sotterranea associata a `unlock`.
 
 Puoi eseguire `jump` una sola volta per script.
 
+richiede `200` tick per essere eseguita.
+
 esempio:
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -723,10 +743,14 @@ Cambia l’altezza a cui il drone si libra sopra il terreno.
 
 L’altezza predefinita è `1` e la maggior parte delle azioni del drone ripristina l’altezza predefinita.
 
+richiede `200` tick per essere eseguita se ha avuto successo, `1` tick altrimenti.
+
 esempio:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 Ottiene l’altezza attuale a cui il drone si libra sopra il terreno.
+
+richiede `1` tick per essere eseguita.
 
 esempio:
 `height = get_hover()`

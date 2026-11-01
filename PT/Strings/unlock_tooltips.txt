@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = Junte-se ao placar de líderes para os tempos mais rápidos.
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = Entre no placar de líderes subterrâneo dos melhores tempos.
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = Tenha acesso a dicionários e conjuntos.
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = Melhora a força da broca.
 @unlock_descr_debug_place = Coloque blocos coloridos.
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = Sensores do drone para interagir com blocos subterrâneos
 
 `while get_pos_z() < 100:
@@ -187,8 +190,9 @@ other_file.function()`
 @hats = Chapéus
 @import = Importar
 @leaderboard = Placar de Líderes
+@underground_leaderboard = Placar de Líderes Subterrâneo
 @lists = Listas
-@loops = Loops
+@loops = Laços
 @mazes = Labirintos
 @megafarm = Megafazenda
 @operators = Operadores

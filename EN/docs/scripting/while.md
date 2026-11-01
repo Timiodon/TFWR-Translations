@@ -6,7 +6,7 @@ You have unlocked the `while` loop and the values `True` and `False`. The `while
 `while condition:
 	#loop body`
 
-Don't worry about creating infinite loops. The delays in the execution will prevent the program from freezing.
+Don't worry about creating infinite loops. The drone might get stuck but won't freeze the whole game, you can just stop the running program and try again.
 
 ## For Beginners
 Perhaps you have already tried to put several `harvest()` calls in a row:
@@ -40,7 +40,7 @@ harvest()
 harvest()
 }}
 This allows you to harvest several times in one program run.
-However, it would be nice to harvest more than three times, and writing the same code multiple times is bad practice.
+However, it would be nice to harvest more than three times, and writing the same code multiple times quickly makes the program a mess.
 The solution is a loop.
 A loop allows you to run the same code multiple times.
 

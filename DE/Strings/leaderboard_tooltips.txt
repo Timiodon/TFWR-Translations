@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Farme 500 Mio. Holz.
 @lb_descr_carrots = Farme 2 Mrd. Karotten.
 @lb_descr_carrots_single = Farme 100 Mio. Karotten.
+@lb_descr_fastest_underground_reset = Automatisiere den Untergrund vollständig.
+@lb_descr_rice = Farme 2 Mio. Reis.
+@lb_descr_rice_single = Farme 100000 Reis.
+@lb_descr_ores = Farme 20000 Quarz.
+@lb_descr_ores_single = Farme 200 Quarz.
+@lb_descr_bamboo = Farme 500 Mio. Bambus.
+@lb_descr_bamboo_single = Farme 25 Mio. Bambus.
+@lb_descr_dynamite = Farme 10 Mio. Dynamit.
+@lb_descr_dynamite_single = Farme 100000 Dynamit.
+@lb_descr_mushrooms = Farme 240000 Pilze.
+@lb_descr_mushrooms_single = Farme 30000 Pilze.
+@lb_descr_pyramids = Farme 150000 Energie.
+@lb_descr_pyramids_single = Farme 30000 Energie.
+@lb_descr_treasure_map = Farme 115000 Gold.

@@ -23,9 +23,9 @@
 @object_descr_dirt = 흙입니다.
 @object_descr_rock = 단단한 바위입니다.
 @object_descr_clay = 점토 블록입니다. 비옥해서 벼를 심기에 완벽합니다. 벼가 다 자라면 그 아래의 점토가 다시 흙으로 바뀝니다.
-@object_descr_blue_block = 파란색 블록입니다.
-@object_descr_red_block = 빨간색 블록입니다.
-@object_descr_green_block = 초록색 블록입니다.
+@object_descr_block_blue = 파란색 블록입니다.
+@object_descr_block_red = 빨간색 블록입니다.
+@object_descr_block_green = 초록색 블록입니다.
 @object_descr_coal = 퇴적성 석탄이 풍부한 블록입니다.
 @object_descr_iron = 자철광 원석이 들어 있는 블록입니다.
 @object_descr_quartz = 결정질 석영을 감싼 블록입니다.

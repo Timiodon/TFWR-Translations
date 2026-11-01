@@ -3,13 +3,9 @@
 <right>[Perlita e Solo Franco ->](docs/unlocks/special_soils.md)
 ---
 # Arroz
+Sob a superfície e a camada de `Grounds.Dirt`, há uma fina camada de `Grounds.Clay`. Acontece que esse solo fértil e encharcado é perfeito para plantar mudas de arroz.
 
-Sob a superfície, você percebeu uma fina camada de argila. Acontece que esse solo fértil é perfeito para plantar mudas de arroz.
-
-O arroz seca a argila em que foi plantado. Cada bloco de argila só pode ser usado uma vez. Felizmente, a camada tem alguns blocos de espessura. E, é claro, você sempre pode usar `clear()` para restaurar a camada de argila.
-
-O código a seguir pode ajudar você a escavar para baixo até encontrar argila.
-
+O código a seguir pode ajudar você a escavar para baixo até encontrar argila e plantar arroz:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,9 +14,9 @@ O código a seguir pode ajudar você a escavar para baixo até encontrar argila.
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
-    "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
+    "collapsing": true,
+    "autoplay": false,
+    "items": [],
     "exclude_unlocks": ["watering", "fertilizer"],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 8,
@@ -35,9 +31,12 @@ move(East)
 while get_ground_type() != Grounds.Clay:
     dig()
 plant(Entities.Rice)
-move(North)
-do_a_flip()
 }}
+
+Enquanto o drone estiver sobre `Grounds.Clay`, use `plant(Entities.Rice)` para plantar arroz, `can_harvest()` para verificar se amadureceu e `harvest()` para colher.
+
+## Terraços
+Ao plantar arroz, o solo vira `Grounds.Rice_Terrace` para oferecer as condições ideais de maturação. Quando o arroz amadurece, o solo seca e vira `Grounds.Dry_Rice_Terrace`, onde não é possível plantar mais arroz. Felizmente a camada tem alguns blocos de espessura: remova o bloco com `dig()` e plante mais arroz na `Grounds.Clay` abaixo. Se a camada acabar, use `clear()` para restaurar o mundo e escave até uma nova camada.
 
 ---
 

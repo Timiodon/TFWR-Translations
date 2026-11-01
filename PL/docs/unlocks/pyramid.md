@@ -1,11 +1,11 @@
 [<- Bambus](docs/unlocks/bamboo.md)
 ---
 # Piramidy
+Pod ziemią znajdują się teraz starożytne piramidy, z których można pozyskiwać energię, aby przyspieszyć drona!
 
-Pod ziemią znajdują się teraz starożytne piramidy, z których można pozyskiwać energię!
+Piramidy są zbudowane z bloków piasku (`Grounds.Sand`). Pod samą piramidą znajduje się fundament z wapienia (`Grounds.Limestone`). Są stare i zerodowane, dlatego znajdziesz je tylko w częściowo zniszczonym stanie. Warstwa fundamentu jest zawsze kompletna, ale w piasku będą dziury.
 
-Piramidy są zbudowane z bloków piasku (`Grounds.Sand`). Pod samą piramidą znajduje się fundament z wapienia (`Grounds.Limestone`). Są stare i zerodowane, dlatego znajdziesz je tylko w częściowo zniszczonym stanie. Warstwa fundamentu jest zawsze kompletna, ale w piasku będą dziury. Tak wygląda odkopana piramida:
-
+Tak wyglądają ruiny piramidy po odkopaniu:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -29,10 +29,13 @@ Piramidy są zbudowane z bloków piasku (`Grounds.Sand`). Pod samą piramidą zn
 jump(Unlocks.Pyramid)
 move(North)
 #CODE
+# Kop, aby znaleźć podstawę piramidy
 while get_ground_type() != Grounds.Limestone:
     dig()
-do_a_flip()
-z = get_pos_z()
+
+z = get_pos_z() # Zapamiętaj głębokość podstawy
+
+# Wykop wszystko, co nie jest częścią piramidy
 for i in range(6):
     for j in range(6):
         while (get_ground_type() != Grounds.Limestone
@@ -43,9 +46,8 @@ for i in range(6):
     move(East)
 }}
 
-Bloki nad piramidą są zawsze ziemią. Możesz wykorzystać ten fakt, aby odkopać piramidę wydajniej niż w powyższym kodzie.
-
-Jak widać, w piasku znajduje się kilka dziur, które trzeba wypełnić. Gdy uzupełnisz braki i przywrócisz piramidę do pierwotnego stanu, konstrukcja rozpadnie się, a ty otrzymasz energię w nagrodę.
+## Odbudowa piramidy
+Jak widać, w piasku znajduje się kilka dziur, które trzeba wypełnić. Gdy uzupełnisz braki i przywrócisz piramidę do pierwotnego stanu, konstrukcja rozpadnie się, a pośrodku wapiennej podstawy pojawi się duży słonecznik. Zbierz go, aby otrzymać `Items.Power`. Im większa ukończona piramida, tym więcej energii otrzymasz.
 
 Piramidę można odnowić, umieszczając bloki poleceniem `place(Grounds.Sand)`. Piasek to specjalny blok, który natychmiast się zawali, jeśli nie ma odpowiedniego podparcia. Każdy blok piasku musi leżeć bezpośrednio na wapieniu albo na powierzchni 3x3 z bloków piasku. Oto mała ręcznie zbudowana piramida pokazowa. Oczywiście samodzielne zbudowanie jej nie daje energii:
 
@@ -69,26 +71,42 @@ Piramidę można odnowić, umieszczając bloki poleceniem `place(Grounds.Sand)`.
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
 }
 #CODE
+# Potrzebujemy wapiennej podstawy pod piasek
 for i in range(3):
     for j in range(3):
         place(Grounds.Limestone)
         move(North)
     move(East)
-    
+
+# Ułóż na wapieniu warstwę piasku 3x3
 for i in range(3):
     for j in range(3):
         place(Grounds.Sand)
         move(North)
     move(East)
-    
-move(North)
-move(East)
-place(Grounds.Sand)
+
+# Spróbuj ułożyć kolejną warstwę 3x3
+# Tylko środkowy blok ma podparcie i pozostaje
+for i in range(3):
+    for j in range(3):
+        place(Grounds.Sand)
+        move(North)
+    move(East)
 }}
 
 Prawidłowo odnowiona piramida ma kwadratowy fundament z wapienia o nieparzystej długości boku, na przykład 5x5. Nad nim znajduje się warstwa bloków piasku tego samego rozmiaru (5x5), a następnie coraz mniejsze warstwy: 3x3 i 1x1.
 
-Po ukończeniu piramida rozpada się, a pośrodku pojawia się duży słonecznik. Możesz go zebrać, aby otrzymać energię. Im większa ukończona piramida, tym więcej energii otrzymasz.
+Bloki nad piramidą są zawsze ziemią. Możesz wykorzystać ten fakt, aby odkopać piramidę wydajnie.
+
+## Energia
+Dopóki masz energię, dron będzie jej używał, aby działać dwa razy szybciej.
+Zużywa 1 jednostkę energii co 30 akcji, takich jak ruch, zbiór czy sadzenie.
+Wykonywanie innych instrukcji kodu również może zużywać energię, ale znacznie mniej niż akcje drona.
+
+Ogólnie rzecz biorąc, wszystko, co jest przyspieszane przez ulepszenia prędkości, jest również przyspieszane przez energię.
+Wszystko, co jest przyspieszane przez energię, zużywa ją proporcjonalnie do czasu potrzebnego na wykonanie, ignorując ulepszenia prędkości.
+
+Energia nie wpływa na `dig()`.
 
 ---
 

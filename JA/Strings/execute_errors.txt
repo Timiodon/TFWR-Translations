@@ -81,3 +81,6 @@ x += 1`
 @error_non_jumpable_unlock = このアンロックにはジャンプできません。
 @error_only_first_drone_can_jump = 最初のドローンだけが`jump()`を実行できます。
 @error_can_only_jump_once = 1つのプログラムで`jump()`を実行できるのは1回だけです。
+@error_dig_not_allowed = このランキングでは`dig()`を使用できません。
+@error_plant_not_allowed = このランキングでは`plant()`を使用できません。
+@error_jump_not_allowed = ランキングでは`jump()`を使用できません。

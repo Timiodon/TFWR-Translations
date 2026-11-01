@@ -130,20 +130,24 @@ takes `1` tick to execute.
 example:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 Find out what kind of entity is under the drone.
 
-returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
+If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+
+returns `None` if the checked tile is empty, otherwise returns the type of the entity on that tile.
 
 takes `1` tick to execute.
 
 example:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 Find out what kind of ground is under the drone.
 
-returns the type of the ground under the drone.
+If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+
+returns the type of the ground on the checked tile.
 
 takes `1` tick to execute.
 
@@ -271,7 +275,7 @@ If `dictionary` is a dictionary, it creates a copy of it.
 
 returns a dictionary.
 
-takes `1 + len(dictionary)` ticks to execute.
+takes `1 + 2*len(dictionary)` ticks to execute.
 
 example:
 `new_dict = dict()`
@@ -314,11 +318,11 @@ example:
 `set_execution_speed(1)`
 @code_tooltip_set_world_size = `set_world_size(size)`
 Limits the size of the farm to better see what's happening.
-Also clears the farm and resets the drone position.
 Sets the farm to a `size` x `size` grid.
 The smallest `size` possible is `3`.
 A `size` smaller than `3` will change the grid back to its full size.
 The effect will also stop when the execution stops.
+It also clears the farm and resets the drone's position, but only if the size has actually changed.
 
 returns `None`
 
@@ -469,7 +473,6 @@ while True:
     if spawn_drone(harvest_column, i):
         move(East)
         i = (i + 1) % 10`
-
 @code_tooltip_wait_for = `wait_for(drone)`
 Waits until the given `drone` terminates.
 
@@ -486,7 +489,6 @@ def zero_arg_wrapper():
     return get_entity_type_in_direction(North)
 handle = spawn_drone(zero_arg_wrapper)
 print(wait_for(handle))`
-
 @code_tooltip_has_finished = `has_finished(drone)`
 Checks if the given `drone` has finished.
 
@@ -499,7 +501,6 @@ example:
 while not has_finished(drone):
     do_something_else()
 result = wait_for(drone)`
-
 @code_tooltip_max_drones = `max_drones()`
 
 returns the maximum number of drones that you can have in the farm.
@@ -510,7 +511,6 @@ example:
 `while num_drones() < max_drones():
     spawn_drone(task)
     move(East)`
-
 @code_tooltip_num_drones = `num_drones()`
 
 returns the number of drones currently in the farm.
@@ -521,7 +521,6 @@ example:
 `while num_drones() < max_drones():
     spawn_drone(task)
     move(East)`
-
 @code_tooltip_quick_print = `quick_print(*args)`
 Prints a value just like `print(*args)` but it doesn't stop to write it into the air so it can only be found on the output page.
 
@@ -540,7 +539,6 @@ takes `200` ticks to execute.
 
 example:
 `change_hat(Hats.Dinosaur_Hat)`
-
 @code_tooltip_max = `max(*args)`
 Gets the maximum of a sequence of elements or several passed arguments.
 Can be used on numbers and strings.
@@ -667,6 +665,8 @@ Dig a tile downward.
 
 Digging speed depends on the block's hardness and on the drone's drill strength.
 
+takes `hardness / drill strength` seconds to dig a block. Digging times are not affected by speed upgrades.
+
 example:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -675,6 +675,8 @@ Uses coal to look for iron.
 returns the direction to the nearest iron ore (`North`, `East`, `South`, or `West`) if one is nearby. Returns `None` if no iron is nearby, or if you don't have enough coal, or if the drone is already above a piece of iron.
 
 costs 1 coal to execute.
+
+takes `1` tick to execute.
 
 example:
 `while prospect_iron() != None:
@@ -686,12 +688,18 @@ returns the euclidean distance (3D distance) from the drone to the next quartz b
 
 costs 1 iron to execute.
 
+takes `1` tick to execute.
+
 example:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 Place blocks.
 
 You can specify the block to be placed. Only blocks without special function can be placed. For example, you can `place(Grounds.Rock)` but not `place(Grounds.Clay)`.
+
+returns `True` if the block was placed, `False` otherwise.
+
+takes `200` ticks to execute if it succeeded, `1` tick otherwise.
 
 example:
 `place(Grounds.Rock)`
@@ -702,12 +710,16 @@ You cannot push bocks upwards.
 
 returns `True` if the block was pushed, `False` otherwise.
 
+takes `200` ticks to execute if the block was pushed, `1` tick otherwise.
+
 example:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 Checks whether the block under the drone can be pushed.
 
 returns `True` if the block under the drone can be pushed, `False` otherwise.
+
+takes `1` tick to execute.
 
 example:
 `can_push(North)`
@@ -716,5 +728,23 @@ Jumps to an underground feature associated with `unlock`.
 
 You can only execute `jump` once per script.
 
+takes `200` ticks to execute.
+
 example:
 `jump(Unlocks.Iron)`
+@code_tooltip_hover = `hover(height)`
+Change the height the drone hovers above ground.
+
+The default height is `1` and most drone actions will reset the hover height back to the default.
+
+takes `200` ticks to execute if it succeeded, `1` tick otherwise.
+
+example:
+`hover(5)`
+@code_tooltip_get_hover = `get_hover()`
+Get the current height the drone hovers above ground.
+
+takes `1` tick to execute.
+
+example:
+`height = get_hover()`

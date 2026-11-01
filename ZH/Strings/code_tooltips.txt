@@ -130,20 +130,24 @@ z 坐标从 `0` 开始，向下挖掘时递减。
 示例：
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 判断无人机下方实体的类型。
 
-如果地块为空，则返回 `None`，否则返回无人机下方实体的类型。
+如果 `direction` 不是 `None`，则改为检查指定方向的相邻地块。
+
+如果检查的地块为空，返回 `None`；否则返回该地块上的实体类型。
 
 需要 `1` tick 执行。
 
 示例：
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 判断无人机下方地块的类型。
 
-返回无人机下方地块的类型。
+如果 `direction` 不是 `None`，则改为检查指定方向的相邻地块。
+
+返回所检查地块的地面类型。
 
 需要 `1` tick 执行。
 
@@ -508,8 +512,8 @@ result = wait_for(drone)`
 
 示例：
 `while num_drones() < max_drones():
- spawn_drone("文件名")
- move(East)`
+    spawn_drone(task)
+    move(East)`
 
 @code_tooltip_num_drones = `num_drones()`
 
@@ -667,6 +671,8 @@ list.insert(0, 0)`
 
 挖掘速度取决于地块的硬度和无人机的钻头强度。
 
+挖掘一个地块需要 `hardness / drill strength` 秒。速度升级不会影响挖掘时间。
+
 示例：
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -675,6 +681,8 @@ list.insert(0, 0)`
 如果附近有铁矿石，返回前往最近铁矿的方向（`North`、`East`、`South` 或 `West`）。如果附近没有铁矿、煤炭不足，或者无人机已在铁矿上方，则返回 `None`。
 
 执行需消耗 1 份煤炭。
+
+需要 `1` tick 执行。
 
 示例：
 `while prospect_iron() != None:
@@ -686,12 +694,18 @@ list.insert(0, 0)`
 
 执行需消耗 1 份铁矿。
 
+需要 `1` tick 执行。
+
 示例：
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 放置地块。
 
 你可以指定要放置的地块，但只能放置没有特殊功能的地块。例如，你可以使用 `place(Grounds.Rock)`，却不能使用 `place(Grounds.Clay)`。
+
+成功放置地块时返回 `True`，否则返回 `False`。
+
+如果成功，需要 `200` ticks 执行，否则需要 `1` tick。
 
 示例：
 `place(Grounds.Rock)`
@@ -702,12 +716,16 @@ list.insert(0, 0)`
 
 如果成功推动地块，则返回 `True`，否则返回 `False`。
 
+成功推动地块需要 `200` tick，否则需要 `1` tick。
+
 示例：
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 检查无人机下方的地块能否被推动。
 
 如果可以推动，则返回 `True`，否则返回 `False`。
+
+需要 `1` tick 执行。
 
 示例：
 `can_push(North)`
@@ -716,6 +734,8 @@ list.insert(0, 0)`
 
 每次运行脚本只能执行一次 `jump`。
 
+需要 `200` ticks 执行。
+
 示例：
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -723,10 +743,14 @@ list.insert(0, 0)`
 
 默认高度为 `1`，大多数无人机操作都会将悬停高度重置为默认值。
 
+如果成功，需要 `200` ticks 执行，否则需要 `1` tick。
+
 示例：
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 获取无人机当前在地面上方悬停的高度。
+
+需要 `1` tick 执行。
 
 示例：
 `height = get_hover()`

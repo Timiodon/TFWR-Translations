@@ -34,6 +34,7 @@
 @option_tooltip_drone_volume = 调整无人机嗡嗡声的音量。
 @option_tooltip_SFX_volume = 调整农场音效的音量。
 @option_tooltip_UI_volume = 调整按钮点击等 UI 音效的音量。
+@option_tooltip_mute_in_background = 游戏窗口未处于前台时，静音所有游戏音频。
 @option_tooltip_ambience_volume = 调整风声和鸟鸣等环境音的音量。
 @option_tooltip_volume_damping = 每个同时播放的音效的音量都会乘以这个系数，这样在无人机高速运行时你的耳朵就不会爆炸了。
 @option_tooltip_sfx_limit = 限制每秒可播放的声音数量。
@@ -69,3 +70,7 @@
 @keybind_tooltip_next_step = 如果执行已暂停，则执行单步操作。
 @keybind_tooltip_pause_execution = 暂停执行。
 @keybind_tooltip_hide_UI = 隐藏或显示 HUD。
+@option_tooltip_automatic_autocomplete = 输入时自动显示代码补全建议。关闭此选项后，代码补全快捷键仍然有效。
+@option_tooltip_focus_errors = 将镜头移向屏幕外的错误，以免遗漏。
+@option_tooltip_window_docking = 将窗口拖到一起时，允许相互吸附。
+@keybind_tooltip_autocomplete = 打开代码补全窗口。

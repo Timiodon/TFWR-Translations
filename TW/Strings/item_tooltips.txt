@@ -1,4 +1,5 @@
 @item_tooltip_template_amount = 擁有數量：{0}
+@item_tooltip_template_rate = {0} 個/分鐘（最高：{1}）
 @item_descr_carrot = 透過收穫胡蘿蔔獲得。
 @item_descr_rice = 透過收穫水稻獲得。
 @item_descr_fertilizer = 呼叫 `use_item(Items.Fertilizer)` 可使植物的剩餘生長時間立即縮短 2 秒。

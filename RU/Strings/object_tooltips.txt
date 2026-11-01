@@ -23,9 +23,9 @@
 @object_descr_dirt = Это почва.
 @object_descr_rock = Это твердая порода.
 @object_descr_clay = Блок глины. Плодородная земля, идеально подходящая для риса. Когда рис созреет, глина под ним снова превратится в почву.
-@object_descr_blue_block = Синий блок.
-@object_descr_red_block = Красный блок.
-@object_descr_green_block = Зеленый блок.
+@object_descr_block_blue = Синий блок.
+@object_descr_block_red = Красный блок.
+@object_descr_block_green = Зеленый блок.
 @object_descr_coal = Блок с большим содержанием осадочного угля.
 @object_descr_iron = Блок, содержащий необработанный магнетит.
 @object_descr_quartz = Блок с кристаллическим кварцем внутри.

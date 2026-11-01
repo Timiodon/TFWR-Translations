@@ -3,12 +3,11 @@
 <right>[Mapa do Tesouro ->](docs/unlocks/treasure_map.md)
 ---
 # Ferro
+Depois de encontrar carvão em `Grounds.Dirt`, escave além da camada de `Grounds.Clay` até `Grounds.Rock` para encontrar ferro.
 
-Você descobriu veios de ferro na camada de pedra abaixo da argila.
+Ao contrário do carvão, os veios de ferro também se estendem verticalmente. Todos os blocos de ferro de um veio ficam diretamente adjacentes; nunca se conectam apenas na diagonal.
 
-Os veios de ferro começam pequenos, e você precisará de sorte para encontrá-los. Conforme este desbloqueio sobe de nível, o tamanho máximo dos veios aumenta. Para encontrar ferro de forma mais confiável, confira também o desbloqueio de prospecção de minério.
-
-Um veio de ferro é sempre contínuo, sem saltos diagonais. Se encontrar um pedaço de ferro, procure mais abaixo ou ao lado para garantir que coletou o veio inteiro.
+Os veios de ferro começam pequenos, e você precisará de sorte para encontrá-los. Melhorar o ferro aumenta o tamanho máximo dos veios e facilita encontrá-los por acaso. Para encontrá-los com segurança, desbloqueie a [prospecção](docs/unlocks/prospecting.md).
 
 {{codeexample 
 {
@@ -18,23 +17,25 @@ Um veio de ferro é sempre contínuo, sem saltos diagonais. Se encontrar um peda
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
+    "collapsing": true,
+    "autoplay": false,
     "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
     "world_size": {"x": 5, "y": 5},
     "execution_speed": 1,
-    "digging_speed": 4,
+    "digging_speed": 10,
     "action_ticks": 200,
-    "operation_ticks": 200,
-    "seed": 9,
-    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
+    "operation_ticks": 50,
+    "seed": 5,
+    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "quartz"]
 }
 #SETUP
-jump(Unlocks.Iron)
 #CODE
-for i in range(4):
+# Escave até aparecer um bloco de ferro
+while get_ground_type() != Grounds.Iron:
     dig()
-do_a_flip()
+
+# Extraia o ferro
+dig()
 }}
 
 ---
@@ -42,4 +43,3 @@ do_a_flip()
 [Estatísticas](docs/stats.md)      [Mineração](docs/unlocks/mining.md)      [Prospecção de Ferro](docs/unlocks/prospecting.md)      [Sentidos Subterrâneos](docs/unlocks/underground_senses.md)
 
 [move()](functions/move)      [dig()](functions/dig)
-

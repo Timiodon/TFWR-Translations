@@ -23,3 +23,11 @@
 @hat_descr_golden_pumpkin_hat = Eine goldene Version des Kürbishuts.
 @hat_descr_golden_sunflower_hat = Eine goldene Version des Sonnenblumenhuts.
 @hat_descr_the_farmers_remains = Was ist passiert?
+@hat_descr_bucket = Ein Eiseneimer für deinen Kopf.
+@hat_descr_coal_hat = Ein Hut in Form eines Kohlestücks. Etwas rußig.
+@hat_descr_rice_hat = Ein Hut in Form eines Reiskorns.
+@hat_descr_quartz_hat = Ein funkelnder Quarzhut.
+@hat_descr_bamboo_hat = Ein klassischer Bambushut.
+@hat_descr_dynamite_hat = Ein explosiver Look.
+@hat_descr_mushroom_hat = Ein niedlicher Pilzhut.
+@hat_descr_mining_hat = Ein Schutzhelm, der die Drohne vor herabfallenden Steinen schützt.

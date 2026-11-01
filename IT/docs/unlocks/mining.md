@@ -3,7 +3,6 @@
 <right>[Carbone ->](docs/unlocks/coal.md)
 ---
 # Estrazione
-
 Il tuo drone ha ottenuto una trivella rudimentale, che gli permette di cercare tesori nel sottosuolo.
 
 Puoi usare il comando `dig()` per scavare nel blocco sotto di te.
@@ -46,21 +45,21 @@ Se vuoi tornare in superficie, puoi usare `clear()` in qualsiasi momento. Questo
 Passando il mouse su un blocco vedrai il suo nome, la stabilità e la durezza.
 
 # Trivella
-
 Scavando più in profondità noterai che i blocchi diventano più duri e richiedono più tempo per essere scavati. Per fortuna possiamo potenziare la trivella!
 
-Puoi usare `get_hardness()` per controllare la durezza del blocco sotto di te. Se incontri una zona di blocchi particolarmente duri, potrebbe essere meglio aggirarli per avanzare più velocemente:
+Per aiutare il drone a orientarsi nel sottosuolo, sblocca presto i [Sensi Sotterranei](docs/unlocks/underground_senses.md). Potrà così controllare la propria posizione z e il tipo, la durezza e la stabilità del terreno sottostante.
+
+Per esempio, con i [Sensi Sotterranei](docs/unlocks/underground_senses.md) puoi usare `get_hardness()` per controllare la durezza del blocco sotto di te. Se incontri una zona di blocchi particolarmente duri, potrebbe essere meglio aggirarli per avanzare più velocemente:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 Naturalmente i blocchi diventano sempre più duri scendendo, quindi questa strategia è utile solo fino a un certo punto.
 
 ## Crolli
-
 Scavare verso il basso provoca il crollo dei blocchi circostanti. I quattro blocchi accanto al drone vengono sempre distrutti. Poi il crollo si propaga in base alla stabilità del terreno. Un blocco con stabilità 1, come il prato, può sopportare una differenza di altezza pari a 1. In altre parole, se il prato ha un vicino verticale o orizzontale con una coordinata z più profonda di almeno 2 blocchi, viene distrutto.
 
 La stabilità di un blocco è indicata nel tooltip visualizzato al passaggio del mouse.

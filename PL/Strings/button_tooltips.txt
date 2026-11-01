@@ -34,6 +34,7 @@
 @option_tooltip_drone_volume = Dostosuj głośność brzęczenia drona.
 @option_tooltip_SFX_volume = Dostosuj głośność efektów dźwiękowych z farmy.
 @option_tooltip_UI_volume = Dostosuj głośność dźwięków interfejsu, takich jak kliknięcia przycisków.
+@option_tooltip_mute_in_background = Wycisza wszystkie dźwięki gry, gdy jej okno jest nieaktywne.
 @option_tooltip_ambience_volume = Dostosuj głośność dźwięków otoczenia, takich jak wiatr i ptaki.
 @option_tooltip_volume_damping = Głośność jest mnożona przez ten współczynnik dla każdego jednocześnie odtwarzanego efektu dźwiękowego, aby twoje uszy nie eksplodowały przy dużych prędkościach drona.
 @option_tooltip_sfx_limit = Ogranicza liczbę dźwięków, które mogą być odtwarzane na sekundę.
@@ -69,3 +70,7 @@
 @keybind_tooltip_next_step = Wykonaj jeden krok, jeśli wykonywanie jest wstrzymane.
 @keybind_tooltip_pause_execution = Wstrzymaj wykonywanie.
 @keybind_tooltip_hide_UI = Ukryj lub pokaż HUD.
+@option_tooltip_automatic_autocomplete = Automatycznie pokazuje podpowiedzi autouzupełniania podczas pisania. Skrót autouzupełniania działa również po wyłączeniu tej opcji.
+@option_tooltip_focus_errors = Przesuwa kamerę do błędów poza ekranem, aby żaden ci nie umknął.
+@option_tooltip_window_docking = Pozwala łączyć okna po przeciągnięciu ich obok siebie.
+@keybind_tooltip_autocomplete = Otwiera okno autouzupełniania kodu.

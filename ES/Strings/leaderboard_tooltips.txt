@@ -14,3 +14,17 @@
 @lb_descr_wood_single = Consigue 500 millones de madera.
 @lb_descr_carrots = Consigue 2000 millones de zanahorias.
 @lb_descr_carrots_single = Consigue 100 millones de zanahorias.
+@lb_descr_fastest_underground_reset = Automatiza por completo el subsuelo.
+@lb_descr_rice = Cultiva 2 millones de arroz.
+@lb_descr_rice_single = Cultiva 100000 de arroz.
+@lb_descr_ores = Obtén 20000 de cuarzo.
+@lb_descr_ores_single = Obtén 200 de cuarzo.
+@lb_descr_bamboo = Cultiva 500 millones de bambú.
+@lb_descr_bamboo_single = Cultiva 25 millones de bambú.
+@lb_descr_dynamite = Obtén 10 millones de dinamita.
+@lb_descr_dynamite_single = Obtén 100000 de dinamita.
+@lb_descr_mushrooms = Obtén 240000 hongos.
+@lb_descr_mushrooms_single = Obtén 30000 hongos.
+@lb_descr_pyramids = Obtén 150000 de energía.
+@lb_descr_pyramids_single = Obtén 30000 de energía.
+@lb_descr_treasure_map = Obtén 115000 de oro.

@@ -3,12 +3,11 @@
 <right>[보물지도 ->](docs/unlocks/treasure_map.md)
 ---
 # 철
+`Grounds.Dirt`에서 석탄을 찾았다면 `Grounds.Clay`층을 지나 `Grounds.Rock`까지 더 파서 철을 찾을 수 있습니다.
 
-점토 아래의 암석층에서 철 광맥을 발견했습니다.
+석탄 광맥과 달리 철 광맥은 수직으로도 뻗습니다. 한 광맥의 철 블록은 항상 직접 맞닿으며 대각선으로만 연결되지는 않습니다.
 
-철 광맥은 처음에는 작아서 찾으려면 약간의 운이 필요합니다. 이 해금 항목의 레벨이 올라가면 광맥의 최대 크기가 커집니다. 철을 더 안정적으로 찾고 싶다면 철 탐사 해금도 확인해 보세요.
-
-철 광맥은 대각선으로 떨어져 이어지는 일 없이 항상 연속되어 있습니다. 철 조각을 찾았다면 아래쪽이나 옆쪽에 더 있는지 살펴 광맥 전체를 캐내세요.
+철 광맥은 처음에는 작아서 찾으려면 약간의 운이 필요합니다. 철을 더 해금하면 최대 광맥 크기가 커져 우연히 발견하기 쉬워집니다. 확실히 찾으려면 [철 탐사](docs/unlocks/prospecting.md)를 해금하세요.
 
 {{codeexample 
 {
@@ -18,23 +17,25 @@
     "show_code": true,
     "show_inventory": true,
     "show_output": false,
-    "collapsing": false,
-    "autoplay": true,
+    "collapsing": true,
+    "autoplay": false,
     "items": [{"item": "hay", "n": 100}, {"item": "wood", "n": 100}],
     "world_size": {"x": 5, "y": 5},
     "execution_speed": 1,
-    "digging_speed": 4,
+    "digging_speed": 10,
     "action_ticks": 200,
-    "operation_ticks": 200,
-    "seed": 9,
-    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
+    "operation_ticks": 50,
+    "seed": 5,
+    "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "quartz"]
 }
 #SETUP
-jump(Unlocks.Iron)
 #CODE
-for i in range(4):
+# 철 블록이 나올 때까지 굴착
+while get_ground_type() != Grounds.Iron:
     dig()
-do_a_flip()
+
+# 철 채굴
+dig()
 }}
 
 ---

@@ -20,6 +20,7 @@
 @UI volume = Volume UI
 @ambience volume = Volume Ambiente
 @drone volume = Volume Drone
+@mute in background = Silenzia in background
 @fps limit = Framerate Massimo
 @autosave = Autosalvataggio Codice
 @autosave progress = Autosalvataggio Progressi
@@ -63,3 +64,7 @@
 @Light = Chiaro
 @Lunar New Year = Capodanno Lunare
 @Custom = Personalizzato
+@automatic autocomplete = Completamento automatico
+@focus errors = Mostra errori
+@window docking = Aggancio finestre
+@autocomplete = Completamento

@@ -90,6 +90,9 @@ set_execution_speed(1)`
 @unlock_descr_leaderboard = 最速タイムを競うランキングに参加します。
 
 `leaderboard_run(Leaderboards.Hay, "hay_file", speedup)`
+@unlock_descr_underground_leaderboard = 地下ランキングで最速タイムを競います。
+
+`leaderboard_run(Leaderboards.Rice, "rice_file", speedup)`
 @unlock_descr_dicts = 辞書とセットへのアクセスを取得します。
 
 `right_of = {North:East, East:South, South:West, West:North}`
@@ -128,7 +131,7 @@ other_file.function()`
 @unlock_descr_drill = ドリルの強さを高めます。
 @unlock_descr_debug_place = カラフルなブロックを配置します。
 
-`place(Grounds.Red_Block)`
+`place(Grounds.Block_Blue)`
 @unlock_descr_underground_senses = 地下のタイルを調べたり操作したりするためのドローンセンサーです。
 
 `while get_pos_z() < 100:
@@ -187,6 +190,7 @@ other_file.function()`
 @hats = 帽子
 @import = インポート
 @leaderboard = ランキング
+@underground_leaderboard = 地下ランキング
 @lists = リスト
 @loops = ループ
 @mazes = 迷路

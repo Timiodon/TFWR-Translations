@@ -1,13 +1,13 @@
 [<- Węgiel](docs/unlocks/coal.md)
 ---
 # Skok
+Twój dron odblokował polecenie `jump()`. Używa się go, przekazując odblokowanie jako argument, na przykład `Unlocks.Iron`.
 
-Twój dron odblokował polecenie `jump()`.
+To polecenie pozwala wskazać wybrane zasoby pod ziemią i natychmiast skoczyć w dół do nich. Jest szczególnie przydatne podczas debugowania lub do powrotu do niedawno pominiętej żyły rudy.
 
-To polecenie pozwala wskazać określone odblokowania i przenieść się do nich. Jest szczególnie przydatne podczas debugowania lub do powrotu do niedawno pominiętej żyły rudy. Używa się go, przekazując odblokowanie jako argument, na przykład `Unlocks.Iron`.
+Po skoku cel powinien być najwyżej 3 bloki pod górną powierzchnią. `jump()` można użyć tylko raz podczas jednego wykonania programu. Kolejne próby wywołają błąd.
 
-`jump()` działa tylko z odblokowaniami występującymi pod ziemią, na przykład `jump(Unlocks.Rice)` lub `jump(Unlocks.Iron)`.
-
+Poniższy przykład skacze do [ryżu](docs/unlocks/rice.md), znajduje warstwę gliny i sadzi rząd tarasów ryżowych:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -18,27 +18,43 @@ To polecenie pozwala wskazać określone odblokowania i przenieść się do nich
     "show_output": false,
     "collapsing": true,
     "autoplay": false,
-    "items": [],
+    "items": [{"item": "hay", "n": 10}],
     "world_size": {"x": 4, "y": 4},
     "execution_speed": 1,
-    "digging_speed": 3,
+    "digging_speed": 4,
     "action_ticks": 200,
-    "operation_ticks": 200,
+    "operation_ticks": 20,
     "seed": 1,
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms"],
     "starting_chunk": 0
 }
 #CODE
-dig()
-dig()
-dig()
-jump(Unlocks.Iron)
-do_a_flip()
+# Skocz w pobliże ryżu
+jump(Unlocks.Rice)
+
+# Posadź rząd tarasów ryżowych
+for i in range(get_world_size()):
+    # Skok jest niedokładny, wykop pozostałe bloki
+    while get_ground_type() != Grounds.Clay:
+        dig()
+
+    plant(Entities.Rice)
+
+    move(East)
 }}
 
-Skok nie zawsze przeniesie cię bezpośrednio do docelowego odblokowania, więc być może trzeba będzie trochę się rozejrzeć, ale cel na pewno znajduje się w pobliżu.
-
-`jump()` można użyć tylko raz podczas jednego wykonania programu.
+## Obsługiwane odblokowania
+`jump()` działa tylko z następującymi odblokowaniami górniczymi:
+- Węgiel
+- Żelazo
+- Kwarc
+- Ryż
+- Skamieniałe dynie
+- Specjalne gleby
+- Piramida
+- Mapa skarbów
+- Grzyby
+- Dynamit
 
 ---
 

@@ -130,20 +130,24 @@ z 위치는 `0`에서 시작하며 아래로 굴착할수록 감소합니다.
 예시:
 `for i in range(get_world_size()):
     move(North)`
-@code_tooltip_get_entity_type = `get_entity_type()` 
+@code_tooltip_get_entity_type = `get_entity_type(direction = None)`
 드론 아래에 어떤 종류의 엔터티가 있는지 알아냅니다.
 
-타일이 비어 있으면 `None`을 반환하고, 그렇지 않으면 드론 아래에 있는 엔터티의 종류를 반환합니다.
+`direction`이 `None`이 아니면 지정한 방향의 인접 타일을 대신 확인합니다.
+
+확인한 타일이 비어 있으면 `None`을, 그렇지 않으면 해당 타일의 개체 종류를 반환합니다.
 
 실행하는 데 `1`틱이 필요합니다.
 
 예시:
 `if get_entity_type() == Entities.Grass:
     harvest()`
-@code_tooltip_get_ground_type = `get_ground_type()` 
+@code_tooltip_get_ground_type = `get_ground_type(direction = None)`
 드론 아래에 어떤 종류의 땅이 있는지 알아냅니다.
 
-드론 아래에 있는 땅의 종류를 반환합니다.
+`direction`이 `None`이 아니면 지정한 방향의 인접 타일을 대신 확인합니다.
+
+확인한 타일의 땅 종류를 반환합니다.
 
 실행하는 데 `1`틱이 필요합니다.
 
@@ -667,6 +671,8 @@ list.insert(0, 0)`
 
 굴착 속도는 블록의 경도와 드론의 드릴 강도에 따라 달라집니다.
 
+블록을 굴착하는 데 `hardness / drill strength`초가 걸립니다. 굴착 시간은 속도 업그레이드의 영향을 받지 않습니다.
+
 예시:
 `dig()`
 @code_tooltip_prospect_iron = `prospect_iron()`
@@ -675,6 +681,8 @@ list.insert(0, 0)`
 근처에 철광석이 있으면 가장 가까운 철광석의 방향(`North`, `East`, `South`, `West` 중 하나)을 반환합니다. 근처에 철이 없거나, 석탄이 부족하거나, 드론이 이미 철 조각 위에 있으면 `None`을 반환합니다.
 
 실행 비용은 석탄 1개입니다.
+
+실행하는 데 `1`tick이 필요합니다.
 
 예시:
 `while prospect_iron() != None:
@@ -686,12 +694,18 @@ list.insert(0, 0)`
 
 실행 비용은 철 1개입니다.
 
+실행하는 데 `1`tick이 필요합니다.
+
 예시:
 `print(prospect_quartz())`
 @code_tooltip_place = `place(ground)`
 블록을 배치합니다.
 
 배치할 블록을 지정할 수 있습니다. 특수 기능이 없는 블록만 배치할 수 있습니다. 예를 들어 `place(Grounds.Rock)`은 가능하지만 `place(Grounds.Clay)`는 불가능합니다.
+
+블록을 놓았으면 `True`를, 아니면 `False`를 반환합니다.
+
+성공하면 `200`tick, 그렇지 않으면 `1`tick이 필요합니다.
 
 예시:
 `place(Grounds.Rock)`
@@ -702,12 +716,16 @@ list.insert(0, 0)`
 
 블록을 밀었으면 `True`를, 그렇지 않으면 `False`를 반환합니다.
 
+블록을 밀었으면 `200` tick, 아니면 `1` tick이 걸립니다.
+
 예시:
 `push(North)`
 @code_tooltip_can_push = `can_push(direction)`
 드론 아래의 블록을 밀 수 있는지 확인합니다.
 
 드론 아래의 블록을 밀 수 있으면 `True`를, 그렇지 않으면 `False`를 반환합니다.
+
+실행하는 데 `1`tick이 필요합니다.
 
 예시:
 `can_push(North)`
@@ -716,6 +734,8 @@ list.insert(0, 0)`
 
 스크립트당 `jump`는 한 번만 실행할 수 있습니다.
 
+실행하는 데 `200`tick이 필요합니다.
+
 예시:
 `jump(Unlocks.Iron)`
 @code_tooltip_hover = `hover(height)`
@@ -723,10 +743,14 @@ list.insert(0, 0)`
 
 기본 높이는 `1`이며, 대부분의 드론 동작은 떠 있는 높이를 기본값으로 되돌립니다.
 
+성공하면 `200`tick, 그렇지 않으면 `1`tick이 필요합니다.
+
 예시:
 `hover(5)`
 @code_tooltip_get_hover = `get_hover()`
 드론이 현재 지면 위에 떠 있는 높이를 가져옵니다.
+
+실행하는 데 `1`tick이 필요합니다.
 
 예시:
 `height = get_hover()`

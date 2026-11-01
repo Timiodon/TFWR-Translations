@@ -1,11 +1,11 @@
 [<- Bambú](docs/unlocks/bamboo.md)
 ---
 # Pirámides
+¡El subsuelo contiene ahora antiguas estructuras piramidales de las que puedes cosechar energía para acelerar tu dron!
 
-¡El subsuelo contiene ahora antiguas estructuras piramidales de las que puedes cosechar energía!
+Las pirámides están hechas de bloques de arena (`Grounds.Sand`). Debajo de la propia pirámide hay una capa de piedra caliza (`Grounds.Limestone`) que sirve como cimiento. Como son antiguas y están erosionadas, solo las encontrarás parcialmente destruidas. La capa de cimientos siempre está presente, pero habrá agujeros en la arena.
 
-Las pirámides están hechas de bloques de arena (`Grounds.Sand`). Debajo de la propia pirámide hay una capa de piedra caliza (`Grounds.Limestone`) que sirve como cimiento. Como son antiguas y están erosionadas, solo las encontrarás parcialmente destruidas. La capa de cimientos siempre está presente, pero habrá agujeros en la arena. Este es el aspecto de una pirámide al desenterrarla:
-
+Así se ve una pirámide en ruinas cuando la desentierras:
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -29,10 +29,13 @@ Las pirámides están hechas de bloques de arena (`Grounds.Sand`). Debajo de la 
 jump(Unlocks.Pyramid)
 move(North)
 #CODE
+# Excava hasta encontrar la base de una pirámide
 while get_ground_type() != Grounds.Limestone:
     dig()
-do_a_flip()
-z = get_pos_z()
+
+z = get_pos_z() # Recuerda la profundidad de la base
+
+# Excava todo lo que no forme parte de la pirámide
 for i in range(6):
     for j in range(6):
         while (get_ground_type() != Grounds.Limestone
@@ -43,9 +46,8 @@ for i in range(6):
     move(East)
 }}
 
-Los bloques que hay encima de la pirámide siempre son de tierra. Puedes aprovechar este dato si quieres desenterrar una pirámide de forma más eficiente que con el código anterior.
-
-Como puedes ver, hay varios agujeros en la arena que tendrás que rellenar. Cuando rellenes estos agujeros y restaures la pirámide a su estado original, esta se destruirá y recibirás energía como recompensa.
+## Restaurar la pirámide
+Como puedes ver, hay varios agujeros en la arena que tendrás que rellenar. Cuando rellenes estos agujeros y restaures la pirámide a su estado original, esta se destruirá y aparecerá un gran girasol en el centro de la base de caliza. Coséchalo para obtener `Items.Power`. Cuanto mayor sea la pirámide que completes, más energía recibirás.
 
 Puedes restaurar una pirámide colocando bloques con el comando `place(Grounds.Sand)`. La arena es un bloque especial que se derrumba inmediatamente si no está bien apoyado. Cada bloque de arena que coloques debe estar directamente sobre piedra caliza o sobre una cuadrícula de 3x3 bloques de arena. Aquí tienes una pequeña pirámide construida a mano como ejemplo. Por supuesto, construirla tú mismo no te dará energía:
 
@@ -69,26 +71,42 @@ Puedes restaurar una pirámide colocando bloques con el comando `place(Grounds.S
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "coal", "quartz"]
 }
 #CODE
+# Necesitamos una base de caliza para colocar arena
 for i in range(3):
     for j in range(3):
         place(Grounds.Limestone)
         move(North)
     move(East)
-    
+
+# Coloca una capa de arena de 3x3 sobre la caliza
 for i in range(3):
     for j in range(3):
         place(Grounds.Sand)
         move(North)
     move(East)
-    
-move(North)
-move(East)
-place(Grounds.Sand)
+
+# Intenta colocar otra capa de 3x3
+# Solo el bloque central tiene apoyo y permanece
+for i in range(3):
+    for j in range(3):
+        place(Grounds.Sand)
+        move(North)
+    move(East)
 }}
 
 Una pirámide restaurada correctamente consta de un cimiento cuadrado de piedra caliza cuyos lados tienen una longitud impar, por ejemplo, 5x5. Encima hay una capa de bloques de arena del mismo tamaño (5x5), seguida de capas cada vez más pequeñas: 3x3 y luego 1x1.
 
-Cuando se completa una pirámide, esta se desmorona y aparece un gran girasol en el centro. Puedes cosecharlo para recibir energía. Cuanto mayor sea la pirámide que completes, más energía recibirás.
+Los bloques que hay encima de la pirámide siempre son de tierra. Puedes aprovechar este dato si quieres desenterrar una pirámide de forma eficiente.
+
+## Energía
+Mientras tengas energía, el dron la usará para funcionar al doble de velocidad.
+Consume 1 de energía cada 30 acciones, como movimientos, cosechas o siembras.
+Ejecutar otras instrucciones de código también puede consumir energía, pero mucha menos que las acciones del dron.
+
+En general, todo lo que se acelera con las mejoras de velocidad también se acelera con la energía.
+Cualquier cosa acelerada por la energía también usa energía proporcional al tiempo que tarda en ejecutarse, ignorando las mejoras de velocidad.
+
+La energía no afecta a `dig()`.
 
 ---
 

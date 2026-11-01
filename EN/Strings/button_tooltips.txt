@@ -2,8 +2,12 @@
 @button_tooltip_save = Saves the game.
 @button_tooltip_options = Opens the options menu.
 @button_tooltip_discord = Join the discord to chat with other players and the developer, report bugs or get help.
-@button_tooltip_execute = Starts or stops execution of the code in this window.
-@button_tooltip_step_by_step = Executes one step of the code.
+@button_tooltip_execute = Start execution of the code in this window.
+@button_tooltip_step_by_step = Start executing the code in this window step by step.
+@button_tooltip_stop_execution = Stop execution.
+@button_tooltip_pause_execution = Pause execution.
+@button_tooltip_resume_execution = Resume execution.
+@button_tooltip_next_step = Execute the next step.
 @button_tooltip_new_function = Create a new code file.
 @button_tooltip_new_info_window = Open a new info window.
 @button_tooltip_minimize = Minimizes this window.
@@ -20,6 +24,7 @@
 @button_tooltip_previous_search = Go to the previous match of the search term.
 @button_tooltip_close_search = Close the search menu.
 @button_tooltip_open_unlock_menu = Open the unlock tree.
+@button_tooltip_open_farm = Return to the farm.
 @warning_icon_tooltip = Your code triggered a warning. Click the icon to view details in the Output window.
 @option_tooltip_graphics = Affects various render pipeline settings like shadows, ambient occlusion and bloom.
 @option_tooltip_vfx_limit = Limits the number of visual effects that can be played per second.
@@ -29,6 +34,7 @@
 @option_tooltip_drone_volume = Adjust the volume of the drone buzzing sounds.
 @option_tooltip_SFX_volume = Adjust the volume of sound effects from the farm.
 @option_tooltip_UI_volume = Adjust the volume of UI sounds like button clicks.
+@option_tooltip_mute_in_background = Mute all game audio while the game window is unfocused.
 @option_tooltip_ambience_volume = Adjust the volume of ambient sounds like wind and birds.
 @option_tooltip_volume_damping = The volume is multiplied by this factor for every sound effect playing concurrently so your ears don't explode at high drone speeds.
 @option_tooltip_sfx_limit = Limits the number of sounds that can be played per second.
@@ -64,3 +70,7 @@
 @keybind_tooltip_next_step = Perform one step if the execution is paused.
 @keybind_tooltip_pause_execution = Pause the execution.
 @keybind_tooltip_hide_UI = Hide or unhide the HUD.
+@option_tooltip_automatic_autocomplete = Show autocomplete suggestions automatically while typing. The autocomplete keybind still works when disabled.
+@option_tooltip_focus_errors = Move the camera to errors that appear offscreen so you don't miss them.
+@option_tooltip_window_docking = Allow windows to dock onto each other when dragged together.
+@keybind_tooltip_autocomplete = Open the code autocomplete window.

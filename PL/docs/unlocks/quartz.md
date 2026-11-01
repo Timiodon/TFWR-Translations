@@ -1,17 +1,9 @@
 [<- Żelazo](docs/unlocks/iron.md) <right>[Grzyby ->](docs/unlocks/mushroom.md)
 ---
 # Kwarc
+Za żyłami żelaza w `Grounds.Rock` znajdziesz kwarc u dołu warstwy skał oraz w twardej `Grounds.Dirt` pod nią (sprawdź twardość przez `get_hardness()` z [Podziemnych zmysłów](docs/unlocks/underground_senses.md)).
 
-Kwarc występuje w żyłach przypominających igły, w pobliżu dna warstwy skał i w twardej ziemi poniżej. Żyły tworzą pionowe kolumny, dlatego trudno znaleźć je metodą prób i błędów.
-
-Na szczęście możemy przerobić żelazo na coś w rodzaju różdżki radiestezyjnej, która ułatwia odnajdywanie żył kwarcu. Służy do tego polecenie `prospect_quartz()`.
-
-`prospect_quartz()` działa inaczej niż `prospect_iron()`. Zamiast kierunku do najbliższej rudy kwarcu zwraca odległość euklidesową (odległość 3D) do najbliższego kwarcu. Wykonanie `prospect_quartz()` kosztuje 1 żelazo, więc warto używać go oszczędnie.
-
-Jeśli `prospect_quartz()` nie znajdzie kwarcu w pobliżu albo nie masz dość żelaza na poszukiwanie, zwróci `None`.
-
-Poniższy fragment kodu pozwala dronowi przekopać się przez ziemię i głęboko wejść w warstwę skał. Przy odrobinie szczęścia w pobliżu znajdzie się żyła kwarcu, a dron wyświetli odległość do niej.
-
+Poniższy kod przekopuje się przez ziemię do warstwy skał. Tam nieustannie szuka kwarcu podczas kopania, aż odległość spadnie poniżej 2. Na koniec wypisuje uzyskaną odległość.
 {{codeexample 
 {
     "camera_position": {"x": -1, "y": 0, "z": 8},
@@ -22,7 +14,7 @@ Poniższy fragment kodu pozwala dronowi przekopać się przez ziemię i głębok
     "show_output": false,
     "collapsing": true,
     "autoplay": false,
-    "items": [{"item": "hay", "n": 100}, {"item": "iron", "n": 100}],
+    "items": [{"item": "block", "n": 1}, {"item": "iron", "n": 100}],
     "world_size": {"x": 3, "y": 3},
     "execution_speed": 8,
     "digging_speed": 16,
@@ -31,18 +23,43 @@ Poniższy fragment kodu pozwala dronowi przekopać się przez ziemię i głębok
     "seed": 9,
     "exclude_unlocks": ["watering", "fertilizer", "mushrooms", "dynamite"]
 }
-
-#CODE
+#SETUP
 move(East)
 move(North)
+#CODE
+# Kop do warstwy skał
 while get_ground_type() != Grounds.Rock:
     dig()
-for i in range(30):
-    dig()
-do_a_flip()
-do_a_flip()
+
+# Kop dalej, aż żyła kwarcu będzie blisko
+while prospect_quartz() == None or prospect_quartz() >= 2:
+    for i in range(10):
+        dig()
+
+# Wypisz końcową odległość do żyły
 print(prospect_quartz())
 }}
+
+## Budowa żył
+Kwarc występuje w igłowatych żyłach tworzących pionowe kolumny, dlatego trudno znaleźć go metodą prób i błędów.
+
+## Poszukiwanie kwarcu
+Na szczęście możemy przerobić żelazo na coś w rodzaju różdżki radiestezyjnej, która ułatwia odnajdywanie żył kwarcu. Służy do tego polecenie `prospect_quartz()`.
+
+`prospect_quartz()` działa inaczej niż `prospect_iron()`. Zamiast kierunku ruchu do najbliższej rudy żelaza zwraca dokładną odległość 3D między najbliższym blokiem kwarcu a dronem (odległość euklidesową).
+
+Wykonanie `prospect_quartz()` kosztuje 1 żelazo, więc warto używać go oszczędnie.
+
+Jeśli `prospect_quartz()` nie znajdzie kwarcu w pobliżu albo nie masz dość żelaza na poszukiwanie, zwróci `None`.
+
+## Strategia
+<spoiler=pokaż wskazówkę>Możesz wielokrotnie szukać rud i się poruszać, obserwując zmiany odległości. Na płaskiej powierzchni minimalizowanie odległości może doprowadzić cię nad żyłę kwarcu. Strategia podobna do wyszukiwania binarnego pozwala ograniczyć wywołania `prospect_quartz()` i zużycie żelaza.
+
+Bardziej złożone strategie mogą wykorzystywać geometrię 2D do znalezienia przecięcia co najmniej dwóch okręgów. Możesz też wybrać trudniejszą drogę pełnej trilateracji: przeciąć trzy sfery i wyznaczyć dokładną pozycję 3D żyły.
+
+Pierwiastek kwadratowy obliczysz operatorem potęgowania, na przykład `16**0.5` daje pierwiastek z 16. Nie ma wbudowanych funkcji do trygonometrii ani wektorów — musisz napisać je samodzielnie.
+
+Pamiętaj, że w pobliżu może być kilka żył, więc pomiary w sąsiednich miejscach nie muszą wskazywać tej samej.</spoiler>
 
 ---
 
