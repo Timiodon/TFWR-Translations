@@ -52,10 +52,10 @@ W miarę kopania w dół zauważysz, że bloki stają się twardsze, przez co ko
 Za pomocą `get_hardness()` możesz sprawdzić twardość bloku pod dronem. Jeśli trafisz na obszar wyjątkowo twardych bloków, warto go ominąć, aby szybciej posuwać się naprzód:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 Oczywiście im głębiej schodzisz, tym twardsze stają się bloki, więc ta strategia pomaga tylko do pewnego momentu.
 

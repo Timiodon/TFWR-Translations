@@ -55,7 +55,7 @@ La boucle while ressemble à ceci :
 	#corps de la boucle
 	#corps de la boucle
 	#...`
-	
+
 Où tu dois remplacer "condition" par une valeur booléenne et `#corps de la boucle` par ce que tu veux faire dans la boucle.
 
 Il y a deux valeurs booléennes constantes disponibles. Les constantes sont des valeurs qui ne changent jamais pendant le programme.

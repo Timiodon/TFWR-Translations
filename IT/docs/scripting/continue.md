@@ -25,7 +25,7 @@
 for i in range(10):
 	print("questo succede ogni volta")
 	continue
-    print("questo non viene mai stampato")
+	print("questo non viene mai stampato")
 }}
 
 Questo esegue tutte le `10` iterazioni del ciclo, ma l'istruzione `print` dopo `continue` viene sempre saltata.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Questo codice chiama `harvest()` solo quando `can_harvest()` è `True`.
@@ -118,7 +118,7 @@ Nei cicli annidati, `continue` influisce sempre sul ciclo più interno.
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("questo viene stampato 4 volte")
+		print("questo viene stampato 4 volte")
 		continue
 		print("questo non viene mai stampato")
 	print("questo viene stampato 2 volte")

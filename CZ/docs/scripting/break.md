@@ -24,4 +24,4 @@ U vnořených cyklů příkaz `break` vždy ukončí pouze ten nejvnitřnější
 	for j in range(10):
 		break
 		print("tohle se nikdy nevypíše")
-      	        print("tohle se vypíše 10×")`
+	print("tohle se vypíše 10×")`

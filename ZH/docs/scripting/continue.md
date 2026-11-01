@@ -25,7 +25,7 @@
 for i in range(10):
 	print("这句每次都会打印")
 	continue
-    print("这句永远不会打印")
+	print("这句永远不会打印")
 }}
 
 这会运行循环的所有 `10` 次迭代，但 `continue` 语句之后的 `print` 语句每次都会被跳过。
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 这段代码只有当 `can_harvest()` 函数运行的结果为 `True` 时，才会调用 `harvest()` 函数。
@@ -118,7 +118,7 @@ while True:
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("这句会打印 4 次")
+		print("这句会打印 4 次")
 		continue
 		print("这句永远不会打印")
 	print("这句会打印 2 次")

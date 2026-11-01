@@ -31,7 +31,7 @@ Cuando todas las calabazas en un cuadrado est√°n completamente crecidas, crecer√
 #CODE
 for i in range(get_world_size()):
 	for j in range(get_world_size()):
-        till()
+		till()
 		plant(Entities.Pumpkin)
 		move(North)
 	move(East)

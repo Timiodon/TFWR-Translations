@@ -52,10 +52,10 @@ clear()
 使用 `get_hardness()` 可以檢查下方地塊的硬度。如果遇到特別堅硬的一片地塊，不妨繞過去，以便更快取得進展：
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 當然，越往下地塊越堅硬，所以這個策略雖然有用，也無法讓你一路暢通無阻。
 

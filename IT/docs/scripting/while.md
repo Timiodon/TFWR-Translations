@@ -54,7 +54,7 @@ Il ciclo while si presenta così:
 	#corpo del ciclo
 	#corpo del ciclo
 	#...`
-	
+
 Dove devi sostituire "condition" con un valore booleano e `#corpo del ciclo` con quello che vuoi fare nel ciclo.
 
 Ci sono due valori booleani costanti disponibili. Le costanti sono valori che non cambiano mai durante il programma.

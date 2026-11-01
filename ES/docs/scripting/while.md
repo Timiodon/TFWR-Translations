@@ -54,7 +54,7 @@ El bucle `while` se ve así:
 	#cuerpo del bucle
 	#cuerpo del bucle
 	#...`
-	
+
 Donde tienes que reemplazar "condition" por un valor booleano y `#cuerpo del bucle` por lo que quieras hacer en el bucle.
 
 Hay dos valores booleanos constantes disponibles. Las constantes son valores que nunca cambian durante el programa.

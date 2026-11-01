@@ -74,13 +74,13 @@ for i in range(3):
         place(Grounds.Limestone)
         move(North)
     move(East)
-    
+
 for i in range(3):
     for j in range(3):
         place(Grounds.Sand)
         move(North)
     move(East)
-    
+
 move(North)
 move(East)
 place(Grounds.Sand)

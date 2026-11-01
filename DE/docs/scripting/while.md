@@ -54,7 +54,7 @@ Die while-Schleife sieht so aus:
 	#Schleifenkörper
 	#Schleifenkörper
 	#...`
-	
+
 Wobei du "condition" durch einen booleschen Wert und `#loop body` durch das ersetzen musst, was du in der Schleife tun möchtest.
 
 Es gibt zwei konstante boolesche Werte. Konstanten sind Werte, die sich während des Programms nie ändern.

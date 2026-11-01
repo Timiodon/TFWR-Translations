@@ -52,10 +52,10 @@ Je tiefer du gräbst, desto härter werden die Blöcke und desto länger dauert 
 Mit `get_hardness()` kannst du die Härte des Blocks unter dir prüfen. Wenn du auf einen Bereich mit besonders harten Blöcken stößt, kann es sinnvoll sein, sie zu umgehen, um schneller voranzukommen:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 Natürlich werden die Blöcke nach unten hin immer härter. Diese Strategie hilft also nur bis zu einem gewissen Punkt.
 

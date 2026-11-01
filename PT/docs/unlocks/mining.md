@@ -52,10 +52,10 @@ Passe o mouse sobre um bloco para ver seu nome, estabilidade e dureza.
 Você pode usar `get_hardness()` para verificar a dureza do bloco abaixo. Se encontrar uma área de blocos especialmente duros, pode ser melhor contorná-los para avançar mais rápido:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 É claro que os blocos ficam cada vez mais resistentes conforme você desce. Essa estratégia ajuda, mas tem seus limites.
 

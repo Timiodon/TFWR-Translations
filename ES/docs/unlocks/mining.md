@@ -52,10 +52,10 @@ Al excavar a mayor profundidad, notarás que los bloques se vuelven más duros, 
 Puedes usar `get_hardness()` para comprobar la dureza del bloque que tienes debajo. Si encuentras una zona de bloques especialmente duros, puede ser buena idea rodearlos para avanzar más deprisa:
 
 `while True:
-        if get_hardness() < 5:
-                dig()
-        else:
-                move(East)`
+    if get_hardness() < 5:
+        dig()
+    else:
+        move(East)`
 
 Por supuesto, los bloques se vuelven cada vez más duros a medida que bajas, así que, aunque esta estrategia ayuda, solo te servirá hasta cierto punto.
 
