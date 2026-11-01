@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = Não é permitido usar `dig()` neste placar.
 @error_plant_not_allowed = Não é permitido usar `plant()` neste placar.
 @error_jump_not_allowed = Não é permitido usar `jump()` nos placares.
+@error_place_too_high = Não é possível colocar um bloco nesta altura: ela está muito acima da profundidade média dos blocos.
+Coloque blocos de maneira uniforme por toda a fazenda para aumentar a média e poder colocá-los mais alto.

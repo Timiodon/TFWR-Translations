@@ -35,7 +35,7 @@ Quando todas as abóboras em um quadrado estão totalmente crescidas, elas se ju
 #CODE
 for i in range(get_world_size()):
 	for j in range(get_world_size()):
-        till()
+		till()
 		plant(Entities.Pumpkin)
 		move(North)
 	move(East)

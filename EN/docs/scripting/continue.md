@@ -25,7 +25,7 @@
 for i in range(10):
 	print("this happens every time")
 	continue
-    print("this is never printed")
+	print("this is never printed")
 }}
 
 This runs all `10` iterations of the loop, but the `print` statement after the `continue` is always skipped.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 This code calls `harvest()` only when `can_harvest()` is `True`.
@@ -118,7 +118,7 @@ In nested loops, `continue` always affects the innermost loop.
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("this is printed 4 times")
+		print("this is printed 4 times")
 		continue
 		print("this is never printed")
 	print("this is printed 2 times")

@@ -275,8 +275,8 @@
 </columns></dlc>
 <unlock=debug_place>**색상**
 <columns>
-[파란 블록](grounds/blue_block)
-[초록 블록](grounds/green_block)
-[빨간 블록](grounds/red_block)
+[파란 블록](grounds/block_blue)
+[초록 블록](grounds/block_green)
+[빨간 블록](grounds/block_red)
 </columns>
 </unlock>

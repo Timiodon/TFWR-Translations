@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = No se permite usar `dig()` en esta clasificación.
 @error_plant_not_allowed = No se permite usar `plant()` en esta clasificación.
 @error_jump_not_allowed = No se permite usar `jump()` en las clasificaciones.
+@error_place_too_high = No se puede colocar un bloque a esta altura: está demasiado por encima de la profundidad media de los bloques.
+Coloca bloques de manera uniforme por toda la granja para aumentar la media y poder colocarlos más alto.

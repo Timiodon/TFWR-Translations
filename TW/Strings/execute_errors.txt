@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = 此排行榜中不允許使用 `dig()`。
 @error_plant_not_allowed = 此排行榜中不允許使用 `plant()`。
 @error_jump_not_allowed = 排行榜中不允許使用 `jump()`。
+@error_place_too_high = 無法在此高度放置地塊：此處比地塊的平均深度高出太多。
+在整個農場均勻放置地塊，提高平均值後就能在更高處放置地塊。

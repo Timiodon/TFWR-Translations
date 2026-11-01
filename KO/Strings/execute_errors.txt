@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = 이 리더보드에서는 `dig()`를 사용할 수 없습니다.
 @error_plant_not_allowed = 이 리더보드에서는 `plant()`를 사용할 수 없습니다.
 @error_jump_not_allowed = 리더보드에서는 `jump()`를 사용할 수 없습니다.
+@error_place_too_high = 이 높이에는 블록을 배치할 수 없습니다. 블록의 평균 깊이보다 너무 높습니다.
+농장 전체에 블록을 고르게 배치해 평균을 높이면 더 높은 곳에도 블록을 배치할 수 있습니다.

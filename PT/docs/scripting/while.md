@@ -54,7 +54,7 @@ O loop while se parece com isto:
 	#corpo do loop
 	#corpo do loop
 	#...`
-	
+
 Onde você tem que substituir "condition" por um valor booleano e `#corpo do loop` com o que você quiser fazer no loop.
 
 Existem dois valores booleanos constantes disponíveis. Constantes são valores que nunca mudam durante o programa.

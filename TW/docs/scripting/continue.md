@@ -25,7 +25,7 @@
 for i in range(10):
 	print("這句每次都會列印")
 	continue
-    print("這句永遠不會列印")
+	print("這句永遠不會列印")
 }}
 
 這會執行迴圈的所有 `10` 次迭代，但 `continue` 陳述式之後的 `print` 陳述式每次都會被跳過。
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 這段程式碼只有當 `can_harvest()` 函式執行的結果為 `True` 時，才會呼叫 `harvest()` 函式。
@@ -118,7 +118,7 @@ while True:
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("這句會列印 4 次")
+		print("這句會列印 4 次")
 		continue
 		print("這句永遠不會列印")
 	print("這句會列印 2 次")

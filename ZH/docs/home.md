@@ -275,8 +275,8 @@
 </columns></dlc>
 <unlock=debug_place>**颜色**
 <columns>
-[蓝色地块](grounds/blue_block)
-[绿色地块](grounds/green_block)
-[红色地块](grounds/red_block)
+[蓝色地块](grounds/block_blue)
+[绿色地块](grounds/block_green)
+[红色地块](grounds/block_red)
 </columns>
 </unlock>

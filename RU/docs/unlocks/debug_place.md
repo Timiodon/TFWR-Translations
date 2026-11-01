@@ -59,6 +59,7 @@ place(Grounds.Block_Red)
 
 do_a_flip()
 }}
+
 ---
 
 [Отладка](docs/scripting/debug.md)      [Отладка 2](docs/unlocks/debug2.md)      [Бамбук](docs/unlocks/bamboo.md)

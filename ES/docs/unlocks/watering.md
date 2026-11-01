@@ -47,8 +47,8 @@ for i in range(5):
         use_item(Items.Water, i)
     plant(Entities.Tree)
     print(get_water())
-	move(East)
-	move(East)
+    move(East)
+    move(East)
 }}
 
 ---

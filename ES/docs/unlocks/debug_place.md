@@ -59,6 +59,7 @@ place(Grounds.Block_Red)
 
 do_a_flip()
 }}
+
 ---
 
 [Depuración](docs/scripting/debug.md)      [Depuración 2](docs/unlocks/debug2.md)      [Bambú](docs/unlocks/bamboo.md)

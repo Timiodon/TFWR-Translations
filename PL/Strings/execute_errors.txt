@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = W tym rankingu nie wolno używać `dig()`.
 @error_plant_not_allowed = W tym rankingu nie wolno używać `plant()`.
 @error_jump_not_allowed = W rankingach nie wolno używać `jump()`.
+@error_place_too_high = Nie można umieścić bloku na tej wysokości: jest zbyt wysoko ponad średnią głębokością bloków.
+Rozmieszczaj bloki równomiernie na całej farmie, aby podnieść średnią i móc umieszczać je wyżej.

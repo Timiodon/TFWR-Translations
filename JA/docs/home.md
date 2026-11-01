@@ -275,8 +275,8 @@
 </columns></dlc>
 <unlock=debug_place>**色**
 <columns>
-[青いブロック](grounds/blue_block)
-[緑のブロック](grounds/green_block)
-[赤いブロック](grounds/red_block)
+[青いブロック](grounds/block_blue)
+[緑のブロック](grounds/block_green)
+[赤いブロック](grounds/block_red)
 </columns>
 </unlock>

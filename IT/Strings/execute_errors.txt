@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = Non è consentito usare `dig()` in questa classifica.
 @error_plant_not_allowed = Non è consentito usare `plant()` in questa classifica.
 @error_jump_not_allowed = Non è consentito usare `jump()` nelle classifiche.
+@error_place_too_high = Non puoi posizionare un blocco a questa altezza: è troppo al di sopra della profondità media dei blocchi.
+Posiziona i blocchi in modo uniforme su tutta la fattoria per aumentare la media e poterli posizionare più in alto.

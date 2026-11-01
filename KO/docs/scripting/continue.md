@@ -25,7 +25,7 @@
 for i in range(10):
 	print("이 문장은 매번 출력됩니다")
 	continue
-    print("이것은 출력되지 않습니다")
+	print("이것은 출력되지 않습니다")
 }}
 
 이 코드는 루프를 `10`번 모두 반복하지만, `continue` 다음의 `print` 문은 항상 건너뛰어요.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 이 코드는 `can_harvest()`가 `True`일 때만 `harvest()`를 호출해요.
@@ -118,7 +118,7 @@ while True:
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("이 문장은 4번 출력됩니다")
+		print("이 문장은 4번 출력됩니다")
 		continue
 		print("이것은 출력되지 않습니다")
 	print("이 문장은 2번 출력됩니다")

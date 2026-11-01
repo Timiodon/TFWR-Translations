@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = L’utilisation de `dig()` est interdite dans ce classement.
 @error_plant_not_allowed = L’utilisation de `plant()` est interdite dans ce classement.
 @error_jump_not_allowed = L’utilisation de `jump()` est interdite dans les classements.
+@error_place_too_high = Impossible de placer un bloc à cette hauteur : elle est trop au-dessus de la profondeur moyenne des blocs.
+Place des blocs uniformément sur toute la ferme pour augmenter la moyenne et pouvoir en placer plus haut.

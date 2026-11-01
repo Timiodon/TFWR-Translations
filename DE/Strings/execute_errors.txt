@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = Die Verwendung von `dig()` ist in dieser Bestenliste nicht erlaubt.
 @error_plant_not_allowed = Die Verwendung von `plant()` ist in dieser Bestenliste nicht erlaubt.
 @error_jump_not_allowed = Die Verwendung von `jump()` ist in Bestenlisten nicht erlaubt.
+@error_place_too_high = Auf dieser Höhe kann kein Block platziert werden, da sie zu weit über der durchschnittlichen Blocktiefe liegt.
+Platziere Blöcke gleichmäßig auf der gesamten Farm, um den Durchschnitt zu erhöhen und Blöcke höher platzieren zu können.

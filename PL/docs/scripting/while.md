@@ -54,7 +54,7 @@ Pętla while wygląda tak:
 	#ciało pętli
 	#ciało pętli
 	#...`
-	
+
 Gdzie musisz zastąpić „warunek” wartością boolowską, a `#ciało pętli` tym, co chcesz robić w pętli.
 
 Dostępne są dwie stałe wartości boolowskie. Stałe to wartości, które nigdy się nie zmieniają w trakcie programu.

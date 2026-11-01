@@ -275,8 +275,8 @@
 </columns></dlc>
 <unlock=debug_place>**Colores**
 <columns>
-[Blue_Block](grounds/blue_block)
-[Green_Block](grounds/green_block)
-[Red_Block](grounds/red_block)
+[Block_Blue](grounds/block_blue)
+[Block_Green](grounds/block_green)
+[Block_Red](grounds/block_red)
 </columns>
 </unlock>

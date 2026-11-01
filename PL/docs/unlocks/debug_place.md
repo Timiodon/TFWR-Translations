@@ -59,6 +59,7 @@ place(Grounds.Block_Red)
 
 do_a_flip()
 }}
+
 ---
 
 [Debugowanie](docs/scripting/debug.md)      [Debugowanie 2](docs/unlocks/debug2.md)      [Bambus](docs/unlocks/bamboo.md)

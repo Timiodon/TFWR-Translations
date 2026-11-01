@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = Using `dig()` is not allowed in this leaderboard.
 @error_plant_not_allowed = Using `plant()` is not allowed in this leaderboard.
 @error_jump_not_allowed = Using `jump()` is not allowed in leaderboards.
+@error_place_too_high = Cannot place block at this height, too far above average block depth.
+Place blocks evenly on the whole farm to increase the average and allow to place higher.

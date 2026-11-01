@@ -54,7 +54,7 @@ The while loop looks like this:
 	#loop body
 	#loop body
 	#...`
-	
+
 Where you have to replace "condition" with a boolean value and `#loop body` with whatever you want to do in the loop.
 
 There are two constant boolean values available. Constants are values that never change during the program.

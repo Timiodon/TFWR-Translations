@@ -84,3 +84,5 @@ x += 1`
 @error_dig_not_allowed = このランキングでは`dig()`を使用できません。
 @error_plant_not_allowed = このランキングでは`plant()`を使用できません。
 @error_jump_not_allowed = ランキングでは`jump()`を使用できません。
+@error_place_too_high = この高さにはブロックを配置できません。ブロックの平均深度より高すぎます。
+農場全体に均等にブロックを配置して平均を上げると、より高い位置にも配置できるようになります。

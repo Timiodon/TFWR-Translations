@@ -25,7 +25,7 @@
 for i in range(10):
 	print("das passiert jedes Mal")
 	continue
-    print("dies wird nie ausgegeben")
+	print("dies wird nie ausgegeben")
 }}
 
 Dies führt alle `10` Iterationen der Schleife aus, aber die `print`-Anweisung nach dem `continue` wird immer übersprungen.
@@ -59,8 +59,8 @@ plant(Entities.Tree)
 while True:
 	if not can_harvest():
 		continue
-    
-    harvest()
+
+	harvest()
 }}
 
 Dieser Code ruft `harvest()` nur auf, wenn `can_harvest()` `True` ist.
@@ -118,7 +118,7 @@ In verschachtelten Schleifen betrifft `continue` immer die innerste Schleife.
 #CODE
 for i in range(2):
 	for j in range(2):
-	    print("dies wird 4-mal ausgegeben")
+		print("dies wird 4-mal ausgegeben")
 		continue
 		print("dies wird nie ausgegeben")
 	print("dies wird 2-mal ausgegeben")
