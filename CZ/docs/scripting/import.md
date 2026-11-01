@@ -2,7 +2,7 @@
 Dávat veškerý kód do jednoho souboru se rychle stane nepřehledným.  
 Příkaz `import` umožňuje importovat funkce a globální proměnné z jiného souboru.  
 Jak to funguje na jednom obrázku:  
-![](ImportsInOnePicture400)
+![|x400](ImportsInOnePicture)
 
 Zde `import module2` spustí soubor s názvem `module2` a poskytne přístup ke všem jeho globálním proměnným.  
 K proměnným a funkcím v importovaném modulu se pak dostaneš pomocí operátoru `.`  
