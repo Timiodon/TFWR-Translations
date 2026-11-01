@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = 해바라기 모자의 황금빛 버전입니다.
 @hat_descr_the_farmers_remains = 무슨 일이 있었던 거죠?
 @hat_descr_bucket = 머리에 쓰는 철 양동이입니다.
-@hat_descr_coal_hat = 석탄 모양의 모자입니다. 그을음이 조금 묻어 있네요.
-@hat_descr_rice_hat = 벼 모양의 모자입니다.
+@hat_descr_coal_hat = 어디를 가든 석탄과 함께하세요.
+@hat_descr_rice_hat = 머리에 쓰는 한 끼 식사입니다.
 @hat_descr_quartz_hat = 반짝이는 석영 모자입니다.
 @hat_descr_bamboo_hat = 전통적인 대나무 모자입니다.
 @hat_descr_dynamite_hat = 폭발적인 스타일입니다.

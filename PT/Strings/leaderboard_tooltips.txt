@@ -18,7 +18,7 @@
 @lb_descr_rice = Produza 2 milhões de arroz.
 @lb_descr_rice_single = Produza 100000 de arroz.
 @lb_descr_ores = Produza 20000 de quartzo.
-@lb_descr_ores_single = Produza 200 de quartzo.
+@lb_descr_ores_single = Produza 4000 de quartzo.
 @lb_descr_bamboo = Produza 500 milhões de bambu.
 @lb_descr_bamboo_single = Produza 25 milhões de bambu.
 @lb_descr_dynamite = Produza 10 milhões de dinamite.

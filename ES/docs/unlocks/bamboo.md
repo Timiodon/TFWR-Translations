@@ -37,7 +37,7 @@ move(East) # apártate para que el bambú crezca
 ## Frutos
 El bambú crece exactamente 1 bloque por segundo.
 
-El bambú produce frutos cada pocos bloques. Cuando esto ocurre, deja de crecer y tendrás que entrar en él con el dron para destruir el fruto.
+El bambú produce frutos cada pocos bloques. Cuando esto ocurre, deja de crecer y tendrás que entrar en él con el dron para destruir el fruto. El bambú puede crecer hasta su tercer fruto. A partir de ahí no crecerá más alto, aunque lo retires.
 
 Para retirar frutos, primero debes usar `hover` para situarte a la altura correcta. Después usa `move` para entrar en el fruto y retirarlo, y de nuevo `move` para apartarte y dejar que el bambú siga creciendo.
 

@@ -18,7 +18,7 @@
 @lb_descr_rice = Собери 2 млн риса.
 @lb_descr_rice_single = Собери 100000 риса.
 @lb_descr_ores = Собери 20000 кварца.
-@lb_descr_ores_single = Собери 200 кварца.
+@lb_descr_ores_single = Собери 4000 кварца.
 @lb_descr_bamboo = Собери 500 млн бамбука.
 @lb_descr_bamboo_single = Собери 25 млн бамбука.
 @lb_descr_dynamite = Собери 10 млн динамита.

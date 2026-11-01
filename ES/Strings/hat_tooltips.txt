@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = Una versión dorada del sombrero de girasol.
 @hat_descr_the_farmers_remains = ¿Qué pasó?
 @hat_descr_bucket = Un cubo de hierro para la cabeza.
-@hat_descr_coal_hat = Un sombrero con forma de carbón. Tiene algo de hollín.
-@hat_descr_rice_hat = Un sombrero con forma de arroz.
+@hat_descr_coal_hat = Lleva carbón contigo vayas donde vayas.
+@hat_descr_rice_hat = Una comida para llevar puesta.
 @hat_descr_quartz_hat = Un reluciente sombrero de cuarzo.
 @hat_descr_bamboo_hat = Un clásico sombrero de bambú.
 @hat_descr_dynamite_hat = Un estilo explosivo.

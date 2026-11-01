@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = Une version dorée du chapeau tournesol.
 @hat_descr_the_farmers_remains = Que s’est-il passé ?
 @hat_descr_bucket = Un seau en fer pour ta tête.
-@hat_descr_coal_hat = Un chapeau en forme de charbon. Un peu couvert de suie.
-@hat_descr_rice_hat = Un chapeau en forme de riz.
+@hat_descr_coal_hat = Emporte du charbon partout où tu vas.
+@hat_descr_rice_hat = Un repas à porter sur la tête.
 @hat_descr_quartz_hat = Un chapeau de quartz étincelant.
 @hat_descr_bamboo_hat = Un chapeau de bambou classique.
 @hat_descr_dynamite_hat = Un look explosif.

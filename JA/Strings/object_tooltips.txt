@@ -9,7 +9,7 @@
 @object_descr_tree = 木は茂みよりも多くの木材をドロップします。隣に他の木が育っていると成長に時間がかかります。
 @object_descr_carrot = ニンジン！
 @object_descr_rice = 稲は地下にある粘土の層に植えられます。
-@object_descr_bamboo = 竹はかなり高く育ちますが、決まった高さで花を咲かせます。開花した位置で収穫すると、収穫量が最大になります。
+@object_descr_bamboo = 竹はかなり高く育ちますが、実を収穫しないと伸びません。
 @object_descr_pumpkin = カボチャは、完全に成長した他のカボチャの隣にあると、一緒に成長します。約5分の1のカボチャは成長時に枯れてしまいます。
 @object_descr_dead_pumpkin = 5分の1のカボチャは成長時に枯れ、枯れたカボチャを残します。枯れたカボチャは役に立たず、新しいものが植えられると消えます。
 @object_descr_sunflower = ヒマワリは太陽の力を集めます。収穫すると `Items.Power` を得られます。

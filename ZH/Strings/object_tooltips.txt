@@ -9,7 +9,7 @@
 @object_descr_tree = 树比灌木掉落的木材更多。如果旁边长有其他树，则其生长速度会变慢。
 @object_descr_carrot = 胡萝卜！
 @object_descr_rice = 水稻可以种植在地下找到的黏土层上。
-@object_descr_bamboo = 竹子可以长得很高，但会在特定高度开花。在开花的位置收获，产量最高。
+@object_descr_bamboo = 竹子可以长得很高，但需要先收获果实。
 @object_descr_pumpkin = 当南瓜旁边有其他完全成熟的南瓜时，它们会一起生长。大约五分之一的南瓜在成熟时会枯萎。
 @object_descr_dead_pumpkin = 五分之一的南瓜在成熟时会枯萎，留下一个枯萎南瓜。枯萎南瓜毫无用处，在有新植物种下时即消失。
 @object_descr_sunflower = 向日葵会收集太阳的能量。收获向日葵即可获得 `Items.Power`。

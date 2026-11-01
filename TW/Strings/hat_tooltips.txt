@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = 金色版向日葵帽。
 @hat_descr_the_farmers_remains = 發生了什麼？
 @hat_descr_bucket = 戴在頭上的鐵桶。
-@hat_descr_coal_hat = 煤炭形狀的帽子。沾著一點煤灰。
-@hat_descr_rice_hat = 水稻形狀的帽子。
+@hat_descr_coal_hat = 走到哪裡，都有煤炭相伴。
+@hat_descr_rice_hat = 可以戴在頭上的一餐。
 @hat_descr_quartz_hat = 閃閃發亮的石英帽。
 @hat_descr_bamboo_hat = 經典的竹帽。
 @hat_descr_dynamite_hat = 爆炸性的造型。

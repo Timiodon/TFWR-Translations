@@ -37,7 +37,7 @@ move(East) # s’éloigner pour laisser pousser le bambou
 ## Fruits
 Le bambou pousse d’exactement 1 bloc par seconde.
 
-Le bambou produit des fruits tous les quelques blocs. Il cesse alors de pousser, et tu dois y faire entrer ton drone pour détruire le fruit.
+Le bambou produit des fruits tous les quelques blocs. Il cesse alors de pousser, et tu dois y faire entrer ton drone pour détruire le fruit. Le bambou peut pousser jusqu’à son troisième fruit. Ensuite, il ne grandira plus, même si tu cueilles ce fruit.
 
 Pour cueillir des fruits, utilise d’abord `hover` pour atteindre la bonne hauteur. Entre ensuite dans le fruit avec `move` pour le cueillir, puis éloigne-toi avec `move` pour laisser le bambou continuer à pousser.
 

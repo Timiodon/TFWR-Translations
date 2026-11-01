@@ -37,7 +37,7 @@ move(East) # allontanati per lasciare crescere il bambù
 ## Frutti
 Il bambù cresce esattamente di 1 blocco al secondo.
 
-Il bambù produce frutti ogni pochi blocchi. Quando succede, smette di crescere e devi entrarci con il drone per distruggere il frutto.
+Il bambù produce frutti ogni pochi blocchi. Quando succede, smette di crescere e devi entrarci con il drone per distruggere il frutto. Il bambù può crescere fino al terzo frutto. Da quel momento non crescerà più in altezza, anche se lo stacchi.
 
 Per staccare i frutti, devi prima usare `hover` per raggiungere l'altezza giusta. Poi usa `move` per entrare nel frutto e staccarlo, e ancora `move` per allontanarti e lasciare crescere il bambù.
 

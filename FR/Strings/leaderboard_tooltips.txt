@@ -18,7 +18,7 @@
 @lb_descr_rice = Produis 2 millions de riz.
 @lb_descr_rice_single = Produis 100000 de riz.
 @lb_descr_ores = Produis 20000 de quartz.
-@lb_descr_ores_single = Produis 200 de quartz.
+@lb_descr_ores_single = Produis 4000 de quartz.
 @lb_descr_bamboo = Produis 500 millions de bambou.
 @lb_descr_bamboo_single = Produis 25 millions de bambou.
 @lb_descr_dynamite = Produis 10 millions de dynamite.

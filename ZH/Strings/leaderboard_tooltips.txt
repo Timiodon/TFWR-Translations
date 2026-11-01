@@ -18,7 +18,7 @@
 @lb_descr_rice = 收集 200 万水稻。
 @lb_descr_rice_single = 收集 100000 水稻。
 @lb_descr_ores = 收集 20000 石英。
-@lb_descr_ores_single = 收集 200 石英。
+@lb_descr_ores_single = 收集 4000 石英。
 @lb_descr_bamboo = 收集 5 亿竹子。
 @lb_descr_bamboo_single = 收集 2500 万竹子。
 @lb_descr_dynamite = 收集 1000 万炸药。

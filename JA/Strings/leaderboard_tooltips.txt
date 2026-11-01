@@ -18,7 +18,7 @@
 @lb_descr_rice = 200万個の稲を獲得する。
 @lb_descr_rice_single = 100000個の稲を獲得する。
 @lb_descr_ores = 20000個の石英を獲得する。
-@lb_descr_ores_single = 200個の石英を獲得する。
+@lb_descr_ores_single = 4000個の石英を獲得する。
 @lb_descr_bamboo = 5億個の竹を獲得する。
 @lb_descr_bamboo_single = 2500万個の竹を獲得する。
 @lb_descr_dynamite = 1000万個のダイナマイトを獲得する。

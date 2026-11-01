@@ -9,7 +9,7 @@ Can grow on {3}.
 @object_descr_tree = Trees drop more wood than bushes. They take longer to grow if other trees grow next to them.
 @object_descr_carrot = Carrots!
 @object_descr_rice = Rice can be planted on the clay sheet you find underground.
-@object_descr_bamboo = Bamboo can grow quite tall, but flowers at a certain specific height. The yield is largest if you harvest right where it flowers.
+@object_descr_bamboo = Bamboo can grow quite tall, but only after the fruits are harvested.
 @object_descr_pumpkin = Pumpkins grow together when they are next to other fully grown pumpkins. About 1 in 5 pumpkins dies when it grows up.
 @object_descr_dead_pumpkin = One in five pumpkins dies when it grows up, leaving behind a dead pumpkin. Dead pumpkins are useless and disappear when something new is planted.
 @object_descr_sunflower = Sunflowers collect the power from the sun. Harvesting them will give you `Items.Power`.

@@ -18,7 +18,7 @@
 @lb_descr_rice = Farme 2 Mio. Reis.
 @lb_descr_rice_single = Farme 100000 Reis.
 @lb_descr_ores = Farme 20000 Quarz.
-@lb_descr_ores_single = Farme 200 Quarz.
+@lb_descr_ores_single = Farme 4000 Quarz.
 @lb_descr_bamboo = Farme 500 Mio. Bambus.
 @lb_descr_bamboo_single = Farme 25 Mio. Bambus.
 @lb_descr_dynamite = Farme 10 Mio. Dynamit.

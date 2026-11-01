@@ -18,7 +18,7 @@
 @lb_descr_rice = Farm 2M rice.
 @lb_descr_rice_single = Farm 100000 rice.
 @lb_descr_ores = Farm 20000 quartz.
-@lb_descr_ores_single = Farm 200 quartz.
+@lb_descr_ores_single = Farm 4000 quartz.
 @lb_descr_bamboo = Farm 500M bamboo.
 @lb_descr_bamboo_single = Farm 25M bamboo.
 @lb_descr_dynamite = Farm 10M dynamite.

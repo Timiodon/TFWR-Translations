@@ -9,7 +9,7 @@ Puede crecer en {3}.
 @object_descr_tree = Los árboles sueltan más madera que los arbustos. Tardan más en crecer si otros árboles crecen a su lado.
 @object_descr_carrot = ¡Zanahorias!
 @object_descr_rice = El arroz se puede plantar en la capa de arcilla que encontrarás bajo tierra.
-@object_descr_bamboo = El bambú puede crecer bastante alto, pero florece a una altura concreta. Obtendrás el mayor rendimiento si lo cosechas justo donde florece.
+@object_descr_bamboo = El bambú puede crecer bastante alto, pero solo después de cosechar sus frutos.
 @object_descr_pumpkin = Las calabazas crecen juntas cuando están al lado de otras calabazas completamente crecidas. Aproximadamente 1 de cada 5 calabazas muere cuando crece.
 @object_descr_dead_pumpkin = Una de cada cinco calabazas muere cuando crece, dejando atrás una calabaza muerta. Las calabazas muertas son inútiles y desaparecen cuando se planta algo nuevo.
 @object_descr_sunflower = Los girasoles recogen la energía del sol. Cosecharlos te dará `Items.Power`.

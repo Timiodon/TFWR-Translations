@@ -18,7 +18,7 @@
 @lb_descr_rice = Zbierz 2M ryżu.
 @lb_descr_rice_single = Zbierz 100000 ryżu.
 @lb_descr_ores = Zbierz 20000 kwarcu.
-@lb_descr_ores_single = Zbierz 200 kwarcu.
+@lb_descr_ores_single = Zbierz 4000 kwarcu.
 @lb_descr_bamboo = Zbierz 500M bambusa.
 @lb_descr_bamboo_single = Zbierz 25M bambusa.
 @lb_descr_dynamite = Zbierz 10M dynamitu.

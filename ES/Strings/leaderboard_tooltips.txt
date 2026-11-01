@@ -18,7 +18,7 @@
 @lb_descr_rice = Cultiva 2 millones de arroz.
 @lb_descr_rice_single = Cultiva 100000 de arroz.
 @lb_descr_ores = Obtén 20000 de cuarzo.
-@lb_descr_ores_single = Obtén 200 de cuarzo.
+@lb_descr_ores_single = Obtén 4000 de cuarzo.
 @lb_descr_bamboo = Cultiva 500 millones de bambú.
 @lb_descr_bamboo_single = Cultiva 25 millones de bambú.
 @lb_descr_dynamite = Obtén 10 millones de dinamita.

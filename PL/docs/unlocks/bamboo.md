@@ -37,7 +37,7 @@ move(East) # odleć, aby bambus mógł rosnąć
 ## Owoce
 Bambus rośnie dokładnie o 1 blok na sekundę.
 
-Bambus wydaje owoce co kilka bloków. Wtedy przestaje rosnąć i trzeba wlecieć w niego dronem, aby zniszczyć owoc.
+Bambus wydaje owoce co kilka bloków. Wtedy przestaje rosnąć i trzeba wlecieć w niego dronem, aby zniszczyć owoc. Bambus może rosnąć w górę do trzeciego owocu. Potem nie urośnie już wyżej, nawet jeśli zerwiesz ten owoc.
 
 Aby zerwać owoc, najpierw użyj `hover`, by osiągnąć odpowiednią wysokość. Następnie wleć w owoc przez `move`, aby go zerwać, i ponownie użyj `move`, aby odlecieć i umożliwić dalszy wzrost.
 

@@ -37,7 +37,7 @@ move(East) # move away so the bamboo can grow
 ## Fruits
 Bamboo grows exactly 1 block per second.
 
-Bamboo produces fruits every few blocks. When this happens, the bamboo stops growing and you will need to fly into it with your drone to destroy the fruit.
+Bamboo produces fruits every few blocks. When this happens, the bamboo stops growing and you will need to fly into it with your drone to destroy the fruit. Bamboo can grow upwards until its third fruit, after which it won't grow any higher, even if you pluck it.
 
 To pluck fruits, you will first need to `hover` to the correct height. Then you should `move` into the fruit to pluck it and `move` away again so the bamboo can continue to grow.
 

@@ -37,7 +37,7 @@ move(East) # afaste-se para o bambu crescer
 ## Frutos
 O bambu cresce exatamente 1 bloco por segundo.
 
-O bambu produz frutos a cada poucos blocos. Quando isso acontece, ele para de crescer e você precisa entrar nele com o drone para destruir o fruto.
+O bambu produz frutos a cada poucos blocos. Quando isso acontece, ele para de crescer e você precisa entrar nele com o drone para destruir o fruto. O bambu pode crescer até o terceiro fruto. Depois disso, não crescerá mais em altura, mesmo que você retire o fruto.
 
 Para retirar frutos, primeiro use `hover` para alcançar a altura correta. Depois use `move` para entrar no fruto e retirá-lo, e novamente `move` para se afastar e deixar o bambu crescer.
 

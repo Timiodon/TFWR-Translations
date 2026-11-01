@@ -9,7 +9,7 @@ Kann auf {3} wachsen.
 @object_descr_tree = Bäume geben mehr Holz als Büsche. Sie brauchen länger zum Wachsen, wenn andere Bäume neben ihnen wachsen.
 @object_descr_carrot = Karotten!
 @object_descr_rice = Reis kann auf der Tonschicht gepflanzt werden, die du unterirdisch findest.
-@object_descr_bamboo = Bambus kann ziemlich hoch wachsen, blüht aber in einer bestimmten Höhe. Der Ertrag ist am größten, wenn du ihn genau dort erntest, wo er blüht.
+@object_descr_bamboo = Bambus kann ziemlich hoch wachsen, aber nur, wenn seine Früchte geerntet werden.
 @object_descr_pumpkin = Kürbisse wachsen zusammen, wenn sie neben anderen ausgewachsenen Kürbissen stehen. Etwa 1 von 5 Kürbissen stirbt, wenn er erwachsen wird.
 @object_descr_dead_pumpkin = Einer von fünf Kürbissen stirbt, wenn er erwachsen wird, und hinterlässt einen toten Kürbis. Tote Kürbisse sind nutzlos und verschwinden, wenn etwas Neues gepflanzt wird.
 @object_descr_sunflower = Sonnenblumen sammeln die Energie der Sonne. Wenn du sie erntest, erhältst du `Items.Power`.

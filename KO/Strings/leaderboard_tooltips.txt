@@ -18,7 +18,7 @@
 @lb_descr_rice = 벼 200만 개를 모으세요.
 @lb_descr_rice_single = 벼 100000개를 모으세요.
 @lb_descr_ores = 석영 20000개를 모으세요.
-@lb_descr_ores_single = 석영 200개를 모으세요.
+@lb_descr_ores_single = 석영 4000개를 모으세요.
 @lb_descr_bamboo = 대나무 5억 개를 모으세요.
 @lb_descr_bamboo_single = 대나무 2500만 개를 모으세요.
 @lb_descr_dynamite = 다이너마이트 1000만 개를 모으세요.

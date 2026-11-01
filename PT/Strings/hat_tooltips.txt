@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = Uma versão dourada do chapéu de girassol.
 @hat_descr_the_farmers_remains = O que aconteceu?
 @hat_descr_bucket = Um balde de ferro para sua cabeça.
-@hat_descr_coal_hat = Um chapéu em forma de carvão. Com um pouco de fuligem.
-@hat_descr_rice_hat = Um chapéu em forma de arroz.
+@hat_descr_coal_hat = Leve carvão com você aonde quer que vá.
+@hat_descr_rice_hat = Uma refeição de vestir.
 @hat_descr_quartz_hat = Um chapéu de quartzo brilhante.
 @hat_descr_bamboo_hat = Um clássico chapéu de bambu.
 @hat_descr_dynamite_hat = Um visual explosivo.

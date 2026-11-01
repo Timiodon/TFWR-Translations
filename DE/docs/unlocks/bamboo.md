@@ -37,7 +37,7 @@ move(East) # wegfliegen, damit der Bambus wachsen kann
 ## Früchte
 Bambus wächst genau 1 Block pro Sekunde.
 
-Bambus bildet alle paar Blöcke Früchte. Dann hört er auf zu wachsen, und du musst mit deiner Drohne hineinfliegen, um die Frucht zu zerstören.
+Bambus bildet alle paar Blöcke Früchte. Dann hört er auf zu wachsen, und du musst mit deiner Drohne hineinfliegen, um die Frucht zu zerstören. Bambus kann bis zu seiner dritten Frucht in die Höhe wachsen. Danach wächst er nicht mehr höher, auch wenn du sie pflückst.
 
 Um Früchte zu pflücken, musst du zuerst mit `hover` auf die richtige Höhe schweben. Fliege dann mit `move` in die Frucht hinein, um sie zu pflücken, und mit `move` wieder weg, damit der Bambus weiterwachsen kann.
 

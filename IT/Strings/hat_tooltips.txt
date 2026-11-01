@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = Una versione dorata del cappello da girasole.
 @hat_descr_the_farmers_remains = Che cosa è successo?
 @hat_descr_bucket = Un secchio di ferro per la tua testa.
-@hat_descr_coal_hat = Un cappello a forma di carbone. Un po' sporco di fuliggine.
-@hat_descr_rice_hat = Un cappello a forma di riso.
+@hat_descr_coal_hat = Porta il carbone con te ovunque tu vada.
+@hat_descr_rice_hat = Un pasto da indossare.
 @hat_descr_quartz_hat = Un cappello di quarzo scintillante.
 @hat_descr_bamboo_hat = Un classico cappello di bambù.
 @hat_descr_dynamite_hat = Un look esplosivo.

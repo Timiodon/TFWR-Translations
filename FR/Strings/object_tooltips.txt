@@ -9,7 +9,7 @@ Peut pousser sur {3}.
 @object_descr_tree = Les arbres donnent plus de bois que les buissons. Ils mettent plus de temps à pousser si d'autres arbres poussent à côté d'eux.
 @object_descr_carrot = Des carottes !
 @object_descr_rice = Le riz peut être planté sur la couche d’argile que tu trouves sous terre.
-@object_descr_bamboo = Le bambou peut pousser très haut, mais il fleurit à une hauteur bien précise. Le rendement est maximal si tu le récoltes exactement à la hauteur où il fleurit.
+@object_descr_bamboo = Le bambou peut pousser très haut, mais seulement après la récolte de ses fruits.
 @object_descr_pumpkin = Les citrouilles poussent ensemble lorsqu'elles sont à côté d'autres citrouilles complètement développées. Environ 1 citrouille sur 5 meurt en grandissant.
 @object_descr_dead_pumpkin = Une citrouille sur cinq meurt en grandissant, laissant derrière elle une citrouille morte. Les citrouilles mortes sont inutiles et disparaissent lorsque quelque chose de nouveau est planté.
 @object_descr_sunflower = Les tournesols collectent la puissance du soleil. Les récolter te donnera `Items.Power`.

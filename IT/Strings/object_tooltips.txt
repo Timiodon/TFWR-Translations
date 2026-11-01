@@ -9,7 +9,7 @@ Può crescere su {3}.
 @object_descr_tree = Gli alberi rilasciano più legno dei cespugli. Impiegano più tempo a crescere se altri alberi crescono accanto a loro.
 @object_descr_carrot = Carote!
 @object_descr_rice = Il riso può essere piantato sullo strato di argilla che trovi nel sottosuolo.
-@object_descr_bamboo = Il bambù può crescere molto in altezza, ma fiorisce a un'altezza ben precisa. La resa è massima se lo raccogli esattamente all'altezza a cui fiorisce.
+@object_descr_bamboo = Il bambù può crescere molto in altezza, ma solo dopo averne raccolto i frutti.
 @object_descr_pumpkin = Le zucche crescono insieme quando sono accanto ad altre zucche completamente cresciute. Circa 1 zucca su 5 muore quando cresce.
 @object_descr_dead_pumpkin = Una zucca su cinque muore quando cresce, lasciando dietro di sé una zucca morta. Le zucche morte sono inutili e scompaiono quando viene piantato qualcosa di nuovo.
 @object_descr_sunflower = I girasoli raccolgono l'energia del sole. Raccogliendoli otterrai `Items.Power`.

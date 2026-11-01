@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = A golden version of the sunflower hat.
 @hat_descr_the_farmers_remains = What happened?
 @hat_descr_bucket = An iron bucket for your head.
-@hat_descr_coal_hat = A hat shaped like coal. A little sooty.
-@hat_descr_rice_hat = A hat shaped like rice.
+@hat_descr_coal_hat = Take coal with you wherever you go.
+@hat_descr_rice_hat = A wearable meal.
 @hat_descr_quartz_hat = A sparkling quartz hat.
 @hat_descr_bamboo_hat = A classic bamboo hat.
 @hat_descr_dynamite_hat = An explosive look.

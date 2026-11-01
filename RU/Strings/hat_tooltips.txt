@@ -24,8 +24,8 @@
 @hat_descr_golden_sunflower_hat = Золотая версия шляпы-подсолнуха.
 @hat_descr_the_farmers_remains = Что произошло?
 @hat_descr_bucket = Железное ведро на голову.
-@hat_descr_coal_hat = Шляпа в форме угля. Немного в саже.
-@hat_descr_rice_hat = Шляпа в форме риса.
+@hat_descr_coal_hat = Бери уголь с собой, куда бы ты ни отправился.
+@hat_descr_rice_hat = Еда, которую можно надеть.
 @hat_descr_quartz_hat = Сверкающая кварцевая шляпа.
 @hat_descr_bamboo_hat = Классическая бамбуковая шляпа.
 @hat_descr_dynamite_hat = Взрывной образ.

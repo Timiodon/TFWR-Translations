@@ -9,7 +9,7 @@ Może rosnąć na {3}.
 @object_descr_tree = Z drzew wypada więcej drewna niż z krzaków. Rosną dłużej, jeśli obok nich rosną inne drzewa.
 @object_descr_carrot = Marchewki!
 @object_descr_rice = Ryż można sadzić na warstwie gliny znalezionej pod ziemią.
-@object_descr_bamboo = Bambus może urosnąć bardzo wysoko, ale zakwita na określonej wysokości. Największy plon otrzymasz, jeśli zbierzesz go dokładnie na wysokości, na której kwitnie.
+@object_descr_bamboo = Bambus może urosnąć bardzo wysoko, ale dopiero po zebraniu owoców.
 @object_descr_pumpkin = Dynie rosną razem, gdy znajdują się obok innych w pełni wyrośniętych dyń. Około 1 na 5 dyń umiera, gdy dorośnie.
 @object_descr_dead_pumpkin = Jedna na pięć dyń umiera, gdy dorośnie, pozostawiając po sobie martwą dynię. Martwe dynie są bezużyteczne i znikają, gdy posadzi się coś nowego.
 @object_descr_sunflower = Słoneczniki zbierają moc ze słońca. Zbieranie ich da ci `Items.Power`.
