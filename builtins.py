@@ -1907,9 +1907,19 @@ def plant(entity: Entity | Entities, /) -> _bool:
 def swap(direction: Direction, /) -> _bool:
 	"""
 	Swaps the entity under the drone with the entity next to the drone in the specified `direction`.
+	Entities cannot be swapped across the world border.
 
 	- Doesn't work on all entities.
 	- Also works if one (or both) of the entities are `None`.
+
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns `True` if it succeeded, `False` otherwise.
 
@@ -1946,6 +1956,7 @@ def till() -> None:
 def use_item(item: Item | Items, n: _int = 1, /) -> _bool:
 	"""
 	Attempts to use the specified `item` `n` times. Can only be used with some items including `Items.Water`, `Items.Fertilizer`, `Items.Weird_Substance`, and `Items.Dynamite`.
+	When using `Items.Weird_Substance` the weirdness will not wrap across the border.
 
 	returns `True` if an item was used, `False` if the item can't be used or you don't have enough.
 
@@ -2027,8 +2038,12 @@ def change_hat(hat: Hat | Hats, /) -> None:
 def move(direction: Direction, /) -> _bool:
 	"""
 	Moves the drone into the specified `direction` by one tile.
-	If the drone moves over the edge of the farm it wraps back to the other side of the farm.
+	A `direction` can point into a world border. If the drone moves over the edge of the farm
+	it wraps back to the other side of the farm.
 
+	Note: If the drone is wearing `Hats.Dinosaur_Hat` it cannot move across the world border.
+
+	Value of `direction`:
 	- `East ` = right
 	- `West ` = left
 	- `North` = up
@@ -2051,6 +2066,13 @@ def move(direction: Direction, /) -> _bool:
 def can_move(direction: Direction, /) -> _bool:
 	"""
 	Checks if the drone can move in the specified `direction`.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns `True` if the drone can move, `False` otherwise.
 
@@ -2090,6 +2112,12 @@ def get_pos_y() -> _int:
 	"""
 	Gets the current y position of the drone.
 	The y position starts at `0` in the `South` and increases in the `North` direction.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns a number representing the current y coordinate of the drone.
 
@@ -2150,6 +2178,15 @@ def get_pos_z(direction: Direction | None = None, /) -> _int:
 	tile in `direction`. The z position starts at `0` and decreases while digging
 	downward.
 
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
+
 	returns the z coordinate as an integer.
 
 	takes `1` tick to execute.
@@ -2202,6 +2239,13 @@ def get_entity_type(direction: Direction | None = None, /) -> Entity:
 	`direction`.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns `None` if the checked tile is empty, otherwise returns the type of the entity on that tile.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Entity`.
@@ -2225,6 +2269,13 @@ def get_ground_type(direction: Direction | None = None, /) -> Ground:
 	`direction`.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns the type of the ground on the checked tile.
 
@@ -2287,7 +2338,7 @@ Special type that helps with type hinting the return of the `get_companion` func
 
 def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
-	Get the companion preference of the plant under the drone.
+	Get the companion preference of the plant under the drone. Companions can wrap across the world.
 
 	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
@@ -2318,6 +2369,10 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	Measures certain entities and underground ground types. The result depends on
 	what is being measured.
 
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
 	- `East ` = right
 	- `West ` = left
 	- `North` = up
@@ -2387,6 +2442,15 @@ def get_hardness(direction: Direction | None = None, /) -> _float:
 	Gets the hardness of the ground below the drone, or of the neighboring ground
 	in `direction`. Harder blocks take longer to dig.
 
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
+
 	returns the ground hardness, or `None` if the requested tile is outside the
 	world.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
@@ -2409,6 +2473,15 @@ def get_stability(direction: Direction | None = None, /) -> _float:
 	Gets the stability of the ground below the drone, or of the neighboring ground
 	in `direction`. Stability controls how much height difference a block can
 	withstand before it caves in.
+
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns the ground stability, or `None` if the requested tile is outside the
 	world.
@@ -2471,8 +2544,16 @@ def prospect_quartz() -> _float:
 # --------------------------------------------------
 def push(direction: Direction, /) -> _bool:
 	"""
-	Pushes the mushroom block below the drone in `direction`. Blocks cannot be
-	pushed upward.
+	Pushes the mushroom block below the drone in `direction`. Blocks cannot be pushed upward.
+
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns `True` if the block was pushed, `False` otherwise.
 
@@ -2492,6 +2573,15 @@ def can_push(direction: Direction, /) -> _bool:
 	"""
 	Checks whether the block below the drone can be pushed in `direction` and
 	whether anything blocks it.
+
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+	A direction that points into the world border will evaluate the tile on the other side of the world.
+
+	Value of `direction`:
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	returns `True` if the block can be pushed, `False` otherwise.
 
