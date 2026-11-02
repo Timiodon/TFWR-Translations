@@ -2358,7 +2358,7 @@ def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
 	Get the companion preference of the plant under the drone. Companions can wrap across the world.
 
-	Crops that can have a companion include: `Entities.Grass`, `Entities.Bush`, `Entities.Tree`, `Entities.Carrot`, `Entities.Rice` and `Entities.Bamboo`
+	Crops that can have a companion include: `Entities.Grass`, `Entities.Bush`, `Entities.Tree`, and `Entities.Carrot`
 
 	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
