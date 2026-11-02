@@ -2439,7 +2439,7 @@ def measure(direction: Direction | None = None, /) -> Measure:
 # -------------------------------------------------------------------------------
 def dig() -> _bool:
 	"""
-	Digs `1` tile downward. Whether the block is destroyed depends on its hardness
+	Digs `1` block downward. Whether the block is destroyed depends on its hardness
 	and the drone's drill strength.
 
 	returns `True` if the block was destroyed, `False` otherwise.
@@ -2459,7 +2459,7 @@ def dig() -> _bool:
 # --------------------------------------------------
 def get_hardness(direction: Direction | None = None, /) -> _float:
 	"""
-	Gets the hardness of the ground below the drone, or of the neighboring ground
+	Gets the hardness of the block below the drone, or of the neighboring block
 	in `direction`. Harder blocks take longer to dig.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
@@ -2471,7 +2471,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float:
 	- `North` = up
 	- `South` = down
 
-	returns the ground hardness, or `None` if the requested tile is outside the
+	returns the block hardness, or `None` if the requested tile is outside the
 	world.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
@@ -2490,7 +2490,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float:
 # --------------------------------------------------
 def get_stability(direction: Direction | None = None, /) -> _float:
 	"""
-	Gets the stability of the ground below the drone, or of the neighboring ground
+	Gets the stability of the block below the drone, or of the neighboring block
 	in `direction`. Stability controls how much height difference a block can
 	withstand before it caves in.
 
@@ -2503,8 +2503,7 @@ def get_stability(direction: Direction | None = None, /) -> _float:
 	- `North` = up
 	- `South` = down
 
-	returns the ground stability, or `None` if the requested tile is outside the
-	world.
+	returns the block stability, or `None` if the requested block is outside the world.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
