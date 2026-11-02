@@ -2439,7 +2439,7 @@ def measure(direction: Direction | None = None, /) -> Measure:
 # -------------------------------------------------------------------------------
 def dig() -> _bool:
 	"""
-	Digs one tile downward. Whether the block is destroyed depends on its hardness
+	Digs `1` tile downward. Whether the block is destroyed depends on its hardness
 	and the drone's drill strength.
 
 	returns `True` if the block was destroyed, `False` otherwise.
@@ -2522,7 +2522,7 @@ def get_stability(direction: Direction | None = None, /) -> _float:
 # --------------------------------------------------
 def prospect_iron() -> Direction:
 	"""
-	Uses one `Items.Coal` to look for nearby iron.
+	Uses `1` `Items.Coal` to look for nearby iron.
 
 	returns the direction toward the nearest iron ore, or `None` if the drone is
 	already above it, no iron is in range, or there is not enough coal.
@@ -2544,7 +2544,7 @@ def prospect_iron() -> Direction:
 # --------------------------------------------------
 def prospect_quartz() -> _float:
 	"""
-	Uses one `Items.Iron` to look for nearby quartz.
+	Uses `1` `Items.Iron` to look for nearby quartz.
 
 	returns the Euclidean 3D distance to the nearest quartz block, or `None` if no
 	quartz is in range or there is not enough iron.
