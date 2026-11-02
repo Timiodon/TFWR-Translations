@@ -2318,18 +2318,20 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	Measures certain entities and underground ground types. The result depends on
 	what is being measured.
 
-	overloads:
-	`measure()`: measures the entity under the drone.
-	`measure(direction)`: measures the neighboring entity in the `direction` of the drone.
+	- `East ` = right
+	- `West ` = left
+	- `North` = up
+	- `South` = down
 
 	Sunflower: returns the number of petals.
 	Maze: returns the position of the current treasure from anywhere in the maze.
 	Cactus: returns the size.
-	Dinosaur: returns the number corresponding to the type.
+	Dinosaur: returns the position of the next apple (must be used on current apple).
+	Bamboo: return the height of the flower.
 	Mushroom: returns the mushroom type as a number.
-	Basalt: returns the `(x, y)` position of the treasure map below.
-	Treasure map: returns a string of direction letters describing the path.
-	Soot: returns the number of live dynamite blocks in the stratum above.
+	Basalt: returns the `(x, y)` position of the `Entities.Treasure_Map` below.
+	Treasure_Map: returns a string of `direction` or `dig` letters describing the path (`N` = `North, `E` = `East`, `S` = `South`, `W` = `West`, `D` = `dig()`).
+	Soot: returns the number of live `Grounds.Dynamite` blocks in the stratum above.
 	All other entities and ground types: returns `None`.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept either of the other return types.
 
@@ -2339,7 +2341,14 @@ def measure(direction: Direction | None = None, /) -> Measure:
 
 	```
 	num_petals = measure()
-	treasure_pos = measure()
+	treasure_pos_x, treasure_pos_y = measure()
+	cactus_size = measure()
+	next_apple_x, next_apple_y = measure()
+	bamboo_height = measure()
+	mushroom_type = measure()
+	treasure_map_pos_x, treasure_map_pos_y = measure() # On `Grounds.Basalt`
+	treasure_map_directions = measure() # On `Grounds.Treasure_Map`
+	dynamite_number = measure()
 	```
 	"""
 	...
