@@ -2004,7 +2004,11 @@ def place(ground: Ground | Grounds, /) -> _bool:
 # --------------------------------------------------
 def clear() -> None:
 	"""
-	Removes everything from the farm, moves the drone back to position `(0,0)` and changes the hat back to the default.
+	Removes everything from the farm, destroys all drones (`has_finished` will return `False`),
+	moves the drone back to position `(0,0)` and changes the hat back to the default.
+
+	Notes:
+	- Water levels will retain their previous water level before a call to `clear`.
 
 	returns `None`
 
@@ -2306,7 +2310,8 @@ def get_water() -> _float:
 	"""
 	Get the current water level under the drone.
 
-	returns the water level under the drone as a number between `0` and `1`.
+	returns the water level under the drone as a number between `0` and `1`. The water
+	level will not be `0` or `1` due to how water decay functions.
 
 	takes `1` tick to execute.
 
@@ -2324,6 +2329,9 @@ def get_water() -> _float:
 def num_items(item: Item | Items, /) -> _float:
 	"""
 	Find out how much of `item` you currently have.
+
+	Notes:
+	- When using water a tile cannot have a water level above `1`
 
 	returns the number of `item` currently in your inventory.
 	`Items.Power` may return a number as float
@@ -2712,6 +2720,7 @@ def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 	`R` - the return type of your drone. Must must the return type of of the `task` you provided with `spawn_drone`.
 
 	returns `True` if the drone has finished, `False` otherwise.
+	Note: If a `drone` was destroyed because of a call to `clear` will also return `False`
 
 	takes `1` tick to execute.
 
