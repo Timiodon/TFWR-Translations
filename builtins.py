@@ -2108,7 +2108,7 @@ def get_pos_x() -> _int:
 	Gets the current x position of the drone.
 	The x position starts at `0` in the `West` and increases in the `East` direction.
 
-	returns a number representing the current x coordinate of the drone.
+	returns a number representing the current x position of the drone.
 
 	takes `1` tick to execute.
 
@@ -2133,7 +2133,7 @@ def get_pos_y() -> _int:
 	- `North` = up
 	- `South` = down
 
-	returns a number representing the current y coordinate of the drone.
+	returns a number representing the current y position of the drone.
 
 	takes `1` tick to execute.
 
@@ -2201,7 +2201,7 @@ def get_pos_z(direction: Direction | None = None, /) -> _int:
 	- `North` = up
 	- `South` = down
 
-	returns the z coordinate as an integer.
+	returns the z position as an integer.
 
 	takes `1` tick to execute.
 
