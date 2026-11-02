@@ -1914,7 +1914,7 @@ def swap(direction: Direction, /) -> _bool:
 	Entities cannot be swapped across the world border.
 
 	Notes:
-	- Doesn't work on all entities.
+	- Only works with cacti.
 	- Also works if one (or both) of the entities are `None`.
 	- Entities will not swap across different z positions.
 
@@ -2357,6 +2357,8 @@ Special type that helps with type hinting the return of the `get_companion` func
 def get_companion() -> _tuple[Entity, _tuple[_int, _int]]:
 	"""
 	Get the companion preference of the plant under the drone. Companions can wrap across the world.
+
+	Crops that can have a companion include: `Entities.Grass`, `Entities.Bush`, `Entities.Tree`, `Entities.Carrot`, `Entities.Rice` and `Entities.Bamboo`
 
 	returns a tuple of the form `(companion_type, (companion_x_position, companion_y_position))` or `None` if there is no companion.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept companion tuple.
