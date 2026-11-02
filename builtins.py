@@ -2004,7 +2004,7 @@ def place(ground: Ground | Grounds, /) -> _bool:
 # --------------------------------------------------
 def clear() -> None:
 	"""
-	Removes everything from the farm, destroys all drones (`has_finished` will return `False`),
+	Removes everything from the world, destroys all drones (`has_finished` will return `False`),
 	moves the drone back to position `(0,0)` and changes the hat back to the default.
 
 	Notes:
@@ -2051,8 +2051,8 @@ def change_hat(hat: Hat | Hats, /) -> None:
 def move(direction: Direction, /) -> _bool:
 	"""
 	Moves the drone into the specified `direction` by one tile.
-	A `direction` can point into a world border. If the drone moves over the edge of the farm
-	it wraps back to the other side of the farm.
+	A `direction` can point into a world border. If the drone moves over the edge of the world
+	it wraps back to the other side of the world.
 
 	Note: If the drone is wearing `Hats.Dinosaur_Hat` it cannot move across the world border.
 	It will also not be able to move to a different z position.
@@ -2224,7 +2224,7 @@ type WorldSizes = Literal[
 
 def get_world_size() -> WorldSizes:
 	"""
-	Get the current size of the farm.
+	Get the current size of the world.
 
 	returns the side length of the grid in the north to south direction.
 
@@ -2741,9 +2741,9 @@ def has_finished[R: Any](drone: Drone[R], /) -> _bool:
 # --------------------------------------------------
 def max_drones() -> _int:
 	"""
-	Gets the maximum number of drones available on the farm.
+	Gets the maximum number of drones available to use.
 
-	returns the maximum number of drones that you can have in the farm.
+	returns the maximum number of drones that you can use.
 
 	takes `1` tick to execute.
 
@@ -2761,9 +2761,9 @@ def max_drones() -> _int:
 # --------------------------------------------------
 def num_drones() -> _int:
 	"""
-	Gets the current number of drones running a task on the farm.
+	Gets the current number of drones currently running a task.
 
-	returns the number of drones currently in the farm.
+	returns the number of drones currently in use..
 
 	takes `1` tick to execute.
 
@@ -2853,10 +2853,10 @@ def set_execution_speed(speed: _float, /) -> None:
 # --------------------------------------------------
 def set_world_size(size: WorldSizes, /) -> None:
 	"""
-	Limits the size of the farm to better see what's happening.
-	Also clears the farm and resets the drone's position, but only if the size has actually changed.
+	Limits the size of the world to better see what's happening.
+	Also clears the world and resets the drone's position, but only if the size has actually changed.
 
-	- Sets the farm to a `size` x `size` grid.
+	- Sets the world to a `size` x `size` grid.
 	- The smallest `size` possible is `3` and maximum `size` is `32`
 	- A `size` smaller than `3` will change the grid back to its full size.
 	- The effect will also stop when the execution stops.
