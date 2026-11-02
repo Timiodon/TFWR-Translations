@@ -187,7 +187,7 @@ included:
 
 # 	dict(dictionary[keys, values]) -> new dictionary initialized from an existing `dictionary`
 
-# 	takes `1 + len(keys) + len(values)` ticks to execute if a dictionary is given.
+# 	takes `1 + 2 * len(dictionary)` ticks to execute if a dictionary is given.
 # 	takes `1` tick to execute if no input is given.
 
 # 	Consider using `DictTFWR` to help with type hints involving dicts.
@@ -2136,6 +2136,45 @@ def get_pos_y() -> _int:
 
 
 # --------------------------------------------------
+def hover(height: _float, /) -> _bool:
+	"""
+	Changes the height the drone hovers above ground.
+
+	The default height is `1` and most drone actions will reset the hover height
+	back to the default.
+
+	returns `True` if it succeeded, `False` otherwise.
+
+	takes `200` ticks to execute if it succeeded, `1` tick otherwise.
+
+	example usage:
+
+	```
+	hover(5)
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
+def get_hover() -> _int:
+	"""
+	Gets the current height the drone hovers above ground.
+
+	returns the current hover height as an integer.
+
+	takes `1` tick to execute.
+
+	example usage:
+
+	```
+	height = get_hover()
+	```
+	"""
+	...
+
+
+# --------------------------------------------------
 def get_pos_z(direction: Direction | None = None, /) -> _int:
 	"""
 	Gets the current z position of the drone, or the z position of the neighboring
@@ -2201,7 +2240,9 @@ def get_entity_type(direction: Direction | None = None, /) -> Entity:
 	- `North` = up
 	- `South` = down
 
-	returns `None` if the tile is empty, otherwise returns the type of the entity under the drone.
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+
+	returns `None` if the checked tile is empty, otherwise returns the type of the entity on that tile.
 	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Entity`.
 
 	takes `1` tick to execute.
@@ -2228,7 +2269,9 @@ def get_ground_type(direction: Direction | None = None, /) -> Ground:
 	- `North` = up
 	- `South` = down
 
-	returns the type of the ground under the drone.
+	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
+
+	returns the type of the ground on the checked tile.
 
 	takes `1` tick to execute.
 
@@ -2377,7 +2420,8 @@ def dig() -> _bool:
 
 	returns `True` if the block was destroyed, `False` otherwise.
 
-	takes `0.5` seconds to execute.
+	takes `hardness / drill strength` seconds to dig a block. This time is
+	independent of execution speed and can be reduced by the explosive drill.
 
 	example usage:
 
@@ -2389,7 +2433,7 @@ def dig() -> _bool:
 
 
 # --------------------------------------------------
-def get_hardness(direction: Direction | None = None, /) -> _float | None:
+def get_hardness(direction: Direction | None = None, /) -> _float:
 	"""
 	Gets the hardness of the block below the drone, or of the neighboring block
 	in `direction`. Harder blocks take longer to dig.
@@ -2404,6 +2448,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float | None:
 
 	returns the block hardness, or `None` if the requested block is is on the
 	other side of the world.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
 
@@ -2418,7 +2463,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float | None:
 
 
 # --------------------------------------------------
-def get_stability(direction: Direction | None = None, /) -> _float | None:
+def get_stability(direction: Direction | None = None, /) -> _float:
 	"""
 	Gets the stability of the block below the drone, or of the neighboring block
 	in `direction`. Stability controls how much height difference a block can
@@ -2434,6 +2479,7 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 
 	returns the block stability, or `None` if the requested block is outside the
 	world.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
 
 	takes `1` tick to execute.
 
@@ -2448,12 +2494,15 @@ def get_stability(direction: Direction | None = None, /) -> _float | None:
 
 
 # --------------------------------------------------
-def prospect_iron() -> Direction | None:
+def prospect_iron() -> Direction:
 	"""
 	Uses `1` `Items.Coal` to look for nearby iron.
 
 	returns the direction toward the nearest `Ground.Iron` ore, or `None` if the drone is
 	already above it, no iron is in range, or there is not enough `Items.Coal``.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `Direction`.
+
+	takes `1` tick to execute.
 
 	example usage:
 
@@ -2467,12 +2516,15 @@ def prospect_iron() -> Direction | None:
 
 
 # --------------------------------------------------
-def prospect_quartz() -> _float | None:
+def prospect_quartz() -> _float:
 	"""
 	Uses `1` `Items.Iron` to look for nearby quartz.
 
 	returns the Euclidean 3D distance to the nearest `Grounds.Quartz` block, or `None` if no
 	quartz is in range, or there is not enough iron.
+	Note: `None` is not type hinted to reduce complexity when using variables with functions that accept a `float`.
+
+	takes `1` tick to execute.
 
 	example usage:
 
@@ -2499,6 +2551,8 @@ def push(direction: Direction, /) -> _bool:
 
 	returns `True` if the block was pushed, `False` otherwise.
 
+	takes `200` ticks to execute if the block was pushed, `1` tick otherwise.
+
 	example usage:
 
 	```
@@ -2523,6 +2577,8 @@ def can_push(direction: Direction, /) -> _bool:
 
 	returns `True` if the block can be pushed, `False` otherwise.
 
+	takes `1` tick to execute.
+
 	example usage:
 
 	```
@@ -2541,6 +2597,8 @@ def jump(unlock: Unlock | Unlocks, /) -> None:
 	You can only execute `jump` once per script.
 
 	returns `None`.
+
+	takes `200` ticks to execute.
 
 	example usage:
 
@@ -2768,7 +2826,7 @@ def set_execution_speed(speed: _float, /) -> None:
 def set_world_size(size: WorldSizes, /) -> None:
 	"""
 	Limits the size of the world to better see what's happening.
-	Also clears the world and resets the drone position.
+	Also clears the farm and resets the drone's position, but only if the size has actually changed.
 
 	- Sets the world to a `size` x `size` grid.
 	- The smallest `size` possible is `3` and maximum `size` is `32`
