@@ -2080,7 +2080,7 @@ def move(direction: Direction, /) -> _bool:
 def can_move(direction: Direction, /) -> _bool:
 	"""
 	Checks if the drone can move in the specified `direction`.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2193,7 +2193,7 @@ def get_pos_z(direction: Direction | None = None, /) -> _int:
 	downward.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2253,7 +2253,7 @@ def get_entity_type(direction: Direction | None = None, /) -> Entity:
 	`direction`.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2283,7 +2283,7 @@ def get_ground_type(direction: Direction | None = None, /) -> Ground:
 	`direction`.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2390,7 +2390,7 @@ def measure(direction: Direction | None = None, /) -> Measure:
 	what is being measured.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2463,7 +2463,7 @@ def get_hardness(direction: Direction | None = None, /) -> _float:
 	in `direction`. Harder blocks take longer to dig.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2495,7 +2495,7 @@ def get_stability(direction: Direction | None = None, /) -> _float:
 	withstand before it caves in.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2567,7 +2567,7 @@ def push(direction: Direction, /) -> _bool:
 	Pushes the mushroom block below the drone in `direction`. Blocks cannot be pushed upward.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
@@ -2595,7 +2595,7 @@ def can_push(direction: Direction, /) -> _bool:
 	whether anything blocks it.
 
 	If `direction` is not `None` it checks the neighboring tile in the given direction instead.
-	A direction that points into the world border will evaluate the tile on the other side of the world.
+	A `direction` that points into the world border will evaluate the tile on the other side of the world.
 
 	Value of `direction`:
 	- `East ` = right
