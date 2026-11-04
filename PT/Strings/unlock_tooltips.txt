@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Sensores do drone para interagir com blocos subterrâneos
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Abóboras fossilizadas surgem no subsolo.
 @unlock_descr_special_soils = Descubra camadas de solo franco e perlita para aumentar a produção das plantas.

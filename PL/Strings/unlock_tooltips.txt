@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Czujniki drona do interakcji z podziemnymi polami.
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Pod ziemią pojawiają się skamieniałe dynie.
 @unlock_descr_special_soils = Odkrywaj warstwy gleby próchniczej i perlitu, aby zwiększyć plon roślin.

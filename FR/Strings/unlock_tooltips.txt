@@ -133,10 +133,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Des capteurs permettant au drone d’interagir avec les cases souterraines
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Des citrouilles fossilisées apparaissent sous terre.
 @unlock_descr_special_soils = Découvre des couches de terreau et de perlite pour améliorer le rendement des plantes.

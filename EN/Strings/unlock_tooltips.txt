@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Drone sensors to interact with underground tiles
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Fossilized pumpkins spawn underground.
 @unlock_descr_special_soils = Discover loam and perlite layers to boost plant yield.

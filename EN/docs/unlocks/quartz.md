@@ -55,7 +55,7 @@ If `prospect_quartz()` can't find any nearby quartz, or if you don't have enough
 ## Strategy
 <spoiler=show hint>You can repeatedly prospect and move to see how the distance changes. On a flat surface, trying to minimize the distance can place you above a quartz vein. You can use a strategy similar to binary search to minimize the number of `prospect_quartz()` calls and the amount of iron they consume.
 
-More involved strategies can use 2D geometry to find the intersection between two or more circles or you can go the hard route and do full triliteration, to intersect three spheres and find the exact 3D position of the vein.
+More involved strategies can use 2D geometry to find the intersection between two or more circles or you can go the hard route and do full trilateration, to intersect three spheres and find the exact 3D position of the vein.
 
 Note that to do a square root, you can use the exponent operator, e.g. to get the square root of 16, use `16**0.5`. There aren't any built-in math functions for trigonometry or vectors, you'll have to implement them yourself. 
 

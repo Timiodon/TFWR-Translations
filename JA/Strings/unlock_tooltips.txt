@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = 地下のタイルを調べたり操作したりするためのドローンセンサーです。
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = 地下に石化したカボチャが生成されます。
 @unlock_descr_special_soils = 壌土とパーライトの層を見つけて植物の収穫量をブーストします。

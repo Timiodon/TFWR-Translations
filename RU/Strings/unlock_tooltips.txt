@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Датчики дрона для взаимодействия с подземными клетками
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Под землей появляются окаменевшие тыквы.
 @unlock_descr_special_soils = Открой слои суглинка и перлита, чтобы повысить урожай растений.

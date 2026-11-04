@@ -135,10 +135,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Drohnensensoren zur Interaktion mit unterirdischen Feldern
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Unterirdisch entstehen versteinerte Kürbisse.
 @unlock_descr_special_soils = Entdecke Lehm- und Perlitschichten, um den Pflanzenertrag zu steigern.

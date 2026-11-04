@@ -133,10 +133,6 @@ other_file.function()`
 @unlock_descr_underground_senses = Sensores para que el dron interactúe con casillas subterráneas.
 
 `while get_pos_z() < 100:
-    while get_hardness() > 5:
-        while get_hardness(North):
-            dig(North)
-        move(North)
     dig()`
 @unlock_descr_petrified_pumpkins = Las calabazas petrificadas aparecen bajo tierra.
 @unlock_descr_special_soils = Descubre capas de suelo franco y perlita para aumentar el rendimiento de las plantas.
