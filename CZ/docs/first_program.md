@@ -5,7 +5,7 @@ Název souboru můžeš změnit kliknutím na jeho jméno v horní části okna.
 
 Kód lze upravovat stejně jako v běžném textovém editoru, pokud právě neprobíhá jeho spuštění.
 Program můžeš spustit přímo stisknutím zeleného tlačítka přehrát v okně s kódem.
-![](PlayButton50)
+![|x50](PlayButton)
 
 Nové soubory s kódem můžeš vytvářet pomocí tlačítka „+“ v pravém horním rohu obrazovky.
 Okno můžeš přichytit k jinému oknu tažením jednoho na druhé.
