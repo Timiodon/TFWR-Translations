@@ -1484,6 +1484,16 @@ class Leaderboard:
 
 # --------------------------------------------------
 class Leaderboards(_Enum):
+	Bamboo: Leaderboard
+	"""
+	Farm 500_000_000 bamboo with multiple drones.
+	"""
+
+	Bamboo_Single: Leaderboard
+	"""
+	Farm 25_000_000 bamboo with a single drone on an 8x8 farm.
+	"""
+
 	Cactus: Leaderboard
 	"""
 	Farm 33_554_432 cacti with multiple drones.
@@ -1509,9 +1519,24 @@ class Leaderboards(_Enum):
 	Farm 33_488_928 bones with multiple drones.
 	"""
 
+	Dynamite: Leaderboard
+	"""
+	Farm 10_000_000 dynamite with multiple drones.
+	"""
+
+	Dynamite_Single: Leaderboard
+	"""
+	Farm 100_000 dynamite with a single drone on an 8x8 farm.
+	"""
+
 	Fastest_Reset: Leaderboard
 	"""
 	The most prestigious category. Completely automate the game from a single farm plot to unlocking the leaderboards again.
+	"""
+
+	Fastest_Underground_Reset: Leaderboard
+	"""
+	The other most prestigious category. Completely automate the game from a single farm plot to unlocking the underground leaderboards again.
 	"""
 
 	Hay: Leaderboard
@@ -1534,6 +1559,26 @@ class Leaderboards(_Enum):
 	Farm 616_448 gold with a single drone on an 8x8 farm.
 	"""
 
+	Mushrooms: Leaderboard
+	"""
+	Farm 240_000 mushrooms with multiple drones.
+	"""
+
+	Mushrooms_Single: Leaderboard
+	"""
+	Farm 30_000 mushrooms with a single drone on an 8x8 farm.
+	"""
+
+	Ores: Leaderboard
+	"""
+	Farm 20_000 quartz with multiple drones.
+	"""
+
+	Ores_Single: Leaderboard
+	"""
+	Farm 4_000 quartz with a single drone on an 8x8 farm.
+	"""
+
 	Pumpkins: Leaderboard
 	"""
 	Farm 200_000_000 pumpkins with multiple drones.
@@ -1542,6 +1587,26 @@ class Leaderboards(_Enum):
 	Pumpkins_Single: Leaderboard
 	"""
 	Farm 10_000_000 pumpkins with a single drone on an 8x8 farm.
+	"""
+
+	Pyramids: Leaderboard
+	"""
+	Farm 150_000 power with multiple drones.
+	"""
+
+	Pyramids_Single: Leaderboard
+	"""
+	Farm 30_000 power with a single drone on an 8x8 farm.
+	"""
+
+	Rice: Leaderboard
+	"""
+	Farm 2_000_000 rice with multiple drones.
+	"""
+
+	Rice_Single: Leaderboard
+	"""
+	Farm 100_000 rice with a single drone on an 8x8 farm.
 	"""
 
 	Sunflowers: Leaderboard
