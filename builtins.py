@@ -1085,9 +1085,19 @@ class Grounds(_Enum):
 	Indestructible ground.
 	"""
 
-	Blue_Block: Ground
+	Block_Blue: Ground
 	"""
 	A blue block that can be placed manually.
+	"""
+
+	Block_Green: Ground
+	"""
+	A green block that can be placed manually.
+	"""
+
+	Block_Red: Ground
+	"""
+	A red block that can be placed manually.
 	"""
 
 	Clay: Ground
@@ -1119,11 +1129,6 @@ class Grounds(_Enum):
 	Grassland: Ground
 	"""
 	The default ground. Grass will automatically grow on it.
-	"""
-
-	Green_Block: Ground
-	"""
-	A green block that can be placed manually.
 	"""
 
 	Iron: Ground
@@ -1160,11 +1165,6 @@ class Grounds(_Enum):
 	Quartz: Ground
 	"""
 	A block encasing crystalline quartz.
-	"""
-
-	Red_Block: Ground
-	"""
-	A red block that can be placed manually.
 	"""
 
 	Rice_Terrace: Ground
