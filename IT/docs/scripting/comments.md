@@ -23,8 +23,8 @@ I commenti possono essere aggiunti usando `#`. Qualsiasi cosa sulla stessa riga 
 }
 #SETUP
 #CODE
-# questo è un commento
-# harvest()
+#questo è un commento
+#harvest()
 }}
 
 Questo può essere utile per aggiungere note al codice o disabilitarne temporaneamente alcune parti senza eliminarle.

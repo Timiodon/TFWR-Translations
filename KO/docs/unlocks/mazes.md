@@ -190,11 +190,11 @@ directions = [North, East, South, West]
 index = 0
 move(directions[index])
 
-# 오른쪽으로 돌기
+#오른쪽으로 돌기
 index = (index + 1) % 4
 move(directions[index])
 
-# 왼쪽으로 돌기
+#왼쪽으로 돌기
 index = (index - 1) % 4
 move(directions[index])
 }}
