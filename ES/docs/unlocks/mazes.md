@@ -190,11 +190,11 @@ directions = [North, East, South, West]
 index = 0
 move(directions[index])
 
-# girar a la derecha
+#girar a la derecha
 index = (index + 1) % 4
 move(directions[index])
 
-# girar a la izquierda
+#girar a la izquierda
 index = (index - 1) % 4
 move(directions[index])
 }}

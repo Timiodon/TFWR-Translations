@@ -23,7 +23,7 @@ Se pueden añadir comentarios usando `#`. Cualquier cosa en la misma línea desp
 }
 #SETUP
 #CODE
-# esto es un comentario
+#esto es un comentario
 #harvest()
 }}
 
